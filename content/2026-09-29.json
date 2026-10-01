@@ -1,0 +1,191 @@
+{
+  "date": "2026-09-29",
+  "title": "Daily Briefing, Di 29.9.",
+  "headline": "Agenten bleiben wach.\nWir bleiben kritisch.",
+  "teaser": "20 Catches: GPT-6.1 Sol, Dots, Datenschutz, kleine Rechner und große Fragen.",
+  "intro": "Leute, kaum schaut man kurz weg, wollen Agenten rund um die Uhr arbeiten und Mikrocontroller ein Sprachmodell gemeinsam stemmen. Begeisterung ist da. Meine To-do-Liste protestiert bereits. Wir sortieren den Dienstag in vier Blöcke mit jeweils fünf Catches.",
+  "sections": [
+    {
+      "category": "KI",
+      "title": "GPT-6.1 Sol: der Preis ist Teil der Nachricht.",
+      "body": "OpenAI stellt GPT-6.1 Sol am 29. September als Modell für agentisches Coding, Computerbedienung und berufliche Aufgaben vor. Laut Anbieter soll es nahe an GPT-6 Astra herankommen, bei einem Fünftel der regulären Input- und Output-Tokenpreise.",
+      "takeaway": "Herstellervergleich, kein unabhängiger Sieg. Für echte Workflows zählen Erfolgsquote und Gesamtkosten je erledigter Aufgabe.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "openai.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "KI",
+      "title": "Dots: Agenten sollen dauerhaft dranbleiben.",
+      "body": "OpenAI stellt Dots als ständig verfügbare Agenten mit eigenem Cloudcomputer vor. Laut Produktseite arbeiten sie über längere Zeit an Zielen und können über Plugins viele Anwendungen anbinden.",
+      "takeaway": "Klingt praktisch. Dauerbetrieb macht Zugriffsrechte, sichtbare Zwischenstände und klare Stopps aber wichtiger, nicht unwichtiger.",
+      "url": "https://openai.com/index/introducing-dots/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "openai.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "KI",
+      "title": "Was verraten KI-Chats an Tracker?",
+      "body": "Am Dienstag diskutiert: Eine Forschungsarbeit analysiert Datenschutzpraktiken von neun Gesprächs-KI-Diensten im Web und mobil. Sie beschreibt Risiken durch Drittanbieter-Tracking und die Weitergabe von Gesprächsartefakten. Der PDF-Dateiname verweist auf den 16. September.",
+      "takeaway": "Die Ergebnisse gelten für die untersuchten Implementierungen. Ein freundliches Chatfenster ersetzt keine Prüfung der Datenflüsse.",
+      "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
+      "cta": "Originalquelle lesen ↗",
+      "source": "jorgegarciaherrero.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "KI",
+      "title": "KI-Werbung und Menschen, die schon verlieren.",
+      "body": "Am Dienstag diskutiert: Die EFF kritisiert in einem Beitrag vom 24. September KI-gestütztes Targeting bei DraftKings. Unter Verweis auf die New York Times beschreibt sie Werbung an Personen, die wahrscheinlich weiter verlieren.",
+      "takeaway": "Das ist eine Kritik der EFF, keine eigene Untersuchung. Der Fall zeigt trotzdem, warum reine Conversion-Optimierung keine neutrale Produktentscheidung ist.",
+      "url": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.eff.org · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "KI",
+      "title": "Jeeves: erst überlegen, dann auswählen.",
+      "body": "Am Dienstag auf Hacker News: PostHogs Jeeves untersucht Entscheidungsmodelle, die vor der Auswahl zwischen Optionen reasoning einsetzen. Die Projekt-README beschreibt Training mit LoRA und veröffentlicht eigene Vergleichsergebnisse.",
+      "takeaway": "Projektbenchmarks sind ein Startpunkt. Interessant ist der Trade-off: Verbessert das Nachdenken die Entscheidung genug, um zusätzliche Laufzeit zu rechtfertigen?",
+      "url": "https://github.com/PostHog/jeeves",
+      "cta": "Originalquelle lesen ↗",
+      "source": "github.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "Livenerf misst Drift statt Bauchgefühl.",
+      "body": "Am Dienstag diskutiert: Livenerf verfolgt mit festgelegten Prompts und reproduzierbarer Auswertung, ob sich Modellleistung über die Zeit verändert. Ein schlechter Einzelchat soll gerade nicht als Beweis für eine heimliche Verschlechterung reichen.",
+      "takeaway": "Die aktuelle README enthält spätere Fortschrittsstände. Das Projekt ist hier ein Fund aus dem Tagesarchiv, kein rückwirkender Befund, dass ein Modell tatsächlich schlechter wurde.",
+      "url": "https://github.com/ninjahawk/livenerf",
+      "cta": "Originalquelle lesen ↗",
+      "source": "github.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "Tcl/Tk 9.1: alte Werkzeuge sind nicht fertig.",
+      "body": "Am Dienstag diskutiert: Die offizielle Tcl/Tk-Seite beschreibt die Entwicklung von Version 9.1 auf der Basis von 9.0. Sie nennt neue Funktionen und Schnittstellen sowie das Ziel stabiler Releases im September.",
+      "takeaway": "Die Seite allein bestätigt keinen stabilen Release am 29. September. Als Blick auf eine weiterentwickelte GUI- und Skriptwelt ist sie trotzdem spannend.",
+      "url": "https://www.tcl-lang.org/software/tcltk/9.1.html",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.tcl-lang.org · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "NSL: WSL-Gefühl, aber auf Linux.",
+      "body": "Am Dienstag vorgestellt: nsl bietet auf einem Linux-Host persistente Linux-Umgebungen mit eigenen Paketen und Diensten. Laut Projekt laufen systemd-nspawn-Container in einer kleinen VM und starten bei Benutzung.",
+      "takeaway": "Nützlich, wenn ein Projekt seine eigene Distribution braucht. Isolation und Dateizugriff bewusst verstehen, bevor daraus die nächste Dev-Umgebung wird.",
+      "url": "https://frostyard.github.io/nsl/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "frostyard.github.io · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "Ein Sprachmodell auf sieben ESP32-S3.",
+      "body": "Am Dienstag diskutiert: ESP32s3-LLM-Cluster verteilt ein kleines Sprachmodell auf sieben Mikrocontroller. Die README beschreibt einen Master für Tokenisierung und Embeddings und weitere Knoten für Modellschichten, verbunden per SPI.",
+      "takeaway": "Kein Ersatz für den GPU-Server. Als offenes Lernprojekt für verteilte Inferenz ist es deutlich spannender als die Frage nach Chat-Geschwindigkeit.",
+      "url": "https://github.com/Low-Zi-Hong/ESP32s3-LLM-Cluster",
+      "cta": "Originalquelle lesen ↗",
+      "source": "github.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "Godot trifft die C++-Bibliothek deiner Wahl.",
+      "body": "Conans Blog erklärt am 29. September, wie sich C++-Bibliotheken über GDExtension und godot-cpp in Godot einbinden lassen. Der Beitrag behandelt vor allem die Abhängigkeiten und Builds für unterschiedliche Zielplattformen.",
+      "takeaway": "Die eigentliche Arbeit beginnt oft nach dem ersten erfolgreichen Compile. Versionen und reproduzierbare Builds sparen später sehr reale Nerven.",
+      "url": "https://blog.conan.io/cpp/conan/gamedev/godot/cmake/2026/09/29/Using-Any-Cpp-Library-In-Godot.html",
+      "cta": "Originalquelle lesen ↗",
+      "source": "blog.conan.io · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "title": "Ein Computer aus NAND-Gattern. Sehr vielen.",
+      "body": "Am Dienstag diskutiert: NAND-16 zeigt einen Computer aus 277.248 NAND-Gattern. Das Projekt macht den Weg von einfachen logischen Bausteinen zu einem vollständigen Rechensystem sichtbar.",
+      "takeaway": "Wer Computerarchitektur verstehen will, bekommt hier etwas zum Anschauen statt noch einer abstrakten Box namens CPU.",
+      "url": "https://somethingbig.ai/computer",
+      "cta": "Originalquelle lesen ↗",
+      "source": "somethingbig.ai · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "title": "Wollte 1 + 1. Baute eine Sprache. Klassiker.",
+      "body": "Am Dienstag diskutiert: Ein Erfahrungsbericht vom 16. September erzählt, wie aus einer kleinen Rechenaufgabe eine funktionale Programmiersprache in C wurde. Variablen, Datenstrukturen und Speicherlayout wachsen dabei Stück für Stück.",
+      "takeaway": "Ich erkenne die gefährliche Energie dieses Projekts. Als Lernbericht ist der Umweg wertvoll; als Aufwandsschätzung eher ein Warnschild.",
+      "url": "https://hereticpleb.vercel.app/blog/needed-one-plus-one/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "hereticpleb.vercel.app · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "title": "Wie Staff Engineers sinnvolle Arbeit finden.",
+      "body": "Am Dienstag diskutiert: Sujith Jay Nair beschreibt in einem Beitrag vom 22. September, wie Plattformteams neue Aufgaben aus Systemproblemen, Nutzungsbedarf, Organisation und Branchenentwicklung ableiten können.",
+      "takeaway": "Nicht künstlich Busywork erfinden. Gute Arbeit beginnt bei einem beobachteten Problem, nicht beim Wunsch nach einer größeren Roadmap.",
+      "url": "https://sujithjay.com/inventing-work",
+      "cta": "Originalquelle lesen ↗",
+      "source": "sujithjay.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "title": "Enigma zum Anfassen. Im Browser.",
+      "body": "Am Dienstag vorgestellt: enigma.design verbindet ein bedienbares 3D-Modell der Enigma mit historischen Erklärungen. Die Seite beschreibt auch die Arbeit polnischer, britischer und französischer Kryptoanalysten.",
+      "takeaway": "Interaktive Darstellung kann Mechanik verständlich machen. Die hübsche Oberfläche ist hier Mittel zum Lernen, nicht bloß Dekoration.",
+      "url": "https://enigma.design/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "enigma.design · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "title": "macOS Golden Gate: ein Erfahrungsbericht mit Gegenwind.",
+      "body": "SquareOrbits veröffentlicht am 29. September einen kritischen Bericht über macOS Golden Gate. Der Autor stellt Apples Stabilitätsversprechen seinen eigenen Problemen im Alltag gegenüber.",
+      "takeaway": "Ein einzelner Erfahrungsbericht ist keine Ausfallstatistik. Vor einem Update trotzdem schauen, ob die eigenen wichtigen Apps und Abläufe betroffen sind.",
+      "url": "https://www.squareorbits.com/blog/2026/09/macos-golden-gate-is-a-buggy-mess/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.squareorbits.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Wildcard",
+      "title": "Delhi: weniger Strom verlieren, mehr Netz verstehen.",
+      "body": "Am Dienstag diskutiert: IEEE Spectrum beschreibt in einem Artikel vom 28. September, wie Stromverluste in Delhi deutlich gesenkt wurden. Der Bericht verbindet technische Maßnahmen mit Veränderungen beim Betrieb und der Organisation.",
+      "takeaway": "Infrastrukturfortschritt kommt selten nur aus einem neuen Gerät. Messung, Wartung und Anreize gehören zum System.",
+      "url": "https://spectrum.ieee.org/delhi-electricity-loss",
+      "cta": "Originalquelle lesen ↗",
+      "source": "spectrum.ieee.org · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Wildcard",
+      "title": "Alle zu Hause. Aber kaum Besuch?",
+      "body": "Derek Thompson veröffentlicht am 29. September einen Essay über den Rückgang privaten Gastgebens in den USA. Er verbindet gesellschaftliche Daten und Kulturbeobachtungen mit der Frage, warum Menschen seltener zusammenkommen.",
+      "takeaway": "Keine Diagnose für jede Freundesgruppe. Aber ein guter Anlass, nicht auf die perfekte Wohnung zu warten, bevor jemand eingeladen wird.",
+      "url": "https://www.derekthompson.org/p/the-death-of-the-american-host",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.derekthompson.org · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Wildcard",
+      "title": "Kalifornien hat Trauben. Der Markt will weniger Wein.",
+      "body": "Am Dienstag diskutiert: KQED berichtet in einem Artikel vom 27. September über Winzer, die für ihre Trauben keine Käufer finden. Als Hintergrund beschreibt der Beitrag sinkenden Weinkonsum und ein Überangebot.",
+      "takeaway": "Auch traditionelle Branchen hängen an veränderten Gewohnheiten. Mehr produzieren löst fehlende Nachfrage nicht automatisch.",
+      "url": "https://www.kqed.org/news/12101534/california-farmers-are-struggling-to-sell-grapes-as-demand-for-wine-drops",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.kqed.org · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Wildcard",
+      "title": "Gesichtserkennung: viel Scan, keine Festnahme.",
+      "body": "Der Guardian berichtet am 29. September, dass ein sechsmonatiger Test an Londoner Bahnhöfen eine falsche Übereinstimmung und keine Festnahmen ergab. Der Bericht nennt mehr als 320.000 Pfund Kosten.",
+      "takeaway": "Ein begrenzter Test, keine Aussage über alle Systeme. Gerade deshalb sind klar definierte Ziele und überprüfbare Ergebnisse wichtiger als das Versprechen moderner Technik.",
+      "url": "https://www.theguardian.com/technology/2026/sep/29/trial-live-facial-recognition-cameras-london-stations-false-positive",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.theguardian.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Wildcard",
+      "title": "Infektionen als unterschätzter Krebsfaktor.",
+      "body": "Am Dienstag diskutiert: CBC berichtet über eine Studie, nach der ungefähr jeder achte Krebsfall weltweit auf Infektionen zurückgeht. Der Beitrag ordnet Viren und andere Erreger als vermeidbare Risikofaktoren ein.",
+      "takeaway": "Das ist eine globale Schätzung, keine persönliche Risikoberechnung. Medizinische Entscheidungen gehören in individuelle Beratung, nicht in eine News-Abkürzung.",
+      "url": "https://www.cbc.ca/lite/story/9.7361622",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.cbc.ca · Quelle geprüft am 1.10.2026"
+    }
+  ],
+  "notes": "Fazit: Autonomie ist kein Selbstzweck. Die besten Werkzeuge machen Arbeit verständlicher, prüfbarer und tatsächlich leichter. Nicht einfach länger. Nachträglich erstellter Tagesrückblick, zusammengestellt am 1. Oktober 2026. Auswahl aus dem datierten Hacker-News-Tagesarchiv und Originalquellen. Ein Tagesfund ist nicht automatisch ein Release dieses Tages; ältere Beiträge und spätere README-Stände sind gekennzeichnet. Reine Textausgabe ohne Audio.",
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-09-29"
+}

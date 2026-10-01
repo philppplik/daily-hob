@@ -1,6 +1,21 @@
+<p align="center"><img src="https://philppplik.github.io/daily-hob/assets/brand/logo.png" alt="Daily Hob" width="260"></p>
+
 # Daily Hob
 
-A light, mobile-first briefing archive with permanent date-based editions, sources, a local audio player, download links and the generated Daily Hob logo. Static HTML/CSS, no tracking, no external frontend dependencies. Everything in this public repository and its website is public.
+**Weniger Rauschen. Mehr Aha.**
+
+Ein helles, mobiles Briefing-Archiv für KI, Open Source, Informatik, Design und die guten Überraschungen dazwischen. Enthusiastisch, aber nicht blind vor Hype. Jede Ausgabe bleibt über ihr Datum auffindbar, mit Originalquellen, klarer Einordnung und, wenn vorhanden, Audio zum Anhören.
+
+[→ Zum Daily Hob](https://philppplik.github.io/daily-hob/)
+
+- **Lesen oder hören:** Textausgaben und Briefings mit lokalem Audioplayer.
+- **Quellen statt Bauchgefühl:** Links zu Originalartikeln, Projekten und Tagesarchiven.
+- **Klein und offen:** Statisches HTML/CSS, Python-Build ohne zusätzliche Bibliotheken, kein Tracking und keine externen Frontend-Abhängigkeiten.
+- **Dein Tempo:** Mobile-first, klare Typografie und direkte Sprungmarken zu den Themen.
+
+Alles in diesem öffentlichen Repository und auf der Website ist öffentlich. Keine privaten Daten veröffentlichen.
+
+---
 
 ## Structure
 
@@ -35,3 +50,7 @@ Settings → Pages → Source: GitHub Actions. The included workflow deploys the
 ## Seed / limitations
 
 Edition: 30 September 2026, four items. Text/source checks: 1 October. Original voice version is shorter and does not contain every later precision in the text; the page says so. Audio was compressed to 32 kbps mono for a small download without changing its speech. The three supplied images were converted to optimized JPGs. OpenClaw is a labeled image-archive item, not a fifth news claim. Seed hero is supplied Gemini artwork; Daily Hob logo is AI-generated. No new AI hero, account system, database service, payment flow or daily content schedule is configured here. CI automatically deploys content after a push, not autonomously creates new briefings.
+
+## Text-only retrospective editions
+
+`hero` and `audio` are optional. With no audio, the builder emits no player, download or audio navigation and labels the index card `Textausgabe`. Without a hero, the index card spans the content width. This supports the September 28 and 29 retrospective editions without placeholder media. Each has 5 AI, 5 open-source/open-code, 5 computer-science/design and 5 wildcard items. These are discussion-day selections, not claims that every item was released on that date. Original publication dates and later README changes are identified in the text; `archiveUrl` points to the dated selection archive. Avoid retroactively importing new version details into older editions.
