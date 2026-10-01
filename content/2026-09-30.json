@@ -19,7 +19,8 @@
       "cta": "Ab in Googles Maschinenraum ↗",
       "source": "Google · Herstellerangaben · Bild: Google",
       "image": "gemini4-argon.jpg",
-      "imageAlt": "Gemini 4 Argon: blaues Titelmotiv mit großer weißer 4"
+      "imageAlt": "Gemini 4 Argon: blaues Titelmotiv mit großer weißer 4",
+      "short": "Gemini 4 Argon"
     },
     {
       "category": "Open Source / Builder-Tools",
@@ -30,7 +31,8 @@
       "imageAlt": "Titelbild von Univer, dem Open-Source-Office-Framework",
       "url": "https://github.com/dream-num/univer",
       "cta": "Gib deinem nächsten Agenten einen Schreibtisch ↗",
-      "source": "GitHub · dream-num/univer · Bild: Univer"
+      "source": "GitHub · dream-num/univer · Bild: Univer",
+      "short": "Univer"
     },
     {
       "category": "Local AI / Inferenz",
@@ -41,7 +43,8 @@
       "cta": "Benchmarks auf den Prüfstand, nicht aufs Podest ↗",
       "source": "Hacker News · Launch und Diskussion · Bild: GitHub-Projekt magnitudedev/magnitude",
       "image": "magnitude.jpg",
-      "imageAlt": "Repo-Karte des Projekts magnitudedev/magnitude"
+      "imageAlt": "Repo-Karte des Projekts magnitudedev/magnitude",
+      "short": "Magnitude"
     },
     {
       "category": "Agenten / Gegenwind",
@@ -50,7 +53,8 @@
       "takeaway": "Genau die Debatte für dich: Wie viel Autonomie hilft wirklich, und wann ist ein sichtbarer Zwischenstand besser als eine große Blackbox?",
       "url": "https://news.ycombinator.com/item?id=49890647",
       "cta": "Popcorn raus. Die Kommentare haben Fragen ↗",
-      "source": "Hacker News · Show HN und Diskussion"
+      "source": "Hacker News · Show HN und Diskussion",
+      "short": "Raven"
     }
   ],
   "notes": "Archivfassung des Briefings vom 30. September. Links und Text am 1. Oktober 2026 geprüft. Das Audio ist die ursprüngliche, kürzere Fassung und enthält nicht alle Präzisierungen des Texts.",
