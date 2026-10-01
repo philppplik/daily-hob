@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-30",
+  "title": "Daily Briefing, Mi 30.9.",
+  "headline": "Agenten ziehen ein.\nDu behältst den Überblick.",
+  "teaser": "Gemini 4 Argon, Office für Agenten und zwei Projekte, bei denen ein zweiter Blick mehr bringt als der Hype.",
+  "intro": "Hey Philipp. Vier Catches aus der KI- und Open-Source-Welt. Zum Durchscrollen, Weiterdenken oder einfach Anhören.",
+  "hero": "gemini4-argon.png",
+  "heroAlt": "Gemini 4 Argon: blaues Titelmotiv mit großer weißer 4",
+  "heroCaption": "Gemini 4 Argon · bereitgestelltes Titelmotiv",
+  "audio": "briefing.mp3",
+  "audioLabel": "Die Kurzversion mit Hob · 1:09 Min.",
+  "sections": [
+    {
+      "category": "KI / Frontier-Modelle",
+      "title": "Gemini 4 Argon: erst mal hinter der Absperrung.",
+      "body": "Google stellt sein neues Frontier-Modell zuerst ausgewählten Cyber-Verteidigern im Fairwind-Programm bereit. Der Einführungspreis: $2 pro Million Input-Tokens und $10 pro Million Output-Tokens. Nach der Einführungsphase nennt Google $4 / $20.",
+      "takeaway": "Der spannende Teil für dich: Google berichtet, dass Argon-Agenten intern bereits Speicheroptimierungen gefunden haben, die nach dem Rollout über 300 TiB freigeben. Agenten nicht als Chatfenster, sondern als Werkzeug im Maschinenraum.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "cta": "Ab in Googles Maschinenraum ↗",
+      "source": "Google · Herstellerangaben"
+    },
+    {
+      "category": "Open Source / Builder-Tools",
+      "title": "Univer: dein Agent kriegt ein Office.",
+      "body": "Univer ist ein Framework für Tabellen, Textdokumente und Präsentationen im Web und auf dem Server. Die Open-Source-Pakete stehen unter Apache 2.0; das Repository hat bei der Prüfung rund 14.000 Sterne. Optionale Pro-Funktionen sind separat zu betrachten.",
+      "takeaway": "Für deine eigenen Tools interessant: Dokumente nicht nur als fertigen Export denken, sondern als bearbeitbare Oberfläche direkt im Produkt.",
+      "image": "univer.png",
+      "imageAlt": "Univer: New Generation Open Source Office Suite",
+      "url": "https://github.com/dream-num/univer",
+      "cta": "Gib deinem nächsten Agenten einen Schreibtisch ↗",
+      "source": "GitHub · dream-num/univer"
+    },
+    {
+      "category": "Local AI / Inferenz",
+      "title": "Magnitude: mehr aus deiner Hardware holen.",
+      "body": "Der HN-Launch vom 30. September stellt eine selbstoptimierende Inferenz-Engine für lokale Agenten vor. Sie läuft laut Projekt auf Mac, Linux und Windows und passt unter anderem die Speichernutzung an aktive Agenten-Sessions an.",
+      "takeaway": "Die Entwickler nennen bis zu 2× gegenüber llama.cpp. Das ist eine Herstellerangabe, kein unabhängiger Test. Für deinen Dev-Blick sind die Benchmark-Diskussion und die konkreten Hardwarebedingungen die eigentliche Fundgrube.",
+      "url": "https://news.ycombinator.com/item?id=49911995",
+      "cta": "Benchmarks auf den Prüfstand, nicht aufs Podest ↗",
+      "source": "Hacker News · Launch und Diskussion"
+    },
+    {
+      "category": "Agenten / Gegenwind",
+      "title": "Raven: ein Prompt. Vier Tage Vertrauen?",
+      "body": "Raven nennt sich einen „Harness of harnesses“. In der HN-Diskussion trifft die Idee langer, unbeaufsichtigter Agentenarbeit auf deutliche Skepsis: Gute Arbeit entsteht oft durch Steuern, Ausprobieren und Nachjustieren, nicht durch einen perfekten Startprompt.",
+      "takeaway": "Genau die Debatte für dich: Wie viel Autonomie hilft wirklich, und wann ist ein sichtbarer Zwischenstand besser als eine große Blackbox?",
+      "url": "https://news.ycombinator.com/item?id=49890647",
+      "cta": "Popcorn raus. Die Kommentare haben Fragen ↗",
+      "source": "Hacker News · Show HN und Diskussion"
+    }
+  ],
+  "notes": "Archivfassung des Briefings vom 30. September. Links und Text am 1. Oktober 2026 geprüft. Das Audio ist die ursprüngliche, kürzere Fassung und enthält nicht alle Präzisierungen des Texts.",
+  "gallery": [{"image":"openclaw.png","alt":"OpenClaw Enterprise: illustrierte offene Agentenplattform","caption":"Aus dem Bildpaket · OpenClaw Enterprise. Kein zusätzlicher News-Punkt in dieser Ausgabe."}]
+}
