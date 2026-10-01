@@ -54,3 +54,5 @@ Edition: 30 September 2026, four items. Text/source checks: 1 October. Original 
 ## Text-only retrospective editions
 
 `hero` and `audio` are optional. With no audio, the builder emits no player, download or audio navigation and labels the index card `Textausgabe`. Without a hero, the index card spans the content width. This supports the September 28 and 29 retrospective editions without placeholder media. Each has 5 AI, 5 open-source/open-code, 5 computer-science/design and 5 wildcard items. These are discussion-day selections, not claims that every item was released on that date. Original publication dates and later README changes are identified in the text; `archiveUrl` points to the dated selection archive. Avoid retroactively importing new version details into older editions.
+
+<!-- -->
