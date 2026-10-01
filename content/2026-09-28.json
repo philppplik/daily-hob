@@ -197,5 +197,8 @@
     }
   ],
   "notes": "Fazit: Tempo ist toll. Offene Schnittstellen und nachvollziehbare Grenzen machen es erst brauchbar. Und manchmal erklärt ein kleines Hardwareprojekt mehr als der nächste große KI-Slogan. Nachträglich erstellter Tagesrückblick, zusammengestellt am 1. Oktober 2026. Auswahl aus dem datierten Hacker-News-Tagesarchiv und Originalquellen. Ein Tagesfund ist nicht automatisch ein Release dieses Tages; ältere Beiträge und spätere README-Stände sind gekennzeichnet. Reine Textausgabe ohne Audio.",
-  "archiveUrl": "https://news.ycombinator.com/front?day=2026-09-28"
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-09-28",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: ein kleiner leuchtender Chip hinter einem verschlossenen Tor, davor kleine Agenten-Blöcke",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob"
 }
