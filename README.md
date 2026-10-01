@@ -1,6 +1,21 @@
+<p align="center"><img src="https://philppplik.github.io/daily-hob/assets/brand/logo.png" alt="Daily Hob" width="260"></p>
+
 # Daily Hob
 
-A light, mobile-first briefing archive with permanent date-based editions, sources, a local audio player, download links and the generated Daily Hob logo. Static HTML/CSS, no tracking, no external frontend dependencies. Everything in this public repository and its website is public.
+**Weniger Rauschen. Mehr Aha.**
+
+Ein helles, mobiles Briefing-Archiv für KI, Open Source, Informatik, Design und die guten Überraschungen dazwischen. Enthusiastisch, aber nicht blind vor Hype. Jede Ausgabe bleibt über ihr Datum auffindbar, mit Originalquellen, klarer Einordnung und, wenn vorhanden, Audio zum Anhören.
+
+[→ Zum Daily Hob](https://philppplik.github.io/daily-hob/)
+
+- **Lesen oder hören:** Textausgaben und Briefings mit lokalem Audioplayer.
+- **Quellen statt Bauchgefühl:** Links zu Originalartikeln, Projekten und Tagesarchiven.
+- **Klein und offen:** Statisches HTML/CSS, Python-Build ohne zusätzliche Bibliotheken, kein Tracking und keine externen Frontend-Abhängigkeiten.
+- **Dein Tempo:** Mobile-first, klare Typografie und direkte Sprungmarken zu den Themen.
+
+Alles in diesem öffentlichen Repository und auf der Website ist öffentlich. Keine privaten Daten veröffentlichen.
+
+---
 
 ## Structure
 
