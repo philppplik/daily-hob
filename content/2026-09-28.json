@@ -12,7 +12,9 @@
       "takeaway": "Nicht automatisch das größte Modell nehmen. Für kurze Iterationsschleifen kann Tempo wichtiger sein als der nächste Benchmark-Pokal.",
       "url": "https://www.anthropic.com/claude-sonnet-5-5",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.anthropic.com · Quelle geprüft am 1.10.2026"
+      "source": "www.anthropic.com · Quelle geprüft am 1.10.2026 · Bild: Anthropic",
+      "image": "anthropic-sonnet.jpg",
+      "imageAlt": "Titelbild zu Claude Sonnet 5.5: Blick aus einem Fenster auf die Erde"
     },
     {
       "category": "KI",
@@ -57,7 +59,9 @@
       "takeaway": "Für Routing und Klassifikation ist ein kleines Entscheidungsmodell manchmal passender als ein Chatmodell mit sehr viel Mitteilungsbedürfnis.",
       "url": "https://github.com/firelex/jeff",
       "cta": "Originalquelle lesen ↗",
-      "source": "github.com · Quelle geprüft am 1.10.2026"
+      "source": "github.com · Quelle geprüft am 1.10.2026 · Bild: GitHub-Projekt firelex/jeff",
+      "image": "jeff.jpg",
+      "imageAlt": "Repo-Karte des Projekts firelex/jeff"
     },
     {
       "category": "Open Source",
@@ -75,7 +79,9 @@
       "takeaway": "Das ist die gute Sorte Overengineering: Software, eingebettete Hardware und Musik treffen sich in einem tatsächlich benutzbaren Gerät.",
       "url": "https://github.com/dashersw/coyopedal",
       "cta": "Originalquelle lesen ↗",
-      "source": "github.com · Quelle geprüft am 1.10.2026"
+      "source": "github.com · Quelle geprüft am 1.10.2026 · Bild: GitHub-Projekt dashersw/coyopedal",
+      "image": "coyopedal.jpg",
+      "imageAlt": "Repo-Karte des Projekts dashersw/coyopedal"
     },
     {
       "category": "Open Source",
@@ -84,7 +90,9 @@
       "takeaway": "Eine gute Schnittstelle spart Agenten Sucharbeit. Schreibrechte trotzdem bewusst begrenzen, bevor der Helfer die Infrastruktur kreativ interpretiert.",
       "url": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/",
       "cta": "Originalquelle lesen ↗",
-      "source": "blog.cloudflare.com · Quelle geprüft am 1.10.2026"
+      "source": "blog.cloudflare.com · Quelle geprüft am 1.10.2026 · Bild: Cloudflare Blog",
+      "image": "cloudflare-cli.jpg",
+      "imageAlt": "Illustration zum Cloudflare-Blogbeitrag über die cf-CLI"
     },
     {
       "category": "Open Source",
@@ -183,7 +191,9 @@
       "takeaway": "Ein schöner Perspektivwechsel: Karten zeigen hier nicht nur die Welt, sondern auch, wie wir sie uns merken.",
       "url": "https://www.habibicode.org/thedrawnworld",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.habibicode.org · Quelle geprüft am 1.10.2026"
+      "source": "www.habibicode.org · Quelle geprüft am 1.10.2026 · Bild: habibicode.org",
+      "image": "drawn-world.jpg",
+      "imageAlt": "Weltkarte aus dem Projekt The Drawn World"
     }
   ],
   "notes": "Fazit: Tempo ist toll. Offene Schnittstellen und nachvollziehbare Grenzen machen es erst brauchbar. Und manchmal erklärt ein kleines Hardwareprojekt mehr als der nächste große KI-Slogan. Nachträglich erstellter Tagesrückblick, zusammengestellt am 1. Oktober 2026. Auswahl aus dem datierten Hacker-News-Tagesarchiv und Originalquellen. Ein Tagesfund ist nicht automatisch ein Release dieses Tages; ältere Beiträge und spätere README-Stände sind gekennzeichnet. Reine Textausgabe ohne Audio.",
