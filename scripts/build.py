@@ -43,7 +43,7 @@ idx_ld=[{'@context':'https://schema.org','@type':'CollectionPage','name':'Daily 
 (OUT/'briefings').mkdir(exist_ok=True)
 for p in posts:
     ap='../assets/'+p['date']+'/'
-    toc=''.join(f'<li><a href="#story-{n}">{n:02d} / {E(s["category"].split(" / ")[0])}</a></li>' for n,s in enumerate(p['sections'],1))
+    toc=''.join(f'<li><a href="#story-{n}">{n:02d} / {E(s.get("short") or s["title"])}<span class="toc-tag">{E(s["category"].split(" / ")[0])}</span></a></li>' for n,s in enumerate(p['sections'],1))
     stories=''
     for n,s in enumerate(p['sections'],1):
         im=f'<img loading="lazy" src="{ap}{E(s["image"])}" alt="{E(s["imageAlt"])}">' if 'image' in s else ''
