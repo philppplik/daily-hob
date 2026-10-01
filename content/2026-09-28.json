@@ -14,7 +14,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "www.anthropic.com · Quelle geprüft am 1.10.2026 · Bild: Anthropic",
       "image": "anthropic-sonnet.jpg",
-      "imageAlt": "Titelbild zu Claude Sonnet 5.5: Blick aus einem Fenster auf die Erde"
+      "imageAlt": "Titelbild zu Claude Sonnet 5.5: Blick aus einem Fenster auf die Erde",
+      "short": "Sonnet 5.5"
     },
     {
       "category": "KI",
@@ -23,7 +24,8 @@
       "takeaway": "Agenten bekommen mehr Werkzeuge. Dann brauchen sie auch Grenzen, die nicht nur als höfliche Bitte im Prompt stehen.",
       "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.cnbc.com · Quelle geprüft am 1.10.2026"
+      "source": "www.cnbc.com · Quelle geprüft am 1.10.2026",
+      "short": "Nvidia Agenten-Schutz"
     },
     {
       "category": "KI",
@@ -32,7 +34,8 @@
       "takeaway": "Spannend ist die Verbindung von Modellen und Chips. Ob daraus bessere Produkte werden, zeigt erst die Umsetzung.",
       "url": "https://www.worldlabs.ai/blog/amd-announcement",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.worldlabs.ai · Quelle geprüft am 1.10.2026"
+      "source": "www.worldlabs.ai · Quelle geprüft am 1.10.2026",
+      "short": "World Labs x AMD"
     },
     {
       "category": "KI",
@@ -41,7 +44,8 @@
       "takeaway": "Für einen schnellen Realitätscheck klasse: Was kann ein kleines Modell auf der eigenen Hardware wirklich, ohne dass eine Cloud alles kaschiert?",
       "url": "https://stateofutopia.com/experiments/microllmlab/",
       "cta": "Originalquelle lesen ↗",
-      "source": "stateofutopia.com · Quelle geprüft am 1.10.2026"
+      "source": "stateofutopia.com · Quelle geprüft am 1.10.2026",
+      "short": "MicroLLM im Browser"
     },
     {
       "category": "KI",
@@ -50,7 +54,8 @@
       "takeaway": "Das ist eine Meinung, keine Sicherheitsmessung. Gerade deshalb lohnt die Gegenfrage: Wer belegt die Behauptungen, und wer kontrolliert die Folgen?",
       "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
       "cta": "Originalquelle lesen ↗",
-      "source": "calnewport.com · Quelle geprüft am 1.10.2026"
+      "source": "calnewport.com · Quelle geprüft am 1.10.2026",
+      "short": "KI-Labore & Aufsicht"
     },
     {
       "category": "Open Source",
@@ -61,7 +66,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "github.com · Quelle geprüft am 1.10.2026 · Bild: GitHub-Projekt firelex/jeff",
       "image": "jeff.jpg",
-      "imageAlt": "Repo-Karte des Projekts firelex/jeff"
+      "imageAlt": "Repo-Karte des Projekts firelex/jeff",
+      "short": "Jeff"
     },
     {
       "category": "Open Source",
@@ -70,7 +76,8 @@
       "takeaway": "Offene Protokolle dürfen ruhig unspektakulär aussehen. Entscheidend ist, ob die Menschen ihre bestehenden Werkzeuge weiter nutzen können.",
       "url": "https://git.mills.io/prologic/parley",
       "cta": "Originalquelle lesen ↗",
-      "source": "git.mills.io · Quelle geprüft am 1.10.2026"
+      "source": "git.mills.io · Quelle geprüft am 1.10.2026",
+      "short": "Parley"
     },
     {
       "category": "Open Source",
@@ -81,7 +88,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "github.com · Quelle geprüft am 1.10.2026 · Bild: GitHub-Projekt dashersw/coyopedal",
       "image": "coyopedal.jpg",
-      "imageAlt": "Repo-Karte des Projekts dashersw/coyopedal"
+      "imageAlt": "Repo-Karte des Projekts dashersw/coyopedal",
+      "short": "Coyopedal"
     },
     {
       "category": "Open Source",
@@ -92,7 +100,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "blog.cloudflare.com · Quelle geprüft am 1.10.2026 · Bild: Cloudflare Blog",
       "image": "cloudflare-cli.jpg",
-      "imageAlt": "Illustration zum Cloudflare-Blogbeitrag über die cf-CLI"
+      "imageAlt": "Illustration zum Cloudflare-Blogbeitrag über die cf-CLI",
+      "short": "Cloudflare CLI"
     },
     {
       "category": "Open Source",
@@ -101,7 +110,8 @@
       "takeaway": "Kein Lizenzversprechen über den Artikel hinaus. Als offene Code-Inspiration ist es stark: Erst die Komposition, dann der Shader.",
       "url": "https://tympanus.net/codrops/2026/09/28/wide-template/",
       "cta": "Originalquelle lesen ↗",
-      "source": "tympanus.net · Quelle geprüft am 1.10.2026"
+      "source": "tympanus.net · Quelle geprüft am 1.10.2026",
+      "short": "Wide (Codrops)"
     },
     {
       "category": "Informatik / Design",
@@ -110,7 +120,8 @@
       "takeaway": "Ein schönes Beispiel für Schnittstellen-Neugier. Sicherheit und Nutzungsbedingungen gehören beim Nachbauen genauso dazu wie die Paketmitschnitte.",
       "url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
       "cta": "Originalquelle lesen ↗",
-      "source": "yashgarg.dev · Quelle geprüft am 1.10.2026"
+      "source": "yashgarg.dev · Quelle geprüft am 1.10.2026",
+      "short": "PS5-Stream"
     },
     {
       "category": "Informatik / Design",
@@ -119,7 +130,8 @@
       "takeaway": "Die Designfrage sitzt: Müssen Menschen ihr Leben ans Tool anpassen, oder lässt sich das Tool passend machen?",
       "url": "https://www.inkandswitch.com/essay/malleable-software/",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.inkandswitch.com · Quelle geprüft am 1.10.2026"
+      "source": "www.inkandswitch.com · Quelle geprüft am 1.10.2026",
+      "short": "Malleable Software"
     },
     {
       "category": "Informatik / Design",
@@ -128,7 +140,8 @@
       "takeaway": "KI kann beim Prüfen helfen. Dass ein Diff keine offensichtlichen Fehler enthält, heißt noch nicht, dass das Team die Änderung verstanden hat.",
       "url": "https://www.adaptivecapacitylabs.com/2026/08/24/there-is-more-to-code-review-than-automatable-detection/",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.adaptivecapacitylabs.com · Quelle geprüft am 1.10.2026"
+      "source": "www.adaptivecapacitylabs.com · Quelle geprüft am 1.10.2026",
+      "short": "Code Review"
     },
     {
       "category": "Informatik / Design",
@@ -137,7 +150,8 @@
       "takeaway": "Bevor der Kalender plötzlich einen Tag danebenliegt: Datentyp und Session-Zeitzone prüfen. Ja, auch bei vermeintlich harmlosen UTC-Werten.",
       "url": "https://bookofrevenue.com/blog/6ab81e9a97a13f0001f7e4e1/postgres-at-time-zone-u-does-not-do-what-you-think-it-does",
       "cta": "Originalquelle lesen ↗",
-      "source": "bookofrevenue.com · Quelle geprüft am 1.10.2026"
+      "source": "bookofrevenue.com · Quelle geprüft am 1.10.2026",
+      "short": "Postgres AT TIME ZONE"
     },
     {
       "category": "Informatik / Design",
@@ -146,7 +160,8 @@
       "takeaway": "Nicht noch ein zufällig hübsches Icon. Ein gutes System kennt die Regeln, die eine Form zur Identität machen.",
       "url": "https://benovermyer.com/blog/2026/09/japanese-vs-western-heraldry/",
       "cta": "Originalquelle lesen ↗",
-      "source": "benovermyer.com · Quelle geprüft am 1.10.2026"
+      "source": "benovermyer.com · Quelle geprüft am 1.10.2026",
+      "short": "Wappen & Logos"
     },
     {
       "category": "Wildcard",
@@ -155,7 +170,8 @@
       "takeaway": "Gründungsgeschichten werden mit steigenden Kursen sehr teuer. Die Originaldarstellung ist interessant, ihre Ansprüche bleiben davon getrennt.",
       "url": "https://colo.to/nvidia-stock-narrative.html",
       "cta": "Originalquelle lesen ↗",
-      "source": "colo.to · Quelle geprüft am 1.10.2026"
+      "source": "colo.to · Quelle geprüft am 1.10.2026",
+      "short": "Nvidia-Aktien-Story"
     },
     {
       "category": "Wildcard",
@@ -164,7 +180,8 @@
       "takeaway": "Für Designmenschen überraschend nah: Technisch sauberer bedeutet nicht automatisch historisch treuer.",
       "url": "https://mubi.com/en/notebook/posts/pirating-the-pirates",
       "cta": "Originalquelle lesen ↗",
-      "source": "mubi.com · Quelle geprüft am 1.10.2026"
+      "source": "mubi.com · Quelle geprüft am 1.10.2026",
+      "short": "Filmrestaurierung"
     },
     {
       "category": "Wildcard",
@@ -173,7 +190,8 @@
       "takeaway": "Nutzende bauen sich ihre eigenen Räume. Manchmal ist die spannendste Community genau dort, wo kein Community-Manager gesucht hätte.",
       "url": "https://www.thisamericanlife.org/897/transcript",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.thisamericanlife.org · Quelle geprüft am 1.10.2026"
+      "source": "www.thisamericanlife.org · Quelle geprüft am 1.10.2026",
+      "short": "Spotify-Kommentare"
     },
     {
       "category": "Wildcard",
@@ -182,7 +200,8 @@
       "takeaway": "Archäologie ist oft kein einzelner großer Aha-Fund. Neue Zusammenhänge machen alte Beobachtungen erst lesbar.",
       "url": "https://archaeologymag.com/2026/09/gobeklitepe-burials-hundreds-of-scattered-bones/",
       "cta": "Originalquelle lesen ↗",
-      "source": "archaeologymag.com · Quelle geprüft am 1.10.2026"
+      "source": "archaeologymag.com · Quelle geprüft am 1.10.2026",
+      "short": "Göbeklitepe"
     },
     {
       "category": "Wildcard",
@@ -193,7 +212,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "www.habibicode.org · Quelle geprüft am 1.10.2026 · Bild: habibicode.org",
       "image": "drawn-world.jpg",
-      "imageAlt": "Weltkarte aus dem Projekt The Drawn World"
+      "imageAlt": "Weltkarte aus dem Projekt The Drawn World",
+      "short": "The Drawn World"
     }
   ],
   "notes": "Fazit: Tempo ist toll. Offene Schnittstellen und nachvollziehbare Grenzen machen es erst brauchbar. Und manchmal erklärt ein kleines Hardwareprojekt mehr als der nächste große KI-Slogan. Nachträglich erstellter Tagesrückblick, zusammengestellt am 1. Oktober 2026. Auswahl aus dem datierten Hacker-News-Tagesarchiv und Originalquellen. Ein Tagesfund ist nicht automatisch ein Release dieses Tages; ältere Beiträge und spätere README-Stände sind gekennzeichnet. Reine Textausgabe ohne Audio.",
