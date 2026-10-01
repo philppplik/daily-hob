@@ -9,7 +9,7 @@ OUT.mkdir(exist_ok=True)
 for encoded in (ROOT/'assets').rglob('*.b64'):
     encoded.with_suffix('').write_bytes(base64.b64decode(encoded.read_text()))
 shutil.copy2(ROOT/'style.css', OUT/'style.css')
-shutil.copytree(ROOT/'assets', OUT/'assets', dirs_exist_ok=True, ignore=shutil.ignore_patterns('*.b64'))
+shutil.copytree(ROOT/'assets', OUT/'assets', dirs_exist_ok=True, ignore=shutil.ignore_patterns('*.b64','*.b64.part*'))
 posts = sorted((json.loads(p.read_text()) for p in (ROOT/'content').glob('*.json')), key=lambda p:p['date'], reverse=True)
 if not posts: raise ValueError('At least one briefing is required')
 for p in posts:
