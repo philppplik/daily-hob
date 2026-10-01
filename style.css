@@ -39,3 +39,4 @@
 :root[data-theme=dark] .consent-actions [data-consent=save]{background:#121212;color:#f1f1f1}
 :root[data-theme=dark] .consent .consent-feedback{background:#222}
 :root[data-theme=dark] .consent summary:focus-visible,.consent input:focus-visible{outline-color:#f1f1f1}
+.toc-tag{display:block;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-top:1px}
