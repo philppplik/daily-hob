@@ -85,3 +85,20 @@
   document.addEventListener('visibilitychange', checkExpiry);
   setInterval(checkExpiry, 60 * 1000);
 })();
+(function(){
+var API='https://daily-hob-newsletter.vercel.app/api/subscribe';
+var q=new URLSearchParams(location.search).get('status');
+var T=document.getElementById('nl-status-title'),X=document.getElementById('nl-status-text');
+if(T&&X&&q){var m={bestaetigt:['Du bist dabei.','Danke, deine Anmeldung ist bestätigt. Das nächste Hob Friday Signal oder der nächste Hob Monday Rewind landet in deinem Postfach.'],ungueltig:['Link abgelaufen.','Dieser Bestätigungslink ist ungültig oder älter als 48 Stunden. Trag dich unten einfach noch einmal ein.'],fehler:['Das hat nicht geklappt.','Beim Bestätigen ist etwas schiefgelaufen. Versuch es bitte später noch einmal.']}[q];if(m){T.textContent=m[0];X.textContent=m[1]}}
+document.querySelectorAll('.nl-form').forEach(function(f){
+f.addEventListener('submit',function(e){e.preventDefault();
+var msg=f.querySelector('.nl-msg'),btn=f.querySelector('.nl-btn'),em=f.elements.email,c=f.elements.consent;
+msg.className='nl-msg';
+if(!em.value||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim())){msg.textContent='Bitte gib eine gültige E-Mail-Adresse ein.';msg.classList.add('err');em.focus();return}
+if(!c.checked){msg.textContent='Bitte bestätige zuerst die Einwilligung.';msg.classList.add('err');return}
+btn.disabled=true;msg.textContent='Einen Moment …';
+fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em.value.trim(),consent:true,website:f.elements.website.value})})
+.then(function(r){return r.json().then(function(j){return{r:r,j:j}})})
+.then(function(o){if(o.r.ok&&o.j.ok){f.reset();msg.textContent='Fast geschafft: Wir haben dir eine Bestätigungsmail geschickt. Klick auf den Link darin, dann bist du dabei. Schau ggf. auch im Spam-Ordner nach.';msg.classList.add('ok')}else if(o.r.status===429){msg.textContent='Zu viele Versuche. Bitte probier es später noch einmal.';msg.classList.add('err')}else{msg.textContent='Das hat leider nicht geklappt. Bitte prüf die Adresse und versuch es noch einmal.';msg.classList.add('err')}})
+.catch(function(){msg.textContent='Keine Verbindung. Bitte versuch es später noch einmal.';msg.classList.add('err')})
+.then(function(){btn.disabled=false})})})})();
