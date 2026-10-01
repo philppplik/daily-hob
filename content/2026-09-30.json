@@ -25,10 +25,10 @@
       "body": "Univer ist ein Framework für Tabellen, Textdokumente und Präsentationen im Web und auf dem Server. Die Open-Source-Pakete stehen unter Apache 2.0; das Repository hat bei der Prüfung rund 14.000 Sterne. Optionale Pro-Funktionen sind separat zu betrachten.",
       "takeaway": "Für deine eigenen Tools interessant: Dokumente nicht nur als fertigen Export denken, sondern als bearbeitbare Oberfläche direkt im Produkt.",
       "image": "univer.jpg",
-      "imageAlt": "Univer: New Generation Open Source Office Suite",
+      "imageAlt": "Titelbild von Univer, dem Open-Source-Office-Framework",
       "url": "https://github.com/dream-num/univer",
       "cta": "Gib deinem nächsten Agenten einen Schreibtisch ↗",
-      "source": "GitHub · dream-num/univer"
+      "source": "GitHub · dream-num/univer · Bild: Univer"
     },
     {
       "category": "Local AI / Inferenz",
@@ -37,7 +37,9 @@
       "takeaway": "Die Entwickler nennen bis zu 2× gegenüber llama.cpp. Das ist eine Herstellerangabe, kein unabhängiger Test. Für deinen Dev-Blick sind die Benchmark-Diskussion und die konkreten Hardwarebedingungen die eigentliche Fundgrube.",
       "url": "https://news.ycombinator.com/item?id=49911995",
       "cta": "Benchmarks auf den Prüfstand, nicht aufs Podest ↗",
-      "source": "Hacker News · Launch und Diskussion"
+      "source": "Hacker News · Launch und Diskussion · Bild: GitHub-Projekt magnitudedev/magnitude",
+      "image": "magnitude.jpg",
+      "imageAlt": "Repo-Karte des Projekts magnitudedev/magnitude"
     },
     {
       "category": "Agenten / Gegenwind",
