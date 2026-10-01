@@ -39,7 +39,9 @@
       "takeaway": "Das ist eine Kritik der EFF, keine eigene Untersuchung. Der Fall zeigt trotzdem, warum reine Conversion-Optimierung keine neutrale Produktentscheidung ist.",
       "url": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.eff.org · Quelle geprüft am 1.10.2026"
+      "source": "www.eff.org · Quelle geprüft am 1.10.2026 · Bild: EFF (CC BY)",
+      "image": "eff-banner.jpg",
+      "imageAlt": "Illustration aus der EFF-Bibliothek: Smartphones und Tablets mit Augen"
     },
     {
       "category": "KI",
@@ -48,7 +50,9 @@
       "takeaway": "Projektbenchmarks sind ein Startpunkt. Interessant ist der Trade-off: Verbessert das Nachdenken die Entscheidung genug, um zusätzliche Laufzeit zu rechtfertigen?",
       "url": "https://github.com/PostHog/jeeves",
       "cta": "Originalquelle lesen ↗",
-      "source": "github.com · Quelle geprüft am 1.10.2026"
+      "source": "github.com · Quelle geprüft am 1.10.2026 · Bild: GitHub-Projekt PostHog/jeeves",
+      "image": "jeeves.jpg",
+      "imageAlt": "Repo-Karte des Projekts PostHog/jeeves"
     },
     {
       "category": "Open Source",
@@ -57,7 +61,9 @@
       "takeaway": "Die aktuelle README enthält spätere Fortschrittsstände. Das Projekt ist hier ein Fund aus dem Tagesarchiv, kein rückwirkender Befund, dass ein Modell tatsächlich schlechter wurde.",
       "url": "https://github.com/ninjahawk/livenerf",
       "cta": "Originalquelle lesen ↗",
-      "source": "github.com · Quelle geprüft am 1.10.2026"
+      "source": "github.com · Quelle geprüft am 1.10.2026 · Bild: GitHub-Projekt ninjahawk/livenerf",
+      "image": "livenerf.jpg",
+      "imageAlt": "Repo-Karte des Projekts ninjahawk/livenerf"
     },
     {
       "category": "Open Source",
@@ -84,7 +90,9 @@
       "takeaway": "Kein Ersatz für den GPU-Server. Als offenes Lernprojekt für verteilte Inferenz ist es deutlich spannender als die Frage nach Chat-Geschwindigkeit.",
       "url": "https://github.com/Low-Zi-Hong/ESP32s3-LLM-Cluster",
       "cta": "Originalquelle lesen ↗",
-      "source": "github.com · Quelle geprüft am 1.10.2026"
+      "source": "github.com · Quelle geprüft am 1.10.2026 · Bild: GitHub-Projekt Low-Zi-Hong/ESP32s3-LLM-Cluster",
+      "image": "esp32-cluster.jpg",
+      "imageAlt": "Repo-Karte des Projekts Low-Zi-Hong/ESP32s3-LLM-Cluster"
     },
     {
       "category": "Open Source",
@@ -102,7 +110,9 @@
       "takeaway": "Wer Computerarchitektur verstehen will, bekommt hier etwas zum Anschauen statt noch einer abstrakten Box namens CPU.",
       "url": "https://somethingbig.ai/computer",
       "cta": "Originalquelle lesen ↗",
-      "source": "somethingbig.ai · Quelle geprüft am 1.10.2026"
+      "source": "somethingbig.ai · Quelle geprüft am 1.10.2026 · Bild: somethingbig.ai",
+      "image": "nand-computer.jpg",
+      "imageAlt": "Vorschaubild des NAND-16-Computers aus 277.248 NAND-Gattern"
     },
     {
       "category": "Informatik / Design",
@@ -129,7 +139,9 @@
       "takeaway": "Interaktive Darstellung kann Mechanik verständlich machen. Die hübsche Oberfläche ist hier Mittel zum Lernen, nicht bloß Dekoration.",
       "url": "https://enigma.design/",
       "cta": "Originalquelle lesen ↗",
-      "source": "enigma.design · Quelle geprüft am 1.10.2026"
+      "source": "enigma.design · Quelle geprüft am 1.10.2026 · Bild: enigma.design",
+      "image": "enigma.jpg",
+      "imageAlt": "3D-Rekonstruktion der Enigma aus dem Projekt enigma.design"
     },
     {
       "category": "Informatik / Design",
