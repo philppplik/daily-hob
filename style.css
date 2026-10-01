@@ -4,3 +4,5 @@
 
 .brand-logo{width:150px;height:auto;max-height:38px;object-fit:contain}.nav-right{max-width:150px;text-align:right}
 .edition+.edition{padding-top:34px}.edition:not(:has(.edition-img)){grid-template-columns:1fr}.edition:not(:has(.edition-img)) p{max-width:720px}.toc{max-height:calc(100vh - 60px);overflow-y:auto}.notes{border-top:1px solid var(--rule);padding-top:24px}@media(max-width:759px){.toc{max-height:none;overflow:visible}.toc ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}.toc a{font-size:12px}}
+
+.footer .legal{display:flex;gap:16px}.footer .legal a{color:var(--secondary)}.legal-page{max-width:730px;padding:46px 0 10px}.legal-page h1{font-size:clamp(38px,6vw,64px);margin:0 0 28px}.legal-page h2{font-size:22px;letter-spacing:-.6px;font-weight:600;margin:34px 0 8px}.legal-page p,.legal-page li{color:var(--secondary);font-size:15px}.legal-page strong{color:var(--ink)}.legal-page .todo{background:#fff3b0;color:var(--ink);padding:2px 6px;border-radius:3px;font-weight:600}
