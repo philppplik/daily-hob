@@ -4,9 +4,9 @@
   "headline": "Agenten ziehen ein.\nDu behältst den Überblick.",
   "teaser": "Gemini 4 Argon, Office für Agenten und zwei Projekte, bei denen ein zweiter Blick mehr bringt als der Hype.",
   "intro": "Leute, vier Catches aus der KI- und Open-Source-Welt. Zum Durchscrollen, Weiterdenken oder einfach Anhören.",
-  "hero": "gemini4-argon.jpg",
-  "heroAlt": "Gemini 4 Argon: blaues Titelmotiv mit großer weißer 4",
-  "heroCaption": "Gemini 4 Argon · bereitgestelltes Titelmotiv",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: ein schwarzer Monolith hinter einer Absperrkordel, daneben Werkzeug und Bausteine",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
   "audio": "briefing.mp3",
   "audioLabel": "Die Kurzversion mit Hob · 1:09 Min.",
   "sections": [
@@ -17,7 +17,9 @@
       "takeaway": "Der spannende Teil für dich: Google berichtet, dass Argon-Agenten intern bereits Speicheroptimierungen gefunden haben, die nach dem Rollout über 300 TiB freigeben. Agenten nicht als Chatfenster, sondern als Werkzeug im Maschinenraum.",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
       "cta": "Ab in Googles Maschinenraum ↗",
-      "source": "Google · Herstellerangaben"
+      "source": "Google · Herstellerangaben · Bild: Google",
+      "image": "gemini4-argon.jpg",
+      "imageAlt": "Gemini 4 Argon: blaues Titelmotiv mit großer weißer 4"
     },
     {
       "category": "Open Source / Builder-Tools",
