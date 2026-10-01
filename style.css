@@ -47,3 +47,20 @@ header .nav{background:none;-webkit-backdrop-filter:none;backdrop-filter:none;bo
 .story,.toc{scroll-margin-top:84px}.toc{top:92px}
 @media(min-width:760px){header .nav{padding:14px 48px}}
 @supports not (backdrop-filter:blur(1px)){header{background:var(--paper)}}
+
+.nl{max-width:1080px;margin:64px auto 0;padding:32px 24px 0;display:grid;gap:28px;grid-template-columns:1fr 1fr}
+.nl>div,.nl>form{border-top:0}
+.nl h2{margin:.2em 0 .4em;font-size:30px;letter-spacing:-1px;font-weight:600;line-height:1.15}.nl p{margin:.3em 0;color:var(--secondary)}.nl strong{color:var(--ink)}
+.nl-form{display:grid;gap:12px;align-content:start}
+.nl-label{display:grid;gap:6px;font-weight:600;font-size:14px}
+.nl-form input[type=email]{font:inherit;padding:12px 14px;border:1px solid var(--ink);border-radius:8px;background:transparent;color:var(--ink)}
+.nl-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.nl-check{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.5;color:var(--secondary)}
+.nl-check input{margin-top:.3em;flex:none;accent-color:var(--ink)}
+.nl-btn{font:inherit;font-weight:700;padding:12px 22px;border:0;border-radius:8px;background:var(--ink);color:var(--paper);cursor:pointer;justify-self:start}
+.nl-btn:disabled{opacity:.6}
+.nl-msg{min-height:1.4em;font-size:14px}.nl-msg.ok{color:#1a7f37}.nl-msg.err{color:#c62828}
+.projects{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.projects span{opacity:.8}
+@media(min-width:760px){.nl{padding:32px 48px 0}}
+@media(max-width:760px){.nl{grid-template-columns:1fr}.footer{flex-wrap:wrap}}
