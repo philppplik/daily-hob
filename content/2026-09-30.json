@@ -4,7 +4,7 @@
   "headline": "Agenten ziehen ein.\nDu behältst den Überblick.",
   "teaser": "Gemini 4 Argon, Office für Agenten und zwei Projekte, bei denen ein zweiter Blick mehr bringt als der Hype.",
   "intro": "Hey Philipp. Vier Catches aus der KI- und Open-Source-Welt. Zum Durchscrollen, Weiterdenken oder einfach Anhören.",
-  "hero": "gemini4-argon.png",
+  "hero": "gemini4-argon.jpg",
   "heroAlt": "Gemini 4 Argon: blaues Titelmotiv mit großer weißer 4",
   "heroCaption": "Gemini 4 Argon · bereitgestelltes Titelmotiv",
   "audio": "briefing.mp3",
@@ -24,7 +24,7 @@
       "title": "Univer: dein Agent kriegt ein Office.",
       "body": "Univer ist ein Framework für Tabellen, Textdokumente und Präsentationen im Web und auf dem Server. Die Open-Source-Pakete stehen unter Apache 2.0; das Repository hat bei der Prüfung rund 14.000 Sterne. Optionale Pro-Funktionen sind separat zu betrachten.",
       "takeaway": "Für deine eigenen Tools interessant: Dokumente nicht nur als fertigen Export denken, sondern als bearbeitbare Oberfläche direkt im Produkt.",
-      "image": "univer.png",
+      "image": "univer.jpg",
       "imageAlt": "Univer: New Generation Open Source Office Suite",
       "url": "https://github.com/dream-num/univer",
       "cta": "Gib deinem nächsten Agenten einen Schreibtisch ↗",
@@ -50,5 +50,5 @@
     }
   ],
   "notes": "Archivfassung des Briefings vom 30. September. Links und Text am 1. Oktober 2026 geprüft. Das Audio ist die ursprüngliche, kürzere Fassung und enthält nicht alle Präzisierungen des Texts.",
-  "gallery": [{"image":"openclaw.png","alt":"OpenClaw Enterprise: illustrierte offene Agentenplattform","caption":"Aus dem Bildpaket · OpenClaw Enterprise. Kein zusätzlicher News-Punkt in dieser Ausgabe."}]
+  "gallery": [{"image":"openclaw.jpg","alt":"OpenClaw Enterprise: illustrierte offene Agentenplattform","caption":"Aus dem Bildpaket · OpenClaw Enterprise. Kein zusätzlicher News-Punkt in dieser Ausgabe."}]
 }
