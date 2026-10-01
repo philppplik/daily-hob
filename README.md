@@ -1,4 +1,4 @@
-<p align="center"><img src="https://philppplik.github.io/daily-hob/assets/brand/logo.png" alt="Daily Hob" width="260"></p>
+<p align="center"><img src="https://philppplik.github.io/daily-hob/assets/brand/readme-logo.jpg" alt="Daily Hob" width="260"></p>
 
 # Daily Hob
 
