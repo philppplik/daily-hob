@@ -1,0 +1,191 @@
+{
+  "date": "2026-09-28",
+  "title": "Daily Briefing, Mo 28.9.",
+  "headline": "Mehr Tempo. Mehr Grenzen.\nUnd ein Gitarrenpedal.",
+  "teaser": "20 Catches: Sonnet 5.5, Agentensicherheit, offene Werkzeuge und Ideen jenseits der üblichen Timeline.",
+  "intro": "Leute, dieser Montag hatte wirklich alles: schnellere Modelle, neue Agentenzäune und ein Gitarrenpedal, das nebenbei mein nächstes Wochenendprojekt werden möchte. Ich bleibe vernünftig. Vermutlich. Hier kommen fünf KI-, fünf Open-Source-, fünf Informatik-/Design- und fünf Wildcard-Catches.",
+  "sections": [
+    {
+      "category": "KI",
+      "title": "Sonnet 5.5: schneller ist auch ein Feature.",
+      "body": "Anthropic stellt am 28. September Sonnet 5.5 vor. Das Modell soll für klar umrissene Alltagsaufgaben, Bugfixes und Dokumente schneller und günstiger arbeiten als Sonnet 5. Die genannten Verbesserungen sind Herstellerangaben.",
+      "takeaway": "Nicht automatisch das größte Modell nehmen. Für kurze Iterationsschleifen kann Tempo wichtiger sein als der nächste Benchmark-Pokal.",
+      "url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.anthropic.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "KI",
+      "title": "Nvidia baut den Zaun um die Agenten.",
+      "body": "CNBC berichtet am 28. September über Nvidias Open Agent Safety Platform. Sie soll Entwicklern helfen, Agenten einzugrenzen und Ausbrüche aus ihrer Umgebung zu verhindern.",
+      "takeaway": "Agenten bekommen mehr Werkzeuge. Dann brauchen sie auch Grenzen, die nicht nur als höfliche Bitte im Prompt stehen.",
+      "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.cnbc.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "KI",
+      "title": "World Labs geht zu AMD.",
+      "body": "World Labs kündigt am 28. September an, sich AMD anzuschließen. Das Unternehmen begründet den Schritt mit dem Bedarf, räumliche und physische KI näher an Hardware und größere Infrastruktur zu bringen.",
+      "takeaway": "Spannend ist die Verbindung von Modellen und Chips. Ob daraus bessere Produkte werden, zeigt erst die Umsetzung.",
+      "url": "https://www.worldlabs.ai/blog/amd-announcement",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.worldlabs.ai · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "KI",
+      "title": "Winzige Modelle. Direkt im Browser.",
+      "body": "Am Montag diskutiert: MicroLLM Lab lässt kleine Sprachmodelle im Browser mit WebGPU ausprobieren und vergleichen. Das Projekt beschreibt lokale Verarbeitung ohne Konto und ohne eigenen Inferenzserver. Kein belegter Release vom 28. September.",
+      "takeaway": "Für einen schnellen Realitätscheck klasse: Was kann ein kleines Modell auf der eigenen Hardware wirklich, ohne dass eine Cloud alles kaschiert?",
+      "url": "https://stateofutopia.com/experiments/microllmlab/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "stateofutopia.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "KI",
+      "title": "KI-Labore: weniger Schauerstory, mehr Aufsicht.",
+      "body": "Am Montag diskutiert: Cal Newport fordert in einem Kommentar Untersuchungen der KI-Labore. Er kritisiert die Inszenierung gefährlicher Fähigkeiten und die Idee, technische Entwicklung sei ohnehin nicht aufzuhalten.",
+      "takeaway": "Das ist eine Meinung, keine Sicherheitsmessung. Gerade deshalb lohnt die Gegenfrage: Wer belegt die Behauptungen, und wer kontrolliert die Folgen?",
+      "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "calnewport.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "Jeff entscheidet, statt Romane zu schreiben.",
+      "body": "Am Montag auf Hacker News: Jeff ist ein offenes 0,8B-Modell für Entscheidungen zwischen vorgegebenen Optionen und deren Wahrscheinlichkeiten. Der aktuell geprüfte Code steht unter MIT, die Gewichte unter Apache 2.0. Die heutige README enthält spätere Updates; daraus wird hier kein Montags-Release abgeleitet.",
+      "takeaway": "Für Routing und Klassifikation ist ein kleines Entscheidungsmodell manchmal passender als ein Chatmodell mit sehr viel Mitteilungsbedürfnis.",
+      "url": "https://github.com/firelex/jeff",
+      "cta": "Originalquelle lesen ↗",
+      "source": "github.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "Parley: föderiert chatten, IRC behalten.",
+      "body": "Am Montag diskutiert: Parley verbindet dezentrale Chat-Instanzen mit gewöhnlichen IRC-Clients. Die Projektseite beschreibt eigene Instanzen pro Domain und Adressen nach dem Muster user@domain. Der Code steht unter MIT.",
+      "takeaway": "Offene Protokolle dürfen ruhig unspektakulär aussehen. Entscheidend ist, ob die Menschen ihre bestehenden Werkzeuge weiter nutzen können.",
+      "url": "https://git.mills.io/prologic/parley",
+      "cta": "Originalquelle lesen ↗",
+      "source": "git.mills.io · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "Ein Gitarrenpedal mit richtig viel Nerd-Energie.",
+      "body": "Am Montag diskutiert: coyopedal ist ein quelloffenes Gitarrenverstärker- und Effektprojekt für ESP32-S3-Hardware. Die Oberfläche wird aus TSX in natives C++ übersetzt; auf dem Gerät läuft laut README keine JavaScript-Engine.",
+      "takeaway": "Das ist die gute Sorte Overengineering: Software, eingebettete Hardware und Musik treffen sich in einem tatsächlich benutzbaren Gerät.",
+      "url": "https://github.com/dashersw/coyopedal",
+      "cta": "Originalquelle lesen ↗",
+      "source": "github.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "Cloudflare bekommt eine agentenfreundliche CLI.",
+      "body": "Cloudflare stellt am 28. September cf vor, eine CLI für seine API. Sie richtet sich ausdrücklich auch an Coding-Agenten und soll den Zugriff auf die vielen API-Bereiche vereinheitlichen.",
+      "takeaway": "Eine gute Schnittstelle spart Agenten Sucharbeit. Schreibrechte trotzdem bewusst begrenzen, bevor der Helfer die Infrastruktur kreativ interpretiert.",
+      "url": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "blog.cloudflare.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "Wide: ein Grid, das Lust aufs Zerlegen macht.",
+      "body": "Codrops veröffentlicht am 28. September Wide von BL/S®, ein frei zugängliches Layout-Experiment mit typografischen Grids, Animationen und optionalem WebGL-Effekt. Die normale Version nutzt JavaScript und CSS; der Code wird auf CodePen angeboten.",
+      "takeaway": "Kein Lizenzversprechen über den Artikel hinaus. Als offene Code-Inspiration ist es stark: Erst die Komposition, dann der Shader.",
+      "url": "https://tympanus.net/codrops/2026/09/28/wide-template/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "tympanus.net · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "title": "Die PS5 streamt. Aber wohin eigentlich?",
+      "body": "Yash Garg beschreibt am 28. September, wie er den RTMP-Stream seiner PS5 untersucht und auf einen eigenen Streamingweg lenkt. Der Beitrag ist ein technischer Erfahrungsbericht, keine offizielle Sony-Funktion.",
+      "takeaway": "Ein schönes Beispiel für Schnittstellen-Neugier. Sicherheit und Nutzungsbedingungen gehören beim Nachbauen genauso dazu wie die Paketmitschnitte.",
+      "url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "yashgarg.dev · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "title": "Software als Knete, nicht als versiegeltes Gerät.",
+      "body": "Am Montag wieder diskutiert: Ink & Switch beschreibt in einem Essay vom Juni 2025 veränderbare Software, die Menschen an ihre eigenen Abläufe anpassen können. Das ist ein älterer Grundlagenbeitrag, keine neue Produktankündigung.",
+      "takeaway": "Die Designfrage sitzt: Müssen Menschen ihr Leben ans Tool anpassen, oder lässt sich das Tool passend machen?",
+      "url": "https://www.inkandswitch.com/essay/malleable-software/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.inkandswitch.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "title": "Code Review ist mehr als Fehler zählen.",
+      "body": "Am Montag diskutiert: Ein Beitrag von Adaptive Capacity Labs vom 24. August widerspricht der Verkürzung von Code Review auf automatisierbare Fehlererkennung. Er betrachtet Review auch als gemeinsame Arbeit und Aufbau von Verständnis.",
+      "takeaway": "KI kann beim Prüfen helfen. Dass ein Diff keine offensichtlichen Fehler enthält, heißt noch nicht, dass das Team die Änderung verstanden hat.",
+      "url": "https://www.adaptivecapacitylabs.com/2026/08/24/there-is-more-to-code-review-than-automatable-detection/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.adaptivecapacitylabs.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "title": "Postgres und die Zeitzone, die plötzlich weg ist.",
+      "body": "Am Montag diskutiert: Ein Beitrag vom 27. September erklärt Fallstricke von AT TIME ZONE und den Unterschied zwischen timestamp und timestamptz. Die gleiche Schreibweise kann je nach Datentyp eine andere Umwandlung auslösen.",
+      "takeaway": "Bevor der Kalender plötzlich einen Tag danebenliegt: Datentyp und Session-Zeitzone prüfen. Ja, auch bei vermeintlich harmlosen UTC-Werten.",
+      "url": "https://bookofrevenue.com/blog/6ab81e9a97a13f0001f7e4e1/postgres-at-time-zone-u-does-not-do-what-you-think-it-does",
+      "cta": "Originalquelle lesen ↗",
+      "source": "bookofrevenue.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "title": "Was Wappen einem Logo-Generator beibringen.",
+      "body": "Ben Overmyer erklärt am 28. September, warum westliche Heraldik und japanische Mon mehr als Symbolsammlungen sind. Ihre Regeln für Anordnung und Wiedererkennbarkeit sind für visuelle Identitätsgeneratoren relevant.",
+      "takeaway": "Nicht noch ein zufällig hübsches Icon. Ein gutes System kennt die Regeln, die eine Form zur Identität machen.",
+      "url": "https://benovermyer.com/blog/2026/09/japanese-vs-western-heraldry/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "benovermyer.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Wildcard",
+      "title": "Eine Milliarde in Nvidia-Aktien? Erst mal die Quelle lesen.",
+      "body": "Am Montag diskutiert: Eric Gullichsen schildert in einem persönlichen Bericht seine frühe Beratung für Nvidia und einen Streit um damalige Aktienoptionen. Der zugespitzte Milliardenbetrag ist Teil seiner eigenen Darstellung, kein hier bestätigtes Gerichtsurteil.",
+      "takeaway": "Gründungsgeschichten werden mit steigenden Kursen sehr teuer. Die Originaldarstellung ist interessant, ihre Ansprüche bleiben davon getrennt.",
+      "url": "https://colo.to/nvidia-stock-narrative.html",
+      "cta": "Originalquelle lesen ↗",
+      "source": "colo.to · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Wildcard",
+      "title": "Filmrestaurierung: Wer entscheidet über das Original?",
+      "body": "MUBI veröffentlicht am 28. September einen Essay über veränderte Heimvideo-Fassungen und Filmerhaltung. Er diskutiert, wie Eingriffe in Bild und Ton den Zugang zum ursprünglichen Werk verändern.",
+      "takeaway": "Für Designmenschen überraschend nah: Technisch sauberer bedeutet nicht automatisch historisch treuer.",
+      "url": "https://mubi.com/en/notebook/posts/pirating-the-pirates",
+      "cta": "Originalquelle lesen ↗",
+      "source": "mubi.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Wildcard",
+      "title": "Spotify-Kommentare werden zum geheimen Gruppenchat.",
+      "body": "Am Montag auf Hacker News: Ein Transkript von This American Life erzählt, wie Jugendliche wenig beachtete Podcast-Kommentare als sozialen Treffpunkt nutzen. Eine Plattformfunktion bekommt einen Zweck, den niemand im Produktbrief vorgesehen hatte.",
+      "takeaway": "Nutzende bauen sich ihre eigenen Räume. Manchmal ist die spannendste Community genau dort, wo kein Community-Manager gesucht hätte.",
+      "url": "https://www.thisamericanlife.org/897/transcript",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.thisamericanlife.org · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Wildcard",
+      "title": "Göbeklitepe: verstreute Knochen bekommen Kontext.",
+      "body": "Am Montag diskutiert: Archaeology Magazine berichtet in einem Artikel vom 25. September über rund 12.000 Jahre alte Bestattungen bei Göbeklitepe. Die Funde helfen, zuvor verstreut entdeckte menschliche Knochen einzuordnen.",
+      "takeaway": "Archäologie ist oft kein einzelner großer Aha-Fund. Neue Zusammenhänge machen alte Beobachtungen erst lesbar.",
+      "url": "https://archaeologymag.com/2026/09/gobeklitepe-burials-hundreds-of-scattered-bones/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "archaeologymag.com · Quelle geprüft am 1.10.2026"
+    },
+    {
+      "category": "Wildcard",
+      "title": "Die Weltkarte, die im Kopf nicht ganz stimmt.",
+      "body": "Am Montag diskutiert: The Drawn World legt aus dem Gedächtnis gezeichnete Grenzen übereinander. Häufig gezeichnete und genauer getroffene Linien werden in der interaktiven Darstellung unterschiedlich sichtbar.",
+      "takeaway": "Ein schöner Perspektivwechsel: Karten zeigen hier nicht nur die Welt, sondern auch, wie wir sie uns merken.",
+      "url": "https://www.habibicode.org/thedrawnworld",
+      "cta": "Originalquelle lesen ↗",
+      "source": "www.habibicode.org · Quelle geprüft am 1.10.2026"
+    }
+  ],
+  "notes": "Fazit: Tempo ist toll. Offene Schnittstellen und nachvollziehbare Grenzen machen es erst brauchbar. Und manchmal erklärt ein kleines Hardwareprojekt mehr als der nächste große KI-Slogan. Nachträglich erstellter Tagesrückblick, zusammengestellt am 1. Oktober 2026. Auswahl aus dem datierten Hacker-News-Tagesarchiv und Originalquellen. Ein Tagesfund ist nicht automatisch ein Release dieses Tages; ältere Beiträge und spätere README-Stände sind gekennzeichnet. Reine Textausgabe ohne Audio.",
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-09-28"
+}
