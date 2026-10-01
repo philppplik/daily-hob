@@ -12,7 +12,8 @@
       "takeaway": "Herstellervergleich, kein unabhängiger Sieg. Für echte Workflows zählen Erfolgsquote und Gesamtkosten je erledigter Aufgabe.",
       "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
       "cta": "Originalquelle lesen ↗",
-      "source": "openai.com · Quelle geprüft am 1.10.2026"
+      "source": "openai.com · Quelle geprüft am 1.10.2026",
+      "short": "GPT-6.1 Sol"
     },
     {
       "category": "KI",
@@ -21,7 +22,8 @@
       "takeaway": "Klingt praktisch. Dauerbetrieb macht Zugriffsrechte, sichtbare Zwischenstände und klare Stopps aber wichtiger, nicht unwichtiger.",
       "url": "https://openai.com/index/introducing-dots/",
       "cta": "Originalquelle lesen ↗",
-      "source": "openai.com · Quelle geprüft am 1.10.2026"
+      "source": "openai.com · Quelle geprüft am 1.10.2026",
+      "short": "Dots"
     },
     {
       "category": "KI",
@@ -30,7 +32,8 @@
       "takeaway": "Die Ergebnisse gelten für die untersuchten Implementierungen. Ein freundliches Chatfenster ersetzt keine Prüfung der Datenflüsse.",
       "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
       "cta": "Originalquelle lesen ↗",
-      "source": "jorgegarciaherrero.com · Quelle geprüft am 1.10.2026"
+      "source": "jorgegarciaherrero.com · Quelle geprüft am 1.10.2026",
+      "short": "KI-Chats & Tracker"
     },
     {
       "category": "KI",
@@ -41,7 +44,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "www.eff.org · Quelle geprüft am 1.10.2026 · Bild: EFF (CC BY)",
       "image": "eff-banner.jpg",
-      "imageAlt": "Illustration aus der EFF-Bibliothek: Smartphones und Tablets mit Augen"
+      "imageAlt": "Illustration aus der EFF-Bibliothek: Smartphones und Tablets mit Augen",
+      "short": "KI-Werbung (EFF)"
     },
     {
       "category": "KI",
@@ -52,7 +56,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "github.com · Quelle geprüft am 1.10.2026 · Bild: GitHub-Projekt PostHog/jeeves",
       "image": "jeeves.jpg",
-      "imageAlt": "Repo-Karte des Projekts PostHog/jeeves"
+      "imageAlt": "Repo-Karte des Projekts PostHog/jeeves",
+      "short": "Jeeves"
     },
     {
       "category": "Open Source",
@@ -63,7 +68,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "github.com · Quelle geprüft am 1.10.2026 · Bild: GitHub-Projekt ninjahawk/livenerf",
       "image": "livenerf.jpg",
-      "imageAlt": "Repo-Karte des Projekts ninjahawk/livenerf"
+      "imageAlt": "Repo-Karte des Projekts ninjahawk/livenerf",
+      "short": "Livenerf"
     },
     {
       "category": "Open Source",
@@ -72,7 +78,8 @@
       "takeaway": "Die Seite allein bestätigt keinen stabilen Release am 29. September. Als Blick auf eine weiterentwickelte GUI- und Skriptwelt ist sie trotzdem spannend.",
       "url": "https://www.tcl-lang.org/software/tcltk/9.1.html",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.tcl-lang.org · Quelle geprüft am 1.10.2026"
+      "source": "www.tcl-lang.org · Quelle geprüft am 1.10.2026",
+      "short": "Tcl/Tk 9.1"
     },
     {
       "category": "Open Source",
@@ -81,7 +88,8 @@
       "takeaway": "Nützlich, wenn ein Projekt seine eigene Distribution braucht. Isolation und Dateizugriff bewusst verstehen, bevor daraus die nächste Dev-Umgebung wird.",
       "url": "https://frostyard.github.io/nsl/",
       "cta": "Originalquelle lesen ↗",
-      "source": "frostyard.github.io · Quelle geprüft am 1.10.2026"
+      "source": "frostyard.github.io · Quelle geprüft am 1.10.2026",
+      "short": "NSL"
     },
     {
       "category": "Open Source",
@@ -92,7 +100,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "github.com · Quelle geprüft am 1.10.2026 · Bild: GitHub-Projekt Low-Zi-Hong/ESP32s3-LLM-Cluster",
       "image": "esp32-cluster.jpg",
-      "imageAlt": "Repo-Karte des Projekts Low-Zi-Hong/ESP32s3-LLM-Cluster"
+      "imageAlt": "Repo-Karte des Projekts Low-Zi-Hong/ESP32s3-LLM-Cluster",
+      "short": "ESP32-S3-Cluster"
     },
     {
       "category": "Open Source",
@@ -101,7 +110,8 @@
       "takeaway": "Die eigentliche Arbeit beginnt oft nach dem ersten erfolgreichen Compile. Versionen und reproduzierbare Builds sparen später sehr reale Nerven.",
       "url": "https://blog.conan.io/cpp/conan/gamedev/godot/cmake/2026/09/29/Using-Any-Cpp-Library-In-Godot.html",
       "cta": "Originalquelle lesen ↗",
-      "source": "blog.conan.io · Quelle geprüft am 1.10.2026"
+      "source": "blog.conan.io · Quelle geprüft am 1.10.2026",
+      "short": "Godot + Conan"
     },
     {
       "category": "Informatik / Design",
@@ -112,7 +122,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "somethingbig.ai · Quelle geprüft am 1.10.2026 · Bild: somethingbig.ai",
       "image": "nand-computer.jpg",
-      "imageAlt": "Vorschaubild des NAND-16-Computers aus 277.248 NAND-Gattern"
+      "imageAlt": "Vorschaubild des NAND-16-Computers aus 277.248 NAND-Gattern",
+      "short": "NAND-Computer"
     },
     {
       "category": "Informatik / Design",
@@ -121,7 +132,8 @@
       "takeaway": "Ich erkenne die gefährliche Energie dieses Projekts. Als Lernbericht ist der Umweg wertvoll; als Aufwandsschätzung eher ein Warnschild.",
       "url": "https://hereticpleb.vercel.app/blog/needed-one-plus-one/",
       "cta": "Originalquelle lesen ↗",
-      "source": "hereticpleb.vercel.app · Quelle geprüft am 1.10.2026"
+      "source": "hereticpleb.vercel.app · Quelle geprüft am 1.10.2026",
+      "short": "1 + 1 = Sprache"
     },
     {
       "category": "Informatik / Design",
@@ -130,7 +142,8 @@
       "takeaway": "Nicht künstlich Busywork erfinden. Gute Arbeit beginnt bei einem beobachteten Problem, nicht beim Wunsch nach einer größeren Roadmap.",
       "url": "https://sujithjay.com/inventing-work",
       "cta": "Originalquelle lesen ↗",
-      "source": "sujithjay.com · Quelle geprüft am 1.10.2026"
+      "source": "sujithjay.com · Quelle geprüft am 1.10.2026",
+      "short": "Staff Engineers"
     },
     {
       "category": "Informatik / Design",
@@ -141,7 +154,8 @@
       "cta": "Originalquelle lesen ↗",
       "source": "enigma.design · Quelle geprüft am 1.10.2026 · Bild: enigma.design",
       "image": "enigma.jpg",
-      "imageAlt": "3D-Rekonstruktion der Enigma aus dem Projekt enigma.design"
+      "imageAlt": "3D-Rekonstruktion der Enigma aus dem Projekt enigma.design",
+      "short": "Enigma im Browser"
     },
     {
       "category": "Informatik / Design",
@@ -150,7 +164,8 @@
       "takeaway": "Ein einzelner Erfahrungsbericht ist keine Ausfallstatistik. Vor einem Update trotzdem schauen, ob die eigenen wichtigen Apps und Abläufe betroffen sind.",
       "url": "https://www.squareorbits.com/blog/2026/09/macos-golden-gate-is-a-buggy-mess/",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.squareorbits.com · Quelle geprüft am 1.10.2026"
+      "source": "www.squareorbits.com · Quelle geprüft am 1.10.2026",
+      "short": "macOS Golden Gate"
     },
     {
       "category": "Wildcard",
@@ -159,7 +174,8 @@
       "takeaway": "Infrastrukturfortschritt kommt selten nur aus einem neuen Gerät. Messung, Wartung und Anreize gehören zum System.",
       "url": "https://spectrum.ieee.org/delhi-electricity-loss",
       "cta": "Originalquelle lesen ↗",
-      "source": "spectrum.ieee.org · Quelle geprüft am 1.10.2026"
+      "source": "spectrum.ieee.org · Quelle geprüft am 1.10.2026",
+      "short": "Delhi Stromnetz"
     },
     {
       "category": "Wildcard",
@@ -168,7 +184,8 @@
       "takeaway": "Keine Diagnose für jede Freundesgruppe. Aber ein guter Anlass, nicht auf die perfekte Wohnung zu warten, bevor jemand eingeladen wird.",
       "url": "https://www.derekthompson.org/p/the-death-of-the-american-host",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.derekthompson.org · Quelle geprüft am 1.10.2026"
+      "source": "www.derekthompson.org · Quelle geprüft am 1.10.2026",
+      "short": "Der Gast stirbt aus"
     },
     {
       "category": "Wildcard",
@@ -177,7 +194,8 @@
       "takeaway": "Auch traditionelle Branchen hängen an veränderten Gewohnheiten. Mehr produzieren löst fehlende Nachfrage nicht automatisch.",
       "url": "https://www.kqed.org/news/12101534/california-farmers-are-struggling-to-sell-grapes-as-demand-for-wine-drops",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.kqed.org · Quelle geprüft am 1.10.2026"
+      "source": "www.kqed.org · Quelle geprüft am 1.10.2026",
+      "short": "Kalifornien Trauben"
     },
     {
       "category": "Wildcard",
@@ -186,7 +204,8 @@
       "takeaway": "Ein begrenzter Test, keine Aussage über alle Systeme. Gerade deshalb sind klar definierte Ziele und überprüfbare Ergebnisse wichtiger als das Versprechen moderner Technik.",
       "url": "https://www.theguardian.com/technology/2026/sep/29/trial-live-facial-recognition-cameras-london-stations-false-positive",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.theguardian.com · Quelle geprüft am 1.10.2026"
+      "source": "www.theguardian.com · Quelle geprüft am 1.10.2026",
+      "short": "Gesichtserkennung London"
     },
     {
       "category": "Wildcard",
@@ -195,7 +214,8 @@
       "takeaway": "Das ist eine globale Schätzung, keine persönliche Risikoberechnung. Medizinische Entscheidungen gehören in individuelle Beratung, nicht in eine News-Abkürzung.",
       "url": "https://www.cbc.ca/lite/story/9.7361622",
       "cta": "Originalquelle lesen ↗",
-      "source": "www.cbc.ca · Quelle geprüft am 1.10.2026"
+      "source": "www.cbc.ca · Quelle geprüft am 1.10.2026",
+      "short": "Infektionen & Krebs"
     }
   ],
   "notes": "Fazit: Autonomie ist kein Selbstzweck. Die besten Werkzeuge machen Arbeit verständlicher, prüfbarer und tatsächlich leichter. Nicht einfach länger. Nachträglich erstellter Tagesrückblick, zusammengestellt am 1. Oktober 2026. Auswahl aus dem datierten Hacker-News-Tagesarchiv und Originalquellen. Ein Tagesfund ist nicht automatisch ein Release dieses Tages; ältere Beiträge und spätere README-Stände sind gekennzeichnet. Reine Textausgabe ohne Audio.",
