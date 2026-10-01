@@ -13,7 +13,7 @@
   const handlers = new Map();
   let state = null, previousFocus;
   const script = document.currentScript;
-  const privacy = new URL('datenschutz.html', script.src).href;
+  const privacy = new URL('datenschutz', script.src).href;
   const valid = s => s && s.version === VERSION && Number.isFinite(s.savedAt) &&
     s.savedAt <= Date.now() && s.expiresAt === s.savedAt + TTL && s.expiresAt > Date.now() &&
     s.choices && Object.keys(categories).every(k => typeof s.choices[k] === 'boolean');
