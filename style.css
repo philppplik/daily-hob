@@ -40,3 +40,10 @@
 :root[data-theme=dark] .consent .consent-feedback{background:#222}
 :root[data-theme=dark] .consent summary:focus-visible,.consent input:focus-visible{outline-color:#f1f1f1}
 .toc-tag{display:block;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-top:1px}
+header{position:sticky;top:0;z-index:50;max-width:none;padding:0}
+header .nav{max-width:1080px;margin:0 auto;padding:14px 24px;border-bottom:1px solid var(--rule);background:color-mix(in srgb,var(--paper) 78%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px)}
+header{background:color-mix(in srgb,var(--paper) 78%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--rule)}
+header .nav{background:none;-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:0}
+.story,.toc{scroll-margin-top:84px}.toc{top:92px}
+@media(min-width:760px){header .nav{padding:14px 48px}}
+@supports not (backdrop-filter:blur(1px)){header{background:var(--paper)}}
