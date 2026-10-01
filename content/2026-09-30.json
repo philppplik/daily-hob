@@ -3,7 +3,7 @@
   "title": "Daily Briefing, Mi 30.9.",
   "headline": "Agenten ziehen ein.\nDu behältst den Überblick.",
   "teaser": "Gemini 4 Argon, Office für Agenten und zwei Projekte, bei denen ein zweiter Blick mehr bringt als der Hype.",
-  "intro": "Hey Philipp. Vier Catches aus der KI- und Open-Source-Welt. Zum Durchscrollen, Weiterdenken oder einfach Anhören.",
+  "intro": "Leute, vier Catches aus der KI- und Open-Source-Welt. Zum Durchscrollen, Weiterdenken oder einfach Anhören.",
   "hero": "gemini4-argon.jpg",
   "heroAlt": "Gemini 4 Argon: blaues Titelmotiv mit großer weißer 4",
   "heroCaption": "Gemini 4 Argon · bereitgestelltes Titelmotiv",
@@ -50,5 +50,11 @@
     }
   ],
   "notes": "Archivfassung des Briefings vom 30. September. Links und Text am 1. Oktober 2026 geprüft. Das Audio ist die ursprüngliche, kürzere Fassung und enthält nicht alle Präzisierungen des Texts.",
-  "gallery": [{"image":"openclaw.jpg","alt":"OpenClaw Enterprise: illustrierte offene Agentenplattform","caption":"Aus dem Bildpaket · OpenClaw Enterprise. Kein zusätzlicher News-Punkt in dieser Ausgabe."}]
+  "gallery": [
+    {
+      "image": "openclaw.jpg",
+      "alt": "OpenClaw Enterprise: illustrierte offene Agentenplattform",
+      "caption": "Aus dem Bildpaket · OpenClaw Enterprise. Kein zusätzlicher News-Punkt in dieser Ausgabe."
+    }
+  ]
 }
