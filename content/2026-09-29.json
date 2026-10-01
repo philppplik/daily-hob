@@ -199,5 +199,8 @@
     }
   ],
   "notes": "Fazit: Autonomie ist kein Selbstzweck. Die besten Werkzeuge machen Arbeit verständlicher, prüfbarer und tatsächlich leichter. Nicht einfach länger. Nachträglich erstellter Tagesrückblick, zusammengestellt am 1. Oktober 2026. Auswahl aus dem datierten Hacker-News-Tagesarchiv und Originalquellen. Ein Tagesfund ist nicht automatisch ein Release dieses Tages; ältere Beiträge und spätere README-Stände sind gekennzeichnet. Reine Textausgabe ohne Audio.",
-  "archiveUrl": "https://news.ycombinator.com/front?day=2026-09-29"
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-09-29",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: verknotete Linien werden zu einem geordneten Raster, in der Mitte ein leuchtender Würfel mit Uhr",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob"
 }
