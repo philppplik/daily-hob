@@ -3,3 +3,4 @@
 .edition-img,.hero img,.story img{height:auto;object-fit:contain;aspect-ratio:auto}
 
 .brand-logo{width:150px;height:auto;max-height:38px;object-fit:contain}.nav-right{max-width:150px;text-align:right}
+.edition+.edition{padding-top:34px}.edition:not(:has(.edition-img)){grid-template-columns:1fr}.edition:not(:has(.edition-img)) p{max-width:720px}.toc{max-height:calc(100vh - 60px);overflow-y:auto}.notes{border-top:1px solid var(--rule);padding-top:24px}@media(max-width:759px){.toc{max-height:none;overflow:visible}.toc ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}.toc a{font-size:12px}}
