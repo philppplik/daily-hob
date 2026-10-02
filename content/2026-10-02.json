@@ -1,0 +1,44 @@
+{
+ "date": "2026-10-02",
+ "title": "Daily Hob vom Freitag, 2.10.",
+ "headline": "Datenbanken für Agenten.\nUnd die Cloud heißt Link.",
+ "teaser": "3 Catches bisher: Supabase und Turso, Home Assistant Link, DeepSeek Harness.",
+ "intro": "Der Freitag liefert bisher drei Dinge: ein Datenbank-Deal für die Agenten-Welt, eine Umbenennung mit Haltung und ein Agenten-Gerüst, das nun als Desktop-App kommt. Die Ausgabe wächst im Laufe des Tages.",
+ "sections": [
+  {
+   "category": "Informatik",
+   "title": "Supabase übernimmt Turso: Datenbanken für Agenten.",
+   "body": "Supabase kündigt am 2. Oktober an, Turso zu übernehmen. Turso hat SQLite in Rust neu gebaut und betreibt eine Cloud, in der ein Server Millionen kleiner Datenbanken laden und wieder schlafen legen kann. Supabase will damit Datenbanken so billig machen wie Dateien, für Agenten, die ständig neue anlegen. Supabase bleibt bei Postgres, Turso bei SQLite, für bestehende Nutzer ändert sich laut Ankündigung nichts.",
+   "takeaway": "Der Gedanke ist klar: SQLite für den schnellen Prototyp, Postgres für später. Wie nahtlos der Übergang wird, steht noch nicht fest.",
+   "url": "https://supabase.com/blog/supabase-is-acquiring-turso",
+   "cta": "Originalquelle lesen ↗",
+   "source": "supabase.com · Quelle geprüft am 2.10.2026",
+   "short": "Supabase kauft Turso"
+  },
+  {
+   "category": "Open Source",
+   "title": "Home Assistant Cloud heißt jetzt Link.",
+   "body": "Nabu Casa benennt Home Assistant Cloud am 2. Oktober in Home Assistant Link um. Der Dienst bleibt optional, ermöglicht den Zugriff von unterwegs und finanziert zu großen Teilen die Open Home Foundation. Das Wort Cloud passe nicht mehr zu dem, was Big Tech daraus gemacht habe: Abos, Ausfälle, Datensammelei.",
+   "takeaway": "Reine Umbenennung, aber eine mit Haltung. Am Dienst selbst ändert sich laut Ankündigung nichts.",
+   "url": "https://www.home-assistant.io/blog/2026/10/02/big-tech-ruined-the-cloud-so-were-renaming-ours/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "home-assistant.io · Quelle geprüft am 2.10.2026",
+   "short": "Home Assistant Link"
+  },
+  {
+   "category": "KI",
+   "title": "DeepSeek Harness: Agenten-Gerüst jetzt als Desktop-App.",
+   "body": "DeepSeek Harness ist Open Source und läuft in der Version 0.2 als Public Preview jetzt mit fertigen Installern für macOS (Apple Silicon) und Windows. Neu sind eine Plugin-Verwaltung, geplante Automatisierungsaufgaben und Plugins per npm-Paket. Das Update wurde laut Bericht am 29.9. angekündigt, auf Hacker News lief die Diskussion heute.",
+   "takeaway": "Älter als heute, aber heute viel diskutiert. Als Preview taugt es zum Ausprobieren, nicht zum Verlassen.",
+   "url": "https://www.deepseek.com/en/harness/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "deepseek.com · Datum laut mpost.io · Quelle geprüft am 2.10.2026",
+   "short": "DeepSeek Harness"
+  }
+ ],
+ "notes": "Laufende Tagesausgabe vom Freitag, 2. Oktober 2026 (Berliner Zeit), wird im Tagesverlauf ergänzt. Auswahl aus Hacker News und Hersteller-Blogs. Ältere Meldungen sind im Text markiert. Reine Textausgabe.",
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-02",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein schwarzer Block mit Leitung zu einem Raster aus vielen kleinen Quadraten, daneben ein mintfarbener Kreis",
+ "heroCaption": "Illustration: Daily Hob"
+}
