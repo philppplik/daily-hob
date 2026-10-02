@@ -1,0 +1,164 @@
+{
+ "date": "2026-10-01",
+ "title": "Daily Hob vom Donnerstag, 1.10.",
+ "headline": "Entscheider, Agenten\nund ein bisschen 1996.",
+ "teaser": "15 Catches: Clef, Pi 1.0, SvelteKit 3, K2, Figma MCP und ein Dodo.",
+ "intro": "Kleine Modelle, die Entscheidungen treffen, ein Agenten-Gerüst im Erwachsenenalter und ein Browser, der sich wie 1996 einwählt. Der Donnerstag hatte Tempo. Hier sind die Funde in vier Blöcken, nur was wirklich hängen bleiben sollte.",
+ "sections": [
+  {
+   "category": "KI",
+   "title": "Clef: Cloudflare baut Entscheider statt Erzähler.",
+   "body": "Cloudflare veröffentlicht am 1. Oktober Clef und Clef-flash, zwei Entscheidungsmodelle. Sie geben begrenzte, strukturierte Antworten mit Wahrscheinlichkeiten zurück, etwa welches Team ein Support-Ticket bekommen soll. Laufen auf Workers AI, die Gewichte liegen unter Apache 2.0 auf Hugging Face. Dazu gibt es eine RL-Feintuning-Plattform.",
+   "takeaway": "Cloudflare nennt sich selbst Spitzenreiter im Jev Decision Index und misst 2,2 Sekunden gegen 4,7 bei gpt-oss-120b in der eigenen Domain-Klassifizierung. Eigene Messungen, also erst mal mit Salz lesen.",
+   "url": "https://blog.cloudflare.com/clef-decision-models/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "blog.cloudflare.com · Quelle geprüft am 2.10.2026",
+   "short": "Clef"
+  },
+  {
+   "category": "KI",
+   "title": "Amazon zieht mit einem 2-Milliarden-Entscheider nach.",
+   "body": "AWS bringt Strands Decider 2B als Open-Source-Modell für schnelle Agenten-Entscheidungen. Ein kleiner Zusatzkopf mit etwa einer Million Parametern bewertet vorgegebene Optionen direkt, statt Text zu erzeugen. AWS nennt weniger als 100 Millisekunden auf gängiger Hardware wie einer RTX 3090.",
+   "takeaway": "Zweiter Entscheider am selben Tag: das Muster wird sichtbar. Die Zahlen stammen vom Anbieter und liegen mir nur über einen Bericht vor.",
+   "url": "https://cryptobriefing.com/amazon-strands-decider-2b-open-source-jev/",
+   "cta": "Bericht lesen ↗",
+   "source": "cryptobriefing.com (Sekundärquelle) · Quelle geprüft am 2.10.2026",
+   "short": "Strands Decider"
+  },
+  {
+   "category": "KI",
+   "title": "GPT-Synopsys: OpenAI will Chips entwerfen helfen.",
+   "body": "OpenAI und Synopsys kündigen ein mehrjähriges Abkommen für GPT-Synopsys an, ein Spezialmodell, das die EDA-Werkzeuge von Synopsys wie ein erfahrener Ingenieur bedienen soll. OpenAI lizenziert dafür Synopsys-Tools, Einnahmen werden geteilt. Die Pressemitteilung trägt das Datum 30.9., die große Diskussion lief am 1.10.",
+   "takeaway": "Noch ein Fahrplan, kein Produkt. Spannend wird, ob das Modell bei Power, Leistung und Fläche wirklich besser liefert als Handarbeit.",
+   "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+   "cta": "Originalquelle lesen ↗",
+   "source": "news.synopsys.com (Pressemitteilung) · Quelle geprüft am 2.10.2026",
+   "short": "GPT-Synopsys"
+  },
+  {
+   "category": "Open Source",
+   "title": "Pi 1.0: minimal bleiben, aber erwachsen werden.",
+   "body": "Earendil veröffentlicht Pi 1.0, ein schlankes, erweiterbares Agenten-Gerüst unter MIT-Lizenz. Neu sind unter anderem Codemode mit nativer MCP-Unterstützung, virtuelle Modelle per Erweiterung, verzögertes Laden von Tools und Vollbild-TUI. Daneben erscheint Pi Durable als experimentelles Paket für langlaufende Agenten-Anwendungen.",
+   "takeaway": "Das war gestern der meistdiskutierte Hacker-News-Beitrag. Für alle, die ihren Coding-Agenten selbst zusammenstecken wollen, einen Blick wert.",
+   "url": "https://earendil.com/posts/pi-1-0/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "earendil.com · Quelle geprüft am 2.10.2026",
+   "short": "Pi 1.0"
+  },
+  {
+   "category": "Open Source",
+   "title": "Strata: ein großes Modell auf dem Gaming-PC.",
+   "body": "Strata ist eine MIT-lizenzierte Inferenz-Engine in C++, die Qwen3.8-Flash-Next auf normaler Verbraucherhardware laufen lassen soll, mit Ein-Klick-Installation für Windows und Linux und einer API auf localhost. Das Repo ist seit dem 24.9. online und steht bei gut 5.000 Sternen.",
+   "takeaway": "Tempoangaben aus Trending-Zusammenfassungen habe ich nicht selbst geprüft. Hype-Repo, also erst testen, dann feiern.",
+   "url": "https://github.com/Niko1221/Strata",
+   "cta": "Originalquelle lesen ↗",
+   "source": "github.com/Niko1221/Strata · Quelle geprüft am 2.10.2026",
+   "short": "Strata"
+  },
+  {
+   "category": "Open Source",
+   "title": "StreetComplete bekommt endlich eine iOS-Beta.",
+   "body": "Die OpenStreetMap-App StreetComplete ist als öffentliche TestFlight-Beta für iOS verfügbar, bis 31. Oktober. Der Port nutzt Kotlin Multiplatform und Compose Multiplatform und ist das Ergebnis von mehrjähriger Arbeit.",
+   "takeaway": "Schönes Beispiel, wie weit Kotlin Multiplatform inzwischen trägt. Und gut für alle, die beim Spazieren Karten verbessern wollen.",
+   "url": "https://news.ycombinator.com/item?id=49920160",
+   "cta": "Diskussion lesen ↗",
+   "source": "Hacker News (verweist auf das GitHub-Projekt) · Quelle geprüft am 2.10.2026",
+   "short": "StreetComplete iOS"
+  },
+  {
+   "category": "Informatik",
+   "title": "SvelteKit 3: weniger Reste, mehr Typen.",
+   "body": "SvelteKit 3 ist da. Die Konfiguration wandert in die vite.config.ts, der Alias $lib wird zu #lib, Umgebungsvariablen und Service Worker werden einfacher. Migration per npx sv migrate sveltekit-3. Remote Functions sind noch nicht ganz fertig und hängen an einem Experimental-Flag.",
+   "takeaway": "Ein Major-Release mit Aufräumcharakter. Wer ein Projekt hat, startet mit dem Migrationsbefehl und liest die Todo-Liste.",
+   "url": "https://svelte.dev/blog/sveltekit-3-is-here",
+   "cta": "Originalquelle lesen ↗",
+   "source": "svelte.dev · Quelle geprüft am 2.10.2026",
+   "short": "SvelteKit 3"
+  },
+  {
+   "category": "Informatik",
+   "title": "K2: Event-Streams ohne eigenen Kafka.",
+   "body": "Cloudflare startet K2 als öffentliche Beta, einen serverlosen, dauerhaften Event-Stream. Events landen in einem geordneten Log auf R2-Objektspeicher, mehrere Konsumenten lesen unabhängig und im eigenen Tempo.",
+   "takeaway": "Für Edge-Workloads, bei denen Kafka nicht passt, ist das interessant. Beta heißt: Preise und Grenzen vorher prüfen.",
+   "url": "https://blog.cloudflare.com/cloudflare-k2-streams/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "blog.cloudflare.com · Quelle geprüft am 2.10.2026",
+   "short": "Cloudflare K2"
+  },
+  {
+   "category": "Informatik",
+   "title": "turbopuffer: Vektorindex wird zum Nebendarsteller.",
+   "body": "turbopuffer stellt in seinem Blog (30.9., am 1.10. breit diskutiert) die neue Speicherarchitektur vor. Der ANN-Vektorindex war bisher der Mittelpunkt aller Abfragepläne und wird nun ein normaler Sekundärindex. Ziel sind mehr Abfragearten bei größerem Maßstab.",
+   "takeaway": "Der Titel ist Clickbait mit Wahrheitskern: Suche wird breiter als nur Vektoren. Beginn einer Serie, Details kommen noch.",
+   "url": "https://turbopuffer.com/blog/rip-vector-database",
+   "cta": "Originalquelle lesen ↗",
+   "source": "turbopuffer.com · Quelle geprüft am 2.10.2026",
+   "short": "turbopuffer v3"
+  },
+  {
+   "category": "Informatik",
+   "title": "Git 3.0: SHA-256 als Standard, kluger Plan oder teurer Ärger?",
+   "body": "Scott Chacon von GitButler warnt am 1.10., dass Git 3.0 künftig SHA-256 als Standard-Hash nutzen wird und das global viel Aufwand bei wenig praktischem Nutzen bedeute. Er beschreibt, wie Git Inhalte über Hashes adressiert und warum der Wechsel Ökosystem-Brüche verursachen könnte.",
+   "takeaway": "Eine Meinung, kein Beschluss. Aber wer Git-Tooling baut, sollte das Thema auf dem Zettel haben.",
+   "url": "https://blog.gitbutler.com/git-3-sha-256",
+   "cta": "Originalquelle lesen ↗",
+   "source": "blog.gitbutler.com (Meinungsbeitrag) · Quelle geprüft am 2.10.2026",
+   "short": "Git 3.0 und SHA-256"
+  },
+  {
+   "category": "Design",
+   "title": "Figma sperrt seinen MCP-Server für unbekannte Clients.",
+   "body": "Figmas Remote-MCP-Server akzeptiert nur Clients von einer Unterstützungsliste. Pi steht noch nicht darauf. Aus der Community kommt Kritik, auch vom MCP-Erfinder, weil das dem offenen Ökosystem-Gedanken widerspreche.",
+   "takeaway": "Wer Design-Dateien mit eigenen Agenten anzapfen will, muss jetzt auf die Whitelist hoffen. Ein Lehrstück über Abhängigkeit von Plattformen.",
+   "url": "https://news.lavx.hu/article/figma-restricts-mcp-server-to-supported-clients-drawing-criticism-from-mcp-creator",
+   "cta": "Bericht lesen ↗",
+   "source": "LavX News (Sekundärquelle) · Quelle geprüft am 2.10.2026",
+   "short": "Figma MCP"
+  },
+  {
+   "category": "Wildcard",
+   "title": "56k.rip: Einwählen wie 1996, im Browser.",
+   "body": "Der Browser simuliert das komplette Dial-up-Erlebnis: Desktop, DFÜ-Netzwerk, Wählton, Handshake und eine Seite, die Block für Block eintrudelt. Wählbar sind 14.4, 28.8 und 56k, und dieselbe Seite lädt tatsächlich unterschiedlich lang.",
+   "takeaway": "Pure Nostalgie, aber liebevoll gebaut. Zehn Minuten Zeitreise, bei denen man schlagartig Geduld lernt.",
+   "url": "https://56k.rip/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "56k.rip · Quelle geprüft am 2.10.2026",
+   "short": "56k.rip"
+  },
+  {
+   "category": "Wildcard",
+   "title": "Der ESP32 kann heimlich Funk-Rohdaten.",
+   "body": "Das ESPARGOS-Team hat bei mehreren ESP32-Chips eine undokumentierte Funktion entdeckt, die rohe IQ-Basisbanddaten liefert. Allein reicht die Bandbreite nur für Schnappschüsse, also eine Art Spektrumanalyse. Ein anderes Projekt streamt die Daten per FPGA kontinuierlich an den PC.",
+   "takeaway": "Heißt: Der Chip im Bastelregal kann mehr, als das Datenblatt verrät. Mit etwas Vorsicht genießen, die Grenzen sind real.",
+   "url": "https://www.rtl-sdr.com/various-projects-independently-find-hidden-sdr-capabilities-in-esp32-microcontrollers/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "rtl-sdr.com · Quelle geprüft am 2.10.2026",
+   "short": "ESP32-SDR"
+  },
+  {
+   "category": "Wildcard",
+   "title": "Bez: eine Browser-Engine aus Spezifikationen generieren.",
+   "body": "Das Projekt Bez will eine Web-Rendering-Engine aus den Webstandards und Tests erzeugen. Ein Modell schreibt Kandidaten, die Layout-Ergebnisse werden gegen Chromium, Firefox und WebKit geprüft, was besteht, wird als normaler Rust-Code eingecheckt.",
+   "takeaway": "Frühes Experiment mit großem Anspruch. Es zeigt, wie weit Spec-getriebene Codegenerierung gedacht wird.",
+   "url": "https://tangled.org/burrito.space/bez",
+   "cta": "Originalquelle lesen ↗",
+   "source": "tangled.org/burrito.space/bez · Quelle geprüft am 2.10.2026",
+   "short": "Bez"
+  },
+  {
+   "category": "Wildcard",
+   "title": "Ein KI-Modell findet einen unbekannten Dodo-Bericht.",
+   "body": "Der Historiker Benjamin Breen beschreibt, wie er mit Claude Opus 5.5 und semantischer Suche in Archiven einen offenbar bisher unbeachteten niederländischen Bericht von 1615 über Dodo-Jagd fand. Entscheidend war seine Fachkenntnis für die konkrete Forschungsfrage.",
+   "takeaway": "Gutes Beispiel für KI als Rechercheverstärker. Der Fund ist seine Einschätzung, die Fachwelt muss ihn noch bestätigen.",
+   "url": "https://resobscura.substack.com/p/using-opus-55-to-discover-a-new-eyewitness",
+   "cta": "Originalquelle lesen ↗",
+   "source": "resobscura.substack.com · Quelle geprüft am 2.10.2026",
+   "short": "Opus 5.5 und der Dodo"
+  }
+ ],
+ "notes": "Fazit: Viele Neuigkeiten sind Ankündigungen mit Herstellerzahlen. Prüf Kennzahlen selbst, bevor du Entscheidungen darauf baust. Der Tag deckt Donnerstag, 1. Oktober 2026 ab (Berliner Zeit); ältere Meldungen sind im Text als solche markiert. Auswahl aus Hacker News, Hersteller-Blogs und Trending-Listen. Reine Textausgabe, Audio folgt nach Erzeugung.",
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-01",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: eine Linie führt in einen Verteiler und teilt sich in drei Kästchen auf, daneben ein schwarzer Bogen vor einer gelben Sonne und gestapelte Würfel",
+ "heroCaption": "Illustration: Daily Hob"
+}
