@@ -2,8 +2,8 @@
  "date": "2026-10-02",
  "title": "Daily Hob vom Freitag, 2.10.",
  "headline": "Datenbanken für Agenten.\nUnd die Cloud heißt Link.",
- "teaser": "3 Catches bisher: Supabase und Turso, Home Assistant Link, DeepSeek Harness.",
- "intro": "Der Freitag liefert bisher drei Dinge: ein Datenbank-Deal für die Agenten-Welt, eine Umbenennung mit Haltung und ein Agenten-Gerüst, das nun als Desktop-App kommt. Die Ausgabe wächst im Laufe des Tages.",
+ "teaser": "11 Catches: Supabase und Turso, Home Assistant Link, Zig 0.17, Apple Pass Designer, Stratego-KI und mehr.",
+ "intro": "Der Freitag war ein Datenbank-Tag mit Nebenwirkungen: Supabase kauft Turso, Home Assistant benennt seine Cloud um, Zig bringt ein großes Release. Dazu eine KI, die Stratego knackt, und ein Modell, das Ölbilder per Code malt.",
  "sections": [
   {
    "category": "Informatik",
@@ -34,9 +34,89 @@
    "cta": "Originalquelle lesen ↗",
    "source": "deepseek.com · Datum laut mpost.io · Quelle geprüft am 2.10.2026",
    "short": "DeepSeek Harness"
+  },
+  {
+   "category": "Informatik",
+   "title": "Zig 0.17.0 ist da: neues Build-System, schnellere Compiles.",
+   "body": "Fünf Monate Arbeit, 206 Beteiligte, 925 Commits. Das Build-System wurde umgebaut und spricht jetzt das Build Server Protocol, der ELF-Linker ist so weit, dass inkrementelles Kompilieren auf x86_64-Linux für alle laufen soll. Die C-Übersetzung zieht in ein externes Paket um.",
+   "takeaway": "Kein Release für Zuschauer: Wer Zig nutzt, sollte die Release Notes vor dem Update lesen, es gibt Sprachänderungen.",
+   "url": "https://ziglang.org/download/0.17.0/release-notes.html",
+   "cta": "Originalquelle lesen ↗",
+   "source": "ziglang.org · Quelle geprüft am 3.10.2026",
+   "short": "Zig 0.17"
+  },
+  {
+   "category": "Design",
+   "title": "Apple Pass Designer: Wallet-Karten ohne JSON-Gefrickel.",
+   "body": "Apple zeigt den Pass Designer in der Beta. Man startet mit Vorlagen, ändert Farben und Felder, und die Vorschau nutzt dasselbe Rendering wie iOS und watchOS. Dazu gibt es Validierung und Semantic Tags für Boarding Passes und Tickets. Die Beta braucht macOS 27 und einen Apple-Account.",
+   "takeaway": "Für alle, die Wallet-Pässe bauen, ein echter Zeitsparer. Noch Beta.",
+   "url": "https://developer.apple.com/pass-designer/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "developer.apple.com · Quelle geprüft am 3.10.2026",
+   "short": "Apple Pass Designer"
+  },
+  {
+   "category": "KI",
+   "title": "Stratego-KI Ataraxos schlägt den besten Menschen 15:1.",
+   "body": "Forschende von CMU, MIT, NYU und Stanford haben Stratego geknackt, ein Spiel mit versteckten Figuren. Der Trick laut Bericht: ein zweites neuronales Netz, das die versteckten Figuren des Gegners errät. Gegen Pim Niemeijer gab es 15 Siege, vier Remis, eine Niederlage, trainiert mit 16 GPUs für ein paar tausend Dollar. Der Bericht erschien am 1.10., auf Hacker News lief die Diskussion am 2.10.",
+   "takeaway": "Spannend, weil es nicht um Rechenmacht ging, sondern um eine clevere Architektur. Wie viel davon über Stratego hinaus trägt, ist offen.",
+   "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "arstechnica.com · Bericht vom 1.10. · Quelle geprüft am 3.10.2026",
+   "short": "Ataraxos Stratego"
+  },
+  {
+   "category": "Open Source",
+   "title": "ds4: DeepSeek V4 lokal auf dem Mac, vom Redis-Erfinder.",
+   "body": "DwarfStar 4 ist eine schlanke C-Inferenz-Engine unter MIT-Lizenz für Metal, CUDA und ROCm. Sie läuft mit DeepSeek V4 Flash und Pro sowie GLM 5.2 und 5.3 Flash, nutzt 2-Bit-Quantisierung für die Experten und legt lange Prompt-Präfixe auf die SSD. Das Repo gibt es seit Mai und hat über 22.000 Sterne, die Projektseite war am 2.10. auf Hacker News.",
+   "takeaway": "Kein Neustart, aber ein guter Anlass: Du brauchst viel Speicher. Die Kommentare sagen, die starke Quantisierung kostet Qualität.",
+   "url": "https://dwarfstar.sh/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "dwarfstar.sh · Repo github.com/antirez/ds4 · Quelle geprüft am 3.10.2026",
+   "short": "ds4 lokal"
+  },
+  {
+   "category": "KI",
+   "title": "Ein Monat nur mit GLM 5.3 Flash: Aufgabe erfolgreich gescheitert.",
+   "body": "Das Wagtail-Team wollte den ganzen September nur mit diesem effizienten offenen Modell programmieren. Die erste Monatshälfte klappte, bei etwa 68 Dollar Kosten. In der zweiten Hälfte gingen rund eine Milliarde Token an andere Modelle, insgesamt waren es über zwei Milliarden.",
+   "takeaway": "Ehrlicher Erfahrungsbericht statt Hype. Gut für alle, die abschätzen wollen, wie weit billige Modelle im Alltag tragen.",
+   "url": "https://wagtail.org/blog/one-month-on-glm-53-flash/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "wagtail.org · Quelle geprüft am 3.10.2026",
+   "short": "GLM 5.3 Flash"
+  },
+  {
+   "category": "Open Source",
+   "title": "ldraw-nova: Ein KI-Agent baut dir LEGO-Modelle.",
+   "body": "Du gibst eine Idee vor, der Agent baut sie als LDraw-Modell, dazu gibt es 3D-Viewer, eine VR-Ansicht für Meta Quest 3 und einen Blender-Export als glb. AGPL-3.0, Docker nötig, laut Repo gebaut mit Opus 5.5. Das Repo ist seit dem 23.9. da, auf Hacker News lief es am 2.10. als Show HN.",
+   "takeaway": "Spielerei mit Substanz. Der Reranking-Teil braucht optional einen API-Key, sonst fällt die Suche auf Volltext zurück.",
+   "url": "https://github.com/anteloc/ldraw-nova",
+   "cta": "Originalquelle lesen ↗",
+   "source": "github.com/anteloc · Quelle geprüft am 3.10.2026",
+   "short": "ldraw-nova"
+  },
+  {
+   "category": "Wildcard",
+   "title": "Opus 5.5 malt per Code mit simuliertem Ölfarbe-Pinsel.",
+   "body": "Auf stillwet.art schreibt das Modell jeden Pinselstrich als Code, eine Ölfarben-Simulation führt ihn aus, ohne Bildgenerator. Das Beispiel im Projekt ist ein Bild nach Caspar David Friedrich. Laut Seite haben drei KI-Maler in einer Blindbewertung das Bild über ihre eigenen gestellt.",
+   "takeaway": "Schön anzusehen und eine neue Art, Modelle zu vergleichen. Der Eindruck von Qualität bleibt Geschmackssache.",
+   "url": "https://stillwet.art/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "stillwet.art · Quelle geprüft am 3.10.2026",
+   "short": "Opus malt"
+  },
+  {
+   "category": "Wildcard",
+   "title": "Tiny Brutalism: Sandbox für Beton-Monumente.",
+   "body": "Ein kleines Bauspiel ohne Ziel für Windows, macOS und Linux. Man klickt Betonblöcke zusammen, kann zwischen Tag und Nacht wechseln und die Kamera frei drehen. Auf Hacker News kam es am 2.10. gut an.",
+   "takeaway": "Pure Entspannung für Architekturfans. Preis und Umfang stehen auf der itch.io-Seite.",
+   "url": "https://placeholders.itch.io/tiny-brutalism",
+   "cta": "Originalquelle lesen ↗",
+   "source": "placeholders.itch.io · Quelle geprüft am 3.10.2026",
+   "short": "Tiny Brutalism"
   }
  ],
- "notes": "Laufende Tagesausgabe vom Freitag, 2. Oktober 2026 (Berliner Zeit), wird im Tagesverlauf ergänzt. Auswahl aus Hacker News und Hersteller-Blogs. Ältere Meldungen sind im Text markiert. Reine Textausgabe.",
+ "notes": "Ausgabe vom Freitag, 2. Oktober 2026 (Berliner Zeit). Auswahl aus Hacker News und Hersteller-Blogs. Ältere Meldungen sind im Text markiert. Reine Textausgabe.",
  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-02",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: ein schwarzer Block mit Leitung zu einem Raster aus vielen kleinen Quadraten, daneben ein mintfarbener Kreis",
