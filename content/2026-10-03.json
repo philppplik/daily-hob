@@ -1,0 +1,44 @@
+{
+ "date": "2026-10-03",
+ "title": "Daily Hob vom Samstag, 3.10.",
+ "headline": "Ein Kolibri für Deutschland.\nUnd Orion wird frei.",
+ "teaser": "3 Catches bisher: Kolibri von Aleph Alpha, Orion für Linux und Windows, Cloudflare OHTTP Gateway.",
+ "intro": "Ein ruhiger Samstag mit einem klaren Highlight: Aleph Alpha gibt ein offenes deutsch-englisches Modell frei. Dazu zwei Meldungen vom Freitag, die heute viel diskutiert wurden. Die Ausgabe wächst im Laufe des Tages.",
+ "sections": [
+  {
+   "category": "KI",
+   "title": "Aleph Alpha veröffentlicht Kolibri: offenes Modell für Deutsch und Englisch.",
+   "body": "Am Tag der Deutschen Einheit gibt Aleph Alpha Kolibri frei: ein Mixture-of-Experts-Modell mit 78 Milliarden Parametern, davon 3 Milliarden aktiv, bis zu 1 Million Token Kontext. Die Gewichte liegen auf Hugging Face unter Apache 2.0. Das Modell ist auf Deutsch, Mathe, Agenten-Verhalten und regulierte Bereiche wie Verwaltung und Industrie spezialisiert und soll sich lokal ohne Drittanbieter betreiben lassen.",
+   "takeaway": "Offene deutsche Gewichte unter Apache 2.0 sind selten. Die Benchmarks stammen vom Hersteller, eigene Tests bleiben nötig.",
+   "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "aleph-alpha.com · Quelle geprüft am 3.10.2026",
+   "short": "Kolibri"
+  },
+  {
+   "category": "Open Source",
+   "title": "Kagi stellt Orion für Linux und Windows ein und gibt den Code frei.",
+   "body": "Kagi beendet die Entwicklung von Orion für Linux und Windows und will beide Versionen als Open Source veröffentlichen. Details sollen in den nächsten 30 Tagen folgen, Kagi selbst will nicht Hauptmaintainer sein und sucht Stiftungen und Maintainer. Orion für macOS und iOS geht weiter. Die Ankündigung ist vom 2.10., auf Hacker News lief die Diskussion heute.",
+   "takeaway": "Für Linux-Fans ein Lichtblick und ein Risiko zugleich: Das WebKit-Browser-Projekt braucht jetzt Menschen, die es tragen.",
+   "url": "https://blog.kagi.com/update-orion-linux-windows",
+   "cta": "Originalquelle lesen ↗",
+   "source": "blog.kagi.com · Ankündigung vom 2.10. · Quelle geprüft am 3.10.2026",
+   "short": "Orion Linux Windows"
+  },
+  {
+   "category": "Informatik",
+   "title": "Cloudflare startet OHTTP Gateway in der geschlossenen Beta.",
+   "body": "Mit Oblivious HTTP erreichen Anfragen den Server, ohne dass dieser die IP-Adresse des Nutzers sieht. Cloudflare bietet jetzt ein eigenes Gateway als bezahltes Add-on an, zunächst als geschlossene Beta mit Warteliste. Der bisherige Dienst Privacy Gateway heißt künftig Cloudflare OHTTP Relay. Der Beitrag erschien am 2.10., die Diskussion lief heute.",
+   "takeaway": "Interessant für Entwickler, die Privatsphäre in Apps einbauen wollen. Noch kein offener Zugang.",
+   "url": "https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "blog.cloudflare.com · Beitrag vom 2.10. · Quelle geprüft am 3.10.2026",
+   "short": "Cloudflare OHTTP"
+  }
+ ],
+ "notes": "Laufende Tagesausgabe vom Samstag, 3. Oktober 2026 (Berliner Zeit). Auswahl aus Hacker News und Hersteller-Blogs. Ältere Meldungen sind im Text markiert. Reine Textausgabe.",
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-03",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein schwarzes Dreieck mit gelber und mintfarbener Scheibe über einer dünnen Linie",
+ "heroCaption": "Illustration: Daily Hob"
+}
