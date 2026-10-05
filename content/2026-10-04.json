@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-04",
+ "title": "Daily Hob vom Sonntag, 4.10.",
+ "headline": "Rust startet früher.\nUnd der Mac räumt sich auf.",
+ "teaser": "5 Catches: headstart für schnellere Rust-Builds, SCM, RemoveMacAI, Xray-core und Hard Budget Caps.",
+ "intro": "Ein ruhiger Sonntag mit nützlichem Kleinkram: ein Experiment, das Rust-Builds beschleunigen will, zwei Mac-Werkzeuge, eine unbequeme Sicherheitsmeldung und die Forderung nach harten Budget-Limits. Mehrere Projekte sind älter und wurden am Sonntag diskutiert, das steht jeweils im Text.",
+ "sections": [
+  {
+   "category": "Informatik",
+   "title": "headstart: Rust-Builds starten früher und laufen bis zu 54 Prozent schneller.",
+   "body": "headstart lässt rustc eine frühe Metadaten-Datei schreiben, sobald die Schnittstellen eines Crates geprüft sind, und cargo startet abhängige Crates darauf, noch bevor die Funktionskörper fertig sind. Laut Projekt werden saubere Builds von 13 echten Projekten (darunter rust-analyzer, zed und bevy) auf 16 Kernen bis zu 54 Prozent schneller bei cargo check und bis zu 42 Prozent bei cargo build, auf 4 Kernen sind es 24 und 13 bis 15 Prozent bei rust-analyzer. Das Repo ist seit dem 27.9. da, die Diskussion auf Hacker News lief am 4.10. Gedacht sind die Patches als spätere Pull Requests für rustc und cargo.",
+   "takeaway": "Nur nutzbar mit selbst gebautem rustc und cargo, und der Gewinn schrumpft auf kleinen Maschinen. Spannend ist es als Vorschau auf das, was upstream kommen könnte.",
+   "url": "https://github.com/PowderworksCode/headstart",
+   "cta": "Originalquelle lesen ↗",
+   "source": "github.com/PowderworksCode · Zahlen laut Projekt · Quelle geprüft am 5.10.2026",
+   "short": "headstart (Rust)"
+  },
+  {
+   "category": "Open Source",
+   "title": "SCM: lokale KI-Suche für jedes Foto und jedes Videobild auf dem Mac.",
+   "body": "SCM durchsucht Ordner mit Fotos und Videos per Beschreibung in normaler Sprache, mit einem lokalen Vision-Modell. Dazu kommen Szenen in Videos mit Timecode, Texterkennung per OCR und eine Suche nach gesprochenen Sätzen über Whisper. Alles läuft offline, die Gewichte werden einmal geladen (rund 435 MB für das Standard-CLIP). MIT-Lizenz, Installation per Homebrew auf Apple Silicon. Das Repo entstand am 3.10., auf Hacker News lief es am 4.10. als Show HN.",
+   "takeaway": "Klingt nach dem Tool, das man für alte Urlaubsvideos braucht. Brandneu, also mit Kinderkrankheiten rechnen.",
+   "url": "https://github.com/allenv0/SCM",
+   "cta": "Originalquelle lesen ↗",
+   "source": "github.com/allenv0 · Quelle geprüft am 5.10.2026",
+   "short": "SCM Screen Memories"
+  },
+  {
+   "category": "Open Source",
+   "title": "RemoveMacAI schaltet Apple Intelligence unter macOS 27 ab und räumt die Modelle weg.",
+   "body": "Unter macOS 27 gibt es laut Projekt keinen einzelnen Schalter mehr, und die Modelle bleiben auch nach dem Ausschalten auf der Platte. RemoveMacAI deaktiviert Siri, Schreibwerkzeuge, Genmoji, Zusammenfassungen und weitere Funktionen, entfernt die Modelle, verhindert den erneuten Download und lässt sich komplett zurücknehmen. Dafür installiert es ein Konfigurationsprofil, das man in den Systemeinstellungen bestätigen muss. MIT-Lizenz, Repo seit dem 29.9., auf Hacker News lief es am 4.10.",
+   "takeaway": "Wer Skripte per curl in die Shell pipt, sollte vorher in den Code schauen. Praktisch ist der Trockenlauf mit --dry-run.",
+   "url": "https://github.com/omlahore/RemoveMacAI",
+   "cta": "Originalquelle lesen ↗",
+   "source": "github.com/omlahore · Quelle geprüft am 5.10.2026",
+   "short": "RemoveMacAI"
+  },
+  {
+   "category": "Informatik",
+   "title": "Xray-core: Melder wirft Entwicklern vor, eine Lücke monatelang verschwiegen zu haben.",
+   "body": "Ein Melder schildert auf net4people/bbs, dass die Option pinnedPeerCertSha256 in Xray-core ab Januar 2026 die normale Zertifikatsprüfung überging und ein Angreifer ein beliebiges Blatt-Zertifikat in die Kette setzen konnte. Gemeldet habe er die Lücke am 6.2.2026, die Entwickler hätten sie am selben Tag still behoben, ohne die Nutzer zu informieren. Das ist die Darstellung des Melders vom 2.10., eine Antwort der Xray-core-Entwickler haben wir in der Quelle nicht gelesen. Die Diskussion lief am 4.10. auf Hacker News.",
+   "takeaway": "Wer Xray-core mit dieser Option nutzt, sollte auf eine aktuelle Version gehen. Die Vorwürfe sind einseitig belegt.",
+   "url": "https://github.com/net4people/bbs/issues/672",
+   "cta": "Originalquelle lesen ↗",
+   "source": "github.com/net4people · Darstellung des Melders · Quelle geprüft am 5.10.2026",
+   "short": "Xray-core Lücke"
+  },
+  {
+   "category": "Wildcard",
+   "title": "Simon Willison: Dienste brauchen harte Budget-Limits als Standard.",
+   "body": "Willison argumentiert, dass Coding-Agenten Code und damit Kosten so billig loslassen, dass Dienste mit nutzungsabhängiger Abrechnung ein hartes Limit brauchen, das Anfragen bei Erreichen abschneidet. Warn-Mails reichen laut Text nicht. Wer das Limit nicht will, soll es ausdrücklich abschalten, und am meisten wünscht er sich das von AWS. Der Beitrag ist vom 3.10, auf Hacker News lief die große Diskussion am 4.10.",
+   "takeaway": "Eine Meinung, kein Produkt, aber eine, die jeder nachvollzieht, der schon mal eine Rechnung erschrocken geöffnet hat.",
+   "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "simonwillison.net · Beitrag vom 3.10. · Quelle geprüft am 5.10.2026",
+   "short": "Hard Budget Caps"
+  }
+ ],
+ "notes": "Ausgabe vom Sonntag, 4. Oktober 2026 (Berliner Zeit). Auswahl aus Hacker News und Projekt-Seiten. Ältere Meldungen sind im Text markiert. Reine Textausgabe.",
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-04",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: schwarze Blöcke in aufsteigender Höhe, verbunden durch dünne Linien mit einer gelben Scheibe, darüber ein mintfarbener Kreis",
+ "heroCaption": "Illustration: Daily Hob"
+}
