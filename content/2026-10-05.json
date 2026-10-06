@@ -1,0 +1,74 @@
+{
+ "date": "2026-10-05",
+ "title": "Daily Hob vom Montag, 5.10.",
+ "headline": "Beam kommt später.\nDoom läuft in SQL.",
+ "teaser": "6 Catches: Reflection Beam, Opus-Agenten und Magnete, Cloudflare Web Search, ArtCraft, Doom in SQL und Dust.",
+ "intro": "Ein Montag mit einer großen Modell-Ankündigung, ein bisschen Agenten-Forschung, ein paar Dev-Funden und einem sehr unnötigen Doom-Port. Mehrere Beiträge sind älter und wurden am Montag diskutiert, das steht jeweils im Text.",
+ "sections": [
+  {
+   "category": "KI",
+   "title": "Reflection kündigt Beam an: 501 Milliarden Parameter, offene Gewichte, aber erst später im Oktober.",
+   "body": "Beam ist das erste offene Modell von Reflection: ein Mixture-of-Experts mit 501 Milliarden Parametern, davon 23 Milliarden aktiv, gebaut für Coding, Reasoning und Agenten. Vortrainiert wurde auf 23,8 Billionen Tokens, danach lief ein großer RL-Lauf mit über 100 Millionen Rollouts auf 10.500 GB300-GPUs. Laut Reflection liegt Beam bei Coding und Agenten nahe an Qwen 3.8-Max. Das sind Herstellerangaben. Gewichte, Technical Report und Model Card sollen später im Oktober erscheinen, bis dahin gibt es nur Early-Access-Anmeldung.",
+   "takeaway": "Heute ist es eine Ankündigung, kein Download. Erst wenn die Gewichte da sind, lässt sich prüfen, ob die Zahlen halten.",
+   "url": "https://reflection.ai/blog/introducing-beam",
+   "cta": "Originalquelle lesen ↗",
+   "source": "reflection.ai · Angaben des Herstellers · Quelle geprüft am 6.10.2026",
+   "short": "Reflection Beam"
+  },
+  {
+   "category": "KI",
+   "title": "Ein Team aus Claude-Opus-5.5-Agenten schlägt zwei Kandidaten für Speicher-Magnete vor.",
+   "body": "Vals AI beschreibt, wie Agenten mit einem Physiker zwei Materialien als mögliche Antiferromagnet-Halbleiter bei Raumtemperatur vorschlagen. Eines ist eine neu entworfene Verbindung, das andere wurde schon 1999 hergestellt. Beide sind rein per Rechnung vorhergesagt, nicht im Labor bestätigt. Rechnungen, Code und bekannte Einschränkungen hat Vals veröffentlicht. Der Beitrag ist vom 4.10., auf Hacker News lief er am 5.10.",
+   "takeaway": "Spannend als Beispiel, was Agenten in der Forschung leisten. Ob die Materialien in echt funktionieren, weiß erst ein Experiment.",
+   "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
+   "cta": "Originalquelle lesen ↗",
+   "source": "vals.ai · Beitrag vom 4.10. · Quelle geprüft am 6.10.2026",
+   "short": "Opus-Agenten Magnete"
+  },
+  {
+   "category": "Informatik",
+   "title": "Cloudflare startet eine Web Search API für Agenten in der Beta.",
+   "body": "Mit der Web Search API können KI-Agenten das Netz durchsuchen und Antworten auf aktuelle Quellen stützen. Zur Wahl stehen drei Anbieter: Ceramic.ai, Exa und Linkup, alle mit Zero Data Retention bei Anfragen über Cloudflare. Der Zugriff läuft über AI Gateway per REST oder per Worker-Binding, abgerechnet wird zum Listenpreis des Anbieters ohne Aufschlag, eigene Anbieter-Keys sind möglich. Der Changelog-Eintrag ist vom 2.10., auf Hacker News lief er am 5.10.",
+   "takeaway": "Praktisch, wenn du ohnehin AI Gateway nutzt, weil Logs und Abrechnung an einem Ort bleiben.",
+   "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "developers.cloudflare.com · Eintrag vom 2.10. · Quelle geprüft am 6.10.2026",
+   "short": "Cloudflare Web Search"
+  },
+  {
+   "category": "Open Source",
+   "title": "ArtCraft zeigt sieben quelloffene Kreativ-Apps, komplett in Rust.",
+   "body": "Zur Familie gehören PhotoCraft (Bildbearbeitung), VectorCraft, FilmCraft (Video), LightCraft (Fotobibliothek und Raw), PrintCraft (PDF), EffectCraft (Motion Graphics) und DesignCraft (Seitenlayout). Laut Webseite ist alles von Grund auf in Rust geschrieben, unter freizügigen Lizenzen auf GitHub. Der Reifegrad ist ehrlich angegeben: PhotoCraft und PrintCraft sind in früher Alpha, die anderen in Entwicklung. Installer gibt es für macOS, Windows und Linux, teils auch fürs Web. Auf Hacker News lief die Seite am 5.10.",
+   "takeaway": "Ein Photoshop-und-InDesign-Ersatz ist das noch nicht. Als Projekt, das man im Auge behalten sollte, ist es groß gedacht.",
+   "url": "https://getartcraft.com/apps",
+   "cta": "Originalquelle lesen ↗",
+   "source": "getartcraft.com · Quelle geprüft am 6.10.2026",
+   "short": "ArtCraft Apps"
+  },
+  {
+   "category": "Informatik",
+   "title": "CedarDB lässt das originale Doom komplett als SQL-Abfragen laufen.",
+   "body": "Spiellogik und Renderer des Doom von 1993 laufen als SQL-Abfragen in der Datenbank CedarDB. Die Spielschleife läuft mit den originalen 35 FPS, der Renderer erzeugt das ganze 320x200-Bild mit bis zu 60 Hz. Python liest nur die Tastatur und zeigt das Bild an. Deathmatch mit vier Plätzen geht auch, man kann es online ausprobieren. Der Beitrag ist vom 22.9., auf Hacker News lief er am 5.10.",
+   "takeaway": "Völlig unnötig, völlig großartig. Und ein ordentlicher Härtetest für die Datenbank.",
+   "url": "https://cedardb.com/blog/sqldoom/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "cedardb.com · Beitrag vom 22.9. · Quelle geprüft am 6.10.2026",
+   "short": "Doom in SQL"
+  },
+  {
+   "category": "Wildcard",
+   "title": "Dust: Sprachmodelle vortrainieren ohne Backpropagation.",
+   "body": "Die Forschenden von qlabs stellen mit Dust eine Methode nullter Ordnung vor, die beim Vortraining von Transformern mit Backprop mithalten soll. Sie stören die Aktivierungen pro Token und werten alle Tokens in einem Vorwärtsdurchlauf aus. Laut Beitrag ist Dust bei großen Populationen nah an Backprop und übertrifft es teils, und größere Modelle sind effizienter, nicht schlechter. Getestet wurde bis 1 Milliarde Tokens, also weit unter echter Modellgröße. Das ist eine Eigendarstellung ohne unabhängige Prüfung, mit Code. Datum laut Seite nur Oktober 2026, auf Hacker News lief es am 5.10.",
+   "takeaway": "Grundlagenforschung. Ob das skaliert, ist offen, aber die Idee, dass Backprop nicht alternativlos ist, bleibt reizvoll.",
+   "url": "https://qlabs.sh/research/dust",
+   "cta": "Originalquelle lesen ↗",
+   "source": "qlabs.sh · Eigendarstellung · Quelle geprüft am 6.10.2026",
+   "short": "Dust ohne Backprop"
+  }
+ ],
+ "notes": "Ausgabe vom Montag, 5. Oktober 2026 (Berliner Zeit). Auswahl aus Hacker News und Projekt-Seiten. Ältere Meldungen sind im Text markiert.",
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-05",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein schwarzes Dreieck und eine Säule, daneben ein Kreis mit gelber Scheibe, darüber ein mintfarbener Punkt",
+ "heroCaption": "Illustration: Daily Hob"
+}
