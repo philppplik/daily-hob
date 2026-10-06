@@ -1,0 +1,34 @@
+{
+ "date": "2026-10-06",
+ "title": "Daily Hob vom Dienstag, 6.10.",
+ "headline": "Mistral legt nach.\nPolars wird 2.0.",
+ "teaser": "2 Catches bisher: Mistral Large 4 und Polars 2.0.",
+ "intro": "Der Dienstag in Zwischenstand: ein neues offenes Großmodell aus Frankreich und ein großes Release für Datenanalyse in Rust.",
+ "sections": [
+  {
+   "category": "KI",
+   "title": "Mistral Large 4: offenes Modell mit 1,05 Billionen Parametern und 1 Million Token Kontext.",
+   "body": "Mistral Large 4 ist laut Doku ein offenes, multimodales Mixture-of-Experts-Modell mit 1,05 Billionen Parametern insgesamt, 49 Milliarden aktiv und einem Vision-Encoder mit 1,6 Milliarden. Kontext sind 1 Million Token. Die Doku führt Function Calling, strukturierte Ausgaben, Agents und Batch auf. Preise stehen bei 0,68 US-Dollar pro Million Input-Token und 2,09 US-Dollar pro Million Output-Token. Daneben zeigt die Seite höhere Zahlen, was sie bedeuten, ist dort nicht erklärt. Der Status ist Public Preview, die Seite ist vom 6.10.",
+   "takeaway": "Neues offenes Schwergewicht aus Europa. Wie gut es wirklich ist, zeigen erst unabhängige Tests.",
+   "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+   "cta": "Originalquelle lesen ↗",
+   "source": "docs.mistral.ai · Angaben des Herstellers · Quelle geprüft am 6.10.2026",
+   "short": "Mistral Large 4"
+  },
+  {
+   "category": "Open Source",
+   "title": "Polars 2.0 ist da: Streaming als Standard, Spill-to-Disk und erstklassiges SQL.",
+   "body": "Polars 2.0 bringt eine erste Version von Out-of-Core-Verarbeitung mit Spill-to-Disk, viele Performance-Verbesserungen, SQL als vollwertigen Weg und einen neuen Map-Datentyp. Außerdem ist Polars strenger bei Datentypen. collect auf einem LazyFrame nutzt jetzt standardmäßig die Streaming-Engine. Bei TPC-H und TPC-DS liegt Polars SQL laut Projekt vor DataFusion und DuckDB, außer in einem Benchmark. Das sind eigene Messungen auf AWS-Maschinen, das Benchmark-Repo ist öffentlich. Die Ankündigung ist vom 6.10.",
+   "takeaway": "Wer Pandas-Skripte an die Grenzen treibt, sollte reinschauen. Beim Upgrade wegen der strengeren Typen mit Anpassungen rechnen.",
+   "url": "https://pola.rs/posts/release-polars-2/",
+   "cta": "Originalquelle lesen ↗",
+   "source": "pola.rs · Eigene Benchmarks · Quelle geprüft am 6.10.2026",
+   "short": "Polars 2.0"
+  }
+ ],
+ "notes": "Zwischenstand vom Dienstag, 6. Oktober 2026 (Berliner Zeit). Auswahl aus Hacker News und Projekt-Seiten.",
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-06",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: schwarze Säulen unterschiedlicher Höhe, darüber eine gelbe Scheibe und ein mintfarbener Punkt, verbunden durch eine dünne Linie",
+ "heroCaption": "Illustration: Daily Hob"
+}
