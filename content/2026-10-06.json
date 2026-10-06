@@ -2,8 +2,8 @@
  "date": "2026-10-06",
  "title": "Daily Hob vom Dienstag, 6.10.",
  "headline": "Mistral legt nach.\nPolars wird 2.0.",
- "teaser": "2 Catches bisher: Mistral Large 4 und Polars 2.0.",
- "intro": "Der Dienstag in Zwischenstand: ein neues offenes Großmodell aus Frankreich und ein großes Release für Datenanalyse in Rust.",
+ "teaser": "3 Catches bisher: Mistral Large 4, Polars 2.0 und openTPU.",
+ "intro": "Der Dienstag in Zwischenstand: ein neues offenes Großmodell aus Frankreich, ein großes Release für Datenanalyse in Rust und ein KI-Chip aus dem Open-Source-Baukasten.",
  "sections": [
   {
    "category": "KI",
@@ -24,6 +24,16 @@
    "cta": "Originalquelle lesen ↗",
    "source": "pola.rs · Eigene Benchmarks · Quelle geprüft am 6.10.2026",
    "short": "Polars 2.0"
+  },
+  {
+   "category": "Open Source",
+   "short": "openTPU",
+   "title": "openTPU: ein quelloffener KI-Beschleuniger, entworfen von KI-Agenten.",
+   "body": "Das Repo enthält Hardware-Design in SystemVerilog, Befehlssatz, Simulator, Compiler und Host-Software in einem Monorepo. Laut Projekt entwarfen KI-Agenten den Chip, und er läuft mit echten Gewichten von Modellen wie Qwen3, LFM2.5 und Gemma 4 auf einer alten FPGA-Karte (Kintex-7), mit bit-genau denselben Tokens wie der Simulator. Die Geschwindigkeit ist bescheiden: das kleinste Modell mit 230 Millionen Parametern schafft rund 59 bis 86 Token pro Sekunde, 3,8-Milliarden-Modelle nur etwa 4 bis 7. Apache-2.0-Lizenz, Repo seit dem 24.9., auf Hacker News lief es am 6.10. Die Zahlen sind Angaben des Projekts.",
+   "takeaway": "Kein Chip, den man kauft, aber ein lesbares Lernprojekt vom Matmul bis zu den Leitungen.",
+   "url": "https://github.com/FeSens/openTPU",
+   "cta": "Originalquelle lesen ↗",
+   "source": "github.com/FeSens · Angaben des Projekts · Quelle geprüft am 6.10.2026"
   }
  ],
  "notes": "Zwischenstand vom Dienstag, 6. Oktober 2026 (Berliner Zeit). Auswahl aus Hacker News und Projekt-Seiten.",
