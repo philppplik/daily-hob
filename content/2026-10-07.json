@@ -1,17 +1,54 @@
 {
- "date":"2026-10-07",
- "title":"Daily Hob vom Mittwoch, 7.10.",
- "headline":"Weniger Agenten-Gefummel.\nMehr wiederverwendbarer Code.",
- "teaser":"3 Catches bisher: Chalk Model Gateway, TAP Runtime und Shaders.",
- "intro":"Der Mittwoch startet mit Infrastruktur statt Modell-Wettrennen: KI-Anfragen passend verteilen, wiederkehrende Arbeit in Code packen und WebGPU-Effekte als Komponenten bauen.",
- "hero":"hero.jpg",
- "heroAlt":"Abstrakte Illustration: ein schwarzer Kreis verbindet ein schwarzes Dreieck, eine gelbe Scheibe und ein mintfarbenes Rechteck mit dünnen Linien",
- "heroCaption":"Illustration: KI-generiert für Daily Hob",
- "sections":[
-  {"category":"KI","short":"Chalk Gateway","title":"Chalk Model Gateway: Modell-Routing in der eigenen Cloud.","body":"Chalk stellt am 7.10. ein OpenAI-kompatibles Gateway vor, das in einer vorhandenen Chalk-Umgebung läuft. Es verteilt Anfragen auf Anbieter oder selbst gehostete Modelle, mit Fallbacks, Budgets, Rate Limits und Tracing. Neue Routing-Regeln lassen sich im Shadow Mode beobachten, bevor sie echten Traffic verändern. Eigene Provider-Schlüssel bleiben in der Umgebung. Das heißt nicht, dass alle Daten lokal bleiben: Anfragen an externe Modelle verlassen weiterhin die eigene Cloud.","takeaway":"Interessant für Teams, die Chalk schon betreiben. Kein kostenloses Universal-Gateway und kein automatischer Datenschutz-Zauber.","url":"https://chalk.ai/blog/announcing-chalk-model-gateway","cta":"Ankündigung lesen ↗","source":"chalk.ai · Herstellerankündigung vom 7.10.2026"},
-  {"category":"Open Source","short":"TAP Runtime","title":"TAP Runtime: wiederkehrende Agenten-Arbeit einmal als Code speichern.","body":"Telara stellt TAP am 7.10. vor: kleine Pakete aus Manifest und Bash-, Python-, JavaScript- oder TypeScript-Code, die in einer WebAssembly-Sandbox laufen. Sie nutzen vorhandene Verbindungen des jeweiligen Coding-Agenten. Das lokal arbeitende tap discover sucht in Agenten-Historien nach wiederkehrenden Abläufen und schlägt Bausteine zur Prüfung vor. MIT-Lizenz, kein Konto oder Registry nötig. Claude Code und Codex sind unterstützt; weitere Clients sind experimentell oder Preview. Das Repo existiert seit dem 29.9., die heutige Nachricht ist die Vorstellung.","takeaway":"Das Spannende ist Wiederverwendung, nicht neue Magie. Vorgeschlagenen Code und seine Berechtigungen vor dem Einsatz prüfen.","url":"https://github.com/Telara-Labs/TAP-Runtime","cta":"Projekt ansehen ↗","source":"github.com/Telara-Labs · Projektangaben; Vorstellung auf DEV vom 7.10.2026"},
-  {"category":"Informatik / Design","short":"Shaders","title":"Shaders: WebGPU-Effekte wie normale UI-Komponenten zusammensetzen.","body":"Die MIT-lizenzierte Shaders-Bibliothek bietet laut Projekt über 200 GPU-Effekte für React, Vue, Svelte, Solid und JavaScript: Verläufe, Glas, Verzerrungen, Blur und Cursor-Effekte. Ebenen lassen sich verschachteln, mischen und maskieren. Ein visueller Editor exportiert den passenden Komponentenbaum; das npm-Paket heißt shaders. Das Repo ist vom 29.9. und wird heute auf Hacker News diskutiert, kein heute behauptetes Release. Bibliothek und Editor sind kostenlos, zusätzliche Pro-Funktionen separat.","takeaway":"Schönes Werkzeug für besondere Oberflächen. WebGPU-Verfügbarkeit, Fallback und Bewegung auf echten Geräten testen, bevor die ganze Website glitzert.","url":"https://github.com/shader-effects-inc/shaders","cta":"Komponenten ansehen ↗","source":"github.com/shader-effects-inc und shaders.com · Projektangaben · geprüft am 7.10.2026"}
- ],
- "notes":"Zwischenstand vom Mittwoch, 7. Oktober 2026 (Berliner Zeit). Quellen: Hersteller- und Projektseiten, DEV und Hacker News. Nicht selbst gebenchmarkt.",
- "archiveUrl":"https://news.ycombinator.com/front?day=2026-10-07"
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-07",
+  "date": "2026-10-07",
+  "headline": "Weniger Agenten-Gefummel.\nMehr wiederverwendbarer Code.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: ein schwarzer Kreis verbindet ein schwarzes Dreieck, eine gelbe Scheibe und ein mintfarbenes Rechteck mit dünnen Linien",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "intro": "Der Mittwoch startet mit Infrastruktur statt Modell-Wettrennen: KI-Anfragen passend verteilen, wiederkehrende Arbeit in Code packen und WebGPU-Effekte als Komponenten bauen.",
+  "notes": "Zwischenstand vom Mittwoch, 7. Oktober 2026 (Berliner Zeit). Quellen: Hersteller- und Projektseiten, DEV und Hacker News. Nicht selbst gebenchmarkt. Moyai im Nachmittags-Batch ergänzt.",
+  "sections": [
+    {
+      "body": "Chalk stellt am 7.10. ein OpenAI-kompatibles Gateway vor, das in einer vorhandenen Chalk-Umgebung läuft. Es verteilt Anfragen auf Anbieter oder selbst gehostete Modelle, mit Fallbacks, Budgets, Rate Limits und Tracing. Neue Routing-Regeln lassen sich im Shadow Mode beobachten, bevor sie echten Traffic verändern. Eigene Provider-Schlüssel bleiben in der Umgebung. Das heißt nicht, dass alle Daten lokal bleiben: Anfragen an externe Modelle verlassen weiterhin die eigene Cloud.",
+      "category": "KI",
+      "cta": "Ankündigung lesen ↗",
+      "short": "Chalk Gateway",
+      "source": "chalk.ai · Herstellerankündigung vom 7.10.2026",
+      "takeaway": "Interessant für Teams, die Chalk schon betreiben. Kein kostenloses Universal-Gateway und kein automatischer Datenschutz-Zauber.",
+      "title": "Chalk Model Gateway: Modell-Routing in der eigenen Cloud.",
+      "url": "https://chalk.ai/blog/announcing-chalk-model-gateway"
+    },
+    {
+      "body": "Telara stellt TAP am 7.10. vor: kleine Pakete aus Manifest und Bash-, Python-, JavaScript- oder TypeScript-Code, die in einer WebAssembly-Sandbox laufen. Sie nutzen vorhandene Verbindungen des jeweiligen Coding-Agenten. Das lokal arbeitende tap discover sucht in Agenten-Historien nach wiederkehrenden Abläufen und schlägt Bausteine zur Prüfung vor. MIT-Lizenz, kein Konto oder Registry nötig. Claude Code und Codex sind unterstützt; weitere Clients sind experimentell oder Preview. Das Repo existiert seit dem 29.9., die heutige Nachricht ist die Vorstellung.",
+      "category": "Open Source",
+      "cta": "Projekt ansehen ↗",
+      "short": "TAP Runtime",
+      "source": "github.com/Telara-Labs · Projektangaben; Vorstellung auf DEV vom 7.10.2026",
+      "takeaway": "Das Spannende ist Wiederverwendung, nicht neue Magie. Vorgeschlagenen Code und seine Berechtigungen vor dem Einsatz prüfen.",
+      "title": "TAP Runtime: wiederkehrende Agenten-Arbeit einmal als Code speichern.",
+      "url": "https://github.com/Telara-Labs/TAP-Runtime"
+    },
+    {
+      "body": "Die MIT-lizenzierte Shaders-Bibliothek bietet laut Projekt über 200 GPU-Effekte für React, Vue, Svelte, Solid und JavaScript: Verläufe, Glas, Verzerrungen, Blur und Cursor-Effekte. Ebenen lassen sich verschachteln, mischen und maskieren. Ein visueller Editor exportiert den passenden Komponentenbaum; das npm-Paket heißt shaders. Das Repo ist vom 29.9. und wird heute auf Hacker News diskutiert, kein heute behauptetes Release. Bibliothek und Editor sind kostenlos, zusätzliche Pro-Funktionen separat.",
+      "category": "Informatik / Design",
+      "cta": "Komponenten ansehen ↗",
+      "short": "Shaders",
+      "source": "github.com/shader-effects-inc und shaders.com · Projektangaben · geprüft am 7.10.2026",
+      "takeaway": "Schönes Werkzeug für besondere Oberflächen. WebGPU-Verfügbarkeit, Fallback und Bewegung auf echten Geräten testen, bevor die ganze Website glitzert.",
+      "title": "Shaders: WebGPU-Effekte wie normale UI-Komponenten zusammensetzen.",
+      "url": "https://github.com/shader-effects-inc/shaders"
+    },
+    {
+      "category": "Open Source",
+      "short": "Moyai",
+      "title": "Moyai: LiteLLM öffnet seinen selbst gehosteten Coding-Agenten.",
+      "body": "LiteLLM veröffentlicht Moyai am 7.10.: Aufgaben kommen aus Browser oder Slack, der Agent bearbeitet Code, führt Tests aus und bereitet Pull Requests zur Prüfung vor. Inferenz läuft über LiteLLM mit über 100 unterstützten Providern; Sitzungen behalten Dateien und Verlauf. Wählbar sind unter anderem Claude Agent SDK, Codex und OpenCode. Die Ankündigung nennt Hermes als Standard, das aktuelle README dagegen Claude Agent SDK. Die beworbenen 79 Prozent Kostenersparnis stammen aus dem eigenen Einsatz, kein allgemeiner Vergleichstest. Das Repo existiert seit dem 30.9.",
+      "takeaway": "Spannend für Hintergrundarbeit mit eigener Modellwahl. Selbst gehostet heißt nicht kostenlos: Der dokumentierte Modal-Einsatz startet bezahlte Rechenleistung; Browser schließen stoppt sie nicht. Die lokale UI-Demo simuliert Antworten.",
+      "url": "https://github.com/BerriAI/moyai",
+      "cta": "Projekt und Setup ansehen ↗",
+      "source": "github.com/BerriAI und docs.litellm.ai · Herstellerankündigung vom 7.10.2026; widersprüchliche Standardangaben benannt"
+    }
+  ],
+  "teaser": "4 Catches bisher: Chalk Model Gateway, TAP Runtime, Shaders und Moyai.",
+  "title": "Daily Hob vom Mittwoch, 7.10."
 }
