@@ -1,44 +1,74 @@
 {
- "date": "2026-10-06",
- "title": "Daily Hob vom Dienstag, 6.10.",
- "headline": "Mistral legt nach.\nPolars wird 2.0.",
- "teaser": "3 Catches bisher: Mistral Large 4, Polars 2.0 und openTPU.",
- "intro": "Der Dienstag in Zwischenstand: ein neues offenes Großmodell aus Frankreich, ein großes Release für Datenanalyse in Rust und ein KI-Chip aus dem Open-Source-Baukasten.",
- "sections": [
-  {
-   "category": "KI",
-   "title": "Mistral Large 4: offenes Modell mit 1,05 Billionen Parametern und 1 Million Token Kontext.",
-   "body": "Mistral Large 4 ist laut Doku ein offenes, multimodales Mixture-of-Experts-Modell mit 1,05 Billionen Parametern insgesamt, 49 Milliarden aktiv und einem Vision-Encoder mit 1,6 Milliarden. Kontext sind 1 Million Token. Die Doku führt Function Calling, strukturierte Ausgaben, Agents und Batch auf. Preise stehen bei 0,68 US-Dollar pro Million Input-Token und 2,09 US-Dollar pro Million Output-Token. Daneben zeigt die Seite höhere Zahlen, was sie bedeuten, ist dort nicht erklärt. Der Status ist Public Preview, die Seite ist vom 6.10.",
-   "takeaway": "Neues offenes Schwergewicht aus Europa. Wie gut es wirklich ist, zeigen erst unabhängige Tests.",
-   "url": "https://docs.mistral.ai/models/mistral-large-4-0",
-   "cta": "Originalquelle lesen ↗",
-   "source": "docs.mistral.ai · Angaben des Herstellers · Quelle geprüft am 6.10.2026",
-   "short": "Mistral Large 4"
-  },
-  {
-   "category": "Open Source",
-   "title": "Polars 2.0 ist da: Streaming als Standard, Spill-to-Disk und erstklassiges SQL.",
-   "body": "Polars 2.0 bringt eine erste Version von Out-of-Core-Verarbeitung mit Spill-to-Disk, viele Performance-Verbesserungen, SQL als vollwertigen Weg und einen neuen Map-Datentyp. Außerdem ist Polars strenger bei Datentypen. collect auf einem LazyFrame nutzt jetzt standardmäßig die Streaming-Engine. Bei TPC-H und TPC-DS liegt Polars SQL laut Projekt vor DataFusion und DuckDB, außer in einem Benchmark. Das sind eigene Messungen auf AWS-Maschinen, das Benchmark-Repo ist öffentlich. Die Ankündigung ist vom 6.10.",
-   "takeaway": "Wer Pandas-Skripte an die Grenzen treibt, sollte reinschauen. Beim Upgrade wegen der strengeren Typen mit Anpassungen rechnen.",
-   "url": "https://pola.rs/posts/release-polars-2/",
-   "cta": "Originalquelle lesen ↗",
-   "source": "pola.rs · Eigene Benchmarks · Quelle geprüft am 6.10.2026",
-   "short": "Polars 2.0"
-  },
-  {
-   "category": "Open Source",
-   "short": "openTPU",
-   "title": "openTPU: ein quelloffener KI-Beschleuniger, entworfen von KI-Agenten.",
-   "body": "Das Repo enthält Hardware-Design in SystemVerilog, Befehlssatz, Simulator, Compiler und Host-Software in einem Monorepo. Laut Projekt entwarfen KI-Agenten den Chip, und er läuft mit echten Gewichten von Modellen wie Qwen3, LFM2.5 und Gemma 4 auf einer alten FPGA-Karte (Kintex-7), mit bit-genau denselben Tokens wie der Simulator. Die Geschwindigkeit ist bescheiden: das kleinste Modell mit 230 Millionen Parametern schafft rund 59 bis 86 Token pro Sekunde, 3,8-Milliarden-Modelle nur etwa 4 bis 7. Apache-2.0-Lizenz, Repo seit dem 24.9., auf Hacker News lief es am 6.10. Die Zahlen sind Angaben des Projekts.",
-   "takeaway": "Kein Chip, den man kauft, aber ein lesbares Lernprojekt vom Matmul bis zu den Leitungen.",
-   "url": "https://github.com/FeSens/openTPU",
-   "cta": "Originalquelle lesen ↗",
-   "source": "github.com/FeSens · Angaben des Projekts · Quelle geprüft am 6.10.2026"
-  }
- ],
- "notes": "Zwischenstand vom Dienstag, 6. Oktober 2026 (Berliner Zeit). Auswahl aus Hacker News und Projekt-Seiten.",
- "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-06",
- "hero": "hero.jpg",
- "heroAlt": "Abstrakte Illustration: schwarze Säulen unterschiedlicher Höhe, darüber eine gelbe Scheibe und ein mintfarbener Punkt, verbunden durch eine dünne Linie",
- "heroCaption": "Illustration: Daily Hob"
+  "date": "2026-10-06",
+  "title": "Daily Hob vom Dienstag, 6.10.",
+  "headline": "Große Modelle.\nKleine Entscheidungen.",
+  "teaser": "6 Catches: Mistral Large 4, Decisions API, EmbeddingGemma 2, Polars 2.0, openTPU und Codemode.",
+  "intro": "Der Dienstag liefert ein offenes Großmodell, schnellere Auswahl-Entscheidungen und Suche über mehrere Medien. Dazu: Datenanalyse, ein selbstgebauter KI-Chip und weniger Kleinkram für Coding-Agenten.",
+  "sections": [
+    {
+      "category": "KI",
+      "title": "Mistral Large 4: offenes Modell mit 1,05 Billionen Parametern und 1 Million Token Kontext.",
+      "body": "Mistral Large 4 ist laut Doku ein offenes, multimodales Mixture-of-Experts-Modell mit 1,05 Billionen Parametern insgesamt, 52 Milliarden aktiv und einem Vision-Encoder mit 1,6 Milliarden. Kontext sind 1 Million Token. Die Doku führt Function Calling, strukturierte Ausgaben, Agents und Batch auf. Preise stehen bei 0,68 US-Dollar pro Million Input-Token und 2,09 US-Dollar pro Million Output-Token. Daneben zeigt die Seite höhere Zahlen, was sie bedeuten, ist dort nicht erklärt. Der Status ist Public Preview, die Seite ist vom 6.10.",
+      "takeaway": "Neues offenes Schwergewicht aus Europa. Wie gut es wirklich ist, zeigen erst unabhängige Tests.",
+      "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+      "cta": "Originalquelle lesen ↗",
+      "source": "docs.mistral.ai · Angaben des Herstellers · erneut geprüft am 7.10.2026; aktive Parameter auf 52 Milliarden aktualisiert",
+      "short": "Mistral Large 4"
+    },
+    {
+      "category": "Open Source",
+      "title": "Polars 2.0 ist da: Streaming als Standard, Spill-to-Disk und erstklassiges SQL.",
+      "body": "Polars 2.0 bringt eine erste Version von Out-of-Core-Verarbeitung mit Spill-to-Disk, viele Performance-Verbesserungen, SQL als vollwertigen Weg und einen neuen Map-Datentyp. Außerdem ist Polars strenger bei Datentypen. collect auf einem LazyFrame nutzt jetzt standardmäßig die Streaming-Engine. Bei TPC-H und TPC-DS liegt Polars SQL laut Projekt vor DataFusion und DuckDB, außer in einem Benchmark. Das sind eigene Messungen auf AWS-Maschinen, das Benchmark-Repo ist öffentlich. Die Ankündigung ist vom 6.10.",
+      "takeaway": "Wer Pandas-Skripte an die Grenzen treibt, sollte reinschauen. Beim Upgrade wegen der strengeren Typen mit Anpassungen rechnen.",
+      "url": "https://pola.rs/posts/release-polars-2/",
+      "cta": "Originalquelle lesen ↗",
+      "source": "pola.rs · Eigene Benchmarks · Quelle geprüft am 6.10.2026",
+      "short": "Polars 2.0"
+    },
+    {
+      "category": "Open Source",
+      "short": "openTPU",
+      "title": "openTPU: ein quelloffener KI-Beschleuniger, entworfen von KI-Agenten.",
+      "body": "Das Repo enthält Hardware-Design in SystemVerilog, Befehlssatz, Simulator, Compiler und Host-Software in einem Monorepo. Laut Projekt entwarfen KI-Agenten den Chip, und er läuft mit echten Gewichten von Modellen wie Qwen3, LFM2.5 und Gemma 4 auf einer alten FPGA-Karte (Kintex-7), mit bit-genau denselben Tokens wie der Simulator. Die Geschwindigkeit ist bescheiden: das kleinste Modell mit 230 Millionen Parametern schafft rund 59 bis 86 Token pro Sekunde, 3,8-Milliarden-Modelle nur etwa 4 bis 7. Apache-2.0-Lizenz, Repo seit dem 24.9., auf Hacker News lief es am 6.10. Die Zahlen sind Angaben des Projekts.",
+      "takeaway": "Kein Chip, den man kauft, aber ein lesbares Lernprojekt vom Matmul bis zu den Leitungen.",
+      "url": "https://github.com/FeSens/openTPU",
+      "cta": "Originalquelle lesen ↗",
+      "source": "github.com/FeSens · Angaben des Projekts · Quelle geprüft am 6.10.2026"
+    },
+    {
+      "category": "KI",
+      "short": "Decisions API",
+      "title": "OpenAI Decisions API: Auswahl statt langer Antwort.",
+      "body": "Am 6.10. startete die Decisions API in Public Beta. GPT-6 Luna verarbeitet Text und Bilder und liefert Wahrscheinlichkeiten, eine Auswahl aus vorgegebenen Optionen oder einen Score. OpenAI nennt etwa zehnmal höhere Geschwindigkeit als bei der Responses API, nicht unabhängig gemessen. Der Basistarif liegt bei 0,10 US-Dollar pro Million Input-Token, ohne Output-Gebühr; regionale Aufschläge und lange Kontexte können mehr kosten. Für freie Texte und eigene JSON-Strukturen bleibt die Responses API der passende Weg.",
+      "takeaway": "Interessant fürs Routing und Klassifizieren. Eine angegebene Konfidenz ist noch keine Garantie für eine richtige Entscheidung.",
+      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "cta": "API-Doku lesen ↗",
+      "source": "developers.openai.com · Doku und Changelog vom 6.10. · Herstellerangaben"
+    },
+    {
+      "category": "Open Source",
+      "short": "EmbeddingGemma 2",
+      "title": "EmbeddingGemma 2: Text, Bild, Audio und Video gemeinsam durchsuchen.",
+      "body": "Google stellte am 6.10. EmbeddingGemma 2 vor: ein Apache-2.0-Modell mit insgesamt 740 Millionen Parametern, das verschiedene Medien in denselben Vektorraum übersetzt. Für reinen Text braucht es laut Google nur den 270-Millionen-Parameter-Teil. Ein 8K-Kontextfenster und auf 128 Dimensionen kürzbare Vektoren sollen lokale Suche ermöglichen. Genannte Qualitäts- und Speicherwerte stammen von Google, nicht von unabhängigen Tests. Gewichte gibt es auf Hugging Face und Kaggle.",
+      "takeaway": "Ein kleineres Modell mit einem klaren Job: Dateien finden, nicht Antworten erfinden. Besonders spannend für lokale Medien- und Codesuche.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "cta": "Vorstellung lesen ↗",
+      "source": "blog.google · Herstellerankündigung vom 6.10.2026"
+    },
+    {
+      "category": "Informatik / Design",
+      "short": "Codemode",
+      "title": "Codemode in Pi: Werkzeug-Aufrufe als kleinen Ablauf programmieren.",
+      "body": "Armin Ronacher erklärt am 6.10. den Codemode in Pi 1.0. Statt jede Werkzeug-Antwort einzeln an das Sprachmodell zu reichen, kann JavaScript Aufrufe verbinden, parallelisieren und Ergebnisse vorfiltern. Pi nutzt dafür QuickJS in einer WASM-Sandbox ohne direkten Netzwerk- oder Dateisystemzugriff. Der Beitrag zeigt Beispiele und ordnet die Grenzen gegenüber Bash und MCP ein. Es ist eine technische Erklärung, kein unabhängiger Performance-Test.",
+      "takeaway": "Gute Lektüre, wenn ein Agent mehr Zeit mit Kleinkram und riesigen Antworten verbringt als mit dem eigentlichen Problem.",
+      "url": "https://lucumr.pocoo.org/2026/10/6/codemode/",
+      "cta": "Beitrag lesen ↗",
+      "source": "lucumr.pocoo.org · Entwicklerbeitrag vom 6.10.2026"
+    }
+  ],
+  "notes": "Ausgabe für Dienstag, 6. Oktober 2026 (Berliner Zeit), abgeschlossen am 7.10. Quellen erneut geprüft; Hersteller- und Projektwerte sind keine eigenen Benchmarks. Die Mistral-Doku nennt inzwischen 52 statt zuvor 49 Milliarden aktive Parameter.",
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-06",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: schwarze Säulen unterschiedlicher Höhe, darüber eine gelbe Scheibe und ein mintfarbener Punkt, verbunden durch eine dünne Linie",
+  "heroCaption": "Illustration: Daily Hob"
 }
