@@ -1,12 +1,12 @@
 {
   "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-07",
   "date": "2026-10-07",
-  "headline": "Weniger Agenten-Gefummel.\nMehr wiederverwendbarer Code.",
+  "headline": "Interaktive Antworten.\nKleine Modelle.\nWeniger Lock-in.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: ein schwarzer Kreis verbindet ein schwarzes Dreieck, eine gelbe Scheibe und ein mintfarbenes Rechteck mit dünnen Linien",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
-  "intro": "Der Mittwoch startet mit Infrastruktur statt Modell-Wettrennen: KI-Anfragen passend verteilen, wiederkehrende Arbeit in Code packen und WebGPU-Effekte als Komponenten bauen.",
-  "notes": "Zwischenstand vom Mittwoch, 7. Oktober 2026 (Berliner Zeit). Quellen: Hersteller- und Projektseiten, DEV und Hacker News. Nicht selbst gebenchmarkt. Moyai im Nachmittags-Batch ergänzt.",
+  "intro": "Der Mittwoch hatte zwei Seiten: OpenAI macht aus Chat-Antworten Oberflächen, und drumherum wächst Infrastruktur zum Selbstbauen und Selbsthosten, von Modell-Routing über Agenten-Code bis zu Durable Actors.",
+  "notes": "Rückblick auf Mittwoch, 7. Oktober 2026 (Berliner Zeit). Quellen: Hersteller- und Projektseiten, Hacker News. Alle Leistungsangaben stammen von den Anbietern, nichts selbst gebenchmarkt. Nicht aufgenommen: Figma-Agent (am 6.10. allgemein verfügbar, also Vortag).",
   "sections": [
     {
       "body": "Chalk stellt am 7.10. ein OpenAI-kompatibles Gateway vor, das in einer vorhandenen Chalk-Umgebung läuft. Es verteilt Anfragen auf Anbieter oder selbst gehostete Modelle, mit Fallbacks, Budgets, Rate Limits und Tracing. Neue Routing-Regeln lassen sich im Shadow Mode beobachten, bevor sie echten Traffic verändern. Eigene Provider-Schlüssel bleiben in der Umgebung. Das heißt nicht, dass alle Daten lokal bleiben: Anfragen an externe Modelle verlassen weiterhin die eigene Cloud.",
@@ -47,8 +47,48 @@
       "url": "https://github.com/BerriAI/moyai",
       "cta": "Projekt und Setup ansehen ↗",
       "source": "github.com/BerriAI und docs.litellm.ai · Herstellerankündigung vom 7.10.2026; widersprüchliche Standardangaben benannt"
+    },
+    {
+      "category": "KI",
+      "short": "GPT-6 Intelligent UI",
+      "title": "GPT-6 in ChatGPT: Antworten als interaktive Oberfläche.",
+      "body": "OpenAI bringt am 7.10. ein neues GPT-6-Modell für alle ChatGPT-Nutzer. Neu ist Intelligent UI: Das Modell baut je nach Frage Diagramme, Buttons, Formulare, Karten oder kleine Werkzeuge direkt in die Antwort, etwa einen Sparrechner oder einen Zeitplan für den Sonntagsbraten. Dafür gibt es eine Bibliothek aus Komponenten und einen Compiler, der die Oberfläche schon während der Generierung aufbaut. Außerdem kann ChatGPT mit der Antwort beginnen, während es noch denkt. Laut OpenAI läuft der Rollout heute für Plus, Pro, Business und Enterprise, ab dem 8.10. für Free und Go. Plus und höher nutzen GPT-6 Sol, Free und Go GPT-6 Luna.",
+      "takeaway": "Der Chat wird zur UI-Schicht. Spannend ist weniger das Modell als die Frage, wie gut es Gestaltung entscheidet. OpenAI sagt selbst, daran gebe es noch Arbeit. Benchmarks oder Preise nennt die Seite für diesen Rollout nicht; unabhängig geprüft ist das bisher nicht.",
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "cta": "Ankündigung lesen ↗",
+      "source": "openai.com · Herstellerankündigung vom 7.10.2026, Berichte u. a. von 9to5Mac und MacRumors; Leistungsaussagen nicht unabhängig geprüft"
+    },
+    {
+      "category": "KI",
+      "short": "Liquid d1",
+      "title": "Liquid AI d1: kleine Entscheidungsmodelle ohne Token-Generierung.",
+      "body": "Liquid AI veröffentlicht d1-3B und d1-omni-600M als offene Gewichte auf Hugging Face. Die Modelle erzeugen keine Texte Token für Token, sondern geben ihre Antwort in einem einzigen Durchlauf aus. Laut Hersteller antwortet d1-3B auf einer RTX 4090 in 8 Millisekunden und auf einem Jetson Orin Nano in 50 Millisekunden, und erreicht im Decision Index v0.2.1 48,57 Punkte, vergleichbar mit einem 12-mal größeren Decider-Modell. d1-omni-600M nimmt Text mit Bild oder Audio und ist ausdrücklich ein erster experimenteller Stand mit 15,95 Punkten.",
+      "takeaway": "Passt zu den Decision-Modellen der letzten Tage: schnelle Ja/Nein-, Auswahl- und Routing-Entscheidungen lokal statt per Chat-Modell. Alle Zahlen stammen vom Hersteller; der Index ist ein Maß, das in diesem Umfeld noch jung ist.",
+      "url": "https://www.liquid.ai/blog/d1-open",
+      "cta": "Blogpost mit Benchmarks ↗",
+      "source": "liquid.ai · Herstellerangaben vom 7.10.2026"
+    },
+    {
+      "category": "Informatik",
+      "short": "Durable Actors",
+      "title": "Durable Actors: Cloudflare-Durable-Objects zum Selbsthosten.",
+      "body": "Terse stellt Durable Actors unter MIT-Lizenz vor, am 7.10. auch als Show HN. Ein Actor ist eine Klasse mit dauerhaftem Zustand und serialisierter Ausführung: Gleichzeitige Aufrufe ändern den Zustand nacheinander, Abstürze und Neustarts überlebt er. Es gibt SDKs für TypeScript und Python, lokal startet man mit npx durable-actors dev und kann später auf Google Cloud selbst hosten. Als Beispiele nennt das README Chat, kollaborative Dokumente und Agenten-Schwärme. Das Repo existiert seit Ende August, die Vorstellung kam jetzt.",
+      "takeaway": "Interessant für alle, die Echtzeit-Apps oder Agenten mit Zustand bauen, aber nicht an Cloudflare hängen wollen. Die Versprechen \"keine Speichergrenzen\" und eingebaute Observability sind Projektangaben. Mit gut 140 Sternen ist es noch ein junges Projekt.",
+      "url": "https://github.com/TerseAI/durable-actors",
+      "cta": "Projekt ansehen ↗",
+      "source": "github.com/TerseAI · Projekt-README, 7.10.2026 auf Hacker News"
+    },
+    {
+      "category": "Open Source",
+      "short": "Treg",
+      "title": "Treg: ein Token für tausende Agenten-Werkzeuge, pro Aufruf bezahlt.",
+      "body": "Treg vom Superdesign-Team ist \"OpenRouter für Agenten-Tools\": Ein Agent bekommt eine Basis-URL und ein Token und erreicht damit einen Katalog aus tausenden Endpunkten, etwa für SEO-Daten, Anreicherung von Firmen- und Personendaten, Scraping, Bild- und Videogenerierung. Abgerechnet wird pro Aufruf ab einem Cent, ohne Anmeldung bei jedem Anbieter; neue Konten bekommen einmalig 1 Dollar Guthaben. Eigene Keys und Skills lassen sich im Team teilen, ohne dass der Schlüssel den Server verlässt. Der Code ist öffentlich und selbst hostbar. Das Repo gibt es seit Juli, auf der Hacker-News-Startseite stand es am 7.10.",
+      "takeaway": "Praktisch für Prototypen, weil man keine zehn Abos braucht. Gleichzeitig läuft jeder Aufruf über einen Dritten, der Credentials und Daten sieht. Die Lizenz ist als \"Other\" eingetragen, vor produktiver Nutzung also lesen.",
+      "url": "https://github.com/superdesigndev/treg",
+      "cta": "Repo und Preise ansehen ↗",
+      "source": "github.com/superdesigndev · Projekt-README, 7.10.2026 auf Hacker News"
     }
   ],
-  "teaser": "4 Catches bisher: Chalk Model Gateway, TAP Runtime, Shaders und Moyai.",
+  "teaser": "8 Catches: GPT-6 mit Intelligent UI, Liquid d1, Chalk Model Gateway, TAP Runtime, Shaders, Moyai, Durable Actors und Treg.",
   "title": "Daily Hob vom Mittwoch, 7.10."
 }
