@@ -1,0 +1,54 @@
+{
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-08",
+  "date": "2026-10-08",
+  "title": "Daily Hob vom Donnerstag, 8.10.",
+  "headline": "Agenten überall.\nPräzision im Detail.",
+  "teaser": "4 Catches: Gemini-Agent von Google Cloud, JetBrains Mellum2.1, Nx 23.3 und Docker Agent.",
+  "intro": "Der Donnerstag brachte keinen großen Modellknall, dafür viel Werkzeug: Google schickt einen Arbeits-Agenten ins Unternehmen, JetBrains trainiert ein kleines Open-Source-Modell auf Coding, Nx rechnet CI genauer und Docker macht Agenten zu YAML.",
+  "notes": "Rückblick auf Donnerstag, 8. Oktober 2026 (Berliner Zeit). Quellen: Hersteller- und Projektseiten, ein Fachbericht zu Docker Agent. Alle Leistungsangaben stammen von den Anbietern, nichts selbst gebenchmarkt.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: ein kleines Quadrat, ein großer Kreis und drei Balken, verbunden durch dünne Linien, mit einer gelben und einer mintfarbenen Scheibe",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "KI",
+      "short": "Gemini Agent",
+      "title": "Gemini-Agent: Google Cloud will Arbeit im Prompt-Fenster starten.",
+      "body": "Auf der Konferenz Gemini at Work 2026 stellt Google Cloud am 8.10. den Gemini-Agenten vor, einen universellen Agenten für die Arbeit im Unternehmen. Er kennt laut Google den Geschäftskontext einer Organisation, plant Aufgaben, nutzt Skills und Werkzeuge, wählt das passende Modell und liefert fertige Ergebnisse in Dokumenten, Postfach und Entwicklungsumgebungen. Eingebaut sind Kostenkontrollen sowie Sicherheit, Administration und Governance für Firmenkunden.",
+      "takeaway": "Der Trend heißt: nicht mehr Chat öffnen, sondern direkt beauftragen. Ob das im Alltag hält, zeigen erst echte Einsätze. Details zu Preisen, Verfügbarkeit und Regionen stehen in der Kurzmeldung nicht, die Aussagen sind Herstellerangaben.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/",
+      "cta": "Ankündigung lesen ↗",
+      "source": "blog.google · Herstellerankündigung vom 8.10.2026; nicht unabhängig geprüft"
+    },
+    {
+      "category": "Open Source",
+      "short": "Mellum2.1",
+      "title": "Mellum2.1: JetBrains trainiert sein kleines Coding-Modell nach.",
+      "body": "JetBrains veröffentlicht Mellum2.1 unter Apache 2.0 auf Hugging Face. Es ist ein Mixture-of-Experts-Modell mit 12 Milliarden Parametern, von denen 2,5 Milliarden pro Token aktiv sind, und 131.072 Token Kontext. Die Architektur bleibt wie bei Mellum2 vom Juni, neu ist das Nachtraining mit Reinforcement Learning in Millionen Sandbox-Läufen. Auf LiveCodeBench v6 nennt der Bericht 82,0 Punkte gegenüber 75,4 bei Qwen3.5-9B. Beim Terminal-Bench 2.1 liegt es mit 17,4 unter Qwen3.5-9B (21,7).",
+      "takeaway": "Interessant als schneller, selbst gehosteter Sub-Agent, wenn Code und Daten bei dir bleiben sollen. Bei schweren Agenten-Aufgaben liegt es teils hinter dem Vergleichsmodell. GGUF-Builds und der MTP-Kopf für vLLM sind laut JetBrains erst angekündigt.",
+      "url": "https://blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents/",
+      "cta": "Blogpost ansehen ↗",
+      "source": "blog.jetbrains.com und marktechpost.com · Herstellerangaben vom 8.10.2026"
+    },
+    {
+      "category": "Informatik",
+      "short": "Nx 23.3",
+      "title": "Nx 23.3: CI läuft nur noch, was eine Änderung wirklich berührt.",
+      "body": "Nx 23.3 erscheint am 8.10. mit Task-basiertem Affected. Bisher wählte nx affected ganze Projekte aus, jetzt entscheidet, ob die Änderung das erreicht, was ein einzelner Task liest. Im Nx-Repo wählte eine Änderung an einer Spec-Datei früher 45 Test-Tasks aus, jetzt läuft nur noch der Test-Task des eigenen Projekts. Dazu kommen schnellere Graph-Erzeugung und eine Ausgabe, die für Agenten besser lesbar ist. Für den 22.10. kündigt das Team ein Produkt-Event zu CI für die Flut an Agenten-PRs an.",
+      "takeaway": "Lohnt sich vor allem in größeren Monorepos mit vielen Projekten. Die Ersparnis hängt davon ab, wie eng die Inputs deiner Targets definiert sind, die 45-Task-Zahl ist ein Beispiel aus dem eigenen Repo des Teams.",
+      "url": "https://nx.dev/blog/nx-23-3-release",
+      "cta": "Release-Notes lesen ↗",
+      "source": "nx.dev · Projektankündigung vom 8.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "short": "Docker Agent",
+      "title": "Docker Agent: KI-Agenten als YAML-Datei und per OCI-Registry verteilt.",
+      "body": "Das Docker-Plugin docker-agent definiert Agenten in einer agent.yaml und startet sie mit docker agent run. Es unterstützt unter anderem OpenAI, Anthropic, Gemini, Bedrock, Mistral, xAI und das lokale Docker Model Runner, bindet Werkzeuge über MCP an und kann Agenten aus jeder OCI-Registry ziehen. Dazu gibt es RAG mit BM25, Embeddings und Reranking. Wichtig zur Einordnung: Das Repo existiert seit September 2025, die aktuelle Version 1.149.0 erschien am 7.10.; am 8.10. wurde breit darüber berichtet. Lizenz ist Apache 2.0.",
+      "takeaway": "Praktisch, wenn dein Team schon in Docker-Workflows lebt und Agenten wie Images versionieren und teilen will. Das ist kein neues Projekt vom Donnerstag, sondern ein älteres, das gerade Aufmerksamkeit bekommt. Die Funktionsliste stammt aus README und Fachbericht, nicht aus eigenem Test.",
+      "url": "https://github.com/docker/docker-agent",
+      "cta": "Repo ansehen ↗",
+      "source": "github.com/docker und aiweekly.co · README, Release 7.10.2026, Bericht vom 8.10.2026"
+    }
+  ]
+}
