@@ -1,0 +1,44 @@
+{
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-09",
+  "date": "2026-10-09",
+  "title": "Daily Hob vom Freitag, 9.10.",
+  "headline": "Kleiner machen.\nLokal prüfen.",
+  "teaser": "3 Catches: Saluki 27B als 2-Bit-Agentenmodell, NVIDIA Boro für Kernel-Patches und Semaphore 1.6 mit MCP-Server.",
+  "intro": "Der Freitag war ein Tag für Werkzeug im Kleinen: ein 27B-Modell, das in 8 GB passt, ein lokaler KI-Helfer für Linux-Kernel-Patches und ein CI-System, das MCP von Haus aus mitbringt.",
+  "notes": "Rückblick auf Freitag, 9. Oktober 2026 (Berliner Zeit). Quellen: Projekt- und Herstellerseiten, Fachberichte. Alle Leistungsangaben stammen von den Anbietern, nichts selbst gebenchmarkt. Bewusst nicht aufgenommen: Gemini 4 Argon (von Google bereits am 30.9. angekündigt, nur für ausgewählte Verteidiger) und Meta Astryx (Repo seit Januar).",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: ein großes Quadrat schrumpft über ein Raster zu einem Punktfeld, daneben Dreieck, Balken, eine gelbe und eine mintfarbene Scheibe",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Open Source",
+      "short": "Saluki 27B",
+      "title": "Saluki 27B: ein 27B-Agentenmodell in 7,89 GB.",
+      "body": "Underdog von Conway Research veröffentlicht Saluki 27B unter Apache 2.0, eine 2-Bit-GGUF-Variante von Qwen3.8-27B. Statt 54 GB im BF16-Original braucht die Datei 7,89 GB und läuft in normalem llama.cpp mit voller GPU-Auslagerung. Die Kompression wurde auf Tool-Calling getrimmt: Im eigenen Test mit 120 Aufgaben aus BFCL v4 erreicht Saluki 88 Punkte, das volle Modell 84. Bei Wettbewerbsmathe fällt es dagegen von 96,7 auf 79,2 bei AIME 2025.",
+      "takeaway": "Spannend für lokale Agenten auf einer Gamer-Karte. Alle Zahlen sind Herstellerangaben, das Rezept des letzten Kompressionsschritts ist nicht veröffentlicht, und für Rechnen und mehrstufiges Denken taugt es deutlich weniger.",
+      "url": "https://www.marktechpost.com/2026/10/09/meet-the-underdog-saluki-27b-a-2-bit-qwen3-8-27b-that-beats-the-original-at-tool-calling/",
+      "cta": "Bericht mit Benchmarks lesen ↗",
+      "source": "marktechpost.com · Bericht vom 9.10.2026 zu Herstellerangaben"
+    },
+    {
+      "category": "Informatik",
+      "short": "NVIDIA Boro",
+      "title": "Boro: NVIDIA baut einen lokalen KI-Helfer für Linux-Kernel-Patches.",
+      "body": "NVIDIA hat Boro auf der Linux Plumbers Conference in Prag vorgestellt, am 9.10. berichtete Phoronix darüber. Das Rust-CLI validiert Patches mit lokaler KI, etwa beim Backporting auf ältere Kernel, beim Bauen, Booten und Testen. Als Backends dienen Claude, OpenCode, Codex oder ein OpenAI-kompatibler Server. Lizenz ist Apache 2.0, das Repo NVIDIA/boro existiert seit Juni und hat bisher wenig Sterne. Das Projekt ist von Googles Sashiko inspiriert.",
+      "takeaway": "Interessant für Kernel-Entwickler, die Review und Tests automatisieren wollen, ohne Code in die Cloud zu schicken. Es ist ein junges Projekt, und die Vorstellung kam vom Entwickler selbst.",
+      "url": "https://github.com/NVIDIA/boro",
+      "cta": "Repo ansehen ↗",
+      "source": "github.com/NVIDIA und phoronix.com · Bericht vom 9.10.2026, Repo seit Juni"
+    },
+    {
+      "category": "Open Source",
+      "short": "Semaphore 1.6",
+      "title": "Semaphore 1.6: MCP-Server und sem-ai in der Open-Source-CI.",
+      "body": "Semaphore Open Source 1.6 erscheint am 9.10., genau ein Jahr nach 1.5, mit rund 494 Pull Requests. Der MCP-Server steckt jetzt in Community und Enterprise Edition, sem-ai funktioniert ohne zusätzliche Konfiguration mit Service-Accounts und Nutzerkonten. Dazu kommen Teilwiederholungen von Jobs.",
+      "takeaway": "Praktisch, wenn du CI selbst hostest und Agenten Pipelines lesen und anstoßen lassen willst. Vorher Rechte und Tokens eng setzen, die Angaben stammen aus dem Herstellerblog.",
+      "url": "https://semaphore.io/blog/semaphore-open-source-1.6-mcp-server-sem-ai-out-of-the-box-and-partial-job-reruns",
+      "cta": "Release-Blog lesen ↗",
+      "source": "semaphore.io · Herstellerankündigung vom 9.10.2026"
+    }
+  ]
+}
