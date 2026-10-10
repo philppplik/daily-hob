@@ -10,6 +10,7 @@ AUTHOR = {'@type':'Person','name':'Philipp Paulik','url':'https://philipp-paulik
 PUBLISHER = {'@type':'Organization','name':'Daily Hob','url':BASE+'/','logo':{'@type':'ImageObject','url':BASE+'/assets/brand/logo.png'}}
 LD = lambda o: '<script type="application/ld+json">'+json.dumps(o,ensure_ascii=False).replace('</','<\\/')+'</script>'
 ASSET = lambda d,f: f'{BASE}/assets/{d}/{f}'
+DTOK='b08e34f0295eb0c8'
 OUT.mkdir(exist_ok=True)
 for encoded in (ROOT/'assets').rglob('*.b64'):
     encoded.with_suffix('').write_bytes(base64.b64decode(encoded.read_text()))
@@ -73,7 +74,16 @@ for slug,title,desc in (('impressum','Impressum','Anbieterkennzeichnung nach § 
     (OUT/f'{slug}.html').write_text(wrap(title,desc,f'<a class="back" href="./">← Alle Ausgaben</a><article class="legal-page">{frag}</article>','',slug))
 NLP='<a class="back" href="./">← Alle Ausgaben</a><section class="detail-intro"><p class="eyebrow">Newsletter</p><h1 id="nl-status-title">Daily Hob im Postfach</h1><p class="lead" id="nl-status-text">Trag dich unten ein. Du bekommst zuerst eine Bestätigungsmail.</p></section>'
 (OUT/'newsletter.html').write_text(wrap('Newsletter','Hob Friday Signal und Hob Monday Rewind: das Daily Hob zweimal pro Woche per E-Mail.',NLP,'','newsletter'))
-urls=[(BASE+'/',max(p['date'] for p in posts))]+[(f'{BASE}/briefings/{p["date"]}',p.get('modified',p['date'])) for p in posts]+[(f'{BASE}/newsletter',None),(f'{BASE}/impressum',None),(f'{BASE}/datenschutz',None)]
+
+DOSSIER_PDF=f'/assets/dossier/{DTOK}/daily-hob-dossier-entscheider-welle.pdf'
+def nofooter_nl(h):
+    a=h.index('</main>')+7
+    return h[:a]+h[h.index('<footer>'):]
+DP='<a class="back" href="./">← Alle Ausgaben</a><section class="detail-intro"><p class="eyebrow">Gratis-Dossier</p><h1 id="nl-status-title">Die Entscheider-Welle.</h1><p class="lead" id="nl-status-text">Kleine Modelle, die nicht erzählen, sondern wählen: 9 Seiten Daily-Hob-Dossier über Decision Models (Cloudflare Clef, AWS Strands Decider 2B, OpenAI Decisions API, Liquid d1) als PDF. Trag deine E-Mail ein, bestätige den Link in der Mail, dann bekommst du den Download.</p></section><section class="nl"><div><p class="eyebrow">Kostenlos</p><h2>PDF nach Bestätigung.</h2><p>Du bekommst zuerst eine Bestätigungsmail. Nach dem Klick auf den Link zeigen wir dir den Download und nimmst du am Daily-Hob-Newsletter (Hob Friday Signal, Hob Monday Rewind) teil. Abmelden geht jederzeit mit einem Klick.</p></div><form class="nl-form" method="post" data-source="dossier" novalidate><label class="nl-label">E-Mail-Adresse<input type="email" name="email" autocomplete="email" inputmode="email" placeholder="du@beispiel.de" required></label><div class="nl-hp" aria-hidden="true"><label>Nicht ausfüllen<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div><label class="nl-check"><input type="checkbox" name="consent" required><span>Ja, schick mir das Dossier-PDF und danach das Hob Friday Signal und den Hob Monday Rewind per E-Mail. Du bekommst zuerst eine Bestätigungsmail. Abmelden geht jederzeit mit einem Klick. Mehr dazu in der <a href="datenschutz#newsletter">Datenschutzerklärung</a>.</span></label><button class="nl-btn" type="submit">Dossier anfordern</button><p class="nl-msg" role="status" aria-live="polite"></p></form></section>'
+(OUT/'dossier.html').write_text(nofooter_nl(wrap('Gratis-Dossier: Die Entscheider-Welle','Daily-Hob-Dossier über Decision Models als kostenloses PDF: Cloudflare Clef, AWS Strands Decider 2B, OpenAI Decisions API und Liquid d1.',DP,'','dossier')))
+DT=f'<a class="back" href="./">← Alle Ausgaben</a><section class="detail-intro"><p class="eyebrow">Gratis-Dossier</p><h1>Du bist dabei.</h1><p class="lead">Danke, deine Anmeldung ist bestätigt. Hier ist dein Dossier: <a href="{DOSSIER_PDF}" download>Die Entscheider-Welle als PDF (9 Seiten)</a>. Alle Leistungsangaben darin sind Herstellerangaben.</p></section>'
+(OUT/'dossier-danke.html').write_text(nofooter_nl(wrap('Dein Dossier','Download des Daily-Hob-Dossiers.',DT,'','dossier-danke')).replace('<meta name="description"','<meta name="robots" content="noindex,nofollow"><meta name="description"',1))
+urls=[(BASE+'/',max(p['date'] for p in posts))]+[(f'{BASE}/briefings/{p["date"]}',p.get('modified',p['date'])) for p in posts]+[(f'{BASE}/newsletter',None),(f'{BASE}/dossier',None),(f'{BASE}/impressum',None),(f'{BASE}/datenschutz',None)]
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{E(u)}</loc>'+(f'<lastmod>{m}</lastmod>' if m else '')+'</url>' for u,m in urls)+'</urlset>\n')
 (OUT/'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n')
 (OUT/'CNAME').write_text('hob.philipp-paulik.de\n') if False else None
