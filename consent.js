@@ -97,7 +97,7 @@ msg.className='nl-msg';
 if(!em.value||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim())){msg.textContent='Bitte gib eine gültige E-Mail-Adresse ein.';msg.classList.add('err');em.focus();return}
 if(!c.checked){msg.textContent='Bitte bestätige zuerst die Einwilligung.';msg.classList.add('err');return}
 btn.disabled=true;msg.textContent='Einen Moment …';
-fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em.value.trim(),consent:true,website:f.elements.website.value})})
+fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em.value.trim(),consent:true,website:f.elements.website.value,source:f.dataset.source||''})})
 .then(function(r){return r.json().then(function(j){return{r:r,j:j}})})
 .then(function(o){if(o.r.ok&&o.j.ok){f.reset();msg.textContent='Fast geschafft: Wir haben dir eine Bestätigungsmail geschickt. Klick auf den Link darin, dann bist du dabei. Schau ggf. auch im Spam-Ordner nach.';msg.classList.add('ok')}else if(o.r.status===429){msg.textContent='Zu viele Versuche. Bitte probier es später noch einmal.';msg.classList.add('err')}else{msg.textContent='Das hat leider nicht geklappt. Bitte prüf die Adresse und versuch es noch einmal.';msg.classList.add('err')}})
 .catch(function(){msg.textContent='Keine Verbindung. Bitte versuch es später noch einmal.';msg.classList.add('err')})
