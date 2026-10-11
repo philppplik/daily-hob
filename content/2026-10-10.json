@@ -1,0 +1,64 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-10",
+ "date": "2026-10-10",
+ "title": "Daily Hob vom Samstag, 10.10.",
+ "headline": "Hinter die Kulisse.\nLizenz im Wandel.",
+ "teaser": "5 Catches: REA lässt Coding-Agenten Programme zerlegen, Talorys bringt einen persönlichen Agenten in den eigenen Cloudflare-Account, DuckDB 2.0 lädt asynchron, Bitwarden splittet die Lizenz und Telegram Desktop schließt eine Link-Lücke.",
+ "intro": "Der Samstag drehte sich um Dinge, die man aufmacht: ein MCP-Werkzeug, das Software von innen erklärt, ein Agent im eigenen Konto, eine Datenbank, die schneller aus S3 liest, und zwei Meldungen, bei denen Lizenz und Sicherheit auf dem Tisch liegen.",
+ "notes": "Rückblick auf Samstag, 10. Oktober 2026 (Berliner Zeit). Quellen: Projekt- und Herstellerseiten, Forenbeitrag, Sicherheits-Writeup. Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts selbst gebenchmarkt. Ältere Quellen sind bei den Catches mit Datum benannt, sie wurden am Samstag auf Hacker News diskutiert. Bewusst nicht aufgenommen: Eurydice (LWN-Artikel von Januar) und die Reflection-AI-Meldung (nur hinter Bezahlschranke belegt).",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein geschlossener Würfel mit Lupe, daneben ein aufgeklappter Karton mit abgehobenen Ebenen und ein Schlüssel aus Kreisen, dazu eine gelbe und eine mintfarbene Scheibe",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "Open Source",
+   "short": "REA",
+   "title": "REA: Coding-Agenten zerlegen Programme für dich.",
+   "body": "Der MIT-lizenzierte MCP-Server REA verbindet Agenten wie Claude Code, Codex, Cursor oder Gemini CLI mit Werkzeugen für native Binärdateien, JavaScript- und Electron-Apps, .NET-Assemblies und Webseiten. Der Agent soll ein Feature ohne Quellcode untersuchen, erklären, die Belege zeigen und eine eigene Version bauen. Die Analyse läuft lokal, für native Programme kann eine vorhandene Hopper- oder Ghidra-Installation genutzt werden. Setup mit npx rea-agents setup, mit Plan zur Freigabe und Backups der bestehenden Konfiguration. Das Repo gibt es seit April (über 16.000 Sterne), am Samstag lag die Projektseite mit rund 720 Punkten oben auf Hacker News.",
+   "takeaway": "Spannend zum Lernen und für Sicherheits- oder Kompatibilitätsfragen. Prüf vorher, was dein Agent mit fremder Software darf: Lizenzen und Nutzungsbedingungen des analysierten Programms gelten weiter.",
+   "url": "https://github.com/morluto/rea",
+   "cta": "Repo und Setup ansehen ↗",
+   "source": "github.com/morluto/rea · Projektseite rea.tools · Repo seit April, Hacker-News-Welle am 10.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Talorys",
+   "title": "Talorys: dein persönlicher KI-Agent im eigenen Cloudflare-Account.",
+   "body": "Talorys ist ein quelloffener (MIT) Einzelnutzer-Assistent, der komplett in deinem Cloudflare-Konto läuft: Chat mit Streaming, Gedächtnis, das du ansehen und löschen kannst, Aufgaben, Notizen, Projekte sowie Erinnerungen und Routinen per Durable-Object-Alarm. Installiert wird mit npx create-talorys@latest. Es gibt weder Registrierung noch Telemetrie, und ohne Workers AI funktionieren Aufgaben, Notizen und Erinnerungen weiter. Das Repo wurde am 10.10. angelegt und stand zum Zeitpunkt der Recherche bei knapp 500 Sternen.",
+   "takeaway": "Ein guter Weg, einen eigenen Agenten ohne fremden Server auszuprobieren. Brandneu, ein Tag alt: Quellcode vor dem Einrichten ansehen, vor allem weil er Zugriff auf dein Cloudflare-Konto braucht.",
+   "url": "https://github.com/rociiu/talorys",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com/rociiu/talorys · README und Repo-Daten"
+  },
+  {
+   "category": "Informatik",
+   "short": "DuckDB 2.0",
+   "title": "DuckDB 2.0 Alpha: asynchrones I/O macht S3-Abfragen schneller.",
+   "body": "MotherDuck hat die Alpha von DuckDB 2.0 auf dem eigenen Rechner und gegen S3 getestet. Beim wichtigsten Punkt, asynchronem I/O, laden eigene Threads Parquet-Zeilengruppen vor, während die Worker nur dekodieren. Dieselbe Abfrage über eine 2,2-GB-Parquet-Datei mit 228 Millionen Zeilen brauchte laut Autor mit DuckDB 1.5.5 18,8 Sekunden, mit der 2.0-Alpha 7,7 Sekunden. Gemessen auf einem M5-Laptop über Heim-Internet; der Autor bittet ausdrücklich, selbst nachzumessen. Der Beitrag lag am Samstag auf Hacker News oben (rund 190 Punkte).",
+   "takeaway": "Sinnvoll für alle, die viel Parquet aus der Cloud lesen. Es ist eine Alpha und eine einzelne Messung, die Datenform und Modellierung entscheiden mit.",
+   "url": "https://motherduck.com/blog/why-duckdb-20-is-faster/",
+   "cta": "Beitrag mit Messungen lesen ↗",
+   "source": "motherduck.com · Autorenmessung, Hacker-News-Diskussion am 10.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Bitwarden",
+   "title": "Bitwarden: Store-Apps künftig mit kommerzieller Lizenz.",
+   "body": "Ein Bitwarden-Mitarbeiter schrieb am 9.10. im Community-Forum: Ab dem nächsten Release sind die in den App-Stores veröffentlichten Apps die kommerziell lizenzierten Builds. Die GPLv3-Version soll weiter auf GitHub gepflegt werden, alle aktuellen Funktionen gibt es in beiden. Neue Komponenten können künftig nur im kommerziellen Build erscheinen, jeweils im Einzelfall entschieden. Bitwarden betont, es werde nicht Closed Source, Self-Hosting bleibe unverändert, der Free-Plan bleibe bestehen, und die Änderung betreffe vor allem Repackager. Der Beitrag wurde am Samstag auf Hacker News rege diskutiert (rund 370 Punkte).",
+   "takeaway": "Wer Bitwarden selbst baut oder hostet, sollte die Lizenzdetails auf GitHub lesen. Die Community fragt vor allem, welche neuen Funktionen künftig nicht mehr unter GPLv3 stehen. Das ist noch offen.",
+   "url": "https://community.bitwarden.com/t/published-version-update-in-app-stores/102750",
+   "cta": "Forenbeitrag lesen ↗",
+   "source": "community.bitwarden.com · Beitrag vom 9.10.2026, Diskussion am 10.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Telegram-Lücke",
+   "title": "Telegram Desktop: ein Klick auf einen Link konnte Dateien auslesen.",
+   "body": "Der Sicherheitsforscher beaksec beschreibt eine Kette aus zwei Fehlern in Telegram Desktop: Ein nicht maskiertes Trennzeichen in der lokalen Kommunikation zwischen laufender und neu gestarteter Instanz lässt einen präparierten Link mehrere Befehle auslösen, und ein internes Schema liest daraufhin eine beliebige Datei und schickt sie ohne Rückfrage an einen Chat. Damit lassen sich auch Sitzungsdateien stehlen. Betroffen waren Versionen bis 7.2.8 (bestätigt unter Windows 6.9.3), behoben in 7.2.9, CVE-2026-107181, CVSS 8,1. Der Beitrag erschien am 3.10. (aktualisiert am 7.10.) und lag am Samstag auf Hacker News oben (rund 440 Punkte).",
+   "takeaway": "Telegram Desktop auf mindestens 7.2.9 aktualisieren. Sonst bei Links aus unbekannten Gruppen vorsichtig bleiben.",
+   "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+   "cta": "Writeup lesen ↗",
+   "source": "beaksec.github.io · Writeup vom 3.10.2026, Diskussion am 10.10."
+  }
+ ]
+}
