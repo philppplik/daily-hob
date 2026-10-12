@@ -1,0 +1,64 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-11",
+ "date": "2026-10-11",
+ "title": "Daily Hob vom Sonntag, 11.10.",
+ "headline": "Offen gebaut.\nGenau geprüft.",
+ "teaser": "5 Catches: LineageOS 24 mit Android 17, Total Annihilation als offene Engine, ein Word-Nachbau in Rust, Agenten mit Byte-Orakel und lokales Diktat für den Mac.",
+ "intro": "Der Sonntag gehörte dem Selbermachen: ein altes Handy-System bekommt Android 17, ein altes Strategiespiel eine offene Engine, und ein Blogbeitrag zeigt, warum KI-Agenten ein hartes Prüfkriterium brauchen.",
+ "notes": "Rückblick auf Sonntag, 11. Oktober 2026 (Berliner Zeit). Quellen: Projekt- und Herstellerseiten, Blogbeitrag. Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts selbst getestet. Der Blogbeitrag ist vom 9. Oktober und wurde am Sonntag auf Hacker News diskutiert. Bewusst nicht aufgenommen: reine Meinungsbeiträge und politische Meldungen.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein Smartphone aus feinen Linien, dahinter gestapelte Rasterebenen, rechts zwei verbundene Raster-Quadrate als Vergleich, dazu eine gelbe und eine mintfarbene Fläche",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "Open Source",
+   "short": "LineageOS 24",
+   "title": "LineageOS 24: Android 17, neuer Bildeditor, Installation im Browser.",
+   "body": "Das Team hat am Sonntag Changelog 32 veröffentlicht. LineageOS 24 basiert auf Android 17 und erscheint nach eigener Aussage früher als erwartet. Neu sind unter anderem der Bildeditor Canvas, ein komplett überarbeiteter Updater, der Updates standardmäßig streamt, sowie browserbasierte Flash-Tools (WebUSB) für gängige Installationswege wie ADB. Am 24. Dezember 2026 wird das Projekt zehn Jahre alt.",
+   "takeaway": "Wer ein altes Android-Gerät übrig hat, bekommt wieder einen Grund, es auszuprobieren. Prüf vor dem Flashen die Geräteliste und mach ein Backup.",
+   "url": "https://lineageos.org/Changelog-32/",
+   "cta": "Changelog ansehen ↗",
+   "source": "lineageos.org · Changelog 32 vom 11.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Nanolathe",
+   "title": "Nanolathe: Total Annihilation als offene Engine, spielbar im Browser.",
+   "body": "Nanolathe baut das Strategiespiel Total Annihilation als MIT-lizenzierte Engine neu auf, mit modernem GPU-Renderer und optionalem klassischem Look. Drei Demo-Missionen laufen direkt im Browser (Desktop Chrome, Edge oder Safari), für die native Beta unter Windows, Mac und Linux braucht es die eigenen Spieldateien. Dokumentierte Formate und Clean-Room-Recherche sind öffentlich. Status laut Projekt: Public Beta, Singleplayer.",
+   "takeaway": "Ein schöner Fall, wie sich ein altes Spiel offen und dokumentiert weiterbauen lässt. Die Demo kostet dich nur ein paar Minuten.",
+   "url": "https://nanolathe.gg",
+   "cta": "Demo ansehen ↗",
+   "source": "nanolathe.gg · Projektseite · am 11.10. auf Hacker News"
+  },
+  {
+   "category": "Open Source",
+   "short": "Wordcraft",
+   "title": "Wordcraft: ein Word-Nachbau in reinem Rust.",
+   "body": "Das Projekt beschreibt sich als Open-Source-Neuimplementierung von Microsoft Word in reinem Rust, im Clean-Room-Verfahren und unter Apache-2.0-Lizenz. Das Repo wurde am 7. Oktober angelegt und hatte zum Zeitpunkt der Recherche knapp 6.800 Sterne. Am Sonntag lag es auf Hacker News.",
+   "takeaway": "Sehr jung und sehr gehypt. Zum Anschauen spannend, für wichtige Dokumente würde ich erst abwarten, wie ausgereift das Format-Handling ist.",
+   "url": "https://github.com/storytold/wordcraft",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com/storytold/wordcraft · Repo seit 7.10., Hacker-News-Welle am 11.10."
+  },
+  {
+   "category": "AI",
+   "short": "Agent-Orakel",
+   "title": "500 Milliarden Token: Agenten dekompilieren einen Shooter, bis ein Byte-Check es rettet.",
+   "body": "Maurice Heumann beschreibt in seinem Blog (Beitrag vom 9. Oktober), wie er mit Claude- und Codex-Agenten drei Monate lang ein Ego-Shooter-Spiel nach C++ rekonstruieren ließ. Der Code sah lesbar aus, war aber semantisch falsch. Erst ein automatischer Orakel-Check, der kompilierte Funktionen Byte für Byte mit dem Original vergleicht, gab den Agenten ein eindeutiges Pass oder Fail. Weitere Erkenntnis: Begründungen in Kommentaren der Arbeiter-Agenten wirkten auf den Reviewer wie unbeabsichtigte Prompt Injection. Am Sonntag wurde der Beitrag breit auf Hacker News diskutiert.",
+   "takeaway": "Der Kern gilt weit über Dekompilierung hinaus: Agenten brauchen ein objektives Erfolgskriterium, sonst belohnen sie sich selbst.",
+   "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
+   "cta": "Beitrag lesen ↗",
+   "source": "momo5502.com · Blogbeitrag vom 9.10., am 11.10. auf Hacker News"
+  },
+  {
+   "category": "Informatik",
+   "short": "BetterWispr",
+   "title": "BetterWispr: kostenloses Diktat, das auf dem Mac bleibt.",
+   "body": "BetterWispr ist ein kostenloses Diktier-Tool für macOS 14 oder neuer. Mit gehaltener Option-Leertaste sprichst du in jede App, das Tool entfernt Ähms und Fehlstarts und schreibt pro App im eingestellten Stil. Die Spracherkennung läuft laut Anbieter lokal, ohne Konto und ohne Cloud-Fallback; wählbar sind unter anderem Apple Speech, Parakeet TDT v3 und Whisper Large v3 Turbo. Meeting-Notizen sind eingebaut.",
+   "takeaway": "Interessant für alle, die viel schreiben und ihre Sprache nicht in die Cloud schicken wollen. Die Datenschutzangaben stammen vom Anbieter, selbst prüfen.",
+   "url": "https://betterwispr.com/",
+   "cta": "Tool ansehen ↗",
+   "source": "betterwispr.com · Show HN am 11.10."
+  }
+ ]
+}
