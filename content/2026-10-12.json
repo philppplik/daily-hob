@@ -1,0 +1,64 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-12",
+ "date": "2026-10-12",
+ "title": "Daily Hob vom Montag, 12.10.",
+ "headline": "Im Hintergrund.\nIm Funk.",
+ "teaser": "5 Catches: Metas Muse Wonder, ein Codex-Daemon im Hintergrund, QGIS ohne KI-Beiträge, ein Open-Source-Canva und ein Router als Funkempfänger.",
+ "intro": "Der Montag drehte sich um Kontrolle: wer darf was im Hintergrund laufen lassen, wer darf in ein Projekt beitragen, und was passiert, wenn man Hardware selbst in die Hand nimmt.",
+ "notes": "Rückblick auf Montag, 12. Oktober 2026 (Berliner Zeit). Quellen: Hersteller- und Projektseiten, GitHub-Issues. Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts selbst getestet. Mehrere Punkte sind älter (Codex-Issue vom 25.9., QGIS-Merge vom 7.10.) und wurden am Montag auf Hacker News diskutiert. Bewusst nicht aufgenommen: Meldungen ohne Primärquelle und reine Meinungsbeiträge.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: Funkwellen laufen in eine feine Wellenform, daneben ein Kreis mit Zahnrad und Tür als Hintergrundprozess und eine Zeichenfläche mit Stift, dazu eine gelbe und eine mintfarbene Fläche",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "KI",
+   "short": "Muse Wonder",
+   "title": "Meta Muse Wonder: neue Modellreihe für persönliche und berufliche Agenten.",
+   "body": "Meta hat am Montag Muse Wonder und Muse Wonder Full vorgestellt, trainiert im eigenen Prometheus-Rechenzentrum. Im Fokus stehen Active Memory (wichtigen Kontext über Gespräche hinweg behalten) und Active Focus (bei schwierigen Aufgaben dranbleiben, Alternativen probieren, vor wichtigen Aktionen nachfragen) sowie Coding und Fachwissen in Recht, Finanzen und Gesundheit. Muse Wonder ist über Metas Modell-API und Muse Code verfügbar, Muse Wonder Full für Muse-Code-Abonnenten.",
+   "takeaway": "Spannend als Marktsignal. Alle Benchmark-Angaben stammen von Meta selbst und sind nicht unabhängig geprüft.",
+   "url": "https://research.meta.ai/blog/muse-wonder",
+   "cta": "Ankündigung lesen ↗",
+   "source": "research.meta.ai · Blogbeitrag vom 12.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Codex-Daemon",
+   "title": "Codex CLI startet standardmäßig einen Hintergrund-Daemon, der sich selbst aktualisiert.",
+   "body": "Laut einem GitHub-Issue (angelegt am 25. September, am Montag auf Hacker News stark diskutiert) startet die Codex CLI seit Version 0.157.0 beim Öffnen einer Sitzung einen verwalteten Daemon, der nach dem Schließen weiterläuft, rund 374 MB Paketdateien in das Home-Verzeichnis kopiert und stündlich auf Updates prüft. Der Autor fordert Opt-in statt Standard. Als Workaround nennt er, das Feature daemon_auto_start zu deaktivieren, den Daemon zu stoppen und den verbliebenen Updater-Prozess von Hand zu beenden.",
+   "takeaway": "Wer Codex nutzt, sollte nachsehen, was im Hintergrund läuft. Das ist die Schilderung eines Nutzers, eine Stellungnahme des Projekts habe ich nicht gesehen.",
+   "url": "https://github.com/openai/codex/issues/48195",
+   "cta": "Issue lesen ↗",
+   "source": "github.com/openai/codex · Issue #48195 vom 25.9., am 12.10. auf Hacker News"
+  },
+  {
+   "category": "Open Source",
+   "short": "QGIS ohne KI",
+   "title": "QGIS verbietet KI-Beiträge komplett.",
+   "body": "Das QGIS-Projekt hat am 7. Oktober den Vorschlag QEP 428 gemergt, der die KI-Richtlinie auf ein striktes Verbot umstellt. In der Diskussion nennen Maintainer als Gründe die Überlastung beim Review, ungeprüften oder nur teilweise geprüften Code und den Schutz des menschlichen Netzwerks hinter dem Projekt. Die Nutzung von KI für Review und Sicherheitsprüfung soll separat besprochen werden. Am Montag wurde die Entscheidung auf Hacker News diskutiert.",
+   "takeaway": "Ein klares Gegenmodell zu \"Human in the Loop\". Wer zu Open-Source-Projekten beiträgt, sollte vorher deren KI-Regeln lesen.",
+   "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+   "cta": "Vorschlag ansehen ↗",
+   "source": "github.com/qgis · QEP 428, gemergt am 7.10., am 12.10. diskutiert"
+  },
+  {
+   "category": "Informatik",
+   "short": "Doory",
+   "title": "Doory: ein Open-Source-Canva für den Browser.",
+   "body": "Doory ist ein Design-Editor im Browser für Poster, Social-Posts, Folien, Lebensläufe und mehr, mit Vorlagen oder leerer Fläche. Export als PNG, JPG, SVG, PDF, MP4 oder GIF. Laut Projekt sind alle Funktionen kostenlos, ein Konto ist nicht nötig, und man kann alles selbst hosten (Docker, React 19, Django 5). Das Repo wurde am 10. Oktober angelegt und hatte zum Zeitpunkt der Recherche knapp 900 Sterne.",
+   "takeaway": "Sehr jung. Die Lizenz heißt Attribution Assurance, lies sie vor kommerzieller Nutzung genau.",
+   "url": "https://github.com/shaongitbd/doory",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com/shaongitbd/doory · Repo seit 10.10., am 12.10. auf Hacker News"
+  },
+  {
+   "category": "Wildcard",
+   "short": "WLAN-7-SDR",
+   "title": "Ein WLAN-7-Router wird zum 320-MSps-Funkempfänger.",
+   "body": "Das Projekt W1700K SDR macht aus einem Gemtek-W1700K-Router mit MediaTek-MT7996-Funkchip einen breitbandigen Software-Defined-Receiver: rohe 14-Bit-IQ-Daten mit bis zu 320 Msps, über 10 GbE gestreamt, live als Spektrum und Wasserfall im Browser. Der Chip läuft laut Projekt mit eigener Firmware ohne MediaTek-Code. Bänder: 2,4, 5 und 6 GHz. Das Repo ist vom 11. Oktober.",
+   "takeaway": "Ein reines Bastel- und Forschungsprojekt, aber ein tolles Beispiel für Reverse Engineering von Hardware.",
+   "url": "https://github.com/h0m3us3r/w1700k-sdr",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com/h0m3us3r/w1700k-sdr · Repo seit 11.10., am 12.10. auf Hacker News"
+  }
+ ]
+}
