@@ -1,0 +1,64 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-13",
+ "date": "2026-10-13",
+ "title": "Daily Hob vom Dienstag, 13.10.",
+ "headline": "Unter der Haube.\nAbseits von Git.",
+ "teaser": "5 Catches: Anthropic baut Scion statt Git, ein elf Jahre alter Rust-Bug, Spracherkennung aus einem Embedding-Modell, Janas für große LLMs und SolidCraft als CAD in Rust.",
+ "intro": "Der Dienstag zeigte, was passiert, wenn Werkzeuge an ihre Grenzen kommen: Git bei 30.000 Merges am Tag, der Rust-Compiler nach elf Jahren, Arbeitsspeicher bei großen Modellen.",
+ "notes": "Rückblick auf Dienstag, 13. Oktober 2026 (Berliner Zeit). Quellen: Hersteller- und Projektseiten, GitHub-Issues, Engineering-Blog. Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts selbst getestet. Janas lag am Montagabend (12.10.) auf Hacker News und wurde am Dienstag weiter diskutiert. Bewusst nicht aufgenommen: Produktankündigungen großer Konzerne ohne technische Substanz und politische Meldungen.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: viele dünne Linien laufen in eine einzelne Serversäule zusammen, danach eine Schallwelle, die zu kleinen Quadraten wird, und ein Drahtgitter-Würfel, dazu eine gelbe und eine mintfarbene Fläche",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "Informatik",
+   "short": "Scion",
+   "title": "Anthropic ersetzt Git durch Scion, weil Merges explodieren.",
+   "body": "Im Engineering-Blog beschreibt Anthropic (Beitrag vom 13. Oktober), dass die Zahl der täglich gemergten Änderungen von rund 2.500 im Mai auf über 30.000 im September stieg. Git sei für Agenten und Jobs, die immer online sind, nicht ideal. Deshalb baute das Unternehmen in fünf Monaten das Versionskontrollsystem Scion: Der Server beantwortet Historie, Blame, Commits und Merges, Clients halten nur einen begrenzten Cache, Commits sind serverseitig und sperrfrei, ein Checkout ist optional. Dazu kamen eine Code-Review-Oberfläche, Code-Suche und ein Rechtesystem.",
+   "takeaway": "Ein Einblick in die Skalierungsprobleme von KI-getriebener Entwicklung. Die Lösung zielt auf ein riesiges Monorepo und ist für die meisten Teams kein Git-Ersatz.",
+   "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+   "cta": "Beitrag lesen ↗",
+   "source": "anthropic.com/engineering · Beitrag vom 13.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Rust-Lücke",
+   "title": "Rust: elf Jahre alter Fehler im Borrow Checker.",
+   "body": "Im Rust-Issue 164250 zeigt der Autor, dass sich Lebenszeit-Anforderungen einer Struktur über eine kovariante Feldzuweisung umgehen lassen. Das Issue ist als P-high und I-unsound markiert. Ein Mitglied des Types-Teams ordnet ein: Der Fehler sei elf Jahre alt und deshalb nur P-high, nicht P-critical, und ausnutzen lasse er sich nur mit einer absichtlich bösartigen Drop-Implementierung. Das Issue wurde am Dienstag angelegt und stark auf Hacker News diskutiert.",
+   "takeaway": "Kein Grund zur Panik für normalen Code. Interessant ist, wie offen das Team damit umgeht. Ein Fix steht noch aus.",
+   "url": "https://github.com/rust-lang/rust/issues/164250",
+   "cta": "Issue lesen ↗",
+   "source": "github.com/rust-lang/rust · Issue #164250 vom 13.10."
+  },
+  {
+   "category": "KI",
+   "short": "EmbeddingGemma-STT",
+   "title": "Aus einem Embedding-Modell wird Spracherkennung.",
+   "body": "Das Projekt Embedding Gemma Transcribe nutzt den Audio-Encoder von Googles EmbeddingGemma 2 unverändert und trainiert nur einen kleinen Leser, der Audio-Abschnitte auf das nächste Wort aus rund 229.000 englischen Wörtern abbildet. Laut Projekt transkribiert es eine Stunde Audio in etwa 12,6 Sekunden auf einem einfachen M3-MacBook-Air, komplett lokal auf der Neural Engine. Die Wortfehlerrate liegt aktuell bei rund 5 Prozent, führende Modelle erreichen laut Projekt 2 bis 3 Prozent.",
+   "takeaway": "Ein cleverer Ansatz, aber noch nicht auf dem Niveau der besten Spracherkenner. Alle Zahlen stammen von den Autoren.",
+   "url": "https://eg2.haku.sh/",
+   "cta": "Projekt ansehen ↗",
+   "source": "eg2.haku.sh · am 13.10. auf Hacker News"
+  },
+  {
+   "category": "Open Source",
+   "short": "Janas",
+   "title": "Janas: LLMs größer als der RAM, aus der SSD gestreamt.",
+   "body": "Janas ist eine Inferenz-Engine in reinem C (GPL-3.0), die Mixture-of-Experts-Modelle ausführt, die größer als der Arbeitsspeicher sind, indem sie Experten von der SSD nachlädt, auf CPU oder GPU. Laut Projekt: 37 Token pro Sekunde mit Qwen3-Next-80B (48 GB) auf einem 32-GB-Laptop, gegenüber 2,8 bei llama.cpp, und schneller als llama.cpp bei allen 13 verglichenen Modellen in Q4_K_M. Das Repo ist vom 20. September, am Montagabend lag es auf Hacker News.",
+   "takeaway": "Spannend für lokale Modelle auf kleiner Hardware. Die Messwerte stammen vom Entwickler, selbst nachmessen.",
+   "url": "https://github.com/prabanta-dev/janas",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com/prabanta-dev/janas · Repo seit 20.9., auf Hacker News seit 12.10. abends"
+  },
+  {
+   "category": "Open Source",
+   "short": "SolidCraft",
+   "title": "SolidCraft: parametrisches CAD in Rust, mit MCP für Agenten.",
+   "body": "SolidCraft ist ein quelloffenes parametrisches 3D-CAD in reinem Rust für Desktop und Web, das sich zusätzlich über MCP automatisieren lässt, sodass Agenten Modelle erstellen können. Lizenz Apache 2.0, Repo seit 7. Oktober, zum Zeitpunkt der Recherche rund 640 Sterne. Als Show HN am Dienstag vorgestellt.",
+   "takeaway": "Sehr jung und mit über 50 offenen Issues. Zum Ausprobieren und Mitmachen spannend, für ernsthafte Konstruktion noch zu früh.",
+   "url": "https://github.com/bherbruck/solidcraft",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com/bherbruck/solidcraft · Repo seit 7.10., Show HN am 13.10."
+  }
+ ]
+}
