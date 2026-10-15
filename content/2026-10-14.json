@@ -1,0 +1,64 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-14",
+ "date": "2026-10-14",
+ "title": "Daily Hob vom Mittwoch, 14.10.",
+ "headline": "Ein Dienst für alles.\nEine Nummer für alle.",
+ "teaser": "5 Catches: OpenCode 2.0, Torvalds und der erste LLM-Patch, Liquids Agentenmodell fürs Gerät, schnelleres HTTP in Go und Googles Nummern-Verknüpfung.",
+ "intro": "Der Mittwoch brachte kleine Hebel mit großer Wirkung: ein gemeinsamer Hintergrunddienst für Agenten, ein Kernel-Patch mit Modellhilfe, ein Faktor fünf bei HTTP-Aufrufen und eine Einstellung, die man kennen sollte.",
+ "notes": "Rückblick auf Mittwoch, 14. Oktober 2026 (Berliner Zeit). Quellen: Projekt- und Herstellerseiten, LWN, Go-Blog, Android Authority. Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts selbst getestet. Der Liquid-Beitrag ist vom 13.10. und wurde am Mittwoch diskutiert. Bewusst nicht aufgenommen: politische Meldungen und Meinungsbeiträge.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein zentraler Kreis mit Chip, der über dünne Linien mit acht kleinen Quadraten verbunden ist, dazu zwei Bögen und je eine gelbe und mintfarbene Fläche",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "KI",
+   "short": "OpenCode 2.0",
+   "title": "OpenCode 2.0: ein zentraler Dienst für Terminal, Web und Desktop.",
+   "body": "Das Coding-Agent-Tool OpenCode hat Version 2.0 veröffentlicht. Der Server läuft jetzt automatisch als einzelner Hintergrundprozess, mit dem Terminal-Oberfläche, Weboberfläche und Desktop-App gemeinsam sprechen. Neu sind außerdem eine von Grund auf neu entworfene API, das Client-Paket @opencode/client für eigene Skripte (es findet den lokalen Dienst selbst) und die Möglichkeit, den Dienst über /pair mit anderen Rechnern zu verbinden.",
+   "takeaway": "Praktisch für geplante Aufgaben und mehrere Oberflächen. Wer das Tool nutzt, sollte wissen, dass nun dauerhaft ein Hintergrundprozess läuft.",
+   "url": "https://anoma.ly/notes/opencode-2-0/",
+   "cta": "Notiz lesen ↗",
+   "source": "anoma.ly · Release-Notiz zu OpenCode 2.0 vom 14.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Torvalds + LLM",
+   "title": "Linus Torvalds legt seine erste LLM-gestützte Patch-Serie vor.",
+   "body": "Laut LWN (Artikel vom 14. Oktober) hat Linus Torvalds nach dem Maintainers Summit eine Serie aus zehn Patches zur Prüfung gepostet, bei der ihm ein Sprachmodell geholfen hat. Sie beschleunigt das Nachschlagen von Speicherseiten (Folios), indem häufig genutzte Folios erst nach einer RCU-Periode freigegeben werden und Datenzugriffe unter RCU ohne Referenzzähler laufen. In einem leselastigen Benchmark ergibt das laut Serie etwa eine Größenordnung Beschleunigung. Das Review hat bereits einen Race-Condition-Fehler gefunden, es braucht also weitere Arbeit.",
+   "takeaway": "Ein Signal, wie KI-Unterstützung im Kernel-Alltag ankommt. Ob die Serie so aufgenommen wird, ist offen.",
+   "url": "https://lwn.net/Articles/1100449/",
+   "cta": "Artikel lesen ↗",
+   "source": "lwn.net · Artikel vom 14.10."
+  },
+  {
+   "category": "KI",
+   "short": "LFM2.5-24B",
+   "title": "Liquid AI: LFM2.5-24B-A2B für schnelle Agenten auf dem Gerät.",
+   "body": "Liquid AI hat am 13. Oktober LFM2.5-24B-A2B veröffentlicht, ein Reasoning-Modell mit 24 Milliarden Parametern, von denen nur 2 Milliarden pro Token aktiv sind. Es hat ein Kontextfenster von 131.072 Tokens und ist als Basis- und nachtrainierter Variante mit offenen Gewichten auf Hugging Face verfügbar. Laut Hersteller erreicht es 184 Tokens pro Sekunde auf einem Apple M5 Max und ist auf fünf von acht Agenten- und Tool-Benchmarks mit Qwen3.6-35B-A3B vergleichbar.",
+   "takeaway": "Interessant für lokale Agenten. Alle Benchmark-Werte stammen vom Hersteller.",
+   "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
+   "cta": "Blogbeitrag lesen ↗",
+   "source": "liquid.ai · Blogbeitrag vom 13.10., am 14.10. auf Hacker News"
+  },
+  {
+   "category": "Informatik",
+   "short": "Go-HTTP",
+   "title": "Go 1.27 soll HTTP/1-Verbindungen deutlich besser wiederverwenden.",
+   "body": "Das Go-Team erklärt im Blog (14. Oktober), wie das Wiederverwenden von HTTP/1-Verbindungen in Go 1.27 verbessert wird. Im Beispiel dauern 100 GET-Aufrufe gegen index.golang.org mit HTTP/1 laut Autoren etwa 150 statt 710 Millisekunden unter Go 1.26, also fast fünfmal schneller. Der Beitrag erklärt auch, warum Verbindungsaufbau mit TCP- und TLS-Handshakes teuer ist.",
+   "takeaway": "Die Zahl ist ein Messwert der Autoren auf einem einzelnen Rechner. Go 1.27 ist laut Blog noch eine kommende Version.",
+   "url": "https://go.dev/blog/http-connection-reuse",
+   "cta": "Beitrag lesen ↗",
+   "source": "go.dev · Blogbeitrag vom 14.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "Google-Nummer",
+   "title": "Google verknüpft laut Bericht Telefonnummern mit allen Konten auf dem Gerät.",
+   "body": "Android Authority berichtet (14. Oktober), dass Googles Einstellung zur Telefonnummern-Verifizierung standardmäßig aktiv ist und die Nummer mit allen auf dem Android-Gerät angemeldeten Google-Konten verknüpft, auch Zweit- und Arbeitskonten. Die Supportseite wurde laut Bericht zwischen August und Oktober 2025 entsprechend angepasst. Abschalten lässt sich \"Telefonnummern automatisch bestätigen\" in den Google-Einstellungen des Geräts, bereits verknüpfte Nummern müssen pro Konto manuell entfernt werden.",
+   "takeaway": "Wer Konten bewusst trennt, sollte die Einstellung prüfen. Der Bericht stützt sich auf Nutzermeldungen und Googles Support-Dokumentation.",
+   "url": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/",
+   "cta": "Bericht lesen ↗",
+   "source": "androidauthority.com · Bericht vom 14.10."
+  }
+ ]
+}
