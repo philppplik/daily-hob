@@ -1,0 +1,44 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-16",
+ "date": "2026-10-16",
+ "title": "Daily Hob vom Freitag, 16.10.",
+ "headline": "Ein fliegender Roadster,\nein Werkzeugkasten, ein Museumsstück.",
+ "teaser": "3 Catches am Vormittag: Teslas Roadster-Show in Texas, Microsofts rustup-artiger Toolchain-Manager dotnetup und ein BeBox-Emulator für Haiku.",
+ "intro": "Der Freitagvormittag bringt eine wilde Autoshow, ein längst fälliges Werkzeug für .NET und pure Retro-Freude aus der BeOS-Zeit. Diese Ausgabe wächst über den Tag.",
+ "notes": "Laufende Ausgabe für Freitag, 16. Oktober 2026 (Berliner Zeit), Stand Vormittag. Quellen: Hersteller- und Projektseiten, Microsoft .NET Blog, The Verge. Alle Leistungsangaben stammen von den Anbietern, nichts ist unabhängig gemessen.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: zwei dünne Linien als Straße, die zu einem Looping ansteigen, ein auf reine Geometrie reduziertes Auto, dazu Punkte, Bögen, ein gelber Kreis und ein mintfarbenes Quadrat",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "Wildcard",
+   "short": "Tesla Roadster",
+   "title": "Tesla zeigt den neuen Roadster: geflogen, über Kopf gefahren, unter einer Sekunde auf 60 mph.",
+   "body": "Tesla hat den nächsten Roadster bei einem Event in Waco, Texas, vorgeführt. Laut The Verge (16. Oktober) fuhr der Elektro-Sportwagen auf einem Parcours über Kopf, hob kurz ab und beschleunigte in unter einer Sekunde auf 60 mph (96 km/h). Der Wagen war fast ein Jahrzehnt in Entwicklung.",
+   "takeaway": "Show-Effekte hin oder her: Die Beschleunigungswerte stammen aus Tesla-eigener Vorführung, unabhängig gemessen ist nichts.",
+   "url": "https://www.theverge.com/transportation/1012552/tesla-roadster-next-gen-reveal-elon-musk",
+   "cta": "Bericht lesen ↗",
+   "source": "theverge.com · Bericht vom 16.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "dotnetup",
+   "title": "Microsoft stellt dotnetup vor: ein rustup-artiger Toolchain-Manager für .NET.",
+   "body": "Microsoft hat am 15. Oktober die Public Preview von dotnetup angekündigt, einem Toolchain-Manager nach dem Vorbild von rustup oder nvm. Er installiert, verwaltet und aktualisiert .NET SDKs und Laufzeiten komplett im Benutzerkonto, ohne Adminrechte. Mehrere Versionen laufen nebeneinander, statt fester Versionen lassen sich Major-Releases oder Feature-Bänder verfolgen, und vorhandene global.json-Pinnings werden respektiert. Die Installation läuft auf macOS und Linux über ein Bootstrap-Skript.",
+   "takeaway": "Überfällig und praktisch: endlich ein einheitlicher Weg für .NET-Umgebungen abseits von apt, brew und Install-Skripten. Noch Preview.",
+   "url": "https://devblogs.microsoft.com/dotnet/introducing-dotnetup/",
+   "cta": "Ankündigung lesen ↗",
+   "source": "devblogs.microsoft.com · Ankündigung vom 15.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "BeBox-Emulator",
+   "title": "BeBox: ein Emulator für Be Inc.s BeBox, nativ für Haiku.",
+   "body": "Das neue Open-Source-Projekt BeBox (MIT-Lizenz, seit 15. Oktober auf GitHub) emuliert Be Inc.s BeBox, den Doppelprozessor-Rechner, auf dem BeOS geboren wurde. Der Emulator läuft als native Anwendung unter Haiku, startet beide PowerPC-Modelle von ihren Original-Boot-ROMs und führt BeOS für PowerPC von Developer Release 6 bis R5.0.3 aus. Auch die älteren Hobbit-Prototypen laufen damit.",
+   "takeaway": "Museumsstück zum Selberlaufen: Retro-Computing auf einem System, das selbst die BeOS-Idee weiterführt.",
+   "url": "https://github.com/johnrash/bebox",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · HN-Diskussion vom 16.10."
+  }
+ ]
+}
