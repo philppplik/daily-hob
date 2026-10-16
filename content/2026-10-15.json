@@ -1,0 +1,94 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-15",
+ "date": "2026-10-15",
+ "title": "Daily Hob vom Donnerstag, 15.10.",
+ "headline": "Offene Gewichte, saubere Neuronen,\nkeine Schaltsekunden mehr.",
+ "teaser": "8 Catches: Metas offenes Muse Spark Open, Goodfires Interpretierbarkeits-These, Spyware per Werbebanner, Libreboot mit UEFI, Sill, das Ende der Schaltsekunde, DEsk und Tiny Little Office.",
+ "intro": "Der Donnerstag hatte es in sich: Meta stellt sein größtes offenes Modell vor, ein Forschungsteam räumt mit einem Grunddogma der Interpretierbarkeit auf, das Citizen Lab deckt Spähsoftware per Werbeanzeige auf - und die Welt verabschiedet sich offiziell von der Schaltsekunde.",
+ "notes": "Rückblick auf Donnerstag, 15. Oktober 2026 (Berliner Zeit). Quellen: Hersteller-, Projekt- und Forschungsseiten (Meta, Goodfire, Citizen Lab, Libreboot, BIPM, GitHub). Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts ist unabhängig gemessen.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein Zifferblatt aus Strichen ohne Zeiger, aus dem eine gestrichelte Linie entkommt, dazu Bögen, Punkte, ein gelbes Quadrat und ein mintfarbener Kreis",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "KI",
+   "short": "Muse Spark Open",
+   "title": "Meta veröffentlicht Muse Spark Open: 816 Milliarden Parameter, offene Gewichte.",
+   "body": "Meta hat am 15. Oktober Muse Spark Open vorgestellt, nach eigenen Angaben das leistungsfähigste US-Modell mit offenen Gewichten. Das nativ multimodale MoE-Modell hat 816 Milliarden Parameter, von denen 42 Milliarden pro Token aktiv sind, und ein Kontextfenster von einer Million Tokens. Es ist auf Coding- und Agentenaufgaben ausgelegt. Laut Meta läuft es als erstes Modell seiner Klasse lokal auf zwei Mac Studios mit M5 Ultra über das MLX-Framework. Die Gewichte liegen unter anderem auf Hugging Face, die API läuft über Baseten, Fireworks, Groq, Modal, Nebius, OpenRouter und Together AI.",
+   "takeaway": "Das bisher größte offene US-Modell ist sofort testbar, lokal allerdings nur mit sehr teurer Hardware. Benchmark-Werte sind Herstellerangaben.",
+   "url": "https://research.meta.ai/blog/muse-spark-open",
+   "cta": "Ankündigung lesen ↗",
+   "source": "research.meta.ai · Ankündigung vom 15.10."
+  },
+  {
+   "category": "KI",
+   "short": "Saubere Neuronen",
+   "title": "Goodfire: Neuronale Netze sind schon sauber.",
+   "body": "Nick Cammarata von Goodfire stellt in einem langen Essay die These auf, dass die berühmte Polysemanticity neuronaler Netze - die scheinbar willkürliche Packung vieler Konzepte in ein Neuron - größtenteils kein Naturgesetz war, sondern auf mehrere gewöhnliche, meist behebbare Probleme der frühen Untersuchungsmodelle zurückgeht. Nach seiner Analyse lassen sich inzwischen die meisten Neuronen sogar in Modellen mit Billionen Parametern verstehen, was die Aussichten für mechanistische Interpretierbarkeit deutlich verbessern würde.",
+   "takeaway": "Eine Arbeitshypothese, keine ausgemachte Sache - aber wenn sie hält, ändert das die Grundstimmung eines ganzen Forschungsfelds.",
+   "url": "https://already-clean.goodfire.com/",
+   "cta": "Essay lesen ↗",
+   "source": "already-clean.goodfire.com · Essay vom 15.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "Spyware per Werbung",
+   "title": "Citizen Lab deckt AdFection auf: Zero-Click-Spyware über Werbeanzeigen.",
+   "body": "Das Citizen Lab hat am 15. Oktober den ersten öffentlich bestätigten Fall von Zero-Click-Spähsoftware veröffentlicht, die über gezielte Online-Werbung verbreitet wurde. Die Technik nennen die Forschenden AdFection: Geräte bei Al Jazeera wurden dem Bericht zufolge über Werbeanzeigen mit der Spyware Candiru infiziert. Außerdem deckt das Team die Firma Discover-Tech auf, die mit ihrer Plattform Controlium Überwachungsanbietern beim Aufspüren und Infizieren von Geräten weltweit geholfen haben soll.",
+   "takeaway": "Werbenetzwerke als Angriffsfläche sind jetzt kein theoretisches Szenario mehr. Der Bericht ist öffentlich und detailliert.",
+   "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+   "cta": "Bericht lesen ↗",
+   "source": "citizenlab.ca · Recherche vom 15.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Libreboot 26.10",
+   "title": "Libreboot 26.10 \"Ominous Olive\" bringt vollen UEFI-Support.",
+   "body": "Die freie Boot-Firmware Libreboot ist in Version 26.10 erschienen. Die wichtigste Neuerung: voller UEFI-Support über den MrChromebox-EDK2-Payload, womit erstmals auch Windows auf Libreboot-Geräten bootet. Dazu kommt Unterstützung für weitere Chromebooks. Libreboot ersetzt proprietäre BIOS/UEFI-Firmware auf unterstützter Intel-, AMD- und ARM64-Hardware und initialisiert CPU und Speichercontroller komplett mit freier Software.",
+   "takeaway": "UEFI macht Libreboot für deutlich mehr Menschen alltagstauglich - bisher scheiterte die Nutzung oft genau daran.",
+   "url": "https://libreboot.org/news/libreboot2610.html",
+   "cta": "Release-Notiz lesen ↗",
+   "source": "libreboot.org · Release vom 15.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Sill",
+   "title": "Sill: jedes Mac-Fenster live auf iPhone und iPad.",
+   "body": "Sill ist ein quelloffenes Tool (Apache-2.0), das ein einzelnes Fenster oder den ganzen Desktop eines Macs live auf iPhone oder iPad überträgt. Die Steuerung läuft dort über Touch, Apple Pencil, Trackpad oder Tastatur, die Verbindung kommt ohne eigene Server aus. Technisch setzt Sill auf ScreenCaptureKit, VideoToolbox und HEVC. Das Projekt existiert erst seit Ende September und hat bereits über 1700 Sterne auf GitHub.",
+   "takeaway": "Kostenlos, ohne Server, ohne Abo - ein seltener Gegenentwurf zu den kommerziellen Remote-Desktop-Apps.",
+   "url": "https://github.com/Saffsanity/sill",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · Show HN vom 15.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Ende der Schaltsekunde",
+   "title": "Beschlossen: UTC läuft ab 2027 ohne Schaltsekunden.",
+   "body": "Die Generalkonferenz für Maß und Gewicht (CGPM) hat mit Resolution 5 beschlossen, dass UTC ab dem 20. Mai 2027 kontinuierlich läuft. Die Abweichung zur Erdrotation (UT1) darf dann bis zu einer Stunde betragen, statt wie bisher durch Schaltsekunden unter einer Sekunde gehalten zu werden. Grund: Die Wahrscheinlichkeit einer negativen Schaltsekunde steigt laut Expertise bis 2035 auf rund 30 Prozent, und dafür sind die meisten Systeme nicht gebaut - das Risiko für Störungen in kritischer Infrastruktur gilt als hoch.",
+   "takeaway": "Ein ganzer Bug-Typ verschwindet aus der Zukunft der Softwareentwicklung. Wer mit Zeitreihen arbeitet, kann aufatmen.",
+   "url": "https://www.bipm.org/en/cgpm-2026/resolution-5",
+   "cta": "Resolution lesen ↗",
+   "source": "bipm.org · Resolution 5, beschlossen am 15.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "DEsk",
+   "title": "DEsk: ein Wayland-Desktop im Skeuomorphismus von iOS 6.",
+   "body": "DEsk ist eine neue Desktop-Umgebung für Linux unter Wayland, die konsequent auf realistischen Skeuomorphismus setzt: Fenster sind Papierbögen auf einem Nussbaum-Schreibtisch, das Dock ist eine Schublade, Apps liegen in Ordnern in einem Bücherregal, Benachrichtigungen kommen im Briefkasten an. Das Projekt ist gerade als v0.1 Beta erschienen, steht unter MIT-Lizenz und bringt einen Installer für Fedora mit.",
+   "takeaway": "Reine Spielerei - und genau deshalb großartig. Erste Beta, also mit Macken zu rechnen.",
+   "url": "https://github.com/fyzugx/DEsk",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · Trending am 15.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "Tiny Little Office",
+   "title": "Tiny Little Office: Der Link ist das Dokument.",
+   "body": "Tiny Little Office ist eine winzige Office-Suite, bei der das gesamte Dokument im Link steckt. Es gibt keine Accounts, und nichts wird irgendwo gespeichert, außer man legt es bewusst auf dem eigenen Gerät ab. Dokumente lassen sich verschachteln: Ein Dokument kann ein anderes als eingebetteten Block enthalten. Teilen heißt also nur: einen Link verschicken.",
+   "takeaway": "Radikal simpel und datensparsam. Für schnelle, private Dokumente ohne Konto-Zwang einen Blick wert.",
+   "url": "https://tinylittleoffice.com/",
+   "cta": "Ausprobieren ↗",
+   "source": "tinylittleoffice.com · HN-Diskussion vom 15.10."
+  }
+ ]
+}
