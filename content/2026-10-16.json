@@ -3,9 +3,9 @@
  "date": "2026-10-16",
  "title": "Daily Hob vom Freitag, 16.10.",
  "headline": "Ein fliegender Roadster,\nein Werkzeugkasten, ein Museumsstück.",
- "teaser": "3 Catches am Vormittag: Teslas Roadster-Show in Texas, Microsofts rustup-artiger Toolchain-Manager dotnetup und ein BeBox-Emulator für Haiku.",
- "intro": "Der Freitagvormittag bringt eine wilde Autoshow, ein längst fälliges Werkzeug für .NET und pure Retro-Freude aus der BeOS-Zeit. Diese Ausgabe wächst über den Tag.",
- "notes": "Laufende Ausgabe für Freitag, 16. Oktober 2026 (Berliner Zeit), Stand Vormittag. Quellen: Hersteller- und Projektseiten, Microsoft .NET Blog, The Verge. Alle Leistungsangaben stammen von den Anbietern, nichts ist unabhängig gemessen.",
+ "teaser": "5 Catches: Teslas Roadster-Show in Texas, Microsofts Toolchain-Manager dotnetup, ein BeBox-Emulator, der 24.000-Dollar-Rust-Port des TypeScript-Compilers und die Folders-Sprache.",
+ "intro": "Der Freitag bringt eine wilde Autoshow, ein längst fälliges Werkzeug für .NET, Retro-Freude aus der BeOS-Zeit, ein teures KI-Experiment und eine Programmiersprache ohne eine einzige Datei. Diese Ausgabe wächst über den Tag.",
+ "notes": "Laufende Ausgabe für Freitag, 16. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: Hersteller- und Projektseiten, Microsoft .NET Blog, The Verge, The Register, danieltemkin.com. Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts ist unabhängig gemessen.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: zwei dünne Linien als Straße, die zu einem Looping ansteigen, ein auf reine Geometrie reduziertes Auto, dazu Punkte, Bögen, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -39,6 +39,26 @@
    "url": "https://github.com/johnrash/bebox",
    "cta": "Repo ansehen ↗",
    "source": "github.com · HN-Diskussion vom 16.10."
+  },
+  {
+   "category": "KI",
+   "short": "TS_Rust",
+   "title": "Für 24.000 Dollar in Tokens: Theo Browne lässt KI den TypeScript-Compiler nach Rust portieren.",
+   "body": "Entwickler und YouTuber Theo Browne hat nach einem Bericht von The Register (15. Oktober) den TypeScript-Compiler von KI-Agenten nach Rust portieren lassen. Nach eigenen Angaben lief der Versuch über Claude Opus 5.5 und verbrauchte Token im Gegenwert von rund 24.000 Dollar; ein früherer Anlauf mit anderen Modellen bei über 400.000 Dollar war bei 84 Prozent Kompatibilität stecken geblieben. Das Ergebnis TS_Rust soll die TypeScript-Konformitätstests fast vollständig bestehen und laut Browne doppelt so schnell laufen wie Microsofts offizielle Go-Neufassung. Interessant: Das Modell hat nicht aus JavaScript, sondern aus Microsofts Go-Version übersetzt - und dabei ein paar Fehler gleich mitkopiert.",
+   "takeaway": "Beeindruckende Fleißarbeit der Agenten, aber alle Zahlen sind Angaben des Autors; der Code ist nach eigener Aussage nicht einmal gesichtet.",
+   "url": "https://www.theregister.com/devops/2026/10/15/24000-ai-experiment-ports-typescript-compiler-to-rust/5303409",
+   "cta": "Bericht lesen ↗",
+   "source": "theregister.com · Bericht vom 15.10., HN-Diskussion vom 16.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Folders",
+   "title": "Folders: eine Programmiersprache ganz ohne Dateien und Text.",
+   "body": "Daniel Temkins Esolang Folders schreibt Programme als reine Ordnerbäume: Die Namen der Ordner sind egal, nur die Verschachtelung und Reihenfolge zählt. Die Zahl der Unterordner bestimmt Befehl und Ausdruck, Daten lagern in Ordnernamen. Inspiriert von Whitespace, treibt die Sprache die Idee entmaterialisierten Codes auf die Spitze - unter Windows belegen leere Ordner nicht einmal Speicherplatz. Ein Emulator im Browser zeigt, wie Folders rechnet.",
+   "takeaway": "Kein praktischer Nutzen, aber ein schöner Gedanke über das Wesen von Code - und gerade die meistdiskutierte Spielerei auf HN.",
+   "url": "https://danieltemkin.com/esolangs/folders",
+   "cta": "Sprache ansehen ↗",
+   "source": "danieltemkin.com · HN-Diskussion vom 16.10."
   }
  ]
 }
