@@ -3,9 +3,9 @@
  "date": "2026-10-16",
  "title": "Daily Hob vom Freitag, 16.10.",
  "headline": "Ein fliegender Roadster,\nein Werkzeugkasten, ein Museumsstück.",
- "teaser": "5 Catches: Teslas Roadster-Show in Texas, Microsofts Toolchain-Manager dotnetup, ein BeBox-Emulator, der 24.000-Dollar-Rust-Port des TypeScript-Compilers und die Folders-Sprache.",
- "intro": "Der Freitag bringt eine wilde Autoshow, ein längst fälliges Werkzeug für .NET, Retro-Freude aus der BeOS-Zeit, ein teures KI-Experiment und eine Programmiersprache ohne eine einzige Datei. Diese Ausgabe wächst über den Tag.",
- "notes": "Laufende Ausgabe für Freitag, 16. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: Hersteller- und Projektseiten, Microsoft .NET Blog, The Verge, The Register, danieltemkin.com. Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts ist unabhängig gemessen.",
+ "teaser": "8 Catches: Teslas Roadster-Show, dotnetup, BeBox-Emulator, der 24.000-Dollar-Rust-Port, die Folders-Sprache, Muse Spark Open auf vier Mac Studios, die Postgres-19-Verschiebung und ein 37 Jahre alter OpenBSD-Bug.",
+ "intro": "Der Freitag bringt eine wilde Autoshow, Werkzeuge und Retro-Freude - und am Abend drei dicke Brocken: Apple zeigt, wie Metas offenes Riesenmodell auf dem Schreibtisch läuft, Postgres verschiebt ein Release wegen KI-Reviews, und ein fast 40 Jahre alter Bug fällt in sich zusammen.",
+ "notes": "Laufende Ausgabe für Freitag, 16. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: Hersteller- und Projektseiten, Apple Machine Learning Research, Microsoft .NET Blog, The Verge, The Register, danieltemkin.com, calif.io. Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts ist unabhängig gemessen.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: zwei dünne Linien als Straße, die zu einem Looping ansteigen, ein auf reine Geometrie reduziertes Auto, dazu Punkte, Bögen, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -59,6 +59,36 @@
    "url": "https://danieltemkin.com/esolangs/folders",
    "cta": "Sprache ansehen ↗",
    "source": "danieltemkin.com · HN-Diskussion vom 16.10."
+  },
+  {
+   "category": "KI",
+   "short": "Muse auf Mac Studio",
+   "title": "Apple zeigt: Muse Spark Open läuft mit MLX verteilt auf vier Mac Studios.",
+   "body": "Apple Machine Learning Research hat am 15. Oktober gezeigt, wie sich Metas frisch veröffentlichtes Muse Spark Open (816 Milliarden Parameter, NVFP4) lokal mit dem neuen MLX-Release betreiben lässt. Auf vier Mac Studios mit M5 Ultra, per RDMA over Thunderbolt verbunden, erzeugt das Modell laut Apple über 36 Tokens pro Sekunde bei 8.192 Tokens Kontext; ein einzelner Mac Studio fasst bis zu 512 GB Unified Memory. Der Beitrag enthält außerdem Benchmarks für Mistral Medium 3.5 und Qwen 3.8 und vergleicht M5 Ultra mit M3 Ultra.",
+   "takeaway": "Die praktische Anleitung zur gestrigen Meta-Meldung. 36 Tokens pro Sekunde sind lesbar schnell - die Hardware dafür bleibt Luxus.",
+   "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+   "cta": "Beitrag lesen ↗",
+   "source": "machinelearning.apple.com · Beitrag vom 15.10., HN-Diskussion vom 16.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Postgres 19",
+   "title": "PostgreSQL 19 verschoben: KI-Reviews finden mehr Fehler, als das Team abarbeiten kann.",
+   "body": "Die PostgreSQL Global Development Group hat das Release von PostgreSQL 19 auf etwa den 19. November verschoben und acht bis zehn größere Features zurückgestellt. Laut Committer Peter Eisentraut liegt das mit an den neu eingeführten LLM-gestützten Code-Reviews: Sie decken neben architektonischen Defekten eine lange Liste kleinerer Edge-Case-Fehler auf, die früher erst nach dem Release aufgefallen wären - vierzig Defektberichte mit je kleinen Fixes summieren sich eben. Die Qualitätslatte sei nach dem Schreiben der Features angehoben worden; mit Vibe Coding habe das nichts zu tun.",
+   "takeaway": "Ein reales Beispiel dafür, wie KI-Reviews Entwicklungszyklen verändern: erstmal mehr Arbeit, langfristig bessere Releases.",
+   "url": "https://www.theregister.com/databases/2026/10/16/postgres-19-delayed-after-ai-reviewers-find-more-bugs-than-humans-can-fix/5303471",
+   "cta": "Bericht lesen ↗",
+   "source": "theregister.com · Bericht vom 16.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Big Fish",
+   "title": "Big Fish: ein 37 Jahre alter OpenBSD-Kernel-Bug wird zur Root-Shell.",
+   "body": "Das Sicherheitsunternehmen Calif beschreibt am 16. Oktober den Exploit eines OpenBSD-Kernel-Bugs, dessen Wurzel rund 37 Jahre bis in die originalen BSD-Quellen zurückreicht: Ein Zähler für Shared-Memory-Verknüpfungen war als vorzeichenbehafteter 16-Bit-Short definiert. Wer oft genug einen Prozess mit Shared Memory forkt, lässt den Zähler überlaufen - und landet mit einer Root-Shell. Calif hatte die Lücke samt Patch-Vorschlag an das OpenBSD-Projekt gemeldet.",
+   "takeaway": "Ein Lehrstück: selbst im als besonders sicher geltenden OpenBSD schlummerte seit den 80ern ein simpler Integer-Overflow.",
+   "url": "https://calif.io/research/big-fish",
+   "cta": "Analyse lesen ↗",
+   "source": "calif.io · Analyse vom 16.10."
   }
  ]
 }
