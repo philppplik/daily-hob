@@ -3,9 +3,9 @@
  "date": "2026-10-17",
  "title": "Daily Hob vom Samstag, 17.10.",
  "headline": "Ein Blitz von DeepSeek,\nein Tacho für lokale Modelle.",
- "teaser": "5 Catches: DeepSeek-V4.1-Flash-1017, Llmspeed, das Roadster-Spiel, antirez' C64-Mainboard-Simulator und lithos-metal mit 168 Tokens pro Sekunde auf Apple Silicon.",
- "intro": "Der Samstag bringt ein Modell-Update aus China, ein Werkzeug für die Hardware-Frage, ein Minispiel zur Tesla-Show - und am Nachmittag Retro-Handwerk von antirez und schnelle Inferenz auf Apple Silicon.",
- "notes": "Laufende Ausgabe für Samstag, 17. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: Hugging Face, llmspeed.dev, roadster.pavlin.dev, GitHub (antirez, lithos-ai). Alle Benchmark-Angaben stammen von den Anbietern, nichts ist unabhängig gemessen.",
+ "teaser": "7 Catches: DeepSeek-V4.1-Flash-1017, Llmspeed, das Roadster-Spiel, antirez' C64-Simulator, lithos-metal, ein ESP32-Emulator für den Browser und transparente Hähnchenbrust.",
+ "intro": "Der Samstag bringt ein Modell-Update aus China, Werkzeug für Hardware-Fragen, Retro-Handwerk und schnelle Inferenz - und am Abend Embedded-Spielerei im Browser plus ein physikalischer Partytrick mit echtem Paper dahinter.",
+ "notes": "Laufende Ausgabe für Samstag, 17. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: Hugging Face, llmspeed.dev, roadster.pavlin.dev, GitHub (antirez, lithos-ai, mikroverk), chillphysicsenjoyer.substack.com. Alle Benchmark-Angaben stammen von den Anbietern, nichts ist unabhängig gemessen.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: ein Tachobogen aus Strichen mit einem Zeiger aus einer einzigen Linie, daneben eine gestrichelte Kurve als Raketenspur, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -59,6 +59,26 @@
    "url": "https://github.com/lithos-ai/lithos-metal",
    "cta": "Repo ansehen ↗",
    "source": "github.com · HN-Diskussion vom 17.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "esp32sim",
+   "title": "esp32sim: ESP32-Firmware im Browser ausführen.",
+   "body": "Der quelloffene ESP32-Emulator esp32sim (MIT, in Rust geschrieben) führt echte Firmware ohne Hardware, Cloud oder Abo aus - lokal oder direkt im Browser. Er emuliert auf Instruktionsebene gleich vier ESP32-Chips über beide CPU-Architekturen von Espressif hinweg: Xtensa (ESP32, S3) und RISC-V (C3, C6).",
+   "takeaway": "Ideal zum schnellen Testen von Firmware ohne Breadboard - und als Demo, wie weit Browser-Emulation inzwischen ist.",
+   "url": "https://github.com/mikroverk/esp32sim",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · Show HN vom 17.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "Transparentes Hähnchen",
+   "title": "Mit Dorito-Staub Hähnchenbrust transparent machen.",
+   "body": "Der Blog Casual Physics Enjoyer greift am 17. Oktober ein echtes Paper auf ('Achieving optical transparency in live animals with absorbing molecules') und erklärt den Versuch: Biologisches Gewebe wie Hähnchenbrust wird transparent, wenn man es mit Tartrazin tränkt - dem Lebensmittelfarbstoff, der auch Doritos ihre Farbe gibt. Der Farbstoff verändert die optischen Eigenschaften des Gewebes so, dass Licht kaum noch gestreut wird.",
+   "takeaway": "Klingt wie ein Scherz, ist aber ernsthafte Physik - und eine schöne Erklärung, warum Gewebe undurchsichtig ist.",
+   "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
+   "cta": "Beitrag lesen ↗",
+   "source": "chillphysicsenjoyer.substack.com · Beitrag vom 17.10."
   }
  ]
 }
