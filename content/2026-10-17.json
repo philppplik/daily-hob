@@ -1,0 +1,44 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-17",
+ "date": "2026-10-17",
+ "title": "Daily Hob vom Samstag, 17.10.",
+ "headline": "Ein Blitz von DeepSeek,\nein Tacho für lokale Modelle.",
+ "teaser": "3 Catches am Vormittag: DeepSeek-V4.1-Flash-1017, Llmspeed zum Probefühlen lokaler LLM-Geschwindigkeit und das Roadster-Spiel mit fünf Sekunden Flugzeit.",
+ "intro": "Der Samstag startet mit einem Modell-Update aus China, einem Webtool für alle, die über LLM-Hardware nachdenken, und einem Minispiel, das Teslas gestrige Show aufs Korn nimmt. Diese Ausgabe wächst über den Tag.",
+ "notes": "Laufende Ausgabe für Samstag, 17. Oktober 2026 (Berliner Zeit), Stand Vormittag. Quellen: Hugging Face, llmspeed.dev, roadster.pavlin.dev. Alle Benchmark-Angaben stammen von den Anbietern, nichts ist unabhängig gemessen.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein Tachobogen aus Strichen mit einem Zeiger aus einer einzigen Linie, daneben eine gestrichelte Kurve als Raketenspur, ein gelber Kreis und ein mintfarbenes Quadrat",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "KI",
+   "short": "DeepSeek Flash",
+   "title": "DeepSeek-V4.1-Flash-1017: schnelleres Modell-Update mit offenen Gewichten.",
+   "body": "DeepSeek hat mit Version V4.1-Flash-1017 ein Update seines Flash-Modells auf Hugging Face veröffentlicht. Laut Modellkarte verbessert es Reasoning, Coding, Agentenaufgaben und visuelle Benchmarks spürbar und reduziert gleichzeitig Ausführungszeit und Ausgabelänge - Aufgaben sollen so schneller und günstiger fertig werden. In der eigenen Tabelle liegt das Modell bei Terminal-Bench 4.0 mit 42,3 Punkten deutlich vor dem Vorgänger (31,2), bleibt bei einigen Werten aber hinter GPT-5.6 Sol und Opus 5.",
+   "takeaway": "Solides Zwischenupdate mit offenen Gewichten; die Benchmark-Zahlen sind Herstellerangaben, die Richtung (mehr Tempo, kürzere Antworten) ist aber klar.",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "cta": "Modellkarte lesen ↗",
+   "source": "huggingface.co · Modellkarte vom 17.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Llmspeed",
+   "title": "Llmspeed: erst fühlen, wie schnell ein lokales LLM läuft, dann Hardware kaufen.",
+   "body": "Llmspeed ist ein quelloffenes Webtool, das zeigt, mit welcher Geschwindigkeit lokale Sprachmodelle auf konkreter Hardware laufen - bevor man sie kauft. Die Schätzwerte für einen kurzen Prompt auf einem Gerät stammen aus Community-Messungen (unter anderem r/LocalLLaMA und localscore.ai), ergänzt um Hochrechnungen für ähnliche Setups. Ideal, um etwa Mac-, GPU- oder Mini-PC-Varianten für ein eigenes Modell durchzuspielen.",
+   "takeaway": "Praktischer Realitätscheck vor jeder Hardware-Anschaffung fürs lokale Modell - kostenlos und quelloffen.",
+   "url": "https://llmspeed.dev/",
+   "cta": "Ausprobieren ↗",
+   "source": "llmspeed.dev · Show HN vom 17.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "Roadster Thrust",
+   "title": "Roadster Thrust: mit 600 Litern Luft über geparkte Teslas fliegen.",
+   "body": "Einen Tag nach Teslas Roadster-Show ist das erste Minispiel dazu da: In Roadster Thrust fliegt man per Gedrückthalten über eine Straße voller geparkter Teslas - der Vorrat von 600 Litern Luft reicht für etwa fünf Sekunden Schub. Läuft im Browser, auf dem Handy im Querformat.",
+   "takeaway": "Fünf Minuten Spaß und ein hübscher Kommentar zur gestrigen Show - mehr muss das nicht sein.",
+   "url": "https://roadster.pavlin.dev",
+   "cta": "Spielen ↗",
+   "source": "roadster.pavlin.dev · Show HN vom 17.10."
+  }
+ ]
+}
