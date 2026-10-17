@@ -3,9 +3,9 @@
  "date": "2026-10-17",
  "title": "Daily Hob vom Samstag, 17.10.",
  "headline": "Ein Blitz von DeepSeek,\nein Tacho für lokale Modelle.",
- "teaser": "3 Catches am Vormittag: DeepSeek-V4.1-Flash-1017, Llmspeed zum Probefühlen lokaler LLM-Geschwindigkeit und das Roadster-Spiel mit fünf Sekunden Flugzeit.",
- "intro": "Der Samstag startet mit einem Modell-Update aus China, einem Webtool für alle, die über LLM-Hardware nachdenken, und einem Minispiel, das Teslas gestrige Show aufs Korn nimmt. Diese Ausgabe wächst über den Tag.",
- "notes": "Laufende Ausgabe für Samstag, 17. Oktober 2026 (Berliner Zeit), Stand Vormittag. Quellen: Hugging Face, llmspeed.dev, roadster.pavlin.dev. Alle Benchmark-Angaben stammen von den Anbietern, nichts ist unabhängig gemessen.",
+ "teaser": "5 Catches: DeepSeek-V4.1-Flash-1017, Llmspeed, das Roadster-Spiel, antirez' C64-Mainboard-Simulator und lithos-metal mit 168 Tokens pro Sekunde auf Apple Silicon.",
+ "intro": "Der Samstag bringt ein Modell-Update aus China, ein Werkzeug für die Hardware-Frage, ein Minispiel zur Tesla-Show - und am Nachmittag Retro-Handwerk von antirez und schnelle Inferenz auf Apple Silicon.",
+ "notes": "Laufende Ausgabe für Samstag, 17. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: Hugging Face, llmspeed.dev, roadster.pavlin.dev, GitHub (antirez, lithos-ai). Alle Benchmark-Angaben stammen von den Anbietern, nichts ist unabhängig gemessen.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: ein Tachobogen aus Strichen mit einem Zeiger aus einer einzigen Linie, daneben eine gestrichelte Kurve als Raketenspur, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -39,6 +39,26 @@
    "url": "https://roadster.pavlin.dev",
    "cta": "Spielen ↗",
    "source": "roadster.pavlin.dev · Show HN vom 17.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "C64-Simulator",
+   "title": "antirez simuliert das C64-Mainboard - Pin für Pin.",
+   "body": "Salvatore Sanfilippo (antirez) hat einen Commodore-64-Hardware-Simulator veröffentlicht: c64-hw-sim bildet das Mainboard ASSY 250407 Pin für Pin nach, inklusive Netzliste der Platine und dem Verhalten jedes Chips an seinen Anschlüssen. Man kann einzelne Chip-Beine anheben, auf Masse oder Plus 5 Volt legen, Chips aus dem Sockel ziehen oder Widerstände öffnen - und beobachtet am Bildschirm, an der Tastatur und an jedem Signal, was die Maschine dann tut. Das Programm kennt dabei keine typischen Defekte, es simuliert nur die Elektrik.",
+   "takeaway": "Ein Lehrstück in Hardware-Verständnis und ein Spielplatz für alle, die wissen wollen, warum ein C64 ausfällt - und wie er tickt.",
+   "url": "https://github.com/antirez/c64-hw-simulator",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · HN-Diskussion vom 17.10."
+  },
+  {
+   "category": "KI",
+   "short": "lithos-metal",
+   "title": "lithos-metal: 168 Tokens pro Sekunde mit Qwen3.8-27B auf Apple Silicon.",
+   "body": "Die vollständig quelloffene Inferenz-Engine lithos-metal (Apache-2.0) bringt eigene LLM-Inferenz-Kernels und ein Serving-Framework für Apple Silicon. Laut Projektseite erreicht sie Qwen3.8-27B mit 168 Tokens pro Sekunde auf einem 40-Kern-M5 Max. Das Projekt existiert seit Anfang Oktober und traf heute auf größeres Interesse.",
+   "takeaway": "Weiterer Beleg, wie schnell lokale Inferenz auf Apple-Hardware wird. Die Zahl stammt vom Anbieter, der Code liegt offen.",
+   "url": "https://github.com/lithos-ai/lithos-metal",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · HN-Diskussion vom 17.10."
   }
  ]
 }
