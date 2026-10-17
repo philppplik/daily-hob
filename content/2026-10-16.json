@@ -3,9 +3,9 @@
  "date": "2026-10-16",
  "title": "Daily Hob vom Freitag, 16.10.",
  "headline": "Ein fliegender Roadster,\nein Werkzeugkasten, ein Museumsstück.",
- "teaser": "8 Catches: Teslas Roadster-Show, dotnetup, BeBox-Emulator, der 24.000-Dollar-Rust-Port, die Folders-Sprache, Muse Spark Open auf vier Mac Studios, die Postgres-19-Verschiebung und ein 37 Jahre alter OpenBSD-Bug.",
- "intro": "Der Freitag bringt eine wilde Autoshow, Werkzeuge und Retro-Freude - und am Abend drei dicke Brocken: Apple zeigt, wie Metas offenes Riesenmodell auf dem Schreibtisch läuft, Postgres verschiebt ein Release wegen KI-Reviews, und ein fast 40 Jahre alter Bug fällt in sich zusammen.",
- "notes": "Laufende Ausgabe für Freitag, 16. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: Hersteller- und Projektseiten, Apple Machine Learning Research, Microsoft .NET Blog, The Verge, The Register, danieltemkin.com, calif.io. Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts ist unabhängig gemessen.",
+ "teaser": "12 Catches: das gelöste NIST-Kurven-Rätsel, Mercors Benchmark-Lücke, FLUX 3 Image Klein, llama.cpp auf der PS5, Muse Spark Open auf Mac Studios, Postgres 19 verschoben, TS_Rust, Big Fish, Teslas Roadster, dotnetup, BeBox und die Folders-Sprache.",
+ "intro": "Der Freitag war ein Fest: Ein Jahrzehnte altes Krypto-Rätsel fällt durch Claude, eine Benchmark-Landkarte relativiert die Job-Apokalypse, Black Forest Labs öffnet ein neues Bildmodell, llama.cpp erobert die PlayStation - dazu eine Autoshow, ein verschobenes Postgres-Release und ein Kernel-Bug aus den 80ern.",
+ "notes": "Rückblick auf Freitag, 16. Oktober 2026 (Berliner Zeit). Quellen: Hersteller-, Projekt- und Forschungsseiten (Anthropic, Black Forest Labs, Apple, Mercor), The Register, The Verge, words.filippo.io, danieltemkin.com, calif.io, GitHub. Alle Leistungsangaben stammen von den Anbietern oder Autoren, nichts ist unabhängig gemessen.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: zwei dünne Linien als Straße, die zu einem Looping ansteigen, ein auf reine Geometrie reduziertes Auto, dazu Punkte, Bögen, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -89,6 +89,46 @@
    "url": "https://calif.io/research/big-fish",
    "cta": "Analyse lesen ↗",
    "source": "calif.io · Analyse vom 16.10."
+  },
+  {
+   "category": "KI",
+   "short": "NIST-Seeds gelöst",
+   "title": "Claude lüftet das Geheimnis der ECDSA-Kurven: Die NIST-Seeds waren nur Zeitstempel.",
+   "body": "Ein Team bei Anthropic hat das jahrzehntealte Rätsel um die Herkunft der Seeds der NIST-Elliptische-Kurven gelöst - der Kurven hinter ECDSA, einem der meistgenutzten Krypto-Standards. Die Seeds, deren SHA-1-Hash die Kurvenparameter erzeugt, stammen demnach aus dem alten drand48-Zufallsgenerator, gestartet mit der Uhrzeit in den Jahren 1997/98. Damit endet 25 Jahre Spekulation über eine mögliche Hintertür. Filippo Valsorda bestätigt: Seine vor drei Jahren ausgelobte Bounty ist am 15. Oktober eingelöst worden, das Preisgeld spendet das Team an die ISRG, die Non-Profit hinter Let's Encrypt. Anthropic betont: Keine Handlung nötig, die Kurven gelten als vertrauenswürdig.",
+   "takeaway": "Das beruhigendste Ende, das diese Geschichte haben konnte: keine Verschwörung, nur 90er-Jahre-Zufall mit Zeitstempel.",
+   "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+   "cta": "Analyse lesen ↗",
+   "source": "anthropic.com · Analyse vom 16.10., Bestätigung auf words.filippo.io"
+  },
+  {
+   "category": "KI",
+   "short": "Benchmark-Lücke",
+   "title": "Mercor: KI-Benchmarks decken nur einen Bruchteil echter Arbeit ab.",
+   "body": "Mercor hat eine Benchmark Map der US-Wirtschaft veröffentlicht und 29 gängige KI-Benchmarks gegen die Berufslandschaft des O*NET-Katalogs gelegt. Ergebnis: Von 923 Berufen sind nur 208 überhaupt in Benchmarks vertreten, von 18.797 dokumentierten Arbeitsaufgaben nur 924. Die interaktive Karte zeigt je Berufsgruppe, welcher Anteil der Aufgaben durch bestehende Benchmarks abgedeckt ist.",
+   "takeaway": "Gute Realitätsbasis für jede Debatte über KI und Arbeit: Was Benchmarks messen, ist bisher nur ein kleiner Ausschnitt dessen, was Menschen beruflich tun.",
+   "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+   "cta": "Karte ansehen ↗",
+   "source": "mercor.com · Veröffentlichung vom 16.10."
+  },
+  {
+   "category": "KI",
+   "short": "FLUX 3 Klein",
+   "title": "FLUX 3 Image Klein: offene Gewichte, 5,6 Milliarden Parameter, native 4K-Erzeugung.",
+   "body": "Black Forest Labs hat am 15. Oktober FLUX 3 Image Klein veröffentlicht, ein offenes Bildmodell mit 5,6 Milliarden Parametern. Es beherrscht Text-zu-Bild, Bildbearbeitung und Generierung mit bis zu zehn Referenzbildern. Vom großen FLUX 3 Image übernimmt es native 4K-Erzeugung, pixelgenaue Bearbeitung und Bounding Boxes, mit denen sich die Position von Elementen oder der Bereich einer Bearbeitung festlegen lässt.",
+   "takeaway": "Das aktuell spannendste offene Bildmodell für lokale Workflows - klein genug fürs eigene Setup, mit den Fähigkeiten des großen Bruders.",
+   "url": "https://bfl.ai/blog/flux-3-image-klein",
+   "cta": "Ankündigung lesen ↗",
+   "source": "bfl.ai · Ankündigung vom 15.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "PS5LM",
+   "title": "PS5LM: llama.cpp auf der jailbreakten PlayStation 5.",
+   "body": "Das Open-Source-Projekt PS5LM (GPLv3) bringt llama.cpp nativ auf die GPU einer gejailbreakten PlayStation 5: Beliebige GGUF-Modelle laufen direkt auf der Konsole, startend mit Qwen 3.8. Dazu gibt es eine OpenAI- und Anthropic-kompatible API, sodass jedes Gerät im Netzwerk die PS5 als lokalen LLM-Server nutzen kann, plus eine eigene Oberfläche für den TV.",
+   "takeaway": "Halb Spielerei, halb ernst gemeinter Heimserver: Wer eine jailbreakte PS5 herumstehen hat, bekommt einen stillen LLM-Server im Wohnzimmer.",
+   "url": "https://github.com/cobanov/PS5LM",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · HN-Diskussion vom 16.10."
   }
  ]
 }
