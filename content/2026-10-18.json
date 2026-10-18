@@ -2,10 +2,10 @@
  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-18",
  "date": "2026-10-18",
  "title": "Daily Hob vom Sonntag, 18.10.",
- "headline": "DeepSeek durchsucht das Web,\nein Haken fürs Mitdenken.",
- "teaser": "3 Catches am Vormittag: DeepSeeks Search- und Fetch-API, Sphinx als Verständnis-Check für Agenten-Code und 500 Uhren in einer HTML-Datei.",
- "intro": "Der Sonntag startet mit einer günstigen Web-Suche für Agenten, einem Git-Hook gegen blindes Agenten-Vertrauen und einer Uhr-Sammlung aus einer einzigen Datei. Diese Ausgabe wächst über den Tag.",
- "notes": "Laufende Ausgabe für Sonntag, 18. Oktober 2026 (Berliner Zeit), Stand Vormittag. Quellen: api-docs.deepseek.com, sphinx-six-theta.vercel.app, tkgally.github.io. Alle Preis- und Leistungsangaben stammen von den Anbietern.",
+ "headline": "DeepSeek durchsucht das Web,\nAnthropic zählt Agenten-Stunden.",
+ "teaser": "6 Catches am Sonntag: DeepSeeks Search-API, Sphinx, 500 Uhren, Anthropics Arbeitsplatz-Studie, TEE-Angriffe und ein Mikromanipulator zum Selberbauen.",
+ "intro": "Der Sonntag bringt eine günstige Web-Suche für Agenten, einen Git-Hook gegen blindes Agenten-Vertrauen, Anthropics interne Arbeitsplatz-Studie, eine schonungslose TEE-Angriffsliste und Präzisions-Hardware zum Nachbauen. Diese Ausgabe wächst über den Tag.",
+ "notes": "Laufende Ausgabe für Sonntag, 18. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: api-docs.deepseek.com, sphinx-six-theta.vercel.app, tkgally.github.io, anthropic.com, alinush.github.io, github.com. Alle Preis-, Leistungs- und Studienangaben stammen von den Anbietern.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: eine Lupe als Kreis mit Griff über einem Feld aus Punkten und dünnen Linien, dazu ein kleines Spiralzifferblatt, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -39,6 +39,36 @@
    "url": "https://tkgally.github.io/500-clocks/",
    "cta": "Anschauen ↗",
    "source": "tkgally.github.io · Show HN vom 18.10."
+  },
+  {
+   "category": "KI",
+   "short": "Anthropic-Jobs",
+   "title": "Wie KI die Arbeit bei Anthropic verändert: Agenten-Stunden schlagen Menschen 6 zu 1.",
+   "body": "Anthropic hat am 16. Oktober eine interne Studie veröffentlicht, wie KI die eigene Belegschaft umbaut - mit Daten zu Einstellungen, Output und Kalendern plus 17 Mitarbeiter-Interviews. Kernaussagen: Im August überstiegen die Arbeitsstunden interaktiver KI-Agenten die der Angestellten um das Sechsfache. Der Anteil technischer Junior-Stellen sank seit Anfang 2025 von 21 auf 14 Prozent, bei Neueinstellungen von 27 auf 9 Prozent. Gleichzeitig steigt die Produktivität pro Person deutlich, und menschliche Aufmerksamkeit wird zum Flaschenhals: Schon Nicht-Techniker bräuchten laut Studie die halbe Arbeitswoche, nur um die Ausgaben ihrer Agenten zu lesen. Einstellungsmanager gewichten inzwischen Eigenständigkeit und Urteilsvermögen stärker als reines Fachwissen.",
+   "takeaway": "Selten so konkret: Ein Frontier-Labor als Frühwarnsystem dafür, wie KI Arbeit, Einstellung und Karrierestarts verändert - mit Zahlen statt Meinung.",
+   "url": "https://www.anthropic.com/research/employment-at-anthropic",
+   "cta": "Studie lesen ↗",
+   "source": "anthropic.com · Studie vom 16.10., HN-Diskussion vom 18.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "TEE-Angriffe",
+   "title": "It's time to talk about TEEs: die Angriffsliste gegen Trusted Execution Environments.",
+   "body": "Alin Tomescu legt in einem Beitrag vom 11. Oktober eine Übersicht der bekannten Angriffe auf Trusted Execution Environments vor - und empfiehlt, TEE-basierte Anwendungen neu zu bewerten. Die Liste reicht von Enclave-Bugs (etwa Speicherfehlern in Signals Kontaktdiscovery) über gefälschte Remote-Attestierungen (Foreshadow, SGAxe, ÆPIC Leak) bis zu physischen DDR-Angriffen wie WireTap.fail, TEE.fail, Battering RAM und DDRrop aus den Jahren 2024 bis 2026. Sein Punkt: Hersteller wie Intel und AMD konkurrieren vor allem über Leistung, und die Komplexität moderner CPUs samt Seitenkanälen macht TEE-Sicherheitsversprechen brüchig.",
+   "takeaway": "Wer SGX, SEV und Co. als Vertrauensanker einplant, sollte diese Liste kennen - kompakt und schonungslos.",
+   "url": "https://alinush.github.io/tee",
+   "cta": "Beitrag lesen ↗",
+   "source": "alinush.github.io · Beitrag vom 11.10., HN-Diskussion vom 18.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "MicroManipulator",
+   "title": "Open MicroManipulator: Sub-Mikrometer-Präzision zum Selberbauen.",
+   "body": "Das Open-Source-Projekt Open MicroManipulator ist eine motorisierte XYZ-Positionierplattform mit Submikrometer-Genauigkeit - gedacht für optische Justage, das Prüfen elektronischer Bauteile und Mikroskopie, und bewusst günstig sowie einfach nachbaubar. Die Elektronik und Software liegen in C, C++ und Python vor; das Repo sammelt aktuell fast 1900 Sterne.",
+   "takeaway": "Laborgerät-Niveau als Selbstbauprojekt - schönes Beispiel, wie Open Hardware Präzision demokratisiert.",
+   "url": "https://github.com/0x23/MicroManipulatorStepper",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · HN-Diskussion vom 18.10."
   }
  ]
 }
