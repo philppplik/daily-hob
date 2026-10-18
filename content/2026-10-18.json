@@ -2,10 +2,10 @@
  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-18",
  "date": "2026-10-18",
  "title": "Daily Hob vom Sonntag, 18.10.",
- "headline": "DeepSeek durchsucht das Web,\nAnthropic zählt Agenten-Stunden.",
- "teaser": "6 Catches am Sonntag: DeepSeeks Search-API, Sphinx, 500 Uhren, Anthropics Arbeitsplatz-Studie, TEE-Angriffe und ein Mikromanipulator zum Selberbauen.",
- "intro": "Der Sonntag bringt eine günstige Web-Suche für Agenten, einen Git-Hook gegen blindes Agenten-Vertrauen, Anthropics interne Arbeitsplatz-Studie, eine schonungslose TEE-Angriffsliste und Präzisions-Hardware zum Nachbauen. Diese Ausgabe wächst über den Tag.",
- "notes": "Laufende Ausgabe für Sonntag, 18. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: api-docs.deepseek.com, sphinx-six-theta.vercel.app, tkgally.github.io, anthropic.com, alinush.github.io, github.com. Alle Preis-, Leistungs- und Studienangaben stammen von den Anbietern.",
+ "headline": "DeepSeek durchsucht das Web,\ndas Web macht dicht.",
+ "teaser": "9 Catches am Sonntag: DeepSeeks Search-API, Sphinx, 500 Uhren, Anthropics Arbeitsplatz-Studie, TEE-Angriffe, Mikro-Hardware zweimal, macOS-OpenGL-Panne und das Web gegen Agenten.",
+ "intro": "Der Sonntag bringt eine günstige Web-Suche für Agenten, einen Git-Hook fürs Mitdenken, Anthropics Arbeitsplatz-Studie, Mikrometer-Hardware zum Nachbauen, eine macOS-Panne für CAD-Nutzer und die Frage, wer Agenten ins Web lässt. Der Rückblick auf den ganzen Tag.",
+ "notes": "Ausgabe für Sonntag, 18. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: api-docs.deepseek.com, sphinx-six-theta.vercel.app, tkgally.github.io, anthropic.com, alinush.github.io, github.com, forum.kicad.info, theverge.com. Alle Preis-, Leistungs- und Studienangaben stammen von den Anbietern.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: eine Lupe als Kreis mit Griff über einem Feld aus Punkten und dünnen Linien, dazu ein kleines Spiralzifferblatt, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -69,6 +69,36 @@
    "url": "https://github.com/0x23/MicroManipulatorStepper",
    "cta": "Repo ansehen ↗",
    "source": "github.com · HN-Diskussion vom 18.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "RepRapMicron",
+   "title": "RepRapMicron: 3D-Druck im Mikrometer-Maßstab aus der Bastelwerkstatt.",
+   "body": "Das Projekt µRepRap will einen RepRap - einen sich selbst replizierenden 3D-Drucker - bauen, der mit einfach verfügbaren Materialien im Mikrometer- und Submikrometer-Bereich fertigt. Die aktuelle Version PIKA V0.02 erreicht laut Projekt-Wiki etwa 1 Mikrometer wiederholbare Positionierung und zuverlässige 10-Mikrometer-Genauigkeit in einem Würfel von rund 8 Millimetern; damit wurden schon UV-Harz-Tropfen von 4 Mikrometern gesetzt und ein 0,5 Millimeter kleines Benchy in 4-Mikrometer-Schichten gedruckt. Möglich macht es die auf 3D-gedruckten Mikroskop-Plattformen des OpenFlexure-Projekts aufbauende Mechanik. Das Ziel dahinter: Mikrofertigung und MEMS-Bastelei für alle, so wie der RepRap einst den 3D-Druck demokratisiert hat.",
+   "takeaway": "Open Hardware auf neuem Level: Mikrometer-Fertigung ohne Reinraum und Millionenbudget - eines der spannendsten Maker-Projekte des Jahres.",
+   "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
+   "cta": "Wiki ansehen ↗",
+   "source": "github.com · HN-Diskussion vom 18.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "macOS-OpenGL",
+   "title": "macOS 15.8.2 bricht OpenGL: KiCad, PrusaSlicer und Co. streiken.",
+   "body": "Das Update auf macOS 15.8.2 hat offenbar die OpenGL-Unterstützung beschädigt: Betroffene berichten von Fehlern wie 'switching framebuffer: invalid framebuffer operation' und Abstürzen. Auf den Barrikaden stehen vor allem Werkzeuge mit OpenGL-Canvas - im KiCad-Forum häufen sich seit dem 12. Oktober Meldungen, auch PrusaSlicer (leeres Fenster) und die Roon-App sind betroffen. Apples Entwicklerforum füllt sich mit Berichten zu NSOpenGLView-Problemen.",
+   "takeaway": "Wer auf dem Mac mit CAD-, EDA- oder Slicer-Tools arbeitet: Das 15.8.2-Update besser erst nach einem Fix einspielen.",
+   "url": "https://forum.kicad.info/t/macos-15-8-2-error-switching-framebuffer-invalid-framebuffer-operation-opengl-broken/71986",
+   "cta": "Thread lesen ↗",
+   "source": "forum.kicad.info · Thread seit dem 12.10., HN-Diskussion vom 18.10."
+  },
+  {
+   "category": "KI",
+   "short": "Agenten-Blockade",
+   "title": "Das Web macht dicht: Websites sperren KI-Agenten aus.",
+   "body": "Ein Verge-Bericht vom 17. Oktober beschreibt, wie große Dienste KI-Agenten zunehmend aussperren, während OpenAI, Meta und Google gleichzeitig versprechen, dass Agenten alles für uns erledigen. Yelp lässt laut TechCrunch nur Agenten, die für sein Datenlizenzprogramm zahlen, Delta Air Lines verhindert Ticketbuchungen durch Agenten, und JPMorgan Chase sowie Charles Schwab sperren Agenten aus Sicherheitsgründen vom Kontozugriff aus. Nutzer melden zudem, dass früher funktionierende Seiten wie Cars.com und Amtrak nicht mehr zugänglich sind. Amazon hatte bereits im letzten Jahr Perplexitys Shopping-Agenten verboten und den KI-Anbieter verklagt.",
+   "takeaway": "Der Agenten-Hype trifft auf die Realität des Webs: Ohne Deals und Standards wird aus 'das Internet für dich erledigen' ein Katz-und-Maus-Spiel.",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+   "cta": "Bericht lesen ↗",
+   "source": "theverge.com · Artikel vom 17.10., HN-Diskussion vom 18.10."
   }
  ]
 }
