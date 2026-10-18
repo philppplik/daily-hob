@@ -1,0 +1,44 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-18",
+ "date": "2026-10-18",
+ "title": "Daily Hob vom Sonntag, 18.10.",
+ "headline": "DeepSeek durchsucht das Web,\nein Haken fürs Mitdenken.",
+ "teaser": "3 Catches am Vormittag: DeepSeeks Search- und Fetch-API, Sphinx als Verständnis-Check für Agenten-Code und 500 Uhren in einer HTML-Datei.",
+ "intro": "Der Sonntag startet mit einer günstigen Web-Suche für Agenten, einem Git-Hook gegen blindes Agenten-Vertrauen und einer Uhr-Sammlung aus einer einzigen Datei. Diese Ausgabe wächst über den Tag.",
+ "notes": "Laufende Ausgabe für Sonntag, 18. Oktober 2026 (Berliner Zeit), Stand Vormittag. Quellen: api-docs.deepseek.com, sphinx-six-theta.vercel.app, tkgally.github.io. Alle Preis- und Leistungsangaben stammen von den Anbietern.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: eine Lupe als Kreis mit Griff über einem Feld aus Punkten und dünnen Linien, dazu ein kleines Spiralzifferblatt, ein gelber Kreis und ein mintfarbenes Quadrat",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "KI",
+   "short": "DeepSeek Search",
+   "title": "DeepSeek startet Search- und Fetch-API: 0,75 Dollar pro 1000 Aufrufen.",
+   "body": "DeepSeek bietet seine Suche jetzt als API an: Die Search API liefert strukturierte Ergebnisse aus der hauseigenen Suchmaschine, die Fetch API holt eine einzelne Webseite und gibt sie als Markdown zurück. Beide laufen als schlichte JSON-APIs mit dem gleichen Bearer-Token wie die Modell-API und sind für Agenten und RAG-Anwendungen gedacht. Abgerechnet wird nur, was funktioniert: 0,75 Dollar pro 1000 erfolgreichen Anfragen, leere Ergebnisse und Timeouts sind kostenlos.",
+   "takeaway": "Günstiger Baustein für Agenten mit Webzugriff - vor allem in Kombination mit den eigenen Modellen interessant.",
+   "url": "https://api-docs.deepseek.com/guides/search/",
+   "cta": "Doku lesen ↗",
+   "source": "api-docs.deepseek.com · HN-Diskussion vom 18.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Sphinx",
+   "title": "Sphinx: ein Git-Hook, der dich zum Code deines Agenten abfragt.",
+   "body": "Sphinx ist ein Git-Hook für die Arbeit mit Coding-Agenten: Bevor der Code des Agenten rausgeht, stellt er dir eine Frage dazu, was der neue Code konkret tut - etwa wie sich ein Webhook-Handler bei doppelt zugestellten Events verhält. Das Motto: Denken auslagern ja, Verständnis nicht. Die Installation läuft per npm, als Modell-Backend dient der vorhandene Coding-Agent, OpenRouter oder jeder OpenAI-kompatible Endpunkt; es soll mit minimalen Tokens auskommen.",
+   "takeaway": "Nette Idee gegen blindes Durchwinken von Agenten-Code: ein kurzer Verständnis-Check vorm Push.",
+   "url": "https://sphinx-six-theta.vercel.app/",
+   "cta": "Ansehen ↗",
+   "source": "sphinx-six-theta.vercel.app · Show HN vom 18.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "500 Clocks",
+   "title": "500 Uhren in einer einzigen 6,3-MB-HTML-Datei.",
+   "body": "Ein Autor hat 500 verschiedene Uhren-Designs in eine einzige 6,3 MB große HTML-Datei gepackt - alle laufen und lassen sich in Echtzeit oder beschleunigt bis zum 3600-Fachen betrachten. Gebaut wurde die Sammlung laut Autor mit Opus 5.5.",
+   "takeaway": "Kleine Spielerei mit Such-, Filter- und Zeitraffer-Funktion - und ein schönes Beispiel, wie viel in einer einzigen HTML-Datei stecken kann.",
+   "url": "https://tkgally.github.io/500-clocks/",
+   "cta": "Anschauen ↗",
+   "source": "tkgally.github.io · Show HN vom 18.10."
+  }
+ ]
+}
