@@ -3,13 +3,23 @@
  "date": "2026-10-17",
  "title": "Daily Hob vom Samstag, 17.10.",
  "headline": "Ein Blitz von DeepSeek,\nein Tacho für lokale Modelle.",
- "teaser": "7 Catches: DeepSeek-V4.1-Flash-1017, Llmspeed, das Roadster-Spiel, antirez' C64-Simulator, lithos-metal, ein ESP32-Emulator für den Browser und transparente Hähnchenbrust.",
- "intro": "Der Samstag bringt ein Modell-Update aus China, Werkzeug für Hardware-Fragen, Retro-Handwerk und schnelle Inferenz - und am Abend Embedded-Spielerei im Browser plus ein physikalischer Partytrick mit echtem Paper dahinter.",
- "notes": "Laufende Ausgabe für Samstag, 17. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: Hugging Face, llmspeed.dev, roadster.pavlin.dev, GitHub (antirez, lithos-ai, mikroverk), chillphysicsenjoyer.substack.com. Alle Benchmark-Angaben stammen von den Anbietern, nichts ist unabhängig gemessen.",
+ "teaser": "10 Catches: die OpenCode-Panne, DeepSeek-V4.1-Flash-1017, antirez' C64-Simulator, lithos-metal, Pele, Estlands Wahl-Quellcode, Llmspeed, esp32sim, transparente Hähnchenbrust und das Roadster-Spiel.",
+ "intro": "Der Samstag beginnt mit einer Sicherheitswarnung für OpenCode-Nutzer, bringt ein frisches DeepSeek-Update und Retro-Handwerk von antirez - und endet mit transparentem Hähnchen. Der Rückblick auf den ganzen Tag.",
+ "notes": "Rückblick auf Samstag, 17. Oktober 2026 (Berliner Zeit). Quellen: Hersteller- und Projektseiten, Hugging Face, GitHub, notebookcheck.net, pele.run, llmspeed.dev, chillphysicsenjoyer.substack.com. Alle Benchmark-Angaben stammen von den Anbietern, nichts ist unabhängig gemessen.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: ein Tachobogen aus Strichen mit einem Zeiger aus einer einzigen Linie, daneben eine gestrichelte Kurve als Raketenspur, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
  "sections": [
+  {
+   "category": "Wildcard",
+   "short": "OpenCode-Panne",
+   "title": "OpenCode gehackt: gespeicherte API-Schlüssel können abgeflossen sein.",
+   "body": "OpenCode hat Nutzer per E-Mail gewarnt: Unbekannte hatten Zugriff auf ein Altsystem, das gerade außer Betrieb genommen werden sollte. Dabei können in Workspaces gespeicherte API-Schlüssel - etwa für OpenAI und Anthropic - offengelegt worden sein; erste Nutzer berichten von unberechtigten Abbuchungen. Das Unternehmen rät zum sofortigen Widerruf der Schlüssel. Nach aktuellem Stand betrifft die Panne den Dienst OpenCode Console beziehungsweise gespeicherte Workspaces, nicht die reine Kommandozeilen-Nutzung des Coding-Agenten.",
+   "takeaway": "Wer OpenCode Console oder Workspaces mit hinterlegten Provider-Keys nutzt: Schlüssel jetzt widerrufen und neu setzen.",
+   "url": "https://www.notebookcheck.net/OpenCode-hacked-users-urged-to-revoke-their-API-keys.1426957.0.html",
+   "cta": "Bericht lesen ↗",
+   "source": "notebookcheck.net · Bericht vom 17.10., HN-Diskussion vom 17.10."
+  },
   {
    "category": "KI",
    "short": "DeepSeek Flash",
@@ -19,26 +29,6 @@
    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
    "cta": "Modellkarte lesen ↗",
    "source": "huggingface.co · Modellkarte vom 17.10."
-  },
-  {
-   "category": "Informatik",
-   "short": "Llmspeed",
-   "title": "Llmspeed: erst fühlen, wie schnell ein lokales LLM läuft, dann Hardware kaufen.",
-   "body": "Llmspeed ist ein quelloffenes Webtool, das zeigt, mit welcher Geschwindigkeit lokale Sprachmodelle auf konkreter Hardware laufen - bevor man sie kauft. Die Schätzwerte für einen kurzen Prompt auf einem Gerät stammen aus Community-Messungen (unter anderem r/LocalLLaMA und localscore.ai), ergänzt um Hochrechnungen für ähnliche Setups. Ideal, um etwa Mac-, GPU- oder Mini-PC-Varianten für ein eigenes Modell durchzuspielen.",
-   "takeaway": "Praktischer Realitätscheck vor jeder Hardware-Anschaffung fürs lokale Modell - kostenlos und quelloffen.",
-   "url": "https://llmspeed.dev/",
-   "cta": "Ausprobieren ↗",
-   "source": "llmspeed.dev · Show HN vom 17.10."
-  },
-  {
-   "category": "Wildcard",
-   "short": "Roadster Thrust",
-   "title": "Roadster Thrust: mit 600 Litern Luft über geparkte Teslas fliegen.",
-   "body": "Einen Tag nach Teslas Roadster-Show ist das erste Minispiel dazu da: In Roadster Thrust fliegt man per Gedrückthalten über eine Straße voller geparkter Teslas - der Vorrat von 600 Litern Luft reicht für etwa fünf Sekunden Schub. Läuft im Browser, auf dem Handy im Querformat.",
-   "takeaway": "Fünf Minuten Spaß und ein hübscher Kommentar zur gestrigen Show - mehr muss das nicht sein.",
-   "url": "https://roadster.pavlin.dev",
-   "cta": "Spielen ↗",
-   "source": "roadster.pavlin.dev · Show HN vom 17.10."
   },
   {
    "category": "Open Source",
@@ -54,11 +44,41 @@
    "category": "KI",
    "short": "lithos-metal",
    "title": "lithos-metal: 168 Tokens pro Sekunde mit Qwen3.8-27B auf Apple Silicon.",
-   "body": "Die vollständig quelloffene Inferenz-Engine lithos-metal (Apache-2.0) bringt eigene LLM-Inferenz-Kernels und ein Serving-Framework für Apple Silicon. Laut Projektseite erreicht sie Qwen3.8-27B mit 168 Tokens pro Sekunde auf einem 40-Kern-M5 Max. Das Projekt existiert seit Anfang Oktober und traf heute auf größeres Interesse.",
+   "body": "Die vollständig quelloffene Inferenz-Engine lithos-metal (Apache-2.0) erzeugt Metal-Megakernels für Apple Silicon und kombiniert Layer-Mixer-Kernel, GPU-seitige Generierungssteuerung und spekulatives Decoding. Laut Projektseite erreicht sie Qwen3.8-27B mit 168 Tokens pro Sekunde auf einem 40-Kern-M5 Max.",
    "takeaway": "Weiterer Beleg, wie schnell lokale Inferenz auf Apple-Hardware wird. Die Zahl stammt vom Anbieter, der Code liegt offen.",
    "url": "https://github.com/lithos-ai/lithos-metal",
    "cta": "Repo ansehen ↗",
    "source": "github.com · HN-Diskussion vom 17.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Pele",
+   "title": "Pele: Mermaid-Diagramme als thembare SVGs.",
+   "body": "Pele rendert Mermaid-Syntax in SVG - ohne eine einzige Abhängigkeit und laut Anbieter sechsmal kleiner als die Originalbibliothek. Das Besondere: Farben und Schriften steuert man über CSS-Variablen, Farbwechsel greifen ohne Neurendern. Diagramme lassen sich so sauber ins eigene Design-System einbetten, inklusive Dark Mode.",
+   "takeaway": "Endlich Mermaid-Diagramme, die zum eigenen Layout passen, statt umgekehrt. Schlanke Sache für Docs und Blogs.",
+   "url": "https://pele.run/",
+   "cta": "Ausprobieren ↗",
+   "source": "pele.run · HN-Diskussion vom 17.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Estlands Wahlcode",
+   "title": "Der Quellcode des estnischen Online-Wahlsystems - offen einsehbar.",
+   "body": "Estland legt den Quellcode seines Online-Wahlsystems IVXV offen auf GitHub - zur öffentlichen Prüfung, gepflegt und aktuell gehalten, geschrieben unter anderem in C, C++, Go, Java und Python. Das Repo selbst existiert seit 2017, am Samstag wurde es breit diskutiert: ein seltenes Beispiel dafür, wie transparent staatliche Software sein kann.",
+   "takeaway": "Kein neues Projekt, aber ein starkes Signal: Wahlsoftware, die sich öffentlich prüfen lässt.",
+   "url": "https://github.com/valimised/ivxv",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · HN-Diskussion vom 17.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Llmspeed",
+   "title": "Llmspeed: erst fühlen, wie schnell ein lokales LLM läuft, dann Hardware kaufen.",
+   "body": "Llmspeed ist ein quelloffenes Webtool, das zeigt, mit welcher Geschwindigkeit lokale Sprachmodelle auf konkreter Hardware laufen - bevor man sie kauft. Die Schätzwerte für einen kurzen Prompt auf einem Gerät stammen aus Community-Messungen (unter anderem r/LocalLLaMA und localscore.ai), ergänzt um Hochrechnungen für ähnliche Setups. Ideal, um etwa Mac-, GPU- oder Mini-PC-Varianten für ein eigenes Modell durchzuspielen.",
+   "takeaway": "Praktischer Realitätscheck vor jeder Hardware-Anschaffung fürs lokale Modell - kostenlos und quelloffen.",
+   "url": "https://llmspeed.dev/",
+   "cta": "Ausprobieren ↗",
+   "source": "llmspeed.dev · Show HN vom 17.10."
   },
   {
    "category": "Open Source",
@@ -79,6 +99,16 @@
    "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
    "cta": "Beitrag lesen ↗",
    "source": "chillphysicsenjoyer.substack.com · Beitrag vom 17.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "Roadster Thrust",
+   "title": "Roadster Thrust: mit 600 Litern Luft über geparkte Teslas fliegen.",
+   "body": "Einen Tag nach Teslas Roadster-Show ist das erste Minispiel dazu da: In Roadster Thrust fliegt man per Gedrückthalten über eine Straße voller geparkter Teslas - der Vorrat von 600 Litern Luft reicht für etwa fünf Sekunden Schub. Läuft im Browser, auf dem Handy im Querformat.",
+   "takeaway": "Fünf Minuten Spaß und ein hübscher Kommentar zur gestrigen Show - mehr muss das nicht sein.",
+   "url": "https://roadster.pavlin.dev",
+   "cta": "Spielen ↗",
+   "source": "roadster.pavlin.dev · Show HN vom 17.10."
   }
  ]
 }
