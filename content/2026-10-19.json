@@ -2,10 +2,10 @@
  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-19",
  "date": "2026-10-19",
  "title": "Daily Hob vom Montag, 19.10.",
- "headline": "Linux 7.3 ist da,\nCyberspace war mal eine Marke.",
- "teaser": "4 Catches am Morgen: Linux 7.3, DeepSeek V4.1 Flash in der unabhängigen Analyse, Superlite für Agenten-Specs und die Geschichte der Cyberspace-Marke.",
- "intro": "Der Montag startet mit einem frischen Kernel, unabhängig gemessenen DeepSeek-Zahlen, einem Agenten-Workflow für Claude Code und einer Anekdote aus den Neunzigern. Diese Ausgabe wächst über den Tag.",
- "notes": "Laufende Ausgabe für Montag, 19. Oktober 2026 (Berliner Zeit), Stand Morgen. Quellen: lwn.net, artificialanalysis.ai, contextfirst.blog, colo.to. Benchmark- und Messwerte stammen von den jeweiligen Anbietern.",
+ "headline": "Linux 7.3 ist da,\nMistral liest die Zeit.",
+ "teaser": "8 Catches am Montag: Linux 7.3, DeepSeek im unabhängigen Test, Mistrals Zeitreihen-Modelle, Let's Encrypt mit mehr Perspektiven, Agenten-Guides und ein Deslop-Modell.",
+ "intro": "Der Montag bringt einen frischen Kernel, unabhängig gemessene DeepSeek-Zahlen, Mistrals Zeitreihen-Foundation-Models, gehärtete Zertifikats-Validierung und zwei Agenten-Guides. Diese Ausgabe wächst über den Tag.",
+ "notes": "Laufende Ausgabe für Montag, 19. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: lwn.net, artificialanalysis.ai, contextfirst.blog, colo.to, mistral.ai, community.letsencrypt.org, github.com, 100toolkit.com. Benchmark- und Messwerte stammen von den jeweiligen Anbietern.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: ein Terminalfenster als Rechteck-Umriss mit Cursorblock, davon ausgehende Leiterbahnen mit Punkten, eine kleine Spirale, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -49,6 +49,46 @@
    "url": "https://colo.to/cyberspace.html",
    "cta": "Geschichte lesen ↗",
    "source": "colo.to · Beitrag vom Oktober 2026, HN-Diskussion vom 19.10."
+  },
+  {
+   "category": "KI",
+   "short": "Timestral",
+   "title": "Mistral stellt Timestral vor: Zeitreihen-Grundmodelle ab 5 Millionen Parametern.",
+   "body": "Mistral hat am 15. Oktober mit Timestral seine erste Familie von Zeitreihen-Foundation-Models vorgestellt: Vier Größen von 5 bis 209 Millionen Parametern liefern probabilistische, multivariate Vorhersagen und laufen laut Mistral effizient auf CPUs. Das größte Modell soll auf allen drei relevanten öffentlichen Benchmarks (GIFT-Eval, TIME und fev-bench) auf Platz 1 liegen - mit nur zwei Dritteln der Parameter des bisherigen Spitzenreiters. Die Modelle unterstützen vergangene und bekannte zukünftige Kovariaten, Fine-Tuning läuft über Mistral Forge. Einsatzfelder: Kapazitätsplanung, Energie, Lieferketten, Wartung.",
+   "takeaway": "Zeitreihen sind der stille Riese der Unternehmensdaten - ein starker, schlanker Open-Player in dieser Nische war überfällig. Benchmarks sind Herstellerangaben.",
+   "url": "https://mistral.ai/news/timestral/",
+   "cta": "Ankündigung lesen ↗",
+   "source": "mistral.ai · Ankündigung vom 15.10., HN-Diskussion vom 19.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Let's Encrypt",
+   "title": "Let's Encrypt validiert Domains künftig aus sieben Perspektiven.",
+   "body": "Let's Encrypt erhöht die Zahl der Netzwerk-Perspektiven bei der Domain-Validierung von vier auf sechs entfernte plus eine primäre - insgesamt also sieben Prüfanfragen pro Ausstellung. Hintergrund sind die Baseline Requirements: Ab dem 15. Dezember 2026 müssen Zertifizierungsstellen Multi-Perspective Issuance Corroboration mit mindestens fünf Remote-Perspektiven aus mindestens zwei RIR-Regionen einsetzen. Das erschwert BGP-basierte Angriffe auf die Validierung. Staging startet am 27. Oktober, der Produktiv-Rollout am 10. November; für Nutzer soll sich nichts ändern.",
+   "takeaway": "Unsichtbar, aber wichtig: Die Zertifikatsinfrastruktur des Webs wird gegen Routing-Angriffe gehärtet.",
+   "url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
+   "cta": "Ankündigung lesen ↗",
+   "source": "community.letsencrypt.org · Ankündigung vom 15.10., HN-Diskussion vom 19.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Harness 101",
+   "title": "Harness Engineering 101: Das LLM ist das Gehirn, das Harness der Körper.",
+   "body": "Ein neuer Open-Source-Guide erklärt den Bau von KI-Agenten von Grund auf: 'Harness Engineering 101' zerlegt, was um das Modell herum alles nötig ist - Tool-Loops, Kontext-Management, Ausführung und Kontrolle. Die These: Das LLM ist nur das Gehirn, das Harness ist der Körper - und genau dort entscheidet sich, ob ein Agent funktioniert.",
+   "takeaway": "Gutes Grundlagen-Material für alle, die Agenten nicht nur benutzen, sondern verstehen wollen.",
+   "url": "https://github.com/IsuruMaduranga/harness-engineering-101",
+   "cta": "Guide ansehen ↗",
+   "source": "github.com · HN-Diskussion vom 19.10."
+  },
+  {
+   "category": "KI",
+   "short": "Deslop-Modell",
+   "title": "Qwen3-4B ohne KI-Schreibtiks: auf einem MacBook Air trainiert.",
+   "body": "Ein Entwickler hat Qwen3-4B so feingetunt, dass das Modell ohne System-Prompt typische KI-Schreibtiks vermeidet - keine Gedankenstriche, kein 'nicht X, sondern Y', keine Dreierlisten. Trainiert wurde auf einem MacBook Air, das Modell läuft lokal über Ollama. Er nennt es treffend sein Deslop-Modell.",
+   "takeaway": "Charmantes Beispiel, wie gezieltes Fine-Tuning kleine Alltagsprobleme löst - und dass man dafür keine GPU-Farm braucht.",
+   "url": "https://100toolkit.com/blog/deslop-model/",
+   "cta": "Beitrag lesen ↗",
+   "source": "100toolkit.com · Show HN vom 19.10."
   }
  ]
 }
