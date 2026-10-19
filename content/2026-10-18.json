@@ -3,9 +3,9 @@
  "date": "2026-10-18",
  "title": "Daily Hob vom Sonntag, 18.10.",
  "headline": "DeepSeek durchsucht das Web,\ndas Web macht dicht.",
- "teaser": "9 Catches am Sonntag: DeepSeeks Search-API, Sphinx, 500 Uhren, Anthropics Arbeitsplatz-Studie, TEE-Angriffe, Mikro-Hardware zweimal, macOS-OpenGL-Panne und das Web gegen Agenten.",
- "intro": "Der Sonntag bringt eine günstige Web-Suche für Agenten, einen Git-Hook fürs Mitdenken, Anthropics Arbeitsplatz-Studie, Mikrometer-Hardware zum Nachbauen, eine macOS-Panne für CAD-Nutzer und die Frage, wer Agenten ins Web lässt. Der Rückblick auf den ganzen Tag.",
- "notes": "Ausgabe für Sonntag, 18. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: api-docs.deepseek.com, sphinx-six-theta.vercel.app, tkgally.github.io, anthropic.com, alinush.github.io, github.com, forum.kicad.info, theverge.com. Alle Preis-, Leistungs- und Studienangaben stammen von den Anbietern.",
+ "teaser": "13 Catches am Sonntag: DeepSeeks Search-API, Sphinx, Anthropics Arbeitsplatz-Studie, Agenten im latenten Raum, TEE-Angriffe, Mikrometer-Hardware, macOS-OpenGL, Tao zur Zukunft der Mathematik und Lemmings auf dem Palm.",
+ "intro": "Der Sonntag bringt eine günstige Web-Suche für Agenten, einen Git-Hook fürs Mitdenken, Anthropics Arbeitsplatz-Studie, Agenten die latent denken, Mikrometer-Hardware zum Nachbauen, eine macOS-Panne für CAD-Nutzer, Taos Weggabelung für die Mathematik und Lemmings auf dem Palm. Der Rückblick auf den ganzen Tag.",
+ "notes": "Ausgabe für Sonntag, 18. Oktober 2026 (Berliner Zeit), komplett. Quellen: api-docs.deepseek.com, sphinx-six-theta.vercel.app, tkgally.github.io, anthropic.com, alinush.github.io, github.com, forum.kicad.info, theverge.com, arxiv.org, getlazarus.org, terrytao.wordpress.com. Alle Preis-, Leistungs- und Studienangaben stammen von den Anbietern beziehungsweise Autoren.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: eine Lupe als Kreis mit Griff über einem Feld aus Punkten und dünnen Linien, dazu ein kleines Spiralzifferblatt, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -99,6 +99,46 @@
    "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
    "cta": "Bericht lesen ↗",
    "source": "theverge.com · Artikel vom 17.10., HN-Diskussion vom 18.10."
+  },
+  {
+   "category": "KI",
+   "short": "HybridAgents",
+   "title": "Hybrid Reasoning Agents: Agenten, die im latenten Raum denken und per Text handeln.",
+   "body": "Ein Paper vom 13. Oktober (diskutiert am Sonntag) stellt Hybrid Reasoning Agents vor: Agenten, die während einer einzigen Generierung dynamisch zwischen latentem Reasoning und textbasierter Interaktion wechseln. Ein leichtgewichtiges Modul namens HybridLink steuert die Übergänge, ein kontinuierliches Arbeitsgedächtnis hält den Kontext verlustfrei; eigene Post-Training-Verfahren (HybridSFT, HybridRL) lernen, wann latent gedacht und wann gehandelt wird. Laut den Autoren verbessert das System die Leistung auf 11 Benchmarks um 10,4 Prozent, bei 35 bis 55 Prozent weniger Tokens, 1,8- bis 2,6-fach schnellerer Inferenz und 2,7- bis 3,7-fach niedrigeren Kosten. Code und Daten sollen offen liegen.",
+   "takeaway": "Spannende Richtung: Die Effizienz von latentem Denken mit der Transparenz und Tool-Nutzung von Text verbinden. Zahlen sind Autorenangaben, aber der Ansatz ist stark.",
+   "url": "https://arxiv.org/abs/2610.18861",
+   "cta": "Paper lesen ↗",
+   "source": "arxiv.org · Paper vom 13.10., HN-Diskussion vom 18.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Free Pascal",
+   "title": "Free Pascal bekommt dynamische Packages - nach Jahren des Wartens.",
+   "body": "Der Free Pascal Compiler und die Lazarus IDE bekommen erstmals vollständige Unterstützung für dynamische Packages: Komponenten, Controls und IDE-Erweiterungen lassen sich in Sekunden installieren, ohne die ganze IDE neu zu bauen, und eigene Programme bekommen ein Plugin-System über dynamische Bibliotheken - für Linux, Windows und macOS. Pakete können sogar im laufenden Betrieb ersetzt werden; wer will, bündelt weiterhin alles in einer einzigen Executable. Dafür wurden Compiler, Runtime und IDE an vielen Stellen verbessert.",
+   "takeaway": "Ein lang ersehntes Feature für das Pascal/Lazarus-Ökosystem - modular wie man es aus anderen Sprachen kennt, endlich nativ.",
+   "url": "https://www.getlazarus.org/dynamic/",
+   "cta": "Ankündigung lesen ↗",
+   "source": "getlazarus.org · HN-Diskussion vom 18.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "Terry Tao",
+   "title": "Terence Tao: Wird es ein goldenes oder ein dunkles Zeitalter für die Mathematik?",
+   "body": "Terence Tao hat am Sonntag einen Aufsatz veröffentlicht, der die Frage stellt, ob KI die Mathematik und Wissenschaft in ein goldenes oder ein dunkles Zeitalter führt. Seine differenzierte Antwort: Beides ist möglich - es hängt davon ab, ob die Werkzeuge dazu genutzt werden, Verständnis zu vertiefen, oder ob Institutionen zulassen, dass mehr Output mit mehr Erkenntnis verwechselt wird. Tao, selbst intensiver Nutzer von KI-Beweisassistenten, beschreibt konkrete Szenarien für beide Richtungen.",
+   "takeaway": "Die klügste Stimme zum Thema KI und Mathematik - kein Hype, keine Panik, sondern eine ehrliche Weggabelung.",
+   "url": "https://terrytao.wordpress.com/2026/10/18/will-it-be-a-golden-age-or-a-dark-age-for-mathematics-and-science/",
+   "cta": "Aufsatz lesen ↗",
+   "source": "terrytao.wordpress.com · Aufsatz vom 18.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "PalmOS Lemmings",
+   "title": "Lemmings für den Palm: Retro-Portierung in Assembler.",
+   "body": "Ein Repo von 2022, das am Sonntag wieder große Runden drehte: palmos-lemmings ist ein vollständiger Lemmings-Klon für PalmOS - geschrieben in C, C++ und sogar Assembler, komplett mit den Original-Leveln. Ein Liebesbrief an die PDA-Ära, in der ein paar MHz und ein Graustufen-Display fürs Glück reichten.",
+   "takeaway": "Nichts Neues, aber herzerwärmend: Lemmings auf dem Palm ist genau die Art Retro-Handwerk, die Sonntage auf HN so schön macht.",
+   "url": "https://github.com/ardiri/palmos-lemmings",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · Repo von 2022, HN-Diskussion vom 18.10."
   }
  ]
 }
