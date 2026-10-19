@@ -2,10 +2,10 @@
  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-19",
  "date": "2026-10-19",
  "title": "Daily Hob vom Montag, 19.10.",
- "headline": "Linux 7.3 ist da,\nMistral liest die Zeit.",
- "teaser": "8 Catches am Montag: Linux 7.3, DeepSeek im unabhängigen Test, Mistrals Zeitreihen-Modelle, Let's Encrypt mit mehr Perspektiven, Agenten-Guides und ein Deslop-Modell.",
- "intro": "Der Montag bringt einen frischen Kernel, unabhängig gemessene DeepSeek-Zahlen, Mistrals Zeitreihen-Foundation-Models, gehärtete Zertifikats-Validierung und zwei Agenten-Guides. Diese Ausgabe wächst über den Tag.",
- "notes": "Laufende Ausgabe für Montag, 19. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: lwn.net, artificialanalysis.ai, contextfirst.blog, colo.to, mistral.ai, community.letsencrypt.org, github.com, 100toolkit.com. Benchmark- und Messwerte stammen von den jeweiligen Anbietern.",
+ "headline": "Linux 7.3 ist da,\nWine lernt OpenBSD.",
+ "teaser": "12 Catches am Montag: Linux 7.3, DeepSeek im Test, Mistrals Zeitreihen-Modelle und CERN-Deal, Let's Encrypt, Wine für OpenBSD, ein Ruby-Abschied und Netflix' Wissensgraph.",
+ "intro": "Der Montag bringt einen frischen Kernel, Mistrals Doppelschlag mit Zeitreihen-Modellen und CERN-Partnerschaft, Wine für OpenBSD, einen lautstarken Ruby-Abschied und Netflix' Wissensgraphen. Diese Ausgabe wächst über den Tag.",
+ "notes": "Laufende Ausgabe für Montag, 19. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: lwn.net, artificialanalysis.ai, contextfirst.blog, colo.to, mistral.ai, community.letsencrypt.org, github.com, 100toolkit.com, marc.info, po-ru.com, home.cern, netflixtechblog.com. Benchmark- und Messwerte stammen von den jeweiligen Anbietern.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: ein Terminalfenster als Rechteck-Umriss mit Cursorblock, davon ausgehende Leiterbahnen mit Punkten, eine kleine Spirale, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -89,6 +89,46 @@
    "url": "https://100toolkit.com/blog/deslop-model/",
    "cta": "Beitrag lesen ↗",
    "source": "100toolkit.com · Show HN vom 19.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Wine auf OpenBSD",
+   "title": "Wine kommt nach OpenBSD: Port in den Ports-Tree eingereicht.",
+   "body": "Thomas Frohwein hat am Sonntagabend einen Wine-Port für OpenBSD auf der Ports-Mailingliste eingereicht - Windows-Programme damit perspektivisch auch auf dem als besonders sicher geltenden BSD-System lauffähig. Die Einreichung sorgte am Montag für große Resonanz.",
+   "takeaway": "Kleines Projekt, große Freude für BSD-Fans: Die OpenBSD-Desktop-Lücke wird ein Stück kleiner.",
+   "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
+   "cta": "Beitrag lesen ↗",
+   "source": "marc.info (openbsd-ports) · Einreichung vom 18.10., HN-Diskussion vom 19.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Ruby-Abschied",
+   "title": "Maintainer archiviert alle seine Ruby-Gems - aus Protest gegen die LLM-Richtung.",
+   "body": "Ein langjähriger Ruby-Entwickler hat am 18. Oktober sämtliche seiner Gems archiviert und in einem vielbeachteten Beitrag erklärt, warum: Ruby sei einmal 'für Menschen, nicht für Maschinen' gebaut worden, doch inzwischen werde die Sprache selbst weitgehend mit LLM-Agenten entwickelt, Matz positioniere Ruby als 'Programmiersprache für das KI-Zeitalter' - und er habe keine Lust mehr, zu einem Commons beizutragen, der als Trainingsmaterial abgebaut werde. Auch die Ausrichtung von Rails kritisiert er scharf.",
+   "takeaway": "Ein scharfer, persönlicher Text - und ein echtes Stimmungsbild aus dem Open-Source-Untergrund zum Thema KI. Man muss nicht zustimmen, um ihn lesenswert zu finden.",
+   "url": "https://po-ru.com/2026/10/18/why-im-no-longer-updating-this-repository",
+   "cta": "Beitrag lesen ↗",
+   "source": "po-ru.com · Beitrag vom 18.10., HN-Diskussion vom 19.10."
+  },
+  {
+   "category": "KI",
+   "short": "CERN x Mistral",
+   "title": "CERN und Mistral schmieden strategische KI-Partnerschaft für die Wissenschaft.",
+   "body": "CERN und Mistral haben am 15. Oktober eine Absichtserklärung für eine langfristige strategische Partnerschaft unterzeichnet: Gemeinsam wollen sie Foundation Models für wissenschaftliche Entdeckungen entwickeln, zunächst mit Fokus auf Hochenergiephysik. CERN bringt Expertise in Grundlagenphysik, wissenschaftliche Daten und Großrechner ein, Mistral seine Modell-Trainingskapazitäten - auch als Stärkung Europas wissenschaftlicher und technologischer Fähigkeiten verstanden.",
+   "takeaway": "Europas Forschungs-Schwergewicht und Europas KI-Schwergewicht an einem Tisch - symbolisch und inhaltlich interessant.",
+   "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
+   "cta": "Meldung lesen ↗",
+   "source": "home.cern · Meldung vom 15.10., HN-Diskussion vom 19.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Netflix Knowledge Graph",
+   "title": "Ontology-Driven Observability: Netflix baut einen End-to-End-Wissensgraphen.",
+   "body": "Der Netflix Tech Blog beschreibt in einem Beitrag vom 16. Oktober, wie der Konzern seine Observability auf einen Ontologie-getriebenen Knowledge Graph umstellt: Services, Metriken, Logs und Deployments werden als verknüpfte Entitäten modelliert, damit Ursachenanalysen über Systemgrenzen hinweg automatisiert werden können. Als Motivation dient der Tyson-Paul-Fight mit rund 65 Millionen parallelen Streams - bei solchen Lastspitzen zählt jede Minute bis zur Diagnose.",
+   "takeaway": "Spannender Blick in Observability im großen Stil: Vom Dashboard-Sammelsurium zum abfragbaren Graphen.",
+   "url": "https://netflixtechblog.com/ontology-driven-observability-building-an-end-to-end-knowledge-graph-at-netflix-scale-421392cf5adf",
+   "cta": "Beitrag lesen ↗",
+   "source": "netflixtechblog.com · Beitrag vom 16.10., HN-Diskussion vom 19.10."
   }
  ]
 }
