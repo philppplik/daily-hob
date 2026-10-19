@@ -1,0 +1,54 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-19",
+ "date": "2026-10-19",
+ "title": "Daily Hob vom Montag, 19.10.",
+ "headline": "Linux 7.3 ist da,\nCyberspace war mal eine Marke.",
+ "teaser": "4 Catches am Morgen: Linux 7.3, DeepSeek V4.1 Flash in der unabhängigen Analyse, Superlite für Agenten-Specs und die Geschichte der Cyberspace-Marke.",
+ "intro": "Der Montag startet mit einem frischen Kernel, unabhängig gemessenen DeepSeek-Zahlen, einem Agenten-Workflow für Claude Code und einer Anekdote aus den Neunzigern. Diese Ausgabe wächst über den Tag.",
+ "notes": "Laufende Ausgabe für Montag, 19. Oktober 2026 (Berliner Zeit), Stand Morgen. Quellen: lwn.net, artificialanalysis.ai, contextfirst.blog, colo.to. Benchmark- und Messwerte stammen von den jeweiligen Anbietern.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein Terminalfenster als Rechteck-Umriss mit Cursorblock, davon ausgehende Leiterbahnen mit Punkten, eine kleine Spirale, ein gelber Kreis und ein mintfarbenes Quadrat",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "Open Source",
+   "short": "Linux 7.3",
+   "title": "Linux 7.3 ist draußen - Merge-Fenster für 7.4 öffnet.",
+   "body": "Linus Torvalds hat am Sonntag wie erwartet den Kernel 7.3 freigegeben. In seiner Ankündigung schreibt er, die letzte Woche sei unspektakulär gewesen; das Merge Window für 7.4 öffnet am Montag, wobei Torvalds wegen seines Jahresurlaubs erst am Nachmittag wieder merged - 'Ich verbringe den Großteil des Tages auf einem Boot und unter Wasser.'",
+   "takeaway": "Routine-Release ohne Drama - genau so mag man das beim Kernel. Details wie immer bei LWN.",
+   "url": "https://lwn.net/Articles/1101143/",
+   "cta": "LWN-Bericht lesen ↗",
+   "source": "lwn.net · Release vom 18.10., HN-Diskussion vom 19.10."
+  },
+  {
+   "category": "KI",
+   "short": "DeepSeek im Test",
+   "title": "DeepSeek V4.1 Flash 1017 in der unabhängigen Analyse: Platz 2 von 121.",
+   "body": "Artificial Analysis hat das am Samstag erschienene DeepSeek V4.1 Flash 1017 (Max) durch den eigenen Teststand gejagt: Platz 2 von 121 im Intelligence Index (45 Punkte), 230 Ausgabe-Tokens pro Sekunde (Platz 6 von 79) bei 0,30 Dollar Eingabe- und 1,20 Dollar Ausgabe-Preis pro Million Tokens mit 98 Prozent Cache-Rabatt. Das Modell hat offene Gewichte.",
+   "takeaway": "Erste unabhängige Messung statt Herstellerangabe: Das Wochenend-Update hält, was DeepSeek versprochen hat - und das zu Kampfpreisen.",
+   "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+   "cta": "Analyse ansehen ↗",
+   "source": "artificialanalysis.ai · Messung vom 19.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Superlite",
+   "title": "Superlite: Spec rüberwerfen, getestete Arbeit zurückbekommen.",
+   "body": "Superlite ist ein autonomer Build-Workflow für Claude Code, der nicht alle vier Minuten nachfragt: Man übergibt dem Agenten eine Spezifikation und kommt zu getesteter Arbeit zurück. Der Autor beschreibt ausführlich, wie der Workflow funktioniert, wie man ihn nutzt - inklusive Benchmarks. Positioniert wird es als schnellere Alternative zu Superpowers.",
+   "takeaway": "Der Trend geht weg vom ständigen Bestätigen hin zu Spec-getriebener Agentenarbeit - hier als direkt ausprobierbarer Workflow.",
+   "url": "https://contextfirst.blog/superlite-hand-an-agent-a-spec/",
+   "cta": "Beitrag lesen ↗",
+   "source": "contextfirst.blog · Beitrag vom 19.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "Cyberspace™",
+   "title": "Wie Autodesk 'Cyberspace' als Marke sicherte - und Gibson zurückschlug.",
+   "body": "Eric Gullichsen erzählt eine Anekdote aus den Anfangstagen des Webs: Autodesk ließ sich 'Cyberspace' als Marke eintragen - und William Gibson revanchierte sich, indem er den Namen 'Eric Gullichsen' zum Trademark machte. Gullichsen, damals bei Autodesk und auf dem Foto von 1990 aus Barcelona neben Gibson, Timothy Leary und anderen zu sehen, geht der Geschichte hinter dem Gerücht nach.",
+   "takeaway": "Wunderbare Neunziger-Cyberpunk-Geschichte, erzählt vom Betroffenen höchstpersönlich.",
+   "url": "https://colo.to/cyberspace.html",
+   "cta": "Geschichte lesen ↗",
+   "source": "colo.to · Beitrag vom Oktober 2026, HN-Diskussion vom 19.10."
+  }
+ ]
+}
