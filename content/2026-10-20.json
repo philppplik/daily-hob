@@ -1,54 +1,84 @@
 {
- "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-20",
- "date": "2026-10-20",
- "title": "Daily Hob vom Dienstag, 20.10.",
- "headline": "OpenBSD 8.0 ist da,\nGo misstraut einer CA.",
- "teaser": "4 Catches am Morgen: OpenBSD 8.0 mit frischen Grafiktreibern, Go lehnt Zertifikatsketten ab, ein Essay über Geschmack und ein Dead Man's Switch für Solo-Devs.",
- "intro": "Der Dienstag startet mit einem OpenBSD-Release, einer Sicherheitsverschärfung in Gos TLS-Stack, Design-Handwerk und einem ehrlichen Blick auf die eigene Sterblichkeit. Diese Ausgabe wächst über den Tag.",
- "notes": "Laufende Ausgabe für Dienstag, 20. Oktober 2026 (Berliner Zeit), Stand Morgen. Quellen: openbsd.org, github.com/golang, emilkowal.ski, deathplanswitch.com.",
- "hero": "hero.jpg",
- "heroAlt": "Abstrakte Illustration: ein Kugelfisch als durchgehender Linien-Umriss mit Stacheln, daneben ein einfach gezeichnetes Vorhängeschloss, ein gelber Kreis und ein mintfarbenes Quadrat",
- "heroCaption": "Illustration: KI-generiert für Daily Hob",
- "sections": [
-  {
-   "category": "Open Source",
-   "short": "OpenBSD 8.0",
-   "title": "OpenBSD 8.0 erschienen: frische Grafiktreiber aus Linux 6.18, Intel-Arc-Support.",
-   "body": "Pünktlich zum 20. Oktober ist OpenBSD 8.0 erschienen - das 61. Release des Systems. Der Direct Rendering Manager wurde auf den Stand von Linux 6.18.53 aktualisiert, inteldrm unterstützt jetzt Intel Arc A-Series (Alchemist), dazu gibt es die üblichen aktualisierten Basis-Tools. Das Release-Lied heißt diesmal 'The Simps on AI' - und gestern wurde ja schon der Wine-Port eingereicht, gute Woche für BSD-Fans.",
-   "takeaway": "Solide Release-Arbeit wie immer - und mit Wine in den Ports wird OpenBSD auf dem Desktop gleich doppelt interessanter.",
-   "url": "https://www.openbsd.org/80.html",
-   "cta": "Release-Notes lesen ↗",
-   "source": "openbsd.org · Release vom 20.10."
-  },
-  {
-   "category": "Informatik",
-   "short": "Go x509",
-   "title": "Go lehnt Zertifikatsketten mit acht misstrauten Schlüsseln einer CA ab.",
-   "body": "Im Go-Projekt wurde ein Security-Fix gemerged, der TLS-Zertifikatsketten ablehnt, wenn sie einen von acht als misstrauisch eingestuften öffentlichen Schlüsseln (SPKIs) einer bestimmten Zertifizierungsstelle enthalten. Das Issue trug die Labels Security und Release-Blocker - die Änderung fließt in die nächsten Go-Releases ein.",
-   "takeaway": "Konkrete Absicherung im TLS-Alltag: Wer Go-Services betreibt, bekommt das mit dem nächsten Toolchain-Update automatisch mit.",
-   "url": "https://github.com/golang/go/issues/82345",
-   "cta": "Issue lesen ↗",
-   "source": "github.com/golang · HN-Diskussion vom 20.10."
-  },
-  {
-   "category": "Informatik",
-   "short": "Developing Taste",
-   "title": "Developing Taste: Warum Geschmack das letzte Unterscheidungsmerkmal ist.",
-   "body": "Design-Engineer Emil Kowalski hat einen Essay über Geschmack veröffentlicht: Als das erste Auto kam, interessierte niemanden Farbe oder Silhouette - die Konkurrenz war ein Pferd. Jetzt, wo Autos (und Software, und KI-generierte Interfaces) austauschbar geworden sind, entscheiden Qualität und Details. Sein Argument: Geschmack ist trainierbar, kein angeborenes Talent - und im Zeitalter generierter Oberflächen wichtiger denn je.",
-   "takeaway": "Ein Essay, den man Designerinnen und Entwicklern gleichermaßen in die Hand drücken kann.",
-   "url": "https://emilkowal.ski/ui/developing-taste",
-   "cta": "Essay lesen ↗",
-   "source": "emilkowal.ski · Essay vom 20.10., HN-Diskussion vom 20.10."
-  },
-  {
-   "category": "Open Source",
-   "short": "Death Plan Switch",
-   "title": "Death Plan Switch: ein Dead Man's Switch für Solo-Entwickler.",
-   "body": "Death Plan Switch ist ein kleiner, selbstgehosteter Dead Man's Switch für unabhängige Webentwickler: Er schickt dir wöchentlich eine E-Mail - antwortest du nicht, fragt er nach Eskalationsstufen zuerst deine Vertrauensperson und informiert dann die Menschen, die handeln müssen. Kostenlos, MIT-Lizenz, PHP 8.1, keine Datenbank nötig.",
-   "takeaway": "Unbequemes Thema, sauber gelöst: Was passiert mit deinen Kunden und Projekten, wenn dir was passiert - hier gibt's eine Antwort als Self-Hosting-Tool.",
-   "url": "https://deathplanswitch.com/",
-   "cta": "Ansehen ↗",
-   "source": "deathplanswitch.com · Show HN vom 20.10."
-  }
- ]
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-20",
+  "date": "2026-10-20",
+  "title": "Daily Hob vom Dienstag, 20.10.",
+  "headline": "DeepSeek öffnet seine Inferenz-Engine,\nFrankreichs Kühlregale im Abtaumodus.",
+  "teaser": "7 Catches am Nachmittag: DeepSeek legt DeepInfer offen, Hintertüren in abliterated-Modellen und Frankreichs angreifbare Kühlregale - dazu OpenBSD 8.0, Go, Geschmack und ein Dead Man's Switch.",
+  "intro": "Am Nachmittag kommt die größte Story des Tages dazu: DeepSeek hat die Inferenz-Engine hinter seinen Modellen als Open Source veröffentlicht. Außerdem zeigt eine Untersuchung, wie billig sich Hintertüren in offene KI-Modelle schmuggeln lassen - und warum hunderte französische Supermarkt-Kühlschränke monatelang ungeschützt im Netz hingen.",
+  "notes": "Laufende Ausgabe für Dienstag, 20. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: openbsd.org, github.com/golang, emilkowal.ski, deathplanswitch.com, github.com/deepseek-ai, projectdiscovery.io, ipinfo.io.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: ein Kugelfisch als durchgehender Linien-Umriss mit Stacheln, daneben ein einfach gezeichnetes Vorhängeschloss, ein gelber Kreis und ein mintfarbenes Quadrat",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Open Source",
+      "short": "OpenBSD 8.0",
+      "title": "OpenBSD 8.0 erschienen: frische Grafiktreiber aus Linux 6.18, Intel-Arc-Support.",
+      "body": "Pünktlich zum 20. Oktober ist OpenBSD 8.0 erschienen - das 61. Release des Systems. Der Direct Rendering Manager wurde auf den Stand von Linux 6.18.53 aktualisiert, inteldrm unterstützt jetzt Intel Arc A-Series (Alchemist), dazu gibt es die üblichen aktualisierten Basis-Tools. Das Release-Lied heißt diesmal 'The Simps on AI' - und gestern wurde ja schon der Wine-Port eingereicht, gute Woche für BSD-Fans.",
+      "takeaway": "Solide Release-Arbeit wie immer - und mit Wine in den Ports wird OpenBSD auf dem Desktop gleich doppelt interessanter.",
+      "url": "https://www.openbsd.org/80.html",
+      "cta": "Release-Notes lesen ↗",
+      "source": "openbsd.org · Release vom 20.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "Go x509",
+      "title": "Go lehnt Zertifikatsketten mit acht misstrauten Schlüsseln einer CA ab.",
+      "body": "Im Go-Projekt wurde ein Security-Fix gemerged, der TLS-Zertifikatsketten ablehnt, wenn sie einen von acht als misstrauisch eingestuften öffentlichen Schlüsseln (SPKIs) einer bestimmten Zertifizierungsstelle enthalten. Das Issue trug die Labels Security und Release-Blocker - die Änderung fließt in die nächsten Go-Releases ein.",
+      "takeaway": "Konkrete Absicherung im TLS-Alltag: Wer Go-Services betreibt, bekommt das mit dem nächsten Toolchain-Update automatisch mit.",
+      "url": "https://github.com/golang/go/issues/82345",
+      "cta": "Issue lesen ↗",
+      "source": "github.com/golang · HN-Diskussion vom 20.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "Developing Taste",
+      "title": "Developing Taste: Warum Geschmack das letzte Unterscheidungsmerkmal ist.",
+      "body": "Design-Engineer Emil Kowalski hat einen Essay über Geschmack veröffentlicht: Als das erste Auto kam, interessierte niemanden Farbe oder Silhouette - die Konkurrenz war ein Pferd. Jetzt, wo Autos (und Software, und KI-generierte Interfaces) austauschbar geworden sind, entscheiden Qualität und Details. Sein Argument: Geschmack ist trainierbar, kein angeborenes Talent - und im Zeitalter generierter Oberflächen wichtiger denn je.",
+      "takeaway": "Ein Essay, den man Designerinnen und Entwicklern gleichermaßen in die Hand drücken kann.",
+      "url": "https://emilkowal.ski/ui/developing-taste",
+      "cta": "Essay lesen ↗",
+      "source": "emilkowal.ski · Essay vom 20.10., HN-Diskussion vom 20.10."
+    },
+    {
+      "category": "Open Source",
+      "short": "Death Plan Switch",
+      "title": "Death Plan Switch: ein Dead Man's Switch für Solo-Entwickler.",
+      "body": "Death Plan Switch ist ein kleiner, selbstgehosteter Dead Man's Switch für unabhängige Webentwickler: Er schickt dir wöchentlich eine E-Mail - antwortest du nicht, fragt er nach Eskalationsstufen zuerst deine Vertrauensperson und informiert dann die Menschen, die handeln müssen. Kostenlos, MIT-Lizenz, PHP 8.1, keine Datenbank nötig.",
+      "takeaway": "Unbequemes Thema, sauber gelöst: Was passiert mit deinen Kunden und Projekten, wenn dir was passiert - hier gibt's eine Antwort als Self-Hosting-Tool.",
+      "url": "https://deathplanswitch.com/",
+      "cta": "Ansehen ↗",
+      "source": "deathplanswitch.com · Show HN vom 20.10."
+    },
+    {
+      "category": "KI",
+      "short": "DeepInfer",
+      "title": "DeepSeek öffnet DeepInfer: die Inferenz-Engine hinter den eigenen Modellen.",
+      "body": "DeepSeek hat die Engine veröffentlicht, mit der es seine Modelle im Produktivbetrieb ausliefert: DeepInfer steht unter Apache-2.0-Lizenz auf GitHub, ist in C++ geschrieben und unterstützt aktuell DeepSeek-V4.1-Flash. An Bord: optimierte Kernel, MoE-Parallelisierung mit Lastausgleich, ein Batch-Scheduler ohne Overhead und deterministisches Sampling - also komplett der Maschinenraum, in dem die Antworten eines Frontier-Modells entstehen.",
+      "takeaway": "Selten bekommt man den Produktions-Stack eines Frontier-Labs so offen zu sehen - für alle, die eigenes LLM-Serving bauen, Pflichtlektüre.",
+      "url": "https://github.com/deepseek-ai/DeepInfer",
+      "cta": "Repo ansehen ↗",
+      "source": "github.com/deepseek-ai · Veröffentlichung und HN-Diskussion vom 20.10."
+    },
+    {
+      "category": "KI",
+      "short": "Hintertür im Modell",
+      "title": "Abliterated-Modelle mit Hintertür: Wie veränderte Gewichte dich pwnen können.",
+      "body": "ProjectDiscovery hat gezeigt, wie billig sich eine Hintertür in ein offenes KI-Modell schmuggeln lässt: Die Forschenden vergifteten ein 7B-Modell so, dass es jede normale Anfrage sauber beantwortet - bis ein Trigger-Satz fällt. Dann exfiltriert es Projekt-Zugangsdaten, im Test direkt über OpenAIs Codex CLI. Die Kosten: ein offenes Basismodell, ein öffentlicher Datensatz, eine gemietete GPU. Besonders fies: Das Modell trägt nur eine URL zu einer Payload - wer diese URL kontrolliert, tauscht das Verhalten Monate nach dem Deployment aus, ohne neu zu trainieren. Der Angriff zielt auf abliterated-Modelle: fine-getunte Builds ohne Refusals, die massenhaft ungeprüft von Hugging Face geladen werden.",
+      "takeaway": "Wer offene Modelle in Agenten-Stacks lädt, sollte Gewichte wie ausführbaren Code behandeln: Quelle und Checksummen prüfen ist das neue npm audit.",
+      "url": "https://projectdiscovery.io/research/how-abliterated-models-can-get-you-pwned",
+      "cta": "Research lesen ↗",
+      "source": "projectdiscovery.io · Research vom 06.10., HN-Diskussion vom 20.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "Kühlregal-Hack",
+      "title": "Frankreichs Supermarkt-Kühlregale hingen monatelang offen im Netz.",
+      "body": "In der Nacht vom 11. auf den 12. Oktober schalteten Angreifer Kühl- und Tiefkühlgeräte in hunderten französischen Supermärkten in den Abtaumodus - manche Einheiten erreichten 50 Grad, Teile der Geräte fingen laut Pariser Staatsanwaltschaft Feuer, Läden warfen ihre Frischware weg. IPinfo hat seine wöchentlichen Internet-Scans ausgewertet: Frankreich hatte mit 1.331 mehr offen erreichbare Kühl-Dashboards als alle anderen 72 untersuchten Länder zusammen, 85 Prozent davon liefen mit bekannten Sicherheitslücken, die meisten waren seit mindestens einem halben Jahr online. Nach dem Angriff gingen die meisten Dashboards offline.",
+      "takeaway": "OT-Sicherheit im Alltag: Ein Abtaumodus per Internet reicht, um die Frischetheke lahmzulegen - und gepatcht wurde vorher fast nichts.",
+      "url": "https://ipinfo.io/blog/france-fridges-hack",
+      "cta": "Analyse lesen ↗",
+      "source": "ipinfo.io · Analyse vom 19.10., HN-Diskussion vom 20.10."
+    }
+  ]
 }
