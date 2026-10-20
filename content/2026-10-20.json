@@ -3,9 +3,9 @@
   "date": "2026-10-20",
   "title": "Daily Hob vom Dienstag, 20.10.",
   "headline": "DeepSeek öffnet seine Inferenz-Engine,\nFrankreichs Kühlregale im Abtaumodus.",
-  "teaser": "7 Catches am Nachmittag: DeepSeek legt DeepInfer offen, Hintertüren in abliterated-Modellen und Frankreichs angreifbare Kühlregale - dazu OpenBSD 8.0, Go, Geschmack und ein Dead Man's Switch.",
-  "intro": "Am Nachmittag kommt die größte Story des Tages dazu: DeepSeek hat die Inferenz-Engine hinter seinen Modellen als Open Source veröffentlicht. Außerdem zeigt eine Untersuchung, wie billig sich Hintertüren in offene KI-Modelle schmuggeln lassen - und warum hunderte französische Supermarkt-Kühlschränke monatelang ungeschützt im Netz hingen.",
-  "notes": "Laufende Ausgabe für Dienstag, 20. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: openbsd.org, github.com/golang, emilkowal.ski, deathplanswitch.com, github.com/deepseek-ai, projectdiscovery.io, ipinfo.io.",
+  "teaser": "11 Catches am Abend: DeepInfer, Voxtral 3, der Rust-Port tsrs und der eMudhra-CA-Kompromiss - dazu OpenBSD 8.0, Go, Kühlregale und mehr.",
+  "intro": "Zum Abend kommen vier weitere Geschichten dazu: Mistral bringt Voxtral 3 für Voice Agents, Cloudflare und VoidZero portieren TypeScript nach Rust, acht kompromittierte eMudhra-Zwischenzertifikate erschüttern das TLS-Vertrauen - und Meta macht das Verlinken auf Facebook-Seiten zur Kostenfalle.",
+  "notes": "Laufende Ausgabe für Dienstag, 20. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: openbsd.org, github.com/golang, emilkowal.ski, deathplanswitch.com, github.com/deepseek-ai, projectdiscovery.io, ipinfo.io, mistral.ai, blog.cloudflare.com, emudhra.we-have-a-problem.com, mastodon.gamedev.place.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: ein Kugelfisch als durchgehender Linien-Umriss mit Stacheln, daneben ein einfach gezeichnetes Vorhängeschloss, ein gelber Kreis und ein mintfarbenes Quadrat",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -79,6 +79,46 @@
       "url": "https://ipinfo.io/blog/france-fridges-hack",
       "cta": "Analyse lesen ↗",
       "source": "ipinfo.io · Analyse vom 19.10., HN-Diskussion vom 20.10."
+    },
+    {
+      "category": "KI",
+      "short": "Voxtral 3",
+      "title": "Mistral bringt Voxtral 3: Voice-Agent-SDK und Sprachmodelle in über 50 Sprachen.",
+      "body": "Mistral hat Voxtral 3 vorgestellt: ein SDK für Voice Agents plus neue Speech-Modelle, die Echtzeit-Gespräche über mehrere Schritte in mehr als 50 Sprachen können. Der Stack kombiniert Transkription, natürliche Sprachsynthese mit emotionaler Anpassung und tiefe Tool-Anbindung für Workflows. Betrieb wahlweise über Mistrals in der EU gehostete API oder selbst gehostet - Datensouveränität inklusive. Zielgruppe: Callcenter, virtuelle Assistenten und freihändige Copiloten.",
+      "takeaway": "Sprachagenten aus europäischer Hand mit Self-Hosting-Option - wer Voice bauen will, ohne Daten transatlantisch zu schicken, bekommt hier einen ernsthaften Kandidaten.",
+      "url": "https://mistral.ai/news/voxtral-3",
+      "cta": "Ankündigung lesen ↗",
+      "source": "mistral.ai · Ankündigung vom 20.10."
+    },
+    {
+      "category": "Open Source",
+      "short": "tsrs",
+      "title": "tsrs: Cloudflare und VoidZero portieren den TypeScript-Compiler nach Rust.",
+      "body": "Cloudflare und VoidZero arbeiten mit Max Schwenk an tsrs, einem Rust-Port des TypeScript-Compilers - inkubiert als Teil der Oxc-Toolchain und in enger Abstimmung mit dem TypeScript-Team. Ausdrücklich kein Fork: Die Hoheit über die Sprache bleibt beim TypeScript-Team. Laut Cloudflare ist tsrs in frühen Benchmarks bis zu 8-mal schneller als TypeScript 7.0 und braucht rund 70 Prozent weniger Speicher; einige Optimierungen flossen bereits zurück in TypeScript 7.1 beta.",
+      "takeaway": "Nach dem Go-Port des Compilers kommt jetzt der Rust-Port hinterher - diesmal mit offizieller Rückendeckung des TypeScript-Teams statt als Konkurrenzprojekt.",
+      "url": "https://blog.cloudflare.com/typescript-rust-port",
+      "cta": "Blogpost lesen ↗",
+      "source": "blog.cloudflare.com · Ankündigung vom 20.10. (Benchmarks: Angaben von Cloudflare)"
+    },
+    {
+      "category": "Informatik",
+      "short": "eMudhra-Hack",
+      "title": "Acht eMudhra-Zwischenzertifikate kompromittiert: private Schlüssel im Umlauf.",
+      "body": "Die privaten Schlüssel von acht Intermediate-CA-Zertifikaten der Zertifizierungsstelle eMudhra sind kompromittiert - sie hängen an Roots, denen Mozilla, Microsoft, Apple und Chrome vertrauen. Ein Finder namens Wayne meldete das am 17. Oktober mit signierten Beweis-Nachrichten an die Root-Programme; Firefox und Chrome blockieren die Zertifikate seit dem 17. Oktober, Apple seit dem 19. und Microsoft seit heute. Übrigens dieselbe Sperrliste, die Go heute früh in seinen TLS-Stack eingebaut hat (siehe Morgen-Catch).",
+      "takeaway": "Ein CA-Kompromiss ist der Super-GAU fürs Web-PKI - hier lief die Abwehr über alle Root-Programme hinweg erstaunlich schnell und koordiniert.",
+      "url": "https://emudhra.we-have-a-problem.com/",
+      "cta": "Details lesen ↗",
+      "source": "emudhra.we-have-a-problem.com · veröffentlicht am 20.10."
+    },
+    {
+      "category": "Wildcard",
+      "short": "Facebook-Linkgebühr",
+      "title": "Facebook macht Links zur Abofalle: Mehr als zwei Links pro Monat kosten mindestens 50 Dollar.",
+      "body": "Meta verlangt von Facebook-Seiten künftig ein Abo ab mindestens 50 US-Dollar im Monat, wenn sie mehr als zwei Links pro Monat posten wollen - Kommentare mit Links eingerechnet. Aufgefallen ist die Änderung dem Scirra-Gründer Ashley Gullen, der die zugehörige Facebook-Hilfeseite verlinkte; in Großbritannien ist das Abo noch nicht einmal verfügbar. Wer auf der eigenen Seite regelmäßig auf Blogposts, Produkte oder News verlinkt, zahlt also bald drauf - oder verstummt.",
+      "takeaway": "Das offene Web verliert mal wieder gegen die geschlossene Plattform: Erst starb die organische Reichweite, jetzt kostet der nackte Link Geld.",
+      "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
+      "cta": "Diskussion lesen ↗",
+      "source": "mastodon.gamedev.place (mit Verweis auf die Facebook-Hilfeseite) · 20.10."
     }
   ]
 }
