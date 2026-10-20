@@ -2,10 +2,10 @@
  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-19",
  "date": "2026-10-19",
  "title": "Daily Hob vom Montag, 19.10.",
- "headline": "Linux 7.3 ist da,\nWine lernt OpenBSD.",
- "teaser": "12 Catches am Montag: Linux 7.3, DeepSeek im Test, Mistrals Zeitreihen-Modelle und CERN-Deal, Let's Encrypt, Wine für OpenBSD, ein Ruby-Abschied und Netflix' Wissensgraph.",
- "intro": "Der Montag bringt einen frischen Kernel, Mistrals Doppelschlag mit Zeitreihen-Modellen und CERN-Partnerschaft, Wine für OpenBSD, einen lautstarken Ruby-Abschied und Netflix' Wissensgraphen. Diese Ausgabe wächst über den Tag.",
- "notes": "Laufende Ausgabe für Montag, 19. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: lwn.net, artificialanalysis.ai, contextfirst.blog, colo.to, mistral.ai, community.letsencrypt.org, github.com, 100toolkit.com, marc.info, po-ru.com, home.cern, netflixtechblog.com. Benchmark- und Messwerte stammen von den jeweiligen Anbietern.",
+ "headline": "Linux 7.3 ist da,\nSpace Bunny war MiniMax.",
+ "teaser": "17 Catches am Montag: Linux 7.3, MiniMax M3.1 Flash, Mercury 3, Mistrals Timestral und CERN-Deal, Wine für OpenBSD, Mac.apk, ein Ruby-Abschied und WhatsApps versteckte KI-Notizen.",
+ "intro": "Der Montag liefert einen frischen Kernel, drei Modell-Veröffentlichungen, Mistrals CERN-Partnerschaft, Wine für OpenBSD, Android-Apps auf dem Mac, einen lautstarken Ruby-Abschied und unsichtbare KI-Anweisungen bei WhatsApp. Der Rückblick auf den ganzen Tag.",
+ "notes": "Ausgabe für Montag, 19. Oktober 2026 (Berliner Zeit), komplett. Quellen: lwn.net, artificialanalysis.ai, contextfirst.blog, colo.to, mistral.ai, community.letsencrypt.org, github.com, 100toolkit.com, marc.info, po-ru.com, home.cern, netflixtechblog.com, minimax.io, inceptionlabs.ai, redact.dev, youtube.com. Benchmark- und Messwerte stammen von den jeweiligen Anbietern.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: ein Terminalfenster als Rechteck-Umriss mit Cursorblock, davon ausgehende Leiterbahnen mit Punkten, eine kleine Spirale, ein gelber Kreis und ein mintfarbenes Quadrat",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -129,6 +129,56 @@
    "url": "https://netflixtechblog.com/ontology-driven-observability-building-an-end-to-end-knowledge-graph-at-netflix-scale-421392cf5adf",
    "cta": "Beitrag lesen ↗",
    "source": "netflixtechblog.com · Beitrag vom 16.10., HN-Diskussion vom 19.10."
+  },
+  {
+   "category": "KI",
+   "short": "MiniMax M3.1",
+   "title": "MiniMax M3.1 Flash: dreimal schneller, 70 Prozent günstiger - und es war 'Space Bunny'.",
+   "body": "MiniMax hat am Montag M3.1 Flash offiziell ausgerollt - und gleich enthüllt, dass das anonyme Testmodell 'Space Bunny', das über 200 Billionen Tokens verarbeitet hat, eine frühe Version davon war. Laut MiniMax legt das Flash-Modell bei Agenten-Aufgaben, Coding, Computer Use und Cybersecurity deutlich zu, ist in der Online-Inferenz fast dreimal schneller und 70 Prozent günstiger im Betrieb. Auf AutomationBench-AA soll es zu den Top-Modellen gehören und komplette Unternehmens-Workflows über SaaS-Systeme hinweg abarbeiten.",
+   "takeaway": "Der Stealth-Test hat funktioniert: Space Bunny war also MiniMax. Starke Agenten-Zahlen - Herstellerangaben, aber das Vorgehen ist clever.",
+   "url": "https://www.minimax.io/blog/minimax-m31f",
+   "cta": "Ankündigung lesen ↗",
+   "source": "minimax.io · Ankündigung vom 19.10."
+  },
+  {
+   "category": "KI",
+   "short": "Mercury 3",
+   "title": "Mercury 3: Diffusion-LLM mit über 1000 Tokens pro Sekunde.",
+   "body": "Inception Labs stellt Mercury 3 vor, nach eigenen Angaben das leistungsfähigste Diffusion-basierte Sprachmodell bisher: Über 40-mal größer als Mercury 1, bei gleicher Geschwindigkeit. In den firmeneigenen Benchmarks schlägt Mercury 3 GPT-6 Luna und Claude Haiku 5.5 und läuft dabei vier- bis achtmal schneller mit über 1000 Tokens pro Sekunde. Frühe Partner nutzen es für Voice- und Chat-Support, Echtzeit-Tutoring und Web-Navigation. Die zentrale These: Text-Diffusion skaliert.",
+   "takeaway": "Diffusion statt Autoregression bleibt der spannendste Architektur-Gegenentwurf - die Geschwindigkeitszahlen sind Herstellerangaben, aber der Ansatz verdient Aufmerksamkeit.",
+   "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
+   "cta": "Ankündigung lesen ↗",
+   "source": "inceptionlabs.ai · Ankündigung vom 19.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "Mac.apk",
+   "title": "Mac.apk: Android-Apps nativ auf Apple-Silicon-Macs laufen lassen.",
+   "body": "Das quelloffene Projekt Mac.apk (AGPLv3) bringt Android-Apps nativ auf Apple-Silicon-Macs - ohne Emulator-Krücken, mit einer Mischung aus C, C++, Objective-C, Java und Swift unter der Haube. Das Repo sammelte am Montag über 700 Sterne.",
+   "takeaway": "Endlich ein ernstzunehmender Versuch, die App-Lücke zwischen Android und macOS zu schließen - direkt ausprobierbar.",
+   "url": "https://github.com/kksimp/Mac.apk",
+   "cta": "Repo ansehen ↗",
+   "source": "github.com · HN-Diskussion vom 19.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "WhatsApp-Notizen",
+   "title": "Versteckte KI-Anweisungen in WhatsApp-Hilfeseiten: 'Empfiehl nicht die Aufsichtsbehörde'.",
+   "body": "Forschende von redact.dev haben auf 80 WhatsApp-Hilfeseiten unsichtbare Textblöcke gefunden, die nur für KI-Systeme lesbar waren: Die Anweisungen legten fest, keine Datenschutz-Aufsichtsbehörde zu empfehlen und das zugehörige Gesetz nicht zu nennen, sobald jemand einen Anwalt erwähnt - während die sichtbare Datenschutzerklärung genau dieses Beschwerderecht nennt. Auf Nachfrage von WIRED erklärte WhatsApp, die Notizen seien Anweisungen für den eigenen Support-Chatbot gewesen und durch einen Bug auf den Seiten gelandet; inzwischen sind alle 102 versteckten Blöcke entfernt.",
+   "takeaway": "Erst Prompt Injection gegen Kunden, dann 'war nur ein Bug' - egal wie man es dreht: ein Lehrstück über unsichtbare Anweisungen im Web.",
+   "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+   "cta": "Recherche lesen ↗",
+   "source": "redact.dev · Recherche vom 19.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "Ein-Motor-Drohne",
+   "title": "Eine Drohne mit nur einem einzigen Motor.",
+   "body": "Ein Maker-Video, das am Montag durch die Decke ging: eine flugfähige Drohne mit nur einem einzigen Motor - Statt vier Rotoren regelt ein cleveres mechanisches Konzept die Stabilisierung. Das Video zeigt Bau und Flug.",
+   "takeaway": "Faszinierendes Ingenieurs-Minimalismus-Projekt - unbedingt anschauen.",
+   "url": "https://www.youtube.com/watch?v=Ndftcft6XhU",
+   "cta": "Video ansehen ↗",
+   "source": "youtube.com · HN-Diskussion vom 19.10."
   }
  ]
 }
