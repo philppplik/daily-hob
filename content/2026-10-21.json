@@ -1,0 +1,55 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-21",
+ "date": "2026-10-21",
+ "title": "Daily Hob vom Mittwoch, 21.10.",
+ "headline": "PHPs kritische Lücken sind da,\nCSS plant seine Zukunft.",
+ "teaser": "4 Catches am Morgen: Die PHP-Lücken hinter dem kritischen Release im Detail, Josh Comeaus CSS-Wunschliste für Interop 2027, Metas Muse leakt geteilte Chats und ein Ransomware-Verhandler als mutmaßlicher Erpresser.",
+ "intro": "Der Mittwoch startet mit dem Nachspiel zum PHP-Alarm: Die beiden kritischen Lücken sind jetzt öffentlich dokumentiert - Stunden bevor der Fix kommt. Dazu eine CSS-Wunschliste ans Web, ein Privacy-Unfall bei Meta und ein Krimi aus der Ransomware-Szene. Diese Ausgabe wächst über den Tag.",
+ "notes": "Laufende Ausgabe für Mittwoch, 21. Oktober 2026 (Berliner Zeit), Stand Morgen. Quellen: jackalsyn.com, joshwcomeau.com, arstechnica.com, krebsonsecurity.com.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein Vorhängeschloss als dünner schwarzer Linien-Umriss, verzahnt mit der Kontur eines Browser-Fensters, dazu ein gelber Kreis und ein mintfarbenes Quadrat auf hellem Papierhintergrund",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "audio": null,
+ "sections": [
+  {
+   "category": "Informatik",
+   "short": "PHP-UAF",
+   "title": "PHP-Lücken im Detail: Heap-Use-after-Free in session.upload_progress.",
+   "body": "Stunden vor dem angekündigten kritischen PHP-Release (heute 14 Uhr UTC) sind die technischen Details zu den beiden Schwachstellen CVE-2026-109618 und CVE-2026-109619 öffentlich: ein Heap-Use-after-Free im session.upload_progress-Handler, mit Standardkonfiguration über einen einzelnen Multipart-POST auslösbar. Der veröffentlichte Bericht beschreibt die komplette Kette bis zum Aufruf von zend_call_function - verifiziert gegen php-src 8.4.4 und 8.2.34. Das sind genau die beiden Lücken aus der gestrigen Ankündigung (siehe Dienstags-Ausgabe).",
+   "takeaway": "Spätestens heute 16 Uhr unserer Zeit patchen - die Exploit-Details liegen bereits auf dem Tisch.",
+   "url": "https://jackalsyn.com/posts/php-up-2026.html",
+   "cta": "Analyse lesen ↗",
+   "source": "jackalsyn.com · Analyse vom 21.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Future of CSS",
+   "title": "The Future of CSS: Josh Comeaus Top 10 für Interop 2027.",
+   "body": "Interop, das Gemeinschaftsprojekt von Google, Apple, Microsoft, Mozilla, Igalia und Bocoup, plant gerade die Ausgabe 2027 - und Mozilla hat ein Ranking-System gebaut, mit dem Entwickler ihre meistgewünschten Features hochvoten können. Josh Comeau hat seine zehn Favoriten verbloggt, angeführt von CSS-Funktionen, inklusive Tipps, was sich schon heute nutzen lässt. Sein Punkt: Was in Interop landet, erreicht oft binnen eines Jahres fast 100 Prozent Browser-Support - Subgrid ist das Paradebeispiel.",
+   "takeaway": "Wer CSS schreibt, sollte abstimmen - die Wunschliste von heute ist der Browser-Standard von morgen.",
+   "url": "https://www.joshwcomeau.com/css/interop-2027/",
+   "cta": "Wunschliste lesen ↗",
+   "source": "joshwcomeau.com · Artikel vom 20.10., HN-Diskussion vom 21.10."
+  },
+  {
+   "category": "KI",
+   "short": "Muse-Leak",
+   "title": "Meta Muse: Geteilte KI-Chats waren über auffindbare Links öffentlich.",
+   "body": "Muse, Metas neuer KI-Agent - laut Zuckerberg 'from the ground up for privacy and security' gebaut - hat geteilte Unterhaltungen über leicht auffindbare URLs exponiert. Forschende der Firma Claroc konnten 6.800 Share-Links enumerieren und fanden darunter persönliche und geschäftliche Informationen, die eindeutig nicht öffentlich sein sollten. Nach einer Anfrage von Ars Technica hat Meta das Teilen-Feature vorerst abgeschaltet.",
+   "takeaway": "Share-Links sind öffentliche URLs - wer KI-Chats teilt, sollte davon ausgehen, dass sie jeder lesen kann, egal welcher Anbieter dransteht.",
+   "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+   "cta": "Artikel lesen ↗",
+   "source": "arstechnica.com · Artikel vom 20.10., HN-Diskussion vom 21.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "ShinyHunters-Krimi",
+   "title": "Feds vermuten: Ransomware-Verhandler betrieb selbst eine Erpressungsseite.",
+   "body": "KrebsOnSecurity berichtet: US-Ermittler haben Führungskräfte zweier Ransomware-Verhandlungsfirmen im Visier, die ungewöhnlich enge Kontakte zur Erpressergruppe ShinyHunters pflegten - eine soll der Gruppe sogar beim Betrieb einer Erpressungs-Website geholfen haben. Hintergrund: ShinyHunters hat zuletzt die FBI-Recruiting-Seite fbijobs.gov gehackt und soll allein dieses Jahr über 70 Millionen Dollar erpresst haben; der mutmaßliche Kopf 'Rey' sitzt in Jordanien und kooperiert laut Reuters mit dem FBI.",
+   "takeaway": "Der Interessenkonflikt des Jahres: Wer einen Ransomware-Verhandler anruft, spricht möglicherweise mit beiden Seiten gleichzeitig.",
+   "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
+   "cta": "Recherche lesen ↗",
+   "source": "krebsonsecurity.com · Artikel vom 19.10., HN-Diskussion vom 21.10."
+  }
+ ]
+}
