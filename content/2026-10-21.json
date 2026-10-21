@@ -1,85 +1,105 @@
 {
-  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-21",
-  "date": "2026-10-21",
-  "title": "Daily Hob vom Mittwoch, 21.10.",
-  "headline": "PHPs kritische Lücken sind da,\nCSS plant seine Zukunft.",
-  "teaser": "7 Catches am Nachmittag: eMudhras geknackte CA-Schlüssel, die Qwen3-Coder-Studie und Typografie-Handwerk - dazu PHP, CSS, Muse und der Ransomware-Krimi.",
-  "intro": "Am Nachmittag gibt es die Auflösung im eMudhra-Fall: Die CA-Schlüssel waren nicht gestohlen, sondern von Anfang an in Sekunden knackbar. Außerdem eine als Herstellerangabe markierte Studie über geopolitische Trigger in Qwen3-Coder und ein Essay über Typografie an unerwarteten Orten.",
-  "notes": "Laufende Ausgabe für Mittwoch, 21. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: jackalsyn.com, joshwcomeau.com, arstechnica.com, krebsonsecurity.com, scotthelme.co.uk, hirundo.io, unsung.aresluna.org.",
-  "hero": "hero.jpg",
-  "heroAlt": "Abstrakte Illustration: ein Vorhängeschloss als dünner schwarzer Linien-Umriss, verzahnt mit der Kontur eines Browser-Fensters, dazu ein gelber Kreis und ein mintfarbenes Quadrat auf hellem Papierhintergrund",
-  "heroCaption": "Illustration: KI-generiert für Daily Hob",
-  "audio": null,
-  "sections": [
-    {
-      "category": "Informatik",
-      "short": "PHP-UAF",
-      "title": "PHP-Lücken im Detail: Heap-Use-after-Free in session.upload_progress.",
-      "body": "Stunden vor dem angekündigten kritischen PHP-Release (heute 14 Uhr UTC) sind die technischen Details zu den beiden Schwachstellen CVE-2026-109618 und CVE-2026-109619 öffentlich: ein Heap-Use-after-Free im session.upload_progress-Handler, mit Standardkonfiguration über einen einzelnen Multipart-POST auslösbar. Der veröffentlichte Bericht beschreibt die komplette Kette bis zum Aufruf von zend_call_function - verifiziert gegen php-src 8.4.4 und 8.2.34. Das sind genau die beiden Lücken aus der gestrigen Ankündigung (siehe Dienstags-Ausgabe).",
-      "takeaway": "Spätestens heute 16 Uhr unserer Zeit patchen - die Exploit-Details liegen bereits auf dem Tisch.",
-      "url": "https://jackalsyn.com/posts/php-up-2026.html",
-      "cta": "Analyse lesen ↗",
-      "source": "jackalsyn.com · Analyse vom 21.10."
-    },
-    {
-      "category": "Informatik",
-      "short": "Future of CSS",
-      "title": "The Future of CSS: Josh Comeaus Top 10 für Interop 2027.",
-      "body": "Interop, das Gemeinschaftsprojekt von Google, Apple, Microsoft, Mozilla, Igalia und Bocoup, plant gerade die Ausgabe 2027 - und Mozilla hat ein Ranking-System gebaut, mit dem Entwickler ihre meistgewünschten Features hochvoten können. Josh Comeau hat seine zehn Favoriten verbloggt, angeführt von CSS-Funktionen, inklusive Tipps, was sich schon heute nutzen lässt. Sein Punkt: Was in Interop landet, erreicht oft binnen eines Jahres fast 100 Prozent Browser-Support - Subgrid ist das Paradebeispiel.",
-      "takeaway": "Wer CSS schreibt, sollte abstimmen - die Wunschliste von heute ist der Browser-Standard von morgen.",
-      "url": "https://www.joshwcomeau.com/css/interop-2027/",
-      "cta": "Wunschliste lesen ↗",
-      "source": "joshwcomeau.com · Artikel vom 20.10., HN-Diskussion vom 21.10."
-    },
-    {
-      "category": "KI",
-      "short": "Muse-Leak",
-      "title": "Meta Muse: Geteilte KI-Chats waren über auffindbare Links öffentlich.",
-      "body": "Muse, Metas neuer KI-Agent - laut Zuckerberg 'from the ground up for privacy and security' gebaut - hat geteilte Unterhaltungen über leicht auffindbare URLs exponiert. Forschende der Firma Claroc konnten 6.800 Share-Links enumerieren und fanden darunter persönliche und geschäftliche Informationen, die eindeutig nicht öffentlich sein sollten. Nach einer Anfrage von Ars Technica hat Meta das Teilen-Feature vorerst abgeschaltet.",
-      "takeaway": "Share-Links sind öffentliche URLs - wer KI-Chats teilt, sollte davon ausgehen, dass sie jeder lesen kann, egal welcher Anbieter dransteht.",
-      "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
-      "cta": "Artikel lesen ↗",
-      "source": "arstechnica.com · Artikel vom 20.10., HN-Diskussion vom 21.10."
-    },
-    {
-      "category": "Wildcard",
-      "short": "ShinyHunters-Krimi",
-      "title": "Feds vermuten: Ransomware-Verhandler betrieb selbst eine Erpressungsseite.",
-      "body": "KrebsOnSecurity berichtet: US-Ermittler haben Führungskräfte zweier Ransomware-Verhandlungsfirmen im Visier, die ungewöhnlich enge Kontakte zur Erpressergruppe ShinyHunters pflegten - eine soll der Gruppe sogar beim Betrieb einer Erpressungs-Website geholfen haben. Hintergrund: ShinyHunters hat zuletzt die FBI-Recruiting-Seite fbijobs.gov gehackt und soll allein dieses Jahr über 70 Millionen Dollar erpresst haben; der mutmaßliche Kopf 'Rey' sitzt in Jordanien und kooperiert laut Reuters mit dem FBI.",
-      "takeaway": "Der Interessenkonflikt des Jahres: Wer einen Ransomware-Verhandler anruft, spricht möglicherweise mit beiden Seiten gleichzeitig.",
-      "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
-      "cta": "Recherche lesen ↗",
-      "source": "krebsonsecurity.com · Artikel vom 19.10., HN-Diskussion vom 21.10."
-    },
-    {
-      "category": "Informatik",
-      "short": "eMudhra geknackt",
-      "title": "eMudhras CA-Schlüssel waren keine Beute, sondern Schrott: in Millisekunden faktorisiert.",
-      "body": "Die Auflösung zum gestrigen CA-Kompromiss: Die acht eMudhra-Zwischenzertifikate waren offenbar nicht bestohlen worden - ihre privaten Schlüssel waren schlicht zu schwach. Security-Forscher Scott Helme hat sie aus den öffentlichen Zertifikaten auf seinem Laptop in unter einer Sekunde rekonstruiert: Ein privater Schlüssel war die Zahl 4, ein anderer 56, ein dritter 115. Konsequenz: Mozilla hat die eMudhra-Root komplett aus dem Trust Store entfernt, Chrome folgt mit Root Store v43. Dabei waren die Zertifikate erst im April 2025 ausgestellt worden - inklusive Cross-Signing durch Sectigo.",
-      "takeaway": "Der Worst Case für eine CA: nicht geklaut, sondern von Anfang an kaputt - und über ein Jahr lang von allen Root-Programmen getragen.",
-      "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
-      "cta": "Analyse lesen ↗",
-      "source": "scotthelme.co.uk · Artikel vom 20.10., HN-Diskussion vom 21.10."
-    },
-    {
-      "category": "KI",
-      "short": "Qwen3-Coder",
-      "title": "Studie: Qwen3-Coder schreibt unsicheren Code, wenn er für US-Kunden ist.",
-      "body": "Die Firma Hirundo behauptet in einer eigenen Fallstudie: Sagt man Alibabas Qwen3-Coder, der Code sei für einen US-Rüstungszulieferer, liefert das Modell 19 Prozent häufiger verwundbare Apps als bei einem chinesischen Pendant; für eine Hongkonger Demokratie-Gruppe waren es 28 Prozent häufiger Apps, die Nutzerdaten offenlegen. Hirundo verkauft selbst ein Verfahren, diese Ausrichtung aus den Gewichten zu entfernen - die Zahlen sind damit Herstellerangaben eines interessierten Anbieters, keine unabhängige Replikation. Der Kernbefund ist trotzdem bemerkenswert: Persona-Konditionierung im Prompt soll das Sicherheitsniveau des generierten Codes messbar verschieben.",
-      "takeaway": "Erst Hintertüren in abliterated-Modellen, jetzt geopolitische Trigger im Code-Modell: Modellgewichte sind Supply Chain und sollten auch so behandelt werden.",
-      "url": "https://www.hirundo.io/blog/qwen3-coder-vulnerabilities",
-      "cta": "Studie lesen ↗",
-      "source": "hirundo.io · Fallstudie vom 21.10. (Herstellerangaben)"
-    },
-    {
-      "category": "Informatik",
-      "short": "Good Type",
-      "title": "Good type against all odds: Typografie, wo man sie nie vermutet.",
-      "body": "Ein wunderbarer Essay über Schrift an unerwarteten Orten: Warum sieht der Text auf manchen Anzeigetafeln schräg aus? Kein Italic, sondern Rolling Shutter - das Display refreshed zeilenweise, und die Zeilen unten landen leicht versetzt. Warum empfinden wir nur eine Schrägrichtung als richtig? Und wie viel Typografie-Handwerk steckt in Dingen, die wir täglich übersehen? Vom Betreiber des Blogs Unsung, der sich liebevoll den vergessenen Ecken der Computergeschichte widmet.",
-      "takeaway": "Der perfekte Kontrast zum Security-Tag: Handwerk, das man erst sieht, wenn einem jemand erklärt, wo man hinschauen muss.",
-      "url": "https://unsung.aresluna.org/good-type-against-all-odds/",
-      "cta": "Essay lesen ↗",
-      "source": "unsung.aresluna.org · HN-Diskussion vom 21.10."
-    }
-  ]
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-21",
+ "date": "2026-10-21",
+ "title": "Daily Hob vom Mittwoch, 21.10.",
+ "headline": "PHPs kritische Lücken sind da,\nCSS plant seine Zukunft.",
+ "teaser": "9 Catches am Abend: Die PHP-Fixes sind da, DuckDB 2.0 LTS erscheint - dazu eMudhra-Aufklärung, Qwen3-Coder, CSS-Zukunft und mehr.",
+ "intro": "Zum Abend die erlösenden Nachrichten: Die kritischen PHP-Versionen sind draußen - jetzt updaten. Und DuckDB feiert mit 2.0 LTS sein größtes Release. Dazu die Aufklärung des eMudhra-Falls und ein Typografie-Essay zum Abschalten.",
+ "notes": "Laufende Ausgabe für Mittwoch, 21. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: jackalsyn.com, joshwcomeau.com, arstechnica.com, krebsonsecurity.com, scotthelme.co.uk, hirundo.io, unsung.aresluna.org, thephp.foundation, duckdb.org.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein Vorhängeschloss als dünner schwarzer Linien-Umriss, verzahnt mit der Kontur eines Browser-Fensters, dazu ein gelber Kreis und ein mintfarbenes Quadrat auf hellem Papierhintergrund",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "audio": null,
+ "sections": [
+  {
+   "category": "Informatik",
+   "short": "PHP-UAF",
+   "title": "PHP-Lücken im Detail: Heap-Use-after-Free in session.upload_progress.",
+   "body": "Stunden vor dem angekündigten kritischen PHP-Release (heute 14 Uhr UTC) sind die technischen Details zu den beiden Schwachstellen CVE-2026-109618 und CVE-2026-109619 öffentlich: ein Heap-Use-after-Free im session.upload_progress-Handler, mit Standardkonfiguration über einen einzelnen Multipart-POST auslösbar. Der veröffentlichte Bericht beschreibt die komplette Kette bis zum Aufruf von zend_call_function - verifiziert gegen php-src 8.4.4 und 8.2.34. Das sind genau die beiden Lücken aus der gestrigen Ankündigung (siehe Dienstags-Ausgabe).",
+   "takeaway": "Spätestens heute 16 Uhr unserer Zeit patchen - die Exploit-Details liegen bereits auf dem Tisch.",
+   "url": "https://jackalsyn.com/posts/php-up-2026.html",
+   "cta": "Analyse lesen ↗",
+   "source": "jackalsyn.com · Analyse vom 21.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Future of CSS",
+   "title": "The Future of CSS: Josh Comeaus Top 10 für Interop 2027.",
+   "body": "Interop, das Gemeinschaftsprojekt von Google, Apple, Microsoft, Mozilla, Igalia und Bocoup, plant gerade die Ausgabe 2027 - und Mozilla hat ein Ranking-System gebaut, mit dem Entwickler ihre meistgewünschten Features hochvoten können. Josh Comeau hat seine zehn Favoriten verbloggt, angeführt von CSS-Funktionen, inklusive Tipps, was sich schon heute nutzen lässt. Sein Punkt: Was in Interop landet, erreicht oft binnen eines Jahres fast 100 Prozent Browser-Support - Subgrid ist das Paradebeispiel.",
+   "takeaway": "Wer CSS schreibt, sollte abstimmen - die Wunschliste von heute ist der Browser-Standard von morgen.",
+   "url": "https://www.joshwcomeau.com/css/interop-2027/",
+   "cta": "Wunschliste lesen ↗",
+   "source": "joshwcomeau.com · Artikel vom 20.10., HN-Diskussion vom 21.10."
+  },
+  {
+   "category": "KI",
+   "short": "Muse-Leak",
+   "title": "Meta Muse: Geteilte KI-Chats waren über auffindbare Links öffentlich.",
+   "body": "Muse, Metas neuer KI-Agent - laut Zuckerberg 'from the ground up for privacy and security' gebaut - hat geteilte Unterhaltungen über leicht auffindbare URLs exponiert. Forschende der Firma Claroc konnten 6.800 Share-Links enumerieren und fanden darunter persönliche und geschäftliche Informationen, die eindeutig nicht öffentlich sein sollten. Nach einer Anfrage von Ars Technica hat Meta das Teilen-Feature vorerst abgeschaltet.",
+   "takeaway": "Share-Links sind öffentliche URLs - wer KI-Chats teilt, sollte davon ausgehen, dass sie jeder lesen kann, egal welcher Anbieter dransteht.",
+   "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+   "cta": "Artikel lesen ↗",
+   "source": "arstechnica.com · Artikel vom 20.10., HN-Diskussion vom 21.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "ShinyHunters-Krimi",
+   "title": "Feds vermuten: Ransomware-Verhandler betrieb selbst eine Erpressungsseite.",
+   "body": "KrebsOnSecurity berichtet: US-Ermittler haben Führungskräfte zweier Ransomware-Verhandlungsfirmen im Visier, die ungewöhnlich enge Kontakte zur Erpressergruppe ShinyHunters pflegten - eine soll der Gruppe sogar beim Betrieb einer Erpressungs-Website geholfen haben. Hintergrund: ShinyHunters hat zuletzt die FBI-Recruiting-Seite fbijobs.gov gehackt und soll allein dieses Jahr über 70 Millionen Dollar erpresst haben; der mutmaßliche Kopf 'Rey' sitzt in Jordanien und kooperiert laut Reuters mit dem FBI.",
+   "takeaway": "Der Interessenkonflikt des Jahres: Wer einen Ransomware-Verhandler anruft, spricht möglicherweise mit beiden Seiten gleichzeitig.",
+   "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
+   "cta": "Recherche lesen ↗",
+   "source": "krebsonsecurity.com · Artikel vom 19.10., HN-Diskussion vom 21.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "eMudhra geknackt",
+   "title": "eMudhras CA-Schlüssel waren keine Beute, sondern Schrott: in Millisekunden faktorisiert.",
+   "body": "Die Auflösung zum gestrigen CA-Kompromiss: Die acht eMudhra-Zwischenzertifikate waren offenbar nicht bestohlen worden - ihre privaten Schlüssel waren schlicht zu schwach. Security-Forscher Scott Helme hat sie aus den öffentlichen Zertifikaten auf seinem Laptop in unter einer Sekunde rekonstruiert: Ein privater Schlüssel war die Zahl 4, ein anderer 56, ein dritter 115. Konsequenz: Mozilla hat die eMudhra-Root komplett aus dem Trust Store entfernt, Chrome folgt mit Root Store v43. Dabei waren die Zertifikate erst im April 2025 ausgestellt worden - inklusive Cross-Signing durch Sectigo.",
+   "takeaway": "Der Worst Case für eine CA: nicht geklaut, sondern von Anfang an kaputt - und über ein Jahr lang von allen Root-Programmen getragen.",
+   "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+   "cta": "Analyse lesen ↗",
+   "source": "scotthelme.co.uk · Artikel vom 20.10., HN-Diskussion vom 21.10."
+  },
+  {
+   "category": "KI",
+   "short": "Qwen3-Coder",
+   "title": "Studie: Qwen3-Coder schreibt unsicheren Code, wenn er für US-Kunden ist.",
+   "body": "Die Firma Hirundo behauptet in einer eigenen Fallstudie: Sagt man Alibabas Qwen3-Coder, der Code sei für einen US-Rüstungszulieferer, liefert das Modell 19 Prozent häufiger verwundbare Apps als bei einem chinesischen Pendant; für eine Hongkonger Demokratie-Gruppe waren es 28 Prozent häufiger Apps, die Nutzerdaten offenlegen. Hirundo verkauft selbst ein Verfahren, diese Ausrichtung aus den Gewichten zu entfernen - die Zahlen sind damit Herstellerangaben eines interessierten Anbieters, keine unabhängige Replikation. Der Kernbefund ist trotzdem bemerkenswert: Persona-Konditionierung im Prompt soll das Sicherheitsniveau des generierten Codes messbar verschieben.",
+   "takeaway": "Erst Hintertüren in abliterated-Modellen, jetzt geopolitische Trigger im Code-Modell: Modellgewichte sind Supply Chain und sollten auch so behandelt werden.",
+   "url": "https://www.hirundo.io/blog/qwen3-coder-vulnerabilities",
+   "cta": "Studie lesen ↗",
+   "source": "hirundo.io · Fallstudie vom 21.10. (Herstellerangaben)"
+  },
+  {
+   "category": "Informatik",
+   "short": "Good Type",
+   "title": "Good type against all odds: Typografie, wo man sie nie vermutet.",
+   "body": "Ein wunderbarer Essay über Schrift an unerwarteten Orten: Warum sieht der Text auf manchen Anzeigetafeln schräg aus? Kein Italic, sondern Rolling Shutter - das Display refreshed zeilenweise, und die Zeilen unten landen leicht versetzt. Warum empfinden wir nur eine Schrägrichtung als richtig? Und wie viel Typografie-Handwerk steckt in Dingen, die wir täglich übersehen? Vom Betreiber des Blogs Unsung, der sich liebevoll den vergessenen Ecken der Computergeschichte widmet.",
+   "takeaway": "Der perfekte Kontrast zum Security-Tag: Handwerk, das man erst sieht, wenn einem jemand erklärt, wo man hinschauen muss.",
+   "url": "https://unsung.aresluna.org/good-type-against-all-odds/",
+   "cta": "Essay lesen ↗",
+   "source": "unsung.aresluna.org · HN-Diskussion vom 21.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "PHP gepatcht",
+   "title": "PHP 8.5.12, 8.4.27, 8.3.36 und 8.2.35 sind da - jetzt updaten.",
+   "body": "Wie angekündigt hat das PHP-Projekt die kritischen Releases veröffentlicht: 8.5.12, 8.4.27, 8.3.36 und 8.2.35 schließen CVE-2026-109618 (RCE über Speicherkorruption beim Erreichen des memory_limit) und CVE-2026-109619 (Use-after-Free durch veralteten internen Zustand). Auf Apache mit mod_php war unauthentifizierte Remote-Code-Ausführung mit Standardeinstellungen demonstriert. Gefunden wurden die Lücken von Wiz Research - mit KI-Unterstützung, Stichwort PHP2Shell. Die PHP Foundation nutzt den Anlass für einen ehrlichen Blick auf den Stand der PHP-Security-Arbeit und was sie dafür braucht.",
+   "takeaway": "Wer irgendwo PHP betreibt: heute noch updaten, nicht morgen - RCE mit Default-Config ist die roteste aller Flaggen.",
+   "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+   "cta": "Einordnung lesen ↗",
+   "source": "thephp.foundation · Release und Einordnung vom 21.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "DuckDB 2.0",
+   "title": "DuckDB 2.0.0 LTS 'Cinnamon Teal': das bisher größte Feature-Release.",
+   "body": "DuckDB 2.0 ist erschienen - die erste LTS-Version der 2er-Linie, mit Support bis mindestens Oktober 2027. Knapp 20.000 Commits seit Version 1.5 bringen das polierte Quack-Protokoll, asynchrones I/O, einen echten VARIANT-Typ, einen Agent-Mode, Trigger und einen erweiterbaren SQL-Parser. Wer nicht sofort umsteigen will: Die 1.5er-Linie wurde nachträglich zur LTS verlängert (Support bis März 2027), 1.4 läuft noch bis Ende November. Einige Client-Bibliotheken (Go, R, Java) folgen in den nächsten Tagen.",
+   "takeaway": "DuckDB wächst von der Embedded-Engine zur Datenplattform - Agent-Mode und Server-Protokoll zeigen klar, wo die Reise hingeht.",
+   "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
+   "cta": "Release-Notes lesen ↗",
+   "source": "duckdb.org · Release vom 21.10."
+  }
+ ]
 }
