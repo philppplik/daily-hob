@@ -93,10 +93,10 @@
     },
     {
       "category": "KI",
-      "title": "DeepSeek sammelt Berichten zufolge rund 15 Milliarden Dollar ein - ausgerechnet jetzt.",
+      "title": "DeepSeek sammelt Berichten zufolge rund 15 Milliarden Dollar ein.",
       "short": "DeepSeek-Milliarden",
-      "body": "Zwei Tage nachdem die USA ihre Bundesbehörden angewiesen haben, DeepSeek-Technologie aus ihren Systemen zu entfernen, meldet Bloomberg eine der größten Finanzierungsrunden in Chinas Tech-Geschichte: Das KI-Labor aus Hangzhou soll rund 15 Milliarden Dollar (etwa 100 Milliarden Yuan) eingesammelt haben, als Investoren werden unter anderem Batterie-Riese CATL und Tencent gehandelt. Es ist die zweite Mega-Runde in diesem Jahr: Im Juni waren es laut Bericht über 7 Milliarden Dollar bei 50 Milliarden Bewertung, im Juli suchte DeepSeek weitere 1,5 Milliarden bei rund 71 Milliarden Bewertung. Ein Börsengang in China könnte laut Wall Street Journal schon nächstes Jahr folgen.",
-      "takeaway": "Während Washington DeepSeek aus Behörden verbannt, finanziert China seinen KI-Champion in Richtung Börsengang. Der KI-Wettlauf ist längst auch einer der Kassen.",
+      "body": "Bloomberg meldet eine der größten Finanzierungsrunden in Chinas Tech-Geschichte: Das KI-Labor DeepSeek aus Hangzhou soll rund 15 Milliarden Dollar (etwa 100 Milliarden Yuan) eingesammelt haben, als Investoren werden unter anderem Batterie-Riese CATL und Tencent gehandelt. Es wäre die zweite Mega-Runde in diesem Jahr: Im Juni waren es dem Bericht zufolge über 7 Milliarden Dollar bei 50 Milliarden Bewertung, im Juli suchte DeepSeek demnach weitere 1,5 Milliarden bei rund 71 Milliarden Bewertung. Offiziell bestätigt hat DeepSeek die neue Runde bislang nicht.",
+      "takeaway": "Frische Milliarden für Chinas KI-Champion im Modell-Wettbewerb - bis zur offiziellen Bestätigung bleibt es ein Bloomberg-Bericht.",
       "url": "https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/",
       "cta": "TechCrunch-Bericht lesen",
       "source": "TechCrunch unter Berufung auf Bloomberg, 22.10.2026"
@@ -122,4 +122,4 @@
       "source": "taler.net, Oktober 2026"
     }
   ]
-}
+    }
