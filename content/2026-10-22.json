@@ -2,10 +2,10 @@
   "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-22",
   "date": "2026-10-22",
   "title": "Daily Hob vom Donnerstag, 22.10.",
-  "headline": "Ein 360M-Modell wird zum Terminal,\nmitmproxy signiert wie eMudhra.",
-  "teaser": "7 Catches am Nachmittag: PHP2Shell in freier Wildbahn, die Kernel-Embargo-Panne, ein Switch-2-Jailbreak - dazu WorldTUI, mitmproxy und der mögliche Multiplikations-Rekord.",
-  "intro": "Am Nachmittag wird der PHP-Fall ernster: Amazon hat Angriffe schon vier Tage vor dem Patch gesehen. Dazu eine peinliche Panne auf der Kernel-Mailingliste und der erste Software-Jailbreak für die Switch 2.",
-  "notes": "Laufende Ausgabe für Donnerstag, 22. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: simedw.com, github.com/mitmproxy, eliastaylor.com, web.maths.unsw.edu.au, aws.amazon.com, phoronix.com, pepsipu.com.",
+  "headline": "15 Milliarden für DeepSeek, ein Abschied für Arc.",
+  "teaser": "11 Catches am Abend: DeepSeeks Mega-Runde, eMudhras TLS-Ausstieg, das Arc-Ende und GNU Taler in Bochum - dazu PHP2Shell in freier Wildbahn, die LKML-Panne und der Switch-2-Jailbreak.",
+  "intro": "Am Abend kommen vier große Nachrichten dazu: DeepSeek sammelt Berichten zufolge rund 15 Milliarden Dollar ein, eMudhra steigt komplett aus dem SSL/TLS-Zertifikatsgeschäft aus, der Design-Browser Arc bekommt ein Enddatum und GNU Taler eine Betreiberfirma in Bochum. Dazu der Tagesstand rund um PHP2Shell, die Kernel-Panne, WorldTUI und mehr.",
+  "notes": "Laufende Ausgabe für Donnerstag, 22. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: simedw.com, github.com/mitmproxy, eliastaylor.com, web.maths.unsw.edu.au, aws.amazon.com, phoronix.com, pepsipu.com, emudhra.com, techcrunch.com, arc.net, taler.net.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: ein Terminal-Fenster als dünner schwarzer Linien-Umriss mit Prompt-Pfeil und Cursor-Block, dazu ein gelber Kreis und ein mintfarbenes Quadrat auf hellem Papierhintergrund",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -80,6 +80,46 @@
       "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
       "cta": "Writeup lesen ↗",
       "source": "pepsipu.com · Artikel vom 18.10., HN-Diskussion vom 22.10."
+    },
+    {
+      "category": "Informatik",
+      "title": "Nach dem Schlüssel-Debakel: eMudhra steigt komplett aus dem SSL/TLS-Geschäft aus.",
+      "short": "eMudhra steigt aus",
+      "body": "Die indische Zertifizierungsstelle eMudhra - heute Morgen hier noch im mitmproxy-Catch wegen ihres als kompromittiert geltenden Schlüssels - zieht die Konsequenz: Der Vorstand hat am 22. Oktober beschlossen, sich vollständig aus dem globalen SSL/TLS-Zertifikatsgeschäft zurückzuziehen. Laut Pressemitteilung wurden die betroffenen CAs binnen 14 Stunden widerrufen, es seien keine Endnutzer-Zertifikate ausgestellt und keine Infrastruktur kompromittiert worden. Dahinter steckt aber auch nüchterne Mathematik: SSL/TLS macht laut eMudhra nur etwa 1 Prozent des Umsatzes aus, große Anbieter geben Zertifikate gratis ab - und die, O-Ton, 'unverhältnismäßige Social-Media-Aufmerksamkeit' um den Vorfall tat ihr Übriges. Bestandskunden sollen kostenlos Ersatzzertifikate von Partnern bekommen, die G1-RSA-Roots laufen während der Übergangsphase weiter.",
+      "takeaway": "Ein angefressener Schlüssel kostet nicht nur Vertrauen - hier gleich ein ganzes Geschäftsfeld. So funktioniert Zertifikats-Transparenz: Wer wackelt, fliegt raus.",
+      "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
+      "cta": "Pressemitteilung lesen",
+      "source": "eMudhra Press Release, 22.10.2026"
+    },
+    {
+      "category": "KI",
+      "title": "DeepSeek sammelt Berichten zufolge rund 15 Milliarden Dollar ein - ausgerechnet jetzt.",
+      "short": "DeepSeek-Milliarden",
+      "body": "Zwei Tage nachdem die USA ihre Bundesbehörden angewiesen haben, DeepSeek-Technologie aus ihren Systemen zu entfernen, meldet Bloomberg eine der größten Finanzierungsrunden in Chinas Tech-Geschichte: Das KI-Labor aus Hangzhou soll rund 15 Milliarden Dollar (etwa 100 Milliarden Yuan) eingesammelt haben, als Investoren werden unter anderem Batterie-Riese CATL und Tencent gehandelt. Es ist die zweite Mega-Runde in diesem Jahr: Im Juni waren es laut Bericht über 7 Milliarden Dollar bei 50 Milliarden Bewertung, im Juli suchte DeepSeek weitere 1,5 Milliarden bei rund 71 Milliarden Bewertung. Ein Börsengang in China könnte laut Wall Street Journal schon nächstes Jahr folgen.",
+      "takeaway": "Während Washington DeepSeek aus Behörden verbannt, finanziert China seinen KI-Champion in Richtung Börsengang. Der KI-Wettlauf ist längst auch einer der Kassen.",
+      "url": "https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/",
+      "cta": "TechCrunch-Bericht lesen",
+      "source": "TechCrunch unter Berufung auf Bloomberg, 22.10.2026"
+    },
+    {
+      "category": "Informatik",
+      "title": "Arc wird eingestellt: Am 22. Dezember ist Schluss für den Design-Browser.",
+      "short": "Arc geht offline",
+      "body": "The Browser Company beendet Arc offiziell: Am 22. Dezember 2026 wird der Browser eingestellt, neue Accounts lassen sich seit heute nicht mehr anlegen. Sämtliche Engineering- und Security-Kräfte fließen in den KI-Browser Dia - dorthin sollen Passwörter, Lesezeichen, Spaces und Tab Groups per Import nahtlos mitwandern. Im Abschiedsbrief heißt es, einen Browser sicher zu halten koste im KI-Zeitalter immer mehr konstante Arbeit, und Dia sei von Grund auf für heutige Sicherheitsstandards gebaut. Schon am 23. November werden auf iOS und Android die KI-Features abgeschaltet, Arc Search läuft als Browser weiter, aber ohne Anmeldung und Sync. Für viele war Arc der Beweis, dass Browser-UI neu denkbar ist - jetzt wird es ein Kapitel Designgeschichte.",
+      "takeaway": "Der mutigste Browser-Entwurf der letzten Jahre hat ein Enddatum. Wer Arc nutzt, sollte den eingebauten Datenexport bald ziehen - und ein Auge auf Dia werfen.",
+      "url": "https://arc.net",
+      "cta": "Abschiedsseite lesen",
+      "source": "The Browser Company (arc.net), 22.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "GNU Taler wird ernst: Neue Firma in Bochum soll das Bezahlsystem betreiben.",
+      "short": "Taler in Bochum",
+      "body": "Das quelloffene Bezahlsystem GNU Taler bekommt einen offiziellen Betreiber: Die Taler Operations AG wird in Bochum gegründet und soll Taler in Euro betreiben - zuerst in Deutschland, dann in der Eurozone. Nächster Schritt ist die Lizenz als E-Geld-Institut bei der BaFin. Die eigene Firma wurde nötig, weil die GLS Bank im Januar 2026 ihre geplante Rolle als E-Geld-Emittent aufgegeben hat. Taler ist dabei kein Kryptogeld, sondern ein Bezahlsystem: digitale Münzen als Inhaber-Token, die nach EU-Recht als elektronisches Geld gelten und deshalb eine Regulierung brauchen. Nach drei Jahren Vorarbeit im EU-Projekt NGI TALER geht es jetzt um Lizenz, Betrieb - und um Unterstützer, die sich auch als Investoren einbringen können.",
+      "takeaway": "Datenschutzfreundliches Bezahlen aus Deutschland, reguliert statt Wildwest: Taler ist der seltene Fall, in dem Open Source bewusst Richtung BaFin marschiert.",
+      "url": "https://www.taler.net/en/news/2026-13.html",
+      "cta": "Ankündigung lesen",
+      "source": "taler.net, Oktober 2026"
     }
   ]
 }
