@@ -1,85 +1,85 @@
 {
- "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-22",
- "date": "2026-10-22",
- "title": "Daily Hob vom Donnerstag, 22.10.",
- "headline": "Ein 360M-Modell wird zum Terminal,\nmitmproxy signiert wie eMudhra.",
- "teaser": "7 Catches am Nachmittag: PHP2Shell in freier Wildbahn, die Kernel-Embargo-Panne, ein Switch-2-Jailbreak - dazu WorldTUI, mitmproxy und der mögliche Multiplikations-Rekord.",
- "intro": "Am Nachmittag wird der PHP-Fall ernster: Amazon hat Angriffe schon vier Tage vor dem Patch gesehen. Dazu eine peinliche Panne auf der Kernel-Mailingliste und der erste Software-Jailbreak für die Switch 2.",
- "notes": "Laufende Ausgabe für Donnerstag, 22. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: simedw.com, github.com/mitmproxy, eliastaylor.com, web.maths.unsw.edu.au, aws.amazon.com, phoronix.com, pepsipu.com.",
- "hero": "hero.jpg",
- "heroAlt": "Abstrakte Illustration: ein Terminal-Fenster als dünner schwarzer Linien-Umriss mit Prompt-Pfeil und Cursor-Block, dazu ein gelber Kreis und ein mintfarbenes Quadrat auf hellem Papierhintergrund",
- "heroCaption": "Illustration: KI-generiert für Daily Hob",
- "audio": null,
- "sections": [
-  {
-   "category": "KI",
-   "short": "WorldTUI",
-   "title": "WorldTUI: Ein 360M-Modell spielt Terminal - ganz ohne Shell.",
-   "body": "Simon Edwardsson hat ein Sprachmodell mit nur 360 Millionen Parametern so feingetunt, dass es sich wie ein Terminal verhält: Jeder Tastendruck geht rein, das Modell sagt voraus, wie sich der Bildschirm verändert. Es legt Dateien an, 'führt' vim und tmux aus, spielt Snake - und erinnert sich meist, was man ein paar Befehle vorher geschrieben hat. Dahinter steckt keine Shell und kein Dateisystem, nur ein gelerntes Weltmodell. Läuft im Browser per WebGPU (208 MB Download); Tippfehler wie 'pythoon' verraten, dass es keine echte Shell ist.",
-   "takeaway": "Die Genie-3-Idee im Kleinen: Anwendungen, die nicht programmiert, sondern gelernt werden - hier als spielbares Experiment statt als Keynote.",
-   "url": "https://simedw.com/2026/10/21/world-model-terminal/",
-   "cta": "Im Browser testen ↗",
-   "source": "simedw.com · Artikel vom 21.10., HN-Diskussion vom 22.10."
-  },
-  {
-   "category": "Open Source",
-   "short": "mitmproxy --emudhra",
-   "title": "mitmproxy bekommt eine --emudhra-Option: Zertifikate mit geknackten Schlüsseln signieren.",
-   "body": "mitmproxy-Maintainer Maximilian Hils hat eine neue Option eingebaut: Mit --emudhra signiert der Proxy TLS-Zertifikate mit einem kompromittierten eMudhra-Zwischenzertifikats-Schlüssel. Dahinter steckt mehr als ein Scherz: So lässt sich testen, ob eigene Clients und Tools die seit dieser Woche gesperrten eMudhra-Zertifikate tatsächlich korrekt ablehnen. Passend dazu wurde die certifi-Abhängigkeit aktualisiert - die eMudhra-Roots fliegen aus den mitgelieferten Binaries.",
-   "takeaway": "Aus der CA-Katastrophe wird ein Testfeature: Wer prüfen will, ob sein Stack die schwachen Schlüssel wirklich blockiert, bekommt jetzt das Werkzeug dafür.",
-   "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
-   "cta": "Commit ansehen ↗",
-   "source": "github.com/mitmproxy · Commit vom 21.10., HN-Diskussion vom 22.10."
-  },
-  {
-   "category": "Informatik",
-   "short": "PHP eingeordnet",
-   "title": "Einordnung: Die PHP-Lücke ist real, aber kein zweites Log4Shell.",
-   "body": "Nach dem gestrigen Patch-Druck liefert Elias Taylor die nötige Kühle: Ja, die PHP-Schwachstelle ist echt und wichtig - aber längst nicht so leicht auszunutzen wie Log4Shell oder Heartbleed. Auf GitHub kursieren inzwischen tausende angebliche PoC-Exploits, von denen nach seiner Analyse keiner gegen eine Vanilla-PHP-Installation funktioniert; viele stammen offenbar ungeprüft aus LLMs. Seine Empfehlung bleibt trotzdem: patchen - nur eben ohne Panik.",
-   "takeaway": "Die wichtigste Security-Kompetenz der Woche: echte Lücken von LLM-generiertem PoC-Slop unterscheiden.",
-   "url": "https://eliastaylor.com/noexploit/",
-   "cta": "Einordnung lesen ↗",
-   "source": "eliastaylor.com · Artikel vom 21.10., HN-Diskussion vom 22.10."
-  },
-  {
-   "category": "Informatik",
-   "short": "Multiplikations-Rekord?",
-   "title": "Geht Integer-Multiplikation noch schneller? Harvey hält o(n log n)-Behauptung für plausibel.",
-   "body": "2019 bewiesen David Harvey und Joris van der Hoeven, dass ganzzahlige Multiplikation in O(n log n) möglich ist - der jahrzehntealte Rekord. Jetzt liegt eine neue Arbeit vor, die echt weniger behauptet: o(n log n), also asymptotisch schneller. Harvey selbst hat dazu eine Notiz veröffentlicht: Er hat die Details noch nicht geprüft, hält die Schranke aber für plausibel. Charmante Fußnote am Rand: Seine Notiz erklärt, ein KI-Modell habe ihm geholfen, die neuen Algorithmen zu verstehen.",
-   "takeaway": "Noch unbewiesen - aber wenn der Rekordhalter persönlich 'plausibel' sagt, lohnt das Merken: Die Königsdisziplin der Algorithmik könnte nach sieben Jahren wieder fallen.",
-   "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
-   "cta": "Notiz lesen (PDF) ↗",
-   "source": "web.maths.unsw.edu.au · Notiz vom 20.10., HN-Diskussion vom 22.10."
-  },
-  {
-   "category": "Informatik",
-   "short": "PHP2Shell aktiv",
-   "title": "PHP2Shell wurde schon vor der Veröffentlichung angegriffen - und wird es jetzt breit.",
-   "body": "Amazon Threat Intelligence hat in seiner MadPot-Honeypot-Telemetrie einen PHP2Shell-Exploit-Versuch vom 17. Oktober gefunden - vier Tage vor der öffentlichen Veröffentlichung der beiden PHP-Lücken, verschleiert über eine kommerzielle Anonymisierungs-Plattform. Seit dem Patch sieht Amazon breite Ausnutzung in freier Wildbahn, offenbar durch mehrere Akteure. Die Lehren von AWS: Patch-Zeiten bei kritischen, internetoffenen Systemen in Stunden messen statt in Tagen, und Untersuchungen nicht ab dem Disclosure-Datum starten, sondern ab der frühesten bekannten Ausnutzung. Bemerkenswert auch: Laut Amazon macht KI es zunehmend billiger, aus einem Patch-Diff binnen Stunden einen funktionierenden Exploit zu bauen.",
-   "takeaway": "Gegenstück zur gestrigen Einordnung: Der Exploit war nicht trivial - aber motivierte Angreifer hatten ihn trotzdem schon vor dem Patch. Untersuchungen sollten ab dem 17. Oktober laufen.",
-   "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
-   "cta": "Analyse lesen ↗",
-   "source": "aws.amazon.com · Analyse vom 21.10., HN-Diskussion vom 22.10."
-  },
-  {
-   "category": "Informatik",
-   "short": "LKML-Panne",
-   "title": "Versehentlich öffentlich: Mehrere Kernel-Lücken landen auf der falschen Mailingliste.",
-   "body": "Trend Micros Zero Day Initiative hat über Nacht mehrere neue Linux-Kernel-Lücken offenbar versehentlich an die öffentliche Kernel-Mailingliste geschickt statt an die private Security-Liste - darunter zwei mit CVSS 9.0: eine SMB-Direct-Remote-Code-Execution per Integer-Underflow und eine Race Condition in KSMBD, ebenfalls mit RCE-Potenzial. Im Mainline ist noch nichts gepatcht; Greg Kroah-Hartman hinterfragte die öffentlichen Meldungen einzeln. Für einzelne Lücken existieren Patches in Next-Branches, die jetzt wohl vorgezogen werden.",
-   "takeaway": "Embargo-Pannen passieren auch den Profis - für Distributions-Maintainer heißt es jetzt: schneller patchen als die Mitleser der Liste.",
-   "url": "https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities",
-   "cta": "Meldung lesen ↗",
-   "source": "phoronix.com · Meldung vom 22.10."
-  },
-  {
-   "category": "Wildcard",
-   "short": "Switch-2-Jailbreak",
-   "title": "ns2jb: Der erste Software-Jailbreak für die Switch 2 ist da.",
-   "body": "Ein Entwickler namens cs hat ns2jb veröffentlicht: nach seinen Angaben den ersten rein softwarebasierten, tethered Jailbreak für die Nintendo Switch 2. Der Exploit erlaubt beliebigen nativen Code als Sysmodule - Homebrew, Reverse Engineering, Mods und Speicherstand-Backups inklusive. Zum Beweis wurde Mario Kart World mit eigenen Charakteren gemoddet, von Steve bis Hatsune Miku; bei den Mods half ein Coding-Agent. Der Artikel stammt vom 18. Oktober und ist jetzt an die Spitze von Hacker News gewandert.",
-   "takeaway": "Der übliche Kreislauf: Neue Konsole draußen, Jailbreak folgt - diesmal mit KI-gemoddetem Mario Kart als Demo.",
-   "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
-   "cta": "Writeup lesen ↗",
-   "source": "pepsipu.com · Artikel vom 18.10., HN-Diskussion vom 22.10."
-  }
- ]
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-22",
+  "date": "2026-10-22",
+  "title": "Daily Hob vom Donnerstag, 22.10.",
+  "headline": "Ein 360M-Modell wird zum Terminal,\nmitmproxy signiert wie eMudhra.",
+  "teaser": "7 Catches am Nachmittag: PHP2Shell in freier Wildbahn, die Kernel-Embargo-Panne, ein Switch-2-Jailbreak - dazu WorldTUI, mitmproxy und der mögliche Multiplikations-Rekord.",
+  "intro": "Am Nachmittag wird der PHP-Fall ernster: Amazon hat Angriffe schon vier Tage vor dem Patch gesehen. Dazu eine peinliche Panne auf der Kernel-Mailingliste und der erste Software-Jailbreak für die Switch 2.",
+  "notes": "Laufende Ausgabe für Donnerstag, 22. Oktober 2026 (Berliner Zeit), Stand Nachmittag. Quellen: simedw.com, github.com/mitmproxy, eliastaylor.com, web.maths.unsw.edu.au, aws.amazon.com, phoronix.com, pepsipu.com.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: ein Terminal-Fenster als dünner schwarzer Linien-Umriss mit Prompt-Pfeil und Cursor-Block, dazu ein gelber Kreis und ein mintfarbenes Quadrat auf hellem Papierhintergrund",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "audio": null,
+  "sections": [
+    {
+      "category": "KI",
+      "short": "WorldTUI",
+      "title": "WorldTUI: Ein 360M-Modell spielt Terminal - ganz ohne Shell.",
+      "body": "Simon Edwardsson hat ein Sprachmodell mit nur 360 Millionen Parametern so feingetunt, dass es sich wie ein Terminal verhält: Jeder Tastendruck geht rein, das Modell sagt voraus, wie sich der Bildschirm verändert. Es legt Dateien an, 'führt' vim und tmux aus, spielt Snake - und erinnert sich meist, was man ein paar Befehle vorher geschrieben hat. Dahinter steckt keine Shell und kein Dateisystem, nur ein gelerntes Weltmodell. Läuft im Browser per WebGPU (208 MB Download); Tippfehler wie 'pythoon' verraten, dass es keine echte Shell ist.",
+      "takeaway": "Die Genie-3-Idee im Kleinen: Anwendungen, die nicht programmiert, sondern gelernt werden - hier als spielbares Experiment statt als Keynote.",
+      "url": "https://simedw.com/2026/10/21/world-model-terminal/",
+      "cta": "Im Browser testen ↗",
+      "source": "simedw.com · Artikel vom 21.10., HN-Diskussion vom 22.10."
+    },
+    {
+      "category": "Open Source",
+      "short": "mitmproxy --emudhra",
+      "title": "mitmproxy bekommt eine --emudhra-Option: Zertifikate mit geknackten Schlüsseln signieren.",
+      "body": "mitmproxy-Maintainer Maximilian Hils hat eine neue Option eingebaut: Mit --emudhra signiert der Proxy TLS-Zertifikate mit einem kompromittierten eMudhra-Zwischenzertifikats-Schlüssel. Dahinter steckt mehr als ein Scherz: So lässt sich testen, ob eigene Clients und Tools die seit dieser Woche gesperrten eMudhra-Zertifikate tatsächlich korrekt ablehnen. Passend dazu wurde die certifi-Abhängigkeit aktualisiert - die eMudhra-Roots fliegen aus den mitgelieferten Binaries.",
+      "takeaway": "Aus der CA-Katastrophe wird ein Testfeature: Wer prüfen will, ob sein Stack die schwachen Schlüssel wirklich blockiert, bekommt jetzt das Werkzeug dafür.",
+      "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
+      "cta": "Commit ansehen ↗",
+      "source": "github.com/mitmproxy · Commit vom 21.10., HN-Diskussion vom 22.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "PHP eingeordnet",
+      "title": "Einordnung: Die PHP-Lücke ist real, aber kein zweites Log4Shell.",
+      "body": "Elias Taylor ordnet die PHP2Shell-Lücken (CVE-2026-109618 und CVE-2026-109619) ein: Ja, die Schwachstellen in PHPs Session-Upload-Handling sind echt und wichtig - aber längst nicht so leicht auszunutzen wie Log4Shell oder Heartbleed. Auf GitHub kursierten nach seiner Analyse tausende angebliche PoC-Exploits, von denen keiner gegen eine Vanilla-PHP-Installation funktionierte; viele stammen offenbar ungeprüft aus LLMs. Seine Empfehlung: patchen, aber ohne Panik. Update vom Nachmittag: Amazon Threat Intelligence hat inzwischen Exploit-Versuche gegen seine Honeypots bestätigt - den ersten schon am 17. Oktober, vier Tage vor der Veröffentlichung - und meldet breite Ausnutzungsversuche in freier Wildbahn; ob welche auf realen Systemen erfolgreich waren, ist laut AWS unklar. Taylors Grundbotschaft bleibt, die Patch-Dringlichkeit ist aber gestiegen (Details im PHP2Shell-Catch).",
+      "takeaway": "Die wichtigste Security-Kompetenz der Woche: echte Lücken von LLM-generiertem PoC-Slop unterscheiden - und trotzdem zügig patchen.",
+      "url": "https://eliastaylor.com/noexploit/",
+      "cta": "Einordnung lesen ↗",
+      "source": "eliastaylor.com · Artikel vom 21.10., HN-Diskussion vom 22.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "Multiplikations-Rekord?",
+      "title": "Geht Integer-Multiplikation noch schneller? Harvey hält o(n log n)-Behauptung für plausibel.",
+      "body": "2019 bewiesen David Harvey und Joris van der Hoeven, dass ganzzahlige Multiplikation in O(n log n) möglich ist - der jahrzehntealte Rekord. Jetzt liegt eine neue Arbeit vor, die echt weniger behauptet: o(n log n), also asymptotisch schneller. Harvey selbst hat dazu eine Notiz veröffentlicht: Er hat die Details noch nicht geprüft, hält die Schranke aber für plausibel. Charmante Fußnote am Rand: Seine Notiz erklärt, ein KI-Modell habe ihm geholfen, die neuen Algorithmen zu verstehen.",
+      "takeaway": "Noch unbewiesen - aber wenn der Rekordhalter persönlich 'plausibel' sagt, lohnt das Merken: Die Königsdisziplin der Algorithmik könnte nach sieben Jahren wieder fallen.",
+      "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
+      "cta": "Notiz lesen (PDF) ↗",
+      "source": "web.maths.unsw.edu.au · Notiz vom 20.10., HN-Diskussion vom 22.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "PHP2Shell aktiv",
+      "title": "PHP2Shell wurde schon vor der Veröffentlichung angegriffen - und wird es jetzt breit.",
+      "body": "Amazon Threat Intelligence hat in seiner MadPot-Honeypot-Telemetrie einen PHP2Shell-Exploit-Versuch vom 17. Oktober gefunden - vier Tage vor der öffentlichen Veröffentlichung von CVE-2026-109618 und CVE-2026-109619, verschleiert über eine kommerzielle Anonymisierungs-Plattform. Seit dem Patch sieht Amazon breite Ausnutzungsversuche durch mehrere Akteure; ob sie auf realen Systemen erfolgreich waren, ist laut AWS noch unklar. Angegriffen wird PHPs Session-Upload-Handling (PHP_SESSION_UPLOAD_PROGRESS) - betroffen sind also vor allem PHP-Anwendungen mit Datei-Upload-Formularen. AWS' Lehren: Patch-Zeiten bei kritischen, internetoffenen Systemen in Stunden messen statt in Tagen, und Untersuchungen nicht ab dem Disclosure-Datum starten, sondern ab der frühesten bekannten Ausnutzung. Bemerkenswert auch: Laut Amazon macht KI-gestützte Analyse es zunehmend billiger, aus einem Patch-Diff binnen Stunden einen funktionierenden Exploit zu bauen.",
+      "takeaway": "Präzisiert die Einordnung vom Morgen: Die Masse der kursierenden PoCs funktioniert laut Taylor nicht - aber echte Angreifer waren laut AWS schon vor dem Patch dran. Untersuchungen sollten ab dem 17. Oktober laufen.",
+      "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+      "cta": "Analyse lesen ↗",
+      "source": "aws.amazon.com · Analyse vom 21.10., HN-Diskussion vom 22.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "LKML-Panne",
+      "title": "Versehentlich öffentlich: Mehrere Kernel-Lücken landen auf der falschen Mailingliste.",
+      "body": "Trend Micros Zero Day Initiative hat über Nacht mehrere neue Linux-Kernel-Lücken offenbar versehentlich an die öffentliche Kernel-Mailingliste geschickt statt an die private Security-Liste - darunter zwei mit CVSS 9.0: eine SMB-Direct-Remote-Code-Execution per Integer-Underflow und eine Race Condition in KSMBD, ebenfalls mit RCE-Potenzial. Im Mainline ist noch nichts gepatcht; Greg Kroah-Hartman hinterfragte die öffentlichen Meldungen einzeln. Für einzelne Lücken existieren Patches in Next-Branches, die jetzt wohl vorgezogen werden.",
+      "takeaway": "Embargo-Pannen passieren auch den Profis - für Distributions-Maintainer heißt es jetzt: schneller patchen als die Mitleser der Liste.",
+      "url": "https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities",
+      "cta": "Meldung lesen ↗",
+      "source": "phoronix.com · Meldung vom 22.10."
+    },
+    {
+      "category": "Wildcard",
+      "short": "Switch-2-Jailbreak",
+      "title": "ns2jb: Der erste Software-Jailbreak für die Switch 2 ist da.",
+      "body": "Ein Entwickler namens cs hat ns2jb veröffentlicht: nach seinen Angaben den ersten rein softwarebasierten, tethered Jailbreak für die Nintendo Switch 2. Der Exploit erlaubt beliebigen nativen Code als Sysmodule - Homebrew, Reverse Engineering, Mods und Speicherstand-Backups inklusive. Zum Beweis wurde Mario Kart World mit eigenen Charakteren gemoddet, von Steve bis Hatsune Miku; bei den Mods half ein Coding-Agent. Der Artikel stammt vom 18. Oktober und ist jetzt an die Spitze von Hacker News gewandert.",
+      "takeaway": "Der übliche Kreislauf: Neue Konsole draußen, Jailbreak folgt - diesmal mit KI-gemoddetem Mario Kart als Demo.",
+      "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+      "cta": "Writeup lesen ↗",
+      "source": "pepsipu.com · Artikel vom 18.10., HN-Diskussion vom 22.10."
+    }
+  ]
 }
