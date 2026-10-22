@@ -1,0 +1,55 @@
+{
+ "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-22",
+ "date": "2026-10-22",
+ "title": "Daily Hob vom Donnerstag, 22.10.",
+ "headline": "Ein 360M-Modell wird zum Terminal,\nmitmproxy signiert wie eMudhra.",
+ "teaser": "4 Catches am Morgen: WorldTUI lässt ein kleines Modell ein Terminal spielen, mitmproxy testet Clients mit eMudhra-Schlüsseln, eine nüchterne Einordnung der PHP-Lücke und ein neuer Rekordanspruch bei der Integer-Multiplikation.",
+ "intro": "Der Donnerstag bringt Nachspiel und Neues: ein Werkzeug, das die eMudhra-Schwachstelle zum Testfeature macht, eine sachliche Einordnung der PHP-Lücke - und ein Sprachmodell, das ein ganzes Terminal ersetzt. Diese Ausgabe wächst über den Tag.",
+ "notes": "Laufende Ausgabe für Donnerstag, 22. Oktober 2026 (Berliner Zeit), Stand Morgen. Quellen: simedw.com, github.com/mitmproxy, eliastaylor.com, web.maths.unsw.edu.au.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Illustration: ein Terminal-Fenster als dünner schwarzer Linien-Umriss mit Prompt-Pfeil und Cursor-Block, dazu ein gelber Kreis und ein mintfarbenes Quadrat auf hellem Papierhintergrund",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "audio": null,
+ "sections": [
+  {
+   "category": "KI",
+   "short": "WorldTUI",
+   "title": "WorldTUI: Ein 360M-Modell spielt Terminal - ganz ohne Shell.",
+   "body": "Simon Edwardsson hat ein Sprachmodell mit nur 360 Millionen Parametern so feingetunt, dass es sich wie ein Terminal verhält: Jeder Tastendruck geht rein, das Modell sagt voraus, wie sich der Bildschirm verändert. Es legt Dateien an, 'führt' vim und tmux aus, spielt Snake - und erinnert sich meist, was man ein paar Befehle vorher geschrieben hat. Dahinter steckt keine Shell und kein Dateisystem, nur ein gelerntes Weltmodell. Läuft im Browser per WebGPU (208 MB Download); Tippfehler wie 'pythoon' verraten, dass es keine echte Shell ist.",
+   "takeaway": "Die Genie-3-Idee im Kleinen: Anwendungen, die nicht programmiert, sondern gelernt werden - hier als spielbares Experiment statt als Keynote.",
+   "url": "https://simedw.com/2026/10/21/world-model-terminal/",
+   "cta": "Im Browser testen ↗",
+   "source": "simedw.com · Artikel vom 21.10., HN-Diskussion vom 22.10."
+  },
+  {
+   "category": "Open Source",
+   "short": "mitmproxy --emudhra",
+   "title": "mitmproxy bekommt eine --emudhra-Option: Zertifikate mit geknackten Schlüsseln signieren.",
+   "body": "mitmproxy-Maintainer Maximilian Hils hat eine neue Option eingebaut: Mit --emudhra signiert der Proxy TLS-Zertifikate mit einem kompromittierten eMudhra-Zwischenzertifikats-Schlüssel. Dahinter steckt mehr als ein Scherz: So lässt sich testen, ob eigene Clients und Tools die seit dieser Woche gesperrten eMudhra-Zertifikate tatsächlich korrekt ablehnen. Passend dazu wurde die certifi-Abhängigkeit aktualisiert - die eMudhra-Roots fliegen aus den mitgelieferten Binaries.",
+   "takeaway": "Aus der CA-Katastrophe wird ein Testfeature: Wer prüfen will, ob sein Stack die schwachen Schlüssel wirklich blockiert, bekommt jetzt das Werkzeug dafür.",
+   "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
+   "cta": "Commit ansehen ↗",
+   "source": "github.com/mitmproxy · Commit vom 21.10., HN-Diskussion vom 22.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "PHP eingeordnet",
+   "title": "Einordnung: Die PHP-Lücke ist real, aber kein zweites Log4Shell.",
+   "body": "Nach dem gestrigen Patch-Druck liefert Elias Taylor die nötige Kühle: Ja, die PHP-Schwachstelle ist echt und wichtig - aber längst nicht so leicht auszunutzen wie Log4Shell oder Heartbleed. Auf GitHub kursieren inzwischen tausende angebliche PoC-Exploits, von denen nach seiner Analyse keiner gegen eine Vanilla-PHP-Installation funktioniert; viele stammen offenbar ungeprüft aus LLMs. Seine Empfehlung bleibt trotzdem: patchen - nur eben ohne Panik.",
+   "takeaway": "Die wichtigste Security-Kompetenz der Woche: echte Lücken von LLM-generiertem PoC-Slop unterscheiden.",
+   "url": "https://eliastaylor.com/noexploit/",
+   "cta": "Einordnung lesen ↗",
+   "source": "eliastaylor.com · Artikel vom 21.10., HN-Diskussion vom 22.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Multiplikations-Rekord?",
+   "title": "Geht Integer-Multiplikation noch schneller? Harvey hält o(n log n)-Behauptung für plausibel.",
+   "body": "2019 bewiesen David Harvey und Joris van der Hoeven, dass ganzzahlige Multiplikation in O(n log n) möglich ist - der jahrzehntealte Rekord. Jetzt liegt eine neue Arbeit vor, die echt weniger behauptet: o(n log n), also asymptotisch schneller. Harvey selbst hat dazu eine Notiz veröffentlicht: Er hat die Details noch nicht geprüft, hält die Schranke aber für plausibel. Charmante Fußnote am Rand: Seine Notiz erklärt, ein KI-Modell habe ihm geholfen, die neuen Algorithmen zu verstehen.",
+   "takeaway": "Noch unbewiesen - aber wenn der Rekordhalter persönlich 'plausibel' sagt, lohnt das Merken: Die Königsdisziplin der Algorithmik könnte nach sieben Jahren wieder fallen.",
+   "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
+   "cta": "Notiz lesen (PDF) ↗",
+   "source": "web.maths.unsw.edu.au · Notiz vom 20.10., HN-Diskussion vom 22.10."
+  }
+ ]
+}
