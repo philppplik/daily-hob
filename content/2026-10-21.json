@@ -3,9 +3,9 @@
  "date": "2026-10-21",
  "title": "Daily Hob vom Mittwoch, 21.10.",
  "headline": "PHPs kritische Lücken sind da,\nCSS plant seine Zukunft.",
- "teaser": "9 Catches am Abend: Die PHP-Fixes sind da, DuckDB 2.0 LTS erscheint - dazu eMudhra-Aufklärung, Qwen3-Coder, CSS-Zukunft und mehr.",
- "intro": "Zum Abend die erlösenden Nachrichten: Die kritischen PHP-Versionen sind draußen - jetzt updaten. Und DuckDB feiert mit 2.0 LTS sein größtes Release. Dazu die Aufklärung des eMudhra-Falls und ein Typografie-Essay zum Abschalten.",
- "notes": "Laufende Ausgabe für Mittwoch, 21. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: jackalsyn.com, joshwcomeau.com, arstechnica.com, krebsonsecurity.com, scotthelme.co.uk, hirundo.io, unsung.aresluna.org, thephp.foundation, duckdb.org.",
+ "teaser": "13 Catches zum Mittwoch: PHP-Fixes, eMudhra-Aufklärung, LiteLLM-Hack, Railway-Breach, DuckDB 2.0, das BioWare-Ende und die 25-Milliarden-Meta-Strafe.",
+ "intro": "Die finale Mittwochs-Ausgabe: Der Security-Tag endet mit dem LiteLLM-Supply-Chain-Hack und dem Railway-Breach - beides offenbar Teile einer Kampagne gegen KI-Inference-Anbieter. Dazu das BioWare-Ende und die historische Meta-Strafe.",
+ "notes": "Ausgabe für Mittwoch, 21. Oktober 2026 (Berliner Zeit), final. Quellen: jackalsyn.com, joshwcomeau.com, arstechnica.com, krebsonsecurity.com, scotthelme.co.uk, hirundo.io, unsung.aresluna.org, thephp.foundation, duckdb.org, safedep.io, blog.railway.com, theverge.com, bbc.com.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Illustration: ein Vorhängeschloss als dünner schwarzer Linien-Umriss, verzahnt mit der Kontur eines Browser-Fensters, dazu ein gelber Kreis und ein mintfarbenes Quadrat auf hellem Papierhintergrund",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -100,6 +100,46 @@
    "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
    "cta": "Release-Notes lesen ↗",
    "source": "duckdb.org · Release vom 21.10."
+  },
+  {
+   "category": "KI",
+   "short": "LiteLLM-Hack",
+   "title": "LiteLLM 1.107.0 auf PyPI kompromittiert: Credential-Stealer und Backdoor.",
+   "body": "Die PyPI-Version 1.107.0 von LiteLLM, der beliebten LLM-Proxy-Bibliothek, enthielt einen Credential-Stealer plus Remote-Code-Backdoor - verpackt in drei Dateien, von denen zwei bei jedem Python-Start laufen, auch wenn man litellm gar nicht importiert. Der Stealer sammelt SSH-Keys, Cloud-Credentials, CI/CD-Secrets und LLM-Provider-Keys und schickt sie an einen Server unter litellm[.]dev. PyPI hat das Release am selben Tag entfernt, auch Docker-Images waren einige Stunden infiziert. Sauber sind 1.106.2 und die Release-Kandidaten; das GitHub-Repo selbst war nie betroffen - die Schadsoftware wurde erst im PyPI-Build eingeschleust.",
+   "takeaway": "Wer gestern litellm 1.107.0 gezogen hat: ALLE Keys rotieren - SSH, Cloud, LLM-Provider. Alle anderen: Lockfiles und Provenance-Checks sind kein Nice-to-have mehr.",
+   "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+   "cta": "Analyse lesen ↗",
+   "source": "safedep.io · Analyse vom 21.10."
+  },
+  {
+   "category": "Informatik",
+   "short": "Railway-Breach",
+   "title": "Railway meldet Zugriff auf Kunden-Secrets - Kampagne gegen KI-Inference-Anbieter.",
+   "body": "Die Deployment-Plattform Railway hat einen Sicherheitsvorfall offengelegt: Ein unbefugter Dritter hatte Zugriff auf verschlüsselte Umgebungsvariablen von Kunden - bei einem Teil davon offenbar auch auf die entschlüsselten Inhalte, also API-Keys und Datenbank-Credentials. Railway ordnet den Angriff als Teil einer Angriffsserie ein, die es gezielt auf Plattformen mit Zugang zu KI-Inference-Providern absieht, und hat die betroffenen Upstream-Provider zum proaktiven Key-Entzug informiert. Alle Nutzer sollen vorsorglich sämtliche Umgebungsvariablen rotieren.",
+   "takeaway": "Passt beunruhigend gut zum LiteLLM-Hack vom selben Tag: Jemand jagt systematisch LLM-Provider-Keys - also rotieren, nicht abwarten.",
+   "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+   "cta": "Disclosure lesen ↗",
+   "source": "blog.railway.com · Disclosure vom 21.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "BioWare zu",
+   "title": "EA schließt BioWare - Ende eines legendären Studios.",
+   "body": "Electronic Arts schließt BioWare, das Studio hinter Baldur's Gate, Knights of the Old Republic, Mass Effect und Dragon Age - das Studio selbst hat die Schließung in einem Statement bestätigt, und auch das in Arbeit befindliche nächste Mass Effect wird nicht weiterentwickelt. EA streicht laut Bloomberg rund 400 Stellen, davon etwa 50 bei BioWare. Hintergrund ist die im August abgeschlossene Privatisierung von EA für 55 Milliarden Dollar durch ein Investorenkonsortium um Saudi-Arabiens Public Investment Fund, Silver Lake und Affinity Partners.",
+   "takeaway": "Ein Stück Gaming-Geschichte weniger - nach über dreißig Jahren endet eines der prägendsten Rollenspiel-Studios.",
+   "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
+   "cta": "Meldung lesen ↗",
+   "source": "theverge.com · Meldung vom 21.10."
+  },
+  {
+   "category": "Wildcard",
+   "short": "Meta-Strafe",
+   "title": "25 Milliarden Dollar: Meta muss historische Strafe im Cambridge-Analytica-Fall zahlen.",
+   "body": "Ein Richter in New Mexico hat Meta am Mittwoch zu einer Strafe von 25 Milliarden US-Dollar verurteilt. Der Klage des Bundesstaats lag die Cambridge-Analytica-Affäre zugrunde; die Jury sah nach einem zweiwöchigen Prozess mehr als 40 Millionen Verstöße gegen staatliche Gesetze, der Richter nannte Metas Täuschungen über den Umgang mit Nutzerdaten vorsätzlich und über mehr als elf Jahre praktiziert (2010 bis 2021). Es ist die bislang größte Strafe gegen den Konzern - Meta hat Berufung angekündigt.",
+   "takeaway": "25 Milliarden für Privacy-Lügen - keine Symbolstrafe mehr, sondern eine Ansage an die ganze Branche. Die Berufung dürfte Jahre laufen.",
+   "url": "https://www.bbc.com/news/articles/cqdr8zxrr3dxo",
+   "cta": "Meldung lesen ↗",
+   "source": "bbc.com · Meldung vom 21.10."
   }
  ]
 }
