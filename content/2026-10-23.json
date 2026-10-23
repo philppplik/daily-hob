@@ -3,9 +3,9 @@
   "date": "2026-10-23",
   "slug": null,
   "headline": "Geheimcodes im SVG und Benchmarks, die zu schön sind.",
-  "teaser": "7 Catches zum Freitag: Fable 5.1 versteckt Botschaften in Bildern, Tovs Rust-Benchmarks zerlegt, Docker unter der Haube, Dijkstra 1978 zur Prompting-Debatte, Wikipedia nur für den Kiez - dazu OpenSSL 4.1 und ein entlarvter Benchmark-Eintrag bei ClickBench.",
-  "intro": "Der Freitag startet mit einem Experiment zum Staunen: Fable 5.1 versteckt Botschaften in selbst gemalten Bildern, und eine zweite Instanz findet sie wieder. Dazu ein Lehrstück in Benchmark-Ehrlichkeit bei der Agenten-Sprache Tov, ein Blick unter Dockers Haube, Dijkstras 48 Jahre alte Abrechnung mit natürlichsprachlichem Programmieren - und eine Wikipedia, die nur den eigenen Kiez kennt. Am Nachmittag kommen OpenSSL 4.1.0 mit DTLS 1.3 und ein zweiter Benchmark-Betrug dazu: ClickBench entfernt pgrust, Belege inklusive.",
-  "notes": "Ausgabe für Freitag, 23. Oktober 2026 (Berliner Zeit), Stand 15:30 Uhr. Quellen: lesswrong.com, blog.fyralabs.com, codeandcake.dev, cs.utexas.edu, edjefferson.com, github.com/openssl, github.com/ClickHouse.",
+  "teaser": "9 Catches zum Freitag: Fable 5.1 versteckt Botschaften in Bildern, Tovs Rust-Benchmarks zerlegt, Docker unter der Haube, Dijkstra 1978 zur Prompting-Debatte, Wikipedia nur für den Kiez - dazu OpenSSL 4.1, ein entlarvter Benchmark-Eintrag, Kimi K3.1 Pro und Calif iPhone-Demos.",
+  "intro": "Der Freitag startet mit einem Experiment zum Staunen: Fable 5.1 versteckt Botschaften in selbst gemalten Bildern, und eine zweite Instanz findet sie wieder. Dazu ein Lehrstück in Benchmark-Ehrlichkeit bei der Agenten-Sprache Tov, ein Blick unter Dockers Haube, Dijkstras 48 Jahre alte Abrechnung mit natürlichsprachlichem Programmieren - und eine Wikipedia, die nur den eigenen Kiez kennt. Am Nachmittag kamen OpenSSL 4.1.0 mit DTLS 1.3 und ein zweiter Benchmark-Betrug dazu; zum Abend legt Moonshot mit Kimi K3.1 Pro nach und Calif zeigt iPhone-Exploit-Demos von der Hexacon.",
+  "notes": "Ausgabe für Freitag, 23. Oktober 2026 (Berliner Zeit), Stand 19:30 Uhr. Quellen: lesswrong.com, blog.fyralabs.com, codeandcake.dev, cs.utexas.edu, edjefferson.com, github.com/openssl, github.com/ClickHouse, kimi.ai, blog.calif.io.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: eine Skyline aus dünnen schwarzen Linien mit Häusern unterschiedlicher Höhe wie ein Balkendiagramm, dazu ein gelber Kreis als Mond und ein mintfarbenes Halbrund am Horizont auf hellem Papierhintergrund",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -81,6 +81,26 @@
       "url": "https://github.com/ClickHouse/ClickBench/pull/2165",
       "cta": "PR ansehen ↗",
       "source": "github.com/ClickHouse · PR vom 22.9., HN-Diskussion vom 23.10."
+    },
+    {
+      "category": "KI",
+      "short": "Kimi K3.1 Pro",
+      "title": "Moonshot legt nach: Kimi K3.1 Pro mit 1-Million-Kontext, Gewichte ab 4. November.",
+      "body": "Die DeepSeek-Woche kriegt Gesellschaft: Moonshot hat heute Kimi K3.1 Pro vorgestellt, das erste Modell der K3.1-Serie - laut Anbieter das stärkste Open-Weight-Modell der 3T-Klasse mit einem Kontextfenster von einer Million Token. Dazu eine Highspeed-Variante mit zwei- bis dreifacher Geschwindigkeit. Moonshots eigene Zahlen: 65,7 Prozent auf Terminal-Bench 4.0, knapp hinter Claude Opus 5.5 und vor GPT-6 Astra, dazu starke Werte bei 3D-/CAD-Generierung und Finanz-Workflows. Beide Modelle sind ab sofort in Kimi.ai, Kimi Work, Kimi Code und der API verfügbar; die vollständigen Gewichte sollen am 4. November folgen.",
+      "takeaway": "Anbieterzahlen sind Anbieterzahlen - aber wenn die Gewichte am 4.11. wirklich offen kommen, ist das der nächste Prüfstein für die offene Modellfront.",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "cta": "Tech-Blog lesen ↗",
+      "source": "kimi.ai · 23.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "Calif iPhone-Demo",
+      "title": "Calif zeigt 1-Click-Exploits gegen iPhone, Signal und iMessage - Details ausstehend.",
+      "body": "Das Sicherheitsteam von Calif - diese Woche schon Co-Entdecker der PHP2Shell-Lücken - hat auf der Hexacon in Paris eine Reihe von Demos gezeigt: einen 1-Click-Angriff auf Signal, einen auf iMessage und einen dauerhaften Zugriff, den sie 'APT - Apple Persistent Threat' nennen. Der Blogpost dazu stammt vom 16. Oktober und bleibt bewusst dünn: 'Everything will be released in due time.' Die HN-Diskussion läuft erst seit heute Abend - mit entsprechend viel Spekulation und wenig Beleg.",
+      "takeaway": "Demo ist nicht Disclosure: Bis Code und technische Details da sind, bleibt das eine Ansage - aber eine, die man wegen der Quelle ernst nehmen muss.",
+      "url": "https://blog.calif.io/p/iphone",
+      "cta": "Post lesen ↗",
+      "source": "blog.calif.io · Post vom 16.10., HN-Diskussion vom 23.10."
     }
   ]
 }
