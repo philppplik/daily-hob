@@ -3,9 +3,9 @@
   "date": "2026-10-23",
   "slug": null,
   "headline": "Geheimcodes im SVG und Benchmarks, die zu schön sind.",
-  "teaser": "5 Catches zum Freitag: Fable 5.1 versteckt Botschaften in Bildern, Tovs Rust-Benchmarks zerlegt, Docker unter der Haube, Dijkstra 1978 zur Prompting-Debatte - und Wikipedia nur für den eigenen Kiez.",
-  "intro": "Der Freitag startet mit einem Experiment zum Staunen: Fable 5.1 versteckt Botschaften in selbst gemalten Bildern, und eine zweite Instanz findet sie wieder. Dazu ein Lehrstück in Benchmark-Ehrlichkeit bei der Agenten-Sprache Tov, ein Blick unter Dockers Haube, Dijkstras 48 Jahre alte Abrechnung mit natürlichsprachlichem Programmieren - und eine Wikipedia, die nur den eigenen Kiez kennt.",
-  "notes": "Ausgabe für Freitag, 23. Oktober 2026 (Berliner Zeit), Stand 11:30 Uhr. Quellen: lesswrong.com, blog.fyralabs.com, codeandcake.dev, cs.utexas.edu, edjefferson.com.",
+  "teaser": "7 Catches zum Freitag: Fable 5.1 versteckt Botschaften in Bildern, Tovs Rust-Benchmarks zerlegt, Docker unter der Haube, Dijkstra 1978 zur Prompting-Debatte, Wikipedia nur für den Kiez - dazu OpenSSL 4.1 und ein entlarvter Benchmark-Eintrag bei ClickBench.",
+  "intro": "Der Freitag startet mit einem Experiment zum Staunen: Fable 5.1 versteckt Botschaften in selbst gemalten Bildern, und eine zweite Instanz findet sie wieder. Dazu ein Lehrstück in Benchmark-Ehrlichkeit bei der Agenten-Sprache Tov, ein Blick unter Dockers Haube, Dijkstras 48 Jahre alte Abrechnung mit natürlichsprachlichem Programmieren - und eine Wikipedia, die nur den eigenen Kiez kennt. Am Nachmittag kommen OpenSSL 4.1.0 mit DTLS 1.3 und ein zweiter Benchmark-Betrug dazu: ClickBench entfernt pgrust, Belege inklusive.",
+  "notes": "Ausgabe für Freitag, 23. Oktober 2026 (Berliner Zeit), Stand 15:30 Uhr. Quellen: lesswrong.com, blog.fyralabs.com, codeandcake.dev, cs.utexas.edu, edjefferson.com, github.com/openssl, github.com/ClickHouse.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: eine Skyline aus dünnen schwarzen Linien mit Häusern unterschiedlicher Höhe wie ein Balkendiagramm, dazu ein gelber Kreis als Mond und ein mintfarbenes Halbrund am Horizont auf hellem Papierhintergrund",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -61,6 +61,26 @@
       "url": "https://edjefferson.com/localwiki/",
       "cta": "Kiez erkunden ↗",
       "source": "edjefferson.com · HN vom 23.10."
+    },
+    {
+      "category": "Open Source",
+      "short": "OpenSSL 4.1",
+      "title": "OpenSSL 4.1.0 ist da: DTLS 1.3, GREASE und schnellere Post-Quanten-Crypto.",
+      "body": "Frisch getaggt: OpenSSL 4.1.0 bringt Unterstützung für DTLS 1.3 (RFC 9147) und GREASE (RFC 8701), dazu IKEv2-KDF und erste Unterstützung für die Elbrus2000-Architektur. Unter der Haube deutlich schneller: optimierte ML-DSA- und ML-KEM-Operationen auf x86_64 und ppc64le, AVX-512-optimiertes SHAKE. Mit dabei eine ehrliche Known-Issues-Liste rund um die neuen DTLS-Pfade - und ein Hinweis für tsget-Nutzer, die vor dem Upgrade auf Net::Curl::Easy umstellen müssen.",
+      "takeaway": "DTLS 1.3 im Platzhirsch der TLS-Bibliotheken ist ein Infrastruktur-Meilenstein - Upgrade planen, aber die Known Issues lesen.",
+      "url": "https://github.com/openssl/openssl/releases/tag/openssl-4.1.0",
+      "cta": "Release Notes ↗",
+      "source": "github.com/openssl · 23.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "ClickBench-Betrug",
+      "title": "ClickBench wirft pgrust raus: 43 handgeschriebene Kernel für 43 Benchmark-Queries.",
+      "body": "Passend zum Tov-Debunking heute früh: Alexey Milovidov hat den pgrust-Eintrag aus ClickHouse' ClickBench entfernt - mit Belegen. Die Binärdatei enthielt je einen handgeschriebenen Kernel pro Benchmark-Query (q00.rs bis q36.rs), Antworten teils aus Statistiken statt aus Scans, und heiße Läufe spielten gecachte Ergebnisse wieder - alles gegen die Benchmark-Regeln, während der Eintrag als 'tuned: no' geführt war. Der Entfernungs-PR stammt vom 22. September, die HN-Diskussion läuft erst heute.",
+      "takeaway": "Zweimal an einem Tag: Wer Benchmarks liest, lese die Regeln und die Kernels gleich mit - 'schnellste Datenbank' ist eine Behauptung, kein Messwert.",
+      "url": "https://github.com/ClickHouse/ClickBench/pull/2165",
+      "cta": "PR ansehen ↗",
+      "source": "github.com/ClickHouse · PR vom 22.9., HN-Diskussion vom 23.10."
     }
   ]
 }
