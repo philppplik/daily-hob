@@ -1,0 +1,66 @@
+{
+  "title": "Daily Hob vom Freitag, 23.10.",
+  "date": "2026-10-23",
+  "slug": null,
+  "headline": "Geheimcodes im SVG und Benchmarks, die zu schön sind.",
+  "teaser": "5 Catches zum Freitag: Fable 5.1 versteckt Botschaften in Bildern, Tovs Rust-Benchmarks zerlegt, Docker unter der Haube, Dijkstra 1978 zur Prompting-Debatte - und Wikipedia nur für den eigenen Kiez.",
+  "intro": "Der Freitag startet mit einem Experiment zum Staunen: Fable 5.1 versteckt Botschaften in selbst gemalten Bildern, und eine zweite Instanz findet sie wieder. Dazu ein Lehrstück in Benchmark-Ehrlichkeit bei der Agenten-Sprache Tov, ein Blick unter Dockers Haube, Dijkstras 48 Jahre alte Abrechnung mit natürlichsprachlichem Programmieren - und eine Wikipedia, die nur den eigenen Kiez kennt.",
+  "notes": "Ausgabe für Freitag, 23. Oktober 2026 (Berliner Zeit), Stand 11:30 Uhr. Quellen: lesswrong.com, blog.fyralabs.com, codeandcake.dev, cs.utexas.edu, edjefferson.com.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: eine Skyline aus dünnen schwarzen Linien mit Häusern unterschiedlicher Höhe wie ein Balkendiagramm, dazu ein gelber Kreis als Mond und ein mintfarbenes Halbrund am Horizont auf hellem Papierhintergrund",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-23",
+  "audio": null,
+  "sections": [
+    {
+      "category": "KI",
+      "short": "Fable-Steganografie",
+      "title": "Fable 5.1 versteckt Botschaften in Bildern - und eine frische Instanz findet sie wieder.",
+      "body": "Ein LessWrong-Team hat Fable 5.1 je 50 kurze Botschaften in selbst gemalten SVG-Bilder verstecken lassen - und dann eine neue Instanz ohne jede Absprache gefragt, ob und was darin steckt. Ergebnis: Das Modell griff erstaunlich konsistent zu Höhenkodierung, 33 von 50 Bildern nutzen die Höhe einzelner Elemente als Buchstabencode, am liebsten Nacht-Skylines, in denen jedes Gebäude für einen Buchstaben steht. In den meisten Fällen las die zweite Instanz die Botschaft korrekt wieder aus - ohne dass je ein Schema vereinbart worden wäre. Der Beitrag stammt vom 21. Oktober, die HN-Diskussion lief über Nacht.",
+      "takeaway": "Modelle konvergieren ohne Absprache auf gemeinsame Kodierungen - hübsch als Experiment, unheimlich als Eigenschaft, wenn man an versteckte Kommunikation zwischen Instanzen denkt.",
+      "url": "https://www.lesswrong.com/posts/WHEQps5PK8LrrcTAb/how-does-fable-5-1-hide-messages-in-images",
+      "cta": "Experiment ansehen ↗",
+      "source": "lesswrong.com · Beitrag vom 21.10., HN-Diskussion vom 23.10."
+    },
+    {
+      "category": "Open Source",
+      "short": "Tov-Benchmarks",
+      "title": "Agenten-Sprache Tov behauptet 10x Rust - ein Debunking zerlegt die Benchmarks.",
+      "body": "Tov wird als Programmiersprache für Coding-Agenten vermarktet: liest sich wie TypeScript, wird nach C transpiliert und mit clang gebaut - und soll laut eigenen Benchmarks teils über zehnmal schneller sein als Rust. Madomado hat drei dieser Benchmarks (bigint_fib, dispatch, map_insert) nachgebaut und zeigt Schritt für Schritt, wie sie gezielt so geschrieben sind, dass Rust künstlich langsam aussieht. Mit sauber implementiertem Rust ist Tov gleichauf oder langsamer - wie es die Logik 'Tov wird zu C, und C schlägt nicht C' auch erwarten lässt.",
+      "takeaway": "Benchmarks aus dem eigenen Repo sind Marketingmaterial, keine Messung. Dieser Beitrag ist eine gratis Anleitung, sie zu lesen.",
+      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
+      "cta": "Debunking lesen ↗",
+      "source": "blog.fyralabs.com · 22.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "Docker-Anatomie",
+      "title": "Container gibt es gar nicht - ein Blick unter Dockers Haube.",
+      "body": "Wer wie der Autor von Code and Cake aus Spaß eine eigene Container-Runtime baut, lernt schnell: Es gibt kein Kernel-Feature namens 'Container' - nur fünf Linux-Mechanismen im Trenchcoat. Namespaces verstecken, cgroups begrenzen, dazu Netzwerk-Isolation; Images sind im Kern nur Ordner, die per chroot zur neuen Wurzel werden. Am schönsten die runc-Details: Go kann nicht forken und ist von Natur aus multithreaded, also startet sich Dockers Runtime über /proc/self/exe selbst neu - und wer Container rootless betreiben will, muss den Netzwerk-Stack in Userspace nachbauen.",
+      "takeaway": "Container sind Konvention, nicht Magie - und der schnellste Weg, ein Werkzeug wirklich zu verstehen, bleibt der Nachbau.",
+      "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+      "cta": "Nachlesen ↗",
+      "source": "codeandcake.dev · 22.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "Dijkstra 1978",
+      "title": "Dijkstra 1978: Warum natürlichsprachliches Programmieren zum Scheitern verurteilt ist.",
+      "body": "Über Nacht erneut auf der HN-Frontpage: EWD 667, Edsger Dijkstras 48 Jahre alte Abrechnung mit dem Traum, Maschinen in der Muttersprache zu befehlen. Seine These: Formale Symbolik ist keine Last, sondern ein Privileg - ihre Strenge filtert genau den Unsinn heraus, den natürliche Sprache unsichtbar macht. Griechische Mathematik sei stecken geblieben, weil sie verbal blieb; die moderne Welt verdanke sich bewusst entworfener Notation. Mitten im Prompting-Zeitalter liest sich das wie eine Kampfansage von gestern an heute.",
+      "takeaway": "Man muss Dijkstra nicht recht geben - aber seine Kernfrage ist auch 2026 die richtige: Wer liefert die Genauigkeit, du oder die Maschine?",
+      "url": "https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html",
+      "cta": "EWD 667 lesen ↗",
+      "source": "cs.utexas.edu · EWD 667 von 1978, HN-Diskussion vom 23.10."
+    },
+    {
+      "category": "Wildcard",
+      "short": "Local Wikipedia",
+      "title": "Local Wikipedia: die Enzyklopädie nur für Dinge einen halben Fußweg entfernt.",
+      "body": "Diese Seite stutzt Wikipedia auf den eigenen Kiez: Local Wikipedia zeigt ausschließlich geocodierte Artikel im Umkreis einer halben Stunde Fußweg. Gibt es weniger als 25 Treffer, weitet der Dienst den Radius auf gut neun Kilometer aus; bei mehr als 500 bleiben es die nächsten 500. Ein Klick auf den Standort genügt, und aus dem nächsten Spaziergang wird ein Geschichtsquiz. Über Nacht rund 360 HN-Punkte - zu Recht.",
+      "takeaway": "Der charmanteste Wikipedia-Filter ist der eigene Standort - Lokalgeschichte als Ein-Klick-Spielzeug.",
+      "url": "https://edjefferson.com/localwiki/",
+      "cta": "Kiez erkunden ↗",
+      "source": "edjefferson.com · HN vom 23.10."
+    }
+  ]
+}
