@@ -3,9 +3,9 @@
   "date": "2026-10-22",
   "title": "Daily Hob vom Donnerstag, 22.10.",
   "headline": "15 Milliarden für DeepSeek, ein Abschied für Arc.",
-  "teaser": "11 Catches am Abend: DeepSeeks Mega-Runde, eMudhras TLS-Ausstieg, das Arc-Ende und GNU Taler in Bochum - dazu PHP2Shell in freier Wildbahn, die LKML-Panne und der Switch-2-Jailbreak.",
-  "intro": "Am Abend kommen vier große Nachrichten dazu: DeepSeek sammelt Berichten zufolge rund 15 Milliarden Dollar ein, eMudhra steigt komplett aus dem SSL/TLS-Zertifikatsgeschäft aus, der Design-Browser Arc bekommt ein Enddatum und GNU Taler eine Betreiberfirma in Bochum. Dazu der Tagesstand rund um PHP2Shell, die Kernel-Panne, WorldTUI und mehr.",
-  "notes": "Laufende Ausgabe für Donnerstag, 22. Oktober 2026 (Berliner Zeit), Stand Abend. Quellen: simedw.com, github.com/mitmproxy, eliastaylor.com, web.maths.unsw.edu.au, aws.amazon.com, phoronix.com, pepsipu.com, emudhra.com, techcrunch.com, arc.net, taler.net.",
+  "teaser": "13 Catches zum Donnerstag: DeepSeeks Mega-Runde, eMudhras TLS-Ausstieg, NVIDIAs OpenShell und das Arc-Ende - dazu PHP2Shell in freier Wildbahn, die LKML-Panne und LLMs als Beweisführer.",
+  "intro": "Der Donnerstag hatte es in sich: DeepSeek sammelt Berichten zufolge rund 15 Milliarden Dollar ein, eMudhra verlässt nach dem Schlüssel-Vorfall das SSL/TLS-Geschäft, Arc bekommt ein Enddatum und NVIDIA öffnet mit OpenShell eine Laufzeit für autonome Agenten. Dazu PHP2Shell in freier Wildbahn, eine peinliche Kernel-Panne, ein Switch-2-Jailbreak - und Anthropic lässt LLMs mathematische Korrektheitsbeweise schreiben.",
+  "notes": "Ausgabe für Donnerstag, 22. Oktober 2026 (Berliner Zeit), finaler Stand. Quellen: simedw.com, github.com/mitmproxy, eliastaylor.com, web.maths.unsw.edu.au, aws.amazon.com, phoronix.com, pepsipu.com, emudhra.com, techcrunch.com, arc.net, taler.net, github.com/NVIDIA/OpenShell, anthropic.com.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: ein Terminal-Fenster als dünner schwarzer Linien-Umriss mit Prompt-Pfeil und Cursor-Block, dazu ein gelber Kreis und ein mintfarbenes Quadrat auf hellem Papierhintergrund",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -120,6 +120,26 @@
       "url": "https://www.taler.net/en/news/2026-13.html",
       "cta": "Ankündigung lesen",
       "source": "taler.net, Oktober 2026"
+    },
+    {
+      "category": "Open Source",
+      "title": "NVIDIA macht Agenten-Sandboxing Open Source: OpenShell ist da.",
+      "short": "OpenShell",
+      "body": "Autonome Agenten werden erst richtig nützlich, wenn sie Dateien lesen, Pakete installieren und APIs mit Credentials aufrufen dürfen - und genau da wird es gefährlich. NVIDIAs Antwort heißt OpenShell: eine quelloffene Laufzeit (Apache 2.0) für ganze Flotten von KI-Agenten, bei der du per Policy deklarierst, was jeder Agent anfassen darf - Dateisystem, Netzwerk, Prozesse. Credentials funktionieren nur an freigegebenen Endpunkten, Sandboxes laufen lokal per Docker oder Podman, im Cluster per Kubernetes und Helm. Die Version 0.1 bringt einen stabilen Release-Rhythmus und neue Isolations-Primitive, SDKs gibt es für Python, TypeScript, Go und Rust.",
+      "takeaway": "Agenten ohne Sandbox sind wie root ohne Backup. OpenShell ist der bisher ernsthafteste Open-Source-Versuch, das Produktivdeployment von Agenten beherrschbar zu machen.",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "cta": "Repo anschauen",
+      "source": "GitHub / NVIDIA, 22.10.2026"
+    },
+    {
+      "category": "KI",
+      "title": "Anthropic: LLMs machen formale Verifikation endlich bezahlbar.",
+      "short": "Beweise per LLM",
+      "body": "Formale Verifikation - mathematisch beweisen, dass Code keine Fehler einer Regelklasse enthält - galt bisher als Luxus für Flugzeugsteuerungen: Der seL4-Kernel brauchte laut Anthropic zwei Personenjahre zum Bauen, aber zwanzig zum Verifizieren. In einem neuen Forschungsbericht zeigt Anthropic, dass Frontier-Modelle inzwischen Korrektheitsbeweise für reale Produktionssoftware bis auf Assembler-Ebene schreiben können. Beim Beweisen habe Claude zudem Bugs gefunden, die jahrelang und trotz Billionen von Testläufen unentdeckt geblieben seien. Anthropic erwartet, dass formale Verifikation damit zum Standardwerkzeug sicherer Softwareentwicklung wird.",
+      "takeaway": "Wenn Beweise schreiben billiger wird als testen, ändert sich Software-Qualität grundlegend. Anthropic-Eigenwerbung, ja - aber die Richtung stimmt.",
+      "url": "https://www.anthropic.com/research/formal-verification",
+      "cta": "Forschungsbericht lesen",
+      "source": "Anthropic Research, 22.10.2026"
     }
   ]
-    }
+}
