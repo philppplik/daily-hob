@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24",
+  "slug": null,
+  "title": "Daily Hob vom Samstag, 24.10.",
+  "headline": "Zwölf Jahre verteilte Datenbanken, ein OBS-Riesensprung und Apples Forscher-iPhones.",
+  "teaser": "4 Catches zum Samstag: Der rqlite-Autor schreibt zwölf Jahre Distributed-SQLite-Geschichte auf, OBS Studio 33 bringt den größten Framework-Sprung seit Jahren, Roc misst sich mit getuntem C, und Apple öffnet das Bewerbungsfenster für seine Forscher-iPhones.",
+  "intro": "Der Samstag beginnt mit Geschichtsunterricht: Philip O'Toole hat zwölf Jahre verteiltes SQLite aufgeschrieben - von rqlite 2014 bis Litestream und LiteFS. Dazu ein Major-Release von OBS Studio mit massivem Browser-Framework-Update und neuem Plugin-System, Richard Feldmans Benchmark-Duell zwischen der funktionalen Sprache Roc und der C-Bibliothek libdeflate - und passend zum gestrigen iPhone-Hack öffnet Apple die Bewerbung für seine Security Research Devices.",
+  "notes": "Ausgabe für Samstag, 24. Oktober 2026 (Berliner Zeit), Stand 11:30. Quellen: philipotoole.com, github.com/obsproject, rtfeldman.com, security.apple.com.",
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-24",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: ein großer Datenbank-Zylinder aus dünnen schwarzen Linien, dessen Schreibzugriffe über Pfeile auf drei kleinere Zylinder verteilt werden, daneben eine Strichzeichnung einer Filmkamera mit Signalwellen und ein Schild mit Schlüsselloch; ein gelber Kreis und eine mintfarbene Fläche als Akzente auf hellem Papierhintergrund",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "audio": null,
+  "sections": [
+    {
+      "category": "Open Source",
+      "short": "Distributed SQLite",
+      "title": "Zwölf Jahre verteiltes SQLite: Der rqlite-Autor schreibt die Geschichte der Kategorie auf.",
+      "body": "Wer heute über verteiltes SQLite schreibt, fängt die Geschichte meist um 2021 an - Philip O'Toole war früher dran und hat das jetzt (23.10.) aufgeschrieben. Im September 2014 stellte er rqlite vor, nach eigenem Wissen das erste Open-Source-System, das Raft-Konsens vor SQLite setzte: Schreibzugriffe nur über den Leader, Mehrheit muss bestätigen, eine abgetrennte Minderheit lehnt ab. Daraus wurde eine Kategorie: Expensify baute mit Bedrock eine eigene Paxos-Variante (2016), Canonicals dqlite (2017) wurde zur eingebetteten Bibliothek für LXD und MicroK8s, Ben Johnsons Litestream (2021) verzichtete ganz auf Konsens und streamt stattdessen das Write-Ahead-Log nach S3 - Katastrophenschutz statt Hochverfügbarkeit. Fly.io machte daraus 2022 LiteFS, und in einer schönen Pointe inspirierte Litestream seinerseits rqlites v8.0 im Umgang mit dem WAL. Heute umfasst die Kategorie ein Dutzend Projekte, zwei wurden übernommen.",
+      "takeaway": "Eine ganze Datenbank-Kategorie in einem Blogpost - und die Erinnerung, dass die guten Ideen oft Jahre vor dem Hype da sind.",
+      "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
+      "cta": "Zeitleiste lesen ↗",
+      "source": "philipotoole.com · 23.10."
+    },
+    {
+      "category": "Open Source",
+      "short": "OBS Studio 33",
+      "title": "OBS Studio 33 ist da: Riesiger Browser-Framework-Sprung und neues Plugin-System.",
+      "body": "Das Streaming- und Aufnahme-Programm OBS Studio hat Version 33.0.0 veröffentlicht. Der größte Brocken: Das eingebettete Chromium-Framework (CEF) springt von Version 127 (Juli 2024) auf 150 (September 2026) - das betrifft alle Browser-Quellen und Docks, sollte aber im Idealfall unsichtbar bleiben; die Entwickler bitten ausdrücklich um Fehlermeldungen bei Auffälligkeiten. Zweiter Brocken: Das Plugin-Loading wurde komplett überarbeitet - eigene Plugins wandern in einen neuen core-Ordner, Drittanbieter-Plugins bekommen einen neuen Installationsort, alte Pfade funktionieren noch bis OBS 34. Dazu verbessertes Snapping im Vorschaufenster, NVENC auf Arm64 und Hotkeys für Audio-Monitoring. Gestrichen wird Support für Ubuntu 24.04, FFmpeg 6.x/7.x und Qt 6.4 bis 6.9.",
+      "takeaway": "Vor dem Update kurz die Release Notes lesen - gerade wer Browser-Quellen oder Drittanbieter-Plugins nutzt.",
+      "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0",
+      "cta": "Release Notes lesen ↗",
+      "source": "github.com/obsproject · 24.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "FP vs. C",
+      "title": "Wie nah kommt rein funktionale Programmierung an C heran? Roc liegt nur noch einstellig hinten.",
+      "body": "Ausgangspunkt (22.10.): Eine in Lean 4 geschriebene DEFLATE-Bibliothek hatte Rusts populäres miniz_oxide geschlagen - aber nicht libdeflate, die handgetunte C-Referenz mit SIMD-Optimierungen. Richard Feldman, der Autor der funktionalen Sprache Roc, wollte wissen, wie nah er herankommt, und optimierte das Roc-Paket roc-deflate. Ergebnis nach seinen eigenen Messungen: In 144 Benchmarks auf dem Silesia-Korpus, mit verifiziert identischen Ausgaben, liegt roc-deflate im Median nur 8,9 Prozent hinter libdeflate (AMD Ryzen 3900X) beziehungsweise 2,6 Prozent (M1 MacBook Pro) - und das mit einem Paket-Ökosystem, an dem kaum Optimierungsarbeit steckt. Der Weg dorthin ist der eigentliche Inhalt: Feldman legt seine Optimierungsschritte offen.",
+      "takeaway": "Selbst gemessen, selbst berichtet - aber Methodik und Korpus sind offengelegt, und die Messlatte war libdeflate, kein Strohmann.",
+      "url": "https://rtfeldman.com/fp-vs-c",
+      "cta": "Benchmarks ansehen ↗",
+      "source": "rtfeldman.com · 22.10."
+    },
+    {
+      "category": "Wildcard",
+      "short": "Apple SRD",
+      "title": "Passend zum iPhone-Hack von gestern: Apple öffnet die Bewerbung für Security Research Devices.",
+      "body": "Einen Tag, nachdem die iPhone-Exploit-Demos der Hexacon für Aufsehen sorgten, steht bei Apple ein Bewerbungsfenster an: Das Security Research Device Program nimmt laut security.apple.com Bewerbungen bis zum 30. Oktober 2026 entgegen. Das SRD ist ein speziell präpariertes iPhone, mit dem Sicherheitsforscher iOS untersuchen können, ohne die Schutzmechanismen erst umgehen zu müssen: Shell-Zugriff, eigene Entitlements, bis hin zum angepassten Kernel. Das Gerät bleibt Apples Eigentum und wird für zwölf Monate verliehen (verlängerbar), darf die Räume des Teilnehmers nicht verlassen; tabu sind nur Apple Pay und Drittanbieter-Apps. Gefundene Lücken fließen automatisch in die Bewertung für das Security-Bounty-Programm ein, inklusive Boni für Vorabversionen.",
+      "takeaway": "Wer iOS-Sicherheit ernsthaft erforschen will, muss nicht mehr nur von außen klopfen - Bewerbungsschluss ist der 30.10.",
+      "url": "https://security.apple.com/research-device/",
+      "cta": "Programm ansehen ↗",
+      "source": "security.apple.com · abgerufen 24.10."
+    }
+  ]
+}
