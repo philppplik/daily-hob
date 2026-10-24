@@ -3,9 +3,9 @@
   "date": "2026-10-23",
   "slug": null,
   "headline": "Geheimcodes im SVG und Benchmarks, die zu schön sind.",
-  "teaser": "9 Catches zum Freitag: Fable 5.1 versteckt Botschaften in Bildern, Tovs Rust-Benchmarks zerlegt, Docker unter der Haube, Dijkstra 1978 zur Prompting-Debatte, Wikipedia nur für den Kiez - dazu OpenSSL 4.1, ein entlarvter Benchmark-Eintrag, Kimi K3.1 Pro und Calif iPhone-Demos.",
-  "intro": "Der Freitag startet mit einem Experiment zum Staunen: Fable 5.1 versteckt Botschaften in selbst gemalten Bildern, und eine zweite Instanz findet sie wieder. Dazu ein Lehrstück in Benchmark-Ehrlichkeit bei der Agenten-Sprache Tov, ein Blick unter Dockers Haube, Dijkstras 48 Jahre alte Abrechnung mit natürlichsprachlichem Programmieren - und eine Wikipedia, die nur den eigenen Kiez kennt. Am Nachmittag kamen OpenSSL 4.1.0 mit DTLS 1.3 und ein zweiter Benchmark-Betrug dazu; zum Abend legt Moonshot mit Kimi K3.1 Pro nach und Calif zeigt iPhone-Exploit-Demos von der Hexacon.",
-  "notes": "Ausgabe für Freitag, 23. Oktober 2026 (Berliner Zeit), Stand 19:30 Uhr. Quellen: lesswrong.com, blog.fyralabs.com, codeandcake.dev, cs.utexas.edu, edjefferson.com, github.com/openssl, github.com/ClickHouse, kimi.ai, blog.calif.io.",
+  "teaser": "11 Catches zum Freitag: Fable 5.1 versteckt Botschaften in Bildern, Tovs Rust-Benchmarks zerlegt, Docker unter der Haube, Dijkstra 1978 zur Prompting-Debatte, Wikipedia nur für den Kiez - dazu OpenSSL 4.1, ein entlarvter Benchmark-Eintrag, Kimi K3.1 Pro, Calif iPhone-Demos, Blocks Sprachmodell Dessa und ein CVE-Tracker gegen die Panik.",
+  "intro": "Der Freitag startet mit einem Experiment zum Staunen: Fable 5.1 versteckt Botschaften in selbst gemalten Bildern, und eine zweite Instanz findet sie wieder. Dazu ein Lehrstück in Benchmark-Ehrlichkeit bei der Agenten-Sprache Tov, ein Blick unter Dockers Haube, Dijkstras 48 Jahre alte Abrechnung mit natürlichsprachlichem Programmieren - und eine Wikipedia, die nur den eigenen Kiez kennt. Am Nachmittag kamen OpenSSL 4.1.0 mit DTLS 1.3 und ein zweiter Benchmark-Betrug dazu; zum Abend legte Moonshot mit Kimi K3.1 Pro nach, Calif zeigte iPhone-Exploit-Demos von der Hexacon, und spät stellte Block mit Dessa ein Sprachmodell vor, das nur aus menschlicher Sprache gelernt hat - dazu ein CVE-Tracker für die Frage, ob die Lückenflut wirklich wächst.",
+  "notes": "Ausgabe für Freitag, 23. Oktober 2026 (Berliner Zeit), finaler Stand. Quellen: lesswrong.com, blog.fyralabs.com, codeandcake.dev, cs.utexas.edu, edjefferson.com, github.com/openssl, github.com/ClickHouse, kimi.ai, blog.calif.io, block.xyz, cve.0xosprey.com.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: eine Skyline aus dünnen schwarzen Linien mit Häusern unterschiedlicher Höhe wie ein Balkendiagramm, dazu ein gelber Kreis als Mond und ein mintfarbenes Halbrund am Horizont auf hellem Papierhintergrund",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -101,6 +101,26 @@
       "url": "https://blog.calif.io/p/iphone",
       "cta": "Post lesen ↗",
       "source": "blog.calif.io · Post vom 16.10., HN-Diskussion vom 23.10."
+    },
+    {
+      "category": "KI",
+      "short": "Dessa Sprachmodell",
+      "title": "Block zeigt Dessa: ein Gesprächsmodell, das nur aus menschlicher Sprache gelernt hat.",
+      "body": "Block (Jack Dorseys Firma) hat am späten Freitagabend Dessa vorgestellt: ein Full-Duplex-Sprachmodell, das von Grund auf nur auf menschlichen Konversationen trainiert wurde - kein Text, kein vortrainiertes Modell, nach eigener Aussage das erste seiner Art. Die Live-Mitschnitte auf der Seite sind beeindruckend: Dessa lacht mitten im Satz, wird auf Bitte lauter, beendet Sätze des Gegenübers und reagiert hörbar gerührt - Eigenschaften, die niemand einprogrammiert hat. Herstellerversprechen wie 'das authentischste Sprachmodell aller Zeiten' sind Herstellerversprechen, aber die Demos sind hörenswert.",
+      "takeaway": "Wenn Sprachmodelle ohne Textumweg lernen, fällt die Mittelsmänner-Kaskade weg - und genau da sitzen heute die meisten Latenz- und Ausdrucksprobleme.",
+      "url": "https://block.xyz/dessa",
+      "cta": "Mitschnitte hören ↗",
+      "source": "block.xyz · 23.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "CVE Tracker",
+      "title": "Gefühlte CVE-Flut? Dieser Tracker rechnet sie gegen den Median.",
+      "body": "Nach einer Woche voller kritischer Lücken die passende Spielerei: Der CVE Tracker von 0xosprey zieht die offiziellen Daten aus CVEProject/cvelistV5 und zeigt die täglichen Neu-Meldungen der letzten 90 Tage - kumulierbar, mit Projektion des aktuellen Monats gegen den Median der letzten zwölf. Damit lässt sich die Gefühlsfrage 'sind das gerade wirklich mehr Lücken als sonst?' in zwei Sekunden mit Daten beantworten statt mit Bauchgefühl.",
+      "takeaway": "Das beste Werkzeug gegen Sicherheitspanik ist eine Zeitreihe - hier als schlanke Seite ohne Account und ohne Rauschen.",
+      "url": "https://cve.0xosprey.com/",
+      "cta": "Tracker öffnen ↗",
+      "source": "cve.0xosprey.com · HN vom 23.10."
     }
   ]
 }
