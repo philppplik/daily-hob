@@ -85,9 +85,9 @@
     {
       "category": "KI",
       "short": "Kimi K3.1 Pro",
-      "title": "Moonshot legt nach: Kimi K3.1 Pro mit 1-Million-Kontext, Gewichte ab 4. November.",
-      "body": "Die DeepSeek-Woche kriegt Gesellschaft: Moonshot hat heute Kimi K3.1 Pro vorgestellt, das erste Modell der K3.1-Serie - laut Anbieter das stärkste Open-Weight-Modell der 3T-Klasse mit einem Kontextfenster von einer Million Token. Dazu eine Highspeed-Variante mit zwei- bis dreifacher Geschwindigkeit. Moonshots eigene Zahlen: 65,7 Prozent auf Terminal-Bench 4.0, knapp hinter Claude Opus 5.5 und vor GPT-6 Astra, dazu starke Werte bei 3D-/CAD-Generierung und Finanz-Workflows. Beide Modelle sind ab sofort in Kimi.ai, Kimi Work, Kimi Code und der API verfügbar; die vollständigen Gewichte sollen am 4. November folgen.",
-      "takeaway": "Anbieterzahlen sind Anbieterzahlen - aber wenn die Gewichte am 4.11. wirklich offen kommen, ist das der nächste Prüfstein für die offene Modellfront.",
+      "title": "Moonshot kündigt Kimi K3.1 Pro an.",
+      "body": "Moonshot hat Kimi K3.1 Pro angekündigt - der Tech-Blog-Eintrag trägt den Titel \"Advancing Open Intelligence\". Über die Ankündigung hinaus liegen uns bisher keine unabhängig prüfbaren Details zu Modellgröße, Kontextfenster, Benchmarks oder Gewichten vor; wir ordnen nach, sobald sie es tun.",
+      "takeaway": "Erst Ankündigung, dann Belege - wir bleiben dran.",
       "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
       "cta": "Tech-Blog lesen ↗",
       "source": "kimi.ai · 23.10."
