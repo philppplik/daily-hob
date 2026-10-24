@@ -3,9 +3,9 @@
   "slug": null,
   "title": "Daily Hob vom Samstag, 24.10.",
   "headline": "Zwölf Jahre verteilte Datenbanken, ein OBS-Riesensprung und Apples Forscher-iPhones.",
-  "teaser": "4 Catches zum Samstag: Der rqlite-Autor schreibt zwölf Jahre Distributed-SQLite-Geschichte auf, OBS Studio 33 bringt den größten Framework-Sprung seit Jahren, Roc misst sich mit getuntem C, und Apple öffnet das Bewerbungsfenster für seine Forscher-iPhones.",
-  "intro": "Der Samstag beginnt mit Geschichtsunterricht: Philip O'Toole hat zwölf Jahre verteiltes SQLite aufgeschrieben - von rqlite 2014 bis Litestream und LiteFS. Dazu ein Major-Release von OBS Studio mit massivem Browser-Framework-Update und neuem Plugin-System, Richard Feldmans Benchmark-Duell zwischen der funktionalen Sprache Roc und der C-Bibliothek libdeflate - und passend zum gestrigen iPhone-Hack öffnet Apple die Bewerbung für seine Security Research Devices.",
-  "notes": "Ausgabe für Samstag, 24. Oktober 2026 (Berliner Zeit), Stand 11:30. Quellen: philipotoole.com, github.com/obsproject, rtfeldman.com, security.apple.com.",
+  "teaser": "6 Catches zum Samstag: Der rqlite-Autor schreibt zwölf Jahre Distributed-SQLite-Geschichte auf, OBS Studio 33 bringt den größten Framework-Sprung seit Jahren, Roc misst sich mit getuntem C, Apple öffnet das Bewerbungsfenster für seine Forscher-iPhones - dazu ein peer-reviewtes Paper mit erfundenen Quellen und eine Brotli-Lücke, die zur HTTP-Weitflächenbombe wird.",
+  "intro": "Der Samstag beginnt mit Geschichtsunterricht: Philip O'Toole hat zwölf Jahre verteiltes SQLite aufgeschrieben - von rqlite 2014 bis Litestream und LiteFS. Dazu ein Major-Release von OBS Studio mit massivem Browser-Framework-Update und neuem Plugin-System, Richard Feldmans Benchmark-Duell zwischen Roc und libdeflate - und Apple öffnet die Bewerbung für seine Security Research Devices. Am Nachmittag zwei Nachzügler: TorrentFreak deckt ein peer-reviewtes Paper mit halluzinierten Quellen auf, und aus der Node2Shell-Lücke im Brotli-Dekoder wird mit HTTP2Shell ein Problem für die halbe HTTP-Welt.",
+  "notes": "Ausgabe für Samstag, 24. Oktober 2026 (Berliner Zeit), Stand 15:30. Quellen: philipotoole.com, github.com/obsproject, rtfeldman.com, security.apple.com, torrentfreak.com, aikido.dev.",
   "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-24",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: ein großer Datenbank-Zylinder aus dünnen schwarzen Linien, dessen Schreibzugriffe über Pfeile auf drei kleinere Zylinder verteilt werden, daneben eine Strichzeichnung einer Filmkamera mit Signalwellen und ein Schild mit Schlüsselloch; ein gelber Kreis und eine mintfarbene Fläche als Akzente auf hellem Papierhintergrund",
@@ -51,6 +51,26 @@
       "url": "https://security.apple.com/research-device/",
       "cta": "Programm ansehen ↗",
       "source": "security.apple.com · abgerufen 24.10."
+    },
+    {
+      "category": "KI",
+      "short": "Zitat-Halluzination",
+      "title": "Peer-reviewtes Paper über Z-Library zitiert Artikel, die es nie gab.",
+      "body": "TorrentFreak hat (24.10.) ein Paper im Journal New Review of Academic Librarianship unter die Lupe genommen - geschrieben von zwei Bibliothekaren nigerianischer Universitäten über die Piraten-Bibliothek Z-Library. Mitten im peer-reviewten Text steht eine Referenz auf einen TorrentFreak-Artikel von 2021 namens 'Publishers continue crackdown on shadow libraries'. Den hat es nie gegeben. Und es bleibt nicht dabei: Der Titel einer zitierten DOJ-Pressemitteilung existiert ebenfalls nicht, ein angeblich 2019 im Harvard Journal of Law & Technology erschienener Aufsatz fehlt im Inhaltsverzeichnis der Ausgabe, und ein zitierter College-&-Research-Libraries-Artikel steht schlicht nicht im genannten Heft. Das Muster ist bekannt: echte Publikationen, echte Autoren, passender Kontext - aber erfundene Titel und Seitenzahlen, der klassische Fingerabdruck KI-generierter Literaturverzeichnisse.",
+      "takeaway": "Peer Review prüft offenbar nicht mehr zuverlässig, ob zitierte Quellen überhaupt existieren - das ist inzwischen Alltag, keine Ausnahme.",
+      "url": "https://torrentfreak.com/ai-assisted-paper-on-z-library-cites-a-torrentfreak-article-that-doesnt-exist/",
+      "cta": "Fall nachlesen ↗",
+      "source": "torrentfreak.com · 24.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "HTTP2Shell",
+      "title": "Aus Node2Shell wird HTTP2Shell: Die Brotli-Lücke betrifft jetzt die halbe HTTP-Welt.",
+      "body": "Erst Node.js, dann Python, jetzt alles mit HTTP: Die Sicherheitsfirma Aikido zieht in ihrer laufend aktualisierten Analyse (Stand 24.10.) Bilanz zu CVE-2026-111497, einem Out-of-Bounds-Write in Googles Brotli-Dekoder (Versionen 1.0.3 bis 1.2.0, CVSS 9.2). Wer angreiferkontrollierte Brotli-Daten dekomprimiert, riskiert Speicherlecks bis hin zu Code-Ausführung - remote, ohne Login, in beide Richtungen: Ein bösartiger Client kann ungepatchte Server übernehmen, ein bösartiger Server ungepatchte Clients. Die Pointe: OpenAI hat den Fehler nach eigener Darstellung schon im Februar gefunden und gemeldet; der Fix ging damals in den Quellcode, wurde aber nicht als Sicherheitsproblem erkannt - und kein Release enthielt ihn. Deshalb muss jetzt jedes Projekt mit gebündeltem Brotli sein eigenes Update ausrollen. Patches für libbrotli, Python, C++, Node.js, Bun und Envoy sind laut Aikido unterwegs; Apache und Nginx dekodieren Brotli nicht standardmäßig. Praktisch fies: Advisory-Datenbanken mappen die CVE noch nicht auf die PyPI-Pakete, pip-audit, Dependabot und Safety schlagen also nicht an. Empfehlung: prüfen, wo Brotli-Dekodierung im Stack steckt, und sie ohne Patch abschalten.",
+      "takeaway": "Der Fix lag seit Februar im Quellcode - nur in keinem Release. Jetzt prüfen, ob Brotli irgendwo im eigenen Stack dekomprimiert.",
+      "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
+      "cta": "Analyse lesen ↗",
+      "source": "aikido.dev · aktualisiert 24.10."
     }
   ]
 }
