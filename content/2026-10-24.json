@@ -3,9 +3,9 @@
   "slug": null,
   "title": "Daily Hob vom Samstag, 24.10.",
   "headline": "Zwölf Jahre verteilte Datenbanken, ein OBS-Riesensprung und Apples Forscher-iPhones.",
-  "teaser": "6 Catches zum Samstag: Der rqlite-Autor schreibt zwölf Jahre Distributed-SQLite-Geschichte auf, OBS Studio 33 bringt den größten Framework-Sprung seit Jahren, Roc misst sich mit getuntem C, Apple öffnet das Bewerbungsfenster für seine Forscher-iPhones - dazu ein peer-reviewtes Paper mit erfundenen Quellen und eine Brotli-Lücke, die zur HTTP-Weitflächenbombe wird.",
-  "intro": "Der Samstag beginnt mit Geschichtsunterricht: Philip O'Toole hat zwölf Jahre verteiltes SQLite aufgeschrieben - von rqlite 2014 bis Litestream und LiteFS. Dazu ein Major-Release von OBS Studio mit massivem Browser-Framework-Update und neuem Plugin-System, Richard Feldmans Benchmark-Duell zwischen Roc und libdeflate - und Apple öffnet die Bewerbung für seine Security Research Devices. Am Nachmittag zwei Nachzügler: TorrentFreak deckt ein peer-reviewtes Paper mit halluzinierten Quellen auf, und aus der Node2Shell-Lücke im Brotli-Dekoder wird mit HTTP2Shell ein Problem für die halbe HTTP-Welt.",
-  "notes": "Ausgabe für Samstag, 24. Oktober 2026 (Berliner Zeit), Stand 15:30. Quellen: philipotoole.com, github.com/obsproject, rtfeldman.com, security.apple.com, torrentfreak.com, aikido.dev.",
+  "teaser": "8 Catches zum Samstag: Zwölf Jahre Distributed-SQLite-Geschichte, OBS Studio 33 mit Riesensprung, Roc gegen libdeflate, Apples Forscher-iPhones - dazu halluzinierte Paper-Quellen, die Brotli-Weitflächenbombe HTTP2Shell, ein Kernel-Modul, das RTX-3000-Karten auf Pro-Niveau befreit, und ein Chip, der Hirnregionen beim Reden zuhört.",
+  "intro": "Der Samstag beginnt mit Geschichtsunterricht: Philip O'Toole hat zwölf Jahre verteiltes SQLite aufgeschrieben - von rqlite 2014 bis Litestream und LiteFS. Dazu ein Major-Release von OBS Studio, Richard Feldmans Benchmark-Duell zwischen Roc und libdeflate - und Apple öffnet die Bewerbung für seine Security Research Devices. Am Nachmittag kamen ein peer-reviewtes Paper mit halluzinierten Quellen und die Brotli-Lücke HTTP2Shell dazu; zum Abend ein Linux-Kernel-Modul, das die künstlich gedrosselte BF16-Rate von Nvidias RTX-3000-Karten freischaltet, und ein implantierbarer Chip der EPFL, der die Kommunikation zwischen Hirnregionen in Echtzeit liest.",
+  "notes": "Ausgabe für Samstag, 24. Oktober 2026 (Berliner Zeit), Stand 19:30. Quellen: philipotoole.com, github.com/obsproject, rtfeldman.com, security.apple.com, torrentfreak.com, aikido.dev, github.com/Zagitta, actu.epfl.ch.",
   "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-24",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: ein großer Datenbank-Zylinder aus dünnen schwarzen Linien, dessen Schreibzugriffe über Pfeile auf drei kleinere Zylinder verteilt werden, daneben eine Strichzeichnung einer Filmkamera mit Signalwellen und ein Schild mit Schlüsselloch; ein gelber Kreis und eine mintfarbene Fläche als Akzente auf hellem Papierhintergrund",
@@ -71,6 +71,28 @@
       "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
       "cta": "Analyse lesen ↗",
       "source": "aikido.dev · aktualisiert 24.10."
+    },
+    {
+      "category": "Open Source",
+      "short": "GPU-Unlock",
+      "title": "Kernel-Modul schaltet Nvidias Drossel aus: RTX 3000 plötzlich mit Pro-Karten-BF16-Rate.",
+      "body": "Nvidia verkauft dieselbe Silizium-Fläche zweimal: Bei den Consumer-Karten der RTX-3000-Serie ist die Ausgaberate für FP16-/BF16-Instruktionen künstlich gedrosselt, die vollen Raten bleiben den teuren Profi-Karten vorbehalten. Das Projekt gpu-unlock (seit 18.10. auf GitHub, jetzt Version 1.0.0) dreht diesen Schalter um - nicht mit einem gepatchten Treiber, sondern als Linux-Kernel-Modul, das vor dem unveränderten Nvidia-Treiber läuft: Es setzt die Speed-Selektoren der Karte (GA102, GA103, GA104, GA106) und führt einen Function-Level-Reset durch, bevor der Treiber die Karte bindet. Vorteil gegenüber bisherigen Ansätzen: kein erneutes Patchen bei jedem Treiberupdate. Die Messwerte des Autors auf einer 3090 Ti (8192er-GEMM, 450 Watt, Median aus fünf Läufen): BF16 steigt von 87,5 auf 157,4 TFLOPS, TF32 von 42,6 auf 82,6, FP16 von 87,5 auf 118,4. Eigene Messungen des Autors, versteht sich - und ein Eingriff in die Kartenkonfiguration, den man nicht für Garantieansprüche macht.",
+      "takeaway": "Die Hardware konnte es immer - freigeschaltet wird es per Software, erst recht interessant fürs lokale KI-Rechnen.",
+      "url": "https://github.com/Zagitta/gpu-unlock",
+      "cta": "Repo ansehen ↗",
+      "source": "github.com/Zagitta · 24.10. (Repo seit 18.10.)"
+    },
+    {
+      "category": "Wildcard",
+      "short": "LogSync-Chip",
+      "title": "LogSync: Ein implantierbarer Chip hört zu, wie Hirnregionen miteinander sprechen.",
+      "body": "Tiefenhirnstimulation hilft heute schon bei Parkinson - aber fast alle Systeme laufen 'open loop': Sie feuern nach festem Programm, ohne auf die Hirnaktivität zu reagieren. Forschende der EPFL um Mahsa Shoaran haben (23.10.) LogSync vorgestellt, ein stromsparendes implantierbares System-on-Chip von rund 4 x 2 Millimetern, das gezielt die Kommunikation ZWISCHEN Hirnregionen misst: Stärke der Hirnwellen und Synchronität der Signale. Ein Machine-Learning-Algorithmus wertet diese Netzwerk-Biomarker aus, unterscheidet kognitive und emotionale Zustände in Echtzeit und gibt bei erkannten Mustern Stimulationsimpulse aus. Ziel: adaptive Therapie schwerer psychischer Erkrankungen wie Depression, PTBS und Zwangsstörungen, bei denen die relevante Information über Netzwerke verteilt liegt statt in einer einzelnen Region. Veröffentlicht im IEEE Journal of Solid-State Circuits, gefördert mit 6,6 Millionen Franken vom US-Institut für psychische Gesundheit.",
+      "takeaway": "Vom Dauerfeuer zum Zuhören: Closed-Loop-Implantate werden gerade erst richtig interessant.",
+      "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
+      "cta": "Studie einordnen ↗",
+      "source": "actu.epfl.ch · 23.10. · Bild: EPFL / Lundi13 (CC-BY-SA 4.0)",
+      "image": "logsync.jpg",
+      "imageAlt": "Zwei LogSync-Chips von etwa 4 x 2 Millimetern Größe auf einer dunklen Fläche, goldene Kontaktflächen sichtbar"
     }
   ]
 }
