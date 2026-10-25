@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-25",
+  "slug": null,
+  "title": "Daily Hob vom Sonntag, 25.10.",
+  "headline": "Eine Sprache ohne Heap, ein Wafer voller Modelle und 500 Dollar für den ersten Hack.",
+  "teaser": "4 Catches zum Sonntag: Goose, eine speichersichere Systemssprache ganz ohne Heap, Cerebras erklärt den Billionen-Parameter-Trick auf Wafern, Dan Luu plädiert für ambitioniertere Software - und ein Server mit 500 Dollar in Bitcoin wartet auf den ersten erfolgreichen PHP2Shell-Angriff.",
+  "intro": "Der Sonntag hat es in sich: Mit Goose stellt Wouter van Oortmerssen eine Systemssprache vor, die ganz ohne Heap, Garbage Collector und Lifetime-Annotationen auskommt - und in den eigenen Benchmarks schneller als C++ und Rust sein soll. Cerebras zeigt Schritt für Schritt, wie man ein 3-Billionen-Parameter-Modell über Wafer verteilt, Dan Luu nimmt pgrust zum Anlass für ein Plädoyer für ambitioniertere Software, und ein Sicherheitsforscher hat einen absichtlich verwundbaren Server mit einem 500-Dollar-Bitcoin-Wallet ins Netz gestellt.",
+  "notes": "Ausgabe für Sonntag, 25. Oktober 2026 (Berliner Zeit), Stand 11:30. Quellen: aardappel.github.io, cerebras.ai, danluu.com, stealmybitcoin.com.",
+  "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-25",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Illustration: eine Gans aus einer einzigen dünnen schwarzen Linie neben einer runden Silizium-Wafer-Scheibe mit feinen Leiterbahnen, daneben ein kleines Vorhängeschloss mit einer Münze; ein gelber Kreis und eine mintfarbene Fläche als Akzente auf hellem Papierhintergrund",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "audio": null,
+  "sections": [
+    {
+      "category": "Open Source",
+      "short": "Goose-Sprache",
+      "title": "Goose: Eine speichersichere Systemssprache komplett ohne Heap, GC und Lifetime-Annotationen.",
+      "body": "Wouter van Oortmerssen hat Goose vorgestellt, eine Systemssprache mit C-/Rust-artiger Syntax, aber einem radikal anderen Speichermodell: Es gibt keinen Heap-Allokator, keinen Garbage Collector, kein Reference Counting und keine Destruktoren. Alle dynamischen Werte leben inline auf Daten-Stacks, die der Compiler statisch vergibt; Wachstum ist ein Pointer-Bump, Freigabe ein einzelner Store beim Verlassen des Scopes. Weil nichts umzieht, bleiben Referenzen in wachsende Arrays gültig - genau das, was vector und Vec nicht versprechen können. Verschachtelte Daten bleiben in einem zusammenhängenden Block, Enums kosten nur so viel wie ihr Inhalt, und relative 1-, 2- oder 4-Byte-Referenzen machen Datenstrukturen direkt zum Dateiformat. Kompiliert wird nach plain C. In den Benchmarks des Repos liegt Goose nach Angaben des Autors bei 16 Benchmarks vor idiomatischem C++ und sicherem Rust, bei geringerem Speicherverbrauch - Autorenbenchmarks, wie immer mit Vorsicht zu genießen, aber der Code, die Zahlen und auch die verlorenen Vergleiche liegen offen.",
+      "takeaway": "Rusts Lifetime-Bürokratie gegen einen Bump-Pointer getauscht - wenn das Modell trägt, ist das eine echte Alternative für Systemprogrammierung.",
+      "url": "https://aardappel.github.io/goose/",
+      "cta": "Sprache ansehen ↗",
+      "source": "aardappel.github.io · 25.10."
+    },
+    {
+      "category": "KI",
+      "short": "Cerebras-Wafer",
+      "title": "Wie betreibt man ein 3-Billionen-Parameter-Modell auf Chips mit 44 GB Speicher? Cerebras rechnet es vor.",
+      "body": "Cerebras hat (22.10.) in einem technischen Blogpost offengelegt, wie Billionen-Parameter-Modelle auf den eigenen Wafer-Scale-Chips laufen - am Beispiel des offenen Kimi K3 mit rund 3 Billionen Parametern. Das Grundproblem: Ein einzelner WSE-3T-Wafer hat 44 GB On-Chip-Speicher, das Modell braucht selbst mit 4-Bit-Quantisierung Terabytes. Die Antwort ist konsequentes Verteilen: Die 93 Layer (69 Linear-Attention-, 24 Dense-Layer) werden über mehrere Wafer aufgeteilt, Dense-Layer bekommen extra Platz für den KV-Cache (hier 8-Bit), und die Nebenrechnung zeigt pro Layer rund 16 GB bei 4 Bit. Cerebras spricht von 1000 bis 2000 Tokens pro Sekunde für solche Multi-Billionen-Modelle - Herstellerangabe, versteht sich, aber die Herleitung im Post ist Schicht für Schicht nachvollziehbar, inklusive der Annahmen zu Request-Größe und Quantisierung.",
+      "takeaway": "Kein Marketing-Post, sondern eine echte Durchrechnung - wer verstehen will, wie Inferenz-Architektur jenseits der GPU aussieht, bekommt hier die Zahlen.",
+      "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+      "cta": "Durchrechnung lesen ↗",
+      "source": "cerebras.ai · 22.10."
+    },
+    {
+      "category": "Informatik",
+      "short": "Dan Luu",
+      "title": "Wir sollten ambitionierter bauen: Dan Luu nimmt pgrust in Schutz - und angreifbare Benchmarks aufs Korn.",
+      "body": "Über Nacht auf der HN-Frontpage: Dan Luus Essay 'We should be more ambitious with the software we build'. Auslöser ist pgrust, die Postgres-Neuimplementierung von Michael Malis - genau das Projekt, dessen ClickBench-Eintrag diese Woche wegen handgeschriebener Query-Kernel entfernt wurde. Luu, der Malis kennt, kontrastiert: Wer genauer hinschaut, findet bei pgrust so gründliche Tests, dass dabei echte Postgres-Bugs aufflogen - ein Numerik-Bug in SP-GiST, ein Format-Cache-Bug bei JSONPath, ein pgcrypto-Bug, Speichersicherheitsprobleme im Dictionary-Loader. Selbst wenn pgrust scheitert, habe der Versuch Postgres dauerhaft verbessert. Luus Punkt: Ja, fast alle dieser Rewrite-Projekte sind 'Vibe-Slop' - aber für Einzelne ist das egal, denn die Werkzeuge sind inzwischen gut genug, um Dinge zu bauen, die früher zu groß waren. Er selbst hat nebenbei eine Regex-Engine und einen schnelleren ripgrep-Fork für seine eigenen Workloads gebaut.",
+      "takeaway": "Die spannende Ergänzung zur ClickBench-Debatte: Benchmark-Ehrlichkeit und Ingenieurskunst sind zwei verschiedene Achsen - beide Geschichten sind wahr.",
+      "url": "https://danluu.com/ambitious/",
+      "cta": "Essay lesen ↗",
+      "source": "danluu.com · 25.10. (über Nacht auf HN)"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Steal My Bitcoin",
+      "title": "500 Dollar für den ersten Hack: Ein absichtlich verwundbarer Server testet PHP2Shell in echt.",
+      "body": "Passend zur PHP2Shell-Woche: Auf stealmybitcoin.com liegt ein Bitcoin-Wallet im Wert von rund 500 Dollar auf einem Server, der bewusst mit einer PHP-Version aus der Zeit vor den PHP2Shell-Patches läuft. Der Schlüssel ist über ein print-flag-Binary im PHP-Nutzerkonto erreichbar - wer ihn zuerst knackt, darf das Wallet behalten; wer das Geld nicht braucht, soll an GiveWell spenden. Ein Zähler auf der Seite zeigt die Stunden ohne erfolgreichen Angriff, zuletzt: 0,00 - es hat also noch niemand geschafft (oder der Zähler wurde gerade erst gestartet). Die Betreiber weisen explizit darauf hin, dass der gesamte Traffic geloggt wird und andere Angreifer mitlesen könnten: eine öffentliche, ehrlich deklarierte Honeypot-Challenge. Praktisch wie kaum etwas sonst zeigt sie, ob aus der CVE-9.2-Theorie dieser Woche auch reproduzierbare Praxis wird.",
+      "takeaway": "Die eleganteste Bug-Bounty der Woche: Kein Formular, kein Triage-Prozess - nur ein Server, ein Wallet und ein Zähler.",
+      "url": "https://stealmybitcoin.com/",
+      "cta": "Challenge ansehen ↗",
+      "source": "stealmybitcoin.com · 25.10."
+    }
+  ]
+}
