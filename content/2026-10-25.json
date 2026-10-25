@@ -3,9 +3,9 @@
   "slug": null,
   "title": "Daily Hob vom Sonntag, 25.10.",
   "headline": "Eine Sprache ohne Heap, ein Wafer voller Modelle und 500 Dollar für den ersten Hack.",
-  "teaser": "7 Catches zum Sonntag: Goose, eine speichersichere Systemssprache ganz ohne Heap, Cerebras erklärt den Billionen-Parameter-Trick auf Wafern, Dan Luu plädiert für ambitioniertere Software, ein Server mit 500 Dollar in Bitcoin wartet auf den ersten PHP2Shell-Angriff, der C++26-Entwurf fällt beim ISO-Ballot durch, eine Analyse erklärt die ausgebliebene PHP2Shell-Welle - und ein selbstgebauter Rechner läuft aus Werkzeugakkus.",
-  "intro": "Der Sonntag hat es in sich: Mit Goose stellt Wouter van Oortmerssen eine Systemssprache vor, die ganz ohne Heap, Garbage Collector und Lifetime-Annotationen auskommt - und in den eigenen Benchmarks schneller als C++ und Rust sein soll. Cerebras zeigt Schritt für Schritt, wie man ein 3-Billionen-Parameter-Modell über Wafer verteilt, Dan Luu nimmt pgrust zum Anlass für ein Plädoyer für ambitioniertere Software, und ein Sicherheitsforscher hat einen absichtlich verwundbaren Server mit einem 500-Dollar-Bitcoin-Wallet ins Netz gestellt. Am Nachmittag kommen drei Schwergewichte dazu: Der C++26-Entwurf fällt erstmals in der Geschichte der Sprache beim ISO-Ballot durch, eine frische Analyse erklärt die ausgebliebene PHP2Shell-Welle (und meldet die ersten echten Angriffe), und der Slurptop zeigt, wie ein Selbstbau-Rechner aus Werkzeugakkus läuft.",
-  "notes": "Ausgabe für Sonntag, 25. Oktober 2026 (Berliner Zeit), Stand 15:45. Quellen: aardappel.github.io, cerebras.ai, danluu.com, stealmybitcoin.com, open-std.org, blog.luitjes.it, slurpburgers.com.",
+  "teaser": "9 Catches zum Sonntag: Goose, eine speichersichere Systemssprache ganz ohne Heap, Cerebras erklärt den Billionen-Parameter-Trick, Dan Luu plädiert für ambitioniertere Software, ein Server mit 500 Dollar in Bitcoin wartet auf den ersten PHP2Shell-Angriff, C++26 fällt beim ISO-Ballot durch, eine Analyse erklärt die ausgebliebene PHP2Shell-Welle, ein Selbstbau-Rechner läuft aus Werkzeugakkus, ein zehn Jahre altes CNN schlägt Frontier-LLMs bei Hautkrebs - und das Werkzeugbuch eines Ritters von 1505 ist komplett online.",
+  "intro": "Der Sonntag hat es in sich: Mit Goose stellt Wouter van Oortmerssen eine Systemssprache vor, die ganz ohne Heap, Garbage Collector und Lifetime-Annotationen auskommt - und in den eigenen Benchmarks schneller als C++ und Rust sein soll. Cerebras zeigt Schritt für Schritt, wie man ein 3-Billionen-Parameter-Modell über Wafer verteilt, Dan Luu nimmt pgrust zum Anlass für ein Plädoyer für ambitioniertere Software, und ein Sicherheitsforscher hat einen absichtlich verwundbaren Server mit einem 500-Dollar-Bitcoin-Wallet ins Netz gestellt. Am Nachmittag kommen drei Schwergewichte dazu: Der C++26-Entwurf fällt erstmals in der Geschichte der Sprache beim ISO-Ballot durch, eine frische Analyse erklärt die ausgebliebene PHP2Shell-Welle (und meldet die ersten echten Angriffe), und der Slurptop zeigt, wie ein Selbstbau-Rechner aus Werkzeugakkus läuft. Am Abend noch zwei Kontraste: Ein zehn Jahre altes, spezialisiertes CNN diagnostiziert Hautkrebs im Selbstversuch eines Dermatologen treffsicherer als zwei Frontier-LLMs, und der Löffelholz-Codex zeigt, wie ein Nürnberger Ritter 1505 seine Werkzeuge dokumentierte - heute vollständig digitalisiert und gemeinfrei.",
+  "notes": "Ausgabe für Sonntag, 25. Oktober 2026 (Berliner Zeit), Stand 19:45. Quellen: aardappel.github.io, cerebras.ai, danluu.com, stealmybitcoin.com, open-std.org, blog.luitjes.it, slurpburgers.com, lynchlab.net, loeffelholz-codex.org.",
   "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-25",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: eine Gans aus einer einzigen dünnen schwarzen Linie neben einer runden Silizium-Wafer-Scheibe mit feinen Leiterbahnen, daneben ein kleines Vorhängeschloss mit einer Münze; ein gelber Kreis und eine mintfarbene Fläche als Akzente auf hellem Papierhintergrund",
@@ -83,6 +83,28 @@
       "source": "slurpburgers.com · 25.10. · Bild: slurpburgers.com",
       "image": "slurptop.jpg",
       "imageAlt": "Der selbstgebaute Slurptop-Luggable mit mechanischer Tastatur und integriertem Trackball"
+    },
+    {
+      "category": "KI",
+      "title": "Zehn Jahre altes CNN schlägt Frontier-LLMs bei der Hautkrebs-Diagnose.",
+      "short": "CNN vs. LLM",
+      "body": "Ein britischer Hautarzt (Dr. Magnus Lynch, Guy's Hospital und King's College London) hat GPT-6 Astra und Claude Fable 5.1 gegen ein feingetuntes Inception v3 von 2015 antreten lassen: 200 biopsiegesicherte Hautläsionen, je mit klinischem Foto und Dermoskopie-Bild. Das Ergebnis ist eindeutig: Das CNN nannte 125 von 200 Diagnosen korrekt (62 Prozent), die LLMs kamen auf 84 und 85 (je 42 Prozent). Bei den 30 Melanomen lag das CNN 13-mal richtig, GPT-6 Astra 8-mal, Claude Fable 5.1 11-mal. Die LLMs hatten zudem Lieblingsdiagnosen: GPT-6 Astra rief 75-mal Basalzellkarzinom aus, wo nur 25 waren. Der Autor benennt die Schwächen seines Tests selbst: kleine Stichprobe, besonders harte Fälle (alle biopsiert), mögliche Trainingskontamination, die eher den LLMs geholfen hätte, und Inception v3 ist ein Baseline-Modell, nicht der Stand der Technik. Als Patient gefragt (\"Muss ich zum Arzt?\") schickten die LLMs in fast allen Fällen zum Arzt - auch bei harmlosen Läsionen. Fälle, Prompts, sämtliche Modellantworten und der Scoring-Code liegen offen zum Download.",
+      "takeaway": "Spezialisierte kleine Modelle schlagen Generalisten dort, wo es auf die eine richtige Diagnose ankommt - und die ehrliche Einordnung des Autors macht den Test glaubwürdiger, nicht schwächer.",
+      "url": "https://lynchlab.net/llm-skin-cancer",
+      "cta": "Test nachlesen",
+      "source": "lynchlab.net · 25.10."
+    },
+    {
+      "category": "Wildcard",
+      "title": "Das Werkzeugbuch eines Nürnberger Ritters von 1505 - komplett digitalisiert und gemeinfrei.",
+      "short": "Löffelholz-Codex",
+      "body": "Im Jahr 1505 begann Martin Löffelholz, Nürnberger Patrizier und Ritter, ein Buch - kein Tagebuch, keine Familienchronik, sondern ein Werkzeugbuch. Er zeichnete, was ihn beschäftigte: Bohrer mit Wechselklingen, Gewinde und die Werkzeuge, sie zu schneiden, eine Werkbank mit Schraubstock, einen Drehstuhl auf Rollen, eine aus dem Weg schwenkbare Wendeltreppe, eine Armbrust in Einzelteilen und eine Wiege, deren Kufen mit Quecksilber gefüllt sind. Der Codex liegt heute in Krakau, ist vollständig digitalisiert und gemeinfrei - die Projektseite erschließt ihn Blatt für Blatt, vom Wappen-Titelblatt mit der Jahreszahl 1505 bis zur letzten Zeichnung.",
+      "takeaway": "Ein Blick in den Kopf eines Renaissance-Ingenieurs - 500 Jahre bevor es Maker-Spaces gab.",
+      "url": "https://loeffelholz-codex.org/en/",
+      "cta": "Codex durchblättern",
+      "source": "loeffelholz-codex.org · 25.10. · Bild: loeffelholz-codex.org (gemeinfrei)",
+      "image": "codex.jpg",
+      "imageAlt": "Titelblatt des Löffelholz-Codex von 1505: Allianzwappen der Familien Löffelholz und Haug mit Jahreszahl"
     }
   ]
 }
