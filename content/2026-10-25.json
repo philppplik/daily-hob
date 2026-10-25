@@ -5,7 +5,7 @@
   "headline": "Eine Sprache ohne Heap, ein Wafer voller Modelle und 500 Dollar für den ersten Hack.",
   "teaser": "4 Catches zum Sonntag: Goose, eine speichersichere Systemssprache ganz ohne Heap, Cerebras erklärt den Billionen-Parameter-Trick auf Wafern, Dan Luu plädiert für ambitioniertere Software - und ein Server mit 500 Dollar in Bitcoin wartet auf den ersten erfolgreichen PHP2Shell-Angriff.",
   "intro": "Der Sonntag hat es in sich: Mit Goose stellt Wouter van Oortmerssen eine Systemssprache vor, die ganz ohne Heap, Garbage Collector und Lifetime-Annotationen auskommt - und in den eigenen Benchmarks schneller als C++ und Rust sein soll. Cerebras zeigt Schritt für Schritt, wie man ein 3-Billionen-Parameter-Modell über Wafer verteilt, Dan Luu nimmt pgrust zum Anlass für ein Plädoyer für ambitioniertere Software, und ein Sicherheitsforscher hat einen absichtlich verwundbaren Server mit einem 500-Dollar-Bitcoin-Wallet ins Netz gestellt.",
-  "notes": "Ausgabe für Sonntag, 25. Oktober 2026 (Berliner Zeit), Stand 11:30. Quellen: aardappel.github.io, cerebras.ai, danluu.com, stealmybitcoin.com.",
+  "notes": "Ausgabe für Sonntag, 25. Oktober 2026 (Berliner Zeit), Stand 15:45. Quellen: aardappel.github.io, cerebras.ai, danluu.com, stealmybitcoin.com, open-std.org, blog.luitjes.it, slurpburgers.com.",
   "archiveUrl": "https://news.ycombinator.com/front?day=2026-10-25",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Illustration: eine Gans aus einer einzigen dünnen schwarzen Linie neben einer runden Silizium-Wafer-Scheibe mit feinen Leiterbahnen, daneben ein kleines Vorhängeschloss mit einer Münze; ein gelber Kreis und eine mintfarbene Fläche als Akzente auf hellem Papierhintergrund",
@@ -51,6 +51,38 @@
       "url": "https://stealmybitcoin.com/",
       "cta": "Challenge ansehen ↗",
       "source": "stealmybitcoin.com · 25.10."
+    },
+    {
+      "category": "Informatik",
+      "title": "Zum ersten Mal in der C++-Geschichte: Der C++26-Entwurf fällt beim ISO-Ballot durch.",
+      "short": "C++26-Ballot",
+      "body": "Am 22.10. ist die DIS-Abstimmung (Draft International Standard) zu C++26 ausgegangen - und der Entwurf hat beide Zustimmungskriterien verfehlt. Laut der von Robert Seacord veröffentlichten Auszählung stimmten von den P-Members nur 12 von 20 dafür (60 Prozent, gefordert mindestens 66,66), bei den Mitgliedsorganisationen waren 9 von 22 dagegen (41 Prozent negativ, erlaubt sind maximal 25). J. Daniel Garcia weist darauf hin, dass vor C++26 alle Standards einstimmig durchgegangen sind. Streitpunkt ist das neue Contracts-Feature: Eine Gruppe hatte bei den National Bodies aktiv gegen die Annahme lobbyiert, mit Petition und einem Papier über angebliche fundamentale Fehler der Vertrags-Assertions. Das Positionspapier P4433R0 (23.10., unter anderem Timur Doumler) plädiert dafür, Contracts nicht wieder aus C++26 zu entfernen. Seacord nannte das Ergebnis einen traurigen Tag für die C++-Community - Harald Achitz liest das Nein umgekehrt als Zeichen einer gesunden, streitenden Community.",
+      "takeaway": "Jahrzehnte Arbeit an Contracts hängen in der Luft: Scope reduzieren und neu versuchen - oder das Flaggschiff-Feature aus C++26 streichen.",
+      "url": "https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2026/p4433r0.pdf",
+      "cta": "Positionspapier lesen",
+      "source": "open-std.org · 23.10."
+    },
+    {
+      "category": "Informatik",
+      "title": "Wo bleibt die PHP2Shell-Welle? Eine Analyse erklärt die Ruhe - und meldet die ersten echten Angriffe.",
+      "short": "PHP2Shell-Lage",
+      "body": "Passend zur PHP2Shell-Woche: Ein Blogpost vom 23.10., heute aktualisiert, erklärt, warum die Massen-Ausnutzung der Lücke bisher ausgeblieben ist. Der beste öffentliche Exploit braucht vier aufeinanderfolgende Requests an denselben PHP-Worker und genaue Kenntnis des Builds (PHP-Version, OS, Architektur) - auf Servern mit vielen Workern und ohne Build-Infos wird das zur Glückssache. Heute kam das Update: Drei Tage nach dem Patch gibt es erste öffentliche Belege für Angriffe in freier Wildbahn, entdeckt von einem Honeypot, und die Technik entspricht der Beschreibung. Für Sites mit wenig Traffic hat die Massenausnutzung damit wohl begonnen, für stark frequentierte Sites gelten die Einschränkungen nach Wissen des Autors weiter. Dan Guido von Trail of Bits behauptet einen zuverlässigen Exploit, der auch unter Last funktioniert - eine öffentliche Bestätigung gibt es nicht. Der Honeypot von stealmybitcoin.com, dessen 500-Dollar-Wallet weiter ungeknackt ist, wird im Update ebenfalls erwähnt.",
+      "takeaway": "Kein Grund zum Aufatmen, aber ein seltenes Lehrstück: Der Weg von der CVE zur echten Massenausnutzung ist steiniger als die Schlagzeilen.",
+      "url": "https://blog.luitjes.it/posts/i-want-my-wednesday-back/",
+      "cta": "Analyse lesen",
+      "source": "blog.luitjes.it · 23.10., aktualisiert 25.10."
+    },
+    {
+      "category": "Wildcard",
+      "title": "Der Slurptop: Ein selbstgebauter Klapprechner, der aus Werkzeugakkus läuft.",
+      "short": "Slurptop",
+      "body": "Kein Laptop, kein Desktop - ein Luggable: Der Slurptop ist ein komplett selbstgebauter Rechner mit Ryzen 7 7730U (8 Kerne, 16 Threads), 64 GB RAM, 500-GB-NVMe, 14-Zoll-Display, mechanischer 82-Tasten-Tastatur und integriertem Trackball. Das Beste: Statt Netzteil oder fest verbautem Akkupack hängt das Gerät an handelsüblichen Kobalt-Werkzeugakkus - wechselbar, wenn auch leider nicht im laufenden Betrieb. Die Projektseite dokumentiert Designprozess, Stromversorgung und Stückliste im Detail, inklusive aller Fotos vom Aufbau.",
+      "takeaway": "Wer einen Laptop bauen will, ohne sich mit Akkuzellen zu plagen, zapft einfach die Infrastruktur der Werkstatt an.",
+      "url": "https://slurpburgers.com/slurpbuilds/the-slurptop/",
+      "cta": "Baublog ansehen",
+      "source": "slurpburgers.com · 25.10. · Bild: slurpburgers.com",
+      "image": "slurptop.jpg",
+      "imageAlt": "Der selbstgebaute Slurptop-Luggable mit mechanischer Tastatur und integriertem Trackball"
     }
   ]
 }
