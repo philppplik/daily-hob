@@ -2,8 +2,8 @@
  "date": "2026-10-26",
  "title": "Daily Hob vom Montag, 26.10.",
  "headline": "19 Stunden bis zum Hack, 80 Prozent weniger fürs Modell und ein Rennspiel aus 147 Agenten.",
- "teaser": "7 Catches zum Montag: Der Steal-My-Bitcoin-Server ist nach 19,28 Stunden gefallen - mit komplettem Gewinner-PoC, Anthropic legt den Börsengang offen, die Schweiz steht 1:1 in Minecraft, vLLM repariert kaputte Tool-Calls, Max Woolf erklärt die LLM-Preisstürze, F-Zero X läuft nativ auf dem 3DS, und TitleArt bringt WordArt zurück.",
- "intro": "Der Montag beginnt mit einer Auflösung: Der absichtlich verwundbare Server, den wir gestern vorgestellt haben, ist nach 19,28 Stunden geknackt - und der Gewinner hat den kompletten Angriff dokumentiert. Dazu ordnet Max Woolf ein, warum LLMs binnen Monaten bis zu 80 Prozent billiger wurden, ein Postmortem zeigt, wie 147 KI-Subagenten F-Zero X nativ auf den 3DS brachten, und TitleArt lässt Texte wieder aussehen wie 1997. Am Nachmittag kommen drei Catches dazu: Anthropic reicht den Börsengang bei der SEC ein, ein Schweizer Projekt baut das ganze Land im Massstab 1:1 in Minecraft nach, und Ubicloud zeigt, wie vLLM fehlerhafte Tool-Calls per Constrained Decoding auf 100 Prozent Schema-Treffer bringt.",
+ "teaser": "9 Catches zum Montag: Der Steal-My-Bitcoin-Server ist nach 19,28 Stunden gefallen - mit komplettem Gewinner-PoC, Anthropic legt den Börsengang offen, Microsoft bietet 60.000 Beschäftigten Auflösungsverträge an, die Schweiz steht 1:1 in Minecraft, vLLM repariert kaputte Tool-Calls, Raschka baut Reasoning-Modelle in elf Stunden nach, Max Woolf erklärt die LLM-Preisstürze, F-Zero X läuft nativ auf dem 3DS, und TitleArt bringt WordArt zurück.",
+ "intro": "Der Montag beginnt mit einer Auflösung: Der absichtlich verwundbare Server, den wir gestern vorgestellt haben, ist nach 19,28 Stunden geknackt - und der Gewinner hat den kompletten Angriff dokumentiert. Dazu ordnet Max Woolf ein, warum LLMs binnen Monaten bis zu 80 Prozent billiger wurden, ein Postmortem zeigt, wie 147 KI-Subagenten F-Zero X nativ auf den 3DS brachten, und TitleArt lässt Texte wieder aussehen wie 1997. Am Nachmittag kommen drei Catches dazu: Anthropic reicht den Börsengang bei der SEC ein, ein Schweizer Projekt baut das ganze Land im Massstab 1:1 in Minecraft nach, und Ubicloud zeigt, wie vLLM fehlerhafte Tool-Calls per Constrained Decoding auf 100 Prozent Schema-Treffer bringt. Am Abend kommen zwei Catches dazu: Microsoft bietet gut einem Viertel der Belegschaft freiwillige Auflösungsverträge an, und der am 24. Oktober veröffentlichte Reasoning-Videokurs von Sebastian Raschka liefert über elf Stunden zum Mitprogrammieren.",
  "hero": "hero.jpg",
  "heroAlt": "Linienillustration: Ein geöffnetes Vorhängeschloss, aus dem eine Münze rutscht, daneben eine karierte Rennflagge und ein Handheld",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -77,7 +77,27 @@
    "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
    "cta": "Analyse lesen",
    "source": "Ubicloud Blog, 20.10.2026 (Messungen des Anbieters)"
+  },
+  {
+   "category": "KI",
+   "title": "Microsoft bietet 60.000 Beschäftigten freiwillige Auflösungsverträge an.",
+   "short": "Microsoft-Buyouts",
+   "body": "Microsoft hat am Montag ein freiwilliges Austrittsangebot angekündigt. Es gilt für berechtigte Beschäftigte bis Level 70 in teilnehmenden Teams in den USA, Kanada, Großbritannien und Indien. Der offizielle Blog nennt finanzielle Unterstützung und Hilfe bei der beruflichen Neuorientierung. Die Größenordnung stammt aus Microsofts Auskunft an GeekWire: Rund 60.000 Menschen können das Angebot erhalten, etwa 27 Prozent der zuletzt gemeldeten Belegschaft. Das sind potenziell Berechtigte, keine angekündigten 60.000 Abgänge. Nach dem freiwilligen Ruhestandsprogramm im Frühjahr ist dies ein breiter angelegtes Angebot ohne Alters- oder Betriebszugehörigkeitsgrenze. GeekWire ordnet es in den Kostendruck bei hohen KI-Infrastrukturinvestitionen ein; Microsoft selbst spricht von wechselnden Geschäftsanforderungen und nennt KI nicht als Ursache im Blog.",
+   "takeaway": "60.000 Berechtigte sind nicht 60.000 Entlassungen: Wie viele das freiwillige Angebot annehmen, ist noch offen.",
+   "url": "https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/",
+   "cta": "Ankündigung lesen",
+   "source": "Microsoft Official Blog, 26.10.2026 · Größenordnung und Einordnung: GeekWire, 26.10.2026"
+  },
+  {
+   "category": "KI",
+   "title": "Reasoning-Modelle von Grund auf verstehen: Raschkas elfstündiger Videokurs.",
+   "short": "Raschka-Videokurs",
+   "body": "Vom Wochenende (24.10.), heute weit oben auf Hacker News: Sebastian Raschka hat zu seinem Buch „Build a Reasoning Model (From Scratch)“ einen kompletten Videokurs veröffentlicht - acht Videos, über elf Stunden Coding in Python und PyTorch, kostenlos. Ausgehend von einem vortrainierten LLM wird von Grund auf implementiert, was Reasoning-Modelle ausmacht: Evaluation, Inference-Time-Scaling, Reinforcement Learning mit verifizierbaren Belohnungen und Destillation. Gleich zu Beginn ordnet Raschka ein, wie LLM, Reasoning-Modell und Agent zusammenhängen: Das Modell ist der Motor, das Agent-Framework die Maschine drumherum. Der Kurs ist der inoffizielle Nachfolger seines LLM-from-scratch-Kurses, funktioniert aber auch ohne diesen als Voraussetzung.",
+   "takeaway": "Eine ausführliche Einführung zum Mitprogrammieren. Python- und PyTorch-Kenntnisse sind empfohlen; für die späteren Trainingsversuche ist eine GPU sinnvoll.",
+   "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+   "cta": "Kurs ansehen",
+   "source": "Sebastian Raschka, Ahead of AI, 24.10.2026"
   }
  ],
- "notes": "Ausgabe für Montag, 26. Oktober 2026 (Berliner Zeit), Stand 15:35. Quellen: github.com/KillaBoi, stealmybitcoin.com, minimaxir.com, hypnotize.works, titleart.dvy.io, anthropic.com, sec.gov, blocks.manifold3d.ch, ubicloud.com."
+ "notes": "Ausgabe für Montag, 26. Oktober 2026 (Berliner Zeit), Stand 19:34. Quellen: github.com/KillaBoi, stealmybitcoin.com, minimaxir.com, hypnotize.works, titleart.dvy.io, anthropic.com, sec.gov, blocks.manifold3d.ch, ubicloud.com, blogs.microsoft.com, geekwire.com, magazine.sebastianraschka.com."
 }
