@@ -2,8 +2,8 @@
  "date": "2026-10-27",
  "title": "Daily Hob vom Dienstag, 27.10.",
  "headline": "Ein LLM-Server für Blackwell, Mail in Rust und eine Lektion in Speichergrenzen.",
- "teaser": "6 Catches zum Dienstag: imp, Stalwart 1.0, Cloudflares KV-Cache-Vorfall, schnelle Floor-Division, CPythons JIT-Rückzug und neue PHP2Shell-Telemetrie.",
- "intro": "Heute geht es unter die Oberfläche: Ein spezialisierter Open-Source-Server reizt Blackwell-GPUs aus, Stalwart erreicht die erste stabile Version, und ein Betreiberbericht zeigt, warum plausible KI-Antworten noch keine sichere Speichertrennung beweisen. Dazu ein Low-Level-Deep-Dive über die richtige Richtung beim Runden. Am Nachmittag kommen zwei Lage-Updates dazu: der zurückgezogene PEP für CPythons experimentellen JIT und Wiz-Telemetrie zur PHP2Shell-Ausnutzung, beide ohne vorschnelle Schlussfolgerungen.",
+ "teaser": "9 Catches zum Dienstag: Genie 4, Ghostty 1.4 und LFM3 ergänzen imp, Stalwart, KV-Cache-Isolation, Floor-Division, CPython JIT und PHP2Shell.",
+ "intro": "Heute geht es unter die Oberfläche: Ein spezialisierter Open-Source-Server reizt Blackwell-GPUs aus, Stalwart erreicht die erste stabile Version, und ein Betreiberbericht zeigt, warum plausible KI-Antworten noch keine sichere Speichertrennung beweisen. Dazu ein Low-Level-Deep-Dive über die richtige Richtung beim Runden. Am Nachmittag kommen zwei Lage-Updates dazu: der zurückgezogene PEP für CPythons experimentellen JIT und Wiz-Telemetrie zur PHP2Shell-Ausnutzung, beide ohne vorschnelle Schlussfolgerungen. Am Abend kommen drei neue Veröffentlichungen dazu: Genie 4 mit interaktiven Welten und Audio, Ghostty 1.4 mit Grafik- und Sicherheitsverbesserungen sowie die kompakte LFM3-Modellfamilie.",
  "hero": "hero.jpg",
  "heroAlt": "Linienillustration aus Server mit Briefumschlag, GPU und voneinander getrennten Speicherblöcken",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -67,7 +67,37 @@
    "url": "https://www.wiz.io/blog/php2shell-exploitation-so-far",
    "cta": "Lagebericht lesen",
    "source": "Wiz Research, 27.10.2026 · Telemetrie und Bewertung des Anbieters"
+  },
+  {
+   "category": "KI",
+   "title": "Genie 4: Interaktive Welten bekommen eigenen Ton und Dialoge.",
+   "short": "Genie 4",
+   "body": "Google DeepMind kündigt am 27. Oktober Genie 4 an. Das World Model erzeugt laut Anbieter interaktive Szenen samt Umgebungsgeräuschen, Musik und Dialogen. Nutzer können per Tastatur navigieren und per Text Ereignisse oder Objekte verändern. Gemini-Modelle sollen Kohärenz und mehrstufige Abläufe unterstützen; die Beispiele zeigen unter anderem frei erkundbare Landschaften und Figuren, die auf Ereignisse reagieren. Wichtig für den Zugang: Zunächst läuft eine Research Preview für ausgewählte Tester. Google nennt eine Warteliste und spätere Zugänge über Project Genie für AI-Ultra-Abonnenten sowie frühe API- und AI-Studio-Partner. Das ist keine allgemeine Freigabe. Qualität und physikalische Plausibilität sind bislang Anbieterangaben, keine von uns geprüfte Simulationsgenauigkeit.",
+   "takeaway": "Ein spannender Schritt von generiertem Video zu steuerbaren Szenen. Für verlässliche Robotik-Simulation oder Produktionsplanung reichen schöne Demos als Beleg nicht aus.",
+   "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+   "cta": "Ankündigung ansehen",
+   "source": "Google DeepMind, 27.10.2026 · Funktionen und Zugang: Anbieterangaben"
+  },
+  {
+   "category": "Open Source",
+   "title": "Ghostty 1.4: Grafik, weniger Speicher und wichtige Sicherheitskorrekturen.",
+   "short": "Ghostty 1.4",
+   "body": "Ghostty veröffentlicht am 27. Oktober Version 1.4.0. Der Terminal-Emulator ergänzt Animationen und relative Platzierung im Kitty-Grafikprotokoll. Nicht sichtbarer Scrollback wird auf macOS und 64-Bit-Linux komprimiert; die Entwickler nennen bei typischer Texthistorie 70 bis 90 Prozent weniger physischen Speicherbedarf. Das sind Projektmessungen, keine universelle Zusage. Mindestens so wichtig ist die Liste der Sicherheitskorrekturen: Sie betrifft unter anderem Paste-Schutz bei Wagenrücklaufzeichen und schädliche Terminalausgaben beziehungsweise Grafikkommandos, die Abstürze oder in begrenzten Fällen Dateioperationen außerhalb erlaubter temporärer Verzeichnisse auslösen konnten. Einige Probleme brauchen Nutzeraktionen, andere nur die Anzeige präparierter Ausgabe. Die Release Notes nennen den jeweiligen Umfang.",
+   "takeaway": "Für Ghostty-Nutzer ist 1.4 mehr als ein Performance-Update. Sicherheitsnotizen lesen und die passende offizielle Version verwenden.",
+   "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+   "cta": "Release Notes lesen",
+   "source": "Ghostty Maintainer, Release Notes 27.10.2026 · Speicherwerte: Projektmessungen"
+  },
+  {
+   "category": "KI",
+   "title": "LFM3: Kleine offene Gewichte für Text, Bild und Audio.",
+   "short": "LFM3",
+   "body": "Liquid AI stellt am 27. Oktober LFM3 vor: sechs Modelle um die Zwei-Milliarden-Parameter-Klasse, abgeleitet vom LFM3-1.7B-Base-Backbone. Die Familie deckt Text, Vision, Audio, Omni und spezialisierte Entscheidungsmodelle ab. Der Anbieter veröffentlicht Basis- und nachtrainierte Gewichte und nennt lokale Anpassung auf einer einzelnen GPU als Ziel. Für das Textmodell werden ein 256K-Kontextfenster und ungefähr ein Gigabyte für 4-Bit-quantisierte Gewichte angegeben. Der Speicherbedarf der gesamten laufenden Anwendung ist damit nicht beschrieben. Die Architektur kombiniert kurze Faltungen, Sliding-Window- und globale Attention. Leistungs-, Geräte- und Effizienzangaben stammen von Liquid AI; offene Gewichte bedeuten nicht automatisch eine uneingeschränkt freie Open-Source-Lizenz.",
+   "takeaway": "Interessant für spezialisierte lokale Anwendungen. Vor dem Einsatz Modellkarte, Lizenz, tatsächlichen RAM-Bedarf und die eigene Aufgabe prüfen.",
+   "url": "https://www.liquid.ai/blog/lfm3",
+   "cta": "Modellfamilie ansehen",
+   "source": "Liquid AI, 27.10.2026 · Modell- und Effizienzangaben des Anbieters"
   }
  ],
- "notes": "Ausgabe für Dienstag, 27. Oktober 2026 (Berliner Zeit), Stand 15:33. Ältere Veröffentlichungen sind im Text datiert. Quellen: github.com/kekzl/imp, stalw.art, blog.cloudflare.com, benjoffe.com, peps.python.org, lwn.net, wiz.io."
+ "notes": "Ausgabe für Dienstag, 27. Oktober 2026 (Berliner Zeit), Stand 19:33. Ältere Veröffentlichungen sind im Text datiert. Quellen: github.com/kekzl/imp, stalw.art, blog.cloudflare.com, benjoffe.com, peps.python.org, lwn.net, wiz.io, deepmind.google, ghostty.org, liquid.ai."
 }
