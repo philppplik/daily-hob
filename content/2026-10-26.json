@@ -2,8 +2,8 @@
  "date": "2026-10-26",
  "title": "Daily Hob vom Montag, 26.10.",
  "headline": "19 Stunden bis zum Hack, 80 Prozent weniger fürs Modell und ein Rennspiel aus 147 Agenten.",
- "teaser": "9 Catches zum Montag: Der Steal-My-Bitcoin-Server ist nach 19,28 Stunden gefallen - mit komplettem Gewinner-PoC, Anthropic legt den Börsengang offen, Microsoft bietet 60.000 Beschäftigten Auflösungsverträge an, die Schweiz steht 1:1 in Minecraft, vLLM repariert kaputte Tool-Calls, Raschka baut Reasoning-Modelle in elf Stunden nach, Max Woolf erklärt die LLM-Preisstürze, F-Zero X läuft nativ auf dem 3DS, und TitleArt bringt WordArt zurück.",
- "intro": "Der Montag beginnt mit einer Auflösung: Der absichtlich verwundbare Server, den wir gestern vorgestellt haben, ist nach 19,28 Stunden geknackt - und der Gewinner hat den kompletten Angriff dokumentiert. Dazu ordnet Max Woolf ein, warum LLMs binnen Monaten bis zu 80 Prozent billiger wurden, ein Postmortem zeigt, wie 147 KI-Subagenten F-Zero X nativ auf den 3DS brachten, und TitleArt lässt Texte wieder aussehen wie 1997. Am Nachmittag kommen drei Catches dazu: Anthropic reicht den Börsengang bei der SEC ein, ein Schweizer Projekt baut das ganze Land im Massstab 1:1 in Minecraft nach, und Ubicloud zeigt, wie vLLM fehlerhafte Tool-Calls per Constrained Decoding auf 100 Prozent Schema-Treffer bringt. Am Abend kommen zwei Catches dazu: Microsoft bietet gut einem Viertel der Belegschaft freiwillige Auflösungsverträge an, und der am 24. Oktober veröffentlichte Reasoning-Videokurs von Sebastian Raschka liefert über elf Stunden zum Mitprogrammieren.",
+ "teaser": "12 Catches zum Montag: GPT-6.1 Terra, Anthropic S-1, OpenAIs noch zu prüfende ETH-Forschungsankündigung, Microsofts Austrittsangebot, CSS-Tricks wieder unabhängig, die Schweiz in Minecraft und mehr.",
+ "intro": "Der Montag beginnt mit einer Auflösung: Der absichtlich verwundbare Server, den wir gestern vorgestellt haben, ist nach 19,28 Stunden geknackt - und der Gewinner hat den kompletten Angriff dokumentiert. Dazu ordnet Max Woolf ein, warum LLMs binnen Monaten bis zu 80 Prozent billiger wurden, ein Postmortem zeigt, wie 147 KI-Subagenten F-Zero X nativ auf den 3DS brachten, und TitleArt lässt Texte wieder aussehen wie 1997. Am Nachmittag kommen drei Catches dazu: Anthropic reicht den Börsengang bei der SEC ein, ein Schweizer Projekt baut das ganze Land im Massstab 1:1 in Minecraft nach, und Ubicloud zeigt, wie vLLM fehlerhafte Tool-Calls per Constrained Decoding auf 100 Prozent Schema-Treffer bringt. Am Abend kommen zwei Catches dazu: Microsoft bietet gut einem Viertel der Belegschaft freiwillige Auflösungsverträge an, und der am 24. Oktober veröffentlichte Reasoning-Videokurs von Sebastian Raschka liefert über elf Stunden zum Mitprogrammieren. Der spätere Montag bringt außerdem GPT-6.1 Terra, OpenAIs Forschungsankündigung zur ETH mit ausstehender unabhängiger Prüfung und die Rückkehr von CSS-Tricks in unabhängige Hände.",
  "hero": "hero.jpg",
  "heroAlt": "Linienillustration: Ein geöffnetes Vorhängeschloss, aus dem eine Münze rutscht, daneben eine karierte Rennflagge und ein Handheld",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -22,7 +22,7 @@
    "category": "KI",
    "title": "Bis zu 80 Prozent billiger in wenigen Monaten: Was hinter den LLM-Preisstürzen steckt.",
    "short": "LLM-Preissturz",
-   "body": "Max Woolf hat die Preis-Timeline von OpenAI und Anthropic der letzten Monate auseinandergenommen - und die Richtung ist eindeutig: Frontier-Modelle wurden binnen Monaten um bis zu 80 Prozent billiger. Seine Erklärung hat zwei Ebenen: Zum einen ersetzen neue Modelle die teuren so schnell, dass deren Preise fallen müssen - seit Opus 5.5 rede kaum noch jemand über Fable 5.1 oder GPT-6 Astra, bemerkt er trocken. Zum anderen ist das Servieren schlicht günstiger geworden: Anthropic selbst sagt, Opus 5.5 brauche weniger Compute als Opus 5, und der Preis spiegle das. Modelle mit offenen Gewichten und Zweit-Anbieter hält Woolf für den wirksamen Preisdeckel der Branche. Seine Einordnung als Nutzer: seltsam, aber man wird sich nicht beschweren.",
+   "body": "Analyse vom 25. Oktober, am Montag diskutiert: Max Woolf hat die Preis-Timeline von OpenAI und Anthropic der letzten Monate auseinandergenommen - und die Richtung ist eindeutig: Frontier-Modelle wurden binnen Monaten um bis zu 80 Prozent billiger. Seine Erklärung hat zwei Ebenen: Zum einen ersetzen neue Modelle die teuren so schnell, dass deren Preise fallen müssen - seit Opus 5.5 rede kaum noch jemand über Fable 5.1 oder GPT-6 Astra, bemerkt er trocken. Zum anderen ist das Servieren schlicht günstiger geworden: Anthropic selbst sagt, Opus 5.5 brauche weniger Compute als Opus 5, und der Preis spiegle das. Modelle mit offenen Gewichten und Zweit-Anbieter hält Woolf für den wirksamen Preisdeckel der Branche. Seine Einordnung als Nutzer: seltsam, aber man wird sich nicht beschweren.",
    "takeaway": "Wer LLM-Kosten plant, sollte auf stabile Preise nicht bauen - in keine Richtung.",
    "url": "https://minimaxir.com/2026/10/cheap-llms/",
    "cta": "Analyse lesen",
@@ -32,7 +32,7 @@
    "category": "Open Source",
    "title": "F-Zero X nativ auf dem 3DS: 60 fps in stereoskopischem 3D - orchestriert von 147 KI-Subagenten.",
    "short": "F-Zero X 3DS",
-   "body": "Der Postmortem zum G-Diffuser-Port liest sich wie zwei Projekte in einem: Erst ein 24-tägiger Sprint, der die F-Zero-X-Dekompilierung auf den New 3DS brachte - native 60 fps, stereoskopisches 3D. Dann 43 Tage für Old-3DS-Support, einen eigenen nativen Renderer und die Inhalte des 64DD-Expansion-Kits. Bemerkenswert neben der Hardware-Arbeit: Eine einzelne Person hat dirigiert, eine langlebige Claude-Session orchestrierte, und 147 Subagenten bauten die erste Phase - so beschreibt es der Autor selbst. Median auf echter Hardware am Ende der ersten Phase: 59,6 fps im vollen Grand Prix, nach 12 bis 20 im ersten Emulator-Versuch. Version 1.0.0 deckt beide Konsolen ab, mit und ohne Expansion-Kit.",
+   "body": "Postmortem vom 25. Oktober, am Montag diskutiert: Der Postmortem zum G-Diffuser-Port liest sich wie zwei Projekte in einem: Erst ein 24-tägiger Sprint, der die F-Zero-X-Dekompilierung auf den New 3DS brachte - native 60 fps, stereoskopisches 3D. Dann 43 Tage für Old-3DS-Support, einen eigenen nativen Renderer und die Inhalte des 64DD-Expansion-Kits. Bemerkenswert neben der Hardware-Arbeit: Eine einzelne Person hat dirigiert, eine langlebige Claude-Session orchestrierte, und 147 Subagenten bauten die erste Phase - so beschreibt es der Autor selbst. Median auf echter Hardware am Ende der ersten Phase: 59,6 fps im vollen Grand Prix, nach 12 bis 20 im ersten Emulator-Versuch. Version 1.0.0 deckt beide Konsolen ab, mit und ohne Expansion-Kit.",
    "takeaway": "Der interessanteste KI-Workflow der Woche ist kein Chatbot, sondern ein 25 Jahre altes Rennspiel auf alter Handheld-Hardware.",
    "url": "https://hypnotize.works/gdx-3ds/postmortem/index.html",
    "cta": "Postmortem lesen",
@@ -52,7 +52,7 @@
    "category": "KI",
    "title": "Anthropic reicht den Börsengang ein: Die S-1 ist da.",
    "short": "Anthropic S-1",
-   "body": "Am Montag hat Anthropic bei der US-Börsenaufsicht SEC die Registrierung (Formular S-1) für einen Börsengang eingereicht, das Unternehmen bestätigt das in einer eigenen Mitteilung. Geplant ist die Notierung der Class-A-Aktien an der Nasdaq unter dem Kürzel „ANT“; Stückzahl und Preisspanne stehen noch nicht fest. Lesenswert wird das Papier durch die Zahlen, die ein S-1 offenlegen muss: Im ersten Halbjahr 2026 (bis 30. Juni) lag der Umsatz laut Einreichung bei 16,3 Milliarden Dollar - ein Plus von 1.300 Prozent gegenüber dem Vorjahreszeitraum. Damit liegt erstmals ein detaillierter, offizieller Blick in die Bücher eines Frontier-Labors vor.",
+   "body": "Am Montag hat Anthropic bei der US-Börsenaufsicht SEC die Registrierung (Formular S-1) für einen Börsengang eingereicht, das Unternehmen bestätigt das in einer eigenen Mitteilung. Geplant ist die Notierung der Class-A-Aktien an der Nasdaq unter dem Kürzel „ANT“; Stückzahl und Preisspanne stehen noch nicht fest. Lesenswert wird das Papier durch die Zahlen, die ein S-1 offenlegen muss: Im ersten Halbjahr 2026 (bis 30. Juni) lag der Umsatz laut Einreichung bei 16,3 Milliarden Dollar - ein Plus von 1.300 Prozent gegenüber dem Vorjahreszeitraum. Die Einreichung gibt einen detaillierten öffentlichen Einblick in Anthropics Geschäft.",
    "takeaway": "Wer wissen will, wie das Geschäft hinter Claude wirklich aussieht: Der Prospekt ist ab sofort die beste öffentliche Quelle dafür.",
    "url": "https://www.anthropic.com/news/s1-sec",
    "cta": "Meldung lesen",
@@ -97,7 +97,37 @@
    "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
    "cta": "Kurs ansehen",
    "source": "Sebastian Raschka, Ahead of AI, 24.10.2026"
+  },
+  {
+   "category": "KI",
+   "title": "GPT-6.1 Terra: OpenAI setzt auf günstigere Computerbedienung.",
+   "short": "GPT-6.1 Terra",
+   "body": "OpenAI hat am Montagabend GPT-6.1 Terra angekündigt, mit Schwerpunkt auf visuellem Schlussfolgern und der Bedienung von Computerprogrammen. Laut Anbieter ist es in ChatGPT Work und Codex für Plus, Pro, Enterprise und Edu sowie über die API als gpt-6.1-terra verfügbar. Die Standard-API-Preise nennt OpenAI mit 1 Dollar pro Million Eingabetokens, 0,05 Dollar für gecachte Eingaben und 5 Dollar pro Million Ausgabetokens. Das seien 50 Prozent weniger als bei GPT-5.6 Terra und GPT-6.1 Sol. Die Leistungswerte zur Computerbedienung und geringeren Fehlerrate stammen aus OpenAIs eigenen Tests; daraus folgt keine Garantie für fehlerfreie Agenten.",
+   "takeaway": "Für viele visuelle Automatisierungsaufgaben könnte der Preis wichtiger sein als der letzte Benchmarkpunkt. Erst mit den eigenen Aufgaben testen.",
+   "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+   "cta": "Modellankündigung lesen",
+   "source": "OpenAI, 26.10.2026 · Preise und Tests: Anbieterangaben"
+  },
+  {
+   "category": "Informatik",
+   "title": "OpenAI meldet eine ETH-Widerlegung: Die unabhängige Prüfung beginnt.",
+   "short": "ETH-Forschungsclaim",
+   "body": "OpenAI hat am späten Montag drei KI-erzeugte Forschungsergebnisse zu harmonischer Analysis, Komplexitätstheorie und Quantenfeldtheorie angekündigt. Der Informatik-Claim betrifft die Exponential Time Hypothesis: Das veröffentlichte Manuskript beschreibt einen deterministischen Algorithmus, der für Formeln fester Klauselbreite erfüllende Belegungen in subexponentieller Zeit zählt. Laut OpenAI wurde ein entsprechendes Ergebnis in Lean formalisiert. Die veröffentlichten Scope-Notizen nennen getrennte Schranken für Formalisierung und Manuskript. Eine externe Gruppe um Russell Impagliazzo, Ramamohan Paturi und Ryan Williams soll den Befund untersuchen und erklären. Das ist eine Forschungsankündigung des Anbieters mit Material zur offenen Prüfung, kein hier unabhängig bestätigter Durchbruch.",
+   "takeaway": "Die Materialien sind öffentlich. Tragweite und praktische Folgen müssen erst unabhängig geprüft werden; aus der Meldung folgt keine Lösung von P gegen NP.",
+   "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
+   "cta": "Forschungsankündigung prüfen",
+   "source": "OpenAI, 26.10.2026 · Formalisierungsscope: github.com/openai/math, lean/docs/378.md"
+  },
+  {
+   "category": "Informatik",
+   "title": "CSS-Tricks ist wieder unabhängig: Geoff Graham übernimmt.",
+   "short": "CSS-Tricks",
+   "body": "Geoff Graham hat am Montag bekannt gegeben, dass er CSS-Tricks unabhängig übernimmt. Die Frontend-Seite war 2022 von Gründer Chris Coyier an DigitalOcean verkauft worden. Graham, seit zwölf Jahren an der Seite beteiligt, macht sie nun zu seiner Vollzeitaufgabe und will mit einem kleinen Team Community und Lerninhalte ausbauen. Zur Finanzierung nennt er Werbung, Mitgliedschaften und einen geplanten HTML/CSS-Einsteigerkurs. Eine Übernahmegeschichte mit direktem Bezug zum Entwickleralltag: Es geht um die Zukunft einer langjährigen Quelle für CSS-Erklärungen und praktische Beispiele.",
+   "takeaway": "Kein neues Framework, sondern eine gute Nachricht für eine unabhängige Frontend-Lernquelle.",
+   "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+   "cta": "Übernahme lesen",
+   "source": "Geoff Graham, CSS-Tricks, 26.10.2026"
   }
  ],
- "notes": "Ausgabe für Montag, 26. Oktober 2026 (Berliner Zeit), Stand 19:34. Quellen: github.com/KillaBoi, stealmybitcoin.com, minimaxir.com, hypnotize.works, titleart.dvy.io, anthropic.com, sec.gov, blocks.manifold3d.ch, ubicloud.com, blogs.microsoft.com, geekwire.com, magazine.sebastianraschka.com."
+ "notes": "Ausgabe für Montag, 26. Oktober 2026 (Berliner Zeit). Abschlussprüfung Dienstag, 27. Oktober, 06:11. Quellen: github.com/KillaBoi, minimaxir.com, hypnotize.works, titleart.dvy.io, anthropic.com, sec.gov, blocks.manifold3d.ch, ubicloud.com, blogs.microsoft.com, geekwire.com, magazine.sebastianraschka.com, openai.com, github.com/openai/math, css-tricks.com."
 }
