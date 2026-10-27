@@ -2,8 +2,8 @@
  "date": "2026-10-27",
  "title": "Daily Hob vom Dienstag, 27.10.",
  "headline": "Ein LLM-Server für Blackwell, Mail in Rust und eine Lektion in Speichergrenzen.",
- "teaser": "4 Catches zum Dienstag: imp für lokale Blackwell-LLMs, Stalwart 1.0, Cloudflares behobener KV-Cache-Vorfall und schnelle Floor-Division.",
- "intro": "Heute geht es unter die Oberfläche: Ein spezialisierter Open-Source-Server reizt Blackwell-GPUs aus, Stalwart erreicht die erste stabile Version, und ein Betreiberbericht zeigt, warum plausible KI-Antworten noch keine sichere Speichertrennung beweisen. Dazu ein Low-Level-Deep-Dive über die richtige Richtung beim Runden.",
+ "teaser": "6 Catches zum Dienstag: imp, Stalwart 1.0, Cloudflares KV-Cache-Vorfall, schnelle Floor-Division, CPythons JIT-Rückzug und neue PHP2Shell-Telemetrie.",
+ "intro": "Heute geht es unter die Oberfläche: Ein spezialisierter Open-Source-Server reizt Blackwell-GPUs aus, Stalwart erreicht die erste stabile Version, und ein Betreiberbericht zeigt, warum plausible KI-Antworten noch keine sichere Speichertrennung beweisen. Dazu ein Low-Level-Deep-Dive über die richtige Richtung beim Runden. Am Nachmittag kommen zwei Lage-Updates dazu: der zurückgezogene PEP für CPythons experimentellen JIT und Wiz-Telemetrie zur PHP2Shell-Ausnutzung, beide ohne vorschnelle Schlussfolgerungen.",
  "hero": "hero.jpg",
  "heroAlt": "Linienillustration aus Server mit Briefumschlag, GPU und voneinander getrennten Speicherblöcken",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
    "url": "https://www.benjoffe.com/fast-floordiv",
    "cta": "Details lesen",
    "source": "Ben Joffe, 27.10.2026 · Messungen des Autors"
+  },
+  {
+   "category": "Informatik",
+   "title": "CPythons experimenteller JIT steht nach zurückgezogenem PEP vor dem Aus.",
+   "short": "CPython JIT",
+   "body": "Der am Dienstag diskutierte LWN-Bericht vom 26. Oktober beschreibt einen Rückzug, keine bereits überall vollzogene Entfernung: Die Autoren haben PEP 836 am 19. Oktober zurückgezogen; die offizielle PEP-Seite bestätigt den Status Withdrawn. Der Vorschlag sollte den Weg vom experimentellen JIT zu einer unterstützten CPython-Funktion klären. Nach Fragen zu Wartung, Kompatibilität, Sicherheit und Erfolgskriterien fehlt den Autoren nach eigener Erklärung die Kapazität, den aktuellen Vorschlag weiterzutragen. LWN erwartet deshalb die Entfernung aus dem main-Zweig früh im Entwicklungszyklus von Python 3.16. Bestehende veröffentlichte Python-Versionen verlieren dadurch nicht rückwirkend ihren JIT, und alternative Python-Implementierungen sind ein anderes Thema.",
+   "takeaway": "PEP zurückgezogen ist bestätigt. Die bevorstehende Entfernung aus main ist die berichtete Erwartung, nicht der Nachweis, dass jeder aktuelle Python-Build schon ohne JIT ausgeliefert wird.",
+   "url": "https://peps.python.org/pep-0836/",
+   "cta": "PEP-Status prüfen",
+   "source": "PEP 836: Withdrawn, 19.10.2026 · Einordnung: LWN, 26.10.2026"
+  },
+  {
+   "category": "Informatik",
+   "title": "PHP2Shell: Wiz sieht weniger exponierte Systeme, aber keine Entwarnung.",
+   "short": "PHP2Shell-Lage",
+   "body": "Wiz veröffentlicht am 27. Oktober neue Telemetrie zu PHP2Shell. Im beobachteten Bestand sank die tägliche Zahl unterschiedlicher exponierter verwundbarer Maschinen seit der Offenlegung ungefähr um 67 Prozent; die Zahl betroffener Organisationen sank laut Anbieter um rund 47,9 Prozent. Das ist keine Messung des gesamten Internets, und veränderte Scanabdeckung kann den Trend beeinflussen. Die von Wiz selbst aufgezeichneten Angriffsversuche brachen vor einer vollständigen Ausnutzung ab: Speichererschöpfung gelang teils, der nötige Adress-Leak nicht. Der Bericht erwähnt zugleich erfolgreiche Angriffe auf einen anderen Honeypot und privat geteilte funktionierende Exploits. Das widerspricht also nicht dem gezielten Steal-My-Bitcoin-Erfolg unserer Montagsausgabe und bedeutet nicht, dass die Lücke ungefährlich ist.",
+   "takeaway": "Fehlgeschlagene Massenversuche sind kein Schutzversprechen. Die Zahlen beschreiben Wiz-Telemetrie und keine universelle Patchquote.",
+   "url": "https://www.wiz.io/blog/php2shell-exploitation-so-far",
+   "cta": "Lagebericht lesen",
+   "source": "Wiz Research, 27.10.2026 · Telemetrie und Bewertung des Anbieters"
   }
  ],
- "notes": "Ausgabe für Dienstag, 27. Oktober 2026 (Berliner Zeit), Stand 11:32. Ältere Veröffentlichungen sind im Text datiert. Quellen: github.com/kekzl/imp, stalw.art, blog.cloudflare.com, benjoffe.com."
+ "notes": "Ausgabe für Dienstag, 27. Oktober 2026 (Berliner Zeit), Stand 15:33. Ältere Veröffentlichungen sind im Text datiert. Quellen: github.com/kekzl/imp, stalw.art, blog.cloudflare.com, benjoffe.com, peps.python.org, lwn.net, wiz.io."
 }
