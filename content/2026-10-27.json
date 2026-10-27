@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-27",
+ "title": "Daily Hob vom Dienstag, 27.10.",
+ "headline": "Ein LLM-Server für Blackwell, Mail in Rust und eine Lektion in Speichergrenzen.",
+ "teaser": "4 Catches zum Dienstag: imp für lokale Blackwell-LLMs, Stalwart 1.0, Cloudflares behobener KV-Cache-Vorfall und schnelle Floor-Division.",
+ "intro": "Heute geht es unter die Oberfläche: Ein spezialisierter Open-Source-Server reizt Blackwell-GPUs aus, Stalwart erreicht die erste stabile Version, und ein Betreiberbericht zeigt, warum plausible KI-Antworten noch keine sichere Speichertrennung beweisen. Dazu ein Low-Level-Deep-Dive über die richtige Richtung beim Runden.",
+ "hero": "hero.jpg",
+ "heroAlt": "Linienillustration aus Server mit Briefumschlag, GPU und voneinander getrennten Speicherblöcken",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "Open Source",
+   "title": "imp: Ein LLM-Server nur für Nvidias Blackwell-Karten.",
+   "short": "imp",
+   "body": "Am Dienstag als Show HN vorgestellt, nicht erst heute entstanden: imp ist ein MIT-lizenzierter LLM-Server für GeForce RTX 50 und RTX PRO Blackwell. Linux oder WSL2, eine passende GPU und Docker mit NVIDIA-Unterstützung sind vorgesehen. Der Server bietet OpenAI- und Anthropic-kompatible APIs, Tool-Aufrufe und einen Browser-Chat. Das Projekt meldet für Qwen3.8-27B auf einer RTX 5090 rund 91 bis 94 Tokens pro Sekunde. Das sind eigene Messungen; die Vergleichstabelle nutzt bei llama.cpp teils eine andere Quantisierung. Besonders interessant ist der Ansatz, Experten großer Mixture-of-Experts-Modelle im Hauptspeicher zu halten und häufig genutzte auf der GPU zu cachen. Andere GPU-Generationen, reine CPU-Nutzung und mehrere GPUs gehören ausdrücklich nicht zum Zielbereich.",
+   "takeaway": "Ein spezielles Werkzeug für passende Hardware, kein allgemeiner Ersatz für llama.cpp oder vLLM. Benchmarks und RAM-Bedarf vor dem Ausprobieren lesen.",
+   "url": "https://github.com/kekzl/imp",
+   "cta": "Details lesen",
+   "source": "github.com/kekzl/imp · Show HN 27.10.2026 · Messungen: Projektangaben"
+  },
+  {
+   "category": "Open Source",
+   "title": "Stalwart 1.0: Mailserver in Rust wird erstmals stabil.",
+   "short": "Stalwart 1.0",
+   "body": "Release vom 26. Oktober, am Dienstag entdeckt: Stalwart erreicht nach fünf Jahren Version 1.0. Der Rust-Server bündelt unter anderem SMTP, IMAP, JMAP, CalDAV und CardDAV. Neu sind eine überarbeitete Volltextsuche und die Suche in PDF- und Office-Anhängen. Die Entwickler nennen starke Performancegewinne gegenüber Postfix und Dovecot, doch das sind eigene Benchmarks mit dokumentierten Einschränkungen, keine unabhängig bestätigte Rangliste. Für bestehende Installationen wichtiger: 1.0 verwendet ein neues Datenlayout und öffnet alte Stores nicht direkt. Der Migrationsweg aus 0.16 verlangt zunächst 0.16.27 und kopiert in einen neuen Store; ältere Versionen brauchen einen anderen Migrationsweg.",
+   "takeaway": "Nicht einfach das Container-Tag wechseln: Backup und Migrationsanleitung gehören vor das Upgrade. Der Titel vom schnellsten Mailserver bleibt eine Projektbehauptung.",
+   "url": "https://stalw.art/blog/stalwart-1-0/",
+   "cta": "Details lesen",
+   "source": "Stalwart Release-Blog, 26.10.2026 · Anbieterbenchmarks"
+  },
+  {
+   "category": "Informatik",
+   "title": "Cloudflare erklärt einen behobenen KV-Cache-Datenübertritt.",
+   "short": "KV-Cache-Isolation",
+   "body": "Offenlegung vom späten 26. Oktober, hier am Dienstag eingeordnet: Laut Cloudflare konnten zwischen 27. August und 9. September 155 Antworten des Workers-AI-Modells GLM-5.3 Daten aus vorherigen Kundenanfragen enthalten. Betroffen waren Prompts über 681.280 Tokens. Eine zu kleine KV-Cache-Kapazität traf auf einen Fehler im getrennten Prefill-/Decode-Betrieb von SGLang: Abgelehnte Anfragen liefen mit einem Platzhalter weiter, während alte Cache-Seiten noch Daten anderer Anfragen enthielten. Cloudflare meldet die Behebung und Wiederherstellung am 9. September, keine Hinweise auf gezielte Ausnutzung und keine weiteren betroffenen Workers-AI-Modelle. Diese Scope-Aussagen stammen aus dem Betreiberbericht. Der Bericht empfiehlt SGLang-Betreibern Version 0.5.22 oder neuer.",
+   "takeaway": "HTTP 200 und eine plausible Antwort beweisen keine Mandantentrennung. Kapazität, Fehlerpfade und tatsächliche Ausgaben müssen zusammen geprüft werden.",
+   "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
+   "cta": "Details lesen",
+   "source": "Cloudflare Incident-Bericht, 26.10.2026 · Umfang und Behebung: Betreiberangaben"
+  },
+  {
+   "category": "Informatik",
+   "title": "Ganzzahldivision: Warum Abrunden mehr ist als ein geteilt-Zeichen.",
+   "short": "Schnelle Floor-Division",
+   "body": "Ben Joffe veröffentlicht am 27. Oktober eine ausführliche Analyse zur vorzeichenbehafteten Floor-Division durch zur Compilezeit bekannte Konstanten. Der Unterschied ist klein, aber wichtig: Floor-Division rundet Richtung minus unendlich, die normale Ganzzahldivision etwa in C dagegen Richtung null. Der Beitrag entwickelt und vergleicht schnelle Algorithmen. Joffes eigene Messungen melden auf ARM für viele 64-Bit-Divisoren 10 bis 20 Prozent mehr Durchsatz; auf x86 hängt der Gewinn stärker vom Divisor ab, und einige Fälle werden langsamer. Der Artikel trennt Durchsatz und Latenz und zeigt Ergebnisse über mehrere Plattformen.",
+   "takeaway": "Ein guter Low-Level-Deep-Dive, gerade weil er keine universelle Beschleunigung verspricht. Vorzeichen, Überlauf und Zielprozessor gehören zum Algorithmus.",
+   "url": "https://www.benjoffe.com/fast-floordiv",
+   "cta": "Details lesen",
+   "source": "Ben Joffe, 27.10.2026 · Messungen des Autors"
+  }
+ ],
+ "notes": "Ausgabe für Dienstag, 27. Oktober 2026 (Berliner Zeit), Stand 11:32. Ältere Veröffentlichungen sind im Text datiert. Quellen: github.com/kekzl/imp, stalw.art, blog.cloudflare.com, benjoffe.com."
+}
