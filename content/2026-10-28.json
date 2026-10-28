@@ -2,8 +2,8 @@
  "date": "2026-10-28",
  "title": "Daily Hob vom Mittwoch, 28.10.",
  "headline": "Ein ungewöhnliches Betriebssystem, Graphen zum Anfassen und eine lebendige Pixelstadt.",
- "teaser": "8 Catches zum Mittwoch: Gemini Carbon, Copilot Fusion, DAYJOB Tax, Clover-Diffusion, macOS-Zertifikate, Moxnox, Graphentheorie und Pizza-Rendering.",
- "intro": "Heute beginnt die Auswahl mit drei Entdeckungen aus der Entwickler-Ecke: einem Hobby-OS zwischen NT und Unix, einem aufgabengetriebenen Graphentheorie-Buch und einem Blick unter die Pixel einer alten Wirtschaftssimulation. Nicht alles ist heute erschienen. Veröffentlichungszeit und heutiger Diskussionsanlass bleiben deshalb getrennt. Am Nachmittag kommen Clovers offenes Diffusionsmodell mit klaren Speicher- und Backend-Grenzen sowie die unterschiedlichen Zertifikatspfade von macOS-Browsern und Terminalwerkzeugen dazu. Am Abend folgen Gemini 4 Carbon als noch begrenzte Ankündigung, Copilot Fusion als Modell-Orchestrierung und ein strenger Benchmark für vollständige Steuerfallbearbeitung.",
+ "teaser": "9 Catches zum Mittwoch: Gemini Carbon, Copilot Fusion, Tailscale 1.104.4, DAYJOB Tax, Clover, macOS-Zertifikate, Moxnox, Graphentheorie und Pizza-Rendering.",
+ "intro": "Heute beginnt die Auswahl mit drei Entdeckungen aus der Entwickler-Ecke: einem Hobby-OS zwischen NT und Unix, einem aufgabengetriebenen Graphentheorie-Buch und einem Blick unter die Pixel einer alten Wirtschaftssimulation. Nicht alles ist heute erschienen. Veröffentlichungszeit und heutiger Diskussionsanlass bleiben deshalb getrennt. Am Nachmittag kommen Clovers offenes Diffusionsmodell mit klaren Speicher- und Backend-Grenzen sowie die unterschiedlichen Zertifikatspfade von macOS-Browsern und Terminalwerkzeugen dazu. Am Abend folgen Gemini 4 Carbon als noch begrenzte Ankündigung, Copilot Fusion als Modell-Orchestrierung und ein strenger Benchmark für vollständige Steuerfallbearbeitung. Ein bestätigtes Sicherheitsupdate ergänzt den Abend: Tailscale 1.104.4 behebt die nun konkret beschriebenen SSH- und Serve-Probleme.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Linienillustration einer isometrischen Stadt neben verbundenen Graphknoten und geschichteten Systembausteinen",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -87,10 +87,20 @@
    "url": "https://surgehq.ai/blog/dayjob-tax",
    "cta": "Aufgaben und Bewertungsmaßstab lesen",
    "source": "Surge AI · 27.10.2026 · Diskussion 28.10.2026 · Messwerte: Benchmarkanbieter"
+  },
+  {
+   "category": "Informatik",
+   "short": "Tailscale 1.104.4",
+   "title": "Tailscale 1.104.4 ist da: Vier Sicherheitsbulletins ersetzen den offenen Patch-Fahrplan.",
+   "body": "Neuer bestätigter Stand am Mittwochabend: Tailscales Changelog führt Version 1.104.4 vom 28. Oktober auf. Die Bulletins TS-2026-014 bis -017 nennen diese Version oder neuer als Fix. Zwei Befunde betreffen SSH: Unix-Socket-Weiterleitung lief mit Root-Rechten statt denen des angemeldeten Nutzers, und authentifizierte Sitzungen konnten unbeschränkt Speicher belegen. Zwei weitere betreffen Serve: privilegierte Unix-Socket-Backends und zwischen HTTP/2-Anfragen geteilte Capability-Werte. Betroffenheit hängt von der aktivierten Funktion und Konfiguration ab, etwa erlaubter SSH-Weiterleitung oder Serve mit mehreren TLS-Mounts. Das ist die konkrete Veröffentlichung, die bei unserer Morgenprüfung noch nicht bestätigt war; Version 1.104.3 war laut Changelog nur intern.",
+   "takeaway": "Wer Tailscale SSH oder die beschriebenen Serve-Konfigurationen nutzt, sollte die passenden Bulletins lesen und auf 1.104.4 oder neuer aktualisieren. Ein pauschaler beliebiger Zugriff auf jedes Tailnet ist daraus nicht abzuleiten.",
+   "url": "https://tailscale.com/security-bulletins",
+   "cta": "Betroffenheit und Updatehinweise prüfen",
+   "source": "Tailscale Changelog und TS-2026-014 bis -017 · Release 28.10.2026 · geprüft 19:34 Uhr Berlin"
   }
  ],
  "notes": [
-  "Intraday-Auswahl, Quellenprüfung zuletzt am 28.10.2026 gegen 19:33 Uhr Berlin. Ältere Veröffentlichungen sind ausdrücklich markiert. Modell- und Benchmarkmesswerte bleiben den jeweiligen Anbietern zugeschrieben.",
+  "Intraday-Auswahl, Quellenprüfung zuletzt am 28.10.2026 gegen 19:34 Uhr Berlin. Ältere Veröffentlichungen sind ausdrücklich markiert. Modell- und Benchmarkmesswerte bleiben den jeweiligen Anbietern zugeschrieben. Tailscales Patchstand wurde am Abend anhand Changelog und Bulletins aktualisiert.",
   "Kein Audio in dieser laufenden Textausgabe."
  ]
 }
