@@ -2,8 +2,8 @@
  "date": "2026-10-28",
  "title": "Daily Hob vom Mittwoch, 28.10.",
  "headline": "Ein ungewöhnliches Betriebssystem, Graphen zum Anfassen und eine lebendige Pixelstadt.",
- "teaser": "3 Catches zum Mittwoch: Moxnox 1.0, ein offenes Graphentheorie-Lehrbuch und das Rendering von Pizza Connection 2.",
- "intro": "Heute beginnt die Auswahl mit drei Entdeckungen aus der Entwickler-Ecke: einem Hobby-OS zwischen NT und Unix, einem aufgabengetriebenen Graphentheorie-Buch und einem Blick unter die Pixel einer alten Wirtschaftssimulation. Nicht alles ist heute erschienen. Veröffentlichungszeit und heutiger Diskussionsanlass bleiben deshalb getrennt.",
+ "teaser": "5 Catches zum Mittwoch: Clover-Diffusion, macOS-Zertifikatsprüfung, Moxnox 1.0, Graphentheorie und das Rendering von Pizza Connection 2.",
+ "intro": "Heute beginnt die Auswahl mit drei Entdeckungen aus der Entwickler-Ecke: einem Hobby-OS zwischen NT und Unix, einem aufgabengetriebenen Graphentheorie-Buch und einem Blick unter die Pixel einer alten Wirtschaftssimulation. Nicht alles ist heute erschienen. Veröffentlichungszeit und heutiger Diskussionsanlass bleiben deshalb getrennt. Am Nachmittag kommen Clovers offenes Diffusionsmodell mit klaren Speicher- und Backend-Grenzen sowie die unterschiedlichen Zertifikatspfade von macOS-Browsern und Terminalwerkzeugen dazu.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Linienillustration einer isometrischen Stadt neben verbundenen Graphknoten und geschichteten Systembausteinen",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -37,10 +37,30 @@
    "url": "https://healeycodes.com/decompiling-fast-food-tycoon-2-drawing-the-world",
    "cta": "Rendering-Deep-Dive lesen",
    "source": "healeycodes.com · Andrew Healey · Oktober 2026 · HN-Diskussion 28.10.2026"
+  },
+  {
+   "category": "KI",
+   "short": "Clover Preview",
+   "title": "Clover: Ein offenes Sprachmodell füllt Textblöcke statt nur das nächste Token.",
+   "body": "DiffuSpace stellt am Mittwoch Clover-35B-A3B-Preview vor: ein textbasiertes Mixture-of-Experts-Modell mit 35 Milliarden Parametern, davon ungefähr drei Milliarden pro Token aktiv, und 128K Kontext. Statt ausschließlich links nach rechts zu schreiben, löst die Hugging-Face-Implementierung maskierte Positionen innerhalb eines Blocks schrittweise und teilweise parallel auf. Die Gewichte stehen unter Apache 2.0 bereit. Der Anbieter meldet bis zu 680 Tokens pro Sekunde auf einer GB300 bei Batch 1 und internen Agent-Aufgaben; das ist eine eigene Messung, kein unabhängig reproduzierter Vergleich. Praktisch wichtig: Das dokumentierte BF16-Beispiel braucht rund 69 GB allein für die Gewichte plus Laufzeitspeicher. Die README nennt SGLang und llama.cpp, kündigt deren Backend-Code und Einrichtungsanleitungen aber noch als nachzureichen an. Der direkt beschriebene Einstieg läuft über PyTorch und Transformers mit benutzerdefiniertem Modellcode.",
+   "takeaway": "Interessant als reproduzierbares Diffusions-Experiment. Drei Milliarden aktive Parameter bedeuten nicht drei Milliarden Parameter Speicherbedarf. Backend-Verfügbarkeit und Modellcode vor der Ausführung prüfen.",
+   "url": "https://github.com/DiffuSpace/Clover-35B-A3B-Preview",
+   "cta": "Modell und Startbedingungen prüfen",
+   "source": "DiffuSpace Launchblog, GitHub-README und HF-Modellkarte · 28.10.2026 · Leistung: Anbieterangaben"
+  },
+  {
+   "category": "Informatik",
+   "short": "macOS-Zertifikate",
+   "title": "Safari geschützt heißt nicht Git geschützt: macOS hat mehrere Vertrauenspfade.",
+   "body": "Am Mittwoch erneut diskutiert, Apples Supporttext ist vom 23. Oktober: Bei den kompromittierten eMudhra-Zwischenzertifikaten unterscheidet Apple zwischen seinen Sicherheitsframeworks und manchen Kommandozeilenwerkzeugen. Safari, Mail und Apps auf diesen Frameworks erhalten automatische Sperren. Bestimmte mit macOS oder den Xcode Command Line Tools gelieferte Werkzeuge, darunter git und curl, können dagegen /etc/ssl/cert.pem verwenden und die betroffenen Zertifikate weiterhin akzeptieren. Apple kündigt dafür ein kommendes Softwareupdate an und dokumentiert einen optionalen Eingriff für Administratoren. Der heutige Untersuchungsbericht macht auf diesen Unterschied erneut aufmerksam. Andere Installationen können eigene Zertifikatslisten haben; daraus folgt keine pauschale Aussage über jedes Git auf jedem Mac.",
+   "takeaway": "Den tatsächlich verwendeten Trust Store prüfen, nicht vom Browserverhalten auf das Terminal schließen. Apples Anleitung nennt Nebenwirkungen manueller Root-Entfernung und warnt, dass Updates die Datei bis zum endgültigen Fix ersetzen können.",
+   "url": "https://support.apple.com/en-us/149555",
+   "cta": "Apples Hinweise für Administratoren lesen",
+   "source": "Apple Support · 23.10.2026 · erneute Diskussion und Untersuchungsbericht 28.10.2026"
   }
  ],
  "notes": [
-  "Intraday-Auswahl, Quellenprüfung am 28.10.2026 gegen 11:33 Uhr Berlin. Ältere Veröffentlichungen sind ausdrücklich markiert. Nur gelesene Originalquellen; keine KI-Neuigkeit als Lückenfüller.",
+  "Intraday-Auswahl, Quellenprüfung zuletzt am 28.10.2026 gegen 15:33 Uhr Berlin. Ältere Veröffentlichungen sind ausdrücklich markiert. Messwerte der Modellanbieter sind nicht unabhängig bestätigt.",
   "Kein Audio in dieser laufenden Textausgabe."
  ]
 }
