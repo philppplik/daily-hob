@@ -2,8 +2,8 @@
  "date": "2026-10-28",
  "title": "Daily Hob vom Mittwoch, 28.10.",
  "headline": "Ein ungewöhnliches Betriebssystem, Graphen zum Anfassen und eine lebendige Pixelstadt.",
- "teaser": "5 Catches zum Mittwoch: Clover-Diffusion, macOS-Zertifikatsprüfung, Moxnox 1.0, Graphentheorie und das Rendering von Pizza Connection 2.",
- "intro": "Heute beginnt die Auswahl mit drei Entdeckungen aus der Entwickler-Ecke: einem Hobby-OS zwischen NT und Unix, einem aufgabengetriebenen Graphentheorie-Buch und einem Blick unter die Pixel einer alten Wirtschaftssimulation. Nicht alles ist heute erschienen. Veröffentlichungszeit und heutiger Diskussionsanlass bleiben deshalb getrennt. Am Nachmittag kommen Clovers offenes Diffusionsmodell mit klaren Speicher- und Backend-Grenzen sowie die unterschiedlichen Zertifikatspfade von macOS-Browsern und Terminalwerkzeugen dazu.",
+ "teaser": "8 Catches zum Mittwoch: Gemini Carbon, Copilot Fusion, DAYJOB Tax, Clover-Diffusion, macOS-Zertifikate, Moxnox, Graphentheorie und Pizza-Rendering.",
+ "intro": "Heute beginnt die Auswahl mit drei Entdeckungen aus der Entwickler-Ecke: einem Hobby-OS zwischen NT und Unix, einem aufgabengetriebenen Graphentheorie-Buch und einem Blick unter die Pixel einer alten Wirtschaftssimulation. Nicht alles ist heute erschienen. Veröffentlichungszeit und heutiger Diskussionsanlass bleiben deshalb getrennt. Am Nachmittag kommen Clovers offenes Diffusionsmodell mit klaren Speicher- und Backend-Grenzen sowie die unterschiedlichen Zertifikatspfade von macOS-Browsern und Terminalwerkzeugen dazu. Am Abend folgen Gemini 4 Carbon als noch begrenzte Ankündigung, Copilot Fusion als Modell-Orchestrierung und ein strenger Benchmark für vollständige Steuerfallbearbeitung.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Linienillustration einer isometrischen Stadt neben verbundenen Graphknoten und geschichteten Systembausteinen",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -57,10 +57,40 @@
    "url": "https://support.apple.com/en-us/149555",
    "cta": "Apples Hinweise für Administratoren lesen",
    "source": "Apple Support · 23.10.2026 · erneute Diskussion und Untersuchungsbericht 28.10.2026"
+  },
+  {
+   "category": "KI",
+   "short": "Gemini Carbon",
+   "title": "Gemini 4 Carbon: angekündigt, aber noch nicht allgemein freigeschaltet.",
+   "body": "Google kündigt am Mittwoch Gemini 4 Carbon an, mit Schwerpunkt auf langen Softwareaufgaben und Cybersicherheit. Der Anbieter berichtet deutliche Zugewinne beim Finden, Prüfen und Beheben von Sicherheitslücken sowie auf Coding-Benchmarks. Diese Resultate stammen aus der Veröffentlichung und sind keine von uns unabhängig bestätigte Rangliste. Entscheidender für den Alltag ist der Zugang: Diese Woche soll zunächst eine ausgewählte Gruppe von Cyberverteidigern Zugriff erhalten, danach weitere vertrauenswürdige Partner im Fairwind-Programm. Allgemeiner Zugang für Entwickler, Unternehmen und Privatnutzer wird erst für später angekündigt. Auch die gemeldete Null-Erfolgsquote von Angriffen in einem Prompt-Injection-Benchmark ist kein Beweis, dass ein Modell gegen jeden künftigen Angriff immun ist.",
+   "takeaway": "Eine wichtige Modellankündigung, kein heute für alle verfügbares Upgrade. Vor dem Einplanen in eigene Abläufe auf tatsächlichen Zugang und produktspezifische Bedingungen warten.",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+   "cta": "Ankündigung und Zugangsgrenzen lesen",
+   "source": "Google · 28.10.2026 · Fähigkeiten und Messwerte: Anbieterangaben"
+  },
+  {
+   "category": "Informatik",
+   "short": "Copilot Fusion",
+   "title": "Copilot Fusion wählt Modelle aus und lässt sie bei Bedarf zusammenarbeiten.",
+   "body": "GitHub meldet Copilot Fusion am Mittwoch als allgemein verfügbar. Im Modellmenü wird damit kein einzelnes Modell gewählt, sondern ein Routing- und Orchestrierungssystem. Standard, High und Max steuern den Aufwand. Neben einem einzelnen Modell gibt es Kaskaden, bei denen ein erster Entwurf geprüft und bei Bedarf eskaliert wird, sowie Kritikschleifen zwischen Modellen. Fusion berücksichtigt die freigegebenen Modelle der Organisations- und Unternehmensrichtlinien. Laut Changelog startet es in VS Code, der Copilot-App, CLI und JetBrains-IDEs auf allen Copilot-Plänen. Wichtig für die Kosten: Abgerechnet wird jedes verwendete Modell zu seinem jeweiligen Standardsatz. Ein Mehrmodelllauf ist also keine pauschal kostenlose Qualitätsprüfung; GitHubs Leistungs- und Effizienzvergleiche bleiben Herstellerangaben.",
+   "takeaway": "Client aktualisieren, im Modellmenü Fusion wählen und Aufwand passend zur Aufgabe setzen. Bei längeren Läufen Kosten und Organisationsrichtlinien mitdenken.",
+   "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/",
+   "cta": "Funktionsweise und Abrechnung lesen",
+   "source": "GitHub Changelog · 28.10.2026"
+  },
+  {
+   "category": "KI",
+   "short": "DAYJOB Tax",
+   "title": "DAYJOB: Tax prüft, ob Agenten auch das übersehene Problem finden.",
+   "body": "Surge AIs Benchmark vom 27. Oktober wird am Mittwoch diskutiert: 50 professionelle Steueraufgaben mit insgesamt 1.789 Dateien verlangen mehr als korrekte Einzelrechnungen. Agenten müssen widersprüchliche Unterlagen prüfen, fehlende Belege erkennen und relevante Fristen finden, auch wenn die Ausgangsfrage diese nicht nennt. Der Anbieter berichtet als höchsten Wert 10,8 Prozent bestandene Versuche. Das ist pass@1 mit einer strengen Schwelle: Mindestens 95 Prozent der Kriterien einer Aufgabe müssen erfüllt sein. Es heißt nicht, dass nur 10,8 Prozent aller Antworten oder Rechenschritte richtig waren. Die Beispiele stammen überwiegend aus US-Steuerkontexten und belegen weder deutsche Steuerrechtskompetenz noch eine pauschale Fehlerquote für jede Büroarbeit.",
+   "takeaway": "Ein nützlicher Gegenpol zu Coding-Rekorden: Gute Teilergebnisse ersetzen keine vollständige, belegte Fallbearbeitung. Rubrik, Schwelle und Aufgabenmaterial vor jeder Modellrangliste mitlesen.",
+   "url": "https://surgehq.ai/blog/dayjob-tax",
+   "cta": "Aufgaben und Bewertungsmaßstab lesen",
+   "source": "Surge AI · 27.10.2026 · Diskussion 28.10.2026 · Messwerte: Benchmarkanbieter"
   }
  ],
  "notes": [
-  "Intraday-Auswahl, Quellenprüfung zuletzt am 28.10.2026 gegen 15:33 Uhr Berlin. Ältere Veröffentlichungen sind ausdrücklich markiert. Messwerte der Modellanbieter sind nicht unabhängig bestätigt.",
+  "Intraday-Auswahl, Quellenprüfung zuletzt am 28.10.2026 gegen 19:33 Uhr Berlin. Ältere Veröffentlichungen sind ausdrücklich markiert. Modell- und Benchmarkmesswerte bleiben den jeweiligen Anbietern zugeschrieben.",
   "Kein Audio in dieser laufenden Textausgabe."
  ]
 }
