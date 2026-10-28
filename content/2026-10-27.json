@@ -2,8 +2,8 @@
  "date": "2026-10-27",
  "title": "Daily Hob vom Dienstag, 27.10.",
  "headline": "Ein LLM-Server für Blackwell, Mail in Rust und eine Lektion in Speichergrenzen.",
- "teaser": "9 Catches zum Dienstag: Genie 4, Ghostty 1.4 und LFM3 ergänzen imp, Stalwart, KV-Cache-Isolation, Floor-Division, CPython JIT und PHP2Shell.",
- "intro": "Heute geht es unter die Oberfläche: Ein spezialisierter Open-Source-Server reizt Blackwell-GPUs aus, Stalwart erreicht die erste stabile Version, und ein Betreiberbericht zeigt, warum plausible KI-Antworten noch keine sichere Speichertrennung beweisen. Dazu ein Low-Level-Deep-Dive über die richtige Richtung beim Runden. Am Nachmittag kommen zwei Lage-Updates dazu: der zurückgezogene PEP für CPythons experimentellen JIT und Wiz-Telemetrie zur PHP2Shell-Ausnutzung, beide ohne vorschnelle Schlussfolgerungen. Am Abend kommen drei neue Veröffentlichungen dazu: Genie 4 mit interaktiven Welten und Audio, Ghostty 1.4 mit Grafik- und Sicherheitsverbesserungen sowie die kompakte LFM3-Modellfamilie.",
+ "teaser": "11 Catches zum Dienstag: Genie 4, Ghostty 1.4, LFM3, imp, Stalwart, KV-Cache-Isolation, Floor-Division, CPython JIT, PHP2Shell, Tailscale SSH und frühe Claude-Arzneiforschung.",
+ "intro": "Heute geht es unter die Oberfläche: Ein spezialisierter Open-Source-Server reizt Blackwell-GPUs aus, Stalwart erreicht die erste stabile Version, und ein Betreiberbericht zeigt, warum plausible KI-Antworten noch keine sichere Speichertrennung beweisen. Dazu ein Low-Level-Deep-Dive über die richtige Richtung beim Runden. Am Nachmittag kommen zwei Lage-Updates dazu: der zurückgezogene PEP für CPythons experimentellen JIT und Wiz-Telemetrie zur PHP2Shell-Ausnutzung, beide ohne vorschnelle Schlussfolgerungen. Am Abend kommen drei neue Veröffentlichungen dazu: Genie 4 mit interaktiven Welten und Audio, Ghostty 1.4 mit Grafik- und Sicherheitsverbesserungen sowie die kompakte LFM3-Modellfamilie. Zum Tagesabschluss ergänzen wir den Untersuchungsstand zu Tailscale SSH und Anthropics frühe Partnerberichte aus der Arzneiforschung, mit klarer Trennung zwischen Ankündigung, Anbieterbefund und bestätigtem Ergebnis.",
  "hero": "hero.jpg",
  "heroAlt": "Linienillustration aus Server mit Briefumschlag, GPU und voneinander getrennten Speicherblöcken",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -92,12 +92,32 @@
    "category": "KI",
    "title": "LFM3: Kleine offene Gewichte für Text, Bild und Audio.",
    "short": "LFM3",
-   "body": "Liquid AI stellt am 27. Oktober LFM3 vor: sechs Modelle um die Zwei-Milliarden-Parameter-Klasse, abgeleitet vom LFM3-1.7B-Base-Backbone. Die Familie deckt Text, Vision, Audio, Omni und spezialisierte Entscheidungsmodelle ab. Der Anbieter veröffentlicht Basis- und nachtrainierte Gewichte und nennt lokale Anpassung auf einer einzelnen GPU als Ziel. Für das Textmodell werden ein 256K-Kontextfenster und ungefähr ein Gigabyte für 4-Bit-quantisierte Gewichte angegeben. Der Speicherbedarf der gesamten laufenden Anwendung ist damit nicht beschrieben. Die Architektur kombiniert kurze Faltungen, Sliding-Window- und globale Attention. Leistungs-, Geräte- und Effizienzangaben stammen von Liquid AI; offene Gewichte bedeuten nicht automatisch eine uneingeschränkt freie Open-Source-Lizenz.",
+   "body": "Liquid AI stellt am 27. Oktober LFM3 vor: sechs Modelle um die Zwei-Milliarden-Parameter-Klasse, abgeleitet vom LFM3-1.7B-Base-Backbone. Die Familie deckt Text, Vision, Audio, Omni und spezialisierte Entscheidungsmodelle ab. Der Anbieter veröffentlicht Basis- und nachtrainierte Gewichte und nennt lokale Anpassung auf einer einzelnen GPU als Ziel. Für das Textmodell werden ein 256K-Kontextfenster und ungefähr ein Gigabyte für 4-Bit-quantisierte Gewichte angegeben. Der Speicherbedarf der gesamten laufenden Anwendung ist damit nicht beschrieben. Die Architektur kombiniert kurze Faltungen, Sliding-Window- und globale Attention. Leistungs-, Geräte- und Effizienzangaben stammen von Liquid AI; offene Gewichte bedeuten nicht automatisch eine uneingeschränkt freie Open-Source-Lizenz. Die offizielle Modellseite rät wegen der geringen Größe von agentischem Coding und komplexem mehrstufigem Reasoning ab; es gilt die LFM Open License v1.0 mit Bedingungen für kommerzielle Nutzung.",
    "takeaway": "Interessant für spezialisierte lokale Anwendungen. Vor dem Einsatz Modellkarte, Lizenz, tatsächlichen RAM-Bedarf und die eigene Aufgabe prüfen.",
    "url": "https://www.liquid.ai/blog/lfm3",
    "cta": "Modellfamilie ansehen",
    "source": "Liquid AI, 27.10.2026 · Modell- und Effizienzangaben des Anbieters"
+  },
+  {
+   "category": "Informatik",
+   "title": "Tailscale SSH: Untersuchung zu möglichen Rechteausweitungen läuft.",
+   "short": "Tailscale SSH",
+   "body": "Update vom 26. Oktober, am späten Dienstag erneut diskutiert: Tailscale untersucht Sicherheitsprobleme seiner SSH-Funktion. Laut Anbieter betreffen die meisten Befunde mögliche Rechteausweitungen durch Personen, die bereits über Tailscale SSH zugelassen sind. Das ist kein Bericht über beliebigen unauthentifizierten Zugriff auf jedes Tailnet. Der Umfang hängt von Berechtigungen und Konfiguration ab und ist noch in Prüfung. Tailscale empfiehlt eine Überprüfung der SSH-Zugriffsregeln und nennt das Abschalten nicht benötigter SSH-Weiterleitung als vorläufige Maßnahme. Die Seite plante eine gepatchte Client-Version bis Ende Dienstag, vorbehaltlich Tests. Bei unserer Abschlussprüfung am Mittwochmorgen nennen weder diese Seite noch der geöffnete Changelog eine entsprechend bestätigte neue Patchversion. Die Frist ist daher keine Lieferbestätigung.",
+   "takeaway": "Keine pauschale Abschaltempfehlung des Anbieters. Wer Tailscale SSH betreibt, sollte das aktuelle Advisory und den Changelog prüfen, statt eine angekündigte Patchfrist als erledigt zu behandeln.",
+   "url": "https://tailscale.com/ssh-investigation-update",
+   "cta": "Untersuchungsstand lesen",
+   "source": "Tailscale, Update 26.10.2026 · Abschlussprüfung 28.10., 06:20 Berlin"
+  },
+  {
+   "category": "KI",
+   "title": "Claude in der Arzneiforschung: frühe Partnerberichte statt Heilungsnachweis.",
+   "short": "Claude Arzneiforschung",
+   "body": "Anthropic berichtet am späten 27. Oktober über Forschungspartnerschaften mit sechs Organisationen, darunter BigHat Biosciences, Enveda und Bristol Myers Squibb. Die Aufgaben reichen von Moleküldesign und Laboranalyse bis zu Herstellungspapieren und Studienplanung. Das Unternehmen meldet außerdem die Übernahme von Mithril Medicine, das mit externen Laboren an seltenen Muskelerkrankungen arbeitet. Die beschriebenen Ergebnisse stammen aus Anbieter- und Partnerberichten. Anthropic betont selbst, dass die Arbeit überwiegend präklinisch ist. Verbesserte Laborwerte, Entwürfe oder positive Mäusedaten sind keine nachgewiesene Wirksamkeit und Sicherheit eines zugelassenen Medikaments beim Menschen.",
+   "takeaway": "Interessante konkrete Forschungsabläufe, aber keine Abkürzung von Laborergebnissen zu einer bewiesenen Therapie. Die unabhängige und klinische Prüfung bleibt entscheidend.",
+   "url": "https://www.anthropic.com/research/early-progress-drug-development",
+   "cta": "Forschungsbericht lesen",
+   "source": "Anthropic Research, 27.10.2026 · Anbieter- und Partnerberichte"
   }
  ],
- "notes": "Ausgabe für Dienstag, 27. Oktober 2026 (Berliner Zeit), Stand 19:33. Ältere Veröffentlichungen sind im Text datiert. Quellen: github.com/kekzl/imp, stalw.art, blog.cloudflare.com, benjoffe.com, peps.python.org, lwn.net, wiz.io, deepmind.google, ghostty.org, liquid.ai."
+ "notes": "Ausgabe für Dienstag, 27. Oktober 2026 (Berliner Zeit). Abschlussprüfung Mittwoch, 28. Oktober, 06:20. Ältere Veröffentlichungen sind im Text datiert. Quellen: github.com/kekzl/imp, stalw.art, blog.cloudflare.com, benjoffe.com, peps.python.org, lwn.net, wiz.io, deepmind.google, ghostty.org, liquid.ai, docs.liquid.ai, tailscale.com, anthropic.com."
 }
