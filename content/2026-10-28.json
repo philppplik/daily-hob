@@ -1,0 +1,46 @@
+{
+ "date": "2026-10-28",
+ "title": "Daily Hob vom Mittwoch, 28.10.",
+ "headline": "Ein ungewöhnliches Betriebssystem, Graphen zum Anfassen und eine lebendige Pixelstadt.",
+ "teaser": "3 Catches zum Mittwoch: Moxnox 1.0, ein offenes Graphentheorie-Lehrbuch und das Rendering von Pizza Connection 2.",
+ "intro": "Heute beginnt die Auswahl mit drei Entdeckungen aus der Entwickler-Ecke: einem Hobby-OS zwischen NT und Unix, einem aufgabengetriebenen Graphentheorie-Buch und einem Blick unter die Pixel einer alten Wirtschaftssimulation. Nicht alles ist heute erschienen. Veröffentlichungszeit und heutiger Diskussionsanlass bleiben deshalb getrennt.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Linienillustration einer isometrischen Stadt neben verbundenen Graphknoten und geschichteten Systembausteinen",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "Open Source",
+   "short": "Moxnox 1.0",
+   "title": "Moxnox 1.0: NT-Ideen, Unix-Programme und Btrfs in einem Hobby-OS.",
+   "body": "Release vom 26. Oktober, am Mittwoch auf Hacker News aufgegriffen: Moxnox ist ein quelloffenes Hobby-Betriebssystem für amd64 und aarch64. Systemaufrufe und Aufbau orientieren sich an Windows NT, die Anwendungsschicht ist dagegen POSIX-kompatibel und bringt ein GNU-Basissystem mit. Unix-Programme müssen dafür neu kompiliert werden; eine Zusage für beliebige Windows-Binärdateien ist das nicht. Laut Projekt lässt sich Moxnox auf Moxnox selbst bauen, mit dokumentierten Ausnahmen bei einzelnen Werkzeugen. Besonders ungewöhnlich ist Btrfs als Dateisystem. Genau hier warnt die README ausdrücklich: Der Code ist noch nicht ausreichend erprobt, nur Wegwerf-Dateisysteme verwenden. Zum Experimentieren gibt es QEMU-Abbilder und Startbefehle.",
+   "takeaway": "Ein spannendes Betriebssystemlabor, kein Ersatz für den Arbeitsrechner. Erst in einer VM mit entbehrlichem Image testen, niemals wichtige Btrfs-Datenträger anschließen.",
+   "url": "https://github.com/maharmstone/moxnox",
+   "cta": "README und VM-Start lesen",
+   "source": "github.com/maharmstone/moxnox · Release 26.10.2026 · HN-Auswahl 28.10.2026"
+  },
+  {
+   "category": "Informatik",
+   "short": "Graphentheorie",
+   "title": "Graphentheorie zum Mitmachen: Rätsel zuerst, Beweise danach.",
+   "body": "Am Mittwoch auf Hacker News entdeckt, nicht als heutige Neuveröffentlichung ausgewiesen: Mikhail Lavrovs frei zugängliches Lehrbuch Start Doing Graph Theory führt über konkrete Aufgaben in die Graphentheorie. Statt nur Definitionen abzuhaken, geht es etwa um Färbungen, passende Zuordnungen von Autos und Fahrern oder die Türme von Hanoi. Das Inhaltsverzeichnis reicht von Wegen und Knotengraden über Spannbäume bis zu Matchings und topologischen Ordnungen in gerichteten azyklischen Graphen. Das Buch lässt sich online lesen oder als PDF herunterladen; die Startseite nennt eine Creative-Commons-Lizenz. Ein guter Catch für alle, die Algorithmik wieder über Probleme statt über auswendig gelernte Begriffe verstehen möchten.",
+   "takeaway": "Mit dem ersten Kapitel und seinen Aufgaben anfangen. Das ist ein offenes Lernangebot, keine Meldung über einen neuen Algorithmus.",
+   "url": "https://vertex.degree/",
+   "cta": "Mit Kapitel 1 anfangen",
+   "source": "vertex.degree · Mikhail Lavrov · HN-Auswahl 28.10.2026"
+  },
+  {
+   "category": "Wildcard",
+   "short": "Pizza-Rendering",
+   "title": "Pizza Connection 2 zerlegt: Wie eine Stadt mit wenigen neuen Pixeln lebt.",
+   "body": "Ein Oktober-Beitrag von Andrew Healey, am Mittwoch auf Hacker News diskutiert: Der Entwickler untersucht per Ghidra und KI-gestützter Analyse das alte Spiel Fast Food Tycoon 2, hierzulande Pizza Connection 2. Sein Bericht erklärt sehr konkret den isometrischen Renderer: Eine gemalte Stadt bildet die Grundlage, bewegliche Figuren und Objekte kommen als Sprites dazu. Neu gezeichnet werden vor allem veränderte Bildbereiche. Farbe und Beleuchtung bleiben bis zur letzten Ausgabe getrennt; mehrere Zeichenpässe erzeugen verdeckte Figurenumrisse. Auch Leuchtreklamen und Fenster haben eigene Lichtmasken. Das sind Ergebnisse seiner Untersuchung dieses Spiels, kein allgemeiner Leistungsbeweis für Coding-Agenten.",
+   "takeaway": "Ein anschaulicher Blick auf Dirty Rectangles, Zeichenreihenfolge und Lichtmasken. Der praktische Gewinn steckt in den nachvollziehbaren Rendering-Ideen, nicht im Modellnamen.",
+   "url": "https://healeycodes.com/decompiling-fast-food-tycoon-2-drawing-the-world",
+   "cta": "Rendering-Deep-Dive lesen",
+   "source": "healeycodes.com · Andrew Healey · Oktober 2026 · HN-Diskussion 28.10.2026"
+  }
+ ],
+ "notes": [
+  "Intraday-Auswahl, Quellenprüfung am 28.10.2026 gegen 11:33 Uhr Berlin. Ältere Veröffentlichungen sind ausdrücklich markiert. Nur gelesene Originalquellen; keine KI-Neuigkeit als Lückenfüller.",
+  "Kein Audio in dieser laufenden Textausgabe."
+ ]
+}
