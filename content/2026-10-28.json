@@ -2,8 +2,8 @@
  "date": "2026-10-28",
  "title": "Daily Hob vom Mittwoch, 28.10.",
  "headline": "Ein ungewöhnliches Betriebssystem, Graphen zum Anfassen und eine lebendige Pixelstadt.",
- "teaser": "9 Catches zum Mittwoch: Gemini Carbon, Copilot Fusion, Tailscale 1.104.4, DAYJOB Tax, Clover, macOS-Zertifikate, Moxnox, Graphentheorie und Pizza-Rendering.",
- "intro": "Heute beginnt die Auswahl mit drei Entdeckungen aus der Entwickler-Ecke: einem Hobby-OS zwischen NT und Unix, einem aufgabengetriebenen Graphentheorie-Buch und einem Blick unter die Pixel einer alten Wirtschaftssimulation. Nicht alles ist heute erschienen. Veröffentlichungszeit und heutiger Diskussionsanlass bleiben deshalb getrennt. Am Nachmittag kommen Clovers offenes Diffusionsmodell mit klaren Speicher- und Backend-Grenzen sowie die unterschiedlichen Zertifikatspfade von macOS-Browsern und Terminalwerkzeugen dazu. Am Abend folgen Gemini 4 Carbon als noch begrenzte Ankündigung, Copilot Fusion als Modell-Orchestrierung und ein strenger Benchmark für vollständige Steuerfallbearbeitung. Ein bestätigtes Sicherheitsupdate ergänzt den Abend: Tailscale 1.104.4 behebt die nun konkret beschriebenen SSH- und Serve-Probleme.",
+ "teaser": "11 Catches zum Mittwoch: Gemini Carbon, Copilot Fusion, Tailscale 1.104.4, DAYJOB Tax, Clover, macOS-Zertifikate, Moxnox, AlpineBSD, Graphentheorie, Pizza-Rendering und The Grid.",
+ "intro": "Heute beginnt die Auswahl mit drei Entdeckungen aus der Entwickler-Ecke: einem Hobby-OS zwischen NT und Unix, einem aufgabengetriebenen Graphentheorie-Buch und einem Blick unter die Pixel einer alten Wirtschaftssimulation. Nicht alles ist heute erschienen. Veröffentlichungszeit und heutiger Diskussionsanlass bleiben deshalb getrennt. Am Nachmittag kommen Clovers offenes Diffusionsmodell mit klaren Speicher- und Backend-Grenzen sowie die unterschiedlichen Zertifikatspfade von macOS-Browsern und Terminalwerkzeugen dazu. Am Abend folgen Gemini 4 Carbon als noch begrenzte Ankündigung, Copilot Fusion als Modell-Orchestrierung und ein strenger Benchmark für vollständige Steuerfallbearbeitung. Ein bestätigtes Sicherheitsupdate ergänzt den Abend: Tailscale 1.104.4 behebt die nun konkret beschriebenen SSH- und Serve-Probleme. Zum Tagesabschluss ergänzen AlpineBSDs ungewöhnlicher Systemmix und CircuitHubs flexible Platinenfabrik die Auswahl.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Linienillustration einer isometrischen Stadt neben verbundenen Graphknoten und geschichteten Systembausteinen",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -97,7 +97,27 @@
    "url": "https://tailscale.com/security-bulletins",
    "cta": "Betroffenheit und Updatehinweise prüfen",
    "source": "Tailscale Changelog und TS-2026-014 bis -017 · Release 28.10.2026 · geprüft 19:34 Uhr Berlin"
+  },
+  {
+   "category": "Open Source",
+   "short": "AlpineBSD",
+   "title": "AlpineBSD: NetBSD-Kernel trifft apk, BusyBox und s6.",
+   "body": "Am Mittwoch diskutiert, ausdrücklich noch in Arbeit: AlpineBSD kombiniert den NetBSD-Kernel, dessen libc und plattformspezifische Werkzeuge mit einem von Alpine Linux inspirierten Userspace. Dazu gehören der Paketmanager apk-tools und BusyBox; als Init-System dient derzeit s6. Die Projektseite betont, dass es kein Alpine-Linux-Fork ist und die Paketsammlung eigenständig aufgebaut wird. Ein weiterer Schwerpunkt ist die erklärte Politik, keine LLM-Ausgaben ins Basissystem und Hauptpaketarchiv aufzunehmen. Das ist eine Projektregel, keine von uns durchgeführte Prüfung jedes Pakets. Einen Installer gibt es noch nicht. Zudem warnt das Projekt vor begrenzter NetBSD-Hardwareunterstützung, besonders bei Laptops.",
+   "takeaway": "Ein interessantes Systemexperiment, noch kein bequem installierbarer Alltagsersatz. Hardwareliste und grobe Installationsanleitung vor jedem Versuch lesen.",
+   "url": "https://wiki.alpinebsd.org",
+   "cta": "Projektstand und Grenzen lesen",
+   "source": "AlpineBSD-Projektwiki · Diskussion 28.10.2026"
+  },
+  {
+   "category": "Wildcard",
+   "short": "The Grid",
+   "title": "The Grid: Eine Roboterfabrik routet Leiterplatten einzeln durch die Fertigung.",
+   "body": "CircuitHubs Vorstellung vom 26. Oktober wird am Mittwoch diskutiert: The Grid ist eine laufende Elektronikfertigung in Massachusetts. Statt einer für jedes Produkt umgebauten Linie transportieren schwebende Träger Platinen und Bauteile zwischen Bestückung, Löten und Inspektion. Laut Anbieter kann jede Platine eine eigene Route nehmen, wodurch kleine Stückzahlen vieler verschiedener Designs einfacher werden sollen. Der plakative Vergleich mit Shenzhen stammt aus einem einzigen dokumentierten Beispiel: fünf bestückte Motorcontroller-Platinen mit Lieferung an eine US-Adresse, vier statt median neun Tage, dafür 630 statt ungefähr 465 US-Dollar inklusive der dort angesetzten Versand- und Zollkosten. Das ist kein allgemeiner Preis- oder Geschwindigkeitsbeweis und kein Angebot für Lieferung nach Deutschland.",
+   "takeaway": "Der spannende Teil ist die flexible Fertigungsarchitektur. Die Beispielrechnung nicht als pauschales Versprechen für eigene Platinen, Stückzahlen oder Lieferorte übernehmen.",
+   "url": "https://www.circuithub.com/post/unveiling-the-grid",
+   "cta": "Fabrikansatz und Beispielrechnung lesen",
+   "source": "CircuitHub · 26.10.2026 · Diskussion 28.10.2026 · Fertigungs- und Vergleichsangaben: Anbieter"
   }
  ],
- "notes": "Intraday-Auswahl, Quellenprüfung zuletzt am 28.10.2026 gegen 19:34 Uhr Berlin. Ältere Veröffentlichungen sind ausdrücklich markiert. Modell- und Benchmarkmesswerte bleiben den jeweiligen Anbietern zugeschrieben. Tailscales Patchstand wurde am Abend anhand Changelog und Bulletins aktualisiert. Kein Audio in dieser laufenden Textausgabe."
+ "notes": "Abgeschlossene Mittwochsauswahl. Letzte Quellenprüfung am 29.10.2026 gegen 06:24 Uhr Berlin. Veröffentlichungen und Diskussionsdatum sind getrennt markiert. Messwerte und Fertigungsvergleiche bleiben Anbieterangaben. Kein Audio in dieser Textausgabe."
 }
