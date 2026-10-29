@@ -1,63 +1,93 @@
 {
- "date": "2026-10-29",
- "title": "Daily Hob vom Donnerstag, 29.10.",
- "headline": "Ein Computer im Modell, ein Lakehouse auf localhost und ein Update mit fehlendem Unterbau.",
- "teaser": "5 Catches zum Donnerstag: offene Mistral-Large-4-Gewichte, Java-AOT-Praxis, Qwenputer, MiniLake und Alpines GitLab-Vorfallsbericht.",
- "intro": "Heute geht es um die Schichten unter der Oberfläche: einen konstruierten Rechner innerhalb eines Sprachmodells, echte Datenarbeit hinter einer lokalen Cloud-API und eine Sicherheitslücke, die ein Anwendungsupdate überlebte. Ältere Veröffentlichungen sind als heutige Diskussionscatches markiert. Am Nachmittag kommen die jetzt veröffentlichten Mistral-Large-4-Gewichte mit eigener Lizenzgrenze und ein Praxisbericht über die Verteilung von Java-AOT-Caches dazu.",
- "hero": "hero.jpg",
- "heroAlt": "Abstrakte Linienillustration eines Prozessors mit Speicherzellen, verbundenen Datenscheiben und schützendem Bogen",
- "heroCaption": "Illustration: KI-generiert für Daily Hob",
- "sections": [
-  {
-   "category": "KI",
-   "short": "Qwenputer",
-   "title": "Qwenputer: Ein RISC-V-Rechner steckt in zusätzlichen Modellschichten.",
-   "body": "Experiment vom 22. Oktober, am Donnerstag diskutiert: Divyansh Agrawal ergänzt Qwen3.5-4B um einen deterministisch konstruierten 32-Bit-RISC-V-Kern. Zusätzliche Gewichte und Schichten führen Befehle während der Modellberechnung aus; angepasste Gated-DeltaNet-Zustände dienen als adressierbarer Speicher. Das ist kein vom unveränderten Modell spontan entdeckter Computer und kein externer Python-Aufruf. Der Autor berichtet erfolgreiche RISC-V-Tests und lange fehlerfreie Testläufe, die wir nicht selbst reproduziert haben. Der Checkpoint wächst auf 18,8 GB und benötigt einen kleinen Treiber zum Laden der Firmware. Ein gewöhnlicher generate-Aufruf reicht noch nicht; größere Rechnungen dauern Sekunden statt Millisekunden.",
-   "takeaway": "Ein ungewöhnliches Architektur- und Speicherexperiment, kein kostenloses Rechenupgrade für jedes Qwen-Modell. Eigene Testergebnisse, Zusatzschichten und Treiberbedarf gehören zur Einordnung.",
-   "url": "https://divagr.com/blog/qwenputer",
-   "cta": "Aufbau und Grenzen lesen",
-   "source": "Divyansh Agrawal · 22.10.2026 · Diskussion 29.10.2026 · Tests: Autorangaben"
-  },
-  {
-   "category": "Open Source",
-   "short": "MiniLake",
-   "title": "MiniLake: Databricks-APIs lokal testen, ohne eine Cloud-Umgebung zu starten.",
-   "body": "Am Donnerstag entdeckt, nicht erst heute entstanden: MiniLake ist ein MIT-lizenzierter lokaler Emulator für Teile der Databricks-API. SDK, CLI und Terraform lassen sich auf localhost umstellen. SQL läuft tatsächlich auf DuckDB, externe Delta-Tabellen verwenden echte Dateien, und Spark-Jobs laufen über Container. Die Grenzen sind ausdrücklich dokumentiert: Das SQL ist DuckDB-Dialekt, Cluster sind nur Zustandsautomaten, und Rechte sowie Identitäten werden nicht durchgesetzt. Jeder Token wird akzeptiert. Nicht implementierte Bereiche wie Model Registry oder Vector Search sollen mit 501 statt vorgetäuschtem Erfolg antworten. Die einfache Python-Installation und ein Container sind beschrieben; echte Spark-Jobs brauchen die passende Containerumgebung.",
-   "takeaway": "Für lokale Entwicklung und CI interessant, aber kein Sicherheitstest und kein vollständiger Databricks-Ersatz. Niemals über localhost hinaus freigeben oder echte Produktionsgeheimnisse hineinlegen.",
-   "url": "https://dmux.github.io/minilake/",
-   "cta": "Funktionsumfang und Grenzen prüfen",
-   "source": "MiniLake-Projektseite und GitHub-README · entdeckt 29.10.2026"
-  },
-  {
-   "category": "Informatik",
-   "short": "Alpine GitLab",
-   "title": "Alpines GitLab-Vorfall zeigt: Ein App-Update kann den verwundbaren Unterbau stehen lassen.",
-   "body": "Alpines Bericht vom 28. Oktober wird am Donnerstag diskutiert: Ein Angreifer versuchte am 20. und 21. Oktober, CVE-2026-97229 auf der eigenen GitLab-Instanz auszunutzen. Alpine fand keinen Beleg für erfolgreiche Codeausführung, konnte sie wegen fehlender Spuren aber nicht ausschließen und baute die Instanz neu auf. Besonders lehrreich: Das spätere GitLab-Upgrade allein beseitigte die Lücke nicht. Der Fix lag in gepatchtem Ruby; Alpines eigenes Containerimage nutzte dagegen Standard-Ruby. Laut Bericht wurden aports, Pakete und die Releases vom 21. Oktober gegen externe Aufzeichnungen geprüft, ohne Manipulationsbefund. Prüfungen für den verbleibenden verwundbaren Zeitraum werden erweitert. Das ist kein Beweis, dass die Kompromittierung sicher gelang oder dass jede denkbare Folge ausgeschlossen ist.",
-   "takeaway": "Bei selbst gebauten GitLab-Images auch die Ruby-Version und komponentenspezifische Patches prüfen. Betreiberbefund, verbleibende Unsicherheit und überprüfter Zeitraum nicht vermischen.",
-   "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
-   "cta": "Vorfallsbericht und Image-Hinweise lesen",
-   "source": "Alpine Linux · 28.10.2026 · Diskussion 29.10.2026"
-  },
-  {
-   "category": "KI",
-   "short": "Mistral Large 4",
-   "title": "Le Chonk bekommt offene Gewichte, aber keine beliebig freie Hosting-Lizenz.",
-   "body": "Mistral veröffentlicht am Donnerstag die verbesserten Gewichte von Mistral Large 4 nach der früheren API-Preview. Das multimodale Modell verarbeitet Text und Bilder; Hugging Face nennt ungefähr eine Billion Gesamtparameter, 49 Milliarden aktive Parameter und eine Million Tokens Kontext. Offizielle Varianten liegen in FP8 und NVFP4 vor. Low, Medium und High steuern den Reasoning-Aufwand. Wichtig ist die Lizenz: Die Mistral Ecosystem Open-Weight License ist eine MIT-Abwandlung. Unternehmen mit einem Model-as-a-Service-Angebot benötigen für die kommerzielle Nutzung eine gesonderte Lizenz. Offene Gewichte sind hier also nicht mit uneingeschränkt freier Open-Source-Nutzung gleichzusetzen. Mistral und der Hugging-Face-Launchtext nennen teils unterschiedliche Benchmarkwerte; ohne geklärte Vergleichsbedingungen übernehmen wir daraus keinen pauschalen Siegeranspruch.",
-   "takeaway": "Eine tatsächlich herunterladbare Veröffentlichung, nicht nur die alte Preview. Vor Self-Hosting Lizenz und Gesamtmodellgröße prüfen: Wenige aktive Experten beseitigen den Speicherbedarf der übrigen Gewichte nicht.",
-   "url": "https://mistral.ai/news/mistral-large-4-oss/",
-   "cta": "Gewichte und Lizenzbedingungen prüfen",
-   "source": "Mistral und Hugging Face · 29.10.2026 · Modellangaben: Anbieter/Distributionspartner"
-  },
-  {
-   "category": "Informatik",
-   "short": "Java AOT",
-   "title": "Java-AOT-Caches: Startup-Abkürzungen brauchen einen Test auf der Zielmaschine.",
-   "body": "XPipe-Entwickler Christopher Schnicks Bericht vom 23. Oktober wird am Donnerstag diskutiert. Er beschreibt Stolpersteine beim Verteilen von Java-Anwendungen mit AOT-Cache: CPU-spezifische Adapter, geänderte Moduloptionen, Installationspfade und Eingriffe durch Endpoint-Sicherheitssoftware können den Cache unbrauchbar machen oder in den beschriebenen Fällen Abstürze auslösen. Der Cache ist nicht dasselbe wie GraalVM Native Image: Die Anwendung läuft weiter auf der JVM, vorbereitete Klassen- und Profildaten sollen Start und Aufwärmen verkürzen. Der Artikel trennt aktuelle Cache-Bausteine von der für JDK 28 beschriebenen AOT-Codekompilierung. Er enthält ausdrücklich keine Performance-Messreihe; das ist ein Praxisbericht aus einer konkreten Anwendung, kein Beweis, dass jeder Java-AOT-Cache fehlerhaft ist.",
-   "takeaway": "Cache-Erzeugung in CI allein reicht nicht als Erfolgskriterium. Auf den tatsächlichen CPU-, Paketierungs- und Sicherheitskonfigurationen testen und prüfen, ob der Cache wirklich verwendet wird.",
-   "url": "https://xpipe.io/blog/java-aot-cache",
-   "cta": "Praxisbericht und Grenzen lesen",
-   "source": "Christopher Schnick / XPipe · 23.10.2026 · Diskussion 29.10.2026"
-  }
- ],
- "notes": "Laufende Donnerstag-Auswahl. Quellenprüfung zuletzt am 29.10.2026 gegen 15:33 Uhr Berlin. Ältere Veröffentlichungen sind markiert. Autorentests, Modellangaben und Betreiberbefunde bleiben zugeschrieben; abweichende Mistral-Benchmarkzahlen werden nicht zu einer Rangliste vermischt. Kein Audio in dieser Textausgabe."
+  "date": "2026-10-29",
+  "title": "Daily Hob vom Donnerstag, 29.10.",
+  "headline": "Ein Computer im Modell, ein Lakehouse auf localhost und ein Update mit fehlendem Unterbau.",
+  "teaser": "8 Catches zum Donnerstag: Mistrals offene Gewichte, Go ohne neue Heap-Allokationen, GPU-Rack-Planung, Fowlers LLM Voice und vier weitere Technikgeschichten.",
+  "intro": "Heute geht es um die Schichten unter der Oberfläche: einen konstruierten Rechner innerhalb eines Sprachmodells, echte Datenarbeit hinter einer lokalen Cloud-API und eine Sicherheitslücke, die ein Anwendungsupdate überlebte. Ältere Veröffentlichungen sind als heutige Diskussionscatches markiert. Am Nachmittag kommen die jetzt veröffentlichten Mistral-Large-4-Gewichte mit eigener Lizenzgrenze und ein Praxisbericht über die Verteilung von Java-AOT-Caches dazu. Am Abend ergänzen wir einen experimentellen Go-Allokationsprüfer, die Ausfall- und Platzierungsrechnung hinter GPU-Racks und Martin Fowlers Gegenpunkt zur glatten KI-Prosa.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Linienillustration eines Prozessors mit Speicherzellen, verbundenen Datenscheiben und schützendem Bogen",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "KI",
+      "short": "Qwenputer",
+      "title": "Qwenputer: Ein RISC-V-Rechner steckt in zusätzlichen Modellschichten.",
+      "body": "Experiment vom 22. Oktober, am Donnerstag diskutiert: Divyansh Agrawal ergänzt Qwen3.5-4B um einen deterministisch konstruierten 32-Bit-RISC-V-Kern. Zusätzliche Gewichte und Schichten führen Befehle während der Modellberechnung aus; angepasste Gated-DeltaNet-Zustände dienen als adressierbarer Speicher. Das ist kein vom unveränderten Modell spontan entdeckter Computer und kein externer Python-Aufruf. Der Autor berichtet erfolgreiche RISC-V-Tests und lange fehlerfreie Testläufe, die wir nicht selbst reproduziert haben. Der Checkpoint wächst auf 18,8 GB und benötigt einen kleinen Treiber zum Laden der Firmware. Ein gewöhnlicher generate-Aufruf reicht noch nicht; größere Rechnungen dauern Sekunden statt Millisekunden.",
+      "takeaway": "Ein ungewöhnliches Architektur- und Speicherexperiment, kein kostenloses Rechenupgrade für jedes Qwen-Modell. Eigene Testergebnisse, Zusatzschichten und Treiberbedarf gehören zur Einordnung.",
+      "url": "https://divagr.com/blog/qwenputer",
+      "cta": "Aufbau und Grenzen lesen",
+      "source": "Divyansh Agrawal · 22.10.2026 · Diskussion 29.10.2026 · Tests: Autorangaben"
+    },
+    {
+      "category": "Open Source",
+      "short": "MiniLake",
+      "title": "MiniLake: Databricks-APIs lokal testen, ohne eine Cloud-Umgebung zu starten.",
+      "body": "Am Donnerstag entdeckt, nicht erst heute entstanden: MiniLake ist ein MIT-lizenzierter lokaler Emulator für Teile der Databricks-API. SDK, CLI und Terraform lassen sich auf localhost umstellen. SQL läuft tatsächlich auf DuckDB, externe Delta-Tabellen verwenden echte Dateien, und Spark-Jobs laufen über Container. Die Grenzen sind ausdrücklich dokumentiert: Das SQL ist DuckDB-Dialekt, Cluster sind nur Zustandsautomaten, und Rechte sowie Identitäten werden nicht durchgesetzt. Jeder Token wird akzeptiert. Nicht implementierte Bereiche wie Model Registry oder Vector Search sollen mit 501 statt vorgetäuschtem Erfolg antworten. Die einfache Python-Installation und ein Container sind beschrieben; echte Spark-Jobs brauchen die passende Containerumgebung.",
+      "takeaway": "Für lokale Entwicklung und CI interessant, aber kein Sicherheitstest und kein vollständiger Databricks-Ersatz. Niemals über localhost hinaus freigeben oder echte Produktionsgeheimnisse hineinlegen.",
+      "url": "https://dmux.github.io/minilake/",
+      "cta": "Funktionsumfang und Grenzen prüfen",
+      "source": "MiniLake-Projektseite und GitHub-README · entdeckt 29.10.2026"
+    },
+    {
+      "category": "Informatik",
+      "short": "Alpine GitLab",
+      "title": "Alpines GitLab-Vorfall zeigt: Ein App-Update kann den verwundbaren Unterbau stehen lassen.",
+      "body": "Alpines Bericht vom 28. Oktober wird am Donnerstag diskutiert: Ein Angreifer versuchte am 20. und 21. Oktober, CVE-2026-97229 auf der eigenen GitLab-Instanz auszunutzen. Alpine fand keinen Beleg für erfolgreiche Codeausführung, konnte sie wegen fehlender Spuren aber nicht ausschließen und baute die Instanz neu auf. Besonders lehrreich: Das spätere GitLab-Upgrade allein beseitigte die Lücke nicht. Der Fix lag in gepatchtem Ruby; Alpines eigenes Containerimage nutzte dagegen Standard-Ruby. Laut Bericht wurden aports, Pakete und die Releases vom 21. Oktober gegen externe Aufzeichnungen geprüft, ohne Manipulationsbefund. Prüfungen für den verbleibenden verwundbaren Zeitraum werden erweitert. Das ist kein Beweis, dass die Kompromittierung sicher gelang oder dass jede denkbare Folge ausgeschlossen ist.",
+      "takeaway": "Bei selbst gebauten GitLab-Images auch die Ruby-Version und komponentenspezifische Patches prüfen. Betreiberbefund, verbleibende Unsicherheit und überprüfter Zeitraum nicht vermischen.",
+      "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
+      "cta": "Vorfallsbericht und Image-Hinweise lesen",
+      "source": "Alpine Linux · 28.10.2026 · Diskussion 29.10.2026"
+    },
+    {
+      "category": "KI",
+      "short": "Mistral Large 4",
+      "title": "Le Chonk bekommt offene Gewichte, aber keine beliebig freie Hosting-Lizenz.",
+      "body": "Mistral veröffentlicht am Donnerstag die verbesserten Gewichte von Mistral Large 4 nach der früheren API-Preview. Das multimodale Modell verarbeitet Text und Bilder; Hugging Face nennt ungefähr eine Billion Gesamtparameter, 49 Milliarden aktive Parameter und eine Million Tokens Kontext. Offizielle Varianten liegen in FP8 und NVFP4 vor. Low, Medium und High steuern den Reasoning-Aufwand. Wichtig ist die Lizenz: Die Mistral Ecosystem Open-Weight License ist eine MIT-Abwandlung. Unternehmen mit einem Model-as-a-Service-Angebot benötigen für die kommerzielle Nutzung eine gesonderte Lizenz. Offene Gewichte sind hier also nicht mit uneingeschränkt freier Open-Source-Nutzung gleichzusetzen. Mistral und der Hugging-Face-Launchtext nennen teils unterschiedliche Benchmarkwerte; ohne geklärte Vergleichsbedingungen übernehmen wir daraus keinen pauschalen Siegeranspruch.",
+      "takeaway": "Eine tatsächlich herunterladbare Veröffentlichung, nicht nur die alte Preview. Vor Self-Hosting Lizenz und Gesamtmodellgröße prüfen: Wenige aktive Experten beseitigen den Speicherbedarf der übrigen Gewichte nicht.",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/",
+      "cta": "Gewichte und Lizenzbedingungen prüfen",
+      "source": "Mistral und Hugging Face · 29.10.2026 · Modellangaben: Anbieter/Distributionspartner"
+    },
+    {
+      "category": "Informatik",
+      "short": "Java AOT",
+      "title": "Java-AOT-Caches: Startup-Abkürzungen brauchen einen Test auf der Zielmaschine.",
+      "body": "XPipe-Entwickler Christopher Schnicks Bericht vom 23. Oktober wird am Donnerstag diskutiert. Er beschreibt Stolpersteine beim Verteilen von Java-Anwendungen mit AOT-Cache: CPU-spezifische Adapter, geänderte Moduloptionen, Installationspfade und Eingriffe durch Endpoint-Sicherheitssoftware können den Cache unbrauchbar machen oder in den beschriebenen Fällen Abstürze auslösen. Der Cache ist nicht dasselbe wie GraalVM Native Image: Die Anwendung läuft weiter auf der JVM, vorbereitete Klassen- und Profildaten sollen Start und Aufwärmen verkürzen. Der Artikel trennt aktuelle Cache-Bausteine von der für JDK 28 beschriebenen AOT-Codekompilierung. Er enthält ausdrücklich keine Performance-Messreihe; das ist ein Praxisbericht aus einer konkreten Anwendung, kein Beweis, dass jeder Java-AOT-Cache fehlerhaft ist.",
+      "takeaway": "Cache-Erzeugung in CI allein reicht nicht als Erfolgskriterium. Auf den tatsächlichen CPU-, Paketierungs- und Sicherheitskonfigurationen testen und prüfen, ob der Cache wirklich verwendet wird.",
+      "url": "https://xpipe.io/blog/java-aot-cache",
+      "cta": "Praxisbericht und Grenzen lesen",
+      "source": "Christopher Schnick / XPipe · 23.10.2026 · Diskussion 29.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "short": "noalloc",
+      "title": "noalloc macht Heap-Allokationen zur überprüfbaren Go-Regel.",
+      "body": "Das junge Go-Projekt wird am Donnerstag diskutiert: Mit //noalloc:root markierte Funktionen werden mitsamt ihrem Aufrufbaum auf Heap-Allokationen untersucht. Dazu kommen Datenstrukturen mit begrenzter Kapazität und ein Generator für JSON-Code. Eine Baseline kann bestehende Allokationen festhalten und neue in CI auffallen lassen. Das Projekt verlangt Go 1.27 und ist ausdrücklich experimentell; laut README wurde der Code unter menschlicher Anleitung vollständig mit KI geschrieben. Der Name ist keine formale Garantie: Allowlist, Ausnahmen und bestimmte Annotationen werden vertraut, Fehlerpfade und einmalige Initialisierung dürfen unter beschriebenen Bedingungen allozieren. Der Abgleich mit kompiliertem Code hat dokumentierte Lücken und gilt nur für den konkreten Build.",
+      "takeaway": "Interessant für speichersensible Hotpaths, nicht als pauschaler Beweis für ein allokationsfreies Programm. Ausnahmen reviewen und mit eigenen Allokationstests ergänzen.",
+      "url": "https://github.com/theconsensuslabs/noalloc",
+      "cta": "Prüfmodell und Grenzen lesen",
+      "source": "The Consensus · GitHub-README · Diskussion 29.10.2026 · MIT, übernommene Go-Teile mit BSD-Hinweisen"
+    },
+    {
+      "category": "KI-Infrastruktur",
+      "short": "Rack Scheduling",
+      "title": "Warum zwei freie Rechenknoten ein GPU-Rack produktiver machen können.",
+      "body": "SkyPilot erklärt heute das Platzierungsproblem auf Grace-Blackwell-NVL72-Racks: Die schnelle NVLink-Verbindung bleibt innerhalb des Racks. Verteilt ein Scheduler eng gekoppelte Arbeit über mehrere Racks, landet Kommunikation auf dem langsameren Netz dazwischen. Dazu kommt Ausfallvorsorge. Der Beitrag beschreibt 16-Knoten-Slices mit zwei Ersatzknoten pro Rack, rack-lokalen Austausch defekter Knoten und das Umräumen wiederaufnehmbarer Jobs gegen Fragmentierung. Die Zahl von 27 Prozent mehr nutzbarer Kapazität stammt aus einem NVIDIA-Modell für einen Cluster mit 128 Racks bei rund zwei Prozent nicht verfügbaren Knoten. Sie ist weder ein allgemeiner Trainings-Speedup noch ein unabhängiger Vergleich aller Scheduler. Rack-bewusste Platzierung selbst ist keine neue Erfindung.",
+      "takeaway": "Ein gutes Anschauungsstück für den Unterschied zwischen installierten GPUs und nutzbarer Rechenleistung. Die Platzierung, Ersatzkapazität und Wiederanlaufkosten gehören in dieselbe Rechnung.",
+      "url": "https://skypilot.ai/blog/grace-blackwell-needs-a-new-scheduler",
+      "cta": "Rack-Topologie und Ausfallmodell ansehen",
+      "source": "SkyPilot · 29.10.2026 · Herstellerbeitrag, Kapazitätszahl aus NVIDIA-Modell"
+    },
+    {
+      "category": "Wildcard",
+      "short": "LLM Voice",
+      "title": "Martin Fowler: Glatte Texte können ihre Leser trotzdem verlieren.",
+      "body": "Martin Fowler beschreibt heute mit LLM Voice sein Unbehagen an Texten, deren Ton nach Sprachmodell klingt. Ihm geht es nicht um einen zuverlässigen KI-Detektor: Er zweifelt ausdrücklich sowohl an solchen Werkzeugen als auch an seinem eigenen Erkennen. Sein Argument ist ein persönliches und redaktionelles: Wer das Formulieren abgibt, gibt womöglich einen Teil des Denkens ab, das erst beim Schreiben passiert. Er rät Autoren deshalb von KI-Erstentwürfen ab. Zugleich nennt er Grenzen dieser Regel, darunter Barrierefreiheit bei Parkinson und die Hilfe beim Schreiben in einer Fremdsprache. Das ist eine Position zur Schreibpraxis, keine Studie über Leserverhalten oder ein Beweis, dass sich KI-Texte sicher erkennen lassen.",
+      "takeaway": "Ein lesenswerter Gegenpunkt zum nächsten Schreibwerkzeug: Entscheidend ist, ob ein Text einen eigenen Gedanken verständlich macht, nicht nur fehlerfrei klingt.",
+      "url": "https://martinfowler.com/bliki/LLM-Voice.html",
+      "cta": "Fowlers Essay lesen",
+      "source": "Martin Fowler · 29.10.2026 · Essay und persönliche Einschätzung"
+    }
+  ],
+  "notes": "Laufende Donnerstag-Auswahl. Quellenprüfung zuletzt am 29.10.2026 gegen 15:33 Uhr Berlin. Ältere Veröffentlichungen sind markiert. Autorentests, Modellangaben und Betreiberbefunde bleiben zugeschrieben; abweichende Mistral-Benchmarkzahlen werden nicht zu einer Rangliste vermischt. Kein Audio in dieser Textausgabe. Abendupdate 29.10., 19:34 Uhr: noalloc, Rack-Scheduling und LLM Voice ergänzt. Herstellerzahlen und persönliche Positionen sind als solche markiert."
 }
