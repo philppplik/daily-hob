@@ -1,0 +1,43 @@
+{
+ "date": "2026-10-29",
+ "title": "Daily Hob vom Donnerstag, 29.10.",
+ "headline": "Ein Computer im Modell, ein Lakehouse auf localhost und ein Update mit fehlendem Unterbau.",
+ "teaser": "3 Catches zum Donnerstag: Qwenputer, MiniLake und Alpines GitLab-Vorfallsbericht.",
+ "intro": "Heute geht es um die Schichten unter der Oberfläche: einen konstruierten Rechner innerhalb eines Sprachmodells, echte Datenarbeit hinter einer lokalen Cloud-API und eine Sicherheitslücke, die ein Anwendungsupdate überlebte. Ältere Veröffentlichungen sind als heutige Diskussionscatches markiert.",
+ "hero": "hero.jpg",
+ "heroAlt": "Abstrakte Linienillustration eines Prozessors mit Speicherzellen, verbundenen Datenscheiben und schützendem Bogen",
+ "heroCaption": "Illustration: KI-generiert für Daily Hob",
+ "sections": [
+  {
+   "category": "KI",
+   "short": "Qwenputer",
+   "title": "Qwenputer: Ein RISC-V-Rechner steckt in zusätzlichen Modellschichten.",
+   "body": "Experiment vom 22. Oktober, am Donnerstag diskutiert: Divyansh Agrawal ergänzt Qwen3.5-4B um einen deterministisch konstruierten 32-Bit-RISC-V-Kern. Zusätzliche Gewichte und Schichten führen Befehle während der Modellberechnung aus; angepasste Gated-DeltaNet-Zustände dienen als adressierbarer Speicher. Das ist kein vom unveränderten Modell spontan entdeckter Computer und kein externer Python-Aufruf. Der Autor berichtet erfolgreiche RISC-V-Tests und lange fehlerfreie Testläufe, die wir nicht selbst reproduziert haben. Der Checkpoint wächst auf 18,8 GB und benötigt einen kleinen Treiber zum Laden der Firmware. Ein gewöhnlicher generate-Aufruf reicht noch nicht; größere Rechnungen dauern Sekunden statt Millisekunden.",
+   "takeaway": "Ein ungewöhnliches Architektur- und Speicherexperiment, kein kostenloses Rechenupgrade für jedes Qwen-Modell. Eigene Testergebnisse, Zusatzschichten und Treiberbedarf gehören zur Einordnung.",
+   "url": "https://divagr.com/blog/qwenputer",
+   "cta": "Aufbau und Grenzen lesen",
+   "source": "Divyansh Agrawal · 22.10.2026 · Diskussion 29.10.2026 · Tests: Autorangaben"
+  },
+  {
+   "category": "Open Source",
+   "short": "MiniLake",
+   "title": "MiniLake: Databricks-APIs lokal testen, ohne eine Cloud-Umgebung zu starten.",
+   "body": "Am Donnerstag entdeckt, nicht erst heute entstanden: MiniLake ist ein MIT-lizenzierter lokaler Emulator für Teile der Databricks-API. SDK, CLI und Terraform lassen sich auf localhost umstellen. SQL läuft tatsächlich auf DuckDB, externe Delta-Tabellen verwenden echte Dateien, und Spark-Jobs laufen über Container. Die Grenzen sind ausdrücklich dokumentiert: Das SQL ist DuckDB-Dialekt, Cluster sind nur Zustandsautomaten, und Rechte sowie Identitäten werden nicht durchgesetzt. Jeder Token wird akzeptiert. Nicht implementierte Bereiche wie Model Registry oder Vector Search sollen mit 501 statt vorgetäuschtem Erfolg antworten. Die einfache Python-Installation und ein Container sind beschrieben; echte Spark-Jobs brauchen die passende Containerumgebung.",
+   "takeaway": "Für lokale Entwicklung und CI interessant, aber kein Sicherheitstest und kein vollständiger Databricks-Ersatz. Niemals über localhost hinaus freigeben oder echte Produktionsgeheimnisse hineinlegen.",
+   "url": "https://dmux.github.io/minilake/",
+   "cta": "Funktionsumfang und Grenzen prüfen",
+   "source": "MiniLake-Projektseite und GitHub-README · entdeckt 29.10.2026"
+  },
+  {
+   "category": "Informatik",
+   "short": "Alpine GitLab",
+   "title": "Alpines GitLab-Vorfall zeigt: Ein App-Update kann den verwundbaren Unterbau stehen lassen.",
+   "body": "Alpines Bericht vom 28. Oktober wird am Donnerstag diskutiert: Ein Angreifer versuchte am 20. und 21. Oktober, CVE-2026-97229 auf der eigenen GitLab-Instanz auszunutzen. Alpine fand keinen Beleg für erfolgreiche Codeausführung, konnte sie wegen fehlender Spuren aber nicht ausschließen und baute die Instanz neu auf. Besonders lehrreich: Das spätere GitLab-Upgrade allein beseitigte die Lücke nicht. Der Fix lag in gepatchtem Ruby; Alpines eigenes Containerimage nutzte dagegen Standard-Ruby. Laut Bericht wurden aports, Pakete und die Releases vom 21. Oktober gegen externe Aufzeichnungen geprüft, ohne Manipulationsbefund. Prüfungen für den verbleibenden verwundbaren Zeitraum werden erweitert. Das ist kein Beweis, dass die Kompromittierung sicher gelang oder dass jede denkbare Folge ausgeschlossen ist.",
+   "takeaway": "Bei selbst gebauten GitLab-Images auch die Ruby-Version und komponentenspezifische Patches prüfen. Betreiberbefund, verbleibende Unsicherheit und überprüfter Zeitraum nicht vermischen.",
+   "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
+   "cta": "Vorfallsbericht und Image-Hinweise lesen",
+   "source": "Alpine Linux · 28.10.2026 · Diskussion 29.10.2026"
+  }
+ ],
+ "notes": "Laufende Donnerstag-Auswahl. Quellenprüfung am 29.10.2026 gegen 11:33 Uhr Berlin. Autorentests und Betreiberbefunde sind entsprechend zugeschrieben. Kein Audio in dieser Textausgabe."
+}
