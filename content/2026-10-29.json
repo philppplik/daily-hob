@@ -2,8 +2,8 @@
  "date": "2026-10-29",
  "title": "Daily Hob vom Donnerstag, 29.10.",
  "headline": "Ein Computer im Modell, ein Lakehouse auf localhost und ein Update mit fehlendem Unterbau.",
- "teaser": "3 Catches zum Donnerstag: Qwenputer, MiniLake und Alpines GitLab-Vorfallsbericht.",
- "intro": "Heute geht es um die Schichten unter der Oberfläche: einen konstruierten Rechner innerhalb eines Sprachmodells, echte Datenarbeit hinter einer lokalen Cloud-API und eine Sicherheitslücke, die ein Anwendungsupdate überlebte. Ältere Veröffentlichungen sind als heutige Diskussionscatches markiert.",
+ "teaser": "5 Catches zum Donnerstag: offene Mistral-Large-4-Gewichte, Java-AOT-Praxis, Qwenputer, MiniLake und Alpines GitLab-Vorfallsbericht.",
+ "intro": "Heute geht es um die Schichten unter der Oberfläche: einen konstruierten Rechner innerhalb eines Sprachmodells, echte Datenarbeit hinter einer lokalen Cloud-API und eine Sicherheitslücke, die ein Anwendungsupdate überlebte. Ältere Veröffentlichungen sind als heutige Diskussionscatches markiert. Am Nachmittag kommen die jetzt veröffentlichten Mistral-Large-4-Gewichte mit eigener Lizenzgrenze und ein Praxisbericht über die Verteilung von Java-AOT-Caches dazu.",
  "hero": "hero.jpg",
  "heroAlt": "Abstrakte Linienillustration eines Prozessors mit Speicherzellen, verbundenen Datenscheiben und schützendem Bogen",
  "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -37,7 +37,27 @@
    "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
    "cta": "Vorfallsbericht und Image-Hinweise lesen",
    "source": "Alpine Linux · 28.10.2026 · Diskussion 29.10.2026"
+  },
+  {
+   "category": "KI",
+   "short": "Mistral Large 4",
+   "title": "Le Chonk bekommt offene Gewichte, aber keine beliebig freie Hosting-Lizenz.",
+   "body": "Mistral veröffentlicht am Donnerstag die verbesserten Gewichte von Mistral Large 4 nach der früheren API-Preview. Das multimodale Modell verarbeitet Text und Bilder; Hugging Face nennt ungefähr eine Billion Gesamtparameter, 49 Milliarden aktive Parameter und eine Million Tokens Kontext. Offizielle Varianten liegen in FP8 und NVFP4 vor. Low, Medium und High steuern den Reasoning-Aufwand. Wichtig ist die Lizenz: Die Mistral Ecosystem Open-Weight License ist eine MIT-Abwandlung. Unternehmen mit einem Model-as-a-Service-Angebot benötigen für die kommerzielle Nutzung eine gesonderte Lizenz. Offene Gewichte sind hier also nicht mit uneingeschränkt freier Open-Source-Nutzung gleichzusetzen. Mistral und der Hugging-Face-Launchtext nennen teils unterschiedliche Benchmarkwerte; ohne geklärte Vergleichsbedingungen übernehmen wir daraus keinen pauschalen Siegeranspruch.",
+   "takeaway": "Eine tatsächlich herunterladbare Veröffentlichung, nicht nur die alte Preview. Vor Self-Hosting Lizenz und Gesamtmodellgröße prüfen: Wenige aktive Experten beseitigen den Speicherbedarf der übrigen Gewichte nicht.",
+   "url": "https://mistral.ai/news/mistral-large-4-oss/",
+   "cta": "Gewichte und Lizenzbedingungen prüfen",
+   "source": "Mistral und Hugging Face · 29.10.2026 · Modellangaben: Anbieter/Distributionspartner"
+  },
+  {
+   "category": "Informatik",
+   "short": "Java AOT",
+   "title": "Java-AOT-Caches: Startup-Abkürzungen brauchen einen Test auf der Zielmaschine.",
+   "body": "XPipe-Entwickler Christopher Schnicks Bericht vom 23. Oktober wird am Donnerstag diskutiert. Er beschreibt Stolpersteine beim Verteilen von Java-Anwendungen mit AOT-Cache: CPU-spezifische Adapter, geänderte Moduloptionen, Installationspfade und Eingriffe durch Endpoint-Sicherheitssoftware können den Cache unbrauchbar machen oder in den beschriebenen Fällen Abstürze auslösen. Der Cache ist nicht dasselbe wie GraalVM Native Image: Die Anwendung läuft weiter auf der JVM, vorbereitete Klassen- und Profildaten sollen Start und Aufwärmen verkürzen. Der Artikel trennt aktuelle Cache-Bausteine von der für JDK 28 beschriebenen AOT-Codekompilierung. Er enthält ausdrücklich keine Performance-Messreihe; das ist ein Praxisbericht aus einer konkreten Anwendung, kein Beweis, dass jeder Java-AOT-Cache fehlerhaft ist.",
+   "takeaway": "Cache-Erzeugung in CI allein reicht nicht als Erfolgskriterium. Auf den tatsächlichen CPU-, Paketierungs- und Sicherheitskonfigurationen testen und prüfen, ob der Cache wirklich verwendet wird.",
+   "url": "https://xpipe.io/blog/java-aot-cache",
+   "cta": "Praxisbericht und Grenzen lesen",
+   "source": "Christopher Schnick / XPipe · 23.10.2026 · Diskussion 29.10.2026"
   }
  ],
- "notes": "Laufende Donnerstag-Auswahl. Quellenprüfung am 29.10.2026 gegen 11:33 Uhr Berlin. Autorentests und Betreiberbefunde sind entsprechend zugeschrieben. Kein Audio in dieser Textausgabe."
+ "notes": "Laufende Donnerstag-Auswahl. Quellenprüfung zuletzt am 29.10.2026 gegen 15:33 Uhr Berlin. Ältere Veröffentlichungen sind markiert. Autorentests, Modellangaben und Betreiberbefunde bleiben zugeschrieben; abweichende Mistral-Benchmarkzahlen werden nicht zu einer Rangliste vermischt. Kein Audio in dieser Textausgabe."
 }
