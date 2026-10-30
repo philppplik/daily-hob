@@ -2,8 +2,8 @@
   "date": "2026-10-30",
   "title": "Daily Hob vom Freitag, 30.10.",
   "headline": "Ein eingefrorenes CSS-Framework, der Himmel im Terminal und die Grenzen einer Rangliste.",
-  "teaser": "3 Catches zum Freitag: Pico CSS stellt die Pflege ein, Astroterm zeichnet den Sternenhimmel und Nathan Lambert hinterfragt KI-Gesamtnoten.",
-  "intro": "Heute schauen wir genauer auf vertraute Werkzeuge und Zahlen: Was bleibt von einem CSS-Framework nach dem Wartungsende? Was kann ein Terminal außer Logs anzeigen? Und wie viel sagt eine einzige Modellnote wirklich aus? Alle drei sind ältere Veröffentlichungen oder Projekte, die am Freitag neu diskutiert werden, keine behaupteten Neureleases.",
+  "teaser": "5 Catches zum Freitag: Cursors manipuliertes Claude-Code-Paket, Rust-Panic-Analyse, Pico CSS, Astroterm und das Benchmark-Dilemma.",
+  "intro": "Heute schauen wir genauer auf vertraute Werkzeuge und Zahlen: Was bleibt von einem CSS-Framework nach dem Wartungsende? Was kann ein Terminal außer Logs anzeigen? Und wie viel sagt eine einzige Modellnote wirklich aus? Alle drei sind ältere Veröffentlichungen oder Projekte, die am Freitag neu diskutiert werden, keine behaupteten Neureleases. Am Nachmittag kommen die konkrete Cursor-Sicherheitsmeldung und ein Rust-Werkzeug für versteckte Panic-Pfade dazu.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Linienillustration einer Terminal-Sternenkarte, einer Waage mit Messblöcken und eines gefalteten Softwareblatts in Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -37,7 +37,27 @@
       "url": "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
       "cta": "Analyse der Benchmark-Zielkonflikte lesen",
       "source": "Nathan Lambert / Interconnects · 28.10.2026 · Diskussion 30.10.2026 · Analyse und Einschätzung"
+    },
+    {
+      "category": "Sicherheit",
+      "short": "Cursor Extension",
+      "title": "Manipuliertes Claude-Code-Paket bei Cursor: Deinstallieren allein kann zu wenig sein.",
+      "body": "Cursors Sicherheitsmitteilung vom 29. Oktober wird am Freitag breit diskutiert: Eine manipulierte Kopie von Anthropic.claude-code 2.1.313 wurde über den Cursor Extension Marketplace verteilt. Cursor betont, dass diese Fassung nicht von Anthropic entwickelt wurde, und nennt höchstens 5.000 betroffene Nutzer. Der Schadcode sammelt Rechnerinformationen, fügt einen fremden SSH-Schlüssel hinzu und versucht, einen dauerhaften Rückzugang einzurichten. Fehlende Adminrechte und Programmierfehler können Teile dieses Zugangs verhindern; zurückgelassene Schlüssel und Startmechanismen bleiben trotzdem relevant. Laut Cursor sind Paket und Angreiferserver inzwischen entfernt beziehungsweise abgeschaltet. Das ist kein Beleg für einen allgemeinen Einbruch in Anthropic oder dafür, dass jede offizielle Claude-Code-Verteilung betroffen war.",
+      "takeaway": "Wer genau dieses Paket aus Cursors Marketplace installiert hat, sollte die offizielle Mitteilung samt Indikatoren und Bereinigungshinweisen prüfen. Ein Update oder bloßes Entfernen der Erweiterung beseitigt nicht zwingend alle Hinterlassenschaften. Keine Betroffenheit des eigenen Geräts ohne Prüfung annehmen.",
+      "url": "https://cursor.com/blog/claude-code-extension-security-notice",
+      "cta": "Cursors offizielle Sicherheitsmitteilung prüfen",
+      "source": "Cursor · 29.10.2026 · Phorion-Analyse, Diskussion 30.10.2026 · Umfang und Gegenmaßnahmen: Anbieterangaben"
+    },
+    {
+      "category": "Informatik",
+      "short": "Call Graph Analyzer",
+      "title": "Rust-Panics sichtbar machen, auch wenn im eigenen Code kein unwrap steht.",
+      "body": "Tweede golfs Beitrag vom 27. Oktober wird am Freitag diskutiert. Der mit Microsoft im Open Device Partnership entwickelte Call Graph Analyzer extrahiert Aufrufgraphen aus monomorphisiertem Rust-MIR. cargo cga check kann damit Panic-Pfade samt Abhängigkeiten und Standardbibliothek zeigen; außerdem lassen sich unerwünschte Funktionsaufrufe markieren. Der Preis: eine bestimmte Nightly-Toolchain, build-std und Installation aus einem lokalen Checkout statt direkt von crates.io. Die Analyse erfolgt vor manchen LLVM-Optimierungen, kann unerreichbare Panic-Pfade melden und rekonstruiert nicht exakt den Graphen des ausgelieferten Binärprogramms. Auch dynamische Aufrufe, Allowlist und instabile Compiler-Interna begrenzen die Aussagekraft. Der Beitrag verschweigt diese Schwächen nicht.",
+      "takeaway": "Ein nützliches Werkzeug für Reviews und Regressionstests in kritischen Rust-Pfaden. Kein Beweis, dass ein beliebiges fertiges Programm niemals abstürzt, und kein vollständiger Ersatz für Tests oder Fehlererholung.",
+      "url": "https://tweedegolf.nl/en/blog/242/finding-panics-with-call-graph-analyzer/",
+      "cta": "Ansatz, Diagnose und Grenzen lesen",
+      "source": "Tweede golf · 27.10.2026 · Diskussion 30.10.2026 · Entwicklungsbericht"
     }
   ],
-  "notes": "Laufende Freitag-Auswahl. Quellenprüfung am 30.10.2026 gegen 11:33 Uhr Berlin. Ältere Ankündigungen und Projekte sind ausdrücklich markiert. Keine universellen KI- oder Benchmark-Versprechen, kein Audio in dieser Textausgabe."
+  "notes": "Laufende Freitag-Auswahl. Quellenprüfung am 30.10.2026 gegen 15:33 Uhr Berlin. Ältere Ankündigungen und Projekte sind ausdrücklich markiert. Cursor-Betroffenheit gilt für das benannte Marketplace-Paket, nicht pauschal für alle Claude-Nutzer. Keine lokalen Sicherheitsprüfungen oder Bereinigungsskripte ausgeführt. Kein Audio in dieser Textausgabe."
 }
