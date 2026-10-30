@@ -2,8 +2,8 @@
   "date": "2026-10-30",
   "title": "Daily Hob vom Freitag, 30.10.",
   "headline": "Ein eingefrorenes CSS-Framework, der Himmel im Terminal und die Grenzen einer Rangliste.",
-  "teaser": "5 Catches zum Freitag: Cursors manipuliertes Claude-Code-Paket, Rust-Panic-Analyse, Pico CSS, Astroterm und das Benchmark-Dilemma.",
-  "intro": "Heute schauen wir genauer auf vertraute Werkzeuge und Zahlen: Was bleibt von einem CSS-Framework nach dem Wartungsende? Was kann ein Terminal außer Logs anzeigen? Und wie viel sagt eine einzige Modellnote wirklich aus? Alle drei sind ältere Veröffentlichungen oder Projekte, die am Freitag neu diskutiert werden, keine behaupteten Neureleases. Am Nachmittag kommen die konkrete Cursor-Sicherheitsmeldung und ein Rust-Werkzeug für versteckte Panic-Pfade dazu.",
+  "teaser": "7 Catches zum Freitag: Geist Serif und LaTeX-Blumen ergänzen Cursors Sicherheitsmeldung, Rust-Panic-Analyse, Pico CSS, Astroterm und Benchmark-Kritik.",
+  "intro": "Heute schauen wir genauer auf vertraute Werkzeuge und Zahlen: Was bleibt von einem CSS-Framework nach dem Wartungsende? Was kann ein Terminal außer Logs anzeigen? Und wie viel sagt eine einzige Modellnote wirklich aus? Alle drei sind ältere Veröffentlichungen oder Projekte, die am Freitag neu diskutiert werden, keine behaupteten Neureleases. Am Nachmittag kommen die konkrete Cursor-Sicherheitsmeldung und ein Rust-Werkzeug für versteckte Panic-Pfade dazu. Am Abend wird es gestalterisch: Vercel veröffentlicht Geist Serif, und Florilegium berechnet Blumenränder direkt in LuaLaTeX.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Linienillustration einer Terminal-Sternenkarte, einer Waage mit Messblöcken und eines gefalteten Softwareblatts in Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -57,7 +57,27 @@
       "url": "https://tweedegolf.nl/en/blog/242/finding-panics-with-call-graph-analyzer/",
       "cta": "Ansatz, Diagnose und Grenzen lesen",
       "source": "Tweede golf · 27.10.2026 · Diskussion 30.10.2026 · Entwicklungsbericht"
+    },
+    {
+      "category": "Design",
+      "short": "Geist Serif",
+      "title": "Geist bekommt eine Serifenschrift für große Überschriften, nicht gleich eine ganze Textfamilie.",
+      "body": "Vercel veröffentlicht heute Geist Serif als kontrastreiche Display-Schrift für Headlines und Poster. Der erste Stand enthält eine Gewichtsstufe, Regular. Vier Varianten verändern die Form der Punkte, etwa auf i und j: rund, quadratisch, dreieckig oder herzförmig. Das geht als einzelne Fontdatei oder über die variable Achse ELSH. Versal- und x-Höhe passen zu Geist Sans; Ober- und Unterlängen unterscheiden sich trotzdem, ein automatischer problemloser Tausch jedes Layouts ist daraus nicht abzuleiten. Der Einstieg läuft über npm i geist oder den Download der Fontdateien. Weitere Gewichte, eine Textfassung, Kursiven und kyrillische Zeichen beschreibt Vercel als Vorhaben, nicht als heute bereits fertige Bestandteile.",
+      "takeaway": "Ein konkreter neuer Baustein für redaktionelle Webgestaltung. Für Headlines ausprobieren, aber kleine Schriftgrößen, Umbrüche und die tatsächlich ausgelieferte Fontdatei selbst prüfen.",
+      "url": "https://vercel.com/blog/introducing-geist-serif",
+      "cta": "Schrift, Varianten und Einbindung ansehen",
+      "source": "Vercel · 30.10.2026 · Veröffentlichung und Roadmap: Anbieterangaben"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Florilegium",
+      "title": "LaTeX lässt Blumen in den freien Seitenrand wachsen.",
+      "body": "Das heute entdeckte MIT-Projekt Florilegium berechnet florale Seitenränder direkt beim LuaLaTeX-Satz: Blüten, Blätter und Stiele werden aus parametrischen Kurven gezeichnet und als Vektorpfade ins PDF geschrieben, statt fertige Bilder einzubetten. Neben einer fest komponierten Variante gibt es einen grown-Modus, der freie Flächen sucht und Zweige hineinsetzt. Der Ansatz greift eine Ornament-Idee von SIGGRAPH 1998 auf. Mit gleichem Seed bleibt die Zeichnung reproduzierbar; die Seitennummer kann diesen Seed bestimmen. Die README beschreibt LuaLaTeX-Builds, eine Docker-Umgebung und eine eigenständige PostScript-Portierung. Wachstumsvideos entstehen separat mit weiteren Werkzeugen; das heißt nicht, dass jede PDF-Anzeige animierte Blumen abspielt.",
+      "takeaway": "Ein schöner Gegenbeweis zur Vorstellung, LaTeX könne nur Formeln. Spannend als generative Gestaltung mit nachvollziehbaren Regeln, nicht als von uns getestetes Layoutpaket für jedes Dokument.",
+      "url": "https://github.com/kevinraymond/florilegium",
+      "cta": "Blumenalgorithmus und Beispieldokumente ansehen",
+      "source": "kevinraymond/florilegium · GitHub-README · entdeckt und diskutiert 30.10.2026 · MIT"
     }
   ],
-  "notes": "Laufende Freitag-Auswahl. Quellenprüfung am 30.10.2026 gegen 15:33 Uhr Berlin. Ältere Ankündigungen und Projekte sind ausdrücklich markiert. Cursor-Betroffenheit gilt für das benannte Marketplace-Paket, nicht pauschal für alle Claude-Nutzer. Keine lokalen Sicherheitsprüfungen oder Bereinigungsskripte ausgeführt. Kein Audio in dieser Textausgabe."
+  "notes": "Laufende Freitag-Auswahl. Quellenprüfung am 30.10.2026 gegen 19:33 Uhr Berlin. Ältere Ankündigungen und Projekte sind ausdrücklich markiert. Cursor-Betroffenheit gilt für das benannte Marketplace-Paket. Keine lokalen Sicherheitsprüfungen oder Bereinigungsskripte ausgeführt. Font-Roadmap von aktuellem Umfang getrennt; Florilegium nicht selbst kompiliert. Kein Audio in dieser Textausgabe."
 }
