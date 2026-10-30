@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-30",
+  "title": "Daily Hob vom Freitag, 30.10.",
+  "headline": "Ein eingefrorenes CSS-Framework, der Himmel im Terminal und die Grenzen einer Rangliste.",
+  "teaser": "3 Catches zum Freitag: Pico CSS stellt die Pflege ein, Astroterm zeichnet den Sternenhimmel und Nathan Lambert hinterfragt KI-Gesamtnoten.",
+  "intro": "Heute schauen wir genauer auf vertraute Werkzeuge und Zahlen: Was bleibt von einem CSS-Framework nach dem Wartungsende? Was kann ein Terminal außer Logs anzeigen? Und wie viel sagt eine einzige Modellnote wirklich aus? Alle drei sind ältere Veröffentlichungen oder Projekte, die am Freitag neu diskutiert werden, keine behaupteten Neureleases.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Linienillustration einer Terminal-Sternenkarte, einer Waage mit Messblöcken und eines gefalteten Softwareblatts in Gelb und Mint",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Design",
+      "short": "Pico CSS",
+      "title": "Pico CSS wird nicht mehr gepflegt. Bestehende Seiten verschwinden deshalb nicht.",
+      "body": "Die bereits am 4. Oktober angekündigte Einstellung wird am Freitag diskutiert: Pico CSS nennt v2.1.1 als letzte Version. Die Repositories sind archiviert, neue Issues, Pull Requests und Releases gibt es nicht mehr. npm-Paket, jsDelivr-CDN und Website sollen laut Projekt langfristig online bleiben. Der Maintainer begründet die Entscheidung unter anderem mit KI-generiertem HTML/CSS und dem Aufwand eines vollständigen Umbaus auf moderne CSS-Technik. Das ist seine Einschätzung, kein Beleg dafür, dass KI jede Oberfläche automatisch zugänglich macht. Der MIT-Code darf geforkt werden; Name und Logo sind ausdrücklich nicht Teil dieser Lizenz.",
+      "takeaway": "Kein Anlass, eine funktionierende Seite panisch umzubauen. Aber fehlende künftige Pflege in die eigene Abhängigkeitsplanung aufnehmen und einen Fork nicht mit der Originalmarke verwechseln.",
+      "url": "https://picocss.com/docs/maintenance",
+      "cta": "Wartungsende und Folgen nachlesen",
+      "source": "Pico CSS · Ankündigung 04.10.2026 · Diskussion 30.10.2026"
+    },
+    {
+      "category": "Open Source",
+      "short": "Astroterm",
+      "title": "Astroterm: Ein Planetarium passt auch ins Terminal.",
+      "body": "Freitagsfund eines älteren Projekts: Astroterm zeichnet Sterne, Planeten, Mondphasen und Sternbilder in eine Terminalansicht. Das C-Programm ist MIT-lizenziert und lässt Ort, Datum und Zeit konfigurieren. Die README beschreibt unter anderem Homebrew, Arch- und Fedora-Pakete; auf dem Mac lautet der Einstieg brew install astroterm. Farbige Sternbilder lassen sich etwa mit astroterm -cC --city Berlin anzeigen. Wichtig für historische Ansichten: Der datetime-Parameter erwartet UTC, nicht die lokale Uhrzeit. Auch den Ort muss man selbst angeben; die Terminalansicht kennt nicht automatisch den eigenen Standort. Darstellungsgrenzen bleiben die Zeichenauflösung und die verwendeten astronomischen Näherungen.",
+      "takeaway": "Ein schöner kleiner Technik-Ausflug zwischen zwei Builds. Für eine Vorschau des Himmels praktisch, ohne daraus eine Präzisions- oder Sichtbarkeitsgarantie für echte Beobachtungen zu machen.",
+      "url": "https://github.com/da-luce/astroterm/",
+      "cta": "Installation und Himmelsansicht ansehen",
+      "source": "da-luce/astroterm · Projekt-README · älteres Projekt, Diskussion 30.10.2026"
+    },
+    {
+      "category": "KI",
+      "short": "Benchmark-Dilemma",
+      "title": "Eine KI-Gesamtnote misst immer auch die Entscheidung ihrer Erfinder.",
+      "body": "Nathan Lamberts Essay vom 28. Oktober wird am Freitag diskutiert. Am Beispiel des Artificial-Analysis-Index v5 beschreibt er den Zielkonflikt aggregierter KI-Benchmarks: Eine einzelne Zahl lässt sich leicht vergleichen, aber Aufgabenwahl und Gewichtung entscheiden mit darüber, wer vorne liegt. Ein Modell für bestimmte Coding-Aufgaben kann nützlich sein, ohne bei wissenschaftlichen Grenzaufgaben zu führen. Verborgene Testaufgaben erschweren gezieltes Training auf bekannte Fragen, nehmen der Öffentlichkeit aber auch Möglichkeiten, Fehler im Benchmark zu finden. Lambert plädiert für mehrere Indizes mit unterschiedlichen Schwerpunkten. Das ist eine fachliche Analyse und Position, kein Nachweis manipulierter Ergebnisse und keine neue Rangliste von uns.",
+      "takeaway": "Vor einem Modellwechsel die eigenen Aufgaben, Kosten und Fehlermuster prüfen. Eine Gesamtnote kann die Vorauswahl erleichtern, ersetzt aber keinen Test des konkreten Einsatzes.",
+      "url": "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
+      "cta": "Analyse der Benchmark-Zielkonflikte lesen",
+      "source": "Nathan Lambert / Interconnects · 28.10.2026 · Diskussion 30.10.2026 · Analyse und Einschätzung"
+    }
+  ],
+  "notes": "Laufende Freitag-Auswahl. Quellenprüfung am 30.10.2026 gegen 11:33 Uhr Berlin. Ältere Ankündigungen und Projekte sind ausdrücklich markiert. Keine universellen KI- oder Benchmark-Versprechen, kein Audio in dieser Textausgabe."
+}
