@@ -2,8 +2,8 @@
   "date": "2026-10-29",
   "title": "Daily Hob vom Donnerstag, 29.10.",
   "headline": "Ein Computer im Modell, ein Lakehouse auf localhost und ein Update mit fehlendem Unterbau.",
-  "teaser": "8 Catches zum Donnerstag: Mistrals offene Gewichte, Go ohne neue Heap-Allokationen, GPU-Rack-Planung, Fowlers LLM Voice und vier weitere Technikgeschichten.",
-  "intro": "Heute geht es um die Schichten unter der Oberfläche: einen konstruierten Rechner innerhalb eines Sprachmodells, echte Datenarbeit hinter einer lokalen Cloud-API und eine Sicherheitslücke, die ein Anwendungsupdate überlebte. Ältere Veröffentlichungen sind als heutige Diskussionscatches markiert. Am Nachmittag kommen die jetzt veröffentlichten Mistral-Large-4-Gewichte mit eigener Lizenzgrenze und ein Praxisbericht über die Verteilung von Java-AOT-Caches dazu. Am Abend ergänzen wir einen experimentellen Go-Allokationsprüfer, die Ausfall- und Platzierungsrechnung hinter GPU-Racks und Martin Fowlers Gegenpunkt zur glatten KI-Prosa.",
+  "teaser": "10 Catches zum Donnerstag: offene Mistral-Gewichte, PyTorch 2.15, ein Spielweltmodell auf dem Pico, Qwenputer und sechs weitere Technikgeschichten.",
+  "intro": "Der Donnerstag führt durch die Schichten unter der Oberfläche: ein konstruierter Rechner im Sprachmodell, offene Modellgewichte mit Lizenzgrenze, lokale Daten-APIs und ein Framework-Upgrade mit neuen Systemanforderungen. Dazu kommen ein GitLab-Vorfall, Java-AOT-Praxis, Go-Allokationschecks und GPU-Rack-Planung. Zum Schluss: Fowlers Gegenpunkt zur glatten KI-Prosa und ein winziges Spielweltmodell. Ältere Veröffentlichungen sind als Donnerstag-Diskussionscatches markiert.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Linienillustration eines Prozessors mit Speicherzellen, verbundenen Datenscheiben und schützendem Bogen",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -87,7 +87,27 @@
       "url": "https://martinfowler.com/bliki/LLM-Voice.html",
       "cta": "Fowlers Essay lesen",
       "source": "Martin Fowler · 29.10.2026 · Essay und persönliche Einschätzung"
+    },
+    {
+      "category": "Open Source",
+      "short": "PyTorch 2.15",
+      "title": "PyTorch 2.15 ist final: neue GPU-Pfade, aber auch neue Systemgrenzen.",
+      "body": "Der Release-Blog trägt den 28. Oktober; die GA-Mitteilung mit veröffentlichten Binärpaketen folgt um 23:19 UTC, also am Donnerstag um 00:19 Uhr Berlin. PyTorch 2.15 macht das überarbeitete NCCL-Backend zum Standard für verteilte NVIDIA-Jobs und ergänzt einen Flight Recorder für hängende Kollektivoperationen. Apple Silicon bekommt FP8-Unterstützung und neue Decode-Kernel; torch.compile unterstützt jetzt Python 3.15. Wichtig vor dem Upgrade: Python 3.10 fällt weg, für MPS-Beschleunigung braucht es macOS 15 oder neuer. Der Blog nennt TORCH_DIST_USE_NCCL2=0 und nccl-legacy als Rückweg zum alten Backend. Solche Übergangspfade ersetzen keinen Test der eigenen verteilten Jobs. Einzelne veröffentlichte Kernel-Speedups sind keine Garantie für denselben Gewinn in jedem Modell.",
+      "takeaway": "Ein substanzielles Framework-Update, das man in einer separaten Umgebung mit den eigenen Modellen, Erweiterungen und verteilten Läufen prüfen sollte. Systemanforderungen zuerst, Performance danach.",
+      "url": "https://pytorch.org/blog/pytorch-2-15-release-blog/",
+      "cta": "Release und Upgrade-Hinweise lesen",
+      "source": "PyTorch-Release-Blog · 28.10.2026 · GA-Mitteilung 29.10., 00:19 Uhr Berlin · Leistungsangaben: Projekt"
+    },
+    {
+      "category": "Wildcard",
+      "short": "tinyworldformer",
+      "title": "Ein Pico 2 W träumt kleine Spiele, während ein zweites Netz sie spielt.",
+      "body": "Das ältere Projekt tinyworldformer wird am Donnerstag diskutiert. Auf einem Raspberry Pi Pico 2 W erzeugt ein kleines Weltmodell den nächsten Spielzustand samt Belohnung; ein zweites Netz wählt die Aktion. Der int8-Transformer verwendet denselben Block mehrfach und kommt je nach Spiel auf 26.000 bis 131.000 Parameter. Es sind getrennte Modelle für vereinfachte Spiele wie Pong, Breakout oder Doom-lite, keine universelle Spielengine. Das Weltmodell wird außerhalb des Mikrocontrollers trainiert; der kleine Spielagent kann dagegen direkt auf dem Board dazulernen. Die README erklärt auch, wie Agenten Modellfehler ausnutzen, etwa Belohnungen ohne zerstörten Stein erhalten. Gemeldete Genauigkeitswerte stammen aus Autorentests. Der Autor nennt noch keine gemessene Pico-Bildrate; Desktop- und Browserzeiten sind nicht mit der Board-Leistung gleichzusetzen.",
+      "takeaway": "Ein starkes Lernprojekt für winzige Weltmodelle, Quantisierung und Reinforcement Learning. Der spannendste Teil ist der Abgleich zwischen erlernter Spielwelt und echten Regeln.",
+      "url": "https://github.com/SheepSeb/tinyworldformer",
+      "cta": "Netze, Firmware und Fehlerfälle ansehen",
+      "source": "SheepSeb · GitHub-README · älteres Projekt, Diskussion 29.10.2026 · Tests: Autorangaben"
     }
   ],
-  "notes": "Laufende Donnerstag-Auswahl. Quellenprüfung zuletzt am 29.10.2026 gegen 15:33 Uhr Berlin. Ältere Veröffentlichungen sind markiert. Autorentests, Modellangaben und Betreiberbefunde bleiben zugeschrieben; abweichende Mistral-Benchmarkzahlen werden nicht zu einer Rangliste vermischt. Kein Audio in dieser Textausgabe. Abendupdate 29.10., 19:34 Uhr: noalloc, Rack-Scheduling und LLM Voice ergänzt. Herstellerzahlen und persönliche Positionen sind als solche markiert."
+  "notes": "Abgeschlossene Donnerstag-Ausgabe für den 29.10.2026. Quellenprüfung am 30.10. gegen 06:18 Uhr Berlin. Ältere Veröffentlichungen sind markiert. Autorentests, Modellangaben und Betreiberbefunde bleiben zugeschrieben. Mistral-Benchmarkzahlen werden nicht vermischt; SkyPilots Kapazitätsmodell ist kein allgemeiner Trainingsspeedup. PyTorch-GA-Zeit von UTC auf Berlin umgerechnet. Kein Audio in dieser Textausgabe."
 }
