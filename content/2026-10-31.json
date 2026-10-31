@@ -2,8 +2,8 @@
   "date": "2026-10-31",
   "title": "Daily Hob vom Samstag, 31.10.",
   "headline": "Eine Hörbox ohne Katalogzwang, WireGuard ohne verstecktes I/O und BeOS im Browser.",
-  "teaser": "5 Catches zum Samstag: Prospero und DeepSeeks Forschungsagent ergänzen Marelleo, sanstun und BeOS im Browser.",
-  "intro": "Heute geht es um Kontrolle über kleine und große Systeme: eigene Geschichten auf einer selbst gebauten Hörbox, eine klar getrennte Netzwerk-Zustandsmaschine und ein altes Betriebssystem, das sich direkt im Browser erkunden lässt. Marelleo und BeOS sind bewusst datierte Diskussionsfunde, keine heute erfundenen Neureleases. Am Nachmittag kommen zwei neue Coding-Agenten-Ansätze dazu: ein schlank gedachtes C++-Harness und ein ausdrücklich unfertiger Forschungsprototyp.",
+  "teaser": "7 Catches zum Samstag: gBench und Myriads Lichtsucher ergänzen Prospero, DeepSeeks Forschungsagenten, Marelleo, sanstun und BeOS.",
+  "intro": "Heute geht es um Kontrolle über kleine und große Systeme: eigene Geschichten auf einer selbst gebauten Hörbox, eine klar getrennte Netzwerk-Zustandsmaschine und ein altes Betriebssystem, das sich direkt im Browser erkunden lässt. Marelleo und BeOS sind bewusst datierte Diskussionsfunde, keine heute erfundenen Neureleases. Am Nachmittag kommen zwei neue Coding-Agenten-Ansätze dazu: ein schlank gedachtes C++-Harness und ein ausdrücklich unfertiger Forschungsprototyp. Am Abend folgen gBenchs getrennte Testebenen und eine interaktive Erklärung, wie einfache Schaltungen erstaunliches Verhalten erzeugen.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte dünne Linienillustration einer Hörbox, paralleler Netzwerktunnel mit Schloss und eines Retro-Monitors auf hellem Papier mit gelben und mintfarbenen Akzenten",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -57,7 +57,27 @@
       "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
       "cta": "README und ausdrückliche Prototyp-Grenzen lesen",
       "source": "deepseek-ai/dsh-superagent-prototype · Repository erstellt31.10.2026 · MIT · Umfang und Reife laut README"
+    },
+    {
+      "category": "KI",
+      "short": "gBench",
+      "title": "gBench verbindet Serving-Messungen mit drei Ebenen von Modelltests.",
+      "body": "Samstagsfund aus dem gestern angelegten Repository google-deepmind/gbench: Die Apache-2.0-lizenzierte Suite misst sowohl Serving-Verhalten auf der verwendeten Hardware als auch Fähigkeiten offener Sprach- und Vision-Modelle. Sie kann einen lokalen vLLM-Server starten oder einen OpenAI-kompatiblen Endpunkt ansprechen. Die README trennt drei Ebenen: akademische Evaluations-Suites, 16 Golden-Set-Smoke-Checks und eine mehrstufige Agenten-Qualitätssuite auf Basis eines festgehaltenen GemmaClaw-Stands. Der genannte Katalog umfasst 86 reguläre Python-Suites; zusätzliche Suites müssen ausdrücklich benannt werden. Nicht alles läuft mit derselben einfachen Installation: Manche Tests brauchen weitere Abhängigkeiten, Container oder Helfermodelle über eine API.",
+      "takeaway": "Interessant, wenn vor einem Modellwechsel sowohl Antwortqualität als auch Latenz geprüft werden sollen. Eine Sammlung vieler Tests ist keine universelle Intelligenznote. Protokoll, Modellvorlage, Hardware und Datensatzlizenzen gehören zum Ergebnis; wir haben keine Benchmarkläufe ausgeführt.",
+      "url": "https://github.com/google-deepmind/gbench",
+      "cta": "Messverfahren, Testebenen und Voraussetzungen ansehen",
+      "source": "google-deepmind/gbench · Repository erstellt30.10.2026, Samstagsfund31.10. · aktuelle README; Umfang laut Projekt"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Myriad",
+      "title": "Vier Neuronen reichen für Verhalten, das wir vorschnell als Gefühl lesen.",
+      "body": "Der am 29. Oktober vorgestellte Myriad-Auftakt von Aatish Bhatia und Arkarup Banerjee wird heute diskutiert. In Let’s Build a Brain bauen die Autoren virtuelle Lichtsucher aus Sensoren, Antrieben und sehr einfachen Verbindungen. Gleichseitige oder gekreuzte Verdrahtung und erregende oder hemmende Signale ändern, ob die kleinen Wesen auf Licht zuhalten, davor fliehen oder sich dort verlangsamen. Die interaktiven Grafiken machen nachvollziehbar, wie unterschiedlich dieselben wenigen Teile wirken können. Die Gedankenexperimente gehen auf Valentino Braitenbergs Buch Vehicles von1984 zurück. Es ist eine bewusst vereinfachte Erklärung, kein neues biologisches Experiment.",
+      "takeaway": "Eine starke visuelle Übung gegen vorschnelle Vermenschlichung: Äußerlich zielgerichtetes Verhalten verrät noch nicht, wie ein System innen arbeitet. Die hier gezeigten Schaltungen lernen nicht; ihre Verbindungen bleiben im Artikel fest.",
+      "url": "https://aatishb.com/myriad/lets-build-a-brain/",
+      "cta": "Interaktive Lichtsucher und Schaltungen erkunden",
+      "source": "Aatish Bhatia / Arkarup Banerjee · vorgestellt29.10.2026, Diskussion31.10. · https://aatishb.com/blog/2026/introducing-myriad/"
     }
   ],
-  "notes": "Laufende Samstag-Auswahl. Quellen gelesen am31.10.2026 gegen11:33 Uhr Berlin. Marelleo vom15.10. und BeOS-Bericht vom30.10. explizit als ältere Diskussionsfunde. Keine Hardware aufgebaut, kein VPN-Benchmark oder Sicherheitsaudit durchgeführt. sanstun: Blog nennt Apache2.0, aktuelle crates.io-Metadaten/README BSD-3-Clause; deshalb keine eindeutige Lizenz behauptet. Kein Audio in dieser Textausgabe. Nachmittagsprüfung31.10.2026 gegen15:33Berlin: Prospero und dsh-superagent als neue Vorstellungen ergänzt; Autorenversprechen nicht als eigene Tests dargestellt, Prototyp und Editionsgrenzen markiert."
+  "notes": "Laufende Samstag-Auswahl. Quellen gelesen am31.10.2026 gegen11:33 Uhr Berlin. Marelleo vom15.10. und BeOS-Bericht vom30.10. explizit als ältere Diskussionsfunde. Keine Hardware aufgebaut, kein VPN-Benchmark oder Sicherheitsaudit durchgeführt. sanstun: Blog nennt Apache2.0, aktuelle crates.io-Metadaten/README BSD-3-Clause; deshalb keine eindeutige Lizenz behauptet. Kein Audio in dieser Textausgabe. Nachmittagsprüfung31.10.2026 gegen15:33Berlin: Prospero und dsh-superagent als neue Vorstellungen ergänzt; Autorenversprechen nicht als eigene Tests dargestellt, Prototyp und Editionsgrenzen markiert. Abendprüfung31.10.2026 gegen19:33Berlin: gBench-README vollständig gelesen, Repository vom30.10.; Myriad als älterer Diskussionsfund, Vorstellung29.10. Keine eigenen Modelltests oder biologischen Versuche."
 }
