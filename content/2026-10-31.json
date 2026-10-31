@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-31",
+  "title": "Daily Hob vom Samstag, 31.10.",
+  "headline": "Eine Hörbox ohne Katalogzwang, WireGuard ohne verstecktes I/O und BeOS im Browser.",
+  "teaser": "3 Catches zum Samstag: Marelleos offene ESP32-Hörbox, sanstuns WireGuard-Baustein in Rust und ein Browser-Ausflug zu BeOS.",
+  "intro": "Heute geht es um Kontrolle über kleine und große Systeme: eigene Geschichten auf einer selbst gebauten Hörbox, eine klar getrennte Netzwerk-Zustandsmaschine und ein altes Betriebssystem, das sich direkt im Browser erkunden lässt. Marelleo und BeOS sind bewusst datierte Diskussionsfunde, keine heute erfundenen Neureleases.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte dünne Linienillustration einer Hörbox, paralleler Netzwerktunnel mit Schloss und eines Retro-Monitors auf hellem Papier mit gelben und mintfarbenen Akzenten",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Open Source",
+      "short": "Marelleo",
+      "title": "Eine Figur draufstellen, eigene Geschichten hören: Marelleo öffnet die Hörbox.",
+      "body": "Samstagsfund eines älteren Projekts: Arnaud Aubrys Baubericht ist vom 15. Oktober. Marelleo kombiniert einen ESP32-S3, einen NFC-Leser, eine microSD-Karte und einen Lautsprecher. Ein Tag unter einer Figur startet zugeordnete MP3- oder M4A-Dateien, alternativ einen Radiostream. Inhalte und Zuordnungen werden über eine lokale Browseroberfläche verwaltet, ohne Pflichtkonto oder Abo. Firmware, Gehäuse- und Fertigungsdateien sind laut Projekt MIT-lizenziert. Der Autor beschreibt einen Einstieg auf dem Steckbrett und später eine eigene Platine. Wichtig: Die Firmware passt zu den genau dokumentierten Aufbauten; abweichende Verdrahtung erfordert Codeänderungen. Die Standardfirmware bezieht Updates vom Dienst des Autors, ist also nicht in jeder Funktion völlig netzunabhängig.",
+      "takeaway": "Ein sympathisches Lernprojekt statt einer fertig geprüften Kinderbox. Besonders lesenswert sind die dokumentierten Fehler bei Stromversorgung, Verdrahtung und Updates. Akku, Gehäuse und Sicherheit nicht allein deshalb als erledigt ansehen, weil der Prototyp beim Autor funktioniert.",
+      "url": "https://zebra.rodeo/en/blog/marelleo/",
+      "cta": "Baubericht, Dateien und Fallstricke ansehen",
+      "source": "Arnaud Aubry / Zebra Rodeo · 15.10.2026 · am 31.10. diskutiert; Projekt-README https://github.com/Zebra-Rodeo/marelleo"
+    },
+    {
+      "category": "Informatik",
+      "short": "sanstun",
+      "title": "WireGuard als Rust-Zustandsmaschine: sanstun trennt Paketverwaltung und Kryptografie.",
+      "body": "Firezone stellt heute sanstun vor, eine Userspace-Implementierung der WireGuard-Zustandsmaschine in Rust. Sans-IO heißt hier: Netzwerkzugriffe, Zeit und Zufallsseeds kommen von außen. Die Bibliothek öffnet selbst keine UDP-Sockets oder TUN-Geräte und puffert ausgehende Pakete nicht intern. Besonders interessant ist die aufgeteilte Datenverarbeitung: Der zuständige Thread verwaltet etwa Sitzung und Paketzähler; die eigentliche Verschlüsselung oder Entschlüsselung kann auf Worker-Threads wandern. Das schafft Spielraum für Parallelität innerhalb eines Tunnels. Firezones im Beitrag diskutierter theoretischer Speedup ist ausdrücklich kein nachgewiesener Faktor für ein komplettes VPN. Das Paket ist auf crates.io, und Firezones eigener boringtun-Fork gilt damit als abgelöst.",
+      "takeaway": "Ein Baustein für Netzwerkentwickler, keine fertige VPN-App. Laut Paket-README liegt kein formales Sicherheitsaudit vor; Routing, Prüfung innerer IP-Pakete und ausreichend zufällige Seeds bleiben Aufgabe der Anwendung. Bei Lizenzfragen die konkrete Version prüfen: Blog und Paketmetadaten nennen unterschiedliche Lizenzen.",
+      "url": "https://www.firezone.dev/blog/introducing-sanstun",
+      "cta": "API-Entwurf und Parallelisierung lesen",
+      "source": "Firezone · 31.10.2026 · aktuelle Paket-README: https://crates.io/crates/sanstun · Anbieterangaben, nicht selbst getestet"
+    },
+    {
+      "category": "Wildcard",
+      "short": "BeOS im Browser",
+      "title": "Infinite Mac lässt BeOS starten und zeigt dabei, was ein zweites Betriebssystem am Emulator verbessert.",
+      "body": "Der Bericht vom Freitag, 30. Oktober, wird am Samstag diskutiert: Infinite Mac bietet nun mehrere PowerPC-Versionen von BeOS direkt im Browser. Große Disk-Images werden beim Zugriff gestreamt, Software steht auf Infinite HD bereit, und eigene Arbeit kann auf Saved HD liegen. Der technische Teil ist fast spannender als die Nostalgie: Laut Entwickler kamen beim Einbau Fehler in Tastatur-, Video- und Dateisystemdetails der bisherigen Mac-Emulation zum Vorschein. Ein unabhängig entwickeltes Betriebssystem nutzte die emulierte Hardware anders und deckte damit unbeabsichtigte Annahmen auf. Dazu kommen Screenshot- und Videoaufnahmen der emulierten Anzeige. Es geht um historische Systeme im Emulator, nicht um ein neues oder sicherheitsgepflegtes BeOS.",
+      "takeaway": "Ein niedrigschwelliger Ausflug in eine andere Desktop-Idee. Der praktische Entwicklungs-Lerneffekt: Ein zweiter echter Nutzer derselben Schnittstelle kann Fehler finden, die beim bisherigen Stammgast nie auffallen. Keine vertraulichen Daten in ein historisches Gastsystem legen.",
+      "url": "https://blog.persistent.info/2026/10/infinite-mac-beos.html",
+      "cta": "BeOS-Erweiterung und Emulationsdetails ansehen",
+      "source": "Mihai Parparita / persistent.info · 30.10.2026 · Samstagsdiskussion31.10. · ausprobieren: https://infinitemac.org/?filter=beos"
+    }
+  ],
+  "notes": "Laufende Samstag-Auswahl. Quellen gelesen am31.10.2026 gegen11:33 Uhr Berlin. Marelleo vom15.10. und BeOS-Bericht vom30.10. explizit als ältere Diskussionsfunde. Keine Hardware aufgebaut, kein VPN-Benchmark oder Sicherheitsaudit durchgeführt. sanstun: Blog nennt Apache2.0, aktuelle crates.io-Metadaten/README BSD-3-Clause; deshalb keine eindeutige Lizenz behauptet. Kein Audio in dieser Textausgabe."
+}
