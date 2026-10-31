@@ -2,8 +2,8 @@
   "date": "2026-10-31",
   "title": "Daily Hob vom Samstag, 31.10.",
   "headline": "Eine Hörbox ohne Katalogzwang, WireGuard ohne verstecktes I/O und BeOS im Browser.",
-  "teaser": "3 Catches zum Samstag: Marelleos offene ESP32-Hörbox, sanstuns WireGuard-Baustein in Rust und ein Browser-Ausflug zu BeOS.",
-  "intro": "Heute geht es um Kontrolle über kleine und große Systeme: eigene Geschichten auf einer selbst gebauten Hörbox, eine klar getrennte Netzwerk-Zustandsmaschine und ein altes Betriebssystem, das sich direkt im Browser erkunden lässt. Marelleo und BeOS sind bewusst datierte Diskussionsfunde, keine heute erfundenen Neureleases.",
+  "teaser": "5 Catches zum Samstag: Prospero und DeepSeeks Forschungsagent ergänzen Marelleo, sanstun und BeOS im Browser.",
+  "intro": "Heute geht es um Kontrolle über kleine und große Systeme: eigene Geschichten auf einer selbst gebauten Hörbox, eine klar getrennte Netzwerk-Zustandsmaschine und ein altes Betriebssystem, das sich direkt im Browser erkunden lässt. Marelleo und BeOS sind bewusst datierte Diskussionsfunde, keine heute erfundenen Neureleases. Am Nachmittag kommen zwei neue Coding-Agenten-Ansätze dazu: ein schlank gedachtes C++-Harness und ein ausdrücklich unfertiger Forschungsprototyp.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte dünne Linienillustration einer Hörbox, paralleler Netzwerktunnel mit Schloss und eines Retro-Monitors auf hellem Papier mit gelben und mintfarbenen Akzenten",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -37,7 +37,27 @@
       "url": "https://blog.persistent.info/2026/10/infinite-mac-beos.html",
       "cta": "BeOS-Erweiterung und Emulationsdetails ansehen",
       "source": "Mihai Parparita / persistent.info · 30.10.2026 · Samstagsdiskussion31.10. · ausprobieren: https://infinitemac.org/?filter=beos"
+    },
+    {
+      "category": "KI",
+      "short": "Prospero",
+      "title": "Ein Coding-Harness in C++ setzt auf kleine Ressourcenansprüche und klare Prozess-Lebenszeiten.",
+      "body": "Chris Wellons stellt heute Prospero vor: eine C++-Oberfläche mit Dear ImGui, die lokale oder externe Modellendpunkte mit Datei-, Shell- und weiteren Werkzeugen verbindet. Das Modell wird nicht mitgeliefert; etwa llama.cpp oder ein eigener API-Zugang müssen dahinterstehen. Interessanter als der pauschale Ressourcenvergleich des Autors sind konkrete Entscheidungen: Die Oberfläche zeichnet im Leerlauf nicht dauernd neu, lange Shell-Aufträge können als Hintergrundaufgaben weiterlaufen, und ein beendeter Auftrag soll seinen gesamten Prozessbaum mitnehmen. Worktrees, MCP und Steuerung grafischer Oberflächen gehören zum beschriebenen Umfang. Eine kostenlose Community Edition und eine kostenpflichtige Professional Edition unterscheiden sich unter anderem bei mitgelieferten Headless-Engines für entfernte Rechner.",
+      "takeaway": "Ein neuer Kandidat für alle, denen eine schwere Web-Oberfläche für einen Coding-Agenten zu viel ist. Ressourcen- und Zuverlässigkeitsversprechen sind hier Autorenaussagen, kein eigener Vergleichstest. Berechtigungsdialoge sind laut Autor keine Sicherheitsgrenze: Dafür muss bereits die Umgebung des Harness eingeschränkt sein.",
+      "url": "https://nullprogram.com/blog/2026/10/31/",
+      "cta": "Entwurf, Funktionsumfang und Editionsgrenzen lesen",
+      "source": "Chris Wellons / nullprogram · 31.10.2026 · Projektvorstellung, nicht selbst getestet"
+    },
+    {
+      "category": "Open Source",
+      "short": "dsh-superagent",
+      "title": "DeepSeek veröffentlicht einen Repository-Agenten ausdrücklich als Forschungsprototyp.",
+      "body": "Das heute angelegte Repository dsh-superagent-prototype zeigt einen auf ein GitHub-Repository begrenzten Coding-Agenten als Paket für DeepSeek Harness. Laut README reagiert er auf GitHub und optional Feishu, legt für erlaubte Arbeitsanfragen einen Arbeitspunkt mit eigener Sitzung und eigenem Arbeitsverzeichnis an und antwortet im ursprünglichen Gespräch, zum Beispiel mit einem Pull Request. Ein Webpanel zeigt, wo ein Mensch gebraucht wird. Die Entwickler sagen ausdrücklich: kein offizielles DeepSeek-Produkt, nicht produktionsreif, mögliche Fehler und uneinheitliche Engineering-Praktiken. Die veröffentlichte Fassung sei außerdem nicht identisch mit der internen Version oder dem beschriebenen System aus dem begleitenden Artikel; manche dort besprochenen Ideen seien noch nicht implementiert.",
+      "takeaway": "Als MIT-lizenzierter Forschungsstand zum Lesen interessant. Nicht aus dem Namen auf einen fertigen autonomen Teamkollegen schließen. Einrichtung, Zugriff und Repository-Berechtigungen vor einem Einsatz selbst prüfen; wir haben keine Installation oder Prüfung des Ausführungscodes vorgenommen.",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "cta": "README und ausdrückliche Prototyp-Grenzen lesen",
+      "source": "deepseek-ai/dsh-superagent-prototype · Repository erstellt31.10.2026 · MIT · Umfang und Reife laut README"
     }
   ],
-  "notes": "Laufende Samstag-Auswahl. Quellen gelesen am31.10.2026 gegen11:33 Uhr Berlin. Marelleo vom15.10. und BeOS-Bericht vom30.10. explizit als ältere Diskussionsfunde. Keine Hardware aufgebaut, kein VPN-Benchmark oder Sicherheitsaudit durchgeführt. sanstun: Blog nennt Apache2.0, aktuelle crates.io-Metadaten/README BSD-3-Clause; deshalb keine eindeutige Lizenz behauptet. Kein Audio in dieser Textausgabe."
+  "notes": "Laufende Samstag-Auswahl. Quellen gelesen am31.10.2026 gegen11:33 Uhr Berlin. Marelleo vom15.10. und BeOS-Bericht vom30.10. explizit als ältere Diskussionsfunde. Keine Hardware aufgebaut, kein VPN-Benchmark oder Sicherheitsaudit durchgeführt. sanstun: Blog nennt Apache2.0, aktuelle crates.io-Metadaten/README BSD-3-Clause; deshalb keine eindeutige Lizenz behauptet. Kein Audio in dieser Textausgabe. Nachmittagsprüfung31.10.2026 gegen15:33Berlin: Prospero und dsh-superagent als neue Vorstellungen ergänzt; Autorenversprechen nicht als eigene Tests dargestellt, Prototyp und Editionsgrenzen markiert."
 }
