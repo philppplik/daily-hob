@@ -1,9 +1,9 @@
 {
   "date": "2026-10-30",
   "title": "Daily Hob vom Freitag, 30.10.",
-  "headline": "Ein eingefrorenes CSS-Framework, der Himmel im Terminal und die Grenzen einer Rangliste.",
-  "teaser": "7 Catches zum Freitag: Geist Serif und LaTeX-Blumen ergänzen Cursors Sicherheitsmeldung, Rust-Panic-Analyse, Pico CSS, Astroterm und Benchmark-Kritik.",
-  "intro": "Heute schauen wir genauer auf vertraute Werkzeuge und Zahlen: Was bleibt von einem CSS-Framework nach dem Wartungsende? Was kann ein Terminal außer Logs anzeigen? Und wie viel sagt eine einzige Modellnote wirklich aus? Alle drei sind ältere Veröffentlichungen oder Projekte, die am Freitag neu diskutiert werden, keine behaupteten Neureleases. Am Nachmittag kommen die konkrete Cursor-Sicherheitsmeldung und ein Rust-Werkzeug für versteckte Panic-Pfade dazu. Am Abend wird es gestalterisch: Vercel veröffentlicht Geist Serif, und Florilegium berechnet Blumenränder direkt in LuaLaTeX.",
+  "headline": "Kompromittierte Secrets, eine CPU in Modellgewichten und Blumen aus LaTeX.",
+  "teaser": "9 Catches vom Freitag: Northflank und Cursor, nesformer, Geist Serif, Florilegium, Rust-Panic-Analyse, Pico CSS, Astroterm und Benchmark-Kritik.",
+  "intro": "Der Freitag verbindet konkrete Sicherheitswarnungen mit ungewöhnlichen Technikexperimenten: Northflank fordert Secret-Rotation, ein kompilierter NES-CPU-Kern läuft in Modellgewichten, und LuaLaTeX lässt Blumen wachsen. Dazu kommen Geist Serif und ein Rust-Analysewerkzeug. Pico CSS, Astroterm und die Benchmark-Kritik sind ausdrücklich ältere Veröffentlichungen oder Projekte, die am Freitag diskutiert wurden, keine behaupteten Neureleases.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Linienillustration einer Terminal-Sternenkarte, einer Waage mit Messblöcken und eines gefalteten Softwareblatts in Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -42,11 +42,11 @@
       "category": "Sicherheit",
       "short": "Cursor Extension",
       "title": "Manipuliertes Claude-Code-Paket bei Cursor: Deinstallieren allein kann zu wenig sein.",
-      "body": "Cursors Sicherheitsmitteilung vom 29. Oktober wird am Freitag breit diskutiert: Eine manipulierte Kopie von Anthropic.claude-code 2.1.313 wurde über den Cursor Extension Marketplace verteilt. Cursor betont, dass diese Fassung nicht von Anthropic entwickelt wurde, und nennt höchstens 5.000 betroffene Nutzer. Der Schadcode sammelt Rechnerinformationen, fügt einen fremden SSH-Schlüssel hinzu und versucht, einen dauerhaften Rückzugang einzurichten. Fehlende Adminrechte und Programmierfehler können Teile dieses Zugangs verhindern; zurückgelassene Schlüssel und Startmechanismen bleiben trotzdem relevant. Laut Cursor sind Paket und Angreiferserver inzwischen entfernt beziehungsweise abgeschaltet. Das ist kein Beleg für einen allgemeinen Einbruch in Anthropic oder dafür, dass jede offizielle Claude-Code-Verteilung betroffen war.",
-      "takeaway": "Wer genau dieses Paket aus Cursors Marketplace installiert hat, sollte die offizielle Mitteilung samt Indikatoren und Bereinigungshinweisen prüfen. Ein Update oder bloßes Entfernen der Erweiterung beseitigt nicht zwingend alle Hinterlassenschaften. Keine Betroffenheit des eigenen Geräts ohne Prüfung annehmen.",
+      "body": "Die am Freitag breit diskutierte Cursor-Meldung betrifft manipulierte Kopien von Anthropic.claude-code aus dem Cursor Extension Marketplace. Bei der Abschlussprüfung am Samstag nennt Cursor inzwischen die Versionen 2.1.312 und 2.1.313 für macOS und Windows; zunächst stand in der Freitagsanalyse nur 2.1.313. Diese Erweiterungen wurden laut Cursor nicht von Anthropic entwickelt. Der Schadcode sammelt Rechnerinformationen, fügt einen fremden SSH-Schlüssel hinzu und versucht, einen dauerhaften Rückzugang einzurichten. Fehlende Adminrechte und Programmierfehler können Teile dieses Zugangs verhindern; zurückgelassene Schlüssel und Startmechanismen bleiben trotzdem relevant. Laut Cursor sind die manipulierten Pakete entfernt und der Angreiferserver abgeschaltet. Das ist kein Beleg für einen allgemeinen Einbruch in Anthropic oder dafür, dass jede offizielle Claude-Code-Verteilung betroffen war.",
+      "takeaway": "Wer eine dieser Fassungen aus Cursors Marketplace installiert hat, sollte die offizielle Mitteilung samt Indikatoren und Bereinigungshinweisen prüfen. Ein Update oder bloßes Entfernen der Erweiterung beseitigt nicht zwingend alle Hinterlassenschaften. Keine Betroffenheit des eigenen Geräts ohne Prüfung annehmen.",
       "url": "https://cursor.com/blog/claude-code-extension-security-notice",
       "cta": "Cursors offizielle Sicherheitsmitteilung prüfen",
-      "source": "Cursor · 29.10.2026 · Phorion-Analyse, Diskussion 30.10.2026 · Umfang und Gegenmaßnahmen: Anbieterangaben"
+      "source": "Cursor · Meldung 29.10.2026, Freitagsdiskussion 30.10. · betroffene Versionen nach Aktualisierung am 31.10.; Phorion bestätigt Änderung ausdrücklich"
     },
     {
       "category": "Informatik",
@@ -77,7 +77,27 @@
       "url": "https://github.com/kevinraymond/florilegium",
       "cta": "Blumenalgorithmus und Beispieldokumente ansehen",
       "source": "kevinraymond/florilegium · GitHub-README · entdeckt und diskutiert 30.10.2026 · MIT"
+    },
+    {
+      "category": "Sicherheit",
+      "short": "Northflank",
+      "title": "Northflank fordert Kunden auf, sämtliche gespeicherten Secrets als kompromittiert zu behandeln.",
+      "body": "Der Cloud-Anbieter meldet am Freitag einen Sicherheitsvorfall und fordert alle Kunden zur sofortigen Rotation auf: Umgebungsvariablen auf Workloads, Secret Groups und Global Secrets sollen als kompromittiert gelten. Im Update um 15:12 UTC, also 16:12 Uhr Berlin, nennt Northflank bereits Berichte mehrerer Nutzer über verwendete KI-Schlüssel. Um 19:28 UTC bekräftigt der Anbieter die umfassende Warnung, sagt aber auch, die Untersuchung laufe und es gebe keine weiteren bestätigten Erkenntnisse. Öffentlich erreichbare Add-ons sollen abgeschaltet werden. Für Postgres und MongoDB hat Northflank die Secret-Rotation für alle Nutzer freigeschaltet. Das ist eine konkrete Handlungsempfehlung des betroffenen Anbieters, keine von uns belegte Erklärung des Angriffswegs und keine Aussage darüber, welche persönlichen Konten betroffen sind.",
+      "takeaway": "Wer Secrets bei Northflank hinterlegt hat, sollte die offizielle Statusmeldung prüfen, alte Zugangsdaten bei den jeweiligen Anbietern widerrufen und ersetzen sowie Nutzung und Abrechnung kontrollieren. Nur einen Wert im Dashboard zu überschreiben macht den alten Schlüssel nicht ungültig.",
+      "url": "https://status.northflank.com/cmvv0rn5a092f14rutwccodpp",
+      "cta": "Offizielle Meldung und aktuelle Updates prüfen",
+      "source": "Northflank Status · Freitag, 30.10.2026 · Meldungen bis 19:28 UTC / 20:28 Berlin; spätere Samstagsupdates nicht Teil dieses Tagesrückblicks"
+    },
+    {
+      "category": "KI",
+      "short": "NES in Gewichten",
+      "title": "Ein NES-CPU-Kern steckt in Qwen-Modellgewichten. Er wurde kompiliert, nicht trainiert.",
+      "body": "Drew Breunigs neues Projekt nesformer baut auf Qwenputer auf: Ein Compiler berechnet Gewichte für einen Qwen3.5-kompatiblen Checkpoint, der den 6502-CPU-Kern des NES abbildet. Register, RAM und Programm-ROM liegen im DeltaNet-Zustand; die Ausgabe ist ein Ausführungsprotokoll, Token für Token. Das Modell spielt also keine Pixel vorher. Ein Hostprogramm übernimmt Grafik, Controller und das Timing rundherum. Die README nennt rund 933 MB unkomprimierte Gewichte, großenteils Nullen, und dokumentiert Vergleiche mit Referenzemulation und Test-ROMs. Das sind Projektangaben, kein von uns durchgeführter Test. Es werden nur NROM-Spiele unterstützt, Ton fehlt, und der Autor beziffert die Ausführung insgesamt auf etwa 150 bis 290 Mal langsamer als die echte Konsole.",
+      "takeaway": "Ein reizvoller Beweis, was sich in einer Modellarchitektur ausdrücklich konstruieren lässt. Kein Nachweis, dass ein Sprachmodell aus Trainingsdaten eine Nintendo-Konsole verstanden hat, und kein Ersatz für einen schnellen Emulator.",
+      "url": "https://github.com/dbreunig/nesformer",
+      "cta": "Architektur, Beispiele und Grenzen ansehen",
+      "source": "dbreunig/nesformer · Erstveröffentlichung 30.10.2026 · MIT; enthaltene ROMs haben eigene Lizenzen · Messungen laut README"
     }
   ],
-  "notes": "Laufende Freitag-Auswahl. Quellenprüfung am 30.10.2026 gegen 19:33 Uhr Berlin. Ältere Ankündigungen und Projekte sind ausdrücklich markiert. Cursor-Betroffenheit gilt für das benannte Marketplace-Paket. Keine lokalen Sicherheitsprüfungen oder Bereinigungsskripte ausgeführt. Font-Roadmap von aktuellem Umfang getrennt; Florilegium nicht selbst kompiliert. Kein Audio in dieser Textausgabe."
+  "notes": "Tagesrückblick für Freitag, 30.10.2026. Abschlussprüfung am 31.10.2026 gegen 06:16 Uhr Berlin. Northflank-Meldungen inhaltlich bis Freitag 20:28 Uhr Berlin; spätere Samstagsupdates sind nicht Teil dieses Rückblicks. Ältere Diskussionsfunde sind markiert. Keine lokalen Sicherheitsprüfungen oder Bereinigungsskripte ausgeführt, keine persönliche Betroffenheit behauptet. Rust-Analyse, Font-Roadmap und nesformer-Messungen mit ihren Grenzen; Florilegium und nesformer nicht selbst ausgeführt. Kein Audio in dieser Textausgabe. Sicherheitskorrektur bei Abschlussprüfung: Cursor nennt inzwischen 2.1.312 und 2.1.313; als Samstagsaktualisierung im Text kenntlich gemacht. Frühere Nutzerzahl entfernt."
 }
