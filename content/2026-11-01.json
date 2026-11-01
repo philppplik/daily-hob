@@ -1,9 +1,9 @@
 {
   "date": "2026-11-01",
   "title": "Daily Hob vom Sonntag, 01.11.",
-  "headline": "Frameworks messen, Bücher setzen und die Landschaft lesen.",
-  "teaser": "5 Sonntagsfunde: Framework-Kosten, OpenIDEA, Altoids-Spielgerät, groff-Novellen und Outcrops geologische AR-Karte.",
-  "intro": "Fünf Sonntagsfunde verbinden Software mit der Welt außerhalb des Editors: Agentenkosten im kleinen Framework-Test, OpenIDEA und ein Arduino-Spielgerät. Dazu kommen Bücher aus groff und geologische Karten im Kamerabild. Ältere Beiträge und bestehende Projekte sind als Diskussionsfunde datiert, Messungen bleiben den jeweiligen Autoren zugeordnet.",
+  "headline": "Code genauer vergleichen, kleine 3D-Welten bauen und draußen die Landschaft lesen.",
+  "teaser": "7 Sonntagsfunde: OmniDiff, phoria2, Framework-Kosten, OpenIDEA, groff-Novellen, Outcrop und ein Altoids-Spielgerät.",
+  "intro": "Sieben Sonntagsfunde verbinden Software mit der Welt außerhalb des Editors: OmniDiff verfeinert Code-Reviews, phoria2 setzt auf kleine 3D-Ansichten. Dazu kommen Agentenkosten im Framework-Test, OpenIDEA, Bücher aus groff, geologische Karten und ein Arduino-Spielgerät. Ältere Beiträge und bestehende Projekte sind datiert; Messungen bleiben den Autoren zugeordnet.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte dünne Linienillustration einer offenen Metalldose mit Mini-Schaltung, einer Waage mit Codeblöcken und eines Editorfensters auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -57,7 +57,27 @@
       "url": "https://outcrop.rocks/",
       "cta": "Kartenebenen, AR-Ansicht und Offline-Grenzen ansehen",
       "source": "Outcrop · Projektseite geprüft 01.11.2026 · Show-HN-Fund; kein verifiziertes ursprüngliches Releasedatum"
+    },
+    {
+      "category": "Open Source",
+      "short": "OmniDiff",
+      "title": "OmniDiff 0.3.0 schaut in Code-Strings und CSS-Klassen, statt nur ganze Zeilen zu färben.",
+      "body": "Version 0.3.0 ist am Sonntag erschienen. Das Rust-Difftool ordnet Änderungen nach Inhalt ein: 25 Sprachen werden strukturell geparst, andere Dateien je nach Typ verglichen. Neu sind unter anderem Code in Strings, etwa Shell in YAML oder TSX in einem JSON-Feld, sowie CSS-Klassenlisten. Ein verschobenes Klassenelement soll als Ganzes erkennbar bleiben, statt an Bindestrichen oder Doppelpunkten zu zerfallen. Git- und Jujutsu-Anbindung, Terminalansicht und Textausgabe sind dokumentiert; Bild-, Archiv-, Font- und PDF-Vergleiche gehen über übliches Zeilendiff hinaus.",
+      "takeaway": "Interessant für Reviews, gerade wenn viel Code generiert wird. Aber die ehrliche Qualitätsgrenze gehört dazu: Die README verfehlt noch die eigenen Genauigkeitsziele; kleine PDF-Testmengen sind keine breite Garantie. Geschwindigkeitszahlen stammen vom Projekt, nicht von unserem Test. Lizenz ist AGPL-3.0-only, nicht MIT. Den eigenen Workflow zunächst an bekannten Änderungen prüfen.",
+      "url": "https://github.com/ivankovic/omnidiff/releases/tag/v0.3.0",
+      "cta": "Die Änderungen von Version 0.3.0 lesen",
+      "source": "ivankovic/omnidiff · Release 01.11.2026 · README und Release geprüft; Autorenmessungen"
+    },
+    {
+      "category": "Design",
+      "short": "phoria2",
+      "title": "3D für kleine Webansichten: phoria2 baut auf WebGL 2 und zeichnet nur bei Änderungen neu.",
+      "body": "Sonntagsfund aus Show HN: Kevin Roast hat seine frühere Canvas-2D-Bibliothek als phoria2 neu gebaut. Die MIT-lizenzierte JavaScript-Bibliothek zielt auf Diagramme, beschriftete Szenen, Dashboards und Produktansichten. Laut README kommen ES-Module und TypeScript-Typen ohne Laufzeitabhängigkeiten; Diagramme, Partikel und glTF-Modelle sind getrennte Importe. Eine ruhende Ansicht zeichnet nicht fortwährend neue Bilder. Eine weitere praktische Idee: Optionen werden geprüft, und Fehlermeldungen sollen den passenden Namen nennen, wenn etwa colour statt color übergeben wird.",
+      "takeaway": "Ein konkreter Kandidat für kleine interaktive Erklärungen, kein belegter schnellerer Ersatz für Three.js oder Babylon.js. Voraussetzung ist WebGL 2. Paketgrößen und Leistungsversprechen sind Projektangaben; wir haben weder den Build noch mobile Interaktion selbst getestet. Tutorial, Referenz und Beispiele helfen beim eigenen Vergleich.",
+      "url": "https://kevs3d.co.uk/phoria2/",
+      "cta": "3D-Demos, Tutorial und Referenz ansehen",
+      "source": "Kevin Roast / phoria2 · Show-HN-Fund 01.11.2026 · Projektseite und README geprüft; kein verifiziertes ursprüngliches Releasedatum"
     }
   ],
-  "notes": "Laufende Sonntag-Auswahl mit fünf Catches. Quellenprüfung 01.11.2026 gegen 15:32 Berlin. Ältere Quellen und bestehende Projekte ausdrücklich datiert. Autorenangaben, keine lokalen Builds, Benchmarks, Hardware- oder AR-Feldtests. Kein Audio in dieser Textausgabe."
+  "notes": "Laufende Sonntag-Auswahl mit sieben Catches. Quellenprüfung 01.11.2026 gegen 19:32 Berlin. OmniDiff 0.3.0 heute veröffentlicht; ältere Quellen und bestehende Projekte als Diskussionsfunde datiert. Autorenangaben, keine lokalen Builds, Benchmarks, Hardware- oder AR-Feldtests. Kein Audio in dieser Textausgabe."
 }
