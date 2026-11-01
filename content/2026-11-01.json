@@ -1,9 +1,9 @@
 {
   "date": "2026-11-01",
   "title": "Daily Hob vom Sonntag, 01.11.",
-  "headline": "Was Frameworks Agenten kosten, eine Rust-IDE und fünf Anläufe für eine Spieldose.",
-  "teaser": "3 Sonntagsfunde: Nolan Lawsons kleiner Framework-Vergleich, OpenIDEA mit ehrlichen Benchmark-Grenzen und das Altoids-Bastelprojekt.",
-  "intro": "Heute zählen Belege und saubere Einordnung: Ein kleiner Agenten-Vergleich ersetzt keine allgemeine Framework-Rangliste, eine schnelle Projektöffnung ist noch keine gleichwertige Codeanalyse, und Elektronik lernt man auch durch mehrere fehlgeschlagene Gehäuseversuche. Alle drei sind Sonntagsfunde bereits bestehender Projekte oder älterer Berichte, keine behaupteten heutigen Neureleases.",
+  "headline": "Frameworks messen, Bücher setzen und die Landschaft lesen.",
+  "teaser": "5 Sonntagsfunde: Framework-Kosten, OpenIDEA, Altoids-Spielgerät, groff-Novellen und Outcrops geologische AR-Karte.",
+  "intro": "Fünf Sonntagsfunde verbinden Software mit der Welt außerhalb des Editors: Agentenkosten im kleinen Framework-Test, OpenIDEA und ein Arduino-Spielgerät. Dazu kommen Bücher aus groff und geologische Karten im Kamerabild. Ältere Beiträge und bestehende Projekte sind als Diskussionsfunde datiert, Messungen bleiben den jeweiligen Autoren zugeordnet.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte dünne Linienillustration einer offenen Metalldose mit Mini-Schaltung, einer Waage mit Codeblöcken und eines Editorfensters auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -37,7 +37,27 @@
       "url": "https://uvdn7.github.io/altoids-project/",
       "cta": "Die fünf Bauversuche und Lernmomente ansehen",
       "source": "Lu’s blog / uvdn7 · 31.10.2026 · Sonntagsdiskussion 01.11. · persönlicher Baubericht"
+    },
+    {
+      "category": "Design",
+      "short": "groff-Novellen",
+      "title": "Bücher setzen mit dem Werkzeug für Manpages: ein kleiner groff-Workflow mit Vim und Git.",
+      "body": "Der am Sonntag diskutierte Baubericht vom 31. Oktober zeigt keinen neuen Editor, sondern einen ungewöhnlichen Schreibplatz: movq setzt zwei eigene Erzählungen mit groff, dem Werkzeug, das viele aus Unix-Handbuchseiten kennen. Kleine Makros übernehmen Kapitel, Absätze, Kopf- und Fußbereiche. Dazu kommen deutsche Silbentrennung, ein schlichtes Markdown-Teilformat mit Vorverarbeitung und der Vim-Modus Goyo für ablenkungsarmes Schreiben. Git dient vor allem der Sicherung und dem Wechsel zwischen Rechnern. Ein Demo-Gerüst ist verlinkt; die eigentlichen Geschichten veröffentlicht der Autor ausdrücklich nicht.",
+      "takeaway": "Ein schöner Gegenentwurf zum überladenen Schreibprogramm. Besonders nützlich sind die offen erklärten Stolperstellen bei Seitenumbrüchen und Abständen. Ein persönlicher Werkstattbericht mit offenen Fragen, kein fertig poliertes Publishing-System. Die genannten Renderzeiten gelten nur für den Rechner und die Texte des Autors.",
+      "url": "https://movq.de/blog/postings/2026-10-31/0/POSTING-en.html",
+      "cta": "Makros, Schreibumgebung und Demo-Gerüst ansehen",
+      "source": "movq.de · 31.10.2026 · Sonntagsdiskussion 01.11. · persönlicher Workflow-Bericht"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Outcrop",
+      "title": "Die Landschaft als geologische Karte: Outcrop legt Gesteinseinheiten ins Kamerabild.",
+      "body": "Sonntagsfund aus Show HN: Outcrop beschreibt eine Geologie-App, die kartierte Gesteinseinheiten als Augmented-Reality-Schicht über die Landschaft legt. Die App zeigt Alter, Aufbau und Entstehung der ausgewählten Einheit, eine Schichtensäule und eine historische Globusansicht auf Basis von PALEOMAP. Wichtig ist, was hier erkannt wird: Die Angaben kommen aus geologischen Karten, nicht aus einer von uns geprüften Fotoanalyse eines einzelnen Steins. Laut Projekt stammen die weltweiten Grundgebirgs- und Störungsdaten von Macrostrat; zusätzliche Quartär-, aktive-Störungs- und Bodenschichten beziehen sich auf die USA.",
+      "takeaway": "Eine schöne Idee für neugierige Spaziergänge, mit klaren Grenzen: Kartengenauigkeit und AR-Ausrichtung haben wir nicht selbst getestet. Gebiete müssen für Offline-Nutzung vorher gespeichert werden; Fossilfunde und aktive Störungen in der Live-Ansicht brauchen weiterhin eine Verbindung. Projektseite nennt Google Play und eine iPhone-Beta, keine von uns bestätigte Verfügbarkeit in jedem Land.",
+      "url": "https://outcrop.rocks/",
+      "cta": "Kartenebenen, AR-Ansicht und Offline-Grenzen ansehen",
+      "source": "Outcrop · Projektseite geprüft 01.11.2026 · Show-HN-Fund; kein verifiziertes ursprüngliches Releasedatum"
     }
   ],
-  "notes": "Laufende Sonntag-Auswahl. Quellenprüfung 01.11.2026 gegen 11:33 Berlin. Ältere Quellen und bestehende Projekte ausdrücklich datiert. Messungen und Funktionsumfang als Autorenangaben; keine lokalen Builds, Benchmarks oder Hardwareversuche. Kein Audio in dieser Textausgabe."
+  "notes": "Laufende Sonntag-Auswahl mit fünf Catches. Quellenprüfung 01.11.2026 gegen 15:32 Berlin. Ältere Quellen und bestehende Projekte ausdrücklich datiert. Autorenangaben, keine lokalen Builds, Benchmarks, Hardware- oder AR-Feldtests. Kein Audio in dieser Textausgabe."
 }
