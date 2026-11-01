@@ -1,9 +1,9 @@
 {
   "date": "2026-10-31",
   "title": "Daily Hob vom Samstag, 31.10.",
-  "headline": "Eine Hörbox ohne Katalogzwang, WireGuard ohne verstecktes I/O und BeOS im Browser.",
-  "teaser": "7 Catches zum Samstag: gBench und Myriads Lichtsucher ergänzen Prospero, DeepSeeks Forschungsagenten, Marelleo, sanstun und BeOS.",
-  "intro": "Heute geht es um Kontrolle über kleine und große Systeme: eigene Geschichten auf einer selbst gebauten Hörbox, eine klar getrennte Netzwerk-Zustandsmaschine und ein altes Betriebssystem, das sich direkt im Browser erkunden lässt. Marelleo und BeOS sind bewusst datierte Diskussionsfunde, keine heute erfundenen Neureleases. Am Nachmittag kommen zwei neue Coding-Agenten-Ansätze dazu: ein schlank gedachtes C++-Harness und ein ausdrücklich unfertiger Forschungsprototyp. Am Abend folgen gBenchs getrennte Testebenen und eine interaktive Erklärung, wie einfache Schaltungen erstaunliches Verhalten erzeugen.",
+  "headline": "Eigene Hörboxen, schlanke Coding-Harnesses und Videos abseits des großen Feeds.",
+  "teaser": "8 Catches vom Samstag: HackerTube, Prospero, DeepSeeks Forschungsagent, gBench, Marelleo, sanstun, BeOS und Myriads Lichtsucher.",
+  "intro": "Acht Catches verbinden am Samstag eigene Kontrolle mit klaren Grenzen: eine offene Hörbox, ein neuer Coding-Harness, ein Forschungsagent und getrennte Modelltests. HackerTube probiert eine andere Video-Auswahl. Dazu kommen WireGuard-Bausteine, historische Desktops und anschauliche Mini-Schaltungen. Marelleo, BeOS und Myriad sind ausdrücklich ältere Diskussionsfunde; gBench stammt aus dem am30.10. angelegten Repository.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte dünne Linienillustration einer Hörbox, paralleler Netzwerktunnel mit Schloss und eines Retro-Monitors auf hellem Papier mit gelben und mintfarbenen Akzenten",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -77,7 +77,17 @@
       "url": "https://aatishb.com/myriad/lets-build-a-brain/",
       "cta": "Interaktive Lichtsucher und Schaltungen erkunden",
       "source": "Aatish Bhatia / Arkarup Banerjee · vorgestellt29.10.2026, Diskussion31.10. · https://aatishb.com/blog/2026/introducing-myriad/"
+    },
+    {
+      "category": "KI",
+      "short": "HackerTube",
+      "title": "HackerTube ersetzt den Empfehlungsfeed durch Videos aus Hacker-News-Kommentaren.",
+      "body": "Andrej Karpathy stellt am Samstag HackerTube vor: eine alternative Oberfläche für YouTube-Videos, die in Hacker-News-Kommentaren empfohlen wurden. Laut seinem Bericht wurden rund40.000 passende Kommentare auf6.454 Videos aus2007bis2026 und150 Themen verdichtet. Das sind Zahlen aus der Vorstellung, keine von uns nachgezählte aktuelle Bestandsaufnahme. Statt der hochgeladenen Vorschaubilder nutzt die Seite einen Frame aus der Mitte des Videos. Persönliche Empfehlungen sollen ohne eigenes Konto funktionieren, mit Zustand im lokalen Browser. Ein Datenexport soll eigene Oberflächen oder Auswertungen ermöglichen. Karpathy schreibt, er habe das Projekt mit Claude Code gebaut; die kurze Entstehungsgeschichte ist seine Schilderung, kein unabhängiger Produktivitätsbenchmark.",
+      "takeaway": "Ein interessanter Wechsel der Auswahlregel: Empfehlungen aus einer bestimmten Community statt eines allgemeinen Engagement-Feeds. Das ist kuratiertes Stöbern, kein objektives Qualitätssiegel. Die Videos bleiben YouTube-Inhalte; kein eigenes HackerTube-Konto bedeutet nicht automatisch, dass eingebettete Player nichts nach außen übertragen.",
+      "url": "https://karpathy.bearblog.dev/hacker-tube/",
+      "cta": "Idee, Auswahlverfahren und Datenexport ansehen",
+      "source": "Andrej Karpathy ·31.10.2026 · Bestandszahlen laut Vorstellung; Projekt https://hackertube.org/"
     }
   ],
-  "notes": "Laufende Samstag-Auswahl. Quellen gelesen am31.10.2026 gegen11:33 Uhr Berlin. Marelleo vom15.10. und BeOS-Bericht vom30.10. explizit als ältere Diskussionsfunde. Keine Hardware aufgebaut, kein VPN-Benchmark oder Sicherheitsaudit durchgeführt. sanstun: Blog nennt Apache2.0, aktuelle crates.io-Metadaten/README BSD-3-Clause; deshalb keine eindeutige Lizenz behauptet. Kein Audio in dieser Textausgabe. Nachmittagsprüfung31.10.2026 gegen15:33Berlin: Prospero und dsh-superagent als neue Vorstellungen ergänzt; Autorenversprechen nicht als eigene Tests dargestellt, Prototyp und Editionsgrenzen markiert. Abendprüfung31.10.2026 gegen19:33Berlin: gBench-README vollständig gelesen, Repository vom30.10.; Myriad als älterer Diskussionsfund, Vorstellung29.10. Keine eigenen Modelltests oder biologischen Versuche."
+  "notes": "Laufende Samstag-Auswahl. Quellen gelesen am31.10.2026 gegen11:33 Uhr Berlin. Marelleo vom15.10. und BeOS-Bericht vom30.10. explizit als ältere Diskussionsfunde. Keine Hardware aufgebaut, kein VPN-Benchmark oder Sicherheitsaudit durchgeführt. sanstun: Blog nennt Apache2.0, aktuelle crates.io-Metadaten/README BSD-3-Clause; deshalb keine eindeutige Lizenz behauptet. Kein Audio in dieser Textausgabe. Nachmittagsprüfung31.10.2026 gegen15:33Berlin: Prospero und dsh-superagent als neue Vorstellungen ergänzt; Autorenversprechen nicht als eigene Tests dargestellt, Prototyp und Editionsgrenzen markiert. Abendprüfung31.10.2026 gegen19:33Berlin: gBench-README vollständig gelesen, Repository vom30.10.; Myriad als älterer Diskussionsfund, Vorstellung29.10. Keine eigenen Modelltests oder biologischen Versuche. Abschlussprüfung01.11.2026 gegen06:20Berlin: HackerTube-Vorstellung vom31.10. ergänzt. Bestandszahlen/Entstehung als Autorenangaben, keine Datenexport- oder Sicherheitsprüfung. Kein neuer Vormittagscatch rückdatiert."
 }
