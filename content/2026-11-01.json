@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-01",
+  "title": "Daily Hob vom Sonntag, 01.11.",
+  "headline": "Was Frameworks Agenten kosten, eine Rust-IDE und fünf Anläufe für eine Spieldose.",
+  "teaser": "3 Sonntagsfunde: Nolan Lawsons kleiner Framework-Vergleich, OpenIDEA mit ehrlichen Benchmark-Grenzen und das Altoids-Bastelprojekt.",
+  "intro": "Heute zählen Belege und saubere Einordnung: Ein kleiner Agenten-Vergleich ersetzt keine allgemeine Framework-Rangliste, eine schnelle Projektöffnung ist noch keine gleichwertige Codeanalyse, und Elektronik lernt man auch durch fünf fehlgeschlagene Gehäuseversuche. Alle drei sind Sonntagsfunde bereits bestehender Projekte oder älterer Berichte, keine behaupteten heutigen Neureleases.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte dünne Linienillustration einer offenen Metalldose mit Mini-Schaltung, einer Waage mit Codeblöcken und eines Editorfensters auf hellem Papier mit Gelb und Mint",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "KI",
+      "short": "Framework-Kosten",
+      "title": "Was kostet ein Framework dem Coding-Agenten? Ein kleiner Test macht Unterschiede und Grenzen sichtbar.",
+      "body": "Nolan Lawsons Beitrag vom 28. Oktober wird am Sonntag diskutiert. Er ließ Opus 5.5 dieselbe kleine Pokémon-Anwendung in zwölf Framework-Setups bauen und prüfte Funktionsumfang, Aufwand sowie Lighthouse-Ergebnisse. Meist nahm er den Median aus fünf Läufen; Angular hatte zwei gescheiterte Versuche und nur drei ausgewertete Apps. Hono mit htmx lag in diesem Versuch beim geschätzten API-Aufwand vorn, Astro bei der Bauzeit. Die ausgewiesenen Dollarwerte sind Claude-Codes API-Preisschätzung, nicht seine tatsächliche Rechnung im Max-Abo. Noch wichtiger: Es ist nur eine eher inhaltslastige Anwendung. Tool-Nutzung und Ausgaben schwanken, und die verwendeten Lade-Metriken begünstigen serverseitig gelieferte Seiten gegenüber manchen Single-Page-Anwendungen.",
+      "takeaway": "Ein Anlass, die eigene Framework-Wahl zu messen, kein Grund, aus einer Pokémon-App eine universelle Bestenliste abzuleiten. Bei einem komplexen Editor oder Dashboard, anderen Agenten und anderen Versionen kann das Ergebnis anders aussehen. Wir haben den Vergleich nicht selbst wiederholt.",
+      "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+      "cta": "Versuchsaufbau, Streuung und Grenzen lesen",
+      "source": "Nolan Lawson · 28.10.2026 · Sonntagsdiskussion 01.11. · Messungen laut Autor"
+    },
+    {
+      "category": "Open Source",
+      "short": "OpenIDEA",
+      "title": "OpenIDEA übernimmt vertraute IDE-Gesten, aber ein schneller Start misst noch nicht dieselbe Analyse.",
+      "body": "Sonntagsfund des am 21. Oktober angelegten Projekts: OpenIDEA beschreibt eine native Anwendung mit Rust-Kern, IDEA-artiger Tastenbelegung, Tool-Fenstern und globaler Suche. Die README nennt Editor, LSP-nahe Codefunktionen, Debugger, Git, Terminal sowie Datenbank- und HTTP-Clients und Builds für macOS, Windows und Linux. Besonders hilfreich ist die Fußnote zum eigenen Vergleich: Die Projektöffnung wurde mit warmen Caches an einem Python-Projekt auf einem Windows-Rechner gemessen. IntelliJ IDEA analysiert Python laut README tiefer; der Zustand ready bedeutet deshalb auf beiden Seiten nicht dieselbe abgeschlossene Arbeit. Die Apache-2.0-lizenzierte Anwendung ist nicht mit JetBrains verbunden.",
+      "takeaway": "Interessant zum Beobachten oder kontrollierten Ausprobieren, nicht als belegter gleichwertiger Ersatz für jede Sprachunterstützung und jedes Plugin. Die Projektangaben zu 60 plus Sprachen und Ressourcenverbrauch sind keine von uns geprüfte Funktions- oder Geschwindigkeitsgarantie.",
+      "url": "https://github.com/l0ng-ai/openidea",
+      "cta": "Funktionsumfang und Benchmark-Fußnote ansehen",
+      "source": "l0ng-ai/openidea · Repository erstellt 21.10.2026 · Sonntagsfund 01.11. · Apache 2.0; Drittassets mit eigenen Hinweisen"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Altoids-Projekt",
+      "title": "Fünf Iterationen, bis die Spieldose schließt. Ein ehrlicher Elektronik-Baubericht.",
+      "body": "Der Bericht vom 31. Oktober wird am Sonntag diskutiert: Ein Vater und sein zwölfjähriger Sohn bauen in etwa zwei Monaten ein kleines Spielgerät in einer Metalldose. Ausgangspunkt ist ein ausgeschlachteter Roboter; später kommen Arduino Nano, Display, LiPo-Stromversorgung und selbst entworfene Halterungen dazu. Gespielt wird Space Trash aus der U 8 g 2-Bibliothek. Der lehrreiche Teil steckt in den Fehlversuchen: Ein vermeintlich hilfreicher KI-Pinout hat zwanzig Pins für ein Zehn-Pin-Display, ein Kupferpad reißt ab, Gehäuse schließen nicht, und zwei Drähte brechen am nächsten Tag. Erst nach fünf Iterationen passt das Ganze. Laut Autor überlebt kein Bauteil des ersten Aufbaus bis zum Schluss.",
+      "takeaway": "Eine schöne Erinnerung daran, dass Debugging auch aus Kabeln, Werkzeug und Mechanik besteht. Kein fertiger Bausatz und keine Sicherheitsfreigabe für einen Akku in einer leitenden Dose. Den Erfahrungsbericht als Lernweg lesen, nicht als ungeprüfte Verdrahtungsanleitung.",
+      "url": "https://uvdn7.github.io/altoids-project/",
+      "cta": "Die fünf Bauversuche und Lernmomente ansehen",
+      "source": "Lu’s blog / uvdn7 · 31.10.2026 · Sonntagsdiskussion 01.11. · persönlicher Baubericht"
+    }
+  ],
+  "notes": "Laufende Sonntag-Auswahl. Quellenprüfung 01.11.2026 gegen 11:33 Berlin. Ältere Quellen und bestehende Projekte ausdrücklich datiert. Messungen und Funktionsumfang als Autorenangaben; keine lokalen Builds, Benchmarks oder Hardwareversuche. Kein Audio in dieser Textausgabe."
+}
