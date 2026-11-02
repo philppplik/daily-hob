@@ -1,9 +1,9 @@
 {
   "date": "2026-11-02",
   "title": "Daily Hob vom Montag, 02.11.",
-  "headline": "Mehr Fehler finden heißt noch nicht schneller fertig werden.",
-  "teaser": "2 Montagsfunde: PostgreSQLs Review-Engpass und nibnibs extrem einfacher Bilddecoder für Mikrocontroller.",
-  "intro": "Zwei Montagsfunde zeigen unterschiedliche Kosten guter Technik: PostgreSQL muss mehr gefundene Fehler sorgfältig prüfen, nibnib verlagert Arbeit vom knappen Decoder zum aufwendigeren Encoder. Beide Quellen sind älter und heute wieder in der Diskussion, keine behaupteten Montags-Releases.",
+  "headline": "Bugs prüfen, Systemaufrufe nachschlagen und den Minutentakt entzerren.",
+  "teaser": "4 Montagsfunde: Postgres-Review, nibnib, syscall.sh und das Software-Minutenmuster im Stromnetz.",
+  "intro": "Vier Montagsfunde verbinden kleine technische Entscheidungen mit großen Folgen: PostgreSQL braucht Review-Kapazität, nibnib einen winzigen Decoder und syscall.sh klare Versionsbezüge. Eine Stromnetzstudie zeigt, was passiert, wenn viele Geräte dieselbe Uhrzeit wählen. Ältere Quellen sind als heutige Diskussionsfunde datiert; syscall.sh wurde heute als Update vorgestellt.",
   "hero": "hero.jpg",
   "heroAlt": "Dünne schwarze Linienillustration von Datenbankstapel mit Lupe, Mikrocontroller mit paarweisen Bildpixeln und Sanduhr auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://github.com/raphlinus/nibnib",
       "cta": "Decoder, Bildbeispiele und Grenzen ansehen",
       "source": "raphlinus/nibnib · bestehendes Projekt, README 30.10.2026 · Montagsdiskussion 02.11. · MIT oder Apache 2.0"
+    },
+    {
+      "category": "Informatik",
+      "short": "syscall.sh",
+      "title": "Linux-Systemaufrufe nach Architektur und Kernelstand: syscall.sh baut die Nachschlagehilfe aus.",
+      "body": "Im heutigen Show-HN-Beitrag beschreibt der Autor ein Update seines seit 2020 bestehenden Projekts: mehr Architekturen, Kernel-Auswahl und Kurzbeschreibungen. Die Seite nennt 27 Architekturen und ABIs und zeigt Systemaufrufe mit Nummern, Argumenten und Registern. Laut Projekt werden Tabellen und Funktionsmakros aus Kernelquellen ausgewertet; Beschreibungen stammen aus den Linux-Manpages und für io_uring aus liburing. Die Versionsgeschichte hält auch entfernte Einträge fest. Ein since-Wert an der ersten gescannten Version bedeutet dabei nicht automatisch, dass der Systemaufruf damals neu eingeführt wurde.",
+      "takeaway": "Praktisch beim Nachschlagen und Vergleichen von ABIs, nicht als Ersatz für die passende Kernelquelle und vollständige Manpage. Die API-Dokumentation nennt v2 als aktuelle Schnittstelle und v1 als veraltet. Einzelne Registerdetails werden im Diskussionsfaden bereits korrigiert; wir haben nicht jeden Tabelleneintrag unabhängig geprüft.",
+      "url": "https://syscall.sh/",
+      "cta": "Architekturen, Kernelstände und API ansehen",
+      "source": "syscall.sh · Update am 02.11.2026 vorgestellt; Projekt seit 2020 · API-Doku https://api.syscall.sh/docs"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Minutentakt im Netz",
+      "title": "Wenn viele Geräte gleichzeitig prüfen: Ein Software-Minutenrhythmus wird im Stromnetz messbar.",
+      "body": "Montagsdiskussion einer Studie und Jülich-Mitteilung vom 30. Oktober: Forschende verfolgen ein scharfes 60-Sekunden-Muster in Netzdaten mehrerer Kontinente. Messungen an 80 Stellen des Jülicher Campus lieferten einen konkreten Hinweis auf uhrzeitsynchrone Prüfroutinen batteriegestützter unterbrechungsfreier Stromversorgungen. Viele kleine Lastspitzen können sich über Spannungsebenen hinweg zu einem messbaren Signal addieren. Die Studie beschreibt damit einen Mechanismus unbeabsichtigter Synchronisation, keinen nachgewiesenen Angriff. Andere digital gesteuerte Geräte werden als mögliche weitere Beiträge diskutiert, nicht als überall einzeln belegte Ursache.",
+      "takeaway": "Eine gute Erinnerung für verteilte Systeme: Gleichmäßige Intervalle brauchen nicht denselben Startzeitpunkt. Die Forschenden schlagen zeitlich verteilte, etwa zufällige Prüfungen vor. Laut Jülich waren die beobachteten Abweichungen nicht kritisch für die Netzsicherheit; wiederkehrende Regelarbeit kann trotzdem Verschleiß begünstigen. Kein Anlass, selbst Schutzfunktionen oder USV-Prüfungen abzuschalten.",
+      "url": "https://www.fz-juelich.de/en/news/archive/press-release/2026/mystery-of-60-second-fluctuations-in-power-grids-solved",
+      "cta": "Messungen und Erklärung zum Minutenmuster lesen",
+      "source": "Forschungszentrum Jülich · 30.10.2026 · Montagsdiskussion 02.11.; Nature Energy https://www.nature.com/articles/s41560-026-02144-0"
     }
   ],
-  "notes": "Laufende Montagsauswahl mit zwei Catches. Quellenprüfung am 02.11.2026 gegen 11:32 Berlin. Ältere Artikel und Projekte als heutige Diskussionsfunde datiert. Autorenmessungen und Einschätzungen kenntlich gemacht; keine eigenen Datenbank-, Codec- oder Hardwaretests. Kein Audio in dieser Textausgabe."
+  "notes": "Laufende Montagsauswahl mit vier Catches. Quellenprüfung am 02.11.2026 gegen 15:32 Berlin. Ältere Artikel und Projekte ausdrücklich datiert. Autorenmessungen und Einschätzungen kenntlich gemacht; keine eigenen Datenbank-, Codec-, ABI- oder Stromnetzmessungen. Kein Audio in dieser Textausgabe."
 }
