@@ -1,9 +1,9 @@
 {
   "date": "2026-11-01",
   "title": "Daily Hob vom Sonntag, 01.11.",
-  "headline": "Code genauer vergleichen, kleine 3D-Welten bauen und draußen die Landschaft lesen.",
-  "teaser": "7 Sonntagsfunde: OmniDiff, phoria2, Framework-Kosten, OpenIDEA, groff-Novellen, Outcrop und ein Altoids-Spielgerät.",
-  "intro": "Sieben Sonntagsfunde verbinden Software mit der Welt außerhalb des Editors: OmniDiff verfeinert Code-Reviews, phoria2 setzt auf kleine 3D-Ansichten. Dazu kommen Agentenkosten im Framework-Test, OpenIDEA, Bücher aus groff, geologische Karten und ein Arduino-Spielgerät. Ältere Beiträge und bestehende Projekte sind datiert; Messungen bleiben den Autoren zugeordnet.",
+  "headline": "Code vergleichen, Bücher entdecken und draußen die Landschaft lesen.",
+  "teaser": "8 Sonntagsfunde: HackerBooks, OmniDiff, phoria2, Framework-Kosten, OpenIDEA, groff-Novellen, Outcrop und ein Altoids-Spielgerät.",
+  "intro": "Acht Sonntagsfunde verbinden Software mit der Welt außerhalb des Editors: HackerBooks öffnet das Buchgedächtnis von HN, OmniDiff verfeinert Reviews und phoria2 baut kleine 3D-Ansichten. Dazu kommen Agentenkosten, OpenIDEA, Bücher aus groff, geologische Karten und ein Arduino-Spielgerät. Ältere Beiträge sind datiert; Autorenmessungen und spätere Projektänderungen bleiben klar eingeordnet.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte dünne Linienillustration einer offenen Metalldose mit Mini-Schaltung, einer Waage mit Codeblöcken und eines Editorfensters auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -77,7 +77,17 @@
       "url": "https://kevs3d.co.uk/phoria2/",
       "cta": "3D-Demos, Tutorial und Referenz ansehen",
       "source": "Kevin Roast / phoria2 · Show-HN-Fund 01.11.2026 · Projektseite und README geprüft; kein verifiziertes ursprüngliches Releasedatum"
+    },
+    {
+      "category": "Wildcard",
+      "short": "HackerBooks",
+      "title": "HackerBooks macht aus Bucherwähnungen im HN-Archiv ein durchsuchbares Regal.",
+      "body": "Der am Sonntag vorgestellte Katalog überträgt die HackerTube-Idee auf Bücher: Titel aus Hacker-News-Kommentaren seit 2007 werden zusammengeführt und mit den ursprünglichen Diskussionen verknüpft. Im Startbeitrag nennt der Autor ungefähr 16.500 Bücher und mindestens zwei verschiedene Kommentierende als Eingangsschwelle. Diese Zahl ist ein Stand des Startbeitrags, kein eingefrorener Bestand. Der wichtige Hinweis steht direkt daneben: Über ein Buch zu sprechen heißt nicht, es zu empfehlen. Auch Kritik zählt als Erwähnung; fehlende oder falsch zugeordnete Titel gehören zu den bekannten Problemen.",
+      "takeaway": "Als Fundgrube für Programmierbücher und Science-Fiction interessant, als neutrale Bestenliste ungeeignet. Die Projektseite wird bereits weiterentwickelt: Beim Abschlusscheck am 2. November trennt sie zusätzlich algorithmisch eingeordnete Empfehlungen von Erwähnungen. Diese neuere Funktion ist kein gesicherter Sonntagsstand und keine unabhängige Qualitätsprüfung. Kaufverweise der Projektseite sind Affiliate-Links; unsere Quelle ist der Katalog, kein Kaufaufruf.",
+      "url": "https://hackerbooks.org/",
+      "cta": "Bücher und ursprüngliche Diskussionen durchstöbern",
+      "source": "HackerBooks / roansh · Show HN 01.11.2026 https://news.ycombinator.com/item?id=50326821 · Projektseite am 02.11. geprüft; Start- und Folgestand getrennt"
     }
   ],
-  "notes": "Laufende Sonntag-Auswahl mit sieben Catches. Quellenprüfung 01.11.2026 gegen 19:32 Berlin. OmniDiff 0.3.0 heute veröffentlicht; ältere Quellen und bestehende Projekte als Diskussionsfunde datiert. Autorenangaben, keine lokalen Builds, Benchmarks, Hardware- oder AR-Feldtests. Kein Audio in dieser Textausgabe."
+  "notes": "Abgeschlossene Auswahl für Sonntag, 01.11.2026, mit acht Catches. Letzter Quellencheck am 02.11.2026 gegen 06:18 Berlin. OmniDiff 0.3.0 am Sonntag veröffentlicht; ältere Quellen und bestehende Projekte als Diskussionsfunde datiert. HackerBooks-Startbeitrag und neuere Funktionen getrennt. Autorenangaben, keine lokalen Builds, Benchmarks, Hardware- oder AR-Feldtests. Kein Audio in dieser Textausgabe."
 }
