@@ -1,9 +1,9 @@
 {
   "date": "2026-11-03",
   "title": "Daily Hob vom Dienstag, 03.11.",
-  "headline": "Bedeutung prüfen, Versuche auseinanderhalten und alte Hardware neu ausreizen.",
-  "teaser": "4 Dienstagsfunde: Auto Ontology, Toit 2.0, der Astra-Methodencheck und moderne Schachsoftware auf einem Pentium.",
-  "intro": "Vier Dienstagsfunde über saubere Grenzen: Datenkataloge brauchen Bedeutung und sicheren Betrieb, Toit einen klaren Versionsstand. Die Astra-Debatte trennt kleine Zahlenexperimente von werkzeuggestützter Modellreparatur, während ein Pentium zeigt, wie viel bessere Schachsoftware aus alter Hardware holen kann. Ältere Quellen und heutige Folgediskussionen sind ausdrücklich datiert.",
+  "headline": "Daten verstehen, Versuche prüfen und Hardware anders nutzen.",
+  "teaser": "6 Dienstagsfunde: Auto Ontology, Toit 2.0, Astra-Methodencheck, Pentium-Schach, drawDB und Disc Image Studio.",
+  "intro": "Sechs Dienstagsfunde zwischen Datenbedeutung und sichtbaren Datenmustern: Auto Ontology und drawDB helfen auf unterschiedliche Weise beim Blick auf Datenbanken. Toit markiert einen Versionsstand, die Astra-Debatte trennt Versuchsaufbauten, ein Pentium reizt moderne Schachsoftware aus und Disc Image Studio zeichnet mit Brenndaten. Ältere Projekte und Veröffentlichungen sind als heutige Diskussionsfunde datiert.",
   "hero": "hero.jpg",
   "heroAlt": "Feine schwarze Linienzeichnung eines Datengraphen mit Datenbank und Schlüsselsymbol neben einer Mikrocontroller-Platine auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
       "cta": "Portierung, Partien und Rating-Grenzen ansehen",
       "source": "Nicholas Carlini · 01.11.2026 · Dienstagsdiskussion 03.11. · Autorenexperiment, nicht unabhängig nachgemessen"
+    },
+    {
+      "category": "Open Source",
+      "short": "drawDB",
+      "title": "Datenbankschemas im Browser zeichnen: drawDB hält Diagramm und SQL nah beieinander.",
+      "body": "Dienstagsfund eines bestehenden offenen Projekts: drawDB ist ein Editor für Entity-Relationship-Diagramme im Browser. Laut README lassen sich Tabellen und Beziehungen zeichnen, SQL-Skripte importieren und exportieren sowie Migrationen erzeugen, ohne dafür ein Konto anzulegen. Das Projekt dokumentiert außerdem lokalen Betrieb über npm oder Docker. Für das Teilen von Dateien kommt optional ein eigener Server hinzu; dieser ist nicht Voraussetzung für den einfachen lokalen Editorbetrieb.",
+      "takeaway": "Interessant, um ein Schema zu besprechen oder vorhandenes SQL visuell zu verstehen. Eine gezeichnete Beziehung oder erzeugte Migration ersetzt aber keine Prüfung gegen die echte Datenbank. Vor dem Anwenden SQL-Dialekt, Constraints und Änderungen testen. Wir haben weder eine Produktivdatenbank angebunden noch die Migrationen ausgeführt; aus dem heutigen Diskussions-Titel leiten wir keine ungeprüfte Ein-Klick-Live-Anbindung ab.",
+      "url": "https://github.com/drawdb-io/drawdb",
+      "cta": "Editor, lokalen Betrieb und SQL-Funktionen ansehen",
+      "source": "drawdb-io/drawdb · bestehendes Projekt, Dienstagsfund 03.11.2026 · README und AGPL-3.0-Lizenz geprüft"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Disc Image Studio",
+      "title": "Bilder auf die Datenseite brennen: Disc Image Studio macht optische Medien zum Zeichenmaterial.",
+      "body": "Heute diskutiertes Projekt für eine ziemlich andere Art von Bildausgabe: Disc Image Studio wandelt Motive in Datenmuster um, die nach dem Brennen auf CD, DVD oder einschichtigen BD-R mit bloßem Auge sichtbar werden sollen. Der Editor bietet Ebenen, Tonwertanpassung und Vorschau; als Ausgaben nennt das README je nach Medium ISO, RAW oder WAV samt CUE. Die grafische Oberfläche richtet sich an Windows. Für Linux und macOS gibt es eine ausdrücklich experimentelle Kommandozeile. Der Code steht unter GPL-3.0-or-later.",
+      "takeaway": "Schöner Hardware-Hack, aber kein bedenkenloser Druckauftrag: Direktes Streaming-Brennen ist experimentell und nur für leere, entbehrliche Testmedien gedacht. Abbruch, Stromausfall oder zu langsame Datenerzeugung können einen Rohling unbrauchbar machen. Das sichtbare Ergebnis hängt von Medium, Laufwerk, Firmware und Schreibstrategie ab. Wir haben keine Disc gebrannt und behaupten keine universelle Laufwerkskompatibilität.",
+      "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+      "cta": "Beispiele, Plattformen und Brennwarnungen ansehen",
+      "source": "JiaFeiMiao-K-Cat/DiscImageStudio · bestehendes Projekt, Dienstagsdiskussion 03.11.2026 · README geprüft, keine eigenen Brenntests"
     }
   ],
-  "notes": "Laufende Dienstagsauswahl mit vier Catches. Quellen zuletzt geprüft am 03.11.2026 gegen 15:32 Berlin. Ältere Projekte und Veröffentlichungen ausdrücklich als heutige Diskussionsfunde datiert. Keine eigene Installation, Sicherheitsprüfung, Modell- oder Hardwaremessung; Funktions- und Leistungsangaben den jeweiligen Quellen zugeordnet. Kein Audio in dieser Textausgabe."
+  "notes": "Laufende Dienstagsauswahl mit sechs Catches. Quellen zuletzt geprüft am 03.11.2026 gegen 19:34 Berlin. Ältere Projekte und Veröffentlichungen ausdrücklich als heutige Diskussionsfunde datiert. Keine eigene Installation, Sicherheitsprüfung, Datenbankanbindung, Modell-, Hardware- oder Brennmessung; Angaben den jeweiligen Quellen zugeordnet. Experimentelle Funktionen und Risiken benannt. Kein Audio in dieser Textausgabe."
 }
