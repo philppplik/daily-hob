@@ -1,9 +1,9 @@
 {
   "date": "2026-11-03",
   "title": "Daily Hob vom Dienstag, 03.11.",
-  "headline": "Daten brauchen Bedeutung, Mikrocontroller eine Sprache mit klarem Stand.",
-  "teaser": "2 Dienstagsfunde: NVIDIAs Auto Ontology mit wichtigen Betriebsgrenzen und Toit 2.0 nach langer Alpha.",
-  "intro": "Zwei Dienstagsfunde zwischen Datenkatalog und Mikrocontroller: Auto Ontology will Kennzahlen und Beziehungen für KI-Abfragen nutzbar machen. Toit zieht nach langer Alpha einen stabilen Versionsstrich. Beides sind heute diskutierte Projekte, keine behaupteten Neuveröffentlichungen dieses Morgens; das Toit-Release stammt vom 31. Oktober.",
+  "headline": "Bedeutung prüfen, Versuche auseinanderhalten und alte Hardware neu ausreizen.",
+  "teaser": "4 Dienstagsfunde: Auto Ontology, Toit 2.0, der Astra-Methodencheck und moderne Schachsoftware auf einem Pentium.",
+  "intro": "Vier Dienstagsfunde über saubere Grenzen: Datenkataloge brauchen Bedeutung und sicheren Betrieb, Toit einen klaren Versionsstand. Die Astra-Debatte trennt kleine Zahlenexperimente von werkzeuggestützter Modellreparatur, während ein Pentium zeigt, wie viel bessere Schachsoftware aus alter Hardware holen kann. Ältere Quellen und heutige Folgediskussionen sind ausdrücklich datiert.",
   "hero": "hero.jpg",
   "heroAlt": "Feine schwarze Linienzeichnung eines Datengraphen mit Datenbank und Schlüsselsymbol neben einer Mikrocontroller-Platine auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://toit.io/blog/toit-v2-0-0/",
       "cta": "Release-Einordnung und Entwicklungsstand lesen",
       "source": "Toit / Florian Loitsch · 31.10.2026 · Dienstagsdiskussion 03.11. · Release-Notizen https://toit.io/releases/"
+    },
+    {
+      "category": "KI",
+      "short": "Astra-Methodencheck",
+      "title": "Nach dem Qwen-Gewichtspatch: Eine Kritik trennt die Versuchsaufbauten hinter der großen Erzählung.",
+      "body": "Der heutige Beitrag auf honnibal.dev kritisiert die Darstellung des am Montag erschienenen Weight-Space-Programming-Blogs. Der entscheidende Unterschied: In einigen kleinen Netzexperimenten sieht Astra rohe Zahlen ohne Werkzeuge; beim Qwen-Experiment arbeitet es dagegen mit Python, Übungsaufgaben und gebündelten Modellabfragen. Der Originalblog beschreibt diese Mittel selbst. Die Kritik bestreitet nicht einfach den gemeldeten Testwertsprung, sondern warnt davor, sehr verschiedene Verfahren als ein einheitliches direktes Lesen und Verstehen großer Netze zu erzählen.",
+      "takeaway": "Ein hilfreicher Methodencheck statt eines neuen Schlagwortduells: Welche Gewichte sieht das Modell tatsächlich, welche Werkzeuge hat es und wie viel Rückmeldung bekommt es? Unser Montagsbeitrag hatte Python, die 50 gebündelten Abfragen, die Loop-Reparatur und die negative Gemma-Gegenprobe bereits ausdrücklich genannt. Die neue Kritik schärft genau diese Grenze: Ein erfolgreicher Reparaturversuch belegt noch kein allgemeines Gewichteverständnis oder neues Mathewissen.",
+      "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+      "cta": "Kritik und Gegenüberstellung der Experimente lesen",
+      "source": "honnibal.dev · 03.11.2026 · Vergleich mit Originalblog https://rikiyat.github.io/blog/weight-space-programming/"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Pentium spielt Schach",
+      "title": "Moderne Schachideen auf einem alten Pentium: Wie weit trägt bessere Software ohne neue Spielhardware?",
+      "body": "Dienstagsdiskussion eines Experiments vom 1. November: Nicholas Carlini portiert Stockfish 17 auf einen Pentium Pro mit 200 MHz und 64 MB RAM und ergänzt die ältere Engine Crafty um moderne Verfahren. Dafür werden unter anderem 64-Bit-Annahmen beseitigt und die neuronale Bewertungsfunktion verkleinert und angepasst. Im berichteten 100-Partien-Vergleich gewinnt die moderne Engine auf alter Hardware 78-mal, spielt 17-mal remis und verliert fünfmal gegen das alte Crafty auf moderner Hardware. Das macht den Anteil besserer Algorithmen anschaulich, bleibt aber ein konkreter Enginevergleich.",
+      "takeaway": "Die Frage nach einem Sieg gegen Kasparov ist ein Gedankenexperiment, kein gespieltes Match. Die oft genannte klassische Stärke von etwa 3300 Elo ist aus kürzeren Bedenkzeiten hochgerechnet; Engine-Ratings und menschliche FIDE-Werte sind nicht direkt gleichzusetzen. Außerdem nutzte die Entwicklung moderne Rechner und Trainingshilfe. Das Ergebnis lautet also nicht, dass man alles 1996 genauso hätte bauen können, sondern dass heutige Software auf alter Hardware erstaunlich weit kommt.",
+      "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
+      "cta": "Portierung, Partien und Rating-Grenzen ansehen",
+      "source": "Nicholas Carlini · 01.11.2026 · Dienstagsdiskussion 03.11. · Autorenexperiment, nicht unabhängig nachgemessen"
     }
   ],
-  "notes": "Laufende Dienstagsauswahl mit zwei Catches. Quellen geprüft am 03.11.2026 gegen 11:32 Berlin. Projekte als heutige Diskussionsfunde, ältere Veröffentlichung datiert. Keine eigene Installation, Sicherheitsprüfung oder Hardwaremessung; Leistungs- und Funktionsbeschreibungen stammen aus den Projektquellen. Kein Audio in dieser Textausgabe."
+  "notes": "Laufende Dienstagsauswahl mit vier Catches. Quellen zuletzt geprüft am 03.11.2026 gegen 15:32 Berlin. Ältere Projekte und Veröffentlichungen ausdrücklich als heutige Diskussionsfunde datiert. Keine eigene Installation, Sicherheitsprüfung, Modell- oder Hardwaremessung; Funktions- und Leistungsangaben den jeweiligen Quellen zugeordnet. Kein Audio in dieser Textausgabe."
 }
