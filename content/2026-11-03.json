@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-03",
+  "title": "Daily Hob vom Dienstag, 03.11.",
+  "headline": "Daten brauchen Bedeutung, Mikrocontroller eine Sprache mit klarem Stand.",
+  "teaser": "2 Dienstagsfunde: NVIDIAs Auto Ontology mit wichtigen Betriebsgrenzen und Toit 2.0 nach langer Alpha.",
+  "intro": "Zwei Dienstagsfunde zwischen Datenkatalog und Mikrocontroller: Auto Ontology will Kennzahlen und Beziehungen für KI-Abfragen nutzbar machen. Toit zieht nach langer Alpha einen stabilen Versionsstrich. Beides sind heute diskutierte Projekte, keine behaupteten Neuveröffentlichungen dieses Morgens; das Toit-Release stammt vom 31. Oktober.",
+  "hero": "hero.jpg",
+  "heroAlt": "Feine schwarze Linienzeichnung eines Datengraphen mit Datenbank und Schlüsselsymbol neben einer Mikrocontroller-Platine auf hellem Papier mit Gelb und Mint",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "KI",
+      "short": "Auto Ontology",
+      "title": "NVIDIAs Auto Ontology setzt eine Bedeutungsschicht vor die Datenabfrage - samt klarer Betriebsaufgaben.",
+      "body": "Dienstagsfund eines bestehenden offenen Projekts: Auto Ontology baut aus Unternehmensmetadaten einen semantischen Katalog mit Entitäten, Beziehungen und Kennzahlendefinitionen. Der soll Sprachmodellen helfen, Daten nicht nur zu finden, sondern Begriffe und Herkunft bei SQL-Abfragen zu berücksichtigen. Das README beschreibt dafür Postgres und pgvector, einen FastAPI-Unterbau, eine Weboberfläche sowie MCP-, CLI- und API-Zugriff. Die Standardkonfiguration nutzt NVIDIA-NIM-Endpunkte, wahlweise gehostet oder selbst betrieben. Der Code steht unter Apache 2.0; externe Beiträge nimmt das Projekt derzeit nicht an.",
+      "takeaway": "Kein automatisches Gütesiegel für richtige Zahlen oder einen sicheren Betrieb. Besonders wichtig im README: Über die Oberfläche angelegte Verbindungsdaten liegen ohne vollständig konfigurierte Vault-Anbindung unverschlüsselt in Postgres; eine Teilkonfiguration fällt darauf zurück. Außerdem darf der interne FastAPI-Dienst nicht öffentlich erreichbar sein. Vor echten Unternehmensdaten also Konfiguration, Rechte und Datenwege prüfen. Wir haben das Projekt nicht installiert oder auditiert.",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "cta": "Architektur und Betriebsgrenzen im README prüfen",
+      "source": "NVIDIA/auto-ontology · bestehendes Projekt, Dienstagsdiskussion 03.11.2026 · README geprüft 03.11. · Apache 2.0"
+    },
+    {
+      "category": "Open Source",
+      "short": "Toit 2.0",
+      "title": "Toit 2.0 verlässt die lange Alpha: ein klarer Stand für Sprache, SDK und kleine Geräte.",
+      "body": "Heute diskutiert, am 31. Oktober veröffentlicht: Nach mehr als vier Jahren Alpha nennt das Toit-Projekt seine Version nun 2.0.0. Die offene Sprache samt Laufzeit und Werkzeugen richtet sich unter anderem an ESP32-Anwendungen und Skripte auf dem Rechner. Der Rückblick nennt gewachsene Hardware-Unterstützung, einen überarbeiteten Paketmanager, Mixins und anpassbare Firmware-Envelopes. Diese Arbeit entstand über viele Alpha-Versionen, nicht allein im letzten Release. Dessen kurze Notizen nennen Unix-Domain-Sockets über das Host-Paket, einen per Firmware-Konfiguration setzbaren Hostnamen und Fehlerkorrekturen.",
+      "takeaway": "Ein guter Zeitpunkt, Toit neu anzusehen, aber kein Versprechen, dass jede Platine und jedes alte Paket sofort passt. Schon vor dem finalen Release wurden Peripherie-APIs auf direkt übergebbare Pin-Nummern umgestellt. Bestehende Alpha-Projekte sollten daher Paketstände und Peripheriecode gegen den Änderungsverlauf testen. Zusätzliche Architekturen und ein Formatter sind im Blog noch Zukunftsarbeit, keine fertigen 2.0-Funktionen.",
+      "url": "https://toit.io/blog/toit-v2-0-0/",
+      "cta": "Release-Einordnung und Entwicklungsstand lesen",
+      "source": "Toit / Florian Loitsch · 31.10.2026 · Dienstagsdiskussion 03.11. · Release-Notizen https://toit.io/releases/"
+    }
+  ],
+  "notes": "Laufende Dienstagsauswahl mit zwei Catches. Quellen geprüft am 03.11.2026 gegen 11:32 Berlin. Projekte als heutige Diskussionsfunde, ältere Veröffentlichung datiert. Keine eigene Installation, Sicherheitsprüfung oder Hardwaremessung; Leistungs- und Funktionsbeschreibungen stammen aus den Projektquellen. Kein Audio in dieser Textausgabe."
+}
