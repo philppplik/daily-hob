@@ -1,9 +1,9 @@
 {
   "date": "2026-11-02",
   "title": "Daily Hob vom Montag, 02.11.",
-  "headline": "Mehr finden, weniger neu bauen und den richtigen Maßstab wählen.",
-  "teaser": "6 Montagsfunde: Postgres-Review, nibnib, syscall.sh, Stromnetz-Minutenmuster, Cloudflare-DNS und PostHogs Warehouse-Wechsel.",
-  "intro": "Sechs Montagsfunde über technische Engpässe und ihren Maßstab: KI-gefundene Bugs brauchen Menschen zum Prüfen, winzige Decoder sparen am anderen Ende und gemeinsame Uhrzeiten können im Stromnetz auftauchen. Dazu kommen syscall.sh, gezielte DNS-Builds bei Cloudflare und PostHogs nächster Warehouse-Wechsel. Ältere Quellen sind ausdrücklich datiert; Betreiberwerte bleiben Betreiberwerte.",
+  "headline": "Netze reparieren, Karten abspecken und den richtigen Maßstab wählen.",
+  "teaser": "8 Montagsfunde: Qwen-Gewichtspatch, Leaflet 2 Beta, Postgres-Review, nibnib, syscall.sh, Stromnetz-Minutenmuster, Cloudflare-DNS und PostHogs Warehouse-Wechsel.",
+  "intro": "Acht Montagsfunde über Reparaturen und Maßstab: Ein Sprachmodell editiert Gewichte gegen Denkschleifen, Leaflet erreicht die 2.0-Beta und PostgreSQL braucht Menschen zum Prüfen. Dazu kommen nibnib, syscall.sh, ein Software-Minutenmuster im Stromnetz, gezielte DNS-Builds und ein Warehouse-Wechsel. Ältere Quellen sind ausdrücklich datiert; Forschungs- und Betreiberwerte bleiben Angaben ihrer Urheber.",
   "hero": "hero.jpg",
   "heroAlt": "Dünne schwarze Linienillustration von Datenbankstapel mit Lupe, Mikrocontroller mit paarweisen Bildpixeln und Sanduhr auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -67,7 +67,27 @@
       "url": "https://posthog.com/blog/moving-off-duckdb",
       "cta": "Größenprobleme und Architekturentscheidung lesen",
       "source": "PostHog / Benjamin Knofe-Vider · 02.11.2026 · Erfahrungen und Zahlen des Betreibers"
+    },
+    {
+      "category": "KI",
+      "short": "Gewichte als Patch",
+      "title": "Astra editiert Qwens Gewichte: ein eindrucksvoller Loop-Fix, noch kein Ersatz für Training.",
+      "body": "Im Forschungsblog vom 2. November untersuchen Rikiya Takehi, Jayden Teoh, Alex Zhang und Omar Khattab, ob ein Sprachmodell andere Netze direkt lesen und verändern kann. Ihr Qwen-Beispiel ist besonders greifbar: GPT-6 Astra untersucht Qwen3.5-0.8B mit Python und Übungsaufgaben, ohne Gradienten-Training. Laut Autoren entfernt es eine Richtung aus ausgewählten Gewichten, die mit wiederholten Denkschleifen zusammenhängt. Im Versuch mit 50 gebündelten Modellabfragen steigt MATH-500 von 7,9 auf 48,1 Prozent; geändert werden 131.072 Gewichte, etwa 0,016 Prozent.",
+      "takeaway": "Der kleine Patch darf nicht mit kleinem Suchaufwand verwechselt werden: Es gab viele Tests und Übungsbeispiele. Vor allem kann Qwen danach häufiger Antworten beenden, die es zuvor in Schleifen verlor. Beim selten schleifenden Gemma 3 270M gelang kein belastbarer Mathegewinn. Spannende frühe Reparaturforschung mit veröffentlichten Experimentlogs, keine nachgewiesene allgemeine Fähigkeit, neues Wissen billig in beliebige Netze hineinzuschreiben.",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "cta": "Versuchsaufbau, Ergebnisse und Gegenprobe lesen",
+      "source": "Takehi, Teoh, Zhang, Khattab / Forschungsblog · 02.11.2026 · Autorenmessungen; Einordnung https://venturebeat.com/technology/like-gene-editing-for-neural-networks-mit-researchers-used-gpt-6-astra-to-edit-qwens-open-weights-directly-boosting-math-performance"
+    },
+    {
+      "category": "Open Source",
+      "short": "Leaflet 2 Beta",
+      "title": "Leaflet 2 erreicht die erste Beta: kleinere Karten-Bundles und eine echte Migrationsaufgabe.",
+      "body": "Am Montag erschien Leaflet 2.0.0-beta.1. Die Kartenbibliothek setzt auf ES-Module und ES-Klassen, lässt ungenutzte Teile per Tree-Shaking weg und bringt eigene TypeScript-Typen mit. Für eine Karte mit Kachelebene nennt das Projekt 25,6 statt 38 Kilobyte gzip. Das Standard-Markierungssymbol ist nun Inline-SVG und soll ohne Bildpfad-Konfiguration mit Bundlern funktionieren. Dazu kommen unter anderem farbige und drehbare Marker, bessere Tastaturbedienung und die Berücksichtigung reduzierter Bewegung.",
+      "takeaway": "Zum Ausprobieren interessant, aber ausdrücklich eine Beta mit inkompatiblen Änderungen: Der Default-Export entfällt, Klassen- und Typnamen ändern sich, Class.extend weicht normalen Klassen. Auch Plugins müssen passen. Die Installationsseite verweist bei fehlender Plugin-Unterstützung weiter auf Leaflet 1.9.4. Paketgrößen und Verbesserungen sind Projektangaben, kein eigener Browser-Benchmark.",
+      "url": "https://github.com/Leaflet/Leaflet/releases/tag/v2.0.0-beta.1",
+      "cta": "Beta-Neuerungen und Breaking Changes prüfen",
+      "source": "Leaflet Release v2.0.0-beta.1 · 02.11.2026, 15:20 Berlin · Installation https://leafletjs.com/install.html"
     }
   ],
-  "notes": "Laufende Montagsauswahl mit sechs Catches. Quellenprüfung zuletzt am 02.11.2026 gegen 19:32 Berlin. Ältere Artikel und Projekte ausdrücklich datiert. Autoren- und Betreibermessungen kenntlich gemacht; keine eigenen Datenbank-, Codec-, ABI-, Stromnetz- oder DNS-Messungen. Kein Audio in dieser Textausgabe."
+  "notes": "Abgeschlossene Montagsauswahl mit acht Catches für den 02.11.2026, 00:00 bis 24:00 Berlin. Abschlussprüfung am 03.11.2026 gegen 06:05 Berlin. Ältere Artikel und Projekte ausdrücklich datiert. Autoren- und Betreibermessungen kenntlich gemacht; keine eigenen Datenbank-, Codec-, ABI-, Stromnetz-, DNS-, Modell- oder Kartenbenchmarks. Forschungsblog und Beta nicht als fertige allgemeine Lösungen dargestellt. Kein Audio in dieser Textausgabe."
 }
