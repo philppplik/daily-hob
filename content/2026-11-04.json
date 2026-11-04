@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-04",
+  "title": "Daily Hob vom Mittwoch, 04.11.",
+  "headline": "Terminal aufräumen, Schnittstellen gezielt testen.",
+  "teaser": "2 Mittwochs-Catches: kitty 0.50 mit angedockten Fenstern und Milkman als erweiterbare Werkbank für API-Anfragen.",
+  "intro": "Zwei praktische Mittwochs-Catches für den Entwickleralltag: kitty ordnet Terminalfenster neu und bringt Sicherheitskorrekturen mit. Milkman ist ein wiederentdeckter, offener Werkzeugkasten für Anfragen weit über HTTP hinaus. Beide helfen beim Arbeiten, keine der Projektbeschreibungen ersetzt den eigenen Test.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstraktes Terminal mit angedockten Seitenfenstern und verbundenen Anfrageknoten, schwarze Linien auf hellem Papier mit Gelb und Mint",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Informatik",
+      "short": "kitty 0.50",
+      "title": "kitty 0.50 dockt Hilfsfenster an und stellt Sitzungen nach dem Abmelden wieder her.",
+      "body": "Am Mittwoch diskutiert, laut Changelog am 3. November veröffentlicht: Der Terminalemulator kitty kann Fenster nun außerhalb des normalen Layouts an andere Fenster oder einen Tab andocken. Das passt zu Dateibäumen, Statusleisten oder einer Shell neben dem Editor. Ein an ein Fenster gebundenes Dock folgt diesem auch in andere Tabs. Die neue Option restore_session_after_logout sichert Fenster, Tabs und Scrollback beim Abmelden oder Neustarten. Unter Linux benötigt sie das Inhibit-Desktop-Portal; unter macOS wird der gespeicherte Zustand mit einem Schlüssel aus dem Schlüsselbund verschlüsselt.",
+      "takeaway": "Nicht nur hübscher aufgeräumt: Der Änderungsverlauf nennt auch eine Korrektur gegen die Umgehung passwortgeschützter Fernsteuerung sowie Speicherfehlerkorrekturen. Das ist ein guter Anlass, den eigenen Versionsstand zu prüfen. Keine pauschale Verschlüsselungszusage für Linux und kein Versprechen, dass laufende Prozesse nach dem Neustart unverändert weiterlaufen. Die Durchsatzgewinne im oberen Teil des Changelogs gehören zur älteren Version 0.49, nicht neu zu 0.50. Wir haben das Update nicht selbst getestet.",
+      "url": "https://sw.kovidgoyal.net/kitty/changelog/",
+      "cta": "Docking, Wiederherstellung und Korrekturen nachlesen",
+      "source": "kitty / Kovid Goyal · Version 0.50.0 vom 03.11.2026 · Mittwochsbesprechung 04.11. · offizieller Changelog gelesen"
+    },
+    {
+      "category": "Open Source",
+      "short": "Milkman",
+      "title": "Milkman statt einer reinen REST-App: eine offene Anfrage-Werkbank mit Plugins für mehrere Protokolle.",
+      "body": "Mittwochs wiederentdeckt, kein neues Release: Milkman ist eine JavaFX-Anwendung für das Erstellen und Ausführen von Anfragen. Der Kern verwaltet Arbeitsbereiche, Umgebungen, Sammlungen und Anfragen; Plugins ergänzen die Protokolle. Das README beschreibt HTTP und Server-Sent Events, gRPC mit Server-Reflection und Streaming, GraphQL sowie Datenbankzugriff über JDBC. Dazu kommen eine Kommandozeile und ein Test Runner. Der Code steht unter MIT. Der HTTP-Teil kann unter anderem Postman-v2.1-Exporte importieren, der GraphQL-Teil bietet laut README jedoch weder Autovervollständigung noch Schema-Prüfung.",
+      "takeaway": "Ein interessanter Kandidat für Menschen, die API-Anfragen bewusst in einer erweiterbaren Desktop-Werkbank organisieren wollen. Vor dem Umzug die benötigten Protokolle, Authentifizierung und Importer mit einer kleinen Testsammlung prüfen. Plugins müssen je nach Installation gesondert ergänzt werden. Die vom Autor behauptete Geschwindigkeit gegenüber Electron wurde hier nicht nachgemessen. Auch offene lokale Software und ihre Erweiterungen dürfen nicht ungeprüft Produktionsschlüssel oder echte Kundendaten erhalten. Kein eigener Installations- oder Migrationstest.",
+      "url": "https://github.com/warmuuh/milkman",
+      "cta": "Protokolle, Importer und Plugin-Grenzen prüfen",
+      "source": "warmuuh/milkman · bestehendes Projekt, Mittwochs-Fund 04.11.2026 · README, MIT-Lizenz und Projektseite https://milkman.dev gelesen"
+    }
+  ],
+  "notes": "Mittwochsauswahl im Aufbau, Stand 04.11.2026 gegen 11:32 Berlin. Zwei Catches aus gelesenen Projektquellen; frühere Veröffentlichung beziehungsweise bestehendes Projekt ausdrücklich datiert. Keine eigenen Installations-, Leistungs- oder Migrationstests. Site-only, kein Audio in dieser Textausgabe."
+}
