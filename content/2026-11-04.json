@@ -1,9 +1,9 @@
 {
   "date": "2026-11-04",
   "title": "Daily Hob vom Mittwoch, 04.11.",
-  "headline": "Präziser arbeiten, Modelle genauer prüfen und Folien falten.",
-  "teaser": "4 Mittwochs-Catches: kitty 0.50, Milkman, Figmas spezialisiertes Editiermodell und eine faltende Browserfolie.",
-  "intro": "Vier Mittwochs-Catches zwischen Werkzeug und Wahrnehmung: kitty und Milkman helfen beim Entwickleralltag. Figma erklärt, wie spezialisierte Modelle vorhandene Designs ändern und wie solche Änderungen bewertet werden. Eine glänzende Browserfolie liefert den spielerischen Gegenpol. Ältere Veröffentlichungen und bestehende Projekte sind ausdrücklich datiert.",
+  "headline": "Werkzeuge sortieren, Design prüfen und Modellberechnungen nachweisen.",
+  "teaser": "6 Mittwochs-Catches: kitty, Milkman, Figmas Editiertraining, Jelly Sheet, FlashProve und Kimi K3.1 Pro mit Gewichtezugang.",
+  "intro": "Sechs Mittwochs-Catches vom Alltag bis zum Nachweis: kitty und Milkman ordnen Terminal- und API-Arbeit. Figma erklärt spezialisierte Designänderungen, eine Browserfolie liefert den spielerischen Gegenpol. FlashProve fragt nach beweisbaren Modellberechnungen, Kimi nach großen zugänglichen Gewichten und ihren Lizenzgrenzen. Frühere Veröffentlichungen und bestehende Projekte sind ausdrücklich datiert.",
   "hero": "hero.jpg",
   "heroAlt": "Abstraktes Terminal mit angedockten Seitenfenstern und verbundenen Anfrageknoten, schwarze Linien auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://mrdoob.github.io/codevember-2026/01/",
       "cta": "Faltende Folie im Browser ansehen",
       "source": "mrdoob · Codevember 2026 / 01 / Fold · Mittwochs-Fund 04.11.2026 · Seite und Desktop-Animation geprüft"
+    },
+    {
+      "category": "KI",
+      "short": "FlashProve",
+      "title": "FlashProve prüft, ob berechnete Tokens zu festgelegten Modellgewichten passen - nicht, ob eine Antwort wahr ist.",
+      "body": "Mittwochs diskutierter Forschungsbericht vom 2. November: Anthropic und beteiligte Forschende stellen FlashProve als offenen Prototyp für kryptografisch nachweisbare Modellberechnungen vor. Ein Anbieter legt sich zunächst mit einem kryptografischen Commitment auf bestimmte Gewichte fest. Später kann ein Prüfer kontrollieren, ob ausgewählte Ausgabetokens zu diesem Modell und der Eingabe passen, ohne die Gewichte zu bekommen. Der Aufbau nutzt Zero-Knowledge-Beweise und ist auf große Mixture-of-Experts-Modelle zugeschnitten. Code, Lean-Beweise und Dokumentation werden laut Bericht unter Apache 2.0 veröffentlicht.",
+      "takeaway": "Kein Wahrheitsstempel und keine fertige Absicherung beliebiger Chats. Der Prototyp beweist eine ganzzahlige Modellversion mit greedy gewählten Tokens und bis zu 1.024 Tokens Kontext. Fließkommarechnung oder zufällige Auswahl können davon abweichen. Die Autoren messen zudem etwa 70- bis 95-mal so viel GPU-Zeit wie bei gewöhnlicher Inferenz im beschriebenen Vergleich. Die Lean-Protokollbeweise garantieren nicht automatisch, dass der schnelle ausführbare Code identisch umgesetzt ist; Architektur und Seitenkanäle sind nicht vollständig verborgen. Keine eigene Reproduktion oder Sicherheitsprüfung.",
+      "url": "https://www.anthropic.com/research/provable-inference",
+      "cta": "Nachweisziel, Prototyp und Vertrauenslücken lesen",
+      "source": "Anthropic Frontier Red Team und Mitautoren · 02.11.2026 · Mittwochsbesprechung 04.11. · Forschungsbericht, Autorenmessungen"
+    },
+    {
+      "category": "KI",
+      "short": "Kimi K3.1 Pro",
+      "title": "Kimi K3.1 Pro mit zugänglichen Gewichten: viel Modell, aber weder Laptop-Download noch pauschal freie Lizenz.",
+      "body": "Mittwochs-Fund: Die Gewichte von Moonshots Kimi K3.1 Pro sind im offiziellen Hugging-Face-Repository gelistet. Die Modellkarte beschreibt ein multimodales Mixture-of-Experts-Modell mit 2,8 Billionen Gesamtparametern, davon 104 Milliarden aktiv pro Token, und einem Kontextfenster von rund einer Million Tokens. Die Dateiansicht weist etwa 1,56 TB aus. Das ist Infrastruktur für ernsthaften Serverbetrieb, kein beiläufiger Laptop-Versuch. Die Karte nennt vLLM, SGLang und TokenSpeed als empfohlene Inferenzwege. Das Modell war bereits über Produkte und API angekündigt worden; das heutige Thema ist der sichtbare Gewichtezugang, kein behaupteter erneuter Produktstart.",
+      "takeaway": "Open-weight ist hier die genaue Bezeichnung, nicht eine uneingeschränkte MIT- oder Apache-Lizenz. Die eigene Kimi-K3.1-Pro-Lizenz verlangt für bestimmte kommerzielle Model-as-a-Service-Anbieter oberhalb einer Umsatzschwelle eine separate Vereinbarung und enthält bei sehr großen Produkten zusätzliche Namensnennungspflichten samt Ausnahmen. Vor Hosting oder Weitergabe den vollständigen Text prüfen. Die Benchmarktabellen mischen Anbieterläufe, verschiedene Agentenaufbauten und zitierte Ranglisten; daraus leiten wir keinen allgemeinen Sieg ab. Gewichte nicht heruntergeladen und Modell nicht selbst betrieben.",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "cta": "Modellkarte, Gewichte und eigene Lizenz prüfen",
+      "source": "Moonshot AI · Modellkarte, Dateiliste und Kimi-K3.1-Pro-Lizenz geprüft 04.11.2026 · https://huggingface.co/moonshotai/Kimi-K3.1-Pro/tree/main · keine eigenen Leistungstests"
     }
   ],
-  "notes": "Mittwochsauswahl im Aufbau, Stand 04.11.2026 gegen 15:33 Berlin. Vier Catches aus gelesenen Projektquellen und Anbieterberichten; frühere Veröffentlichungen und bestehende Projekte ausdrücklich datiert. Jelly-Sheet-Animation im Desktop-Aufruf sichtbar, keine allgemeine Mobilkompatibilität geprüft. Keine eigenen Installations-, Leistungs-, Trainings- oder Migrationstests. Site-only, kein Audio in dieser Textausgabe."
+  "notes": "Mittwochsauswahl im Aufbau, Stand 04.11.2026 gegen 19:33 Berlin. Sechs Catches aus gelesenen Projektquellen, Modellkarten und Forschungsberichten; frühere Veröffentlichungen ausdrücklich datiert. Jelly-Sheet-Animation im Desktop-Aufruf sichtbar, keine allgemeine Mobilkompatibilität geprüft. Keine eigenen Installations-, Modell-, Leistungs-, Trainings-, Sicherheits- oder Migrationstests. Site-only, kein Audio in dieser Textausgabe."
 }
