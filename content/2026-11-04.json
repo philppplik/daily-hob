@@ -1,9 +1,9 @@
 {
   "date": "2026-11-04",
   "title": "Daily Hob vom Mittwoch, 04.11.",
-  "headline": "Terminal aufräumen, Schnittstellen gezielt testen.",
-  "teaser": "2 Mittwochs-Catches: kitty 0.50 mit angedockten Fenstern und Milkman als erweiterbare Werkbank für API-Anfragen.",
-  "intro": "Zwei praktische Mittwochs-Catches für den Entwickleralltag: kitty ordnet Terminalfenster neu und bringt Sicherheitskorrekturen mit. Milkman ist ein wiederentdeckter, offener Werkzeugkasten für Anfragen weit über HTTP hinaus. Beide helfen beim Arbeiten, keine der Projektbeschreibungen ersetzt den eigenen Test.",
+  "headline": "Präziser arbeiten, Modelle genauer prüfen und Folien falten.",
+  "teaser": "4 Mittwochs-Catches: kitty 0.50, Milkman, Figmas spezialisiertes Editiermodell und eine faltende Browserfolie.",
+  "intro": "Vier Mittwochs-Catches zwischen Werkzeug und Wahrnehmung: kitty und Milkman helfen beim Entwickleralltag. Figma erklärt, wie spezialisierte Modelle vorhandene Designs ändern und wie solche Änderungen bewertet werden. Eine glänzende Browserfolie liefert den spielerischen Gegenpol. Ältere Veröffentlichungen und bestehende Projekte sind ausdrücklich datiert.",
   "hero": "hero.jpg",
   "heroAlt": "Abstraktes Terminal mit angedockten Seitenfenstern und verbundenen Anfrageknoten, schwarze Linien auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://github.com/warmuuh/milkman",
       "cta": "Protokolle, Importer und Plugin-Grenzen prüfen",
       "source": "warmuuh/milkman · bestehendes Projekt, Mittwochs-Fund 04.11.2026 · README, MIT-Lizenz und Projektseite https://milkman.dev gelesen"
+    },
+    {
+      "category": "KI",
+      "short": "Figma lernt Editieren",
+      "title": "Figma erklärt sein spezialisiertes Editiermodell: Gute Gestaltung braucht mehr als eine schöne Vorschau.",
+      "body": "Mittwochs diskutierter Forschungsbericht vom 29. Oktober: Figma beschreibt, wie ein eigenes Modell Änderungen an vorhandenen Designs lernt. Synthetische Änderungswünsche werden mit Ausgangsdesign und erfolgreicher Bearbeitung im nativen Dateiformat kombiniert. Größere Lehrermodelle erzeugen Beispiele, strukturelle Prüfer und visuelle Modellbewertungen kontrollieren sie. Fachleute kalibrieren die Bewertung. Nach ersten überwachten Trainingsläufen investiert das Team nun auch in Reinforcement Learning. Dabei bewertet es Ausrichtung, Kontrast, erfüllte Anweisungen und richtige Komponenten getrennt, statt Designqualität auf einen einzigen Eindruck zu reduzieren.",
+      "takeaway": "Die interessante Idee ist Spezialisierung für wiederkehrende Änderungen, nicht ein allgemeiner Sieg über alle großen Modelle. Die gezeigte neueste Qwen-basierte Modellvariante ist ausdrücklich noch unveröffentlicht; sie ist nicht mit dem bereits verfügbaren Agenten gleichzusetzen. Figma nutzt eigene und fremde Modelle gemeinsam. Die gemeldeten Produktverbesserungen stammen laut Bericht aus Modellen, Werkzeugen und dem gesamten Agentenaufbau, nicht allein aus diesem Modell. Es sind interne Anbieterbewertungen, kein unabhängig reproduzierter Vergleich.",
+      "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
+      "cta": "Trainingsaufbau und Grenzen der internen Bewertung lesen",
+      "source": "Figma / Josh Clemm · 29.10.2026 · Mittwochsbesprechung 04.11. · Anbieterbericht, nicht selbst nachgemessen"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Jelly Sheet",
+      "title": "Eine endlose Folie faltet sich im Browser: Jelly Sheet ist ein kleiner Ausflug in digitale Materialität.",
+      "body": "Unter dem Diskussionsnamen Jelly Sheet macht am Mittwoch eine Browserdemo von mrdoob die Runde. Die Seite selbst heißt im sichtbaren Kopf Codevember 2026 / 01 / Fold und beschreibt eine endlose durchscheinende Plastikbahn, die sich auf sich selbst faltet. Glänzende rote und pinke Flächen fließen nach unten und legen sich übereinander. Die Oberfläche lädt dazu ein, das Tuch zu ziehen und die Simulation mit der Leertaste anzuhalten. Ein kleiner visueller Fund statt eines neuen Produktivitätswerkzeugs.",
+      "takeaway": "Im eigenen Desktop-Seitenaufruf wurde die Animation sichtbar, nachdem der erste Bildausschnitt noch leer war. Daraus folgt keine Zusage für alle Browser oder Mobilgeräte und keine physikalisch geprüfte Materialsimulation. Wer eine kurze Grafikspielerei sucht, kann direkt hineinsehen; die Seite liefert hier weder ein belastbares Veröffentlichungsdatum noch den Beleg für eine bestimmte Open-Source-Lizenz. Deshalb bleibt das ein ausdrücklich datierter Mittwochs-Fund, kein behaupteter heutiger Release.",
+      "url": "https://mrdoob.github.io/codevember-2026/01/",
+      "cta": "Faltende Folie im Browser ansehen",
+      "source": "mrdoob · Codevember 2026 / 01 / Fold · Mittwochs-Fund 04.11.2026 · Seite und Desktop-Animation geprüft"
     }
   ],
-  "notes": "Mittwochsauswahl im Aufbau, Stand 04.11.2026 gegen 11:32 Berlin. Zwei Catches aus gelesenen Projektquellen; frühere Veröffentlichung beziehungsweise bestehendes Projekt ausdrücklich datiert. Keine eigenen Installations-, Leistungs- oder Migrationstests. Site-only, kein Audio in dieser Textausgabe."
+  "notes": "Mittwochsauswahl im Aufbau, Stand 04.11.2026 gegen 15:33 Berlin. Vier Catches aus gelesenen Projektquellen und Anbieterberichten; frühere Veröffentlichungen und bestehende Projekte ausdrücklich datiert. Jelly-Sheet-Animation im Desktop-Aufruf sichtbar, keine allgemeine Mobilkompatibilität geprüft. Keine eigenen Installations-, Leistungs-, Trainings- oder Migrationstests. Site-only, kein Audio in dieser Textausgabe."
 }
