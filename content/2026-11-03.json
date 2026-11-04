@@ -1,9 +1,9 @@
 {
   "date": "2026-11-03",
   "title": "Daily Hob vom Dienstag, 03.11.",
-  "headline": "Daten verstehen, Versuche prüfen und Hardware anders nutzen.",
-  "teaser": "6 Dienstagsfunde: Auto Ontology, Toit 2.0, Astra-Methodencheck, Pentium-Schach, drawDB und Disc Image Studio.",
-  "intro": "Sechs Dienstagsfunde zwischen Datenbedeutung und sichtbaren Datenmustern: Auto Ontology und drawDB helfen auf unterschiedliche Weise beim Blick auf Datenbanken. Toit markiert einen Versionsstand, die Astra-Debatte trennt Versuchsaufbauten, ein Pentium reizt moderne Schachsoftware aus und Disc Image Studio zeichnet mit Brenndaten. Ältere Projekte und Veröffentlichungen sind als heutige Diskussionsfunde datiert.",
+  "headline": "Daten verstehen, Experimente trennen und mit Sicherheit klein anfangen.",
+  "teaser": "8 Dienstagsfunde: Auto Ontology, Toit 2.0, Astra-Methodencheck, Pentium-Schach, drawDB, Disc Image Studio, lokales Gewichtelesen und NIST für Solo-Unternehmen.",
+  "intro": "Acht Dienstagsfunde über genaue Einordnung und praktische Werkzeuge: Die Astra-Debatte trennt Gewichtelesen von Modellreparatur, ein lokaler Nachversuch zeigt Treffer und Grenzen. Datenkataloge, Diagramme und ein Sicherheitsleitfaden helfen beim Einstieg. Dazu kommen Toit, moderne Schachsoftware auf alter Hardware und sichtbare Brennmuster. Ältere Quellen sind ausdrücklich als heutige Diskussionsfunde datiert.",
   "hero": "hero.jpg",
   "heroAlt": "Feine schwarze Linienzeichnung eines Datengraphen mit Datenbank und Schlüsselsymbol neben einer Mikrocontroller-Platine auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -67,7 +67,27 @@
       "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
       "cta": "Beispiele, Plattformen und Brennwarnungen ansehen",
       "source": "JiaFeiMiao-K-Cat/DiscImageStudio · bestehendes Projekt, Dienstagsdiskussion 03.11.2026 · README geprüft, keine eigenen Brenntests"
+    },
+    {
+      "category": "KI",
+      "short": "Gewichte lokal lesen",
+      "title": "Qwen erkennt Spielnetze auf dem Laptop: ein kleiner Nachversuch mit einem wichtigen Fehlschlag.",
+      "body": "Simon Willison berichtet am 3. November über einen lokalen Nachversuch zu einem klar begrenzten Teil der Weight-Space-Forschung: Ein Modell soll aus Zahlengewichten erkennen, welches einfache Spiel ein kleines Netz gelernt hat, ohne dieses Netz auszuführen. Mit Qwen 3.8 27B in LM Studio erkennt er Pac-Man, Pong und Breakout; beim vierten Beispiel Freeway liegt das Modell falsch. Die erfolgreichen Antworten benötigen laut Bericht etwa 46 bis 65 Minuten. Das Standard-Kontextfenster reicht in seinem Aufbau nicht aus, er stellt es größer ein.",
+      "takeaway": "Das ist ein einzelner öffentlich beschriebener Versuch, kein belastbarer Vier-Aufgaben-Benchmark. Vor allem wird hier ein kleines Spielnetz gelesen, nicht das Qwen-Modell repariert oder neues Wissen hineingeschrieben. Gerade neben der heutigen Methodenkritik ist diese Trennung nützlich. Lokal machbar heißt außerdem weder sofort noch auf jedem Laptop: Modellgröße, Speicher und Kontextfenster gehören zur Einordnung.",
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "cta": "Lokalen Versuch, Laufzeiten und Fehlversuch lesen",
+      "source": "Simon Willison · 03.11.2026 · Autorenexperiment, nicht selbst reproduziert"
+    },
+    {
+      "category": "Informatik",
+      "short": "Sicherheit für Solo",
+      "title": "NIST macht Cybersicherheit für Solo-Unternehmen konkreter: anfangen statt ein eigenes Security-Team erfinden.",
+      "body": "Dienstagsdiskussion einer Veröffentlichung vom 2. November: NISTs Cybersecurity White Paper 50 richtet sich an Unternehmen, in denen nur der Inhaber selbst arbeitet. Laut Ankündigung und Publikationsbeschreibung übersetzt es Grundlagen des Cybersecurity Framework 2.0 in nichttechnische Sprache. Genannt werden unter anderem regelmäßige Backups, aktuelle Software und das Ersetzen voreingestellter Gerätepasswörter. Zu den Maßnahmen erläutert der Leitfaden jeweils den Zweck, einen Einstieg und spätere Ausbauschritte; Arbeitsblätter helfen beim Inventar und beim Nachhalten erledigter Schritte.",
+      "takeaway": "Ein brauchbarer Ausgangspunkt für Selbstständige mit wenig IT-Zeit, keine vollständige Sicherheitsprüfung. Der Leitfaden ist auf den US-Kontext zugeschnitten und ersetzt weder branchenspezifische Anforderungen noch deutsche oder europäische Datenschutz- und Rechtspflichten. Gelesen wurden die NIST-Ankündigung und die offizielle Publikationsbeschreibung, nicht jede Seite des Leitfadens.",
+      "url": "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you",
+      "cta": "Einstieg und offizielle Publikation ansehen",
+      "source": "NIST · 02.11.2026 · Dienstagsdiskussion 03.11. · CSWP 50 https://csrc.nist.gov/pubs/cswp/50/small-business-cybersecurity-non-employer-firms/final"
     }
   ],
-  "notes": "Laufende Dienstagsauswahl mit sechs Catches. Quellen zuletzt geprüft am 03.11.2026 gegen 19:34 Berlin. Ältere Projekte und Veröffentlichungen ausdrücklich als heutige Diskussionsfunde datiert. Keine eigene Installation, Sicherheitsprüfung, Datenbankanbindung, Modell-, Hardware- oder Brennmessung; Angaben den jeweiligen Quellen zugeordnet. Experimentelle Funktionen und Risiken benannt. Kein Audio in dieser Textausgabe."
+  "notes": "Abgeschlossene Dienstagsauswahl für den 03.11.2026, 00:00 bis 24:00 Berlin, mit acht Catches. Abschlussprüfung am 04.11.2026 gegen 06:05 Berlin. Ältere Projekte und Veröffentlichungen datiert. Keine eigenen Installationen, Audits, Datenbank-, Modell-, Hardware- oder Brenntests. Autorenversuche, Projektangaben und gelesene Publikationsbeschreibungen kenntlich gemacht. Kein Audio in dieser Textausgabe."
 }
