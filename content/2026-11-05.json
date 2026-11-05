@@ -1,9 +1,9 @@
 {
   "date": "2026-11-05",
   "title": "Daily Hob vom Donnerstag, 05.11.",
-  "headline": "Ein Basismodell mit Lizenzgrenze. Und Pixelwesen auf dem Seitenrand.",
-  "teaser": "2 Donnerstags-Catches: ERNIE 5.5 Flash Base und Lemmings im Browser.",
-  "intro": "Der Donnerstag startet mit zwei sehr verschiedenen Fundstücken: Baidu öffnet einen frischen Trainingscheckpoint, dessen Lizenz die EU jedoch ausschließt. Eine kleine Browserdemo lässt währenddessen Pixelwesen über Buttons und Text laufen. Forschung zum Einordnen, Webspielerei zum Ausprobieren.",
+  "headline": "Passwort-Bypass umgehen, TypeScript mit Beweisen prüfen und Pixelwesen spazieren lassen.",
+  "teaser": "4 Donnerstags-Catches: ERNIE 5.5 Flash Base, Lemmings, OpenSSH 10.6p2 und TScert.",
+  "intro": "Vier Donnerstags-Catches zwischen Vertrauensgrenzen und Webspielerei: OpenSSH begrenzt einen kritischen Authentifizierungspfad, TScert prüft TypeScript-Funktionen mit Zertifikaten. Baidus neuer Basischeckpoint bringt eine wichtige territoriale Lizenzgrenze mit. Dazu laufen kleine Pixelwesen über den Seitenrand.",
   "hero": "hero.jpg",
   "heroAlt": "Kleine geometrische Formen auf einer Treppe neben einem offenen Linienprisma, schwarze Konturen auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://markblah.github.io/lemmings/",
       "cta": "Pixelwesen im Walker-Spielplatz ansehen",
       "source": "MarkBlah · Donnerstagsfund 05.11.2026 · Repository https://github.com/MarkBlah/lemmings und README gelesen, Desktop-Demo sichtbar geprüft"
+    },
+    {
+      "category": "Informatik",
+      "short": "OpenSSH 10.6p2",
+      "title": "OpenSSH 10.6p2 umgeht einen kritischen Passwort-Bypass auf bestimmten musl-Systemen ohne PAM.",
+      "body": "Am 5. November veröffentlicht: Portable OpenSSH 10.6p2 enthält einen kritischen Sicherheits-Workaround. Die Release Notes grenzen die Betroffenheit auf Linux-Systeme mit musl libc ein, bei denen PAM deaktiviert ist. Unter diesen Bedingungen kann über sshd eine Passwortauthentifizierung umgangen werden. Das OpenSSH-Team verortet die eigentliche Ursache außerhalb von sshd, kann den Angriff dort aber vermeiden. Zusätzlich enthält das Release bereits gesammelte Korrekturen des stabilen Portable-Zweigs.",
+      "takeaway": "Wer entsprechende Server oder Container betreibt, sollte Paketstand und Sicherheitsmeldung seiner Distribution prüfen. Nicht allein anhand einer alten Upstream-Versionsnummer auf Verwundbarkeit schließen: Distributionen können Korrekturen zurückportieren. Umgekehrt ist das kein pauschales Entwarnungssignal für jedes System mit anderer Konfiguration. Die Meldung betrifft einen bestimmten Authentifizierungspfad, nicht automatisch jede OpenSSH-Installation. Es wurden hier weder eigene Systeme untersucht noch ein Exploit ausgeführt.",
+      "url": "https://www.openssh.org/releasenotes.html#10.6p2",
+      "cta": "Originale Betroffenheit und Workaround nachlesen",
+      "source": "OpenSSH · Portable 10.6p2 vom 05.11.2026 · vollständigen aktuellen Release-Abschnitt gelesen, keine eigene Sicherheitsprüfung"
+    },
+    {
+      "category": "Informatik",
+      "short": "TScert",
+      "title": "TScert will TypeScript-Funktionen nur mit geprüftem Beweis akzeptieren.",
+      "body": "Donnerstags diskutierter Forschungsfund, kein behaupteter heutiger Release: TScert prüft einen Ausschnitt von TypeScript mit einem unabhängigen Checker, dessen Korrektheit in Lean bewiesen ist. Vorgeschlagene Typen und Zertifikate gelten zunächst als untrusted. Erst der Checker entscheidet. Das Beispiel im README zeigt ein Array, dessen Länge vor pop gespeichert wird: Der spätere Index kann undefined liefern, obwohl die Funktion string verspricht. TScert lehnt das ab und akzeptiert laut Beispiel erst den ehrlichen Rückgabetyp string | undefined. any wird zurückgewiesen; Typbehauptungen ersetzen keinen Beweis.",
+      "takeaway": "Der wichtige Unterschied zu einem Allzweck-Sicherheitsstempel: Bewiesen wird die übersetzte Funktion im formalen Modell, unter Annahmen über Eingaben, Heap und Bibliotheksverträge. Die Übersetzung selbst ist überprüft und getestet, aber nicht bewiesen; auch akzeptierter Code darf werfen oder endlos laufen. Der gemeldete Stand von 643 der 686 Funktionen betrifft die eigene tools-Codebasis am 04.11., keinen unabhängigen Volltest beliebiger Projekte. Fürs Ausprobieren braucht es Node, die festgelegte Lean-Toolchain, OCaml und Dune. Die eigene MIT-NON-AI-Lizenz verbietet Nutzung für ML-Training und -Verbesserung, also nicht mit Standard-MIT gleichsetzen. Kein eigener Installations- oder Beweistest.",
+      "url": "https://github.com/cristianoc/TScert",
+      "cta": "Beweisgrenzen und Beispiel im README ansehen",
+      "source": "cristianoc/TScert · Donnerstagsfund 05.11.2026 · README-Stand mit Messung 04.11. sowie Original-Lizenz https://github.com/cristianoc/TScert/blob/main/LICENSE gelesen"
     }
   ],
-  "notes": "Stand: Donnerstag, 05.11.2026, 11:34 Uhr Berlin. Zwei ausgewählte Catches, kein Vollständigkeitsanspruch. ERNIE heute veröffentlicht; Lemmings als bestehender Donnerstagsfund datiert. Anbieterwerte sind keine eigenen Messungen. Keine Modellgewichte ausgeführt. Quellen- und Veröffentlichungsfreigabe geprüft. Keine Audio-Neuveröffentlichung im Intraday-Batch."
+  "notes": "Stand: Donnerstag, 05.11.2026, 15:33 Uhr Berlin. Vier ausgewählte Catches, kein Vollständigkeitsanspruch. ERNIE und OpenSSH heute veröffentlicht; Lemmings und TScert als bestehende Donnerstagsfunde datiert. Anbieterwerte sind keine eigenen Messungen. Keine Modellgewichte ausgeführt, keine Systeme geprüft und keine Installationstests. Quellen- und Veröffentlichungsfreigabe geprüft. Keine Audio-Neuveröffentlichung im Intraday-Batch."
 }
