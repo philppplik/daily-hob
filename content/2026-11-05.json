@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-05",
+  "title": "Daily Hob vom Donnerstag, 05.11.",
+  "headline": "Ein Basismodell mit Lizenzgrenze. Und Pixelwesen auf dem Seitenrand.",
+  "teaser": "2 Donnerstags-Catches: ERNIE 5.5 Flash Base und Lemmings im Browser.",
+  "intro": "Der Donnerstag startet mit zwei sehr verschiedenen Fundstücken: Baidu öffnet einen frischen Trainingscheckpoint, dessen Lizenz die EU jedoch ausschließt. Eine kleine Browserdemo lässt währenddessen Pixelwesen über Buttons und Text laufen. Forschung zum Einordnen, Webspielerei zum Ausprobieren.",
+  "hero": "hero.jpg",
+  "heroAlt": "Kleine geometrische Formen auf einer Treppe neben einem offenen Linienprisma, schwarze Konturen auf hellem Papier mit Gelb und Mint",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "KI",
+      "short": "ERNIE Flash Base",
+      "title": "ERNIE 5.5 Flash Base: Gewichte zum Weitertrainieren, aber keine allgemeine Nutzungserlaubnis für die EU.",
+      "body": "Baidu veröffentlicht am 5. November einen reinen Text-Basischeckpoint: 280 Milliarden Gesamtparameter, davon 14 Milliarden pro Token aktiv, vortrainiert auf laut Anbieter 33,5 Billionen Tokens. Das Modell hat noch kein Mid- oder Post-Training durchlaufen und ist damit Ausgangsmaterial für Domänenanpassung, Instruction Tuning oder Reinforcement Learning, kein fertiger Chatassistent. Das Training reicht bis 128K Kontext; für Fine-Tuning und Inferenz nennt die Dokumentation bis zu eine Million Tokens. FP8- und BF16-Gewichte liegen auf Hugging Face. Die Architektur kombiniert stark komprimierte Aufmerksamkeit mit wenigen Schichten, die entfernte Tokens einzeln erreichen.",
+      "takeaway": "Die Lizenz ist der entscheidende Haken: Die aktuell gelesene eigene Modelllizenz nimmt EU, Vereinigtes Königreich und Südkorea aus dem erlaubten Gebiet aus. Deshalb hier keine Empfehlung zum lokalen Einsatz in Deutschland und kein pauschales Open-Source-Etikett. Innerhalb des erlaubten Gebiets gelten zusätzlich kommerzielle Melde-, Kennzeichnungs- und Umsatzbedingungen. Die starken Vergleichswerte stammen von Baidu, nicht aus einem eigenen Test; 14 Milliarden aktive Parameter bedeuten auch nicht, dass nur diese Gewichte gespeichert werden müssen. Das Lizenzdokument enthält zudem eine auf den 6. November datierte AUP, obwohl heute der 5. ist. Diese Datierungsauffälligkeit ist nicht als geklärte Rechtslage zu übergehen.",
+      "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
+      "cta": "Architektur und Lizenz vor jeder Nutzung prüfen",
+      "source": "Baidu ERNIE · Veröffentlichung 05.11.2026 · Originalbericht und Modellkarte https://huggingface.co/baidu/ERNIE-5.5-Flash-Base sowie Lizenz https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/blob/main/LICENSE gelesen · Stand 05.11. vormittags"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Lemmings",
+      "title": "Kleine Pixelwesen laufen über den Browser: Buttons und Text werden zur Landschaft.",
+      "body": "Donnerstagsfund, Repository laut GitHub seit dem 4. November vorhanden: MarkBlahs Lemmings-Demo nennt sich auf der Seite Walker playground. Kleine Figuren spazieren über Rahmen, Buttons, Bilder und Textzeilen, kehren an Wänden um und fallen nach unten. Man kann sie aufheben, werfen und durch schnelles Verändern der Fenstergröße in die Luft katapultieren. Laut README sind die Figuren reine CSS-Sprites ohne Bilddateien; ein JavaScript-Skript übernimmt das Verhalten. Das ist keine Neuauflage des Spiels, sondern eine verspielte Interaktion mit dem Layout einer Webseite.",
+      "takeaway": "Die Desktop-Demo war im eigenen Aufruf sichtbar. Ein schöner Fünf-Minuten-Ausflug für alle, die Webseiten wieder als Spielraum sehen wollen. Der Code lässt sich ansehen, eine eigene Lizenzdatei konnte hier aber nicht belegt werden. Darum keine Zusage zur freien Übernahme. Fürs Anschauen die Demo öffnen, statt fremdes JavaScript in die Konsole eingeloggter Arbeitsseiten zu kopieren. Ein Skript im Seitenkontext bekommt Zugriff auf diese Seite; die Spielerei braucht keine privaten Daten. Kein allgemeiner Mobil- oder Browserverträglichkeitstest.",
+      "url": "https://markblah.github.io/lemmings/",
+      "cta": "Pixelwesen im Walker-Spielplatz ansehen",
+      "source": "MarkBlah · Donnerstagsfund 05.11.2026 · Repository https://github.com/MarkBlah/lemmings und README gelesen, Desktop-Demo sichtbar geprüft"
+    }
+  ],
+  "notes": "Stand: Donnerstag, 05.11.2026, 11:34 Uhr Berlin. Zwei ausgewählte Catches, kein Vollständigkeitsanspruch. ERNIE heute veröffentlicht; Lemmings als bestehender Donnerstagsfund datiert. Anbieterwerte sind keine eigenen Messungen. Keine Modellgewichte ausgeführt. Quellen- und Veröffentlichungsfreigabe geprüft. Keine Audio-Neuveröffentlichung im Intraday-Batch."
+}
