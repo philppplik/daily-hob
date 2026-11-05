@@ -1,9 +1,9 @@
 {
   "date": "2026-11-05",
   "title": "Daily Hob vom Donnerstag, 05.11.",
-  "headline": "Passwort-Bypass umgehen, TypeScript mit Beweisen prüfen und Pixelwesen spazieren lassen.",
-  "teaser": "4 Donnerstags-Catches: ERNIE 5.5 Flash Base, Lemmings, OpenSSH 10.6p2 und TScert.",
-  "intro": "Vier Donnerstags-Catches zwischen Vertrauensgrenzen und Webspielerei: OpenSSH begrenzt einen kritischen Authentifizierungspfad, TScert prüft TypeScript-Funktionen mit Zertifikaten. Baidus neuer Basischeckpoint bringt eine wichtige territoriale Lizenzgrenze mit. Dazu laufen kleine Pixelwesen über den Seitenrand.",
+  "headline": "Sicherer anmelden, Beweise prüfen und mit kleineren Bildmodellen experimentieren.",
+  "teaser": "6 Donnerstags-Catches: ERNIE Flash Base, Lemmings, OpenSSH 10.6p2, TScert, Servo und P-JiT 21K.",
+  "intro": "Sechs Donnerstags-Catches zwischen belastbaren Grenzen und spielerischen Ideen: OpenSSH und Alpine erklären einen kritischen Authentifizierungspfad, TScert prüft TypeScript-Zertifikate. Servo zeigt Fortschritte einer weiteren Browserengine, Linum einen günstigen Bildmodell-Trainingslauf mit wichtigen Einschränkungen. Dazu kommen Baidus neuer Basischeckpoint mit territorialer Lizenzgrenze und kleine Pixelwesen auf dem Seitenrand.",
   "hero": "hero.jpg",
   "heroAlt": "Kleine geometrische Formen auf einer Treppe neben einem offenen Linienprisma, schwarze Konturen auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -33,10 +33,10 @@
       "short": "OpenSSH 10.6p2",
       "title": "OpenSSH 10.6p2 umgeht einen kritischen Passwort-Bypass auf bestimmten musl-Systemen ohne PAM.",
       "body": "Am 5. November veröffentlicht: Portable OpenSSH 10.6p2 enthält einen kritischen Sicherheits-Workaround. Die Release Notes grenzen die Betroffenheit auf Linux-Systeme mit musl libc ein, bei denen PAM deaktiviert ist. Unter diesen Bedingungen kann über sshd eine Passwortauthentifizierung umgangen werden. Das OpenSSH-Team verortet die eigentliche Ursache außerhalb von sshd, kann den Angriff dort aber vermeiden. Zusätzlich enthält das Release bereits gesammelte Korrekturen des stabilen Portable-Zweigs.",
-      "takeaway": "Wer entsprechende Server oder Container betreibt, sollte Paketstand und Sicherheitsmeldung seiner Distribution prüfen. Nicht allein anhand einer alten Upstream-Versionsnummer auf Verwundbarkeit schließen: Distributionen können Korrekturen zurückportieren. Umgekehrt ist das kein pauschales Entwarnungssignal für jedes System mit anderer Konfiguration. Die Meldung betrifft einen bestimmten Authentifizierungspfad, nicht automatisch jede OpenSSH-Installation. Es wurden hier weder eigene Systeme untersucht noch ein Exploit ausgeführt.",
+      "takeaway": "Abends ergänzt um Alpines offizielle Sicherheitsmeldung: Auf betroffenen Alpine-Systemen das korrigierte Distributionspaket installieren und anschließend sshd neu starten. Das Paketupdate allein ersetzt den laufenden Dienst nicht. Wer vorübergehend Passwortanmeldung abschaltet, sollte zuerst einen funktionierenden Schlüsselzugang prüfen und die bestehende Sitzung bis zum erfolgreichen neuen Login offenlassen. Alpine nennt mehrere gleichzeitig nötige Konfigurations- und Kontobedingungen; Container ohne sshd sind nicht betroffen. Nicht nur die Upstream-Versionsnummer vergleichen: Alpine liefert zurückportierte Korrekturen. Hier wurden keine eigenen Systeme untersucht oder verändert und kein Exploit ausgeführt.",
       "url": "https://www.openssh.org/releasenotes.html#10.6p2",
       "cta": "Originale Betroffenheit und Workaround nachlesen",
-      "source": "OpenSSH · Portable 10.6p2 vom 05.11.2026 · vollständigen aktuellen Release-Abschnitt gelesen, keine eigene Sicherheitsprüfung"
+      "source": "OpenSSH · Portable 10.6p2 vom 05.11.2026 · vollständigen aktuellen Release-Abschnitt gelesen, keine eigene Sicherheitsprüfung · abends offizielle Alpine-Meldung https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/ vollständig gelesen"
     },
     {
       "category": "Informatik",
@@ -47,7 +47,27 @@
       "url": "https://github.com/cristianoc/TScert",
       "cta": "Beweisgrenzen und Beispiel im README ansehen",
       "source": "cristianoc/TScert · Donnerstagsfund 05.11.2026 · README-Stand mit Messung 04.11. sowie Original-Lizenz https://github.com/cristianoc/TScert/blob/main/LICENSE gelesen"
+    },
+    {
+      "category": "Informatik",
+      "short": "Servo",
+      "title": "Servo zeigt neue Web-Bausteine und zieht die Grenzen seiner experimentellen Funktionen sauber nach.",
+      "body": "Heute veröffentlicht, inhaltlich ein Septemberrückblick: Servo beschreibt 527 Änderungen, die in Version 0.7.0 stecken. Die Browserengine ergänzt unter anderem :checked, user-select, CSS-Typarithmetik, alpha() und roundRect() auf dem Canvas. Die Entwicklerkonsole wertet JavaScript-Eingaben schon während des Tippens aus. Außerdem nennt der Bericht aktualisierte SpiderMonkey- und mozangle-Abhängigkeiten mit vorgelagerten Sicherheitskorrekturen. Für eingebettete Anwendungen ändern sich APIs für Fokus, Verlauf und Barrierefreiheit.",
+      "takeaway": "Spannend ist die sichtbare Arbeit an einer weiteren Engine, nicht die Behauptung, jeder Webauftritt laufe schon gleich gut. WebGL2, IndexedDB, bestimmte Editierfunktionen und Barrierefreiheit sind im Bericht teils ausdrücklich hinter Schaltern oder noch in Arbeit. Wer Servo einbettet, sollte die API-Änderungen und nun standardmäßig enthaltene WebGL-Unterstützung prüfen. Der heutige Blog ist kein Beleg, dass sämtliche genannten Funktionen erst heute veröffentlicht wurden. Keine eigene Kompatibilitäts- oder Leistungsmessung.",
+      "url": "https://servo.org/blog/2026/11/05/september-in-servo/",
+      "cta": "Septemberfortschritte und experimentelle Grenzen lesen",
+      "source": "Servo-Projekt · Bericht vom 05.11.2026 über Septemberänderungen in 0.7.0 · vollständigen Originalbericht gelesen"
+    },
+    {
+      "category": "KI",
+      "short": "P-JiT 21K",
+      "title": "Linum zeigt einen Bildmodell-Trainingslauf für rund 21.000 Dollar Rechenkosten - nicht den Gesamtpreis eines Bildmodell-Labors.",
+      "body": "Donnerstags diskutiert, Bericht vom 4. November: Linum veröffentlicht P-JiT 21K als experimentellen Zwischenschritt auf dem Weg zu einem Videomodell. Der Bildgenerator arbeitet im Pixelraum statt mit einem separaten VAE. Mehrere Zwischen-Ausgaben in kleinerer Auflösung sollen das Training früher Schichten verbessern. Der Lauf verarbeitet 660 Millionen Trainingsbeispiele in zwei Auflösungsstufen. Linum beziffert Vor- und Nachtraining zusammen auf 8.415 H100-Stunden, angesetzt mit 2,50 US-Dollar je Stunde, insgesamt 21.038 Dollar. Code und ein Gewichtscheckpoint sind verfügbar.",
+      "takeaway": "Die Zahl betrifft diesen Rechenlauf, nicht sämtliche Forschung, Datenaufbereitung, Personal oder das Vortraining des zusätzlich nötigen Qwen-Textencoders. Das README nennt 8,7 GB Generatorgewichte plus 8 GB Textencoder und weiteren Speicher für Aktivierungen; eine kleine Parameterzahl allein ist kein Laptopversprechen. Das Modell kann ausdrücklich keine Schrift oder Poster und schwächelt bei ganzen Körpern, vielen Figuren und Interaktionen. Die voreingestellte Prompt-Erweiterung schickt Text über OpenRouter an ein externes Modell; mit --no_upsample wird sie abgeschaltet. Die Code-Lizenz ist Apache 2.0, Bedingungen externer Komponenten separat prüfen. Kein eigener Generierungs- oder Kostentest.",
+      "url": "https://www.linum.ai/field-notes/pjit-21k",
+      "cta": "Trainingskosten, Checkpoint und Grenzen ansehen",
+      "source": "Linum / Sahil und Manu Chopra · 04.11.2026, Donnerstagsbesprechung 05.11. · Bericht, Modellkarte https://huggingface.co/Linum-AI/pjit-21k und README/Lizenz https://github.com/Linum-AI/pjit-21k gelesen"
     }
   ],
-  "notes": "Stand: Donnerstag, 05.11.2026, 15:33 Uhr Berlin. Vier ausgewählte Catches, kein Vollständigkeitsanspruch. ERNIE und OpenSSH heute veröffentlicht; Lemmings und TScert als bestehende Donnerstagsfunde datiert. Anbieterwerte sind keine eigenen Messungen. Keine Modellgewichte ausgeführt, keine Systeme geprüft und keine Installationstests. Quellen- und Veröffentlichungsfreigabe geprüft. Keine Audio-Neuveröffentlichung im Intraday-Batch."
+  "notes": "Stand: Donnerstag, 05.11.2026, 19:34 Uhr Berlin. Sechs ausgewählte Catches. ERNIE und OpenSSH heute veröffentlicht; Servo heute veröffentlichter Septemberrückblick; Linum-Bericht vom04.11. als heutige Besprechung. Lemmings und TScert bestehende Donnerstagsfunde. OpenSSH-Fazit abends um offizielle Alpine-Meldung ergänzt. Anbieterwerte sind keine eigenen Messungen. Keine Modellgewichte ausgeführt, Systeme verändert oder Installationstests. Veröffentlichungsfreigabe und Quellen geprüft. Kein neues Audio im Intraday-Batch."
 }
