@@ -1,9 +1,9 @@
 {
   "date": "2026-11-04",
   "title": "Daily Hob vom Mittwoch, 04.11.",
-  "headline": "Werkzeuge sortieren, Design prüfen und Modellberechnungen nachweisen.",
-  "teaser": "6 Mittwochs-Catches: kitty, Milkman, Figmas Editiertraining, Jelly Sheet, FlashProve und Kimi K3.1 Pro mit Gewichtezugang.",
-  "intro": "Sechs Mittwochs-Catches vom Alltag bis zum Nachweis: kitty und Milkman ordnen Terminal- und API-Arbeit. Figma erklärt spezialisierte Designänderungen, eine Browserfolie liefert den spielerischen Gegenpol. FlashProve fragt nach beweisbaren Modellberechnungen, Kimi nach großen zugänglichen Gewichten und ihren Lizenzgrenzen. Frühere Veröffentlichungen und bestehende Projekte sind ausdrücklich datiert.",
+  "headline": "Modelle nachweisen, JSON eindeutiger machen und Folien falten.",
+  "teaser": "8 Mittwochs-Catches: kitty, Milkman, Figma, Jelly Sheet, FlashProve, Kimi K3.1 Pro, Go JSON v2 und Ripple-65B Preview.",
+  "intro": "Acht Mittwochs-Catches zwischen belastbarer Berechnung und praktischer Arbeit: FlashProve prüft Modellzuordnung, Kimi und Ripple zeigen verschiedene Wege zu zugänglichen Gewichten. Go schärft JSON-Regeln, Figma untersucht Designänderungen. Dazu helfen kitty und Milkman im Alltag, während eine Browserfolie spielerisch faltet. Frühere Veröffentlichungen und bestehende Projekte sind ausdrücklich datiert.",
   "hero": "hero.jpg",
   "heroAlt": "Abstraktes Terminal mit angedockten Seitenfenstern und verbundenen Anfrageknoten, schwarze Linien auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -67,7 +67,27 @@
       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
       "cta": "Modellkarte, Gewichte und eigene Lizenz prüfen",
       "source": "Moonshot AI · Modellkarte, Dateiliste und Kimi-K3.1-Pro-Lizenz geprüft 04.11.2026 · https://huggingface.co/moonshotai/Kimi-K3.1-Pro/tree/main · keine eigenen Leistungstests"
+    },
+    {
+      "category": "Informatik",
+      "short": "Go JSON v2",
+      "title": "Go macht JSON v2 stabil: strengere Vorgaben und echte Streaming-Schnittstellen statt stiller Mehrdeutigkeit.",
+      "body": "Der Go-Blog meldet am 4. November die Pakete encoding/json/v2 und encoding/json/jsontext als stabil und allgemein verfügbar in Go 1.27. jsontext übernimmt Syntax und Streaming, v2 die Zuordnung zu Go-Werten. Standardmäßig werden ungültiges UTF-8 und doppelte Objektnamen abgewiesen; Feldnamen werden unter Beachtung der Groß- und Kleinschreibung zugeordnet. Nil-Slices und Nil-Maps werden als leeres Array beziehungsweise Objekt statt als null ausgegeben. Neue Schnittstellen für eigenes Marshaling und Unmarshaling sollen wiederholtes Parsen und unnötige Zwischenspeicher vermeiden.",
+      "takeaway": "Kein blindes Austauschen des Imports: Auch omitempty und time.Duration verhalten sich anders. Der Bericht beschreibt Optionen für eine schrittweise Migration. Das bisherige encoding/json bleibt laut Go-Kompatibilitätszusage unterstützt, niemand muss sofort wechseln. Die Autoren nennen beim Einlesen in Benchmarks bis zu zehnfache Geschwindigkeit, beim Schreiben dagegen ungefähr Gleichstand mit Schwankungen. Das ist kein pauschales Zehnfach-Versprechen für jede Anwendung. Eigene API-Verträge und Grenzfälle testen; hier wurde keine Migration ausgeführt.",
+      "url": "https://go.dev/blog/jsonv2",
+      "cta": "Neue Vorgaben, Streaming und Migrationspfad lesen",
+      "source": "The Go Blog / Michael Pratt und Mitautoren · 04.11.2026 · offizieller Beitrag gelesen, keine eigenen Benchmarks"
+    },
+    {
+      "category": "KI",
+      "short": "Ripple 65B Preview",
+      "title": "Ripple-65B Preview setzt auf ein dichtes Modell und offene Gewichte - mit einem klar begrenzten Coding-Spitzenwert.",
+      "body": "Mittwochs-Fund von Ricursive Intelligence: Ripple-65B Preview ist ein dichtes Transformer-Modell mit 65 Milliarden Parametern, laut Modellkarte auf zwölf Billionen Tokens vortrainiert und mit bis zu einer Million Tokens Kontext. Das Team veröffentlicht eine instruktionsangepasste Version in BF16 und NVFP4 sowie eine BF16-Basisversion. Im geprüften Instruct-Repository liegt eine Apache-2.0-Lizenz. Interessant ist die Gegenentscheidung zu großen Mixture-of-Experts-Systemen: Das Team optimiert ein dichtes Modell gemeinsam mit seiner Trainings- und Serverhardware und stellt für lokalen Betrieb auch einen quantisierten Checkpoint bereit.",
+      "takeaway": "Die beworbene Spitzenposition ist auf US-Modelle mit zugänglichen Gewichten und bestimmte Agenten-Codingtests begrenzt. Die Modellkarte beschreibt gemischte Quellen für Vergleichswerte und eigene Nachmessungen; der Agentenaufbau verändert die Ergebnisse. Weniger Gesamtparameter bedeuten zudem nicht automatisch weniger aktive Parameter als bei MoE-Konkurrenten. Der eigene Wert von rund 80,5 auf Terminal-Bench 2.1 ist nicht direkt mit Kimis Terminal-Bench 4.0 vergleichbar. Preview, Hardwarebedarf und Quantisierung vor dem Einsatz prüfen. Kein eigener Download, Hosting- oder Leistungstest.",
+      "url": "https://www.ricursive.com/ripple",
+      "cta": "Architektur, Modellkarte und Vergleichsgrenzen prüfen",
+      "source": "Ricursive Intelligence · Mittwochs-Fund 04.11.2026 · https://huggingface.co/ricursiveAI/Ripple-65B-Preview · Apache-2.0-Lizenz im Repository geprüft, Anbieterwerte"
     }
   ],
-  "notes": "Mittwochsauswahl im Aufbau, Stand 04.11.2026 gegen 19:33 Berlin. Sechs Catches aus gelesenen Projektquellen, Modellkarten und Forschungsberichten; frühere Veröffentlichungen ausdrücklich datiert. Jelly-Sheet-Animation im Desktop-Aufruf sichtbar, keine allgemeine Mobilkompatibilität geprüft. Keine eigenen Installations-, Modell-, Leistungs-, Trainings-, Sicherheits- oder Migrationstests. Site-only, kein Audio in dieser Textausgabe."
+  "notes": "Abgeschlossene Mittwochsauswahl für den 04.11.2026, 00:00 bis 24:00 Berlin, mit acht Catches. Abschlussprüfung am 05.11.2026 gegen 06:12 Berlin. Frühere Veröffentlichungen und bestehende Projekte ausdrücklich datiert. Jelly-Sheet-Animation im Desktop-Aufruf sichtbar, keine allgemeine Mobilkompatibilität geprüft. Keine eigenen Installations-, Modell-, Leistungs-, Trainings-, Sicherheits- oder Migrationstests. Anbieterangaben und Forschungsprototypen kenntlich gemacht. Kein Audio in dieser Textausgabe."
 }
