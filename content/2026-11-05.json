@@ -1,9 +1,9 @@
 {
   "date": "2026-11-05",
   "title": "Daily Hob vom Donnerstag, 05.11.",
-  "headline": "Sicherer anmelden, Beweise prüfen und mit kleineren Bildmodellen experimentieren.",
-  "teaser": "6 Donnerstags-Catches: ERNIE Flash Base, Lemmings, OpenSSH 10.6p2, TScert, Servo und P-JiT 21K.",
-  "intro": "Sechs Donnerstags-Catches zwischen belastbaren Grenzen und spielerischen Ideen: OpenSSH und Alpine erklären einen kritischen Authentifizierungspfad, TScert prüft TypeScript-Zertifikate. Servo zeigt Fortschritte einer weiteren Browserengine, Linum einen günstigen Bildmodell-Trainingslauf mit wichtigen Einschränkungen. Dazu kommen Baidus neuer Basischeckpoint mit territorialer Lizenzgrenze und kleine Pixelwesen auf dem Seitenrand.",
+  "headline": "Beweise statt Bauchgefühl. Und ein Wollpulli fürs Fenster.",
+  "teaser": "8 Donnerstags-Catches: ERNIE, Lemmings, OpenSSH, TScert, Servo, P-JiT, Kagi und Window Sweaters.",
+  "intro": "Acht Donnerstags-Catches über Grenzen, die man kennen sollte: OpenSSH und Alpine klären eine kritische Passwortprüfung, TScert verlangt Beweise für TypeScript. Neue Modelle brauchen Lizenz- und Kostenkontext, Servo zeigt Fortschritte einer weiteren Browserengine. Kagi senkt die Einstiegshürde. Und zwei kleine Desktop- und Browserspielereien sorgen für den überraschenden Rest.",
   "hero": "hero.jpg",
   "heroAlt": "Kleine geometrische Formen auf einer Treppe neben einem offenen Linienprisma, schwarze Konturen auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -67,7 +67,27 @@
       "url": "https://www.linum.ai/field-notes/pjit-21k",
       "cta": "Trainingskosten, Checkpoint und Grenzen ansehen",
       "source": "Linum / Sahil und Manu Chopra · 04.11.2026, Donnerstagsbesprechung 05.11. · Bericht, Modellkarte https://huggingface.co/Linum-AI/pjit-21k und README/Lizenz https://github.com/Linum-AI/pjit-21k gelesen"
+    },
+    {
+      "category": "Informatik",
+      "short": "Kagi Probe",
+      "title": "Kagi lässt sich jetzt mit 50 Suchen ohne Konto ausprobieren.",
+      "body": "Kagi kündigt im Changelog vom 5. November einen Einstieg ohne Registrierung an: Die ersten 50 Websuchen benötigen kein Konto; nach einer Registrierung kommen 100 weitere hinzu. Der Anbieter adressiert damit eine konkrete Hürde beim Weiterempfehlen: Erst ausprobieren, dann über ein Konto entscheiden. Die Android-App zeigt die verbleibenden Probesuchen und bekommt eine überarbeitete Startseite, neue Sprachsuche und zusätzliche Schnellzugriffe.",
+      "takeaway": "Das ist eine begrenzte Probe, kein dauerhaft kostenloser Suchtarif. Kagi nennt den Gastzugang selbst eine gegenüber bezahlten Konten eingeschränkte Discovery-Version. Wer bereits zahlt und versehentlich abgemeldet wird, soll deshalb einen Hinweis sehen. Keine eigene Qualitäts-, Datenschutz- oder Vollständigkeitsmessung der Suchergebnisse. Die Anzahl stammt aus dem datierten Anbieter-Changelog; vor späterem Ausprobieren die dann gültigen Bedingungen prüfen.",
+      "url": "https://kagi.com/changelog#11820",
+      "cta": "Neue Gastprobe und Grenzen im Changelog lesen",
+      "source": "Kagi · Changelog 05.11.2026 · Originalabschnitt Search for everyone und Gastmodus-Hinweis gelesen"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Window Sweaters",
+      "title": "Window Sweaters strickt deinem Mac-Fenster einen Rand - mit echten Systemgrenzen.",
+      "body": "Am Donnerstag diskutiertes bestehendes Projekt, kein behaupteter Tagesrelease: Window Sweaters ist eine macOS-Menüleisten-App für gestrickte Fensterränder. Über das Garnsymbol lassen sich Muster, Breite und Maschengröße ändern; einzelne Apps können ohne Rand bleiben. Das README beschreibt eigens gewählte Farbmuster für 37 Apps und lokal aus App-Symbolen abgeleitete Farben für weitere Programme. Die App baut auf JankyBorders auf und ist laut Projekt unter GPL 3.0 veröffentlicht.",
+      "takeaway": "Die gemütliche Optik kommt mit technischen Vorbehalten: Die App ist laut README noch nicht von Apple notarisiert und nutzt private macOS-Fenster-APIs. Sie kann Bedienungshilfenzugriff benötigen, um dem fokussierten Fenster zu folgen. Systemupdates können sie beeinträchtigen. Gebaut wird für macOS 13 und neuer auf Intel und Apple Silicon, praktisch stärker getestet wurde Apple Silicon mit macOS 26. Keine Zusage gleicher Zuverlässigkeit auf älteren Macs und keine Aufforderung, Sicherheitswarnungen blind wegzuklicken. Hier wurde nichts installiert oder am System freigegeben.",
+      "url": "https://github.com/saragordic/window-sweaters",
+      "cta": "Muster, Berechtigungen und Kompatibilitätsgrenzen ansehen",
+      "source": "saragordic/window-sweaters · Donnerstagsfund 05.11.2026 · README und GPL-Lizenzdatei gelesen, kein eigener Mac-Test"
     }
   ],
-  "notes": "Stand: Donnerstag, 05.11.2026, 19:34 Uhr Berlin. Sechs ausgewählte Catches. ERNIE und OpenSSH heute veröffentlicht; Servo heute veröffentlichter Septemberrückblick; Linum-Bericht vom04.11. als heutige Besprechung. Lemmings und TScert bestehende Donnerstagsfunde. OpenSSH-Fazit abends um offizielle Alpine-Meldung ergänzt. Anbieterwerte sind keine eigenen Messungen. Keine Modellgewichte ausgeführt, Systeme verändert oder Installationstests. Veröffentlichungsfreigabe und Quellen geprüft. Kein neues Audio im Intraday-Batch."
+  "notes": "Abgeschlossene Donnerstagsschau für den 05.11.2026, 00:00 bis 24:00 Berlin, acht ausgewählte Catches. Abschlussprüfung am 06.11.2026 gegen 06:27 Berlin. Frühere Berichte und bestehende Projekte ausdrücklich datiert. ERNIE-Lizenz territorial eingeschränkt, AUP-Datierungsauffälligkeit erhalten. OpenSSH/Alpine-Betroffenheit nicht mit einer eigenen Systemprüfung verwechseln. Keine eigenen Installations-, Modell-, Kosten-, Sicherheits- oder Kompatibilitätstests. Anbieterwerte kenntlich. Kein Audio in dieser Textausgabe."
 }
