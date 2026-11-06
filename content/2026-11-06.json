@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-06",
+  "title": "Daily Hob vom Freitag, 06.11.",
+  "headline": "Firebase lokal testen und offene Geodaten über den Globus legen.",
+  "teaser": "2 Freitags-Catches: Firenook und Kugelblitz.",
+  "intro": "Zwei Freitagsfunde für praktische Neugier: Firenook ersetzt Teile der lokalen Firebase-Testumgebung mit einer nativen Engine. Kugelblitz bringt offene Karten und Geländedaten auf einen Mac-Globus. Beide verdienen einen Blick auf ihre Grenzen statt nur auf die schöne Vorführung.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Testdatenbank neben einem Linienglobus mit gefalteten Kartenebenen, schwarze Geometrie auf hellem Papier mit Gelb und Mint",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Open Source",
+      "short": "Firenook",
+      "title": "Firenook will Firebase-Tests ohne Java und ohne ständigen Daten-Neuimport starten.",
+      "body": "Freitags diskutierter Projektfund, kein hier belegter Tagesrelease: Firenook ersetzt die lokale Firebase Emulator Suite mit einer nativen Rust-Engine. Bestehende firebase.json, SDK-Verbindungen, Ports und offizielle Import-/Exportformate sollen weiterpassen. Es unterstützt unter anderem Firestore, Auth, Storage, Functions, Pub/Sub, Cloud Tasks und Eventarc. Mit --keep-data bleiben Testdaten zwischen Starts erhalten. Die öffentliche Version 0.2.0 bringt eine eigene Konsole und einen optionalen MCP-Zugang für Coding-Agenten mit. Der Code steht unter Apache 2.0; das Projekt ist unabhängig von Google.",
+      "takeaway": "Nicht die ganze Firebase-Welt: Realtime Database, Hosting, App Hosting und Data Connect werden ausdrücklich nicht emuliert. firebase-tools bleibt fürs Deployment nötig. Die viel beworbenen 40-fach schnelleren Schreibzugriffe stammen aus einem Anbieterbenchmark mit einer Anwendung auf einem Server, nicht aus einem eigenen Test oder einer allgemeinen Garantie. README und FAQ nennen Node 22/24/26; Linux braucht glibc 2.28 oder neuer, Alpine wird nicht unterstützt. Erst mit synthetischen Daten die benötigten Regeln, Trigger und Import-/Exportwege prüfen. Ein lokaler MCP-Server macht einen externen Coding-Agenten nicht automatisch lokal oder vertraulich; keine Produktionsschlüssel oder echten Kundendaten ungeprüft freigeben. Kein eigener Installations- oder Migrationstest.",
+      "url": "https://firenook.dev/",
+      "cta": "Kompatibilität, Datenhaltung und Messmethode prüfen",
+      "source": "Firenook · Freitagsfund 06.11.2026 · Projektseite und README https://github.com/firenook-dev/firenook sowie Apache-Lizenz gelesen · Anbieterwerte nicht nachgemessen"
+    },
+    {
+      "category": "Wildcard",
+      "short": "Kugelblitz",
+      "title": "Kugelblitz legt offene Karten auf echtes Gelände - nativ auf dem Mac.",
+      "body": "Freitags entdeckt, laut Versionsnotizen am 5. November erstmals öffentlich veröffentlicht: Kugelblitz zeigt Erde und weitere Himmelskörper als 3D-Globus und flachen Atlas. Luftbilder, Straßen- und topografische Karten liegen auf Geländedaten, dazu lassen sich weitere offene Geodaten aus einer Bibliothek einblenden. OpenStreetMap-Kacheln kommen vom eigenen Server des Projekts; andere Daten direkt von ihren Herausgebern. Geladene Inhalte werden zwischengespeichert. KML/KMZ, GeoJSON und GPX gehören zu den beschriebenen Austauschformaten. Die Produktseite nennt kostenlose Nutzung ohne Konto.",
+      "takeaway": "Der aktuelle Download verlangt macOS 27 oder neuer und Apple Silicon, also keine Empfehlung für jeden vorhandenen Mac. Offene Geodaten bedeuten nicht automatisch, dass auch die Anwendung Open Source ist. Quellen und jeweilige Lizenzen führt das Programm laut Anbieter selbst auf. Die flüssige Darstellung auf einem M1 ist eine Projektangabe, keine eigene Messung. Caching ist auch keine Zusage, dass jede beliebige Region schon vollständig offline vorliegt. Keine Installation, keine Standortfreigabe und kein eigener Test mit Vision Pro oder SpaceMouse.",
+      "url": "https://apps.metaebene.me/en/kugelblitz",
+      "cta": "Globus, Systemanforderungen und Datenquellen ansehen",
+      "source": "Metaebene Applications · Version 1.0/1.0.1 vom 05.11.2026, Freitagsfund06.11. · Produktseite und Versionsnotizen https://apps.metaebene.me/en/kugelblitz/releases gelesen"
+    }
+  ],
+  "notes": "Stand: Freitag, 06.11.2026, 11:34 Uhr Berlin. Zwei ausgewählte Funde, kein Vollständigkeitsanspruch. Kugelblitz-Veröffentlichung vom 05.11. ausdrücklich datiert, Firenook nicht als Tagesrelease behauptet. Keine eigenen Installations-, Leistungs-, Kompatibilitäts- oder Migrationstests. Keine Produktionsdaten benutzt, kein Audio im Intraday-Batch."
+}
