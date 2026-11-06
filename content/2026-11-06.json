@@ -1,9 +1,9 @@
 {
   "date": "2026-11-06",
   "title": "Daily Hob vom Freitag, 06.11.",
-  "headline": "Firebase lokal testen und offene Geodaten über den Globus legen.",
-  "teaser": "2 Freitags-Catches: Firenook und Kugelblitz.",
-  "intro": "Zwei Freitagsfunde für praktische Neugier: Firenook ersetzt Teile der lokalen Firebase-Testumgebung mit einer nativen Engine. Kugelblitz bringt offene Karten und Geländedaten auf einen Mac-Globus. Beide verdienen einen Blick auf ihre Grenzen statt nur auf die schöne Vorführung.",
+  "headline": "Entscheidungen ohne Chat. Und Blender-Gefühl ohne Blender.",
+  "teaser": "4 Freitags-Catches: Kanana, BUI, Firenook und Kugelblitz.",
+  "intro": "Vier Freitagsfunde zwischen KI und nativer Software: Kakaos neues Modell verteilt Wahrscheinlichkeiten statt Texte zu schreiben. BUI macht Blenders Bediengefühl zur eigenen UI-Bibliothek. Dazu eine alternative Firebase-Testumgebung und ein Mac-Globus mit offenen Geodaten. Die interessanten Grenzen stehen jeweils direkt dabei.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Testdatenbank neben einem Linienglobus mit gefalteten Kartenebenen, schwarze Geometrie auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://apps.metaebene.me/en/kugelblitz",
       "cta": "Globus, Systemanforderungen und Datenquellen ansehen",
       "source": "Metaebene Applications · Version 1.0/1.0.1 vom 05.11.2026, Freitagsfund 06.11. · Produktseite und Versionsnotizen https://apps.metaebene.me/en/kugelblitz/releases gelesen"
+    },
+    {
+      "category": "KI",
+      "short": "Kanana Decide",
+      "title": "Kanana entscheidet zwischen vorgegebenen Antworten, statt einen Chattext zu erfinden.",
+      "body": "Kakao veröffentlicht am 6. November Kanana-2-v-decide-3b-2611: ein multimodales Entscheidungsmodell mit 3,67 Milliarden Parametern. Eingabe sind Text, JSON oder Chatverlauf, optional mit bis zu zehn Bildern. Zurück kommen Auswahl, Ja-/Nein-Wert oder ein Wert auf einer vorgegebenen Skala samt Wahrscheinlichkeitsverteilung, kein generierter Text. Technisch vergleicht es die Einbettung aus Frage und Zustand mit den Einbettungen der Antwortkandidaten. Das passt etwa zu Routing, Klassifikation und Bildprüfung in einem Agenten-Workflow. Die Modellkarte nennt bis zu 20.480 Tokens und einen lokalen HTTP-Server mit System-One-Schnittstelle.",
+      "takeaway": "Die Zahlen sind relativ zu den angebotenen Antworten: Neue oder anders formulierte Optionen verändern die Verteilung. Auch die ausgegebene confidence ist laut Dokumentation nur ein Abstand zwischen Wahrscheinlichkeiten, kein Beleg für Zuverlässigkeit im eigenen Einsatz. Die Benchmarkwerte stammen von Kakao. Wichtig für Produktideen: Die eigene Kanana Open License verlangt unter anderem Kennzeichnung und Nutzungsregeln; für das Anbieten oder Weiterverkaufen von Modellzugriff per API/Cloud, SI-/On-Premise-Lösungen und eingebettete On-Device-Angebote nennt Abschnitt 4.1 eine separate kommerzielle Lizenz. Kein pauschal freier Open-Source-Baustein. Vor einem Versuch zusätzlich den per trust_remote_code geladenen Code prüfen; überlange Eingaben werden standardmäßig gekürzt. Kein eigener Modell- oder Kalibrierungstest.",
+      "url": "https://huggingface.co/kakaocorp/kanana-2-v-decide-3b-2611",
+      "cta": "Antwortschema, Eingabegrenzen und Lizenz lesen",
+      "source": "Kakao · Modellgewichte laut Modellkarte vom 06.11.2026 · Modellkarte und vollständige Kanana Open License https://huggingface.co/kakaocorp/kanana-2-v-decide-3b-2611/blob/main/LICENSE geprüft · Anbieterbenchmarks nicht nachgemessen"
+    },
+    {
+      "category": "Design & Code",
+      "short": "BUI",
+      "title": "BUI macht Blenders Schieberegler, Menüs und Node-Editoren zur eigenständigen UI-Bibliothek.",
+      "body": "Freitags diskutierter Projektfund, kein belegter Tagesrelease: BUI löst Blenders Widget-Zeichnung und Bedienregeln in einen eigenen kleinen C-Laufzeitkern. Python, Rust, JavaScript/React/Svelte, C/C++ und Dear ImGui können darauf zugreifen, ohne Blender zu starten und ohne einen Browser mitzuliefern. Zum Reiz gehören ziehbare Zahlenfelder, Formeln in Eingaben, Pie-Menüs und die Blender-artige Suche. Standardmäßig zeichnet ein CPU-Raster; Direct3D 11 unter Windows und OpenGL 3.3 unter Linux sind optionale GPU-Wege. Die Python- und Rust-Pakete heißen blenderui.",
+      "takeaway": "Nicht mit fertiger Plattformparität verwechseln: macOS ist experimentell, JavaScript bleibt dort derzeit headless und ein GPU-Renderer fehlt. Linux nutzt X11 beziehungsweise XWayland. Im aktuellen README fehlen unter anderem IME, arabisches Shaping und zeichenweiser Font-Fallback; Qt-Syntax ist nur teilweise abgedeckt. Auch die griffige GPUI-Überlegenheit ist ein Autorenbenchmark auf einem Windows-Laptop, teils vor neueren Funktionen; das Projekt weist selbst auf schwankende Ergebnisse hin. Vor einem Produkt besonders die Lizenz klären: README und Badge nennen GPL-2.0-or-later, die gelesene zentrale LICENSE enthält dagegen den GPLv3-Text. Keine permissive Einbaulizenz behauptet, kein eigener Build-, Leistungs- oder Barrierefreiheitstest.",
+      "url": "https://github.com/ppmpreetham/BUI",
+      "cta": "Plattformmatrix und offene Grenzen prüfen",
+      "source": "BUI · Freitagsfund 06.11.2026 · aktuelles README mit Plattform-/Status-/Benchmark-/Lizenzabschnitten und zentrale LICENSE https://github.com/ppmpreetham/BUI/blob/main/LICENSE gelesen · Lizenzangaben widersprüchlich, kein eigener Test"
     }
   ],
-  "notes": "Stand: Freitag, 06.11.2026, 11:34 Uhr Berlin. Zwei ausgewählte Funde, kein Vollständigkeitsanspruch. Kugelblitz-Veröffentlichung vom 05.11. ausdrücklich datiert, Firenook nicht als Tagesrelease behauptet. Keine eigenen Installations-, Leistungs-, Kompatibilitäts- oder Migrationstests. Keine Produktionsdaten benutzt, kein Audio im Intraday-Batch."
+  "notes": "Stand: Freitag, 06.11.2026, 15:34 Uhr Berlin. Vier ausgewählte Funde, kein Vollständigkeitsanspruch. Neu: Kanana Decide und BUI. Kugelblitz-Veröffentlichung vom 05.11. ausdrücklich datiert; Firenook und BUI nicht als Tagesrelease behauptet. Keine eigenen Installations-, Modell-, Leistungs-, Kompatibilitäts- oder Migrationstests. Lizenzgrenzen und BUI-Lizenzwiderspruch stehen im Text. Keine Produktionsdaten benutzt."
 }
