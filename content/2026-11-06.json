@@ -1,9 +1,9 @@
 {
   "date": "2026-11-06",
   "title": "Daily Hob vom Freitag, 06.11.",
-  "headline": "Entscheidungen ohne Chat. Und Blender-Gefühl ohne Blender.",
-  "teaser": "4 Freitags-Catches: Kanana, BUI, Firenook und Kugelblitz.",
-  "intro": "Vier Freitagsfunde zwischen KI und nativer Software: Kakaos neues Modell verteilt Wahrscheinlichkeiten statt Texte zu schreiben. BUI macht Blenders Bediengefühl zur eigenen UI-Bibliothek. Dazu eine alternative Firebase-Testumgebung und ein Mac-Globus mit offenen Geodaten. Die interessanten Grenzen stehen jeweils direkt dabei.",
+  "headline": "Weniger Raten. Bessere Werkzeuge. Und Wetter in Bewegung.",
+  "teaser": "6 Freitags-Catches: Kanana, BUI, Firenook, Kugelblitz, GeoDNS und MTG-I2.",
+  "intro": "Sechs Freitagsfunde über brauchbare Werkzeuge und ihre Grenzen: KI entscheidet zwischen vorgegebenen Antworten, native UI leiht sich Blenders Bediengefühl. Dazu eine andere Firebase-Testumgebung, offene Geodaten auf dem Mac und ein Erfahrungsbericht über geografische DNS-Antworten. Zum Schluss zeigt ein neuer Wettersatellit, was ein Blick alle zweieinhalb Minuten künftig bringen soll.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Testdatenbank neben einem Linienglobus mit gefalteten Kartenebenen, schwarze Geometrie auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://github.com/ppmpreetham/BUI",
       "cta": "Plattformmatrix und offene Grenzen prüfen",
       "source": "BUI · Freitagsfund 06.11.2026 · aktuelles README mit Plattform-/Status-/Benchmark-/Lizenzabschnitten und zentrale LICENSE https://github.com/ppmpreetham/BUI/blob/main/LICENSE gelesen · Lizenzangaben widersprüchlich, kein eigener Test"
+    },
+    {
+      "category": "Infrastruktur",
+      "short": "GeoDNS",
+      "title": "GeoDNS nach Nähe klingt einfach. DNS-Caches und zufällige Reihenfolgen machen es schwieriger.",
+      "body": "Vincent Bernat beschreibt am 6. November den Wechsel seines verteilten Blogs von CloudFront und Route 53 zu Bunny CDN und skriptbaren DNS-Antworten. Seine sieben kleinen Server stehen auf mehreren Kontinenten. JavaScript wählt die geografisch nächsten erreichbaren Ziele. Der spannende Teil ist der Kompromiss: Zwei IP-Adressen bieten Ausweichmöglichkeiten, können aber durch die zufällige Reihenfolge beim Resolver auch zum deutlich weiter entfernten Server führen. Sein endgültiger Ansatz gibt bei ähnlich entfernten Zielen zwei Adressen mit einer Stunde TTL zurück, sonst nur die nähere mit zwei Minuten TTL.",
+      "takeaway": "Das ist ein nachvollziehbarer Betriebsbericht, kein allgemeiner Cloud-Benchmark und keine Aufforderung, eine vorhandene Infrastruktur umzuziehen. Bernats Rechnung sank laut Bericht von etwa fünf auf einen US-Dollar pro Monat; der Anbieter nennt zwar keine DNS-Abfragekosten und bis zu 500 Domains, aber weiterhin einen Mindestumsatz von einem US-Dollar pro Monat. Die kürzere TTL beseitigt den Ausfallzeitraum nicht. Bernat beschreibt außerdem einen IPv4-only-Routinghelfer, dessen Workaround im vollständigen Skript steckt, und separate Wege für ACME-DNS wegen Rechte- und DS-Record-Grenzen. Diese Einschränkungen sind sein berichteter Stand, kein eigener Test der heutigen API. Auch seine Aussagen zu Browserproblemen mit HTTPS-Records bleiben ein beobachteter Implementierungsstand, kein Fehler des DNS-Standards.",
+      "url": "https://vincent.bernat.ch/en/blog/2026-bunny-geodns",
+      "cta": "Den Routing-Kompromiss und die Fallstricke lesen",
+      "source": "Vincent Bernat · eigener Betriebsbericht vom 06.11.2026 · vollständigen Artikel gelesen; Kostenrahmen mit Bunny-Ankündigung vom 24.06.2026 https://bunny.net/blog/were-making-bunny-dns-free/ gegengeprüft · keine eigene Migration oder Messung"
+    },
+    {
+      "category": "Wildcard",
+      "short": "MTG-I2",
+      "title": "Ein neuer Wettersatellit zeigt Europa im Zweieinhalb-Minuten-Takt. Noch als Vorschau.",
+      "body": "EUMETSAT veröffentlicht am 6. November die ersten Bilder des Flexible Combined Imager auf Meteosat Third Generation Imager 2. Das volle Erdbild wurde bereits am 20. Oktober aus rund 36.000 Kilometern Höhe aufgenommen. Eine zusätzliche Rapid-Scan-Animation zeigt Europa und Nordafrika über 45 Stunden ab dem 3. November, mit nur zweieinhalb Minuten zwischen den Bildern. So werden wandernde Wolkenschichten, Nebel und rasch entstehende Gewitter als zeitlicher Verlauf sichtbar, statt nur als einzelne Wetterkarte.",
+      "takeaway": "Wichtig ist das noch: Der Satellit läuft laut EUMETSAT weiter durch Kalibrierung und Validierung, der operative Dienst wird erst im zweiten Quartal 2027 erwartet. Der geplante schnelle Takt betrifft die Europa-Beobachtung, nicht ein neues globales Vollbild alle zweieinhalb Minuten. Mehr Beobachtungen können die Entwicklung gefährlichen Wetters besser sichtbar machen; daraus folgt noch keine garantierte Warnvorlaufzeit oder fehlerfreie Vorhersage. Hier ist die Meldung selbst der neue Freitagsstand, nicht das Aufnahmedatum des Erdbilds. Keine eigenen Wetterdaten ausgewertet und keine Satellitenbilder als eigenes Hero übernommen.",
+      "url": "https://www.eumetsat.int/mtg-i2-first-images",
+      "cta": "Erstes Erdbild und Rapid-Scan-Vorschau ansehen",
+      "source": "EUMETSAT · Erstbilder-Meldung vom 06.11.2026 · Aufnahme 20.10., Animation ab 03.11.; Betrieb laut Quelle Q2 2027 erwartet · Primärquelle gelesen"
     }
   ],
-  "notes": "Stand: Freitag, 06.11.2026, 15:34 Uhr Berlin. Vier ausgewählte Funde, kein Vollständigkeitsanspruch. Neu: Kanana Decide und BUI. Kugelblitz-Veröffentlichung vom 05.11. ausdrücklich datiert; Firenook und BUI nicht als Tagesrelease behauptet. Keine eigenen Installations-, Modell-, Leistungs-, Kompatibilitäts- oder Migrationstests. Lizenzgrenzen und BUI-Lizenzwiderspruch stehen im Text. Keine Produktionsdaten benutzt."
+  "notes": "Stand: Freitag, 06.11.2026, 19:33 Uhr Berlin. Sechs ausgewählte Funde, kein Vollständigkeitsanspruch. Neu: Bernats GeoDNS-Erfahrungsbericht und MTG-I2-Erstbilder mit noch bevorstehendem Betrieb. Kugelblitz-Veröffentlichung vom 05.11. ausdrücklich datiert; Firenook und BUI nicht als Tagesrelease behauptet. Anbieterwerte, Betriebsberichte und eigene Schlussfolgerungen sind getrennt. Keine eigenen Installations-, Modell-, Leistungs-, Infrastruktur- oder Satellitentests. Lizenzgrenzen und BUI-Lizenzwiderspruch stehen im Text."
 }
