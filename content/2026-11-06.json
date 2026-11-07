@@ -1,9 +1,9 @@
 {
   "date": "2026-11-06",
   "title": "Daily Hob vom Freitag, 06.11.",
-  "headline": "Weniger Raten. Bessere Werkzeuge. Und Wetter in Bewegung.",
-  "teaser": "6 Freitags-Catches: Kanana, BUI, Firenook, Kugelblitz, GeoDNS und MTG-I2.",
-  "intro": "Sechs Freitagsfunde über brauchbare Werkzeuge und ihre Grenzen: KI entscheidet zwischen vorgegebenen Antworten, native UI leiht sich Blenders Bediengefühl. Dazu eine andere Firebase-Testumgebung, offene Geodaten auf dem Mac und ein Erfahrungsbericht über geografische DNS-Antworten. Zum Schluss zeigt ein neuer Wettersatellit, was ein Blick alle zweieinhalb Minuten künftig bringen soll.",
+  "headline": "Terminal-Kern stabil. Modellwahl beweglich. Und Werkzeuge mit Grenzen.",
+  "teaser": "8 Freitags-Catches: libghostty, Auto Code, Kanana, BUI, Firenook, Kugelblitz, GeoDNS und MTG-I2.",
+  "intro": "Acht Freitags-Catches über Bausteine, denen man Aufgaben anvertrauen möchte: libghostty bekommt eine stabile C-Schnittstelle, OpenRouter eine eigene Coding-Modellwahl. Kanana liefert strukturierte Entscheidungen, BUI leiht sich Blenders Bediengefühl. Dazu lokale Firebase-Tests, offene Karten, die Fallstricke geografischer DNS-Antworten und ein Wettersatellit, dessen schneller Blick noch auf den Betriebsstart wartet.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Testdatenbank neben einem Linienglobus mit gefalteten Kartenebenen, schwarze Geometrie auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -67,7 +67,27 @@
       "url": "https://www.eumetsat.int/mtg-i2-first-images",
       "cta": "Erstes Erdbild und Rapid-Scan-Vorschau ansehen",
       "source": "EUMETSAT · Erstbilder-Meldung vom 06.11.2026 · Aufnahme 20.10., Animation ab 03.11.; Betrieb laut Quelle Q2 2027 erwartet · Primärquelle gelesen"
+    },
+    {
+      "category": "Open Source",
+      "short": "libghostty 1.0",
+      "title": "libghostty 1.0 stabilisiert den Terminal-Kern, nicht bloß das nächste Terminalfenster.",
+      "body": "Mitchell Hashimoto kündigt am 6. November libghostty-vt 1.0 an. Die aus Ghostty herausgelöste C-Bibliothek verarbeitet Terminal-Bytes und hält daraus Bildschirm, Cursor und Scrollback als abfragbaren Zustand. Neu am Meilenstein ist vor allem die stabile C-ABI mit semantischer Versionierung und automatischen Kompatibilitätsprüfungen. Opaque Handles, erweiterbare Getter und Setter sowie versionierte ELF-Symbole sollen Einbettern und Paketmaintainern Upgrades erleichtern. Die Bibliothek hat einen eigenen Release-Zyklus, signierte Quellpakete, offline baubare Abhängigkeitspakete sowie Metadaten für CMake und pkg-config.",
+      "takeaway": "Das ist interessant für IDE-Terminals, TUI-Tests, Aufzeichnungen oder Werkzeuge, die einen Terminalzustand lesen müssen. Es ist kein fertiges GUI-Fenster oder PTY-Management zum Einklappen: Diese Teile muss die einbettende Anwendung bereitstellen. Laut Projekt ist libghostty-vt MIT-lizenziert, nutzt im Standardbuild libc und lässt sich ohne SIMD freestanding bauen. Getestete Zielplattformen und nur kompilierte Ziele sind im Releasebericht getrennt; etwa Windows ARM64 ist dort noch nur build-geprüft. Die großen Nutzungs- und Leistungszahlen stammen vom Autor, nicht aus einem eigenen Test. Der Releasezyklus ist unabhängig von der Ghostty-App.",
+      "url": "https://mitchellh.com/writing/libghostty-1-0",
+      "cta": "Stabilitätsversprechen und Einbettungsbeispiel lesen",
+      "source": "Mitchell Hashimoto · Releasebericht vom 06.11.2026 und Projektdokumentation https://lib.ghostty.org vollständig gelesen · keine eigene Integration oder Leistungsmessung"
+    },
+    {
+      "category": "KI & Entwicklung",
+      "short": "Auto Code",
+      "title": "OpenRouter trennt Coding-Routing vom allgemeinen Modellwähler.",
+      "body": "OpenRouter stellt am 6. November eine neue Generation seines Auto Routers und zusätzlich Auto Code vor. Statt ein einziges Modell dauerhaft festzulegen, gewichtet der Router laut Anbieter elf Merkmale einer Anfrage zusammen mit Preisen, Providerzustand, Cache und erlaubtem Modellpool. Auto Code ist auf Coding-Harnesses zugeschnitten und startet mit einer höherpreisigen Modellauswahl als der allgemeine Router. Eine Sitzung darf beim Modell bleiben, wenn ein Wechsel den Cache teuer neu aufbauen würde; Fehlersignale können die nächste Wahl verändern. Routinggründe lassen sich im Chat und über optionale API-Metadaten anzeigen.",
+      "takeaway": "Modellwahl und Providerwahl sind zwei verschiedene Schritte. Freigabelisten, Providerregeln und Zero-Data-Retention-Anforderungen begrenzen laut OpenRouter den Kandidatenpool, müssen aber bewusst gesetzt werden. Ein Router ist nicht automatisch der billigste Tarif: Der Anbieter hat die allgemeine Standardauswahl gegenüber zuletzt wieder verteuert und nennt cost_tier=low als Alternative. Er verlangt laut FAQ keinen separaten Routingaufschlag, berechnet aber das jeweils gewählte Modell. Die Aussagen zu 74 Prozent geringeren Kosten und Opus-ähnlichen Scores sind Anbieterbenchmarks für bestimmte Aufgaben, keine Zusage für das eigene Projekt; hier deshalb kein pauschales Sparversprechen. Keine eigene API-Nutzung, kein Routingtest und keine Änderung bestehender Konten.",
+      "url": "https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/",
+      "cta": "Routingregeln, Preisverhalten und Modellgrenzen lesen",
+      "source": "OpenRouter · Ankündigung und FAQ vom 06.11.2026 vollständig gelesen · Anbieterwerte und Preismechanik, keine eigene Messung"
     }
   ],
-  "notes": "Stand: Freitag, 06.11.2026, 19:33 Uhr Berlin. Sechs ausgewählte Funde, kein Vollständigkeitsanspruch. Neu: Bernats GeoDNS-Erfahrungsbericht und MTG-I2-Erstbilder mit noch bevorstehendem Betrieb. Kugelblitz-Veröffentlichung vom 05.11. ausdrücklich datiert; Firenook und BUI nicht als Tagesrelease behauptet. Anbieterwerte, Betriebsberichte und eigene Schlussfolgerungen sind getrennt. Keine eigenen Installations-, Modell-, Leistungs-, Infrastruktur- oder Satellitentests. Lizenzgrenzen und BUI-Lizenzwiderspruch stehen im Text."
+  "notes": "Freitagsausgabe vom 06.11.2026, am Samstag, 07.11., 06:05 Uhr Berlin final geprüft. Acht ausgewählte Catches. libghostty 1.0 und Auto Code laut Primärquellen vom 06.11.; Kugelblitz vom 05.11. datiert, Firenook und BUI als Projektfunde statt Tagesreleases. MTG-I2 noch in Kalibrierung, Betriebsstart Q2 2027 erwartet. Anbieterwerte, Betriebsberichte und eigene Schlussfolgerungen sind getrennt. Keine eigenen Installations-, Modell-, Leistungs-, Infrastruktur- oder Satellitentests. Lizenzgrenzen und BUI-Lizenzwiderspruch stehen im Text."
 }
