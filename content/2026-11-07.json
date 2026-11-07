@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-07",
+  "title": "Daily Hob vom Samstag, 07.11.",
+  "headline": "Mehr Linux auf dem Mac. Weniger Umwege bei der Suche.",
+  "teaser": "2 Samstags-Catches: Asahis Linux-7.3-Bericht und Bong.",
+  "intro": "Zwei Samstagsfunde über kleine Schritte mit klaren Grenzen: Asahi öffnet die M3-Unterstützung, ohne die GPU schon fertig zu erklären. Bong macht aus einem Suchfeld einen selbsthostbaren Wegweiser zu anderen Websites. Nützlich wird beides erst mit Blick auf das, was schon funktioniert und was noch fehlt.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakter geschichteter Chip neben einer Suchlupe mit verzweigenden Pfeilen und leeren Fenstern, feine schwarze Linien auf hellem Papier mit Gelb und Mint",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Open Source",
+      "short": "Asahi Linux",
+      "title": "Asahi gibt M3 regulär frei. Die GPU ist damit noch nicht fertig.",
+      "body": "Asahis Fortschrittsbericht vom 7. November begleitet Linux 7.3 und hebt die bisherige EXPERT-Schranke für M3-Geräte im Installer auf. Der Display-Coprozessor DCP bringt laut Projekt Verbesserungen bei Verbrauch und Darstellung; Schlafmodus und die Fläche rund um die MacBook-Notch sollen damit nutzbar werden. Parallel gehen große Audio- und Videodecoder-Treiber Richtung Upstream-Review. Erste Devicetrees für M4 Pro/Max und M5 reichen dagegen ausdrücklich erst für einen Start bis zur Textkonsole. Das ist Fortschritt auf mehreren Ebenen, nicht pauschale Desktop-Reife für jeden Apple-Chip.",
+      "takeaway": "Die wichtige Ausnahme bei M3 bleibt die GPU: Das Team kann sie initialisieren und ein Dreieck zeichnen, beschreibt aber noch erheblichen Integrationsaufwand bis zum nutzbaren Mesa-Treiber. Auch der nun ausgelieferte Thunderbolt-Stand trägt nur USB3, XDomain und Thunderbolt-Netzwerk, noch kein PCIe- oder DisplayPort-Tunnelling für viele Docks. m1n1-/Kernel-Updates für weitere M3-Verbesserungen kündigt der Bericht erst für die kommenden Tage an. Die gezeigten Spiele ohne muvm beruhen auf einem experimentellen Per-Process-Page-Size-Patch, den Asahi wegen offener Upstream-Fragen gerade nicht ausliefert. Also vor einer Installation die eigene Modell- und Peripherieunterstützung prüfen; keine eigene Installation oder Leistungsprüfung.",
+      "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+      "cta": "M3-, Thunderbolt- und Gaming-Grenzen im Original lesen",
+      "source": "Asahi Linux · James Calligeros, Fortschrittsbericht vom 07.11.2026 vollständig gelesen · Projektangaben und Experimente, keine eigenen Gerätetests"
+    },
+    {
+      "category": "Dev-Tools",
+      "short": "Bong",
+      "title": "Bong leitet Suchkürzel direkt zu den Websites, die man ohnehin öffnen will.",
+      "body": "Samstags diskutierter Projektfund, kein belegter Tagesrelease: Bong ist ein kleiner Suchkürzel-Redirector in Go. Kürzel mit einem Punkt als Standardpräfix wählen das Ziel, eine Anfrage mit .gh etwa die konfigurierte GitHub-Suche. Ohne Kürzel greift ein Standardziel. In einer YAML-Datei lassen sich Ziele, Aliasse, Vorschlagsquellen und zusätzliche Kürzelpakete zusammenstellen. Der Code steht unter Apache 2.0; das Projekt beschreibt Selbsthosting mit einer einzelnen Konfigurationsdatei. Die öffentliche Instanz zeigt das Prinzip bereits mit Zielen wie MDN, Go Packages oder Hacker News.",
+      "takeaway": "Das ist keine eigene Suchmaschine und kein automatischer Datenschutzschild. Weiterleitungen schicken die Anfrage zum ausgewählten Ziel; konfigurierte Vorschlags-URLs können die Eingabe zusätzlich an externe Dienste geben. Im README-Beispiel kommen allgemeine Vorschläge von Google und GitHub-Vorschläge aus dessen API. Wer weniger Datenweitergabe will, muss die Vorschlagsquellen bewusst wählen oder weglassen. Kürzel, Defaultziel und POST-Suche sind konfigurierbar, aber ein eigener Host braucht trotzdem normalen Betrieb und Absicherung. Keine Änderung an Browser-Suchmaschine oder Konten vorgenommen, kein eigener Installations-, Last- oder Sicherheitstest.",
+      "url": "https://bong.glendalab.com",
+      "cta": "Kürzel ansehen und die Konfiguration prüfen",
+      "source": "Bong · Samstagsfund 07.11.2026 · öffentliche Seite, README https://github.com/glendalab/bong und vollständige Apache-Lizenz https://github.com/glendalab/bong/blob/master/LICENSE gelesen · bestehendes Projekt, kein Launchdatum behauptet"
+    }
+  ],
+  "notes": "Stand: Samstag, 07.11.2026, 11:34 Uhr Berlin. Zwei ausgewählte Catches. Asahi-Bericht heute datiert, Bong als bestehender Samstagsfund. Freigegebene, angekündigte und experimentelle Funktionen sind getrennt. Keine eigenen Installations-, Geräte-, Leistungs- oder Sicherheitstests; keine Konten oder Browser-Einstellungen geändert."
+}
