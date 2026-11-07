@@ -1,9 +1,9 @@
 {
   "date": "2026-11-07",
   "title": "Daily Hob vom Samstag, 07.11.",
-  "headline": "Mehr Linux auf dem Mac. Weniger Umwege bei der Suche.",
-  "teaser": "2 Samstags-Catches: Asahis Linux-7.3-Bericht und Bong.",
-  "intro": "Zwei Samstagsfunde über kleine Schritte mit klaren Grenzen: Asahi öffnet die M3-Unterstützung, ohne die GPU schon fertig zu erklären. Bong macht aus einem Suchfeld einen selbsthostbaren Wegweiser zu anderen Websites. Nützlich wird beides erst mit Blick auf das, was schon funktioniert und was noch fehlt.",
+  "headline": "Linux auf dem Mac. Gedächtnis mit Quellen. APIs aus Typen.",
+  "teaser": "4 Samstags-Catches: Asahi Linux, Bong, Agent Memory und Spindle.",
+  "intro": "Vier Funde zwischen Hardware und Software, die zusammenpassen muss: Asahi öffnet die M3-Unterstützung mit klaren Grenzen. Bong verkürzt Suchwege. Anthropics Memory-Forschung zeigt, warum geprüfte Notizen mehr bringen können als große Archive. Spindle hält API-Verträge und OCaml-Typen zusammen.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakter geschichteter Chip neben einer Suchlupe mit verzweigenden Pfeilen und leeren Fenstern, feine schwarze Linien auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://bong.glendalab.com",
       "cta": "Kürzel ansehen und die Konfiguration prüfen",
       "source": "Bong · Samstagsfund 07.11.2026 · öffentliche Seite, README https://github.com/glendalab/bong und vollständige Apache-Lizenz https://github.com/glendalab/bong/blob/master/LICENSE gelesen · bestehendes Projekt, kein Launchdatum behauptet"
+    },
+    {
+      "category": "KI & Forschung",
+      "short": "Agent Memory",
+      "title": "Gute KI-Erinnerungen sind keine möglichst großen Archive.",
+      "body": "Anthropics Forschungsbeitrag vom 6. November beschreibt, wie Agenten Notizen in Ruhephasen gegen frühere Protokolle prüfen, korrigieren und zu verlinkten Wissensseiten ordnen können. Das Team nennt diese Nacharbeit „Dreaming“. Ein anschauliches Beispiel ist Pokémon: Eine falsche Ortsnotiz führte den Agenten wiederholt in dieselbe Sackgasse; der Abgleich mit dem ursprünglichen Spielprotokoll korrigierte sie. Die Idee ist nicht, alles zu speichern. Wichtig sind brauchbare Regeln, ihre Belege und ein kleiner Einstieg in das restliche Wissen.",
+      "takeaway": "Die Ergebnisse sind interne Versuche, kein Beweis für ein allgemein zuverlässiges Langzeitgedächtnis und keine neue Funktion, die damit überall freigeschaltet wäre. Bei 25 Fragen zu einem großen Dokumentbestand meldet Anthropic mit Suche plus aufgebautem Wiki 61 Prozent der Bewertungskriterien, mit Suche allein 53 Prozent. In einer anderen Aufgabe half das Wiki nicht klar weiter; eines wurde sogar größer als seine Ausgangsdokumente. Der praktische Gedanke für eigene Projekte: Quellen behalten, Notizen überprüfbar machen und den Nutzen gegen den Aufwand der laufenden Pflege testen. Kein eigener Benchmark.",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "cta": "Experimente und Grenzen der Memory-Forschung lesen",
+      "source": "Anthropic · The components of agent memory, 06.11.2026 vollständig gelesen · im Samstagsbatch aufgenommen · interne Hersteller-Evaluationen, nicht unabhängig reproduziert"
+    },
+    {
+      "category": "Open Source",
+      "short": "Spindle",
+      "title": "Spindle zieht API-Verträge direkt aus OCaml-Typen.",
+      "body": "Samstagsfund aus der OCaml-Ecke, kein behaupteter Tagesrelease: Spindle ist ein MIT-lizenziertes Webframework für OCaml 5.5 und neuer. Routen und Datentypen bilden die Grundlage für JSON-Verträge, Validierung und interaktive OpenAPI-Dokumentation mit Scalar. Für das Frontend lassen sich Zod- oder Melange-Schemata ableiten. Die Laufzeit setzt auf Eio, damit Handler in geradlinigem Code bleiben, während Verbindungen nebenläufig verarbeitet werden. Dazu kommen unter anderem WebSockets, Server-Sent Events, Sessions sowie SQLite- und Postgres-Anbindung.",
+      "takeaway": "Interessant ist die gemeinsame Quelle für Backend, Client-Schemata und API-Dokumentation: weniger Stellen, die nach einer Änderung auseinanderlaufen können. Das Projekt bringt eine eigene HTTP/1.1-Implementierung mit und beschreibt Tests gegen die einschlägigen RFCs. Das ist eine Projektaussage, kein unabhängiges Sicherheitsaudit oder Leistungsnachweis. Installation läuft laut README über das zusätzliche Hypha-opam-Repository. Wer OCaml ohnehin nutzt, kann damit ein kleines API ausprobieren; ein neues Framework samt Abhängigkeiten ist aber noch keine automatische Empfehlung für einen produktiven Dienst. Nicht selbst installiert oder getestet.",
+      "url": "https://github.com/hyphatech/spindle",
+      "cta": "Typen, Beispiel-API und Dokumentation ansehen",
+      "source": "Spindle · Samstagsfund 07.11.2026 · README, Projektdokumentation https://hyphatech.github.io/spindle/ und vollständige MIT-Lizenz https://github.com/hyphatech/spindle/blob/main/LICENSE gelesen · kein Launchdatum oder eigener Benchmark behauptet"
     }
   ],
-  "notes": "Stand: Samstag, 07.11.2026, 11:34 Uhr Berlin. Zwei ausgewählte Catches. Asahi-Bericht heute datiert, Bong als bestehender Samstagsfund. Freigegebene, angekündigte und experimentelle Funktionen sind getrennt. Keine eigenen Installations-, Geräte-, Leistungs- oder Sicherheitstests; keine Konten oder Browser-Einstellungen geändert."
+  "notes": "Stand: Samstag, 07.11.2026, 15:33 Uhr Berlin. Vier ausgewählte Catches. Asahi-Bericht heute datiert, Bong und Spindle als bestehende Samstagsfunde, Anthropics Forschung vom 6. November. Freigegebene, angekündigte und experimentelle Funktionen sind getrennt. Hersteller-Evaluationen sind als solche eingeordnet. Keine eigenen Installations-, Geräte-, Leistungs- oder Sicherheitstests; keine Konten oder Browser-Einstellungen geändert."
 }
