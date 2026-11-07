@@ -1,9 +1,9 @@
 {
   "date": "2026-11-07",
   "title": "Daily Hob vom Samstag, 07.11.",
-  "headline": "Linux auf dem Mac. Gedächtnis mit Quellen. APIs aus Typen.",
-  "teaser": "4 Samstags-Catches: Asahi Linux, Bong, Agent Memory und Spindle.",
-  "intro": "Vier Funde zwischen Hardware und Software, die zusammenpassen muss: Asahi öffnet die M3-Unterstützung mit klaren Grenzen. Bong verkürzt Suchwege. Anthropics Memory-Forschung zeigt, warum geprüfte Notizen mehr bringen können als große Archive. Spindle hält API-Verträge und OCaml-Typen zusammen.",
+  "headline": "Linux, Gedächtnis und Text auf ungewöhnlichen Wegen.",
+  "teaser": "6 Samstags-Catches: Asahi, Bong, Agent Memory, Spindle, Text.js und Tasfer.",
+  "intro": "Sechs Funde, die gewohnte Wege hinterfragen: Linux auf Apple-Chips mit klaren Grenzen, direkte Suchkürzel und überprüfbare KI-Erinnerungen. Dazu API-Verträge aus OCaml-Typen, React in der Entwicklerkonsole und ein Editor, der seine Buchstaben selbst zeichnet. Nicht jeder neue Ansatz ist schon die richtige Wahl für den Alltag.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakter geschichteter Chip neben einer Suchlupe mit verzweigenden Pfeilen und leeren Fenstern, feine schwarze Linien auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://github.com/hyphatech/spindle",
       "cta": "Typen, Beispiel-API und Dokumentation ansehen",
       "source": "Spindle · Samstagsfund 07.11.2026 · README, Projektdokumentation https://hyphatech.github.io/spindle/ und vollständige MIT-Lizenz https://github.com/hyphatech/spindle/blob/main/LICENSE gelesen · kein Launchdatum oder eigener Benchmark behauptet"
+    },
+    {
+      "category": "Web & Design",
+      "short": "Text.js",
+      "title": "Text.js baut React-Apps dort, wo sonst Debug-Ausgaben stehen.",
+      "body": "Ein heute diskutierter Projektfund mit herrlich schrägem Ausgabeziel: Text.js rendert React-Oberflächen in der Entwicklerkonsole des Browsers, über console.log. React 19 liefert Komponenten und Zustand, Yoga berechnet das Layout in Zeichenzellen. Geänderte Bilder werden zu formatierten Textblöcken und pro Frame in einem Konsolenaufruf ausgegeben; ohne Änderung entfällt die Ausgabe. Ein App Router, Formulare, Tabellen und Diagramme machen daraus mehr als ASCII-Dekoration. Laut Projekt kann dieselbe App auch im Terminal laufen oder über MCP als Textoberfläche bedient werden.",
+      "takeaway": "Die MIT-lizenzierte Spielwiese zeigt, wie weit eine vertraute Oberfläche tragen kann, wenn man ihren Ausgabekanal austauscht. Zum Einstieg nennt das README Bun 1.2+ oder Node.js 22+ und einen Desktop-Browser. Serverseitig gerenderte Routen sind möglich; laut Website brauchen sie Bun oder text start und funktionieren nicht einfach als beliebiger statischer Export. Die veröffentlichten Millisekundenwerte sind Projektmessungen auf einem konkreten Rechner, hier kein eigener Leistungsnachweis. Der OpenCode-Proxy verbindet lokale Dienste mit einer Website: nicht blind starten oder echte Sitzungen freigeben. Keine Installation, keine Verbindung zu lokalen Konten oder Diensten vorgenommen.",
+      "url": "https://textjs.org",
+      "cta": "Konsole, Komponenten und Render-Pipeline ansehen",
+      "source": "Text.js · bestehender Samstagsfund 07.11.2026 · Website, README https://github.com/anomalyco/textjs und vollständige MIT-Lizenz https://github.com/anomalyco/textjs/blob/dev/LICENSE gelesen · kein Tageslaunch oder eigener Benchmark behauptet"
+    },
+    {
+      "category": "Open Source",
+      "short": "Tasfer",
+      "title": "Tasfer zeichnet den Text selbst. Zusammenarbeit beginnt im Dokumentmodell.",
+      "body": "Der Autorbeitrag vom 3. November ist heute ein schöner Editor-Fund: Tasfer zeichnet Buchstaben, Auswahl und Cursor auf ein HTML5-Canvas, statt die sichtbare Darstellung contentEditable zu überlassen. Ein verstecktes Eingabeelement bleibt für Tastatur, Zwischenablage und Eingabemethoden wie IME erhalten. Das Dokument ist von Anfang an eine CRDT-Struktur, deren Änderungen zwischen Geräten zusammengeführt werden können. Die App speichert lokal; Zusammenarbeit läuft laut Projekt über WebRTC. Zum Umfang gehören unter anderem Tabellen, Codeblöcke und ein eigener LaTeX-Renderer.",
+      "takeaway": "„Ohne Cloud-Dokument“ bedeutet nicht „ohne Infrastruktur“: Ein Hilfsserver vermittelt die Verbindung, und bei blockierter Direktverbindung kann verschlüsselter Verkehr über einen Relay laufen. Verschlüsselung und Datenschutz sind Projektangaben, kein eigener Audit. Für Screenreader beschreibt die Engine zusätzlich einen unsichtbaren semantischen Dokumentbaum; ob das mit den eigenen Hilfsmitteln gut funktioniert, bleibt praktisch zu testen. Wichtig für Entwickler: Die Tasfer-App steht unter AGPL-3.0, die separat einbettbare Editor-Engine unter MIT. Das sind unterschiedliche Pflichten, keine pauschal freizügige Lizenz für die ganze App. Kein eigener Sync-, Accessibility- oder Sicherheitstest und keine persönlichen Dokumente geladen.",
+      "url": "https://www.hamza.se/blog/tasfer",
+      "cta": "Canvas-Ansatz, Peer-Verbindung und Lizenztrennung lesen",
+      "source": "Hamza Khuswan · Autorbeitrag 03.11.2026, Samstagsfund 07.11. · README https://github.com/tasferlabs/tasfer und Engine-Konzepte https://www.tasfer.app/en/docs/editor/concepts/ gelesen · vollständige AGPL-App- und MIT-Engine-Lizenzen im dev-Zweig geprüft"
     }
   ],
-  "notes": "Stand: Samstag, 07.11.2026, 15:33 Uhr Berlin. Vier ausgewählte Catches. Asahi-Bericht heute datiert, Bong und Spindle als bestehende Samstagsfunde, Anthropics Forschung vom 6. November. Freigegebene, angekündigte und experimentelle Funktionen sind getrennt. Hersteller-Evaluationen sind als solche eingeordnet. Keine eigenen Installations-, Geräte-, Leistungs- oder Sicherheitstests; keine Konten oder Browser-Einstellungen geändert."
+  "notes": "Stand: Samstag, 07.11.2026, 19:33 Uhr Berlin. Sechs ausgewählte Catches. Asahi-Bericht heute datiert, Anthropics Forschung vom 6. November, Tasfer-Autorbeitrag vom 3. November; Bong, Spindle und Text.js als bestehende Samstagsfunde. Freigegebene, angekündigte und experimentelle Funktionen sind getrennt. Hersteller-Evaluationen sind als solche eingeordnet. Keine eigenen Installations-, Geräte-, Leistungs-, Sync-, Accessibility- oder Sicherheitstests; keine Konten, lokalen Dienste oder Browser-Einstellungen geändert."
 }
