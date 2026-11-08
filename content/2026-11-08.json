@@ -1,9 +1,9 @@
 {
   "date": "2026-11-08",
   "title": "Daily Hob vom Sonntag, 08.11.",
-  "headline": "Wellen sehen. Text rechtzeitig zeichnen. Daten nicht dauernd kopieren.",
-  "teaser": "4 Sonntags-Catches: PR Overview, WaveDude Next, Bitmap-JIT und mizu.",
-  "intro": "Vier Funde über Arbeit, die an der richtigen Stelle passiert: GitHub zieht Merge-Hindernisse nach oben, WaveDude Next macht Wellen sichtbar. Ein Bitmap-JIT zeichnet Text kurz vor der Bildausgabe, mizu lässt R und Python gemeinsame Speicherseiten nutzen. Mit klaren Grenzen statt pauschalen Tempo-Versprechen.",
+  "headline": "Weniger kopieren. Früher kompilieren. Linux-Programme mit Gepäck.",
+  "teaser": "6 Sonntags-Catches: PR Overview, WaveDude Next, Bitmap-JIT, mizu, FELF und cljrs.",
+  "intro": "Sechs Funde über Arbeit am richtigen Ort: GitHub zieht Merge-Hindernisse nach oben, WaveDude Next macht Wellen sichtbar. Ein Bitmap-JIT zeichnet Text kurz vor der Ausgabe, mizu teilt Speicher zwischen R und Python. Am Abend kommen Linux-Programme mit eigener Bibliotheksausstattung und ein experimenteller Clojure-Dialekt auf Rust dazu. Kleine technische Ideen, klare Grenzen.",
   "hero": "hero.jpg",
   "heroAlt": "Feine schwarze Wellenlinien durch eine Linse neben drei geordneten leeren Karten, auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://github.com/shikokuchuo/mizu",
       "cta": "Shared-Memory-Pools und Interop-Grenzen ansehen",
       "source": "mizu · Sonntagsfund 08.11.2026 · README und vollständige Interop-Dokumentation https://shikokuchuo.net/mizu/articles/interop.html gelesen · DESCRIPTION: MIT + file LICENSE; Lizenzdatei mit Jahr/Inhabern geprüft · experimentelle API, Projektbenchmarks"
+    },
+    {
+      "category": "Open Source",
+      "short": "FELF",
+      "title": "FELF packt Linux-Programme samt ihrer Bibliotheken in eine Datei.",
+      "body": "Heute vorgestellter Projektfund: Wer ein Linux-Programm auf einen anderen Rechner kopiert, bekommt schnell eine fehlende Bibliothek statt eines Starts. FELF will dieses Gepäck mitnehmen: Es bündelt eine bestehende Programmdatei, ihre Shared Libraries und eine eigene glibc samt angepasstem Loader. Laut Projekt braucht der Start weder FUSE noch Root-Rechte oder ein vorher installiertes Laufzeitsystem. Ein Teil wird direkt aus der Datei eingeblendet, anderes in anonyme Speicherdateien entpackt, nicht in ein temporäres Verzeichnis. Mehrere Programme können sich in einem Paket dieselben Bibliotheken teilen.",
+      "takeaway": "Das ist ein frisches Experiment, kein belegtes „läuft überall“. Architektur, Kernel und die benötigte /proc/self/fd-Schnittstelle müssen passen; Grafiktreiber kommen weiter vom Zielrechner. Daten, Schriften und Konfiguration wandern nicht automatisch mit und brauchen gegebenenfalls eine zusätzliche Verzeichnisstruktur. Vor allem: FELF ist keine Sandbox. Das Programm behält die Rechte der ausführenden Person. Die eingebauten Prüfsummen sind auch keine Signatur des Herausgebers. FELF selbst steht unter Apache 2.0; beim Verteilen bleiben die LGPL-Pflichten der mitgelieferten glibc relevant. Nicht selbst gebaut oder auf fremden Systemen getestet.",
+      "url": "https://github.com/Rucadi/FELF",
+      "cta": "Aufbau, Dateigrenzen und Sicherheitsmodell ansehen",
+      "source": "FELF · Projektfund 08.11.2026 · README, Sicherheitsdokumentation https://github.com/Rucadi/FELF/blob/master/docs/security.md und Apache-2.0-Lizenz gelesen · Funktionsangaben des Projekts, keine eigene Kompatibilitätsprüfung"
+    },
+    {
+      "category": "Informatik",
+      "short": "cljrs",
+      "title": "cljrs bringt Clojures Klammern in die Rust-Welt.",
+      "body": "Ein Lisp mit Rust als Zuhause: cljrs, auch clojurust genannt, ist ein experimenteller Clojure-Dialekt. Er liest Quelltext, bietet eine interaktive REPL und kann Programme über Cranelift vorab in eigenständige native Binärdateien übersetzen. Beim normalen Ausführen beginnt er mit einem Interpreter; häufig benutzte Funktionen können über eine Zwischenstufe bis zu nativem JIT-Code aufsteigen. Dazu kommen persistente Datenstrukturen, Makros und eine Schnittstelle zu Rust. Das bestehende Projekt ist heute im Gespräch; auf crates.io wurde am 8. November außerdem Paketversion 0.2.40 veröffentlicht. Daraus folgt nicht, dass all diese Fähigkeiten erst heute hinzugekommen sind.",
+      "takeaway": "Interessant als Spielwiese für einbettbare Skripte, Regeln oder Plugins in Rust-Programmen, nicht als versprochener Ersatz für jedes Clojure-Projekt. Die Startseite warnt selbst vor dem frühen Stand und rauen Kanten. „In Rust implementiert“ bedeutet hier auch nicht „ohne Garbage Collector“: Der Dialekt bringt eine eigene Speicherbereinigung mit. README und Handbuch unterscheiden sich noch beim bevorzugten Plattformschlüssel für Reader-Conditionals; das Handbuch nennt :cljrs und :rust als alten Alias. Keine vollständige JVM-Bibliothekskompatibilität oder gemessene Überlegenheit abgeleitet. Nicht selbst installiert, kompiliert oder verglichen.",
+      "url": "https://clj.rs/",
+      "cta": "Dialekt, Einstieg und Rust-Anbindung erkunden",
+      "source": "clj.rs · Sonntagsfund 08.11.2026 · Startseite, relevante README-Abschnitte https://github.com/csm/clojurust und Handbuch-Einführung https://docs.clj.rs/ gelesen · crates.io https://crates.io/crates/cljrs bestätigt 0.2.40 vom 08.11. · experimentell, kein eigener Test"
     }
   ],
-  "notes": "Stand: Sonntag, 08.11.2026, 15:32 Uhr Berlin. Vier ausgewählte Catches. GitHub-Ankündigung 5.11. mit Wochenendrollout, Bitmap-JIT-Beitrag 7.11.; WaveDude Next und mizu als bestehende Sonntagsfunde. Messungen bleiben Autor-/Projektangaben, keine unabhängige Reproduktion. Keine eigenen Installations-, Leistungs-, Konten- oder Genauigkeitstests. Keine Einstellungen, PRs oder Konten geändert."
+  "notes": "Stand: Sonntag, 08.11.2026, 19:33 Uhr Berlin. Sechs ausgewählte Catches. GitHub-Ankündigung 5.11. mit Wochenendrollout, Bitmap-JIT-Beitrag 7.11.; WaveDude Next und mizu als bestehende Sonntagsfunde. Am Abend ergänzt: FELF und cljrs, dessen Paket 0.2.40 heute veröffentlicht wurde. Messungen bleiben Autor-/Projektangaben, keine unabhängige Reproduktion. Keine eigenen Installations-, Leistungs-, Kompatibilitäts-, Konten- oder Genauigkeitstests. Keine Einstellungen, PRs oder Konten geändert."
 }
