@@ -1,9 +1,9 @@
 {
   "date": "2026-11-08",
   "title": "Daily Hob vom Sonntag, 08.11.",
-  "headline": "Weniger Scrollen im Review. Mehr Wellen auf dem Bildschirm.",
-  "teaser": "2 Sonntags-Catches: GitHubs PR-Preview und WaveDude Next.",
-  "intro": "Zwei Sonntagsfunde über das Sichtbarmachen: GitHub rückt Hindernisse vor dem Merge nach oben, statt sie unter langen Diskussionen zu verstecken. WaveDude Next zeigt Licht als Welle, mit Linsen, Messpunkten und einer Zeitleiste zum Zurückspulen. Ein laufender Preview-Rollout und ein bestehendes Projekt, keine zwei behaupteten Tageslaunches.",
+  "headline": "Wellen sehen. Text rechtzeitig zeichnen. Daten nicht dauernd kopieren.",
+  "teaser": "4 Sonntags-Catches: PR Overview, WaveDude Next, Bitmap-JIT und mizu.",
+  "intro": "Vier Funde über Arbeit, die an der richtigen Stelle passiert: GitHub zieht Merge-Hindernisse nach oben, WaveDude Next macht Wellen sichtbar. Ein Bitmap-JIT zeichnet Text kurz vor der Bildausgabe, mizu lässt R und Python gemeinsame Speicherseiten nutzen. Mit klaren Grenzen statt pauschalen Tempo-Versprechen.",
   "hero": "hero.jpg",
   "heroAlt": "Feine schwarze Wellenlinien durch eine Linse neben drei geordneten leeren Karten, auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://github.com/graealex/WaveDudeNext",
       "cta": "Szenen, Voraussetzungen und Beispielprojekte ansehen",
       "source": "WaveDude Next · Sonntagsfund 08.11.2026 · vollständiges Projekt-README und Huygens-Optics-Seite https://huygensoptics.com/wavedude_en.html gelesen · Funktions-, Plattform- und Lizenzangaben des Projekts, kein eigener Test"
+    },
+    {
+      "category": "Informatik & Design",
+      "short": "Bitmap JIT",
+      "title": "Dieser Mikrocontroller übersetzt Text in Zeichenbefehle, kurz bevor er ihn zeigt.",
+      "body": "Raph Leviens Beitrag vom 7. November ist heute ein schöner Tiefenfund: Für seinen vic-2350 auf dem RP2350 erzeugt er zur Laufzeit ARM-Code, der eine Zeichenkette als Bitmap ausgibt. Statt einen großen Bildspeicher vorzuhalten, berechnet der Renderer das Bild Zeile für Zeile kurz vor der Ausgabe. Die Buchstaben liegen eng gepackt im Speicher; der erzeugte Code setzt ihre Pixel in einen Ein-Bit-Zwischenpuffer, danach folgt die Umwandlung in RGB565. So passen proportionale Buchstaben und angepasste Abstände in die engen Zeit- und Speichergrenzen eines Mikrocontrollers.",
+      "takeaway": "Levien nennt für seine Textdemo rund 21.000 Takte zur Codeerzeugung und 42.000 zum Ausführen, zusammen etwa 2,6 Prozent eines RP2350-Kerns. Das sind seine Messungen für diesen Teil der Pipeline, nicht die Kosten der kompletten Bildausgabe: Die Farbumwandlung ist laut Beitrag ungefähr dreimal teurer. Ein direkter Vergleich mit einem gleichwertigen bestehenden Renderer fehlt. Der generierte Code braucht zudem etwa zehnmal so viel Platz wie die Zeichenkette, weshalb er ihn nicht einfach dauerhaft zwischenspeichert. Die spannende Idee ist der Tausch von Rechenarbeit gegen knappen RAM, keine pauschale Aussage gegen Rust oder moderne Schrift-Renderer. Nicht selbst gebaut oder gemessen.",
+      "url": "https://linebender.org/blog/jit-bitmap-text/",
+      "cta": "JIT, Speicherlayout und Kerning im Original nachvollziehen",
+      "source": "Linebender · Raph Levien, Beitrag 07.11.2026 vollständig gelesen · Sonntagsfund 08.11. · Autor-Demo und Messungen, keine eigene Reproduktion"
+    },
+    {
+      "category": "Open Source",
+      "short": "mizu",
+      "title": "mizu lässt R und Python auf dieselben Speicherseiten schauen.",
+      "body": "Heute diskutierter Projektfund, kein belegter Tagesrelease: mizu verbindet Prozesse auf demselben Rechner über Shared Memory. R kann Aufgaben an einen Pool von R- oder Python-Prozessen geben, während Vektoren, Datenrahmen und Arrow-Daten als gemeinsame Speicheransichten übertragen werden. Die R-Seite nutzt dafür unter anderem ALTREP, Python das Gegenstück pymizu. Der Unterbau libmizu ist in C geschrieben; Linux und macOS verwenden POSIX Shared Memory, Windows Dateimappings. Laut Paketbeschreibung braucht mizu R4.3 oder neuer und ist MIT-lizenziert, die API aber ausdrücklich noch experimentell.",
+      "takeaway": "„Zero-Copy“ beginnt nicht bei beliebigen Objekten ohne Vorbereitung: Große Werte werden zunächst einmal in die gemeinsame Region geschrieben. Die Interop-Doku nennt Größenuntergrenzen von 256 KB für einfache Vektoren auf einem Kanal und 32 KB für die übrigen Fälle. Einige Typen werden abgewiesen, darunter S4-Objekte und data.table; beim Arrow-Austausch bleiben Werte erhalten, nicht zwingend das ursprüngliche Schema. Die spektakulären Roundtrip-Zahlen im README stammen aus Projektmessungen auf einem M4 Pro, nicht aus einem allgemeinen Anwendungstest. Und anders als verteilte Worker kann Shared Memory keine anderen Rechner oder Cluster erreichen. Also ein gezielter Versuch für lokale Datenpipelines, kein Ersatz für jede Parallelisierung. Nicht selbst installiert oder gemessen.",
+      "url": "https://github.com/shikokuchuo/mizu",
+      "cta": "Shared-Memory-Pools und Interop-Grenzen ansehen",
+      "source": "mizu · Sonntagsfund 08.11.2026 · README und vollständige Interop-Dokumentation https://shikokuchuo.net/mizu/articles/interop.html gelesen · DESCRIPTION: MIT + file LICENSE; Lizenzdatei mit Jahr/Inhabern geprüft · experimentelle API, Projektbenchmarks"
     }
   ],
-  "notes": "Stand: Sonntag, 08.11.2026, 11:33 Uhr Berlin. Zwei ausgewählte Catches. GitHub-Ankündigung vom 5. November mit angekündigtem Wochenendrollout; WaveDude Next als bestehender Sonntagsfund. Keine eigenen Installations-, Leistungs-, Konten- oder Genauigkeitstests. Keine Einstellungen, PRs oder Konten geändert."
+  "notes": "Stand: Sonntag, 08.11.2026, 15:32 Uhr Berlin. Vier ausgewählte Catches. GitHub-Ankündigung 5.11. mit Wochenendrollout, Bitmap-JIT-Beitrag 7.11.; WaveDude Next und mizu als bestehende Sonntagsfunde. Messungen bleiben Autor-/Projektangaben, keine unabhängige Reproduktion. Keine eigenen Installations-, Leistungs-, Konten- oder Genauigkeitstests. Keine Einstellungen, PRs oder Konten geändert."
 }
