@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-08",
+  "title": "Daily Hob vom Sonntag, 08.11.",
+  "headline": "Weniger Scrollen im Review. Mehr Wellen auf dem Bildschirm.",
+  "teaser": "2 Sonntags-Catches: GitHubs PR-Preview und WaveDude Next.",
+  "intro": "Zwei Sonntagsfunde über das Sichtbarmachen: GitHub rückt Hindernisse vor dem Merge nach oben, statt sie unter langen Diskussionen zu verstecken. WaveDude Next zeigt Licht als Welle, mit Linsen, Messpunkten und einer Zeitleiste zum Zurückspulen. Ein laufender Preview-Rollout und ein bestehendes Projekt, keine zwei behaupteten Tageslaunches.",
+  "hero": "hero.jpg",
+  "heroAlt": "Feine schwarze Wellenlinien durch eine Linse neben drei geordneten leeren Karten, auf hellem Papier mit Gelb und Mint",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Dev-Tools",
+      "short": "PR Overview",
+      "title": "GitHub zieht den Merge-Status aus dem Kommentarstapel nach oben.",
+      "body": "GitHubs Ankündigung ist vom 5. November; der dort beschriebene Wochenendrollout macht die neue PR-Übersicht zum Sonntagsfund. Die opt-in Public Preview setzt eine kompakte Zusammenfassung von Merge-Bereitschaft und nächsten Schritten an den Anfang der Seite. Checks, Kommentare und Freigaben bleiben von dort erreichbar. Dazu kommen Filter für ungelöste Gespräche oder eigene Kommentare, eine Sortierung mit den neuesten Kommentaren zuerst und eine Aktivitätsübersicht. So soll die Frage „Was blockiert hier noch?“ weniger Scrollarbeit auslösen.",
+      "takeaway": "Das ist ein erster Preview-Schritt, nicht die fertige neue Pull-Request-Erfahrung und keine Änderung der Merge-Regeln. Laut Ankündigung aktiviert der Knopf „Try the Overview page“ die Ansicht; im selben Menü geht es während der Preview zurück zur klassischen Übersicht. Ob der Knopf schon im eigenen Konto erscheint, hängt vom Rollout ab und wurde hier nicht für jedes Konto geprüft. Verfügbare Aktionen bleiben an Berechtigungen gebunden. Keine Preview-Einstellung umgeschaltet, kein PR geschlossen oder gemergt und keine gemessene Zeitersparnis behauptet.",
+      "url": "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/",
+      "cta": "Preview, Filter und Rückweg im Original ansehen",
+      "source": "GitHub Changelog · Ankündigung 05.11.2026 vollständig gelesen · Sonntagsfund 08.11. zum angekündigten Wochenendrollout · Produktbeschreibung, kein eigener Konten- oder Zeitspar-Test"
+    },
+    {
+      "category": "Wildcard · Physik",
+      "short": "WaveDude Next",
+      "title": "WaveDude Next macht aus Lichtwellen eine Szene zum Anfassen.",
+      "body": "Heute diskutierter Projektfund, kein belegter Tagesrelease: WaveDude Next simuliert Wellenoptik in zwei Dimensionen auf Windows. Lichtquellen, Linsen, Spiegel oder Fasern kommen auf eine Zeichenfläche; daneben sieht man das schwingende Feld und die zeitlich gemittelte Intensität. Messpunkte und Messlinien liefern Kurven, die Zeitleiste lässt fertige Frames erneut ansehen. Besonders anschaulich: Ein Bild aus dem Zeichenprogramm kann zur Szene werden, mit Rot für den Brechungsindex, Grün für Quellen und Blau für Absorption. Das Projekt ist der Nachfolger von Wave Dude 2D und wird auch von Huygens Optics vorgestellt.",
+      "takeaway": "Zum Erklären von Brechung, Beugung und Interferenz ist das ein schöner Ansatz, nicht automatisch ein validiertes Werkzeug für beliebige reale Optik: Die Szene bleibt zweidimensional und ihre Maße sind Pixel. Laut README gibt es EXE-Downloads für 64-Bit-Windows 10/11, wahlweise mit gebündelter .NET-10-Laufzeit; OpenCL beschleunigt auf geeigneten GPUs, sonst rechnet die CPU. Lange Läufe können viel RAM und Plattenplatz brauchen. Videos, Bilder, rohe OpenEXR-Daten und CSV-Messwerte lassen sich exportieren. Das README nennt GPL-Version 3 oder neuer. Keine eigene Installation, Simulation oder Prüfung der physikalischen Genauigkeit.",
+      "url": "https://github.com/graealex/WaveDudeNext",
+      "cta": "Szenen, Voraussetzungen und Beispielprojekte ansehen",
+      "source": "WaveDude Next · Sonntagsfund 08.11.2026 · vollständiges Projekt-README und Huygens-Optics-Seite https://huygensoptics.com/wavedude_en.html gelesen · Funktions-, Plattform- und Lizenzangaben des Projekts, kein eigener Test"
+    }
+  ],
+  "notes": "Stand: Sonntag, 08.11.2026, 11:33 Uhr Berlin. Zwei ausgewählte Catches. GitHub-Ankündigung vom 5. November mit angekündigtem Wochenendrollout; WaveDude Next als bestehender Sonntagsfund. Keine eigenen Installations-, Leistungs-, Konten- oder Genauigkeitstests. Keine Einstellungen, PRs oder Konten geändert."
+}
