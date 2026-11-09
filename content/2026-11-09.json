@@ -1,9 +1,9 @@
 {
   "date": "2026-11-09",
   "title": "Daily Hob vom Montag, 09.11.",
-  "headline": "Regale zeichnen. Speicher verstehen. Papier zum Fliegen bringen.",
-  "teaser": "4 Montags-Catches: BenchUp, Psalm 7, malloc von innen und Papierflieger mit Foldable Flight.",
-  "intro": "Vier Funde zwischen Werkbank, Rechner und Schreibtischkante: BenchUp plant Möbel in 3D, Psalm 7 prüft PHP-Datenwege. Ein Erklärstück zerlegt die Speichervergabe in kleine Experimente, und Foldable Flight macht aus einem Blatt Papier den nächsten analogen Versuch. Mit klarer Trennung zwischen Demonstration, Projektversprechen und eigenem Ausprobieren.",
+  "headline": "Besser bauen. Daten verstehen. Dem Benchmark über die Schulter schauen.",
+  "teaser": "6 Montags-Catches: BenchUp, Psalm 7, malloc, Foldable Flight, DBDelve und Active Benchmarking.",
+  "intro": "Sechs Funde zwischen Werkbank, Rechner und Schreibtischkante: BenchUp plant Möbel, Psalm prüft Datenwege, ein malloc-Erklärstück zerlegt die Speichervergabe und Papierflieger liefern den analogen Versuch. Am Abend kommen ein nativer Datenbankclient und eine alte, gute Frage dazu: Misst ein Benchmark eigentlich das, was auf seinem Etikett steht?",
   "hero": "hero.jpg",
   "heroAlt": "Ein feiner schwarzer Architektur-Drahtkörper auf einem Raster neben kleinen Kästen in einem Prüftor, auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://www.foldableflight.com/",
       "cta": "Einen Entwurf aussuchen und die Faltfolge ansehen",
       "source": "Foldable Flight · Montagsfund 09.11.2026 · Übersicht und Modellseiten Arrowhead https://www.foldableflight.com/planes/arrowhead sowie Cub https://www.foldableflight.com/planes/cub gelesen · Anbieterbewertungen, keine eigene Flug- oder Rekordprüfung"
+    },
+    {
+      "category": "Open Source · Dev-Tools",
+      "short": "DBDelve",
+      "title": "DBDelve zeigt Datenbanken nativ statt im nächsten Browsermantel.",
+      "body": "Heute als Show HN vorgestellt, aber schon länger in Entwicklung: DBDelve ist ein Datenbankclient aus Rust und GPUI, ohne Electron oder JVM. Laut Projekt verbindet er sich unter anderem mit PostgreSQL, MySQL, SQLite, SQL Server, MongoDB und Redis. Verbindungen lassen sich in Projekte sortieren und farblich markieren. Für eine bearbeitete Zelle erzeugt er zunächst ein UPDATE zum Prüfen; Abfragepläne bekommen eine eigene Ansicht. Read-only, Read-write und Full Access trennen unterschiedliche Arbeitsweisen. Interessant ist die Kombination aus Tastaturbedienung, nativer Oberfläche und Datenbankarbeit, nicht ein hier belegter universeller Geschwindigkeitsrekord.",
+      "takeaway": "Frühes Projekt, keine zugesagte Funktionsgleichheit mit reifen Clients. Die Wertezahlen gegen DBeaver stammen aus eigenen Projektmessungen auf einem M1 Pro, einer Postgres-Tabelle und teils absichtlich vollständig geladenen Millionenzeilen-Ergebnissen; sie beschreiben nicht jeden Alltag. Die Installationsdoku nennt auf macOS nur eine Ad-hoc-Signatur, keine Apple-Notarisierung; die erste Ausführung wird deshalb von Gatekeeper abgelehnt. Hier keine Schutzmarkierung entfernt, nichts installiert und keine gespeicherten Verbindungen oder Passwörter importiert. Read-only im Client ersetzt außerdem keine eng begrenzten Datenbankrechte. Das README nennt GPL-3.0 mit fortgeltenden MIT-Hinweisen für älteren Code.",
+      "url": "https://github.com/ShayanAbbas1/dbdelve",
+      "cta": "Oberfläche, Plattformgrenzen und Benchmark-Methode ansehen",
+      "source": "DBDelve · Montagsfund 09.11.2026 · README, Startseite https://dbdelve.github.io/ und Installations-/Benchmark-Dokumentation gelesen · Show HN https://news.ycombinator.com/item?id=50427934 als Diskussionssignal · frühes Projekt, Eigenmessungen, kein eigener Datenbanktest"
+    },
+    {
+      "category": "Informatik · Messen",
+      "short": "Active Benchmarking",
+      "title": "Ein Benchmark braucht jemanden, der beim Messen hinschaut.",
+      "body": "Brendan Greggs Seite zu Active Benchmarking ist ausdrücklich ein älterer Erklärfund: zuletzt aktualisiert am 20. April 2014, heute wieder diskutiert. Die Idee bleibt nützlich. Einen Benchmark starten, Balkendiagramm abwarten und einen Sieger ausrufen reicht nicht. Während der Last sollen weitere Werkzeuge zeigen, was tatsächlich begrenzt: etwa CPU, Plattenzugriffe, Netzwerk oder ein einzelner Thread. Sonst misst der vermeintliche Dateisystemtest vielleicht nur die Platte, oder der Vergleich zweier Server vor allem den Lastgenerator.",
+      "takeaway": "Greggs Leitfrage ist, warum das Ergebnis genau so ausfällt und nicht doppelt so schnell. Dafür nennt er unter anderem vmstat, iostat, perf und strace sowie die Prüfung von Konfiguration und realistischem Workload. Wenn möglich soll die Last lange genug stabil laufen, um ihr Verhalten zu verstehen. Auch eine saubere statistische Auswertung macht einen Test auf das falsche Ziel nicht richtig. Das ist eine Methodik, kein neues Tool und keine pauschale Anweisung, jede Produktionsmaschine stundenlang zu belasten. Hier wurde kein Benchmark gestartet oder auf einem fremden System gemessen.",
+      "url": "https://www.brendangregg.com/activebenchmarking.html",
+      "cta": "Checkliste und Beispiele für belastbarere Messungen lesen",
+      "source": "Brendan Gregg · Active Benchmarking vollständig gelesen · Stand der Seite 20.04.2014, Montagsfund 09.11.2026 · Erklärung und Methodik, keine neue Veröffentlichung oder eigene Messung"
     }
   ],
-  "notes": "Stand: Montag, 09.11.2026, 15:33 Uhr Berlin. Vier ausgewählte Catches. BenchUp ist der aktuelle Name des als KetchUp diskutierten Projekts; Psalm 7 erschien am 2.11., der malloc-Beitrag am 8.11. Foldable Flight ist ein bestehender Webfund. Keine eigenen Installations-, Leistungs-, Import-, Fertigungs-, Sicherheits- oder Flugprüfungen. Zahlen und Bewertungen bleiben als Autor-/Anbieterangaben gekennzeichnet. Keine Konten, Einstellungen oder fremden Projekte geändert."
+  "notes": "Stand: Montag, 09.11.2026, 19:33 Uhr Berlin. Sechs ausgewählte Catches. BenchUp ist der aktuelle Name des als KetchUp diskutierten Projekts; Psalm 7 erschien am 2.11., der malloc-Beitrag am 8.11. Foldable Flight und DBDelve sind bestehende Projekte; Active Benchmarking ist ein Erklärfund von 2014. Keine eigenen Installations-, Leistungs-, Import-, Fertigungs-, Sicherheits-, Datenbank- oder Flugprüfungen. Zahlen und Bewertungen bleiben Autor-/Anbieterangaben. Keine Konten, Einstellungen oder fremden Projekte geändert."
 }
