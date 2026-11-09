@@ -1,9 +1,9 @@
 {
   "date": "2026-11-09",
   "title": "Daily Hob vom Montag, 09.11.",
-  "headline": "Erst das Regal zeichnen. Dann die Datenwege prüfen.",
-  "teaser": "2 Montags-Catches: BenchUp für 3D-Holzprojekte und Psalm 7 für PHP-Datenflüsse.",
-  "intro": "Zwei Funde, bei denen man Probleme lieber vor dem ersten Schnitt sieht: BenchUp macht aus einer Skizze ein bemaßtes Möbelmodell. Psalm 7 verfolgt, wohin nicht vertrauenswürdige Daten im PHP-Code gelangen. Kein Ersatz für Werkstattpraxis oder Sicherheitsprüfung, aber zwei interessante Arten, früher genauer hinzusehen.",
+  "headline": "Regale zeichnen. Speicher verstehen. Papier zum Fliegen bringen.",
+  "teaser": "4 Montags-Catches: BenchUp, Psalm 7, malloc von innen und Papierflieger mit Foldable Flight.",
+  "intro": "Vier Funde zwischen Werkbank, Rechner und Schreibtischkante: BenchUp plant Möbel in 3D, Psalm 7 prüft PHP-Datenwege. Ein Erklärstück zerlegt die Speichervergabe in kleine Experimente, und Foldable Flight macht aus einem Blatt Papier den nächsten analogen Versuch. Mit klarer Trennung zwischen Demonstration, Projektversprechen und eigenem Ausprobieren.",
   "hero": "hero.jpg",
   "heroAlt": "Ein feiner schwarzer Architektur-Drahtkörper auf einem Raster neben kleinen Kästen in einem Prüftor, auf hellem Papier mit Gelb und Mint",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://psalm.dev/articles/psalm-7",
       "cta": "Sicherheitsmodell, Voraussetzungen und Upgrade-Hinweise lesen",
       "source": "Psalm · Daniil Gentili, Ankündigung 02.11.2026 und Release https://github.com/vimeo/psalm/releases/tag/7.0.0 gelesen · Montagsfund 09.11., kein Tagesrelease · Tempo- und Funktionsangaben des Projekts, keine eigene Reproduktion"
+    },
+    {
+      "category": "Informatik",
+      "short": "malloc",
+      "title": "Warum free nicht automatisch weniger belegten RAM bedeutet.",
+      "body": "Ben M. Andrews Erklärstück vom 8. November wird heute diskutiert und nimmt eine vertraute C-Funktion auseinander: malloc gibt Speicher aus, free nimmt ihn zurück. Dazwischen steckt mehr Buchhaltung als ein Betriebssystemaufruf pro Objekt. Der Autor baut schrittweise kleine Allocatoren: erst nur einen wachsenden Bereich, dann freie Listen, das Zusammenlegen benachbarter Blöcke und eigene mmap-Bereiche für große Anfragen. Mit strace und Speicheranzeigen macht er sichtbar, warum glibc größere Stücke anfordert und kleine Anfragen daraus bedient. In seiner ersten Demo erzeugen tausend malloc-Aufrufe nur zwei brk-Aufrufe.",
+      "takeaway": "Die wichtige Unterscheidung ist „für mein Programm wiederverwendbar“ gegen „an den Kernel zurückgegeben“. Freie Blöcke können im Prozess bleiben, etwa wegen Fragmentierung oder eines Thread-Caches. Ein hoher Speicherwert nach free beweist deshalb allein noch kein Leak. Andrews Zahlen stammen aus einem bestimmten Linux/glibc-Experiment auf einem Intel Xeon E3-1230 v3; sie sind weder ein allgemeiner Allocator-Vergleich noch ein Tuningrezept. Die Spielzeugimplementierungen erklären Mechanismen und ersetzen keine produktionsreife Speicherverwaltung. Hier keine Snippets ausgeführt, keinen Cache abgeschaltet und keinen eigenen Benchmark behauptet.",
+      "url": "https://benmandrew.com/articles/what-is-malloc-doing-anyway",
+      "cta": "Mit freien Listen, Page Faults und mmap unter die Haube schauen",
+      "source": "Ben M. Andrew · Beitrag 08.11.2026 vollständig gelesen · Montagsfund 09.11. · Linux/glibc-Erklärung mit Autor-Demos und Hardwareangabe, keine eigene Reproduktion"
+    },
+    {
+      "category": "Wildcard · Machen",
+      "short": "Foldable Flight",
+      "title": "Der nächste kleine Prototyp braucht nur ein Blatt Papier.",
+      "body": "Heute wiederentdeckter Webfund, kein belegter Neustart: Foldable Flight sammelt Papierflugzeuge mit Faltvideos und Modellseiten. Die Übersicht zeigt unterschiedliche Entwürfe, Schwierigkeitsstufen sowie eigene Bewertungen für Tempo, Gleitflug und Genauigkeit. Zwei Beispiele aus den gelesenen Seiten: Arrowhead stammt von Kyle Boyer, Cub von Julian Chee. Statt nur ein hübsches Bild anzusehen, lässt sich über das jeweilige Video die Faltfolge verfolgen. Das ist eine angenehm analoge Designübung: dieselbe flache Ausgangsform, andere Knicke, anderes Verhalten in der Luft.",
+      "takeaway": "Die Punkteskalen und Reichweiten auf der Website sind Angaben des Anbieters, kein hier geprüftes einheitliches Messverfahren. Die Seite zeigt auch Rekord- und Aufrufbehauptungen; daraus wird hier kein eigener Leistungsnachweis. Papier, saubere Symmetrie und Wurfbedingungen sollten beim Vergleichen möglichst gleich bleiben. Für einen ersten Versuch reicht es, einen Entwurf zu falten, Flügelwinkel vorsichtig zu verändern und den Unterschied zu beobachten. Keine eigene Falt- oder Flugprobe, keine Garantie für Weite und kein Kauf nötig, um die gelesenen Modellseiten anzusehen.",
+      "url": "https://www.foldableflight.com/",
+      "cta": "Einen Entwurf aussuchen und die Faltfolge ansehen",
+      "source": "Foldable Flight · Montagsfund 09.11.2026 · Übersicht und Modellseiten Arrowhead https://www.foldableflight.com/planes/arrowhead sowie Cub https://www.foldableflight.com/planes/cub gelesen · Anbieterbewertungen, keine eigene Flug- oder Rekordprüfung"
     }
   ],
-  "notes": "Stand: Montag, 09.11.2026, 11:33 Uhr Berlin. Zwei ausgewählte Catches. BenchUp ist der aktuelle Name des als KetchUp diskutierten Projekts; Psalm 7 wurde am 2.11. veröffentlicht. Kein Auffüllen mit unbestätigten Meldungen. Keine eigenen Installations-, Leistungs-, Import-, Fertigungs- oder Sicherheitsprüfungen. Keine Konten, Einstellungen oder fremden Projekte geändert."
+  "notes": "Stand: Montag, 09.11.2026, 15:33 Uhr Berlin. Vier ausgewählte Catches. BenchUp ist der aktuelle Name des als KetchUp diskutierten Projekts; Psalm 7 erschien am 2.11., der malloc-Beitrag am 8.11. Foldable Flight ist ein bestehender Webfund. Keine eigenen Installations-, Leistungs-, Import-, Fertigungs-, Sicherheits- oder Flugprüfungen. Zahlen und Bewertungen bleiben als Autor-/Anbieterangaben gekennzeichnet. Keine Konten, Einstellungen oder fremden Projekte geändert."
 }
