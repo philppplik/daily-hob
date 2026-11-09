@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-09",
+  "title": "Daily Hob vom Montag, 09.11.",
+  "headline": "Erst das Regal zeichnen. Dann die Datenwege prüfen.",
+  "teaser": "2 Montags-Catches: BenchUp für 3D-Holzprojekte und Psalm 7 für PHP-Datenflüsse.",
+  "intro": "Zwei Funde, bei denen man Probleme lieber vor dem ersten Schnitt sieht: BenchUp macht aus einer Skizze ein bemaßtes Möbelmodell. Psalm 7 verfolgt, wohin nicht vertrauenswürdige Daten im PHP-Code gelangen. Kein Ersatz für Werkstattpraxis oder Sicherheitsprüfung, aber zwei interessante Arten, früher genauer hinzusehen.",
+  "hero": "hero.jpg",
+  "heroAlt": "Ein feiner schwarzer Architektur-Drahtkörper auf einem Raster neben kleinen Kästen in einem Prüftor, auf hellem Papier mit Gelb und Mint",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Open Source · Design",
+      "short": "BenchUp",
+      "title": "KetchUp heißt jetzt BenchUp und bringt Holzprojekte auf den Bildschirm.",
+      "body": "Heute als KetchUp diskutiert, inzwischen unter BenchUp erreichbar: Das freie Rust-Projekt richtet sich an 3D-Modelle für Holzarbeiten und Möbel. Rechtecke werden per Push/Pull zu Körpern, Maße und Einrastpunkte helfen beim Konstruieren. Bretter können Verbindungen wie Schwalbenschwanz oder Nut und Feder bekommen; auch die Faserrichtung lässt sich im Modell zeigen. Laut Projekt läuft derselbe Editor auf Windows, macOS und Linux sowie per WebAssembly im Desktop-Browser. Die Browseransicht bevorzugt WebGPU und kann auf WebGL2 zurückfallen. Ein bestehender Projektfund, kein hier belegter Tagesrelease.",
+      "takeaway": "Die aktuelle Startseite und das Repository nennen BenchUp, deshalb steht hier nicht der inzwischen alte Name als Produktidentität. Konto und Cloudspeicher sind nicht nötig: Der Browser speichert lokal auf diesem Gerät. Wer Browserdaten löscht, kann diesen Zwischenstand verlieren, also wichtige Modelle als .bup-Datei herunterladen. SketchUp-Import übernimmt Geometrie, aber nicht Texturen, Szenen und alle Modellmerkmale; OBJ-Export kommt ohne Materialien. Mobile ist laut README nicht Teil dieser Version. MIT-Lizenz geprüft. Keine eigene Konstruktion, Importprobe oder Prüfung der Maß- und Fertigungsgenauigkeit.",
+      "url": "https://benchup3d.github.io/editor/",
+      "cta": "Aktuellen Namen, Modellierwerkzeuge und Dateigrenzen ansehen",
+      "source": "BenchUp · Montagsfund 09.11.2026 · KetchUp-Umbenennung https://ketchup3d.github.io/ geprüft · aktuelle Startseite vollständig, relevante README-Abschnitte https://github.com/BenchUp3D/editor und MIT-Lizenz gelesen · Funktionsangaben des Projekts, kein eigener CAD-Test"
+    },
+    {
+      "category": "Dev-Tools · Sicherheit",
+      "short": "Psalm 7",
+      "title": "Psalm 7 prüft PHP-Typen und riskante Datenwege im selben Lauf.",
+      "body": "Der Release ist schon vom 2. November und wird heute erneut diskutiert: Psalm 7 verbindet Typprüfung, Sicherheitsanalyse und das Finden unbenutzten Codes. Taint-Analyse ist nun standardmäßig eingeschaltet. Sie verfolgt, ob nicht vertrauenswürdige Eingaben zu riskanten Stellen weitergereicht werden, nun etwa auch bei NoSQL-, LLM-Prompt- und URL-Injection. Dazu kommt ein genaueres Modell für Seiteneffekte: Eine Funktion kann zum Beispiel deklarieren, dass sie Ein-/Ausgabe oder Uhrzeit benötigt. Unbenutzte Klassen und Methoden werden über einen Referenzgraphen gesucht, auch wenn sie sich untereinander aufrufen.",
+      "takeaway": "Das ist statische Analyse, keine Garantie gegen jede Sicherheitslücke oder Prompt-Injection. Der Ankündigung zufolge kann der neue Sicherheitslauf bis zu zehnmal schneller sein; das ist eine Projektangabe, hier nicht nachgemessen. Psalm 7 läuft laut Release auf 64-Bit-PHP 8.2 bis 8.6. Ein Upgrade kann wegen der jetzt aktiven Taint-Prüfung zusätzliche Meldungen zeigen. Wichtig für eigene Plugins: Die Plugin-API folgt nicht mehr einfach der Psalm-Hauptversion; inkompatible Änderungen können auch in kleineren Releases kommen und werden über das Metapaket psalm/psalm-plugin-api geführt. Vor dem Wechsel also Upgrade-Hinweise und Plugin-Abhängigkeiten prüfen. Nichts installiert, umgestellt oder automatisch im eigenen Code geändert.",
+      "url": "https://psalm.dev/articles/psalm-7",
+      "cta": "Sicherheitsmodell, Voraussetzungen und Upgrade-Hinweise lesen",
+      "source": "Psalm · Daniil Gentili, Ankündigung 02.11.2026 und Release https://github.com/vimeo/psalm/releases/tag/7.0.0 gelesen · Montagsfund 09.11., kein Tagesrelease · Tempo- und Funktionsangaben des Projekts, keine eigene Reproduktion"
+    }
+  ],
+  "notes": "Stand: Montag, 09.11.2026, 11:33 Uhr Berlin. Zwei ausgewählte Catches. BenchUp ist der aktuelle Name des als KetchUp diskutierten Projekts; Psalm 7 wurde am 2.11. veröffentlicht. Kein Auffüllen mit unbestätigten Meldungen. Keine eigenen Installations-, Leistungs-, Import-, Fertigungs- oder Sicherheitsprüfungen. Keine Konten, Einstellungen oder fremden Projekte geändert."
+}
