@@ -1,9 +1,9 @@
 {
   "date": "2026-11-10",
   "title": "Daily Hob vom Dienstag, 10.11.",
-  "headline": "Dem Piepen auf der Spur. Und dem Leerzeichen auch.",
-  "teaser": "2 Dienstags-Catches: Beep Locator und die überraschend schwierige Frage, was ein Leerzeichen ist.",
-  "intro": "Zwei kleine Fragen mit erstaunlich viel Technik dahinter: Woher kommt dieses nervige Piepen? Und warum erkennt meine Programmiersprache ein scheinbar leeres Zeichen nicht? Ein Mikrofonverbund und ein Blick in Guavas Zeichentabelle liefern Stoff zum Nachdenken.",
+  "headline": "Piept da was? Mathe zum Anfassen. Tageslicht zum Drehen.",
+  "teaser": "4 Dienstags-Catches: Beep Locator, Whitespace, Wanim und eine analoge Daylight Clock.",
+  "intro": "Vier Funde mit einem gemeinsamen Reiz: Verstecktes sichtbar machen. Ein Mikrofonverbund sucht ein Piepen, Guavas Zeichentabelle erklärt unsichtbare Unterschiede, Wanim macht Mathe veränderbar und eine selbst gebaute Uhr zeigt, wie Tageslicht mit Ort und Jahreszeit wandert.",
   "hero": "hero.jpg",
   "heroAlt": "Drei feine schwarze Geräteformen peilen mit Kreisbögen einen kleinen Punkt an; daneben unterschiedlich breite leere Kästen auf hellem Papier mit Gelb und Mint.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://serce.me/posts/2026-10-30-how-hard-is-it-to-check-for-whitespace",
       "cta": "Zeichendefinitionen und Guavas Perfect Hash auseinandernehmen",
       "source": "Sergey Tselovalnikov · How hard is it to check for whitespace?, 30.10.2026 vollständig gelesen · Dienstagsfund 10.11., kein neuer Release · Runtime-Beispiele und Implementierungserklärung des Autors, keine eigenen Benchmarks"
+    },
+    {
+      "category": "Open Source · Design",
+      "short": "Wanim",
+      "title": "Mathe-Animationen, bei denen das Publikum selbst am Regler dreht.",
+      "body": "Heute als Show HN diskutiert, als Repository schon seit September vorhanden: Wanim bringt Szenen im Stil der Manim Community Edition in den Browser. Laut Projekt kann fast unveränderter Manim-Python-Code dort direkt laufen. Mit kleinen Ergänzungen wird aus einem Film eine Erklärung zum Ausprobieren: Ein Schieber ändert den Kreisradius, ein Schalter die Farbe, ein editierbarer Wert eine Matrix. Die Beispiele im README verbinden solche Bedienelemente über Reaktionen mit den gezeichneten Objekten. Szenen lassen sich als Webkomponente oder iframe in eine andere Seite einbetten; ein Playground soll den Einstieg ohne lokale Installation ermöglichen.",
+      "takeaway": "Das ist keine Zusage, dass beliebige Python-Pakete oder jedes vorhandene Manim-Projekt unverändert funktionieren. Die Entwicklungsbeschreibung nennt einen angepassten Python-zu-JavaScript-Compiler und eine NumPy-Schicht aus TypeScript, nicht einen vollständigen CPython-Stack im Browser. Die Behauptung, etwa zwanzigmal kleiner als Pyodide-basierte Wege zu sein, stammt vom Projekt; hier wurde weder ein Paketgrößenvergleich noch ein Render- oder Kompatibilitätstest gemacht. Auch die Vergleichstabelle mit anderen Angeboten ist eine Projektbewertung. MIT wird als Lizenz genannt, Abhängigkeiten behalten eigene Lizenzen. Für eigene Lehrmaterialien wären zuerst eine kleine repräsentative Szene und deren Formeln, Interaktionen und Einbettung zu prüfen.",
+      "url": "https://wanim.org/",
+      "cta": "Interaktive Szenen und die Grenzen des Browseransatzes ansehen",
+      "source": "Wanim · Dienstagsfund 10.11.2026 · Startseite und README https://github.com/Acfboy/Wanim vollständig gelesen · bestehendes Projekt, heute Show HN · Größen- und Kompatibilitätsangaben des Projekts, kein eigener Test"
+    },
+    {
+      "category": "Wildcard · Gestaltung",
+      "short": "Daylight Clock",
+      "title": "Eine Uhr zeigt nicht nur die Stunde, sondern auch das verfügbare Tageslicht.",
+      "body": "Hannah Ileas Baubericht ist vom 6. November und taucht heute in der Diskussion auf. Ihre analoge Daylight Clock braucht einen ganzen Tag für eine Runde: Mittag steht oben, Mitternacht unten. Ein Ring aus 48 LEDs leuchtet für die berechnete Spanne zwischen Sonnenaufgang und Sonnenuntergang am eingestellten Ort. Daneben sitzt eine kleine Steuerbox. Ein Drehknopf verschiebt das Datum wochenweise, ein Schieber den Breitengrad. Ein weiterer Schalter zeigt den Unterschied zwischen dem westlichen, mittleren und östlichen Teil derselben Zeitzone. So wird aus einer Uhr eine kleine greifbare Erklärung für Jahreszeiten und Ortszeit.",
+      "takeaway": "Der Bericht beschreibt ein Einzelstück, keinen bestellbaren fertigen Zeitmesser und kein vollständiges Nachbaututorial. Ein Adafruit Feather RP2040 rechnet mit CircuitPython; eine Echtzeituhr hält Datum und Zeit, die Sonnenberechnung wurde aus Charles Eckmans Rust-Umsetzung des NOAA-Rechners übertragen. Besonders schön ist die Grenze des Entwurfs: Die mechanischen Zeiger hängen nicht an der Elektronik und springen bei Ortswechseln nicht mit. Deshalb arbeitet der Längengradschalter relativ innerhalb einer Zeitzone. Die Autorin schildert auch Fehlversuche bei Gehäuse, Lackierung und Verkabelung. Hier wurden weder Elektronik aufgebaut noch Sonnendaten nachgerechnet. Ein Gestaltungsfund, kein Genauigkeitsnachweis für astronomische oder sicherheitsrelevante Zwecke.",
+      "url": "https://hannahilea.com/blog/daylight-clock/",
+      "cta": "Lichtring, Steuerbox und den ehrlichen Baubericht ansehen",
+      "source": "Hannah Ilea · Here comes the sun[light]: An ambient Daylight Clock with time and space controls, 06.11.2026 vollständig gelesen · Dienstagsfund 10.11. · Einzelprojekt und Autorinnenangaben, keine eigene Bau- oder Messprobe"
     }
   ],
-  "notes": "Stand: Dienstag, 10.11.2026, 11:34 Uhr Berlin. Zwei ausgewählte Catches. Beep Locator ist ein Autorversuch vom 9.11.; das Whitespace-Erklärstück stammt vom 30.10. Beide werden heute diskutiert. Keine eigenen Installations-, Mikrofon-, Ortungs-, Sicherheits-, Runtime- oder Leistungstests. Keine Mikrofone oder Tunnel aktiviert, keine fremden Geräte verbunden. Zahlen bleiben Autorangaben."
+  "notes": "Stand: Dienstag, 10.11.2026, 15:33 Uhr Berlin. Vier ausgewählte Catches. Beep Locator ist ein Autorversuch vom 9.11.; das Whitespace-Erklärstück stammt vom 30.10., Wanim ist ein bestehendes Projekt und die Daylight Clock ein Baubericht vom 6.11. Heute diskutierte Funde, nicht vier Tagesreleases. Keine eigenen Installations-, Mikrofon-, Ortungs-, Sicherheits-, Runtime-, Render-, Größen-, Bau- oder Leistungstests. Keine Mikrofone oder Tunnel aktiviert, keine fremden Geräte verbunden. Zahlen bleiben Autor-/Projektangaben."
 }
