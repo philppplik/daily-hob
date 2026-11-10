@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-10",
+  "title": "Daily Hob vom Dienstag, 10.11.",
+  "headline": "Dem Piepen auf der Spur. Und dem Leerzeichen auch.",
+  "teaser": "2 Dienstags-Catches: Beep Locator und die überraschend schwierige Frage, was ein Leerzeichen ist.",
+  "intro": "Zwei kleine Fragen mit erstaunlich viel Technik dahinter: Woher kommt dieses nervige Piepen? Und warum erkennt meine Programmiersprache ein scheinbar leeres Zeichen nicht? Ein Mikrofonverbund und ein Blick in Guavas Zeichentabelle liefern Stoff zum Nachdenken.",
+  "hero": "hero.jpg",
+  "heroAlt": "Drei feine schwarze Geräteformen peilen mit Kreisbögen einen kleinen Punkt an; daneben unterschiedlich breite leere Kästen auf hellem Papier mit Gelb und Mint.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Open Source · Wildcard",
+      "short": "Beep Locator",
+      "title": "Mehrere Geräte hören gemeinsam hin, wenn irgendwo etwas piept.",
+      "body": "Simon Willison beschreibt in seinem Beitrag vom 9. November einen sehr konkreten Versuch: In einem Raum voller Kisten piepte ein unbekanntes Gerät. Sein mit Claude Code gebauter Beep Locator machte Telefone, Tablets und Laptops zu verteilten Mikrofonen. Ein Python-Server koordiniert die Browser über WebSockets; kurze Töne helfen beim Abgleichen der Aufnahmen. Aus den unterschiedlichen Ankunftszeiten schätzt das Programm den Ursprungsort. Laut Willison grenzte es den Fund auf etwa 40 Zentimeter ein. Gefunden wurde ein alter Kohlenmonoxidmelder, dessen Batterien ersetzt werden mussten. Heute diskutierter Autorversuch, kein hier reproduzierter Genauigkeitstest.",
+      "takeaway": "Das Repository beschreibt mindestens drei Zuhörer, Mikrofonfreigaben und einen HTTPS-Zugang für Mobilgeräte, im Beispiel per Cloudflare-Tunnel. Audioausschnitte werden zum eigenen Server übertragen und dort mit einer SQLite-Datenbank gespeichert. Der Koordinatorzugang enthält einen Admin-Token; außerdem kann der Server neuen JavaScript-Code an die Zuhörer schicken. Deshalb nur mit eigenen, informierten Geräten und einer Umgebung arbeiten, deren Zugriff man kontrolliert. Automatische Updates und Mikrofone wurden hier nicht eingeschaltet, kein Tunnel geöffnet und nichts installiert. Für Alarmtöne gilt zuerst die Sicherheitsfrage: Einen möglichen Rauch- oder CO-Alarm nicht als Bastelaufgabe behandeln oder dafür stummschalten. Die Methode ist ein interessantes Experiment, kein geprüftes Warn- oder Ortungssystem.",
+      "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+      "cta": "Autorversuch, Audioprinzip und Repository ansehen",
+      "source": "Simon Willison · Beitrag 09.11.2026 und README https://github.com/simonw/beep-locator vollständig gelesen · Dienstagsfund 10.11. · etwa 40 cm sind ein Ergebnis des Autors, keine eigene Messung; README laut Autor KI-verfasst"
+    },
+    {
+      "category": "Informatik · Unicode",
+      "short": "Whitespace",
+      "title": "Ein Leerzeichen ist nicht überall dasselbe Leerzeichen.",
+      "body": "Sergey Tselovalnikov beginnt mit einer unscheinbaren Guava-Funktion und landet bei einer Grundsatzfrage: Was zählt überhaupt als Whitespace? Sein Erklärstück vom 30. Oktober wird heute diskutiert. Ein gewöhnliches Leerzeichen, ein Tab und ein geschütztes Leerzeichen sehen auf dem Bildschirm schnell ähnlich aus, müssen aber nicht dieselben Regeln haben. Der Artikel vergleicht Java, Python und JavaScript an konkreten Zeichen. Java zählt etwa das geschützte U+00A0 bei Character.isWhitespace nicht mit, Python bei str.isspace schon. Ein ähnlich leer wirkendes Zeichen ist also keine verlässliche gemeinsame Definition für Parser, Formulare und Textwerkzeuge.",
+      "takeaway": "Im zweiten Teil zerlegt der Autor Guavas Lösung: Eine Multiplikation und Bitverschiebung wählen einen Platz in einer kleinen Tabelle, danach bestätigt ein Vergleich das gesuchte Zeichen. Das ist ein Perfect Hash für eine bekannte Zeichenmenge, keine Magie und kein Beweis, dass jedes beliebige Zeichen hineinpasst. Der nützliche erste Schritt bleibt die Definition: Soll eine Anwendung den Unicode-Eigenschaften, den Regeln ihrer Sprache oder einem bestimmten Dateiformat folgen? Unicode und Bibliotheken ändern sich zudem über Versionen. Die Beispiele sind ein Erklärfund, hier nicht gegen alle Runtime-Versionen oder mit einem eigenen Tempotest geprüft. Ein pauschales Ersetzen sämtlicher unsichtbarer Zeichen wäre daraus nicht abzuleiten.",
+      "url": "https://serce.me/posts/2026-10-30-how-hard-is-it-to-check-for-whitespace",
+      "cta": "Zeichendefinitionen und Guavas Perfect Hash auseinandernehmen",
+      "source": "Sergey Tselovalnikov · How hard is it to check for whitespace?, 30.10.2026 vollständig gelesen · Dienstagsfund 10.11., kein neuer Release · Runtime-Beispiele und Implementierungserklärung des Autors, keine eigenen Benchmarks"
+    }
+  ],
+  "notes": "Stand: Dienstag, 10.11.2026, 11:34 Uhr Berlin. Zwei ausgewählte Catches. Beep Locator ist ein Autorversuch vom 9.11.; das Whitespace-Erklärstück stammt vom 30.10. Beide werden heute diskutiert. Keine eigenen Installations-, Mikrofon-, Ortungs-, Sicherheits-, Runtime- oder Leistungstests. Keine Mikrofone oder Tunnel aktiviert, keine fremden Geräte verbunden. Zahlen bleiben Autorangaben."
+}
