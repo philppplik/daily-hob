@@ -1,9 +1,9 @@
 {
   "date": "2026-11-10",
   "title": "Daily Hob vom Dienstag, 10.11.",
-  "headline": "Piept da was? Mathe zum Anfassen. Tageslicht zum Drehen.",
-  "teaser": "4 Dienstags-Catches: Beep Locator, Whitespace, Wanim und eine analoge Daylight Clock.",
-  "intro": "Vier Funde mit einem gemeinsamen Reiz: Verstecktes sichtbar machen. Ein Mikrofonverbund sucht ein Piepen, Guavas Zeichentabelle erklärt unsichtbare Unterschiede, Wanim macht Mathe veränderbar und eine selbst gebaute Uhr zeigt, wie Tageslicht mit Ort und Jahreszeit wandert.",
+  "headline": "Unsichtbares sichtbar machen. Vom Piepen bis zum 3D-Splat.",
+  "teaser": "6 Dienstags-Catches: Beep Locator, Whitespace, Wanim, Daylight Clock, Blender 5.3 und ein widerspenstiges Tar-Archiv.",
+  "intro": "Sechs Funde über Dinge, die auf den ersten Blick anders aussehen: Ein Mikrofonverbund ortet ein Piepen, Zeichentabellen entlarven Leerzeichen, Mathe bekommt Regler und Tageslicht einen Leuchtring. Am Abend kommen Blenders neue 3D-Splats dazu und ein Archiv, dessen Inhalt vom Entpacker abhängt.",
   "hero": "hero.jpg",
   "heroAlt": "Drei feine schwarze Geräteformen peilen mit Kreisbögen einen kleinen Punkt an; daneben unterschiedlich breite leere Kästen auf hellem Papier mit Gelb und Mint.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://hannahilea.com/blog/daylight-clock/",
       "cta": "Lichtring, Steuerbox und den ehrlichen Baubericht ansehen",
       "source": "Hannah Ilea · Here comes the sun[light]: An ambient Daylight Clock with time and space controls, 06.11.2026 vollständig gelesen · Dienstagsfund 10.11. · Einzelprojekt und Autorinnenangaben, keine eigene Bau- oder Messprobe"
+    },
+    {
+      "category": "Open Source · 3D",
+      "short": "Blender 5.3",
+      "title": "Blender 5.3 holt Gaussian Splats direkt in die Szene.",
+      "body": "Die heute diskutierte Blender-5.3-Veröffentlichungsseite nennt native Unterstützung für 3D Gaussian Splats. Solche Szenen bestehen aus vielen kleinen weichen, teilweise transparenten Körpern und werden häufig aus Fotos oder Videos rekonstruiert. Blender kann sie laut Release-Seite aus PLY, SPZ und glTF importieren, als Punktwolken speichern, mit Geometry Nodes bearbeiten und in EEVEE, Cycles sowie Workbench darstellen. Dazu kommen unter anderem Lichtdispersion im Principled BSDF, durchsuchbare Seitenleisten und ein Ripple-Workflow im Videoschnitt. Interessant ist vor allem der Schritt vom externen Spezialformat zum Material, mit dem man in der gewohnten 3D-Umgebung weiterarbeiten kann.",
+      "takeaway": "Native Unterstützung heißt noch nicht, dass sich jede Aufnahme wie ein sauberes Polygonmodell bearbeiten oder beliebig neu beleuchten lässt. Blender nennt das Relighting ausdrücklich rudimentär. Die Release-Seite warnt außerdem vor noch laufender Leistungsoptimierung und möglichen Darstellungsfehlern durch Unterschiede zwischen sRGB und Blenders linearem Farbraum, besonders bei niedriger Deckkraft und hoher Strahlungsintensität. Die neu eingeführten Projekte können etwa Asset-Bibliotheken und Farbmanagement bündeln; projektspezifische Add-ons sind dagegen erst für spätere Versionen angekündigt. Hier wurde nichts installiert, keine Datei importiert und kein Render- oder Geschwindigkeitsvergleich gemacht. Für bestehende Arbeiten wäre eine Kopie des Projekts mit den tatsächlich benötigten Formaten und Erweiterungen der sinnvolle erste Test.",
+      "url": "https://www.blender.org/download/releases/5-3/",
+      "cta": "Neue 3D-Werkzeuge und die genannten Einschränkungen lesen",
+      "source": "Blender · offizielle 5.3-Veröffentlichungsseite vollständig gelesen · Dienstagsfund 10.11.2026 · Funktions- und Leistungsangaben des Projekts, kein eigener Import- oder Rendertest"
+    },
+    {
+      "category": "Informatik · Dateiformate",
+      "short": "Hardest Tarball",
+      "title": "Dasselbe Tar-Archiv, überraschend unterschiedliche entpackte Dateien.",
+      "body": "Das Erklärstück The hardest tarball? vom 7. November wird heute diskutiert und zeigt eine ungewöhnliche Formatkante. Der Autor konstruiert ein Archiv mit einer wiederholten Datei, die als Hardlink gespeichert wird. Ein PAX-Zusatzkopf benennt diesen Link um und weist ihm eine Größe von 512 Bytes zu, genau der Größe eines Tar-Headers. Jetzt wird entscheidend, wie ein Entpacker diese Kombination interpretiert: Sind die nächsten Bytes Link-Daten oder bereits der Kopf des folgenden Eintrags? Der Artikel berichtet acht unterschiedliche Resultate bei verbreiteten Werkzeugen und Bibliotheken, bis hin zur Ablehnung des Archivs.",
+      "takeaway": "Im Autorversuch stellen GNU tar und mehrere Bibliotheken die erwarteten Dateien samt Hardlink her. Andere überspringen einen Eintrag, erzeugen eine separate Datei oder verändern über den Hardlink sogar den Inhalt der ursprünglichen Datei. Das ist eine anschauliche Erinnerung: Formatname und Dateiendung allein garantieren keine identische Auslegung. Die Ergebnisse beziehen sich auf die zum Schreiben aktuellen Versionen; hier wurden die Befehle nicht ausgeführt und keine heutigen Bibliotheksversionen gegeneinander getestet. Daraus folgt auch keine pauschale Sicherheitslücke mit belegter Ausnutzbarkeit. Wer Archive zwischen Systemen austauscht, sollte die konkreten Erzeuger- und Empfängerwerkzeuge sowie Links und Sonderfälle in seine Tests aufnehmen, statt auf einen erfolgreichen Durchlauf an nur einer Stelle zu vertrauen.",
+      "url": "https://stoppels.ch/2026/11/07/the-hardest-tarball.html",
+      "cta": "Die Archivstruktur und die unterschiedlichen Ergebnisse ansehen",
+      "source": "stoppels.ch · The hardest tarball?, 07.11.2026 vollständig gelesen · Dienstagsfund 10.11., älterer Erklärbeitrag · acht Varianten sind Autorbeobachtungen, keine eigene Reproduktion oder Schwachstellenbestätigung"
     }
   ],
-  "notes": "Stand: Dienstag, 10.11.2026, 15:33 Uhr Berlin. Vier ausgewählte Catches. Beep Locator ist ein Autorversuch vom 9.11.; das Whitespace-Erklärstück stammt vom 30.10., Wanim ist ein bestehendes Projekt und die Daylight Clock ein Baubericht vom 6.11. Heute diskutierte Funde, nicht vier Tagesreleases. Keine eigenen Installations-, Mikrofon-, Ortungs-, Sicherheits-, Runtime-, Render-, Größen-, Bau- oder Leistungstests. Keine Mikrofone oder Tunnel aktiviert, keine fremden Geräte verbunden. Zahlen bleiben Autor-/Projektangaben."
+  "notes": "Stand: Dienstag, 10.11.2026, 19:33 Uhr Berlin. Sechs ausgewählte Catches. Beep Locator ist ein Autorversuch vom 9.11.; Whitespace stammt vom 30.10., Wanim ist ein bestehendes Projekt, die Daylight Clock ein Baubericht vom 6.11. und The hardest tarball? ein Erklärstück vom 7.11. Blender 5.3 wird anhand seiner offiziellen Veröffentlichungsseite eingeordnet. Keine sechs Tagesreleases behauptet. Keine eigenen Installations-, Mikrofon-, Ortungs-, Sicherheits-, Runtime-, Render-, Import-, Größen-, Bau-, Archiv- oder Leistungstests. Keine Mikrofone oder Tunnel aktiviert, keine fremden Geräte verbunden. Zahlen bleiben Autor-/Projektangaben."
 }
