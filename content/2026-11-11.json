@@ -1,9 +1,9 @@
 {
   "date": "2026-11-11",
   "title": "Daily Hob vom Mittwoch, 11.11.",
-  "headline": "Weniger Altlasten im Browser. Weniger Schlüssel auf der Platte.",
-  "teaser": "2 Mittwochs-Catches: Modern Web Guidance für Coding-Agenten und SSH-Schlüssel im Secure Enclave.",
-  "intro": "Der Browser kann längst mehr, als viele Coding-Agenten standardmäßig nutzen. Und ein SSH-Schlüssel muss nicht als kopierbare Datei auf dem Rechner liegen. Zwei Funde über eingebaute Möglichkeiten, ihre Grenzen und die Frage, wann weniger Zusatzschichten tatsächlich helfen.",
+  "headline": "Weniger Altlasten. Weniger Fingerabdruck. Mehr Lichtkontrolle.",
+  "teaser": "4 Mittwochs-Catches: Modern Web Guidance, Secure Enclave SSH, Firefox-Fingerprinting und kontrollierbares Foto-Relighting.",
+  "intro": "Der Browser kann mehr, als Coding-Agenten oft nutzen, und muss gleichzeitig weniger über uns verraten. Dazu kommen SSH-Schlüssel im Mac-Chip und eine Forschungsarbeit, die Fotos wie ein virtuelles Lichtstudio behandelt. Vier Funde über eingebaute Möglichkeiten, klare Kontrolle und die Grenzen dahinter.",
   "hero": "hero.jpg",
   "heroAlt": "Feine schwarze Rechteckschichten gehen in einen einzelnen Browserrahmen über; rechts liegt ein geometrischer Schlüssel in einer ovalen Schutzhülle auf hellem Papier mit Gelb und Mint.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/",
       "cta": "Erfahrungsbericht und Grenzen lesen",
       "source": "Quelle: Serge Gatezh, 12.02.2026; heute auf Hacker News diskutierter älterer Beitrag."
+    },
+    {
+      "category": "Web · Datenschutz",
+      "short": "Firefox Fingerprinting",
+      "title": "Gegen Tracking ohne Cookies: Firefox lässt mehr Browser gleich aussehen.",
+      "body": "Mozillas Sicherheitsblog erklärt am 10. November neue Ergebnisse zum Browser-Fingerprinting, heute auf Hacker News diskutiert. Dabei werden etwa Schriftarten, Bildschirmdaten und Hardwaremerkmale kombiniert, um einen Browser ohne Cookie wiederzuerkennen. Die Forschung basiert laut Mozilla auf Telemetrie von fast 25 Millionen Firefox-Nutzern und modellierten Messverfahren dreier Fingerprinting-Anbieter. Ein Ansatz ist erstaunlich bodenständig: weniger unnötig genaue Unterschiede preisgeben, etwa die vom Dock belegte Bildschirmfläche verbergen oder die Prozessorzahl gröber melden. Das Ziel ist eine größere Gruppe ähnlich aussehender Browser, nicht bloß ein anderer eindeutiger Fingerabdruck.",
+      "takeaway": "Die Begleitseite trennt ihre Messungen nach Betriebssystem und warnt selbst vor pauschalen Prozentwerten: Eine Maßnahme kann auf dem Mac viel bewirken und anderswo wenig. Sie beschreibt ausgewertete Schutzmaßnahmen aus Firefox 143; der neuere Blog nennt zusätzliche, zuletzt mit Firefox 145 ausgelieferte Maßnahmen. Das ist kein heute erschienener Browserrelease. Ein Teil gilt standardmäßig, ein Teil zunächst im privaten Modus oder im strengen Tracking-Schutz. Strengere Einstellungen können Websites stören. Fingerprinting wird damit nicht unmöglich, und die Studie beweist keine persönliche Unverfolgbarkeit. Hier wurden weder Browserwerte gemessen noch Einstellungen verändert.",
+      "url": "https://blog.mozilla.org/security/2026/11/10/open-research-stronger-privacy-making-firefox-users-harder-to-fingerprint/",
+      "cta": "Forschung und Schutzprinzip lesen",
+      "source": "Quelle: Mozilla Security Blog, 10.11.2026; Begleitseite fingerprinting.study, beide am 11.11. gelesen."
+    },
+    {
+      "category": "KI · Design · Forschung",
+      "short": "Physical Relighting",
+      "title": "Lampen nachträglich ins Foto setzen, mit Position statt nur Prompt.",
+      "body": "Physically Controllable Relighting of Photographs von Chris Careaga und Yağız Aksoy bringt eine schöne Computergrafik-Idee in die Bildbearbeitung: Lichtquellen gezielt im Raum platzieren. Die heute diskutierte Arbeit stammt bereits von der SIGGRAPH 2025. Aus einem einzelnen Foto schätzt die Pipeline Geometrie und Oberflächenfarben und baut daraus ein vereinfachtes farbiges Mesh. Darin lassen sich etwa Punktlichter, Spots oder Umgebungslicht festlegen. Ein Pathtracer berechnet zunächst eine grobe neue Beleuchtung; ein neuronaler Renderer macht daraus das endgültige Bild. Die Kontrolle ist damit räumlich und explizit, nicht bloß die Hoffnung, dass ein Textprompt die richtige Lampe erfindet.",
+      "takeaway": "Das Paper nennt die entscheidende Grenze: Ein Foto liefert nur eine 2,5D-Schätzung. Verdeckte oder außerhalb des Bildes liegende Flächen fehlen; extreme Lichtpositionen können dadurch falsche Schatten und Lichtlecks erzeugen. Haut und Haare sind besonders schwierig. Die Projektseite nennt zudem Schutzrechte und verweist für Lizenzen an die Universität. Deshalb hier kein angeblich frei nutzbares Open-Source-Tool und kein fertiges Photoshop-Plugin, sondern ein lesenswerter Forschungsansatz. Keine Installation, kein eigener Bildvergleich und kein eigener Geschwindigkeits- oder Qualitätsnachweis. Die Beispiele der Autoren sind Demonstrationen, keine Garantie für beliebige eigene Fotos.",
+      "url": "https://yaksoy.github.io/PhysicalRelighting/",
+      "cta": "Methode und Beispiele ansehen",
+      "source": "Quelle: Chris Careaga und Yağız Aksoy, SIGGRAPH 2025, Projektseite und Paper; heute am 11.11.2026 diskutiert."
     }
   ],
-  "notes": "Stand: 11.11.2026, 11:33 Uhr Berlin. Zwei recherchierte Catches zum Auftakt; weitere Funde nur bei echtem Mehrwert. Originalquellen gelesen. Keine CLI installiert, keine SSH-Schlüssel erzeugt und keine Leistungsmessungen selbst durchgeführt. Ältere Veröffentlichungen sind als solche eingeordnet."
+  "notes": "Stand: 11.11.2026, 15:33 Uhr Berlin. Vier recherchierte Catches. Originalquellen gelesen; ältere Beiträge und Forschungsarbeiten ausdrücklich datiert. Keine CLI installiert, keine Schlüssel- oder Browsereinstellungen geändert und keine Bild- oder Leistungsversuche selbst durchgeführt."
 }
