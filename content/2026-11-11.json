@@ -29,8 +29,5 @@
       "source": "Quelle: Serge Gatezh, 12.02.2026; heute auf Hacker News diskutierter älterer Beitrag."
     }
   ],
-  "notes": [
-    "Stand: 11.11.2026, 11:33 Uhr Berlin. Zwei recherchierte Catches zum Auftakt; weitere Funde nur bei echtem Mehrwert.",
-    "Originalquellen gelesen. Keine CLI installiert, keine SSH-Schlüssel erzeugt und keine Leistungsmessungen selbst durchgeführt. Ältere Veröffentlichungen sind als solche eingeordnet."
-  ]
+  "notes": "Stand: 11.11.2026, 11:33 Uhr Berlin. Zwei recherchierte Catches zum Auftakt; weitere Funde nur bei echtem Mehrwert. Originalquellen gelesen. Keine CLI installiert, keine SSH-Schlüssel erzeugt und keine Leistungsmessungen selbst durchgeführt. Ältere Veröffentlichungen sind als solche eingeordnet."
 }
