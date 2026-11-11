@@ -1,9 +1,9 @@
 {
   "date": "2026-11-11",
   "title": "Daily Hob vom Mittwoch, 11.11.",
-  "headline": "Weniger Altlasten. Weniger Fingerabdruck. Mehr Lichtkontrolle.",
-  "teaser": "4 Mittwochs-Catches: Modern Web Guidance, Secure Enclave SSH, Firefox-Fingerprinting und kontrollierbares Foto-Relighting.",
-  "intro": "Der Browser kann mehr, als Coding-Agenten oft nutzen, und muss gleichzeitig weniger über uns verraten. Dazu kommen SSH-Schlüssel im Mac-Chip und eine Forschungsarbeit, die Fotos wie ein virtuelles Lichtstudio behandelt. Vier Funde über eingebaute Möglichkeiten, klare Kontrolle und die Grenzen dahinter.",
+  "headline": "Mehr Kontrolle. Vom Browser bis zum Sandkorn.",
+  "teaser": "6 Mittwochs-Catches: Modern Web Guidance, Secure Enclave SSH, Firefox-Fingerprinting, Foto-Relighting, AssemblyForNeovim und Browser-Sand.",
+  "intro": "Weniger alte JavaScript-Muster, weniger verräterische Browserdetails und Lichtquellen mit klarer Position: Der Mittwoch dreht sich um Kontrolle. Am Abend kommen ein direkter Blick auf Compiler-Ausgaben und ein kleines WebGL-Sandspiel dazu. Sechs Funde, deren Grenzen genauso dazugehören wie ihr Reiz.",
   "hero": "hero.jpg",
   "heroAlt": "Feine schwarze Rechteckschichten gehen in einen einzelnen Browserrahmen über; rechts liegt ein geometrischer Schlüssel in einer ovalen Schutzhülle auf hellem Papier mit Gelb und Mint.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://yaksoy.github.io/PhysicalRelighting/",
       "cta": "Methode und Beispiele ansehen",
       "source": "Quelle: Chris Careaga und Yağız Aksoy, SIGGRAPH 2025, Projektseite und Paper; heute am 11.11.2026 diskutiert."
+    },
+    {
+      "category": "Open Source · Dev-Tools",
+      "short": "AssemblyForNeovim",
+      "title": "Was macht der Compiler aus dieser Funktion? Neovim zeigt es im Schwebefenster.",
+      "body": "AssemblyForNeovim ist ein kleines Lua-Plugin für C, C++ und Rust. Statt für jeden Blick auf die Assembler-Ausgabe den Editor zu verlassen, öffnet es ein schwebendes Neovim-Fenster zur Funktion unter dem Cursor oder zu markierten Zeilen. Im Fenster wechseln Plus und Minus die Optimierungsstufe, R übersetzt erneut und q schließt die Ansicht. Das heute auf Show HN vorgestellte Projekt nutzt vorhandene lokale Compiler und berücksichtigt bei C/C++ eine gefundene compile_commands.json. Der Name Godbolt fällt in der Vorstellung als Vergleich; das hier ist nicht die vollständige Compiler-Explorer-Webanwendung im Editor.",
+      "takeaway": "Das README zeigt die Einbindung über lazy.nvim und verlangt cc/c++ oder rustc/cargo im Suchpfad. Im gelesenen Lua-Code werden diese Programme lokal gestartet; bei einem Rust-Projekt kann das cargo rustc sein. Deshalb nur mit Projekten und Build-Konfigurationen arbeiten, denen man vertraut: Ein Compileraufruf ist keine Sandbox. Eine leere Ansicht ist außerdem nicht automatisch ein Fehler, Optimierung und Quellzeilenzuordnung können Code verschwinden lassen. Die Ausgabe ist Anschauungsmaterial für Codegenerierung, kein Leistungsbenchmark. Hier wurde nichts installiert oder kompiliert. Die Lizenzdatei stellt das Projekt unter die Unlicense.",
+      "url": "https://github.com/0xdeadf1sh/AssemblyForNeovim",
+      "cta": "Plugin und Voraussetzungen ansehen",
+      "source": "Quelle: AssemblyForNeovim, README, Lua-Implementierung und LICENSE; Show HN am 11.11.2026."
+    },
+    {
+      "category": "Wildcard · Webgrafik",
+      "short": "Browser Sand",
+      "title": "Eine Handvoll Sand im Browser, ganz ohne Schreibtischkrümel.",
+      "body": "Manchmal ist der beste Webfund einfach ein schön gemachtes Spielzeug. Sand lässt auf seiner Projektseite Körner über eine Fläche rieseln und nennt WebGL2 und JavaScript als Grundlage. Die Oberfläche bietet Nachschütten, Zeichnen, Kippen und Schütteln an; auf einem Telefon soll die Bewegung den Sand beeinflussen. Dazu gibt es Schalter für Klang und Haptik. Heute auf Hacker News entdeckt, ohne belegtes neues Release-Datum. Interessant ist weniger der Anspruch auf Hyperrealismus als die kleine, greifbare Oberfläche für Bewegung, Material und unmittelbare Rückmeldung.",
+      "takeaway": "Die gelesenen JavaScript-Dateien zeigen Pointer-Eingaben, Tastatursteuerung und eine optionale Abfrage der Bewegungsfreigabe, wenn der Browser sie verlangt. Was davon tatsächlich funktioniert, hängt vom Gerät und Browser ab; WebGL2-Unterstützung wird vorausgesetzt. Das ist eine interaktive Grafikdemo, kein validiertes Modell echter Sandphysik. Hier wurden weder Bewegungssensoren freigegeben noch Bildrate, Akkulast oder physikalische Genauigkeit gemessen. Wer nur einen kurzen visuellen Reset sucht, kann die Demo mit Maus oder Finger ansehen, ohne daraus einen Hardwarevergleich zu machen.",
+      "url": "https://av.github.io/safe-sand/",
+      "cta": "Sanddemo öffnen",
+      "source": "Quelle: Sand-Projektseite und verlinkte JavaScript-Dateien; heute am 11.11.2026 auf Hacker News entdeckt."
     }
   ],
-  "notes": "Stand: 11.11.2026, 15:33 Uhr Berlin. Vier recherchierte Catches. Originalquellen gelesen; ältere Beiträge und Forschungsarbeiten ausdrücklich datiert. Keine CLI installiert, keine Schlüssel- oder Browsereinstellungen geändert und keine Bild- oder Leistungsversuche selbst durchgeführt."
+  "notes": "Stand: 11.11.2026, 19:33 Uhr Berlin. Sechs recherchierte Catches. Originalquellen und bei technischen Details verlinkter Code gelesen. Ältere Beiträge und Forschung ausdrücklich datiert. Keine Installation, keine Schlüssel- oder Browsereinstellungen geändert, keine Compiler-, Sensor-, Bild- oder Leistungstests selbst durchgeführt."
 }
