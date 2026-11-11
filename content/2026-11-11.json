@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-11",
+  "title": "Daily Hob vom Mittwoch, 11.11.",
+  "headline": "Weniger Altlasten im Browser. Weniger Schlüssel auf der Platte.",
+  "teaser": "2 Mittwochs-Catches: Modern Web Guidance für Coding-Agenten und SSH-Schlüssel im Secure Enclave.",
+  "intro": "Der Browser kann längst mehr, als viele Coding-Agenten standardmäßig nutzen. Und ein SSH-Schlüssel muss nicht als kopierbare Datei auf dem Rechner liegen. Zwei Funde über eingebaute Möglichkeiten, ihre Grenzen und die Frage, wann weniger Zusatzschichten tatsächlich helfen.",
+  "hero": "hero.jpg",
+  "heroAlt": "Feine schwarze Rechteckschichten gehen in einen einzelnen Browserrahmen über; rechts liegt ein geometrischer Schlüssel in einer ovalen Schutzhülle auf hellem Papier mit Gelb und Mint.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "KI · Open Source · Web",
+      "short": "Modern Web Guidance",
+      "title": "Dein Coding-Agent baut noch Web von gestern? Gib ihm die Browser-Gegenwart.",
+      "body": "Modern Web Guidance sammelt moderne Webplattform-Muster für Coding-Agenten. Das von Chrome, Edge, Firefox und MDN betreute Open-Source-Projekt soll verhindern, dass für eingebaute Browserfunktionen unnötig eigenes JavaScript entsteht. Das README nennt etwa native Dialoge, Popover, Container Queries und automatisch mitwachsende Formularfelder. Eine lokale Suche findet passende Anleitungen; ein zweiter Schritt holt die konkrete Anleitung in den Arbeitskontext. Das Projekt wurde am 10. November auf Hacker News vorgestellt und wird heute weiter diskutiert. Kein heute neu erfundenes Browser-Feature, sondern eine praktische Wissensschicht über vorhandenen und teils noch experimentellen APIs.",
+      "takeaway": "Zum Anschauen führt das README die CLI-Suche, das Abrufen einzelner Anleitungen und einen legacy-scan für bestehende Projekte auf. Interessant ist die Trennung zwischen bloßer Verbesserung und kritischem Verhalten: Kompatibilität und passende Fallbacks gehören dazu. Anleitungen zu Origin Trials und sehr frischen Einzelbrowser-Funktionen sind beim Abrufen standardmäßig gesperrt, bis Entwickler sie ausdrücklich freigeben. Die CLI wurde hier nicht installiert oder ausgeführt; bessere Ergebnisse oder weniger JavaScript sind daher kein eigener Messbefund. Erst eine konkrete Komponente vergleichen, Browserziele und Tastaturbedienung prüfen, dann übernehmen.",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance",
+      "cta": "Projekt und Beispiele lesen",
+      "source": "Quelle: GoogleChrome/modern-web-guidance, README; Show HN vom 10.11., erneut relevant am 11.11.2026."
+    },
+    {
+      "category": "Informatik · Sicherheit",
+      "short": "Secure Enclave SSH",
+      "title": "SSH-Schlüssel im Mac-Chip: nicht kopierbar, aber auch nicht wiederherstellbar.",
+      "body": "Ein heute auf Hacker News diskutierter Erfahrungsbericht von Serge Gatezh erklärt SSH-Schlüssel im Secure Enclave des Mac. Der Beitrag stammt bereits vom 12. Februar 2026. Der private Schlüssel bleibt laut Autor in der Hardware; auf dem Dateisystem liegt nur ein Verweis. Bei der Anmeldung signiert der Chip die Anfrage, optional nach Touch ID. Gatezh beschreibt einen Weg mit macOS-Bordmitteln, CryptoTokenKit und dem SSH-Keychain-Provider. Besonders ehrlich: Er entschied sich anschließend gegen genau diesen nativen Weg, weil ihn der kryptische Authentifizierungsdialog störte. Ein Erfahrungsbericht mit Stolperstellen, keine frisch veröffentlichte macOS-Funktion.",
+      "takeaway": "Der wichtige Haken steht am Ende: Solche Schlüssel sind an diesen Mac gebunden und lassen sich nicht exportieren oder sichern. Vor einer Umstellung braucht es einen unabhängig getesteten zweiten Zugang; den alten Zugang nicht vorschnell entfernen. Ein nicht exportierbarer Schlüssel schützt vor dem einfachen Kopieren der Schlüsseldatei, macht einen kompromittierten Rechner aber nicht insgesamt vertrauenswürdig. Der Artikel erwähnt außerdem Konflikte mit einem vorhandenen SSH-Agenten. Hier wurden weder Schlüssel erzeugt noch Server- oder Agenteneinstellungen geändert. Wer die Idee prüft, sollte sie auf einem Testzugang und passend zur eigenen macOS-/SSH-Version nachvollziehen, statt eine bestehende Anmeldung blind umzubauen.",
+      "url": "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/",
+      "cta": "Erfahrungsbericht und Grenzen lesen",
+      "source": "Quelle: Serge Gatezh, 12.02.2026; heute auf Hacker News diskutierter älterer Beitrag."
+    }
+  ],
+  "notes": [
+    "Stand: 11.11.2026, 11:33 Uhr Berlin. Zwei recherchierte Catches zum Auftakt; weitere Funde nur bei echtem Mehrwert.",
+    "Originalquellen gelesen. Keine CLI installiert, keine SSH-Schlüssel erzeugt und keine Leistungsmessungen selbst durchgeführt. Ältere Veröffentlichungen sind als solche eingeordnet."
+  ]
+}
