@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-12",
+  "title": "Daily Hob vom Donnerstag, 12.11.",
+  "headline": "Abhängigkeiten festzurren. Alte Hardware wieder aufwecken.",
+  "teaser": "2 Donnerstags-Catches: Lockfiles für GitHub Actions und eine LEGO-Webcam zurück am Mac.",
+  "intro": "Ein CI-Workflow sollte den geprüften Code ausführen, nicht heimlich den neuen Inhalt eines verschobenen Tags. Und eine alte Webcam muss nicht Elektroschrott bleiben, nur weil ihr Treiber fehlt. Zwei Funde über Verlässlichkeit, offene Vorarbeit und die Grenzen einer guten Wiederbelebung.",
+  "hero": "hero.jpg",
+  "heroAlt": "Eine feine schwarze Kette aus quadratischen Gliedern wird durch einen Stift gesichert; daneben eine geometrische alte Webcam mit rundem Objektiv auf hellem Papier mit Gelb und Mint.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Open Source · Sicherheit",
+      "short": "Actions Lockfiles",
+      "title": "Lesbare Action-Versionen, festgelegter Code: GitHub bekommt Workflow-Lockfiles.",
+      "body": "Hugo van Kemenade zeigt in seinem Beitrag vom 11. November einen neuen Workflow mit GitHub-Actions-Lockfiles, heute auf Hacker News diskutiert. Die offizielle GitHub-Dokumentation bestätigt das Prinzip: In der Workflow-Datei bleibt etwa eine lesbare Versionsreferenz, während .github/workflows/actions.lock den konkreten Commit und die Identität des Quellrepositories festhält. Damit soll ein später verschobener Tag nicht stillschweigend anderen Action-Code ausführen. Erfasst werden direkte und transitive Action-Abhängigkeiten. Erzeugen und prüfen lässt sich die Datei mit der offiziellen gh-actions-lock-Erweiterung für die GitHub-CLI.",
+      "takeaway": "Ein Lockfile ist kein Sicherheitsurteil über den gesperrten Code. Es macht Änderungen prüfbar und die Auflösung reproduzierbar. Die Dokumentation nimmt Aufrufe wiederverwendbarer Workflows ausdrücklich aus: Diese weiterhin selbst mit vollständigem Commit-SHA festlegen. Die Erweiterung nennt weitere Grenzen, darunter nicht gesperrte Container-Images und besondere Behandlung lokaler Actions. Der lokale Prüfmodus kontrolliert nur die Abdeckung, nicht die Herkunft; eine Prüfung mit Netzwerk geht weiter. Vorhandene SHA-Pins deshalb nicht pauschal entfernen, sondern eine Umstellung gezielt prüfen und Lockfile-Diffs lesen. Hier wurde weder die Erweiterung installiert noch irgendein Workflow geändert.",
+      "url": "https://docs.github.com/en/actions/concepts/security/workflow-dependency-lockfiles",
+      "cta": "Offizielle Lockfile-Semantik lesen",
+      "source": "Quellen: GitHub-Dokumentation und github/gh-actions-lock; Hugo van Kemenade, 11.11.2026, heute am 12.11. diskutiert."
+    },
+    {
+      "category": "Open Source · Wildcard",
+      "short": "Legocam",
+      "title": "Die LEGO-Webcam von damals meldet sich auf einem modernen Mac zurück.",
+      "body": "Benjamin Kelly hat eine alte LEGO-Studios-Kamera wieder angeschlossen. Im Gehäuse steckt eine Logitech QuickCam Web, für die ihm unter macOS ein funktionierender Treiber fehlte. Sein Beitrag vom 10. November wird heute diskutiert. Das Projekt legocam spricht per libusb direkt aus einem normalen Programm mit der Kamera, ohne eigene Kernel-Erweiterung. Dabei half das vom Linux-Treiber dokumentierte USB-Protokoll. Die Rohbilder gehen an ein zweites kleines Programm und von dort in die bereits signierte OBS Virtual Camera. Anwendungen sehen anschließend diese virtuelle Kamera. Ein schöner Fall, in dem gepflegter Linux-Code alter Hardware ein zweites Leben ermöglicht.",
+      "takeaway": "Das README nennt libusb, FFmpeg und für die virtuelle Kamera OBS ab Version 30 samt einmaliger Aktivierung der Kamera-Erweiterung. Danach muss OBS selbst nicht laufen. Die Grenzen sind sehr konkret: 356 mal 292 Pixel, laut Autor ungefähr fünf Bilder pro Sekunde, manuelle Belichtung, kein Mikrofon und kein Auslöserknopf. Getestet wurde laut README ein Intel-MacBook Pro mit macOS 15.7.3 und OBS 33.0.1; Apple Silicon ist ausdrücklich ungetestet. Also keine Empfehlung für eine universelle Mac-Webcam-Lösung. Hier wurde nichts gebaut oder angeschlossen. Das Repository nennt GPL-2.0-or-later als Lizenz.",
+      "url": "https://github.com/benkelly/legocam",
+      "cta": "Treiber und Voraussetzungen ansehen",
+      "source": "Quellen: Benjamin Kelly, Blogbeitrag vom 10.11.2026, und benkelly/legocam README; heute am 12.11. diskutiert."
+    }
+  ],
+  "notes": "Stand: 12.11.2026, 11:34 Uhr Berlin. Zwei recherchierte Catches zum Auftakt. Originalquellen gelesen, ältere Beitragsdaten genannt. Keine Installation, kein Workflow-Umbau und kein eigener Hardware- oder Leistungstest."
+}
