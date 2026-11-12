@@ -1,9 +1,9 @@
 {
   "date": "2026-11-12",
   "title": "Daily Hob vom Donnerstag, 12.11.",
-  "headline": "Abhängigkeiten festzurren. Alte Hardware wieder aufwecken.",
-  "teaser": "2 Donnerstags-Catches: Lockfiles für GitHub Actions und eine LEGO-Webcam zurück am Mac.",
-  "intro": "Ein CI-Workflow sollte den geprüften Code ausführen, nicht heimlich den neuen Inhalt eines verschobenen Tags. Und eine alte Webcam muss nicht Elektroschrott bleiben, nur weil ihr Treiber fehlt. Zwei Funde über Verlässlichkeit, offene Vorarbeit und die Grenzen einer guten Wiederbelebung.",
+  "headline": "Code festlegen. Gespräche lokal halten. Den Rechner verstehen.",
+  "teaser": "4 Donnerstags-Catches: Actions-Lockfiles, eine LEGO-Webcam am Mac, lokale Meeting-KI und ein lesbarer Linux-Start.",
+  "intro": "Verlässliche Software beginnt mit festgelegten Abhängigkeiten. Sie zeigt aber auch, wohin Gesprächsdaten fließen und worauf der Rechner gerade wartet. Dazu eine alte Webcam, die dank offener Vorarbeit wieder Bilder liefert. Vier Funde über Kontrolle, Rückmeldung und das Weiterverwenden guter Hardware.",
   "hero": "hero.jpg",
   "heroAlt": "Eine feine schwarze Kette aus quadratischen Gliedern wird durch einen Stift gesichert; daneben eine geometrische alte Webcam mit rundem Objektiv auf hellem Papier mit Gelb und Mint.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://github.com/benkelly/legocam",
       "cta": "Treiber und Voraussetzungen ansehen",
       "source": "Quellen: Benjamin Kelly, Blogbeitrag vom 10.11.2026, und benkelly/legocam README; heute am 12.11. diskutiert."
+    },
+    {
+      "category": "KI · Open Source",
+      "short": "Yogurt",
+      "title": "Meeting-Notizen ohne Cloud: Yogurt lässt die KI auf dem eigenen Rechner arbeiten.",
+      "body": "Frigade stellt mit Yogurt eine freie Desktop-App für Gesprächsnotizen vor, die heute diskutiert wird. Sie nimmt Mikrofon und Systemton auf, ohne einen Bot in den Anruf zu schicken. Laut Projekt laufen Transkription, Zusammenfassungen und Fragen an die Notizen lokal: mit whisper.cpp für Sprache und llama.cpp für das Sprachmodell. Nach dem Modelldownload funktioniert das auch offline, ohne Nutzerkonto. Das ist ein interessanter Gegenentwurf zu Meeting-Assistenten, bei denen erst einmal die ganze Unterhaltung auf einem fremden Server landet.",
+      "takeaway": "Die Voraussetzungen sind konkret: Apple Silicon mit macOS 14.4+, Windows 10 ab Version 2004 oder Ubuntu 22.04 beziehungsweise vergleichbares Linux, jeweils mindestens 8 GB RAM. Kalender und Sprechernamen gibt es vorerst nur am Mac. Wichtig: Lokal heißt nicht automatisch ohne Ausleitung. Die optionale MCP-Freigabe ist zunächst aus; eingeschaltet kann jede App unter demselben Nutzerkonto die Notizen lesen, ohne eigenen App-Token. Ein angeschlossener Assistent kann Gelesenes an sein Online-Modell senden. Andere Gesprächsteilnehmer müssen von der Aufnahme wissen. Hier wurde die App nicht installiert und die Datenschutzbehauptung nicht unabhängig auditiert.",
+      "url": "https://github.com/frigadehq/yogurt",
+      "cta": "Projekt und Datenschutzgrenzen lesen",
+      "source": "Quellen: FrigadeHQ/yogurt README und MIT-Lizenz sowie yogurt.so, gelesen am 12.11.2026. Funktionen und lokale Verarbeitung laut Projekt."
+    },
+    {
+      "category": "Open Source · Design",
+      "short": "bootvine",
+      "title": "Ein Linux-Startbildschirm, der zeigt, worauf der Rechner gerade wartet.",
+      "body": "Eine Wand aus vorbeirauschenden Logzeilen sagt erstaunlich wenig darüber, warum der Rechner noch nicht fertig ist. Willem Vanhulles bootvine macht aus den ausstehenden systemd-Jobs einen lebenden Baum. Freier Platz daneben zeigt eine Zeitleiste der langsamsten bereits gelaufenen Jobs. Das Projekt kann laut README auch das Herunterfahren begleiten, LUKS-Passwortabfragen an Ort und Stelle anzeigen und bei fehlgeschlagenen Diensten die letzten Journalzeilen einblenden. Heute wieder diskutiert, ist es ein schönes Beispiel dafür, dass bessere Werkzeuge manchmal vor allem bessere Rückmeldung brauchen.",
+      "takeaway": "bootvine beschleunigt den Start damit nicht automatisch, sondern macht ihn verständlicher. Es braucht systemd ab Version 246 als PID 1, libdbus, libsystemd und ein virtuelles Terminal. Für die frühe Bootphase ist zusätzlich ein systemd-initrd nötig. Wer erst schauen möchte, findet im Projekt eine Nix/QEMU-Beispielmaschine statt sofort am eigenen Bootprozess zu schrauben. Arch führt derzeit Version 0.1.3-1 im Extra-Repository, aktualisiert am 9. November; die Projektlizenz ist GPL-3.0-or-later. Hier wurde nichts installiert oder am Systemstart geändert.",
+      "url": "https://codeberg.org/wvhulle/bootvine",
+      "cta": "Boot-Baum und Demo ansehen",
+      "source": "Quellen: wvhulle/bootvine README und Arch-Linux-Paketübersicht, gelesen am 12.11.2026. Kein heutiger Erst-Release behauptet."
     }
   ],
-  "notes": "Stand: 12.11.2026, 11:34 Uhr Berlin. Zwei recherchierte Catches zum Auftakt. Originalquellen gelesen, ältere Beitragsdaten genannt. Keine Installation, kein Workflow-Umbau und kein eigener Hardware- oder Leistungstest."
+  "notes": "Stand: 12.11.2026, 15:34 Uhr Berlin. Vier recherchierte Catches. Originalquellen gelesen, ältere Beitrags- und Paketdaten genannt. Keine Installation, kein Workflow-Umbau, keine Aufnahme und kein eigener Hardware- oder Systemstart-Test."
 }
