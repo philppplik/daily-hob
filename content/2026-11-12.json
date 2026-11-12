@@ -1,9 +1,9 @@
 {
   "date": "2026-11-12",
   "title": "Daily Hob vom Donnerstag, 12.11.",
-  "headline": "Code festlegen. Gespräche lokal halten. Den Rechner verstehen.",
-  "teaser": "4 Donnerstags-Catches: Actions-Lockfiles, eine LEGO-Webcam am Mac, lokale Meeting-KI und ein lesbarer Linux-Start.",
-  "intro": "Verlässliche Software beginnt mit festgelegten Abhängigkeiten. Sie zeigt aber auch, wohin Gesprächsdaten fließen und worauf der Rechner gerade wartet. Dazu eine alte Webcam, die dank offener Vorarbeit wieder Bilder liefert. Vier Funde über Kontrolle, Rückmeldung und das Weiterverwenden guter Hardware.",
+  "headline": "Lokal arbeiten. Abhängigkeiten kennen. KI passend einsetzen.",
+  "teaser": "6 Donnerstags-Catches: Actions-Lockfiles, LEGO-Webcam, Yogurt, bootvine, Gemini Hydrogen und ExcalidrawZ.",
+  "intro": "Kontrolle hat viele Formen: festgelegte Workflow-Abhängigkeiten, Gesprächsnotizen auf dem eigenen Rechner, ein verständlicher Linux-Start und Skizzen mit Dateiverlauf. Dazu eine wiederbelebte Webcam und Googles neues Modell für die schnelle Ausführung. Sechs Funde, mit klarer Trennung zwischen Projektdokumentation, Anbieterangaben und eigenen Tests.",
   "hero": "hero.jpg",
   "heroAlt": "Eine feine schwarze Kette aus quadratischen Gliedern wird durch einen Stift gesichert; daneben eine geometrische alte Webcam mit rundem Objektiv auf hellem Papier mit Gelb und Mint.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://codeberg.org/wvhulle/bootvine",
       "cta": "Boot-Baum und Demo ansehen",
       "source": "Quellen: wvhulle/bootvine README und Arch-Linux-Paketübersicht, gelesen am 12.11.2026. Kein heutiger Erst-Release behauptet."
+    },
+    {
+      "category": "KI · Modelle",
+      "short": "Gemini Hydrogen",
+      "title": "Google kündigt Gemini 4 Hydrogen als schnellen Arbeiter für alltägliche KI-Aufgaben an.",
+      "body": "Am Abend stellt Google Gemini 4 Hydrogen vor. Während Carbon und Argon im eigenen Portfolio für längeres Nachdenken stehen, soll Hydrogen vor allem Code schreiben, Tests ausführen und mehrstufige Aufgaben zügig abarbeiten. Der Startbeitrag nennt vier Denkstufen: low, medium, high als Standard und xhigh. Dazu kommt Orchestrator in Antigravity, der innerhalb einer Sitzung zwischen Modellen wechseln soll. Die interessante Richtung ist also nicht nur ein weiteres großes Modell, sondern der passend eingesetzte Mix aus gründlichem Planen und günstigerer Ausführung.",
+      "takeaway": "Google kündigt den weltweiten Rollout unter anderem in API, AI Studio, Gemini-App und Suche an. Das ist eine Rollout-Ankündigung, kein hier bestätigter Zugang für jedes einzelne Konto: Gratisnutzer der App sollen Hydrogen über die automatische Modellauswahl bekommen. Der Beitrag nennt eine Million Token Kontext sowie 1,50 US-Dollar pro Million Eingabetoken und 7,50 US-Dollar pro Million Ausgabetoken. Das sind veröffentlichte Launch-Angaben, kein eigener API-Test; die separate Preisdokumentation ließ sich bei der Recherche nicht abrufen. Googles Leistungs- und Effizienzvergleiche bleiben Anbieterangaben, keine unabhängige Messung dieser Ausgabe.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "cta": "Googles Ankündigung lesen",
+      "source": "Quelle: Google-Blog, Koray Kavukcuoglu, 12.11.2026, gelesen am Abend. Rollout, Preise und Eigenschaften laut Anbieter; nicht selbst getestet."
+    },
+    {
+      "category": "Open Source · Design",
+      "short": "ExcalidrawZ",
+      "title": "Excalidraw bekommt auf Apple-Geräten eine lokale App-Hülle mit Dateiverlauf.",
+      "body": "ExcalidrawZ behält die vertraute Skizzenfläche von Excalidraw und ergänzt eine native SwiftUI-App für Mac, iPad und iPhone. Zeichnungen werden als verwaltete Dokumente organisiert, mit Gruppen, Verlauf und optionaler iCloud-Synchronisierung. Auch die editierbaren Formate .excalidraw.png und .excalidraw.svg lassen sich öffnen. PDFs können hinein und wieder als Vektordokument heraus. Heute diskutiert wird damit kein ganz neues Zeichenprinzip, sondern eine praktische Antwort auf die Frage: Wo liegen meine Skizzen, und wie komme ich zur vorigen Version zurück?",
+      "takeaway": "Die Projektseite nennt v2.5.1 als aktuelle öffentliche Version; die Release-Seite datiert sie auf den 24. Oktober. Dazu gehören ein separates Präsentationsfenster am Mac und der Export ausgewählter Elemente. KI-Assistent, MCP und verknüpfte Cloudspeicher sind optionale Ergänzungen, nicht gleichbedeutend mit rein lokaler Verarbeitung. KI-Vorschläge lassen sich vor dem Übernehmen ansehen. Gesperrte Dateien und Verlaufspunkte werden laut Projekt verschlüsselt; daraus folgt hier kein unabhängiges Sicherheitsurteil. Der Code steht unter MIT-Lizenz. Die App wurde für diese Ausgabe nicht installiert.",
+      "url": "https://github.com/chocoford/ExcalidrawZ",
+      "cta": "App, Formate und Release ansehen",
+      "source": "Quellen: chocoford/ExcalidrawZ README, MIT-Lizenz, Projektseite und GitHub-Releases, gelesen am 12.11.2026. v2.5.1 vom 24.10.; heute wieder diskutiert."
     }
   ],
-  "notes": "Stand: 12.11.2026, 15:34 Uhr Berlin. Vier recherchierte Catches. Originalquellen gelesen, ältere Beitrags- und Paketdaten genannt. Keine Installation, kein Workflow-Umbau, keine Aufnahme und kein eigener Hardware- oder Systemstart-Test."
+  "notes": "Stand: 12.11.2026, 19:33 Uhr Berlin. Sechs recherchierte Catches. Originalquellen gelesen, ältere Beitrags-, Paket- und Releasedaten genannt. Kein eigener Modellbenchmark, keine Installation, kein Workflow-Umbau, keine Aufnahme und kein Hardware- oder Systemstart-Test. Gemini-Startangaben stammen aus dem Google-Blog; die separate API-Preisseite war nicht abrufbar."
 }
