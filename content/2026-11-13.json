@@ -1,9 +1,9 @@
 {
   "date": "2026-11-13",
   "title": "Daily Hob vom Freitag, 13.11.",
-  "headline": "Besser ausprobieren. Updates abwarten. Das Jahr zusammen sehen.",
-  "teaser": "4 Freitags-Catches: ZigZag, Relax, Rust 1.100 und ein Jahreskalender ohne gebrochene Wochen.",
-  "intro": "Ein Stickeditor und ein experimenteller Rust-JIT machen aus Ideen schneller etwas Greifbares. Rusts neues Release fragt dagegen, wann Abwarten klüger ist. Und ein Papierkalender zeigt, dass ein besseres Raster manchmal mehr bringt als eine weitere Funktion. Vier Funde über Werkzeuge, Zeit und die Grenzen guter Versprechen.",
+  "headline": "Werkzeuge öffnen. Wartezeiten verstehen. Gemeinsam weiterbauen.",
+  "teaser": "6 Freitags-Catches: ZigZag, Relax, Rust 1.100, Flow Calendar, Lonewolf und Haskells technische Vision.",
+  "intro": "Vom Stickmotiv zum Chatserver: Offene Werkzeuge geben Gestaltungsspielraum zurück. Doch gute Projekte nennen auch ihre Grenzen, von experimentellen Compilern bis zu noch offenen Ökosystem-Zielen. Dazu ein bewussteres Tempo für Updates und ein Jahreskalender ohne Monatsbruch. Sechs Funde über bessere Werkzeuge und das gemeinsame Weiterbauen.",
   "hero": "hero.jpg",
   "heroAlt": "Eine geometrische Sticknadel führt einen schwarzen Zickzackfaden durch einen runden Rahmen; der Faden verbindet sich mit kleinen Trittsteinen und einer abstrakten Uhr auf hellem Papier mit Gelb und Mint.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://shop.karthikmahadevan.com/flow-calendar",
       "cta": "Das Jahresraster ansehen",
       "source": "Quellen: Flow-Calendar-Projektseite und Karthik Mahadevans Portfolio, gelesen am 13.11.2026; veröffentlichtes Kalenderbild visuell geprüft. Heute als Designfund aufgegriffen."
+    },
+    {
+      "category": "Open Source · Kommunikation",
+      "short": "Lonewolf",
+      "title": "Lonewolf 0.3 öffnet seinen Rust-Chatserver für andere XMPP-Server.",
+      "body": "Lonewolf ist ein selbst gehosteter XMPP-Server in Rust, der als einzelnes Programm mit eingebautem Speicher auskommt. Die heute veröffentlichte Version 0.3.0 ergänzt zertifikatsauthentifizierte Föderation: Nachrichten, Status und Kontaktabonnements können mit anderen XMPP-Servern ausgetauscht werden. Dazu kommen direkte TLS-Verbindungen und weitere Funktionen für Desktop-Clients. Interessant ist hier die Rückkehr zu einer einfachen Idee: Ein Chatkonto auf der eigenen Domain muss nicht auf Nutzer desselben Servers beschränkt bleiben.",
+      "takeaway": "Das ist weiterhin frühe Software vor Version 1.0, kein fertig geprüfter Ersatz für einen produktiven Messenger. Clustering, vollständige XMPP-Konformität, Gruppenchats und weitere Funktionen stehen noch auf der Roadmap. Föderationspartner brauchen vertrauenswürdige Zertifikate und SASL EXTERNAL; Server Dialback wird nicht unterstützt. Die Release-Notizen warnen außerdem vor einem Migrationsdetail: Neu angelegte oder geänderte Zugangsdaten sind für ältere Programmversionen nicht lesbar, auch bei deaktivierter SHA-512-Anmeldung. Das optionale SCRAM-SHA-512 basiert auf einem abgelaufenen Entwurf, nicht auf einem RFC. Apache-2.0-Lizenz; hier wurde kein Server eingerichtet oder Sicherheitstest durchgeführt.",
+      "url": "https://github.com/lonewolf-im/lonewolf",
+      "cta": "Release und Betriebsgrenzen lesen",
+      "source": "Quellen: lonewolf-im/lonewolf README, Release v0.3.0 vom 13.11.2026 und Apache-2.0-Lizenz, gelesen am Abend. Funktionsumfang und Grenzen laut Projekt."
+    },
+    {
+      "category": "Informatik · Haskell",
+      "short": "Haskell Vision",
+      "title": "Haskells neue technische Vision setzt auf kürzere Wartezeiten und besseres Debugging.",
+      "body": "Das technische Leitungskomitee der Haskell Foundation stellt heute seine gemeinsame Vision vor. Die Ziele sind angenehm handfest: schnellere Iteration, brauchbare Stacktraces, Live-Debugging und ein leichterer Einstieg. Als Beispiel nennt der Beitrag die eigene GHC-CI mit sechs Stunden Durchlaufzeit, die auf zwei Stunden sinken soll. Auch die Rolle von KI wird anders gerahmt als üblich: Nicht möglichst viel Code erzeugen, sondern ihn mit starken Typen, klaren Einschränkungen und guten Werkzeugen besser prüfen können.",
+      "takeaway": "Der Beitrag ist eine Strategie samt Einladung zu Vorschlägen, keine fertig ausgelieferte Toolchain. Kürzere CI-Zeiten, bessere Installation und stabilere Upgrades sind Ziele, keine hier nachgewiesenen Ergebnisse. Selbst die Frage, ob zehn Jahre alte Programme mit neuem GHC ohne Quelländerung laufen könnten, wird als Richtung und offene Aufgabe formuliert. Für konkrete Initiativen werden Finanzierung und Mitarbeit gesucht; Vorschläge sollen öffentlich kommentiert und gegebenenfalls durch Gegenvorschläge ergänzt werden. Der lesenswerte Kern: Entwicklererfahrung, Wartbarkeit und Sicherheit als gemeinsame Infrastruktur behandeln, statt jede Hürde auf den einzelnen Nutzer abzuwälzen.",
+      "url": "https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078",
+      "cta": "Vision und offene Ziele lesen",
+      "source": "Quelle: Beitrag von @hasufell im Haskell-Foundation-Bereich von Haskell Discourse, 13.11.2026, gelesen am Abend; Ziele ausdrücklich von erreichten Funktionen getrennt."
     }
   ],
-  "notes": "Stand: 13.11.2026, 15:34 Uhr Berlin. Vier recherchierte Catches. Originalquellen und Releasegrenzen gelesen, Kalenderbild angesehen. Kein eigener Compiler-Benchmark, keine Installation, Toolchain- oder Konfigurationsänderung, kein Stickmaschinen- oder Drucktest. Relax-Benchmarkstände unterscheiden sich zwischen README und Website; keine pauschale Leistungszusage."
+  "notes": "Stand: 13.11.2026, 19:34 Uhr Berlin. Sechs recherchierte Catches. Originalquellen, Release- und Migrationsgrenzen gelesen, Kalenderbild angesehen. Kein eigener Compiler-Benchmark, keine Installation, Server-, Toolchain- oder Konfigurationsänderung, kein Stickmaschinen-, Sicherheits- oder Drucktest. Relax-Benchmarkstände unterscheiden sich zwischen README und Website; Haskells Vision ist eine Zielbeschreibung, kein fertiges Release."
 }
