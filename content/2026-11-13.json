@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-13",
+  "title": "Daily Hob vom Freitag, 13.11.",
+  "headline": "Vom Vektor zum Faden. Vom Warten zum Ausprobieren.",
+  "teaser": "2 Freitags-Catches: ZigZag macht Stickmotive aus SVG, Relax experimentiert mit einem Rust-JIT.",
+  "intro": "Werkzeuge werden interessant, wenn sie eine nervige Grenze verschieben: zwischen Zeichnung und echter Stickmaschine oder zwischen Codeänderung und laufender App. Zwei heute diskutierte Open-Source-Projekte, die genau dort ansetzen. Mit klaren Grenzen zwischen Projektversprechen, Entwicklungsstand und eigenem Test.",
+  "hero": "hero.jpg",
+  "heroAlt": "Eine geometrische Sticknadel führt einen schwarzen Zickzackfaden durch einen runden Rahmen; der Faden verbindet sich mit kleinen Trittsteinen und einer abstrakten Uhr auf hellem Papier mit Gelb und Mint.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Open Source · Wildcard",
+      "short": "ZigZag",
+      "title": "ZigZag macht aus SVG-Grafiken Stickdateien und bringt einen freien Editor mit.",
+      "body": "ZigZag ist ein freier Stickmuster-Editor für Mac und Windows: SVG hinein, Stiche visuell nacharbeiten, Maschinenformat heraus. Das in Rust geschriebene Projekt exportiert unter anderem PES, DST, EXP, JEF und VP3. Für eine Brother Skitch PP1 ist laut README auch die direkte Übertragung per Bluetooth vorgesehen. Ein eingebauter MCP-Server kann Assistenten an derselben Zeichnung arbeiten lassen. Der reizvolle Gedanke dahinter: Nicht die Hardware wegwerfen oder die eigene Gestaltung an eine App binden, sondern das Dateiformat und die Werkzeuge wieder in die Hand nehmen.",
+      "takeaway": "Die Projektseite nennt elf Sticharten, das README beschreibt Vorschau, Dichtekarte und Prüfungen etwa für Rahmengröße und kleine Schrift. Das ersetzt keinen sicheren Probelauf auf der eigenen Maschine. Die Aussage zum Test an einer echten Skitch stammt vom Projekt; andere Maschinen sind nicht dadurch automatisch bestätigt, nur weil ein Exportformat angeboten wird. Das Bluetooth-Protokoll wurde rückentwickelt, Firmware-Kompatibilität bleibt also eine Grenze. Mac-Downloads sind laut README für Intel und Apple Silicon ab macOS 11 gedacht, Windows ab Version 10/1709 in 64 Bit. Apache-2.0-Lizenz. Hier wurde nichts installiert, übertragen oder gestickt.",
+      "url": "https://github.com/simpsoka/zigzag",
+      "cta": "Editor, Formate und Grenzen ansehen",
+      "source": "Quellen: simpsoka/zigzag README, Apache-2.0-Lizenz und zigzag.diy, gelesen am 13.11.2026. Heute diskutierter Projektfund, kein heutiger Erst-Release behauptet."
+    },
+    {
+      "category": "Open Source · Dev-Tools",
+      "short": "Relax",
+      "title": "Rust während des Laufens übersetzen: Relax verkürzt die Idee vom Editieren zum Ausprobieren.",
+      "body": "Relax aus dem Makepad-Projekt ist ein experimenteller Compiler samt JIT-Laufzeit für Rust. Statt erst ein ganzes Programm fertig zu bauen, werden Funktionen beim ersten Aufruf übersetzt und häufig genutzte Teile später stärker optimiert. Änderungen an Funktionskörpern können laut Projekt im laufenden Prozess landen, ohne dessen Zustand zu verlieren. Dazu kommen Werkzeuge zum Untersuchen von Panics, hängenden Threads und Laufzeitverhalten. Das ist mehr als ein Wrapper um rustc: Das Projekt beschreibt eine eigene Übersetzungskette ohne rustc, LLVM oder separaten Linker im eigentlichen JIT-Durchlauf.",
+      "takeaway": "Entscheidend ist das Wort experimentell. Nicht jede Crate läuft, Struktur- und andere grundlegende Änderungen brauchen einen Neustart. Der Borrow-Checker arbeitet beim normalen Lauf nebenher; wer auf dessen Abschluss warten will, findet --check-first. Die Optimierung kostet Speicher, der erzeugte Code ist in den Projektmessungen insgesamt langsamer als rustc-Releasecode. Website und README zeigen unterschiedliche Benchmarkstände; daraus wird hier kein allgemeiner Speedup abgeleitet. Linux x86-64 und macOS arm64 sind laut Projekt getestet, Windows nicht. Für auszuliefernde Builds verweist es weiter auf cargo build --release. MIT-Lizenz, keine eigene Ausführung oder Messung.",
+      "url": "https://makepad.github.io/relax/",
+      "cta": "JIT-Konzept und offene Lücken lesen",
+      "source": "Quellen: makepad/relax README, KNOWN_GAPS.md und MIT-Lizenz sowie Makepads Relax-Projektseite, gelesen am 13.11.2026. Heute diskutiert; Messwerte nur vom Projekt, nicht unabhängig reproduziert."
+    }
+  ],
+  "notes": "Stand: 13.11.2026, 11:34 Uhr Berlin. Zwei recherchierte Catches zum Auftakt. Originalquellen gelesen, keine Installation, kein eigener Compiler-Benchmark und kein Stickmaschinen-Test. Relax-Benchmarkstände unterscheiden sich zwischen README und Website; keine pauschale Leistungszusage."
+}
