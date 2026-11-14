@@ -1,9 +1,9 @@
 {
   "date": "2026-11-14",
   "title": "Daily Hob vom Samstag, 14.11.",
-  "headline": "Werkzeuge verstehen. Vorhandenes neu nutzen.",
-  "teaser": "4 Samstags-Catches: ggml 1.0, Cell Borders, alte Smartphones als Projektcomputer und ein kleiner PostScript-Interpreter.",
-  "intro": "Verlässliche Schnittstellen und mehr Platz im Terminal waren der Anfang. Dazu kommen ein Smartphone als bereits komplett ausgestatteter Projektcomputer und ein Sprachinterpreter, dessen Mechanik sich noch im Kopf verfolgen lässt. Vier Funde über die Frage, wie viel Werkzeug wirklich nötig ist und was man selbst verstehen kann.",
+  "headline": "Werkzeuge verstehen. Herkunft prüfen. Bewusst weiterbauen.",
+  "teaser": "6 Samstags-Catches: ggml 1.0, Cell Borders, Smartphone-Recycling, PostScript selbstbauen, PyPI-Sicherheitssignale und C3 0.8.6.",
+  "intro": "Was macht ein Werkzeug verlässlich? Sichtbare Schnittstellen, nachvollziehbare Herkunft und Grenzen, die nicht im Kleingedruckten verschwinden. Dazu mehr Platz im Terminal, ein neues Leben für alte Smartphones und ein selbst gebauter Sprachinterpreter. Sechs Funde über bewusstes Weiterbauen.",
   "hero": "hero.jpg",
   "heroAlt": "Offene geometrische Würfel bilden ein kleines Fundament; feine schwarze Linien verbinden sie mit einem schwebenden Zellraster auf hellem Papier, mit Gelb und Mint als Akzenten.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://beyondloom.com/blog/postscript.html",
       "cta": "Den Interpreter Schritt für Schritt lesen",
       "source": "Quellen: Beyondloom, Let’s Write a PostScript Interpreter, und Blog-Archiv mit Datum 12.11.2026; gelesen am 14.11.2026. Heute diskutierter Erklärfund, absichtlich begrenzter Lehrinterpreter."
+    },
+    {
+      "category": "Open Source · Sicherheit",
+      "short": "PyPI Herkunft",
+      "title": "PyPI zeigt Paket-Herkunft klarer, ohne aus einem Häkchen ein Sicherheitsversprechen zu machen.",
+      "body": "PyPIs heute wieder diskutiertes Redesign stellt die Herkunft von Release-Dateien deutlicher heraus. Der eigene Security-Tab zeigt Attestierungen je Datei; Warnungen machen etwa fehlende Nachweise in Teilen eines Releases, wechselnde Build-Quellen oder verlorene Herkunftsnachweise sichtbar. Die offizielle Abschlussmeldung stammt bereits vom 6. November. Der praktische Gewinn ist die bessere Frage vor einer Installation: Woher kam genau dieses Wheel oder Quellarchiv, und passt der veröffentlichte Weg zum bisherigen Projekt?",
+      "takeaway": "Herkunft ist kein Code-Audit. Full Provenance bedeutet hier, dass alle Release-Dateien Attestierungen besitzen, nicht dass PyPI die Software auf Fehlerfreiheit geprüft hat. Umgekehrt heißt No Provenance nicht automatisch Schadsoftware. Auch Änderungen am Repository oder Build-Workflow können legitime Gründe haben und sollten im Projektkontext geprüft werden. Die OpenSSF-Fallstudie erklärt genau dieses Gestaltungsproblem: Nutzer können positive Häkchen leicht als umfassendes Gütesiegel missverstehen. Die Hinweise helfen bei der Prüfung, ersetzen sie aber nicht. Hier wurde kein Paket installiert und keine einzelne Veröffentlichung unabhängig auditiert.",
+      "url": "https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/",
+      "cta": "Herkunftssignale und ihre Grenzen lesen",
+      "source": "Quellen: offizieller PyPI-Blog, Abschlussmeldung vom 6.11.2026; OpenSSF Attestations Style Guide, PyPI-Fallstudie; ergänzend Help Net Security vom 9.11. Gelesen am 14.11.2026, heute diskutierter älterer Produktfund, kein heutiger Start behauptet."
+    },
+    {
+      "category": "Informatik · Compiler",
+      "short": "C3 0.8.6",
+      "title": "C3 0.8.6 gibt Bibliotheken Versionen und Prüfsummen und zieht Typregeln strenger.",
+      "body": "Der heute diskutierte C3-Release 0.8.6 räumt bei Bibliotheken auf: Quellbibliotheken lassen sich als .c3l-Paket bauen und über einfache Repositories mit Versionsangaben und SHA-256-Prüfsummen beziehen. Eine Abhängigkeit kann zusätzlich auf eine konkrete Prüfsumme festgelegt werden. Der Abruf bleibt bewusst eine eigene Aktion; project fetch ohne Argumente listet fehlende Bibliotheken zunächst nur auf. Die GitHub-Version wurde schon am 11. November veröffentlicht. Interessant ist die Kombination aus einfacher Paketierung und sichtbarer Kontrolle darüber, was tatsächlich heruntergeladen wird.",
+      "takeaway": "Prüfsummen sichern die Übereinstimmung mit dem erwarteten Inhalt, nicht dessen Vertrauenswürdigkeit. Der Projektbericht meldet kleinere Safe-Mode-Binaries durch wiederverwendeten Panic-Code; die genannte Größenersparnis ist eine Autorenangabe und kein hier reproduzierter Benchmark. Beim Upgrade können Änderungen nötig sein: else if verlangt nun auch bei einer Anweisung Klammern, mehrere implizite Typumwandlungen werden abgelehnt und eigene Panic-Handler brauchen die neue Signatur. Der C-Backend bleibt experimentell. Deshalb nicht nur eine Versionsnummer austauschen, sondern Migrationshinweise und eigene Builds prüfen. Hier wurde keine Toolchain installiert, kein Projekt umgestellt und nichts kompiliert.",
+      "url": "https://c3-lang.org/blog/c3_0_8_6_fetching_libraries/",
+      "cta": "Bibliotheken und Migrationshinweise lesen",
+      "source": "Quellen: C3-Projektblog zu 0.8.6 und GitHub-Release v0.8.6 vom 11.11.2026, gelesen am 14.11.2026. Heute diskutierter älterer Release; Größen- und Geschwindigkeitsangaben nur vom Projekt, keine eigene Messung."
     }
   ],
-  "notes": "Stand: 14.11.2026, 15:33 Uhr Berlin. Vier recherchierte Catches. Originalquellen und Datierung gelesen: ggml und Cell Borders vom 13.11., PostScript-Artikel laut Archiv vom 12.11., Smartphone-Bericht mit November datiert; heute diskutiert. Keine Installation, Bibliotheks- oder Geräteänderung, Patch- oder Interpreter-Ausführung und keine eigene Performance-, Sicherheits-, Kamera- oder Kompatibilitätsmessung. Preisvergleiche nur als begrenzte Autorenangaben eingeordnet."
+  "notes": "Stand: 14.11.2026, 19:33 Uhr Berlin. Sechs recherchierte Catches. Ältere Quellen ausdrücklich datiert: ggml und Cell Borders 13.11., PostScript 12.11., C3-Release 11.11., PyPI-Abschlussmeldung 6.11.; Smartphone-Bericht mit November datiert. Heute diskutierte Funde, keine pauschalen Sicherheits- oder Performanceversprechen. Keine Installation, Bibliotheks-, Toolchain- oder Geräteänderung, Patch- oder Interpreter-Ausführung und keine eigenen Benchmarks, Audits, Kamera- oder Kompatibilitätstests."
 }
