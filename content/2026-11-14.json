@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-14",
+  "title": "Daily Hob vom Samstag, 14.11.",
+  "headline": "Stabile Fundamente. Mehr Platz zwischen den Zeilen.",
+  "teaser": "2 Samstags-Catches: ggml und llama.cpp erreichen 1.0; ein Terminal-Entwurf zeichnet Rahmen zwischen die Zellen.",
+  "intro": "Lokale KI braucht verlässliche Schnittstellen. Gute Terminal-Oberflächen brauchen Platz. Zwei heute diskutierte Funde setzen genau dort an: ein Versionsversprechen für die Basis vieler KI-Werkzeuge und ein noch experimenteller Weg, Rahmen nicht länger als Text zu behandeln.",
+  "hero": "hero.jpg",
+  "heroAlt": "Offene geometrische Würfel bilden ein kleines Fundament; feine schwarze Linien verbinden sie mit einem schwebenden Zellraster auf hellem Papier, mit Gelb und Mint als Akzenten.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "KI · Open Source",
+      "short": "ggml 1.0",
+      "title": "ggml und llama.cpp erreichen 1.0 und machen Schnittstellenbrüche sichtbarer.",
+      "body": "Die am Freitag veröffentlichte und heute auf Hacker News diskutierte Version 1.0.0 betrifft gleich zwei Grundlagen lokaler KI: llama.cpp für LLM-Inferenz in C/C++ und die darunterliegende Tensorbibliothek ggml. Der wichtigste Punkt ist weniger ein einzelner Geschwindigkeitsrekord als ein Vertrag mit den Entwicklern, die darauf aufbauen. Laut Projekt sollen inkompatible Änderungen an den Bibliotheksschnittstellen künftig durch eine neue Hauptversion erkennbar werden. Wer eigene lokale KI-Produkte baut, kann solche Grenzen damit bewusster in Updates und Paketierung einplanen.",
+      "takeaway": "Die Projektankündigung ordnet öffentliche C-API-Brüche einer Hauptversion zu, kompatible Erweiterungen einer Nebenversion und Fehlerkorrekturen ohne API-Änderung einer Patchversion. Das ist kein Versprechen, dass nie mehr etwas bricht. Der ggml-Release entfernt bereits veraltete APIs und alte DIAG_MASK-Operationen; auch das RPC-Protokoll wurde angehoben. Daneben stehen zahlreiche Backend-Änderungen für unterschiedliche Hardware in den Release-Notizen. Daraus folgt kein pauschaler Speedup auf jedem Rechner. Vor einem Bibliotheksupdate bleiben die konkrete API, passende RPC-Gegenstellen und eigene Tests entscheidend. Hier wurde nichts gebaut, installiert oder gemessen.",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "cta": "Versionsregeln und Bibliotheksgrenzen lesen",
+      "source": "Quellen: ggml-org auf Hugging Face, Ankündigung vom 13.11.2026, sowie ggml Release v1.0.0 und Projekt-README; gelesen am 14.11.2026. Heute diskutierter Freitagsrelease, kein heutiges Releasedatum behauptet."
+    },
+    {
+      "category": "Design · Dev-Tools",
+      "short": "Cell Borders",
+      "title": "Terminal-Rahmen müssen keine Zeichen sein: Cell Borders zeichnet auf den Zellkanten.",
+      "body": "Ratatui-Maintainer Joshka zeigt in einem Beitrag vom Freitag einen reizvollen Terminal-Entwurf: Rahmen werden als Eigenschaft der Textzellen gespeichert und auf deren Kanten gezeichnet. Sie belegen also nicht selbst eine ganze Zeile oder Spalte. Die Demos zeigen Tabs direkt am Panelrand, einzeilige umrandete Buttons und Gitterlinien zwischen Diagrammzellen. Dazu kommt ein kleiner Alltagsgewinn: Beim Kopieren des Texts wandern die Rahmen nicht als störende Linienzeichen mit. Der Vorschlag wird heute weiter diskutiert und ist bereits als Ghostty-Patch samt Ratatui-Demos umgesetzt.",
+      "takeaway": "Das ist ein Protokollentwurf, kein allgemein verfügbarer Terminalstandard. Die als Version 1 bezeichnete Spezifikation soll laut Autor ausdrücklich wie ein früher Entwurf gelesen werden. Eine Fähigkeitsabfrage erlaubt den Rückfall auf normale Rahmenzeichen, wenn Unterstützung fehlt; auch Multiplexer wie tmux müssen die Sequenzen passend behandeln, statt sie blind durchzureichen. Der Autor hat bisher nur auf macOS gebaut und ausgeführt, GTK und OpenGL sind ungetestet. Speicher- und Renderkosten werden diskutiert, aber noch nicht ordentlich gebenchmarkt. Die Demo-Bilder wurden angesehen, kein Patch hier gebaut und keine eigene Kompatibilitäts- oder Performancemessung durchgeführt.",
+      "url": "https://www.joshka.net/cell-borders/",
+      "cta": "Demos, Protokoll und offene Fragen ansehen",
+      "source": "Quellen: Joshka.net, Beitrag vom 13.11.2026, sowie die verlinkten Cell-Borders-Zweige von Ghostty und Ratatui; gelesen am 14.11.2026. Heute diskutierter Entwurf, keine fertige Unterstützung in regulären Terminal-Releases behauptet."
+    }
+  ],
+  "notes": "Stand: 14.11.2026, 11:33 Uhr Berlin. Zwei recherchierte Catches. Beide Originalbeiträge stammen vom 13.11. und werden heute diskutiert. Release- und API-Grenzen sowie Protokollentwurf und Plattformlücken getrennt benannt. Keine Installation, Bibliotheksänderung, Patch-Ausführung oder eigene Performance- und Kompatibilitätsmessung."
+}
