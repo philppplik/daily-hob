@@ -1,9 +1,9 @@
 {
   "date": "2026-11-14",
   "title": "Daily Hob vom Samstag, 14.11.",
-  "headline": "Stabile Fundamente. Mehr Platz zwischen den Zeilen.",
-  "teaser": "2 Samstags-Catches: ggml und llama.cpp erreichen 1.0; ein Terminal-Entwurf zeichnet Rahmen zwischen die Zellen.",
-  "intro": "Lokale KI braucht verlässliche Schnittstellen. Gute Terminal-Oberflächen brauchen Platz. Zwei heute diskutierte Funde setzen genau dort an: ein Versionsversprechen für die Basis vieler KI-Werkzeuge und ein noch experimenteller Weg, Rahmen nicht länger als Text zu behandeln.",
+  "headline": "Werkzeuge verstehen. Vorhandenes neu nutzen.",
+  "teaser": "4 Samstags-Catches: ggml 1.0, Cell Borders, alte Smartphones als Projektcomputer und ein kleiner PostScript-Interpreter.",
+  "intro": "Verlässliche Schnittstellen und mehr Platz im Terminal waren der Anfang. Dazu kommen ein Smartphone als bereits komplett ausgestatteter Projektcomputer und ein Sprachinterpreter, dessen Mechanik sich noch im Kopf verfolgen lässt. Vier Funde über die Frage, wie viel Werkzeug wirklich nötig ist und was man selbst verstehen kann.",
   "hero": "hero.jpg",
   "heroAlt": "Offene geometrische Würfel bilden ein kleines Fundament; feine schwarze Linien verbinden sie mit einem schwebenden Zellraster auf hellem Papier, mit Gelb und Mint als Akzenten.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://www.joshka.net/cell-borders/",
       "cta": "Demos, Protokoll und offene Fragen ansehen",
       "source": "Quellen: Joshka.net, Beitrag vom 13.11.2026, sowie die verlinkten Cell-Borders-Zweige von Ghostty und Ratatui; gelesen am 14.11.2026. Heute diskutierter Entwurf, keine fertige Unterstützung in regulären Terminal-Releases behauptet."
+    },
+    {
+      "category": "Wildcard · Hardware",
+      "short": "Altes Smartphone",
+      "title": "Kamera, GPS und Display sind schon drin: Ein altes Smartphone als Projektcomputer.",
+      "body": "Ein heute diskutierter Erfahrungsbericht von so.long.thanks.fish dreht die Bastlerfrage um: Warum Kamera, GPS, Speicher, Akku und Bildschirm einzeln an einen Einplatinencomputer hängen, wenn ein gebrauchtes Telefon das bereits mitbringt? Der Autor arbeitet an einem Kamera- und Lichtprojekt und erprobt dafür ein Redmi 13C 5G sowie ein Huawei Mate 30 5G. Beim Redmi beschreibt er entsperrten Bootloader, Root-Zugriff, Kameratests und geplantes Schlafen und Aufwachen; USB-C verbindet es mit einem eigenen Lichtcontroller. Der interessante Fund ist die Systemperspektive: Vorhandene Sensorik neu kombinieren, statt sofort eine neue Teileliste zu bestellen.",
+      "takeaway": "Das ist ein konkreter Werkstattbericht, kein allgemein besserer Raspberry-Pi-Ersatz. Die Preistabelle beruht auf beispielhaften chinesischen Gebraucht- und Zubehörangeboten aus November 2026, nicht auf hier geprüften deutschen Kaufpreisen; sie lässt unter anderem den eigenen Controller, Mobilfunktarif und Gehäuse aus. Megapixel allein beweisen keine bessere Bildqualität, der geplante direkte Kameravergleich ist noch kein Ergebnis. Gleichartige Geräte in größerer Zahl, gesunde Akkus und berechenbares Kameraverhalten nennt der Autor selbst als offene Fragen. Auch Bootloader-, Treiber- und Update-Support müssen zum konkreten Gerät passen. Keine Kaufempfehlung, kein eigener Root-, Akku-, Dauerbetriebs- oder Kameratest.",
+      "url": "https://so.long.thanks.fish/why-pi-when-i-have-an-old-phone/",
+      "cta": "Den Werkstattbericht und seine Grenzen lesen",
+      "source": "Quellen: so.long.thanks.fish, mit November 2026 datierter Erfahrungsbericht, und heutige Hacker-News-Diskussion; gelesen am 14.11.2026. Heute diskutierter Fund, kein heutiges Veröffentlichungsdatum behauptet. Preise und Tests nur Angaben des Autors."
+    },
+    {
+      "category": "Informatik · Lernfund",
+      "short": "PostScript selbstbauen",
+      "title": "Einen PostScript-Interpreter selbst schreiben und dabei der Sprache beim Denken zusehen.",
+      "body": "Beyondloom führt in einem heute diskutierten Artikel Schritt für Schritt durch einen kleinen PostScript-Interpreter in JavaScript. Statt sich zuerst auf Druckgrafik zu stürzen, konzentriert sich der Text auf den Sprachkern: Token zerlegen, Werte auf einen Operandenstapel legen, Namen im Wörterbuchstapel auflösen und Prozeduren ausführen. Aus kleinen Routinen entsteht eine interaktive Rechenschleife für Node.js oder QuickJS. Besonders schön ist der Perspektivwechsel: Eine Sprache wird nicht bloß benutzt, ihre Ausführung lässt sich an wenigen Bausteinen nachvollziehen und selbst erweitern.",
+      "takeaway": "Der Blog-Index datiert den Artikel auf den 12. November. Das ist ein älterer Lernfund, kein neues PostScript-Release. Der Interpreter setzt absichtlich nur eine kleine Teilmenge um und lässt die meiste Fehlerbehandlung weg; Zeichenketten und mehrere weitere Syntax- und Datentypdetails bleiben außen vor. Er rendert keine PostScript-Druckdokumente und ersetzt weder Ghostscript noch eine sichere Umgebung zum Verarbeiten fremder Dateien. Die Beispiele dienen dem Lernen über Stacks, Namensauflösung und dynamische Gültigkeitsbereiche. Hier wurde der Code gelesen, aber nicht ausgeführt und keine Konformitäts- oder Sicherheitsprüfung vorgenommen.",
+      "url": "https://beyondloom.com/blog/postscript.html",
+      "cta": "Den Interpreter Schritt für Schritt lesen",
+      "source": "Quellen: Beyondloom, Let’s Write a PostScript Interpreter, und Blog-Archiv mit Datum 12.11.2026; gelesen am 14.11.2026. Heute diskutierter Erklärfund, absichtlich begrenzter Lehrinterpreter."
     }
   ],
-  "notes": "Stand: 14.11.2026, 11:33 Uhr Berlin. Zwei recherchierte Catches. Beide Originalbeiträge stammen vom 13.11. und werden heute diskutiert. Release- und API-Grenzen sowie Protokollentwurf und Plattformlücken getrennt benannt. Keine Installation, Bibliotheksänderung, Patch-Ausführung oder eigene Performance- und Kompatibilitätsmessung."
+  "notes": "Stand: 14.11.2026, 15:33 Uhr Berlin. Vier recherchierte Catches. Originalquellen und Datierung gelesen: ggml und Cell Borders vom 13.11., PostScript-Artikel laut Archiv vom 12.11., Smartphone-Bericht mit November datiert; heute diskutiert. Keine Installation, Bibliotheks- oder Geräteänderung, Patch- oder Interpreter-Ausführung und keine eigene Performance-, Sicherheits-, Kamera- oder Kompatibilitätsmessung. Preisvergleiche nur als begrenzte Autorenangaben eingeordnet."
 }
