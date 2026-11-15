@@ -1,9 +1,9 @@
 {
   "date": "2026-11-15",
   "title": "Daily Hob vom Sonntag, 15.11.",
-  "headline": "Typen sichtbar machen. Formen spielerisch verstehen.",
-  "teaser": "2 Sonntags-Catches: Gawain fordert explizite Python-Typen; Semicircle Packing macht geometrische Suche sichtbar.",
-  "intro": "Ein Werkzeug verlangt mehr Klarheit im Code, das andere schafft Raum für visuelle Experimente. Gawain trennt fehlende Typangaben von falschen Typen. Ein Halbkreis-Puzzle zeigt, warum selbst gebaute Oberflächen beim Denken helfen können, auch wenn schöne Symmetrie nicht automatisch die beste Lösung liefert.",
+  "headline": "Typen, Winkel, Zahnräder. Ideen werden sichtbar.",
+  "teaser": "4 Sonntags-Catches: Gawain, Semicircle Packing, RoPE anschaulich erklärt und eine Pendeluhr aus Getränkekartons.",
+  "intro": "Ein Sonntag für Werkzeuge, die Gedanken greifbar machen: Gawain verlangt sichtbare Typangaben, ein Halbkreis-Puzzle öffnet geometrische Suchräume, RoPE wird mit gedrehten Vektoren verständlich. Und eine Uhr aus Getränkekartons zeigt, wo digitaler Entwurf auf echte Reibung trifft.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Klammern und geordnete kleine Blöcke verbinden sich über einen gepunkteten Pfad mit Halbkreisen in einem großen Kreis; feine schwarze Geometrie auf hellem Papier mit Gelb und Mint.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://rorz.io/writing/semicircle-packing",
       "cta": "Den Weg vom Skizzieren zum Suchwerkzeug lesen",
       "source": "Quellen: Rory McMeekin, Semicircle packing, Beitrag vom 13.11.2026, und puzzles.rorz.io/semicircle-packing; gelesen und Werkzeugoberfläche angesehen am 15.11.2026. Heute diskutierter älterer Fund, keine eigene Optimierung oder Rekordprüfung."
+    },
+    {
+      "category": "KI · Informatik",
+      "short": "RoPE",
+      "title": "Wie Sprachmodelle Reihenfolge erkennen: RoPE wird endlich anschaulich.",
+      "body": "Sebastian Raschkas heute erschienener Erklärtext nimmt einen leicht übersehenen Baustein von Sprachmodellen auseinander: Woher weiß Attention, an welcher Stelle ein Wort steht? Der Weg führt von gelernten Positionsvektoren bei GPT-2 über Sinus- und Kosinusmuster zu Rotary Position Embeddings. Bei RoPE werden Zahlenpaare in Query- und Key-Vektoren abhängig von der Tokenposition gedreht; die Value-Vektoren bleiben davon unberührt. So geht der relative Abstand zweier Positionen direkt in ihre Attention-Bewertung ein. Diagramme, kleine Zahlenbeispiele und PyTorch-Code machen aus dem Kürzel einen nachvollziehbaren Mechanismus.",
+      "takeaway": "Ein guter Grundlagenfund statt eines neuen Modellversprechens. Wichtig ist Raschkas Einschränkung beim Gedankenexperiment: Gleiche Verschiebung beider Positionen erhält das Skalarprodukt nur bei festgehaltenen unrotierten Query- und Key-Vektoren. Ein echter zusätzlicher Prompt kann diese Vektoren verändern. Auch NoPE heißt nicht völlig ordnungslos: Eine kausale Maske liefert bereits implizite Reihenfolge. Hier wurden die erklärenden Grundlagenabschnitte gelesen, aber kein PyTorch-Code oder Modell ausgeführt.",
+      "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+      "cta": "Positionsvektoren und RoPE verstehen",
+      "source": "Sebastian Raschka, Understanding Positional Embeddings in Modern LLMs, 15.11.2026; Grundlagenabschnitte zu Attention, absoluten Positionen und RoPE gelesen. Kein eigener Modelltest und keine Aussage über nicht offengelegte Modellarchitekturen."
+    },
+    {
+      "category": "Design · Wildcard",
+      "short": "Carton Clock",
+      "title": "Eine Pendeluhr aus Getränkekartons läuft länger als eine Stunde.",
+      "body": "Der Berliner Künstler Niklas Roy hat aus leeren Getränkekartons, Schaschlikspießen, Papierstrohhalmen, Schnur, Metallmuttern und viel Heißkleber ein mechanisches Uhrwerk gebaut. Nach einem ersten Versuch mit nur einem Sekundenzeiger besitzt die zweite Version auch Minuten- und Stundenanzeige. Zwei mit Claude entwickelte Browserwerkzeuge helfen bei Hemmung und Zahnrädern: Cartontick simuliert das Zusammenspiel von Anker und Hemmungsrad, Cartongears liefert Schablonen und Werkzeuge für Kartonzahnräder. Die interessante Verbindung liegt zwischen digitalem Entwurf und einem Material, dessen Reibung, Klebbarkeit und Genauigkeit jede schöne Zeichnung sofort auf die Probe stellen.",
+      "takeaway": "Kein Präzisionszeitmesser und nicht ausschließlich Müll: Roy berichtet von etwas über einer Stunde Laufzeit, aber auch davon, dass die Uhr zu schnell geht. Zum Bau nutzt er 3D-gedruckte Hilfen; außerdem hält ein normales Stativ das Werk. Diese Hilfen sind keine Kartonteile der Uhr. Der heute diskutierte Projektbericht ist mit Berlin, 2026 beschriftet, nennt aber keinen genauen Veröffentlichungstag. Kein eigener Nachbau oder Laufzeittest.",
+      "url": "https://www.niklasroy.com/carton-clock/",
+      "cta": "Uhrwerk, Fehlversuche und Bauhilfen ansehen",
+      "source": "Niklas Roy, Carton Clock, Projektjahr 2026, heute diskutierter Fund; vollständiger Baubericht sowie Cartontick- und Cartongears-Oberflächentexte gelesen am 15.11.2026. Laufzeit und Genauigkeitsgrenzen laut Erbauer, nicht selbst gemessen."
     }
   ],
-  "notes": "Stand: 15.11.2026, 11:33 Uhr Berlin. Zwei recherchierte Catches. Gawain-Regeln und Konfiguration gelesen, Semicircle-Bericht vom 13.11. als älterer Fund datiert und Browseroberfläche tatsächlich angesehen. Keine Installation, Code- oder Konfigurationsänderung, kein eigener Benchmark, Typprüferlauf, Optimierungsversuch oder mathematischer Beweis."
+  "notes": "Stand: 15.11.2026, 15:33 Uhr Berlin. Vier recherchierte Catches. Gawain-Regeln und Konfiguration gelesen; Semicircle-Beitrag vom 13.11. als älterer Fund datiert und Oberfläche tatsächlich angesehen. Neu: Raschkas heutiger Grundlagenartikel zu Positionsinformationen und Roys heute diskutierter Carton-Clock-Bericht aus dem Projektjahr 2026. Keine Installation, Code- oder Konfigurationsänderung, kein eigener Benchmark, Typprüfer- oder Modelllauf, Optimierungsversuch, Nachbau oder mathematischer Beweis."
 }
