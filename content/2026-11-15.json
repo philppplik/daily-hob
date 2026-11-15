@@ -1,9 +1,9 @@
 {
   "date": "2026-11-15",
   "title": "Daily Hob vom Sonntag, 15.11.",
-  "headline": "Typen, Winkel, Zahnräder. Ideen werden sichtbar.",
-  "teaser": "4 Sonntags-Catches: Gawain, Semicircle Packing, RoPE anschaulich erklärt und eine Pendeluhr aus Getränkekartons.",
-  "intro": "Ein Sonntag für Werkzeuge, die Gedanken greifbar machen: Gawain verlangt sichtbare Typangaben, ein Halbkreis-Puzzle öffnet geometrische Suchräume, RoPE wird mit gedrehten Vektoren verständlich. Und eine Uhr aus Getränkekartons zeigt, wo digitaler Entwurf auf echte Reibung trifft.",
+  "headline": "Ideen sichtbar machen. Systeme genauer verstehen.",
+  "teaser": "6 Sonntags-Catches: Gawain, Semicircle Packing, RoPE, Carton Clock, db-branch und lucyNES.",
+  "intro": "Vom sichtbaren Typ bis zum präzisen Takt: Gawain, ein Halbkreis-Puzzle und ein RoPE-Erklärtext öffnen unterschiedliche Denkwerkzeuge. Eine Kartonuhr macht Reibung greifbar, Datenbankzweige schaffen Platz zum Ausprobieren. Und ein NES-Emulator erinnert daran, wie viel Arbeit in den letzten Prozent Genauigkeit steckt.",
   "hero": "hero.jpg",
   "heroAlt": "Abstrakte Klammern und geordnete kleine Blöcke verbinden sich über einen gepunkteten Pfad mit Halbkreisen in einem großen Kreis; feine schwarze Geometrie auf hellem Papier mit Gelb und Mint.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://www.niklasroy.com/carton-clock/",
       "cta": "Uhrwerk, Fehlversuche und Bauhilfen ansehen",
       "source": "Niklas Roy, Carton Clock, Projektjahr 2026, heute diskutierter Fund; vollständiger Baubericht sowie Cartontick- und Cartongears-Oberflächentexte gelesen am 15.11.2026. Laufzeit und Genauigkeitsgrenzen laut Erbauer, nicht selbst gemessen."
+    },
+    {
+      "category": "Open Source · Dev-Tools",
+      "short": "db-branch",
+      "title": "Datenbanken verzweigen, statt für jeden Test alles zu kopieren.",
+      "body": "Das heute vorgestellte db-branch will Datenbankkopien für Pull Requests, Migrationstests und KI-Agenten kurzlebig machen. Eine Basis liegt als ZFS-Dataset vor; ein Zweig entsteht als Copy-on-Write-Klon eines Snapshots und startet einen eigenen MySQL- oder PostgreSQL-Server. Änderungen lassen sich verwerfen, Checkpoints wiederherstellen und Zweige mit einer Ablaufzeit versehen. CLI, REST-Schnittstelle, Webkonsole und MCP-Zugang greifen auf dieselbe API zu. Der Reiz liegt weniger in einer neuen Datenbank als darin, bestehende Engines mit Dateisystem-Snapshots in einen Wegwerf-Workflow einzubetten.",
+      "takeaway": "Ein früher Beta-Fund, keine sofortige Produktionsfreigabe: Benötigt werden Ubuntu und ZFS, APIs können sich noch ändern. Der Apache-2.0-Kern ist offen, zusätzliche Module etwa für Auth/SSO, Audit, Historie und Diff sind separat kostenpflichtig und geschlossen. Ein geklonter Datenbestand ist außerdem nicht automatisch anonymisiert. Die genannten Sekundenwerte stammen aus dem Testcluster des Projekts; hier wurden weder Installation noch Branch-Erstellung, Isolation oder Leistung geprüft.",
+      "url": "https://github.com/db-branch/db-branch",
+      "cta": "Architektur, Voraussetzungen und Modulgrenzen lesen",
+      "source": "db-branch/db-branch README, docs/modules.md, SECURITY.md und Apache-2.0-Lizenz, gelesen am 15.11.2026. Heute vorgestellter Beta-Projektfund; Produkt- und Geschwindigkeitsangaben vom Projekt, keine eigene Messung oder Sicherheitsprüfung."
+    },
+    {
+      "category": "Informatik · Open Source",
+      "short": "lucyNES",
+      "title": "Ein NES-Emulator zeigt, warum die letzten zehn Prozent so lange dauern.",
+      "body": "lucyNES ist ein in Odin geschriebener NES-Emulator mit Debugger, Speicherständen und Controller-Unterstützung. Spannender als die Featureliste ist der heute wieder diskutierte Entwicklungsbericht: Erste Spiele laufen relativ schnell, doch genaue Emulation verlangt das richtige Zusammenspiel von CPU, Grafikchip und den Schaltungen im Spielmodul. Diese sogenannten Mapper erweitern die Konsole um eigenes Verhalten und Speicher. Lucy beschreibt rund sieben Monate Arbeit und erklärt, warum ein scheinbar kleines Timing-Detail darüber entscheidet, ob ein Spiel funktioniert. Dazu kommen bewusst gewählte Speicherstrategien und die Tücken von Integer-Typen in Odin.",
+      "takeaway": "Bewusst ein älterer Erfahrungsfund: Die Autorin pausierte das Projekt im Januar 2025; ihr Blog verlinkte den Bericht am 10. Februar 2025. Obwohl die Projektübersicht Finished anzeigt, benennt der Text klare Lücken: unvollständigen Ton, einen fehlenden DMC-Audiokanal und Mapperfehler bei manchen Spielen. Kein heutiger Release und kein universelles Kompatibilitätsversprechen. Hier wurde weder ein Emulator gebaut noch ein Spiel oder Test-ROM ausgeführt.",
+      "url": "https://lucypero.com/lucynes.html",
+      "cta": "Über Timing, Mapper und die letzten Prozent lesen",
+      "source": "Lucy, lucyNES-Projektbericht und Blogeintrag LucyNES - I made an emulator in Odin! vom 10.02.2025, gelesen am 15.11.2026. Heute diskutierter älterer Fund; Kompatibilitäts- und Entwicklungsangaben der Autorin, keine eigene Emulation."
     }
   ],
-  "notes": "Stand: 15.11.2026, 15:33 Uhr Berlin. Vier recherchierte Catches. Gawain-Regeln und Konfiguration gelesen; Semicircle-Beitrag vom 13.11. als älterer Fund datiert und Oberfläche tatsächlich angesehen. Neu: Raschkas heutiger Grundlagenartikel zu Positionsinformationen und Roys heute diskutierter Carton-Clock-Bericht aus dem Projektjahr 2026. Keine Installation, Code- oder Konfigurationsänderung, kein eigener Benchmark, Typprüfer- oder Modelllauf, Optimierungsversuch, Nachbau oder mathematischer Beweis."
+  "notes": "Stand: 15.11.2026, 19:34 Uhr Berlin. Sechs recherchierte Catches. Semicircle-Bericht vom 13.11. und lucyNES-Erfahrungsbericht mit Blogverweis vom 10.02.2025 sind als ältere Funde datiert; Carton Clock nennt Projektjahr 2026 ohne genauen Veröffentlichungstag. Gawain-Regeln, RoPE-Grundlagen, Uhr-Baubericht und db-branch-Dokumentation gelesen, Semicircle-Oberfläche tatsächlich angesehen. Keine Installation, Konfigurationsänderung, eigener Benchmark, Typprüfer-, Modell- oder Emulatorlauf, Datenbanktest, Optimierungsversuch, Nachbau oder mathematischer Beweis."
 }
