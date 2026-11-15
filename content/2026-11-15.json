@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-15",
+  "title": "Daily Hob vom Sonntag, 15.11.",
+  "headline": "Typen sichtbar machen. Formen spielerisch verstehen.",
+  "teaser": "2 Sonntags-Catches: Gawain fordert explizite Python-Typen; Semicircle Packing macht geometrische Suche sichtbar.",
+  "intro": "Ein Werkzeug verlangt mehr Klarheit im Code, das andere schafft Raum für visuelle Experimente. Gawain trennt fehlende Typangaben von falschen Typen. Ein Halbkreis-Puzzle zeigt, warum selbst gebaute Oberflächen beim Denken helfen können, auch wenn schöne Symmetrie nicht automatisch die beste Lösung liefert.",
+  "hero": "hero.jpg",
+  "heroAlt": "Abstrakte Klammern und geordnete kleine Blöcke verbinden sich über einen gepunkteten Pfad mit Halbkreisen in einem großen Kreis; feine schwarze Geometrie auf hellem Papier mit Gelb und Mint.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Open Source · Dev-Tools",
+      "short": "Gawain",
+      "title": "Gawain fragt zuerst, ob Python-Typen dastehen, und erst danach, ob sie stimmen.",
+      "body": "Das heute auf Hacker News vorgestellte Gawain ergänzt Python-Typprüfer um eine bewusst strengere Frage: Sind Variablen, Parameter, Rückgaben und Klassenattribute überhaupt mit Typen beschrieben? Erst wenn diese Anwesenheitsprüfung besteht, laufen ty oder alternativ pyrefly über dieselben Dateien. Der Unterschied zu bloßer Typinferenz ist Absicht: Was sich ein Werkzeug herleiten kann, soll an ausgewählten Stellen trotzdem ausdrücklich im Code stehen. Das in Rust geschriebene, MIT-lizenzierte Projekt lässt sich auch als reine Annotationsprüfung mit --no-types einsetzen.",
+      "takeaway": "Nicht vom Titel All Variables täuschen lassen: Im Standardmodus obvious dürfen etwa offensichtliche, später nicht neu gebundene Werte ohne Annotation bleiben; strict fordert bei normalen Zuweisungen mehr. Daneben gibt es dokumentierte Ausnahmen, etwa für Schleifen- und Entpackziele. Das ist eine Stilentscheidung, kein Beweis für bessere Software. ty ist laut Projekt noch Beta, und die Geschwindigkeitstabelle misst nur den Lauf ohne nachgelagerten Typprüfer. Der pre-commit-Hook baut aus Quellen und braucht eine passende Rust-Toolchain; über Dateigrenzen prüft er bei aufgeteilten Läufen nicht zwangsläufig den ganzen Projektkontext. Hier wurde nichts installiert, kein Repository umgestellt und kein Benchmark ausgeführt.",
+      "url": "https://github.com/matheuzgomes/gawain",
+      "cta": "Regeln, Modi und Prüferwahl ansehen",
+      "source": "Quellen: matheuzgomes/gawain README, docs/rules.md, docs/configuration.md und MIT-Lizenz, gelesen am 15.11.2026. Heute vorgestellter Projektfund, kein heutiger Erst-Release oder eigener Geschwindigkeitstest behauptet."
+    },
+    {
+      "category": "Design · Wildcard",
+      "short": "Semicircle Packing",
+      "title": "15 Halbkreise, ein enger Kreis: Ein Puzzle wird zum Werkzeug fürs eigene Denken.",
+      "body": "Rory McMeekin beschreibt in einem Beitrag vom 13. November, der heute diskutiert wird, seinen Weg vom Skizzieren zum eigenen Geometriewerkzeug. Die Aufgabe: 15 gleiche Halbkreise so in einem Kreis anordnen, dass dessen Radius möglichst klein wird. Zunächst helfen wiederverwendbare Formen im Grafikeditor, dann entsteht mit Codex ein Browserwerkzeug mit Fächern, Rotation und Neigung. Tighten sucht innerhalb solcher Fächer, Relax löst die starre Gruppierung für asymmetrische Verbesserungen. Der reizvolle Teil ist nicht nur ein kleinerer Radius, sondern eine Oberfläche, mit der man eine Idee überhaupt erst untersuchen kann.",
+      "takeaway": "Der Browsereditor wurde für diese Ausgabe tatsächlich geöffnet und visuell angesehen: Halbkreise, Fächereinstellungen, Radius- und Überlappungsanzeige sind vorhanden. Das ist keine eigene Validierung des Suchalgorithmus. Der Startzustand enthält Überlappungen und ist damit nicht schon eine gültige Packung. Die im Bericht genannten besseren Radien und Ranglistenplätze sind Aussagen des Autors zu seinem damaligen Stand, kein hier bestätigter aktueller Rekord und kein mathematischer Optimalitätsbeweis. Der Fund taugt als geometrischer Spielplatz und Erfahrungsbericht über visuelles Problemlösen, nicht als fertiger Beweis oder allgemeiner Leistungsnachweis für ein KI-Modell.",
+      "url": "https://rorz.io/writing/semicircle-packing",
+      "cta": "Den Weg vom Skizzieren zum Suchwerkzeug lesen",
+      "source": "Quellen: Rory McMeekin, Semicircle packing, Beitrag vom 13.11.2026, und puzzles.rorz.io/semicircle-packing; gelesen und Werkzeugoberfläche angesehen am 15.11.2026. Heute diskutierter älterer Fund, keine eigene Optimierung oder Rekordprüfung."
+    }
+  ],
+  "notes": "Stand: 15.11.2026, 11:33 Uhr Berlin. Zwei recherchierte Catches. Gawain-Regeln und Konfiguration gelesen, Semicircle-Bericht vom 13.11. als älterer Fund datiert und Browseroberfläche tatsächlich angesehen. Keine Installation, Code- oder Konfigurationsänderung, kein eigener Benchmark, Typprüferlauf, Optimierungsversuch oder mathematischer Beweis."
+}
