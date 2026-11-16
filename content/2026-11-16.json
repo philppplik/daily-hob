@@ -4,7 +4,7 @@
   "headline": "Die eigene Handschrift. Der kürzere Datenweg.",
   "teaser": "2 Montags-Catches: Ductus macht Handschrift zum Font; Atuins Packfiles erklären schnelleren verschlüsselten Sync.",
   "intro": "Ein Werkzeug beginnt beim einzelnen Strich, das andere beim Stapeln vieler Einträge. Ductus lässt eine Schrift Zeichen für Zeichen wachsen. Atuins Packfile-Bericht zeigt, warum Komprimieren vor dem Verschlüsseln stattfinden muss und weshalb eine große Geschwindigkeitszahl mehrere Verbesserungen zusammenfasst.",
-  "hero": "/assets/2026-11-16/hero.jpg",
+  "hero": "hero.jpg",
   "heroAlt": "Lose schwarze Kurven werden auf hellem Papier zu geordneten Kacheln und kompakten Blöcken; eine abstrakte Verengung verbindet sie, mit gelbem und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
   "sections": [
