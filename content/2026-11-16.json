@@ -1,9 +1,9 @@
 {
   "date": "2026-11-16",
   "title": "Daily Hob vom Montag, 16.11.",
-  "headline": "Handschrift, Karten, Körperechos. Daten bekommen Form.",
-  "teaser": "4 Montags-Catches: Ductus, Atuin Packfiles, PMTiles-Karten und EchoMotion-Körpertracking per Smartwatch.",
-  "intro": "Von selbst gezeichneten Buchstaben über verschlüsselte Datenpakete bis zur Landkarte aus einer einzigen Datei: Gute Schnittstellen verändern, was sich mit Daten anfangen lässt. EchoMotion ergänzt eine Forschungsfrage: Wie viel Körperhaltung lässt sich aus den Schallechos einer Smartwatch schätzen?",
+  "headline": "Schrift, Zeit und Schach. Daten brauchen eine Sprache.",
+  "teaser": "6 Montags-Catches: Ductus, Atuin Packfiles, PMTiles, EchoMotion, Jiff 1.0 und Schach aus 512 KiB.",
+  "intro": "Eine Handschrift wird zum Font, verschlüsselte Historie zum Datenpaket, eine Landkarte zur Archivdatei. EchoMotion hört Körperbewegungen, Jiff unterscheidet Uhrzeit und Zeitpunkt, Golden Board versucht Schach ohne gemeinsame Wörter zu erklären. Sechs Wege, Daten verständlich und benutzbar zu machen.",
   "hero": "hero.jpg",
   "heroAlt": "Lose schwarze Kurven werden auf hellem Papier zu geordneten Kacheln und kompakten Blöcken; eine abstrakte Verengung verbindet sie, mit gelbem und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://news.cornell.edu/stories/2026/11/researchers-track-whole-body-movement-just-smartwatch",
       "cta": "Studienaufbau, Messwerte und Grenzen lesen",
       "source": "Cornell Chronicle, Patricia Waldron, 11.11.2026; EchoMotion-Autorenabstract von Jiwan Kim sowie ACM-Veröffentlichungsdaten (30.09.2026), gelesen am 16.11.2026. Heute diskutierter älterer Forschungsfund, keine verfügbare Serienfunktion oder eigene Validierung behauptet."
+    },
+    {
+      "category": "Open Source · Rust",
+      "short": "Jiff 1.0",
+      "title": "Morgen ist nicht immer 24 Stunden später: Jiff erreicht Version 1.0.",
+      "body": "Andrew Gallants Rust-Bibliothek Jiff hat am 15. November Version 1.0 erreicht; der ausführliche API-Rundgang wird heute diskutiert. Ihr nützlicher Grundgedanke: Ein Datum auf dem Kalender, eine Uhrzeit vor Ort und ein eindeutiger Zeitpunkt sind verschiedene Dinge. Jiff verbindet sie über die Regeln einer Zeitzone. So bleibt morgen zur gleichen Uhrzeit auch über eine Zeitumstellung hinweg sinnvoll, statt stur 24 Stunden zu addieren. Neben Kalenderarithmetik gehören Parsen, Formatieren und der Umgang mit doppelt vorkommenden oder übersprungenen Uhrzeiten dazu.",
+      "takeaway": "Die Eins ist vor allem ein Stabilitätsversprechen des Autors für die öffentliche API, keine Garantie ohne Ausnahmen. Beim Wechsel von 0.2 wurde etwa Zoned in ZonedDateTime umbenannt; weitere inkompatible Änderungen stehen im Changelog. Version 1.0 benötigt mindestens Rust 1.85. Für reine Laufzeitmessungen empfiehlt selbst der Rundgang weiterhin die monotone Standardbibliotheksuhr Instant. Blog, Changelog und Paketdaten gelesen, aber kein Projekt migriert, kompiliert oder selbst vermessen.",
+      "url": "https://burntsushi.net/jiff/",
+      "cta": "Den Jiff-1.0-Rundgang und die Zeittypen verstehen",
+      "source": "Andrew Gallant, A datetime library for Rust, 15.11.2026; Jiff-CHANGELOG 1.0.0 und crates.io-Paketdaten, gelesen am 16.11.2026. Release vom Vortag, heute diskutiert; API-Zusage laut Autor, kein eigener Migrationstest."
+    },
+    {
+      "category": "Wildcard · Informatik",
+      "short": "Golden Board",
+      "title": "512 KiB sollen Schach erklären, ohne ein einziges gemeinsames Wort.",
+      "body": "Golden Board von Artem Legotin ist ein schönes Gedankenexperiment für Schnittstellendesign: Eine Folge aus 4.194.304 Bits lässt sich als Quadrat mit 2.048 mal 2.048 Zellen lesen. Eine Einleitung aus 32 Bildtafeln führt vom Zählen und binären Zahlen über Byte-Reihenfolge und Prüfsummen zur eigentlichen Nachricht. Dahinter liegen bildhafte Schachlektionen, Übungen mit Rückmeldung und 64 vollständige Partien. Die Nachricht enthält Daten für ein selbst zu schreibendes Leseprogramm, keinen ausführbaren Decoder. Der heute diskutierte Leitfaden zeigt, wie diese Schichten aufeinander aufbauen.",
+      "takeaway": "Selbsterklärend ist hier ein Entwurfsziel mit Voraussetzungen: Empfänger müssen zählen, Muster erkennen und einfache Programme schreiben können. Legotin beschreibt Modellversuche, trennt aber das Rekonstruieren von Bytes vom tatsächlichen Verstehen. Weil Sprachmodelle Schach schon kennen, beweisen richtige Antworten keinen Lernerfolg durch diese Nachricht. Auch die Lizenz ist wichtig: Code und Inhalte sind nur nichtkommerziell frei nutzbar; kommerzielle Nutzung braucht laut Projekt schriftliche Erlaubnis. Leitfaden und README gelesen, keine Bits selbst decodiert oder Versuche wiederholt. Ein genauer Veröffentlichungstag des Leitfadens ist nicht belegt.",
+      "url": "https://artemlegotin.com/golden-board/",
+      "cta": "Vom Bitmuster zur Schachlektion mitlesen",
+      "source": "Artem Legotin, Golden Board: teaching chess without a shared language, sowie Projekt-README und Lizenzübersicht auf GitHub, gelesen am 16.11.2026. Heute diskutierter Projektfund ohne belegten Release-Tag; Autorversuche, kein eigener Verständlichkeits- oder Decodiertest."
     }
   ],
-  "notes": "Stand: 16.11.2026, 15:34 Uhr Berlin. Vier recherchierte Catches. Ductus-Oberfläche tatsächlich angesehen, kein Font exportiert. Atuin-Bericht vom 25.08., Protomaps-Erfahrungsbericht vom 15.11. und Cornell-Bericht vom 11.11. ausdrücklich als ältere, heute diskutierte Funde eingeordnet. PMTiles-Dokumentation, MapLibre-Integration und EchoMotion-Autorenabstract gelesen. Keine Installation, Kontoveränderung, Synchronisation, Hostingbuchung, eigene Messung oder Datenschutzprüfung."
+  "notes": "Stand: 16.11.2026, 19:34 Uhr Berlin. Sechs recherchierte Catches. Ductus-Oberfläche tatsächlich angesehen, kein Font exportiert. Atuin-Bericht vom 25.08., Protomaps vom 15.11., Cornell vom 11.11. und Jiff 1.0 vom 15.11. als ältere, heute diskutierte Funde datiert. Golden Board ohne belegten Veröffentlichungstag; nichtkommerzielle Lizenz und Grenzen der Modellversuche benannt. Quellen und Dokumentation gelesen, keine Installation, Migration, Kontoveränderung, Synchronisation, Hostingbuchung, eigene Messung oder Datenschutzprüfung."
 }
