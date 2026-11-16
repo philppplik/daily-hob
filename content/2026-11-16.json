@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-16",
+  "title": "Daily Hob vom Montag, 16.11.",
+  "headline": "Die eigene Handschrift. Der kürzere Datenweg.",
+  "teaser": "2 Montags-Catches: Ductus macht Handschrift zum Font; Atuins Packfiles erklären schnelleren verschlüsselten Sync.",
+  "intro": "Ein Werkzeug beginnt beim einzelnen Strich, das andere beim Stapeln vieler Einträge. Ductus lässt eine Schrift Zeichen für Zeichen wachsen. Atuins Packfile-Bericht zeigt, warum Komprimieren vor dem Verschlüsseln stattfinden muss und weshalb eine große Geschwindigkeitszahl mehrere Verbesserungen zusammenfasst.",
+  "hero": "/assets/2026-11-16/hero.jpg",
+  "heroAlt": "Lose schwarze Kurven werden auf hellem Papier zu geordneten Kacheln und kompakten Blöcken; eine abstrakte Verengung verbindet sie, mit gelbem und mintfarbenem Akzent.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Design · Werkzeug",
+      "short": "Ductus",
+      "title": "Ductus macht aus selbst gezeichneten Zeichen eine eigene Schrift.",
+      "body": "Ductus führt im Browser durch die eigene Handschrift: ein kleines a zeichnen, die Vorschau im Wortkontext ansehen, zum nächsten Zeichen wechseln. Die Übersicht bietet Klein- und Großbuchstaben, Ziffern und Satzzeichen. Statt erst einen kompletten Zeichensatz fertigstellen zu müssen, lässt sich laut Exportdialog schon nach einem Zeichen eine Schrift herunterladen; mit jedem weiteren wächst sie. Die Oberfläche nennt Maus, Trackpad oder Stift als Eingabe. Dazu gibt es Rückgängig, Löschen und einen Öffnen-Dialog für bereits mit Ductus erzeugte Fonts.",
+      "takeaway": "Die Oberfläche wurde für diese Ausgabe tatsächlich geöffnet und visuell angesehen, einschließlich Zeichenübersicht und Exportdialog. Es wurde aber weder eine eigene Schrift gezeichnet noch eine Datei exportiert oder installiert. Der Hinweis, dass Buchstaben auf diesem Gerät bleiben und eine geöffnete Datei nicht hochgeladen wird, stammt aus der Oberfläche und ist kein eigener Datenschutz-Audit. Der Öffnen-Dialog ist ausdrücklich auf Ductus-Fonts beschränkt; ein genauer Veröffentlichungstag ist hier nicht belegt.",
+      "url": "https://ductus.sorenblank.com/",
+      "cta": "Die eigene Schrift Zeichen für Zeichen anlegen",
+      "source": "Ductus von sorenblank, öffentliche Browseroberfläche samt Zeichenübersicht und Exportdialog angesehen am 16.11.2026. Heute diskutierter Werkzeugfund, kein behaupteter heutiger Release; keine eigene Export-, Installations- oder Datenschutzprüfung."
+    },
+    {
+      "category": "Open Source · Informatik",
+      "short": "Atuin Packfiles",
+      "title": "Erst bündeln und komprimieren, dann verschlüsseln: Atuins kürzerer Sync-Weg.",
+      "body": "Ein heute wieder diskutierter Atuin-Bericht vom 25. August erklärt ein schönes Problem ende-zu-ende-verschlüsselter Synchronisation: Der Server kann die Shell-Historie nicht im Klartext sehen und deshalb auch nicht sinnvoll nachträglich bündeln oder komprimieren. Atuin lässt das stattdessen den Client machen. Mehrere Einträge werden zu einem Packfile zusammengefasst, mit zstd komprimiert und anschließend verschlüsselt. Beim Abruf zerlegt der Client das Paket wieder in einzelne Datensätze. Parallelisierte Downloads und gebündelte Datenbankeinfügungen verkürzen den Weg zusätzlich; die zugehörige Version 18.20.0 erschien bereits im August.",
+      "takeaway": "Die 32-mal-Angabe im Titel ist eine Projektmessung für den Hub, kein hier bestätigter allgemeiner Geschwindigkeitsfaktor. Der Bericht unterscheidet davon 16-mal für Selfhosting und sagt zum damaligen Stand ausdrücklich: Packfiles selbst unterstützt nur der Hub. Auch die rund 30-fache Beschleunigung im synthetischen 100.000-Einträge-Test stammt aus mehreren Änderungen zusammen; Packfiles allein werden dort mit ungefähr Faktor zwei beziffert. Das ist eine Architektur-Erklärung von August, keine Aussage über den heutigen Rollout. Hier wurde nichts installiert, synchronisiert oder gemessen.",
+      "url": "https://blog.atuin.sh/making-atuin-sync-32x-faster-with-packfiles/",
+      "cta": "Packfiles, Pipelining und Messgrenzen lesen",
+      "source": "Atuin-Team, Making Atuin sync 32x faster with packfiles, 25.08.2026, sowie GitHub-Release v18.20.0 vom 25.08.2026, gelesen am 16.11.2026. Heute diskutierter älterer Fund; Leistungszahlen und damalige Hub-/Selfhost-Grenzen laut Projekt, kein eigener Benchmark."
+    }
+  ],
+  "notes": "Stand: 16.11.2026, 11:34 Uhr Berlin. Zwei recherchierte Catches. Ductus-Oberfläche, Zeichenübersicht und Exportdialog tatsächlich angesehen; kein Font erzeugt oder exportiert. Atuin-Beitrag und zugehörige Release-Notizen als ältere Quellen vom 25.08.2026 eingeordnet, kein heutiger Release oder aktueller Rollout behauptet. Keine Installation, Kontoveränderung, Synchronisation, Messung oder Datenschutzprüfung."
+}
