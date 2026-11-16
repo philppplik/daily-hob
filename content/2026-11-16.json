@@ -1,9 +1,9 @@
 {
   "date": "2026-11-16",
   "title": "Daily Hob vom Montag, 16.11.",
-  "headline": "Die eigene Handschrift. Der kürzere Datenweg.",
-  "teaser": "2 Montags-Catches: Ductus macht Handschrift zum Font; Atuins Packfiles erklären schnelleren verschlüsselten Sync.",
-  "intro": "Ein Werkzeug beginnt beim einzelnen Strich, das andere beim Stapeln vieler Einträge. Ductus lässt eine Schrift Zeichen für Zeichen wachsen. Atuins Packfile-Bericht zeigt, warum Komprimieren vor dem Verschlüsseln stattfinden muss und weshalb eine große Geschwindigkeitszahl mehrere Verbesserungen zusammenfasst.",
+  "headline": "Handschrift, Karten, Körperechos. Daten bekommen Form.",
+  "teaser": "4 Montags-Catches: Ductus, Atuin Packfiles, PMTiles-Karten und EchoMotion-Körpertracking per Smartwatch.",
+  "intro": "Von selbst gezeichneten Buchstaben über verschlüsselte Datenpakete bis zur Landkarte aus einer einzigen Datei: Gute Schnittstellen verändern, was sich mit Daten anfangen lässt. EchoMotion ergänzt eine Forschungsfrage: Wie viel Körperhaltung lässt sich aus den Schallechos einer Smartwatch schätzen?",
   "hero": "hero.jpg",
   "heroAlt": "Lose schwarze Kurven werden auf hellem Papier zu geordneten Kacheln und kompakten Blöcken; eine abstrakte Verengung verbindet sie, mit gelbem und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://blog.atuin.sh/making-atuin-sync-32x-faster-with-packfiles/",
       "cta": "Packfiles, Pipelining und Messgrenzen lesen",
       "source": "Atuin-Team, Making Atuin sync 32x faster with packfiles, 25.08.2026, sowie GitHub-Release v18.20.0 vom 25.08.2026, gelesen am 16.11.2026. Heute diskutierter älterer Fund; Leistungszahlen und damalige Hub-/Selfhost-Grenzen laut Projekt, kein eigener Benchmark."
+    },
+    {
+      "category": "Open Source · Dev-Tools",
+      "short": "PMTiles",
+      "title": "Eine Kartendatei im Speicherbucket statt eines eigenen Tile-Servers.",
+      "body": "Bruce Röttgers beschreibt in einem Beitrag vom 15. November, der heute diskutiert wird, seinen Weg zu selbst gehosteten Karten mit Protomaps. Der Baustein dahinter heißt PMTiles: Viele Kartenkacheln samt Verzeichnis stecken in einer einzigen Archivdatei. Der Browser lädt per HTTP-Range-Anfrage nur die gerade nötigen Ausschnitte. Die offizielle Dokumentation zeigt die direkte Einbindung in MapLibre GL über die pmtiles-Bibliothek. Für kleine Projekte ist der Gedanke reizvoll: Kartendaten aus Objektspeicher ausliefern, ohne dafür einen dauerhaft laufenden Tile-Server zu betreiben.",
+      "takeaway": "Ein Archiv ersetzt nicht alle Betriebsfragen. Speicher/CDN müssen passende Range-Anfragen und deren Caching unterstützen, für fremde Ursprünge braucht es korrektes CORS. PMTiles ist nur lesbar; Änderungen am Archiv erfordern laut Dokumentation das Neuschreiben der gesamten Datei. Röttgers konkrete Kostenrechnung ist sein nutzungsabhängiges Beispiel, keine hier bestätigte Ersparnis oder Preiszusage. Für diese Ausgabe wurden Bericht und offizielle Integrationsdokumentation gelesen, aber weder Karten hochgeladen noch ein Hostingkonto, Zahlungsplan oder eigener Kartentest angelegt.",
+      "url": "https://docs.protomaps.com/pmtiles/",
+      "cta": "PMTiles-Format und direkte Browsernutzung verstehen",
+      "source": "Bruce Röttgers, Protomaps: Self-hosting map tiles has gotten cheap and easy, 15.11.2026; offizielle PMTiles Concepts und MapLibre-GL-Integration, gelesen am 16.11.2026. Heute diskutierter Bericht vom Vortag, kein heutiger Release. Keine eigene Kosten- oder Betriebsmessung."
+    },
+    {
+      "category": "KI · Forschung",
+      "short": "EchoMotion",
+      "title": "Eine Smartwatch hört Echos und schätzt daraus die Körperhaltung.",
+      "body": "EchoMotion nutzt Lautsprecher und Mikrofon einer Smartwatch als kleines Sonarsystem: Unhörbare Ultraschallsignale werden am Körper reflektiert, ein lernendes Modell schätzt daraus die dreidimensionalen Positionen von zwölf Gelenken. Der heute diskutierte Cornell-Bericht vom 11. November beschreibt den Weg vom eigenen Prototyp zur unveränderten Galaxy Watch 6. Neben zehn Personen mit Spezialhardware wurde die handelsübliche Uhr mit fünfzehn weiteren Personen untersucht; zehn zusätzliche Teilnehmende probierten das System in alltagsnäheren Umgebungen aus. Das zeigt eine interessante Alternative zu Kameras und vielen am Körper verteilten Sensoren.",
+      "takeaway": "Forschung statt fertiger Uhrenfunktion: Die Messwerte gehören zur Studie, nicht zu einem eigenen Test. Cornell berichtet bei neuen Personen von unter vier Zoll mittlerem Positionsfehler pro Gelenk; eine zwölfminütige persönliche Kalibrierung reduzierte ihn auf etwa 2,4 Zoll. Im engen Flur störten Echos anderer Menschen etwas. Die untersuchten Übungen und kleinen Gruppen sind kein Nachweis beliebiger ganztägiger Körpererfassung; kameraarm bedeutet auch keinen hier geprüften Datenschutz. Die Veröffentlichung erschien bereits im September, der Hochschulbericht am 11. November. Keine Installation, medizinische Bewertung oder eigene Messung.",
+      "url": "https://news.cornell.edu/stories/2026/11/researchers-track-whole-body-movement-just-smartwatch",
+      "cta": "Studienaufbau, Messwerte und Grenzen lesen",
+      "source": "Cornell Chronicle, Patricia Waldron, 11.11.2026; EchoMotion-Autorenabstract von Jiwan Kim sowie ACM-Veröffentlichungsdaten (30.09.2026), gelesen am 16.11.2026. Heute diskutierter älterer Forschungsfund, keine verfügbare Serienfunktion oder eigene Validierung behauptet."
     }
   ],
-  "notes": "Stand: 16.11.2026, 11:34 Uhr Berlin. Zwei recherchierte Catches. Ductus-Oberfläche, Zeichenübersicht und Exportdialog tatsächlich angesehen; kein Font erzeugt oder exportiert. Atuin-Beitrag und zugehörige Release-Notizen als ältere Quellen vom 25.08.2026 eingeordnet, kein heutiger Release oder aktueller Rollout behauptet. Keine Installation, Kontoveränderung, Synchronisation, Messung oder Datenschutzprüfung."
+  "notes": "Stand: 16.11.2026, 15:34 Uhr Berlin. Vier recherchierte Catches. Ductus-Oberfläche tatsächlich angesehen, kein Font exportiert. Atuin-Bericht vom 25.08., Protomaps-Erfahrungsbericht vom 15.11. und Cornell-Bericht vom 11.11. ausdrücklich als ältere, heute diskutierte Funde eingeordnet. PMTiles-Dokumentation, MapLibre-Integration und EchoMotion-Autorenabstract gelesen. Keine Installation, Kontoveränderung, Synchronisation, Hostingbuchung, eigene Messung oder Datenschutzprüfung."
 }
