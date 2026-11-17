@@ -1,9 +1,9 @@
 {
   "date": "2026-11-17",
   "title": "Daily Hob vom Dienstag, 17.11.",
-  "headline": "Runde Ecken, offene Hörsäle. Genauer hinschauen lohnt sich.",
-  "teaser": "2 Dienstags-Catches: Squircles zwischen Design und Mathematik sowie CMUs frei zugängliche CS-Learn-Vorlesungen.",
-  "intro": "Eine runde Ecke ist nicht automatisch dieselbe Kurve. Und frei verfügbare Vorlesungen sind noch kein vollständiger Onlineabschluss. Zwei Funde für alle, die bei Gestaltung und Informatik lieber verstehen als nur nachbauen.",
+  "headline": "Runde Ecken, neue Compiler, alte Fenster. Werkzeuge im Wandel.",
+  "teaser": "4 Dienstags-Catches: Squircles, CMU CS Learn, Nimony auf dem Weg zu Nim 3 und Visual Basic World als Screenshot-Archiv.",
+  "intro": "Was macht eine Ecke weich, eine Vorlesung zugänglich, einen Compiler erweiterbar? Und wie sah Software aus, als eine Oberfläche ruhig voller Schaltflächen sein durfte? Vier Funde verbinden genaue Gestaltung mit Werkzeugen und ihrer Geschichte.",
   "hero": "hero.jpg",
   "heroAlt": "Drei schwarze Umrisse zwischen eckigem Quadrat und Kreis führen über eine feine Linie zu einer abstrakten offenen Tür mit schwebenden Papierformen, auf hellem Grund mit gelbem und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://www.cs.cmu.edu/learn/",
       "cta": "Verfügbare Vorlesungen und Premierenplan ansehen",
       "source": "Carnegie Mellon, CS-Learn-Kursübersicht, sowie Marylee Williams, CMU Opens Access to Top Computer Science Classes Through Free CS Learn Platform (16.11.2026), gelesen am 17.11.2026. Startmeldung vom Vortag, heute diskutiert. Bei Verfügbarkeit gilt der konkretere Kursplan; keine eigene Kurs- oder Zertifikatsprüfung."
+    },
+    {
+      "category": "Open Source · Compiler",
+      "short": "Nimony",
+      "title": "Nimony baut an Nim 3, ist aber kein Austauschmotor für jedes Nim-2-Projekt.",
+      "body": "Nimony ist eine neue Nim-Implementierung rund um NIF, ein Zwischenformat, das durch die Compilerpipeline reicht. Der heute diskutierte Projektstand verbindet inkrementelle und parallele Builds mit neuen Sprachregeln: Summentypen samt Mustervergleich, ausdrücklich erlaubte nil-Werte, früher geprüfte Generics und Borrow Checking gegen problematische gleichzeitige Zugriffe. NIF soll außerdem eigene Prüfschritte und alternative Codegeneratoren erleichtern. Für neue Projekte ist das ein interessanter Blick darauf, wie eine kompakte Sprache zusätzliche Prüfungen in den Compiler verlagert.",
+      "takeaway": "Die Projekt-FAQ trennt sauber: Nim 2 ist die stabile bestehende Werkzeugkette, Nimony der neue Compiler und Nim 3 die größere Sprachrevision samt noch nötiger Kompatibilitätsarbeit. Das Repository nennt starke laufende Entwicklung; unveränderte Nim-2-Kompatibilität wird ausdrücklich nicht zugesagt. Vorab gebaute Nightlys sind verfügbar. Der native Backendweg benötigt laut Downloadseite keinen C-Compiler, der weiterhin voreingestellte C-Backendweg dagegen schon. Kein hier belegter heutiger Release und kein eigener Build, Migrationstest oder Nachweis umfassender Speichersicherheit.",
+      "url": "https://nimony.org/faq.html",
+      "cta": "Nimony, Nim 3 und die Kompatibilitätsgrenzen auseinanderhalten",
+      "source": "Nimony-Handbuch, FAQ und Downloadseite sowie nim-lang/nimony-README, gelesen am 17.11.2026. Heute diskutierter Entwicklungsstand ohne behaupteten Release-Tag. Fähigkeiten und Grenzen laut Projekt; keine eigene Installation oder Compilerprüfung."
+    },
+    {
+      "category": "Wildcard · Designgeschichte",
+      "short": "Visual Basic World",
+      "title": "Ein Screenshot-Archiv erinnert daran, wie eigenwillig Desktopsoftware aussehen konnte.",
+      "body": "Visual Basic World macht aus alten Planet-Source-Code-Projekten eine visuelle Galerie: Warenwirtschaft, Farbwähler, kleine Spiele, Audiowerkzeuge und selbst gebaute Bedienelemente stehen nebeneinander. Die tatsächlich geöffnete Oberfläche bietet Suche nach Projekten oder Autoren, Jahres- und Kategoriefilter, Sortierung und eine Diashow. Die geladenen Vorschaubilder zeigen dichte Tabellen, farbige Fenster und viele unterschiedliche Ideen davon, wie ein Programm aussehen soll. Zum Stöbern in Interface-Geschichte ist das deutlich anschaulicher als eine lange Liste von ZIP-Dateien.",
+      "takeaway": "Das ist ein heute diskutierter Archivfund, keine Sammlung neuer Programme. Die Galerie verweist auf PSCIndex und erklärt ausdrücklich: Programme und Screenshots gehören den jeweiligen Autoren, Archivzugang erteilt keine Wiederverwendungsrechte. Auch die Sterne sind historische Planet-Source-Code-Bewertungen, keine neuen Sicherheitstests. Für diese Ausgabe wurden Oberfläche und geladene Vorschaubilder angesehen, aber keine alten Programme heruntergeladen oder ausgeführt und keine Filter umfassend getestet. Die Galerie ist eine Auswahl, nicht das ganze Quellcodearchiv; ein genauer Veröffentlichungstag ist nicht belegt.",
+      "url": "https://visualbasic.world/",
+      "cta": "Durch die alten Programmoberflächen stöbern",
+      "source": "Visual Basic World, Livegalerie einschließlich geladener Vorschaubilder und Rechtehinweis angesehen am 17.11.2026; Planet-Source-Code/PSCIndex als verlinktes Quellarchiv sowie heutige Diskussion. Kein belegter Release-Tag, keine eigene Ausführung und keine fremden Screenshots übernommen."
     }
   ],
-  "notes": "Stand: 17.11.2026, 11:34 Uhr Berlin. Zwei recherchierte Catches. Linebender-Leitfaden ohne belegten Veröffentlichungstag, Figma-Hintergrund von 2018 und CMU-Startmeldung vom 16.11. als solche eingeordnet. MDN-Verfügbarkeitsgrenze und gestaffelter Kursplan berücksichtigt. Keine eigene Rendervergleichsmessung, Installation, Anmeldung, Kursbuchung oder Abschlusszusage."
+  "notes": "Stand: 17.11.2026, 15:34 Uhr Berlin. Vier recherchierte Catches. Erste zwei Beiträge und Hero erhalten. Squircles ohne belegten Veröffentlichungstag; Figma-Hintergrund2018 und CMU-Startmeldung16.11. als ältere Quellen datiert. Nimony als Entwicklungsstand, nicht als fertiger Nim-3-Ersatz eingeordnet. Visual-Basic-Galerie samt geladenen Vorschaubildern tatsächlich angesehen; Archiv- und Rechtegrenzen berücksichtigt. Keine Installation, Migration, Programmausführung, Anmeldung oder eigene Leistungs-/Kompatibilitätsmessung."
 }
