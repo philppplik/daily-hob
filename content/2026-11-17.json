@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-17",
+  "title": "Daily Hob vom Dienstag, 17.11.",
+  "headline": "Runde Ecken, offene Hörsäle. Genauer hinschauen lohnt sich.",
+  "teaser": "2 Dienstags-Catches: Squircles zwischen Design und Mathematik sowie CMUs frei zugängliche CS-Learn-Vorlesungen.",
+  "intro": "Eine runde Ecke ist nicht automatisch dieselbe Kurve. Und frei verfügbare Vorlesungen sind noch kein vollständiger Onlineabschluss. Zwei Funde für alle, die bei Gestaltung und Informatik lieber verstehen als nur nachbauen.",
+  "hero": "hero.jpg",
+  "heroAlt": "Drei schwarze Umrisse zwischen eckigem Quadrat und Kreis führen über eine feine Linie zu einer abstrakten offenen Tür mit schwebenden Papierformen, auf hellem Grund mit gelbem und mintfarbenem Akzent.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "Design · Informatik",
+      "short": "Squircles",
+      "title": "Warum rundere Ecken mehr sind als ein größerer Radius.",
+      "body": "Linebenders heute diskutierter Squircle-Leitfaden sortiert Formen, die irgendwo zwischen Quadrat und Kreis liegen. Dahinter steckt keine einzige verbindliche Kurve: Superellipsen, Apples Iconform und Figmas geglättete Ecken ähneln sich, sind aber nicht identisch. Der interessante Unterschied liegt im Übergang von gerader Seite zu Kurve und darin, wie sich deren Krümmung verändert. Formen mit flachen Seiten können außerdem auf längliche Rechtecke übertragen werden, ohne die Ecke einfach zu verzerren. Der Text verbindet die Mathematik mit Bézier-Näherungen und der CSS-Eigenschaft corner-shape.",
+      "takeaway": "Für den Einstieg liefert der Leitfaden eine Apple-ähnliche, ausdrücklich nicht identische CSS-Näherung: border-radius von 46,2 Prozent zusammen mit superellipse(1.585). Der Funktionsparameter ist nicht direkt der mathematische Exponent. Vor dem Einsatz bleibt die Browserprüfung wichtig: MDN kennzeichnet corner-shape als eingeschränkt verfügbar, und ohne passenden border-radius entsteht keine solche Ecke. Das ist ein Erklärfund ohne belegten Veröffentlichungstag, kein heutiger Browserrelease. Keine eigene Rendervergleichs- oder Kompatibilitätsmessung.",
+      "url": "https://linebender.org/wiki/curves/squircle/",
+      "cta": "Squircle-Varianten und ihre Übergänge verstehen",
+      "source": "Linebender Wiki, Squircles; MDN, corner-shape; zur historischen Einordnung Figma, Desperately seeking squircles (03.04.2018), gelesen am 17.11.2026. Heute diskutierter Leitfaden ohne belegten Release-Tag. Technische Einordnung laut Quellen, keine eigene Browsermatrix."
+    },
+    {
+      "category": "Informatik · Lernen",
+      "short": "CS Learn",
+      "title": "Carnegie Mellon öffnet Vorlesungen, aber nicht gleich den ganzen Studiengang.",
+      "body": "Carnegie Mellon hat CS Learn am 16. November vorgestellt; heute wird die neue Lernseite diskutiert. Ausgewählte Informatikvorlesungen werden kostenlos auf der Website und auf YouTube zugänglich. Die Kursübersicht markiert Machine Learning with Large Datasets und Principles of Computing bereits mit Watch now. Principles of Software Construction und Machine Learning Systems sind für den 17. November angekündigt. Schönes Detail aus dem Hochschulbericht: Fragen aus dem Hörsaal erscheinen als Text, während sichtbare Studierendengesichter unkenntlich gemacht werden. So soll mehr von der echten Vorlesung erhalten bleiben als nur die Folien.",
+      "takeaway": "Die konkrete Kursübersicht ist enger als die breite Ankündigung: Software Architectures und Quality Management stehen dort erst für den 18., AI Agents und Machine Learning in Production für den 19. November; weitere Kurse für Januar 2027. Selbstlern-Kursmaterial und KI-Tutoring werden als kommend beschrieben. Kostenloses Zuschauen ist deshalb nicht gleich benotete Aufgaben, persönlicher Unterricht oder ein kostenloser CMU-Abschluss. Offizielle Ankündigung und aktuellen Seitenplan gelesen, aber keine Vorlesung komplett angesehen und kein Konto oder Kurszugang angelegt.",
+      "url": "https://www.cs.cmu.edu/learn/",
+      "cta": "Verfügbare Vorlesungen und Premierenplan ansehen",
+      "source": "Carnegie Mellon, CS-Learn-Kursübersicht, sowie Marylee Williams, CMU Opens Access to Top Computer Science Classes Through Free CS Learn Platform (16.11.2026), gelesen am 17.11.2026. Startmeldung vom Vortag, heute diskutiert. Bei Verfügbarkeit gilt der konkretere Kursplan; keine eigene Kurs- oder Zertifikatsprüfung."
+    }
+  ],
+  "notes": "Stand: 17.11.2026, 11:34 Uhr Berlin. Zwei recherchierte Catches. Linebender-Leitfaden ohne belegten Veröffentlichungstag, Figma-Hintergrund von 2018 und CMU-Startmeldung vom 16.11. als solche eingeordnet. MDN-Verfügbarkeitsgrenze und gestaffelter Kursplan berücksichtigt. Keine eigene Rendervergleichsmessung, Installation, Anmeldung, Kursbuchung oder Abschlusszusage."
+}
