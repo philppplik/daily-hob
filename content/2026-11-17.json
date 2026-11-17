@@ -1,9 +1,9 @@
 {
   "date": "2026-11-17",
   "title": "Daily Hob vom Dienstag, 17.11.",
-  "headline": "Runde Ecken, neue Compiler, alte Fenster. Werkzeuge im Wandel.",
-  "teaser": "4 Dienstags-Catches: Squircles, CMU CS Learn, Nimony auf dem Weg zu Nim 3 und Visual Basic World als Screenshot-Archiv.",
-  "intro": "Was macht eine Ecke weich, eine Vorlesung zugänglich, einen Compiler erweiterbar? Und wie sah Software aus, als eine Oberfläche ruhig voller Schaltflächen sein durfte? Vier Funde verbinden genaue Gestaltung mit Werkzeugen und ihrer Geschichte.",
+  "headline": "Von runden Ecken bis tief in den Speicher. Werkzeuge genauer verstehen.",
+  "teaser": "6 Dienstags-Catches: Squircles, CS Learn, Nimony, Visual Basic World, Alloy CSS und Zeilen gegen Spalten im Datenspeicher.",
+  "intro": "Eine weichere Ecke, ein offener Hörsaal, eine neue Compilerpipeline und alte Desktopfenster: Am Abend kommen HTML-Bausteine ohne eigene Interaktionsskripte und ein Blick auf Datenlayouts dazu. Sechs Funde darüber, wie viel die Form eines Werkzeugs an seinem Verhalten ändert.",
   "hero": "hero.jpg",
   "heroAlt": "Drei schwarze Umrisse zwischen eckigem Quadrat und Kreis führen über eine feine Linie zu einer abstrakten offenen Tür mit schwebenden Papierformen, auf hellem Grund mit gelbem und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://visualbasic.world/",
       "cta": "Durch die alten Programmoberflächen stöbern",
       "source": "Visual Basic World, Livegalerie einschließlich geladener Vorschaubilder und Rechtehinweis angesehen am 17.11.2026; Planet-Source-Code/PSCIndex als verlinktes Quellarchiv sowie heutige Diskussion. Kein belegter Release-Tag, keine eigene Ausführung und keine fremden Screenshots übernommen."
+    },
+    {
+      "category": "Open Source · Web",
+      "short": "Alloy CSS",
+      "title": "Dialoge und Menüs ohne eigenes JavaScript, aber nicht ohne Voraussetzungen.",
+      "body": "Alloy CSS setzt auf eine Stylesheet-Datei und eingebaute Browserfunktionen statt auf eine JavaScript-Komponentenbibliothek. Dialoge nutzen dialog samt command und commandfor, Menüs bauen auf Popovern auf. Die Dokumentation zeigt außerdem Schubladen, Tabs, Formulare und Toasts sowie getrennte Dateien für Marke und dunkle Farbthemen. Die öffentliche Beispielseite stellt eine erfundene Rechnungsanwendung dar; für diese Ausgabe wurde sie tatsächlich geöffnet und ihr New-invoice-Dialog angezeigt. Das Projekt ist MIT-lizenziert und benötigt laut README keinen Buildschritt.",
+      "takeaway": "Ohne eigenes Interaktionsskript heißt nicht überall oder automatisch barrierefrei. Die Dokumentation nennt für Dialogschalter neuere Browser als für die Grundgestaltung; auf älteren kann der Öffnen-Knopf wirkungslos bleiben. In der heutigen Diskussion benennt das Konto prafandy, das den Fund eingereicht hat, Tabs als Schwachstelle: Screenreader hören Radiobuttons statt Tabs. Das ist keine eigene Hilfsmittelprüfung. Die Demo wurde angesehen, aber JavaScript nicht abgeschaltet, kein Formular abgeschickt und weder eine Browsermatrix noch Barrierefreiheit auditiert. Ein genauer Release-Tag ist hier nicht belegt.",
+      "url": "https://alloyhtml.com/",
+      "cta": "Alloys HTML-Beispiel und Browsergrenzen ansehen",
+      "source": "Alloy-Produktseite, Dokumentation, MIT-README und öffentliche Ledger-Demo, gelesen/angesehen am 17.11.2026; heutige Show-HN-Diskussion mit Einschränkung aus dem Konto prafandy. Heute diskutierter Werkzeugfund, kein belegter heutiger Release oder eigener JavaScript-off-/Accessibility-Test."
+    },
+    {
+      "category": "Informatik · Datenbanken",
+      "short": "Zeilen und Spalten",
+      "title": "Gleiche Tabelle, andere Speicherordnung: Warum Analysen gern spaltenweise lesen.",
+      "body": "Connor Tsuis heute diskutierter Spiral-Beitrag vom 11. November erklärt Zeilen- und Spaltenspeicher an denselben Fahrradfahrten. Eine einzelne Fahrt mit allen Angaben passt gut zu nebeneinanderliegenden Zeilenwerten. Für die durchschnittliche Fahrtdauer über viele Fahrten reicht dagegen eine einzige Spalte. Liegen deren Werte zusammen, muss weniger Unnötiges durch Speicher und CPU-Cache. Darauf bauen weitere Möglichkeiten auf: kleine Wertestapel verarbeiten, mehrere Zahlen per SIMD gleichzeitig bearbeiten und ähnliche Werte mit passenden Kodierungen kompakt ablegen. Die logische Tabelle muss sich dafür nicht ändern.",
+      "takeaway": "Das ist eine Architektur-Erklärung, keine pauschale Empfehlung zum Datenbankwechsel. Die anschaulichen Rust-Speicherlayouts vereinfachen reale Systeme; Zahlen zum Datenverkehr sind Beispielrechnungen, keine hier gemessene Beschleunigung. Einzelzugriffe und Änderungen haben andere Anforderungen, Indizes können viel Arbeit vermeiden, und reale Systeme mischen Techniken. Der Text stammt vom Team hinter dem Spaltenformat Vortex und ist damit keine unabhängige Produktwertung. Kein eigener Datenimport, Querytest oder Benchmark; das Datum 11.11. ist älter als die heutige Diskussion.",
+      "url": "https://spiraldb.com/blog/rows-vs-columns",
+      "cta": "Vom Speicherlayout zu Ausführung und Kompression mitlesen",
+      "source": "Connor Tsui, Spiral, Rows vs Columns: How different are they, really?, 11.11.2026, gelesen am 17.11.2026. Heute diskutierter älterer Erklärfund. Beispielrechnungen und technische Darstellung laut Autor, kein eigener Leistungsvergleich oder Wechselrat."
     }
   ],
-  "notes": "Stand: 17.11.2026, 15:34 Uhr Berlin. Vier recherchierte Catches. Erste zwei Beiträge und Hero erhalten. Squircles ohne belegten Veröffentlichungstag; Figma-Hintergrund2018 und CMU-Startmeldung16.11. als ältere Quellen datiert. Nimony als Entwicklungsstand, nicht als fertiger Nim-3-Ersatz eingeordnet. Visual-Basic-Galerie samt geladenen Vorschaubildern tatsächlich angesehen; Archiv- und Rechtegrenzen berücksichtigt. Keine Installation, Migration, Programmausführung, Anmeldung oder eigene Leistungs-/Kompatibilitätsmessung."
+  "notes": "Stand: 17.11.2026, 21:20 Uhr Berlin. Sechs recherchierte Catches. Erste vier und Hero erhalten. Ältere Quellen ausdrücklich datiert: Figma2018, CMU16.11., Spiral11.11.; übrige Funde ohne behaupteten Release-Tag. Visual-Basic-Galerie und Alloy-Demo samt Dialog tatsächlich angesehen. Alloys JavaScript-off-Aussage ist Projektangabe, keine eigene abgeschaltete-JavaScript- oder Hilfsmittelprüfung. Keine Installation, Migration, Programmausführung, Formularsendung oder eigene Leistungs-/Kompatibilitätsmessung."
 }
