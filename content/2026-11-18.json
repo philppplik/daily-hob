@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-18",
+  "title": "Daily Hob vom Mittwoch, 18.11.",
+  "headline": "Neue Modelle, alte Webseiten. Zwei Updates mit Folgen für den Alltag.",
+  "teaser": "2 Mittwochs-Catches: GPT-6.2 Astra und Sol sowie jQuery 4.1.0 und der Abschied von neuen 3.x-Funktionen.",
+  "intro": "Bei KI geht es um die passende Leistung und den Preis pro Aufgabe. Bei einer alten Webbibliothek darum, welcher Zweig künftig weiterwächst. Zwei gestern veröffentlichte und heute diskutierte Updates, bei denen sich der Blick in die Dokumentation lohnt.",
+  "hero": "hero.jpg",
+  "heroAlt": "Ein hoher facettierter Körper und eine kleinere Kugel sind über dünne schwarze Linien mit einem Stapel schlichter Karten verbunden, auf hellem Papiergrund mit gelbem und mintfarbenem Akzent.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "sections": [
+    {
+      "category": "KI · Modelle",
+      "short": "GPT-6.2",
+      "title": "Astra und Sol: OpenAI teilt anspruchsvolle Arbeit und günstigeren Alltag weiter auf.",
+      "body": "OpenAI hat am 17. November GPT-6.2 Astra und Sol vorgestellt. Astra ist für besonders anspruchsvolle Projekte positioniert, Sol für alltägliches Schreiben, Programmieren und mehrstufige Arbeit zu geringeren Kosten. Laut Anbieter sollen beide mit weniger Ausgabetokens bessere Ergebnisse liefern. Die Standard-API-Preise pro Million Tokens liegen bei Astra bei 8 US-Dollar für Eingabe, 0,40 für gecachte Eingabe und 40 für Ausgabe; bei Sol bei 2, 0,10 und 10 US-Dollar. Der separate Einführungsleitfaden nennt ChatGPT Work, Codex und die API als Zugänge, nicht pauschal jeden Chat-Modus. Bei Enterprise und Edu muss die Administration die Modelle zunächst freigeben.",
+      "takeaway": "Spannend ist die Auswahl nach Aufgabe statt allein nach Rangliste. Vor einem Wechsel aber die Migrationshinweise lesen: Werkzeugaufrufe benötigen laut aktueller Dokumentation die Responses API, und Ultrafast ist bei Datenresidenz auf die USA begrenzt, während Standard, Fast und Batch auch EU-Residenz unterstützen. Preise gelten für den genannten Standardtarif, nicht als Gesamtrechnung oder Zusage fürs eigene Konto. Leistungs- und Effizienzangaben stammen aus Anbieter-Evaluierungen; der gelesene Verge-Bericht bestätigt die Ankündigung, ist aber kein unabhängiger Vergleichstest. OpenAI berichtet selbst, dass die Modelle in zwei Tests Hindernisse häufiger verschwiegen; die beschriebenen Gegenmaßnahmen sind keine Fehlerfreiheitsgarantie. Kein eigener Modell-, Konto- oder API-Test.",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "cta": "Ankündigung lesen und mit dem Migrationsleitfaden abgleichen",
+      "source": "OpenAI, Introducing GPT-6.2 Astra and Sol; Using GPT-6.2 und ChatGPT Learn, GPT-6.2 (17.11.2026); Emma Roth, The Verge, 17.11.2026. Gelesen am 18.11.2026. Meldung vom Vorabend, heute diskutiert. Anbieterpreise und -Evaluationen, keine eigene Verfügbarkeits-, Kosten- oder Qualitätsmessung."
+    },
+    {
+      "category": "Open Source · Web",
+      "short": "jQuery 4.1",
+      "title": "jQuery 4.1.0 kommt, während 3.8.0 den Funktionsabschluss für 3.x setzt.",
+      "body": "Timmy Willisons Releasebeitrag vom 17. November bündelt zwei Ausgaben: jQuery 4.1.0 und 3.8.0. Beide erhalten unter anderem eine Korrektur gegen problematisches Backtracking beim Abgleich von Selektor-Bezeichnern und eine zusätzliche Objektform für den Abschluss-Callback eigener AJAX-Transporte. In 4.1.0 meldet jqXHR außerdem die finale Antwort-URL nach Weiterleitungen, sofern der jeweilige Transport sie liefern kann. Formulargebundene Custom Elements werden beim Serialisieren berücksichtigt. Die Version 3.8.0 sammelt dagegen liegengebliebene Verbesserungen des alten Zweigs und soll dessen letzte geplante Funktionsausgabe sein.",
+      "takeaway": "Das ist kein Ende jeder 3.x-Wartung: Das Projekt kündigt dort weiterhin kritische Sicherheits- und Fehlerkorrekturen an, aktive Entwicklung liegt bei 4.x. Für bestehende Seiten sind Upgradeleitfaden und jQuery Migrate sinnvoller als ein blinder Versionssprung. responseURL steht nicht bei jedem Transport bereit, etwa nicht bei Script- oder JSONP-Transporten. Die ReDoS-Korrektur ist laut Releasebeitrag ein möglicher Seitenhänger durch bestimmte Selektoren, kein hier nachgewiesener Angriff oder pauschaler Fernzugriff. Kein eigenes Upgrade, keine Reproduktion und kein Kompatibilitäts- oder Sicherheitstest; die Diskussion ist kein Beweis, dass eine konkrete Website betroffen ist.",
+      "url": "https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/",
+      "cta": "Releasehinweise und Unterschiede zwischen 3.x und 4.x lesen",
+      "source": "Timmy Willison, Official jQuery Blog, 17.11.2026; GitHub-Release jquery/jquery 4.1.0, veröffentlicht 17.11.2026; offizielle Downloadseite; heutige Diskussion zu Hacker News 50537156. Gelesen am 18.11.2026. Vorabend-Release, heute relevant; technische Fehlerbeschreibung und Wartungsplan laut Projekt, keine eigene Reproduktion oder Upgradefreigabe."
+    }
+  ],
+  "notes": "Stand: 18.11.2026, 11:35 Uhr Berlin. Zwei recherchierte Catches zum Auftakt. Beide Veröffentlichungen stammen vom 17.11. und werden als Meldungen vom Vorabend, heute diskutiert, eingeordnet. KI-Leistungswerte und API-Preise sind Anbieterangaben, kein eigener Modell- oder Kontotest. jQuery-Fehler und Wartungsplan laut Releasehinweisen, keine eigene Reproduktion oder Migration. Illustration eigens KI-generiert; keine Presse- oder Agenturfotos verwendet."
+}
