@@ -1,9 +1,9 @@
 {
   "date": "2026-11-18",
   "title": "Daily Hob vom Mittwoch, 18.11.",
-  "headline": "Neue Modelle, reaktive Webseiten und die Ordnung einer Sonnenblume.",
-  "teaser": "4 Mittwochs-Catches: GPT-6.2, jQuery 4.1, Solid 2.0 und die Geometrie hinter Fibonacci-LEDs.",
-  "intro": "Zwei Updates vom Vorabend eröffnen den Tag. Am Nachmittag kommen ein Framework mit neuem Umgang mit asynchroner Arbeit und eine anschauliche Erklärung für spiralförmige LED-Muster dazu. Vier Funde zwischen praktischer Softwarepflege und schöner Mathematik.",
+  "headline": "Neue Modelle, lernende Energielandschaften und ein Tippduell im Arcade-Look.",
+  "teaser": "6 Mittwochs-Catches: GPT-6.2, jQuery 4.1, Solid 2.0, Fibonacci-LEDs, Energy-Based Reasoners und Type Fighter II.",
+  "intro": "Vom Modellwechsel über Webpflege bis zu schöner Mathematik: Der Mittwoch sammelt sechs Funde. Am Abend kommen kleine Forschungsmodelle mit einem eigenen Fortschrittssignal und ein Tipptrainer im Gewand eines Arcade-Kampfspiels dazu.",
   "hero": "hero.jpg",
   "heroAlt": "Ein hoher facettierter Körper und eine kleinere Kugel sind über dünne schwarze Linien mit einem Stapel schlichter Karten verbunden, auf hellem Papiergrund mit gelbem und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -47,7 +47,27 @@
       "url": "https://www.evilgeniuslabs.org/why-fibonacci",
       "cta": "Winkel, Punktabstände und Spiralarme selbst vergleichen",
       "source": "Evil Genius Labs, Why Fibonacci?, 16.11.2026; Seite samt Golden-angle-Reiter am 18.11.2026 geöffnet und angesehen. Ergänzend Fermat’s spiral, Wikipedia, Vogel-Modell, und heutige HN-Diskussion 50542264. Älterer Erklärfund; Vergleichszahlen nicht selbst reproduziert, kein eigener Hardwaretest. Medien der Quelle nicht wiederverwendet."
+    },
+    {
+      "category": "KI · Forschung",
+      "short": "Energy-Based Reasoners",
+      "title": "Ein kleines Modell lernt nicht nur den nächsten Schritt, sondern auch, wann es aufhören kann.",
+      "body": "Energy-Based Reasoners lernen eine Energiefunktion über interne Lösungszustände. Ihr Gradient gibt die Richtung für die nächste Verbesserung vor; ein kleiner Gradient dient als Stoppsignal, der Energiewert zur Auswahl zwischen Kandidaten. Das heute diskutierte Papier vom 6. November untersucht Sudoku, Labyrinthe, Damenprobleme und Graphfärbung. Für Sudoku-Extreme berichten die Forschenden mit 1,8 Millionen Parametern 99,4 Prozent exakt gelöste Rätsel bei einem Versuch und 99,9 Prozent mit mehreren Kandidaten. Adaptive Stopps sparen in diesem Versuchsaufbau Rechenoperationen, ohne immer dieselbe Zahl an Schleifen abzuarbeiten.",
+      "takeaway": "Interessant ist das gelernte Fortschrittssignal, nicht die nächste pauschale Effizienz-Schlagzeile. Projekt und Papier nennen beim Sudoku-Vergleich mit EqR bis zu 345-mal weniger Inferenz-FLOPs, nicht die 385 aus der heutigen Diskussionsüberschrift. Das sind Rechenoperationen in einem bestimmten Benchmark, keine gemessene Stromersparnis oder allgemeine Beschleunigung von Sprachmodellen. Die Autoren nennen teureres Training durch zweite Ableitungen und die Beschränkung auf strukturierte Aufgaben. Das offizielle Repository ist noch im Aufbau; ARC-Trainingskonfigurationen und -Checkpoints sind dort erst angekündigt. Kein eigener Trainingslauf oder Nachbau der Resultate.",
+      "url": "https://energy-based-reasoners.github.io/",
+      "cta": "Methode, Ergebnisse und Grenzen ansehen",
+      "source": "Chen et al., Energy-Based Reasoners, arXiv 2611.08977 (6.11.2026); Projektseite und offizielles GitHub-Repository wwillchen/ebr; heutige Diskussion auf Hacker News 50543989 (18.11.2026). Gelesen am 18.11.2026. Forschungsresultate der Autoren, keine unabhängige Replikation. Zahlenkonflikt 385/345 nicht übernommen: maßgeblich sind Projekt und Papier."
+    },
+    {
+      "category": "Wildcard · Lernen & Spiel",
+      "short": "Type Fighter II",
+      "title": "Blindtippen als Arcade-Duell: erst f und j, dann die nächste Liga.",
+      "body": "Type Fighter II verpackt Tippübungen in ein Kampfspiel mit Figurenwahl, Ligen und freischaltbaren Etappen. Der Einstieg beginnt mit f, j und Leertaste, danach kommen weitere Tasten hinzu. Tempo, Genauigkeit und Serien sind Teil der Spielanzeige. Der Entwickler stellt das Projekt heute auf Hacker News vor: kostenlos, ohne Konto und mit lokal gespeichertem Fortschritt. Mobil lässt es sich laut Vorstellung öffnen, eine echte Tastatur wird empfohlen. Im geöffneten Browser waren Figurenwahl, Ligen und die erste Etappe ohne Anmeldung erreichbar.",
+      "takeaway": "Ein sympathischer Anlass, eine trockene Übung wieder anzufassen. In der Diskussion wird aber zu Recht zwischen zufälligen Buchstabenfolgen und alltagstauglichen Wörtern unterschieden; ob die Reihenfolge das Lernen verbessert, ist damit nicht belegt. Die eigene Sichtprüfung reicht bis zur Auswahl und zum Start der ersten Etappe, nicht zu einem durchgespielten Kurs oder einer Prüfung von Lernerfolg, dauerhafter Speicherung und Datenverkehr. Angezeigt wurde ein UK-PC-Layout; deutsche Layout-Unterstützung ist hier nicht bestätigt. Für einen kurzen Versuch mit physischer Tastatur, nicht als nachgewiesen bessere Lernmethode.",
+      "url": "https://typefighter2.com/",
+      "cta": "Tippduell im Browser öffnen",
+      "source": "Type Fighter II, eigene Sichtprüfung von Start, Figurenwahl und Ligen am 18.11.2026; Entwickler-Vorstellung und Diskussion auf Hacker News 50544821 (18.11.2026); TechNewsReel, 18.11.2026. Kostenlosigkeit und lokaler Fortschritt laut Projektvorstellung, kein Datenschutz-Audit oder Lernwirksamkeitstest."
     }
   ],
-  "notes": "Stand: 18.11.2026, 15:34 Uhr Berlin. Vier recherchierte Catches; erste zwei und Hero unverändert. GPT/jQuery sind Meldungen vom Vorabend17.11., heute diskutiert. Solid-Blog16.11., GitHub2.0.0-Anzeige17.11. und heutiger2.0.1-Patch getrennt datiert. Fibonacci-Erklärtext16.11., heute diskutiert. Nur die interaktive Fibonacci-Seite samt Golden-angle-Reiter tatsächlich angesehen, kein vollständiger Regler- oder Messvergleich. Keine Installation, Migration oder eigene Modell-/Sicherheits-/Leistungsprüfung. Kein Fremdbild übernommen."
+  "notes": "Stand: 18. November 2026, 19:34 Uhr Berlin. Sechs Catches, abends um Energy-Based Reasoners und Type Fighter II ergänzt. Veröffentlichungsdaten älterer Funde sind in den Quellen genannt. Hersteller- und Forschungsangaben bleiben als solche gekennzeichnet; keine eigenen Modellbenchmarks, Migrationen oder Lernwirksamkeitstests. Keine Sponsorings. Illustration: KI-generiert für Daily Hob."
 }
