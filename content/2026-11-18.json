@@ -1,9 +1,9 @@
 {
   "date": "2026-11-18",
   "title": "Daily Hob vom Mittwoch, 18.11.",
-  "headline": "Neue Modelle, alte Webseiten. Zwei Updates mit Folgen für den Alltag.",
-  "teaser": "2 Mittwochs-Catches: GPT-6.2 Astra und Sol sowie jQuery 4.1.0 und der Abschied von neuen 3.x-Funktionen.",
-  "intro": "Bei KI geht es um die passende Leistung und den Preis pro Aufgabe. Bei einer alten Webbibliothek darum, welcher Zweig künftig weiterwächst. Zwei gestern veröffentlichte und heute diskutierte Updates, bei denen sich der Blick in die Dokumentation lohnt.",
+  "headline": "Neue Modelle, reaktive Webseiten und die Ordnung einer Sonnenblume.",
+  "teaser": "4 Mittwochs-Catches: GPT-6.2, jQuery 4.1, Solid 2.0 und die Geometrie hinter Fibonacci-LEDs.",
+  "intro": "Zwei Updates vom Vorabend eröffnen den Tag. Am Nachmittag kommen ein Framework mit neuem Umgang mit asynchroner Arbeit und eine anschauliche Erklärung für spiralförmige LED-Muster dazu. Vier Funde zwischen praktischer Softwarepflege und schöner Mathematik.",
   "hero": "hero.jpg",
   "heroAlt": "Ein hoher facettierter Körper und eine kleinere Kugel sind über dünne schwarze Linien mit einem Stapel schlichter Karten verbunden, auf hellem Papiergrund mit gelbem und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
@@ -27,7 +27,27 @@
       "url": "https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/",
       "cta": "Releasehinweise und Unterschiede zwischen 3.x und 4.x lesen",
       "source": "Timmy Willison, Official jQuery Blog, 17.11.2026; GitHub-Release jquery/jquery 4.1.0, veröffentlicht 17.11.2026; offizielle Downloadseite; heutige Diskussion zu Hacker News 50537156. Gelesen am 18.11.2026. Vorabend-Release, heute relevant; technische Fehlerbeschreibung und Wartungsplan laut Projekt, keine eigene Reproduktion oder Upgradefreigabe."
+    },
+    {
+      "category": "Open Source · Frontend",
+      "short": "Solid 2.0",
+      "title": "Solid nimmt asynchrone Arbeit in den reaktiven Graphen auf, samt Bruch mit alten APIs.",
+      "body": "Solid 2.0 lässt reaktive Berechnungen Promises oder asynchrone Iteratoren zurückgeben. Abhängige Teile der Oberfläche sollen Ladezustände dadurch als Teil desselben Graphen behandeln. Serverfunktionen kommen in den Kern; die Projektankündigung zeigt mit live() auch Streams über Server-Sent Events. Entwicklungsdiagnosen liefern Fehlercode, Quellort und Hinweise, etwa wenn ein reaktiver Wert außerhalb eines nachverfolgten Bereichs nur einmal gelesen wird. Der Blogbeitrag trägt das Datum 16. November, der gelesene GitHub-Eintrag für 2.0.0 den 17. November. Heute, am 18., folgt dort bereits 2.0.1 mit Korrekturen für eingefrorene Objekte und Arrays in Stores sowie einem berichtigten Tutorial-Link.",
+      "takeaway": "Weniger APIs bedeuten nicht automatisch weniger Migrationsarbeit: createResource, batch, produce und weitere bisherige Funktionen entfallen laut Projekt. Auch SolidStarts Rolle ändert sich, weil Kern und Vite-Plugins mehr Grundlagen übernehmen. Vorhandene Apps und Bibliotheken daher auf ihre tatsächlich verwendeten APIs und Abhängigkeiten prüfen, statt nur die Versionsnummer zu ersetzen. Die Diagnosedokumentation macht eine Warnung verständlich, garantiert aber weder fehlerfreie Apps noch verlässliche KI-generierte Änderungen. Kein eigenes Upgrade, kein Laufzeit-, Paketgrößen- oder Kompatibilitätstest; Aussagen zur automatischen Behandlung asynchroner Fälle stammen vom Projekt.",
+      "url": "https://www.solidjs.com/blog/solid-2-0-the-long-hold/",
+      "cta": "Neues Reaktivitätsmodell und entfernte APIs nachlesen",
+      "source": "Ryan Carniato, Solid 2.0 – The Long Hold, Blogdatum 16.11.2026; GitHub solidjs/solid Releases, 2.0.0 mit Anzeige 17.11. und 2.0.1 mit Anzeige 18.11.; Solid-Diagnosedokumentation STRICT_READ_UNTRACKED; ergänzend TechMeasured und HN 50536387. Gelesen am 18.11.2026. Unterschiedliche Quelldaten offengelegt, keine eigene Migration oder Leistungsprüfung."
+    },
+    {
+      "category": "Wildcard · Mathematik",
+      "short": "Fibonacci-LEDs",
+      "title": "Warum 137,508 Grad und eine Wurzel aus Punkten eine gleichmäßige Scheibe machen.",
+      "body": "Why Fibonacci? von Evil Genius Labs erklärt an LED-Platinen, wie ein Muster entsteht, das an Sonnenblumenkerne erinnert. Jeder nächste Punkt dreht sich um ungefähr 137,508 Grad weiter; sein Abstand vom Zentrum wächst näherungsweise mit der Quadratwurzel seiner Nummer. Der Winkel vermeidet die auffälligen Speichen einfacher Bruchteile einer vollen Drehung. Die Wurzelregel hält die mittlere Punktdichte über die Scheibe ungefähr gleich. Gemeint ist eine Punktanordnung auf einer Fermat-Spirale, nicht die bekannte einzelne Kurve durch Fibonacci-Quadrate. Die interaktive Seite lässt Winkel und Anordnungen vergleichen und erklärt, warum beim Verbinden bestimmter Nachbarn Fibonacci-Anzahlen von Spiralarmen sichtbar werden.",
+      "takeaway": "Der Beitrag ist vom 16. November und wird heute erneut diskutiert, kein heutiger mathematischer Durchbruch oder Produktlaunch. Für diese Ausgabe wurden die Seite und der Reiter Golden angle tatsächlich geöffnet; die sichtbare 90-Grad-Anordnung zeigt die Speichen anschaulich. Das ist keine eigene Nachmessung der Abstands- und Flächenvergleiche und kein Test aller Regler. Die gerundete Dezimalzahl ist eine Näherung an den irrationalen goldenen Winkel, kein exakter Wert; auch nennt der Autor Ausnahmen von der Wurzelregel bei einzelnen Platinen. Ein schöner Erklärfund, keine Kauf- oder universelle Optimalitätsbehauptung. Es werden keine Animationen oder Produktbilder daraus übernommen.",
+      "url": "https://www.evilgeniuslabs.org/why-fibonacci",
+      "cta": "Winkel, Punktabstände und Spiralarme selbst vergleichen",
+      "source": "Evil Genius Labs, Why Fibonacci?, 16.11.2026; Seite samt Golden-angle-Reiter am 18.11.2026 geöffnet und angesehen. Ergänzend Fermat’s spiral, Wikipedia, Vogel-Modell, und heutige HN-Diskussion 50542264. Älterer Erklärfund; Vergleichszahlen nicht selbst reproduziert, kein eigener Hardwaretest. Medien der Quelle nicht wiederverwendet."
     }
   ],
-  "notes": "Stand: 18.11.2026, 11:35 Uhr Berlin. Zwei recherchierte Catches zum Auftakt. Beide Veröffentlichungen stammen vom 17.11. und werden als Meldungen vom Vorabend, heute diskutiert, eingeordnet. KI-Leistungswerte und API-Preise sind Anbieterangaben, kein eigener Modell- oder Kontotest. jQuery-Fehler und Wartungsplan laut Releasehinweisen, keine eigene Reproduktion oder Migration. Illustration eigens KI-generiert; keine Presse- oder Agenturfotos verwendet."
+  "notes": "Stand: 18.11.2026, 15:34 Uhr Berlin. Vier recherchierte Catches; erste zwei und Hero unverändert. GPT/jQuery sind Meldungen vom Vorabend17.11., heute diskutiert. Solid-Blog16.11., GitHub2.0.0-Anzeige17.11. und heutiger2.0.1-Patch getrennt datiert. Fibonacci-Erklärtext16.11., heute diskutiert. Nur die interaktive Fibonacci-Seite samt Golden-angle-Reiter tatsächlich angesehen, kein vollständiger Regler- oder Messvergleich. Keine Installation, Migration oder eigene Modell-/Sicherheits-/Leistungsprüfung. Kein Fremdbild übernommen."
 }
