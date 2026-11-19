@@ -1,13 +1,13 @@
 {
   "date": "2026-11-19",
   "title": "Daily Hob vom Donnerstag, 19.11.",
-  "headline": "Ruby repariert, Neon denkt abgestuft, FailTrace sucht den roten CI-Schritt.",
-  "teaser": "4 Donnerstags-Catches: Ruby-Updates, Zpup, Gemini 4 Neon und FailTrace für fehlgeschlagene GitHub-Actions-Läufe.",
-  "intro": "Vom sicheren Betrieb zum nächsten Versuch: Ruby schließt Speicherlücken, Zpup zeichnet kleine Szenen. Am Nachmittag kommen Googles neues Modell zwischen Tiefe und Tempo sowie ein Werkzeug hinzu, das einen konkreten CI-Fehler lokal nachvollziehbar machen will.",
+  "headline": "Sicherer Betrieb, neue Sprachbausteine und acht Seiten aus einem Blatt.",
+  "teaser": "6 Donnerstags-Catches: Ruby-Updates, Zpup, Gemini 4 Neon, FailTrace, PHP 8.6 und der überarbeitete Fanzine-Editor.",
+  "intro": "Der Donnerstag verbindet Softwarepflege mit Spielraum fürs Selbermachen. Zu Ruby, Zpup, Neon und FailTrace kommen am Abend PHPs neue Funktionsbausteine und ein Browsereditor, der die verschachtelte Druckreihenfolge eines kleinen Falt-Hefts übernimmt.",
   "hero": "hero.jpg",
   "heroAlt": "Ein facettierter Stein in einem offenen geometrischen Schutzrahmen ist über feine Projektionslinien mit einem Drahtkörper und drei flachen Körperansichten verbunden, auf hellem Papier mit gelbem und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
-  "notes": "Stand: 19. November 2026, 15:33 Uhr Berlin. Vier recherchierte Catches; erste zwei und Hero unverändert. Ruby-Seitendatum18.11. und Advisory-Historie19.11. getrennt; Neon-Ankündigung vom18.11., heute diskutiert. FailTrace0.2.0 heute19.11. Quellen gelesen, keine eigenen Modellbenchmarks, API-/Kontoprüfungen, Installationen oder CI-Reproduktionen. Zpup-Playground zuvor tatsächlich gedreht und angesehen. Keine Fremdmedien übernommen. Illustration: KI-generiert für Daily Hob.",
+  "notes": "Stand: 19. November 2026, 19:34 Uhr Berlin. Sechs recherchierte Catches; erste vier und Hero unverändert. Ruby-Seitendatum 18.11./Advisory-Historie 19.11. getrennt; Neon vom 18.11., heute diskutiert. FailTrace 0.2.0, PHP 8.6 und Fanzine-Editorbericht heute, 19.11. Quellen gelesen, keine eigenen Modellbenchmarks, Runtime-Upgrades oder CI-Reproduktionen. Zpup-Playground tatsächlich gedreht; beim Fanzine-Editor leere Doppelseiten und Druckprüfung angesehen, kein PDF-Export oder physischer Drucktest. Keine Fremdmedien übernommen. Illustration: KI-generiert für Daily Hob.",
   "sections": [
     {
       "category": "Open Source · Sicherheit",
@@ -48,6 +48,26 @@
       "url": "https://github.com/Ri4dH/failtrace",
       "cta": "Diagnose, Reproduktionsplan und bekannte Abweichungen lesen",
       "source": "Ri4dH/failtrace, aktuelles README und GitHub-Releases 0.2.0/0.1.0, 19.11.2026; HN 50554941, 19.11.2026; Deniz Genc, 19.11.2026. Gelesen 19.11.2026. Frühes Projekt; aktuelle Primärquellen gehen beim Reproduktionsumfang über den ergänzenden Artikel hinaus. Beispiele und Umgebungsverhalten laut Autor, nicht selbst ausgeführt."
+    },
+    {
+      "category": "Open Source · Sprache",
+      "short": "PHP 8.6",
+      "title": "PHP 8.6: Argumente vorab binden, Zeitspannen ausdrücken und viele Streams beobachten.",
+      "body": "PHP 8.6.0 ist heute erschienen. Partial Function Application bindet einige Funktionsargumente vorab; Platzhalter lassen den Rest offen und liefern dafür eine Closure. Time\\Duration beschreibt verstrichene Zeit unabhängig von Kalender und Zeitzone, etwa für Timeouts. Die neue Io\\Poll-API beobachtet viele Streams über native Mechanismen wie epoll oder kqueue und soll Bibliotheken wie ReactPHP oder AMPHP als Grundlage dienen. Dazu kommen clamp() zum Begrenzen vergleichbarer Werte, ein gemeinsames SortDirection-Enum und Standardwerte für readonly-Properties. Ein solcher Standardwert initialisiert die Property bereits, der Konstruktor darf ihn nicht noch einmal überschreiben.",
+      "takeaway": "Ein Feature-Release ist kein Auftrag zum ungeprüften Produktionswechsel. Der Migrationsleitfaden nennt unter anderem neue ValueErrors bei ungültigen Argumenten, geändertes Verhalten von trim() bei Form-Feed-Zeichen und neue Session-Standards: Strict Mode und HttpOnly sind aktiviert, SameSite steht auf Lax. Gerade eigene Session-Handler und Anmeldeabläufe über andere Websites gehören daher in die Tests. return in finally ist nun deprecated, nicht schon vollständig entfernt. Io\\Poll macht eine bestehende Anwendung nicht automatisch nebenläufig; Bibliotheken müssen die API nutzen. Releasebeitrag und Phoronix bestätigen die neuen Sprachbausteine, aber hier wurde weder PHP installiert noch eine Anwendung migriert oder eine Leistungs- und Kompatibilitätsmessung gemacht.",
+      "url": "https://www.php.net/releases/8.6/en.php",
+      "cta": "Neuerungen und Migrationshinweise vor dem Upgrade lesen",
+      "source": "PHP-Releaseankündigung 8.6 und Release-Mail von Matteo Beccati, 19.11.2026; PHP-Migrationsleitfaden 8.5→8.6 samt Inkompatibilitäten und Deprecations; Michael Larabel, Phoronix, 19.11.2026. Gelesen 19.11.2026. Sprachverhalten laut offizieller Dokumentation, kein eigener Laufzeit-, Upgrade- oder Performancetest."
+    },
+    {
+      "category": "Wildcard · Gestaltung",
+      "short": "Fanzines.app",
+      "title": "Ein Blatt A4, acht Seiten: Der Fanzine-Editor denkt jetzt in echten Doppelseiten.",
+      "body": "Wilson Tovar beschreibt heute den überarbeiteten Editor von fanzines.app. Das Werkzeug verteilt Fotos und Text auf ein achtseitiges Heft aus einem einzelnen A4-Blatt. Beim Ausschießen ordnet es die Panels für den Druck neu an und dreht die obere Reihe um 180 Grad. Neu gruppiert die Seitenleiste die tatsächlichen Lesepaare 1/2, 3/4 und 5/6; eine Spread-Ansicht zeigt die gegenüberliegende Seite zum Vergleichen. Hinzu kommen laut Autor Stapel-Import von Fotos, Fill/Fit/Center und eine Druckprüfung mit Schnitt-/Falzlinien und 5 mm Sicherheitsrand. Im geöffneten englischen Editor waren die Paarung von Seite 1/2 und die Druckprüfung eines leeren A4-Bogens tatsächlich sichtbar.",
+      "takeaway": "Eine kleine Designverbesserung mit greifbarem Zweck: Das Bildschirmmodell passt besser zum später gefalteten Heft. Ein A4-Blatt ergibt nach Falten und einem mittleren Schnitt acht kleine Seiten, nicht acht einzelne Blätter. Die App ist laut eigener Seite kostenlos und ohne Anmeldung; der Autor beschreibt lokalen 300-DPI-PDF-Export ohne Foto-Upload. Das wurde hier nicht durch Datenverkehrsprüfung, gefüllten Export oder physischen Druck bestätigt. Geprüft wurden nur Navigation, leere Doppelseitenansicht und Review. Druckerränder und Skalierung bleiben abhängig vom eigenen Gerät; den 5 mm Rand als Schutzoption verstehen, nicht als Druckgarantie. Die Falttechnik selbst ist alt, neu ist dieser Editor-Umbau. Kein fremdes Foto oder Screenshot aus dem Projekt wird in der Ausgabe übernommen.",
+      "url": "https://krthr.co/paper-folds-and-whats-new-in-fanzines-app/",
+      "cta": "Editor-Umbau und Faltanleitung ansehen",
+      "source": "Wilson Tovar, Paper, folds, and what’s new in fanzines.app, 19.11.2026; offizielle App fanzines.app/en/editor und Repository krthr/fanzines-app; HN 50559719, 19.11.2026. Gelesen und englische Editor-/Review-Oberfläche tatsächlich angesehen am 19.11.2026. Export-/Privatsphäre-/Druckangaben laut Autor, kein eigener Druck- oder PDF-Test."
     }
   ]
 }
