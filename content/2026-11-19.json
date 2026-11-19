@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-19",
+  "title": "Daily Hob vom Donnerstag, 19.11.",
+  "headline": "Ruby schließt Speicherlücken. Zpup macht aus Raum flache Bilder.",
+  "teaser": "2 Donnerstags-Catches: wichtige Ruby-Sicherheitsupdates und Zpups kleine 3D-Szenen als SVG.",
+  "intro": "Zum Donnerstag ein Wartungsthema mit echtem Gewicht und ein kleines Grafikwerkzeug: Ruby behebt mehrere Speicherfehler, während Zpup aus einer beschriebenen Szene schlichte SVG-Illustrationen erzeugt. Zwei Funde, deren Grenzen genauso wichtig sind wie ihre Möglichkeiten.",
+  "hero": "hero.jpg",
+  "heroAlt": "Ein facettierter Stein in einem offenen geometrischen Schutzrahmen ist über feine Projektionslinien mit einem Drahtkörper und drei flachen Körperansichten verbunden, auf hellem Papier mit gelbem und mintfarbenem Akzent.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "notes": "Stand: 19. November 2026, 11:34 Uhr Berlin. Zwei recherchierte Catches. Ruby-Seiten tragen das Datum 18.11.; die Advisory-Historie nennt als ursprüngliche Veröffentlichung 19.11., 00:00 UTC. Zpup heute vorgestellt; kein eigener Installationstest. Playground tatsächlich gedreht und angesehen, aber keine Export-, Kompatibilitäts- oder Benchmarkprüfung. Keine Fremdmedien übernommen. Illustration: KI-generiert für Daily Hob.",
+  "sections": [
+    {
+      "category": "Open Source · Sicherheit",
+      "short": "Ruby-Updates",
+      "title": "Ruby behebt sieben Speicherfehler in regulären Ausdrücken und der Groß-/Kleinschreibung.",
+      "body": "Ruby empfiehlt ein Update auf 4.0.10, 3.4.13 oder 3.3.14. Die Sicherheitsmeldung beschreibt sieben Schwachstellen, darunter Pufferüberläufe, Double Free und unzulässige Speicherzugriffe. Für mehrere Fehler kennt das Projekt Machbarkeitsnachweise für Codeausführung aus der Ferne in bestimmten Szenarien. Bei einigen Regexp-Problemen ist entscheidend, ob eine Anwendung vom Angreifer kontrollierte Muster kompiliert oder verwendet; andere betreffen präparierte Zeichenketten bei der Umwandlung der Groß-/Kleinschreibung. Die Seiten tragen den 18. November, die Historie der Advisory nennt als ursprüngliche Veröffentlichung den 19. November um 00:00 UTC. Heute wird die Meldung breit diskutiert.",
+      "takeaway": "Wer Ruby betreibt, sollte die tatsächlich eingesetzte Runtime und den passenden Wartungszweig prüfen und die Projektkorrekturen einspielen. Die Advisory nennt 3.3.13 und früher, 3.4.0 bis 3.4.12 sowie 4.0.0 bis 4.0.9 als betroffen; 3.2 und ältere Zweige sind laut Projekt am Supportende und bekommen diese Fixes nicht. Für 3.3.14 nennt der Releasebeitrag zusätzlich ausgewählte Fehlerkorrekturen und die Bezeichnung Legacy Maintenance; das geplante Supportende bleibt Ende März 2027. Machbarkeitsnachweise sind kein hier belegter Angriff im laufenden Betrieb und keine Aussage, dass jede Rails-App aus der Ferne ausnutzbar ist. Kein eigener Exploitversuch, kein Systemscan und keine Prüfung eines konkreten Deployments. Zum Lesezeitpunkt listet die Advisory GHSA-Kennungen, CVE-Nummern sind dort noch beantragt.",
+      "url": "https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/",
+      "cta": "Advisory lesen und den eigenen Ruby-Zweig abgleichen",
+      "source": "Ruby-Sicherheitsmeldung von mame sowie offizielle Releasebeiträge zu 4.0.10, 3.4.13 und 3.3.14, Seitendatum jeweils 18.11.2026; Advisory-Historie: ursprünglich veröffentlicht am 19.11.2026, 00:00 UTC. HN-Tagesübersicht19.11.2026. Gelesen19.11.2026. Ausnutzbarkeit und betroffene Versionen laut Projekt, kein eigener Sicherheitsnachweis."
+    },
+    {
+      "category": "Design · Open Source",
+      "short": "Zpup",
+      "title": "Eine Szene als JSON, viele Blickwinkel als SVG, ohne Skript im fertigen Bild.",
+      "body": "Zpup beschreibt kleine räumliche Illustrationen als Datenbaum und rendert daraus ein flaches SVG. Das an Zdog angelehnte Projekt vergleicht überlappende Formen dort, wo sie sich im Bild überschneiden, statt jede Form nur nach einem Mittelpunkt zu sortieren. Gedacht ist es für Icons, kleine Gebäude, Figuren oder Requisiten. Installiert wird das frühe MIT-Projekt als @zpup/core; renderSvg liefert laut Dokumentation einen SVG-String ohne DOM. Im geöffneten Playground ließ sich die Planetenszene per Ziehen sichtbar drehen. Die heutige Show-HN-Vorstellung bezeichnet den Stand als Version 0.2.",
+      "takeaway": "Der Reiz ist das fertige Bild ohne JavaScript, nicht ein Ersatz für eine vollständige 3D-Engine. Die Projektdokumentation nennt keine Perspektive, Texturen, Textform, frei platzierbare Lichtquellen oder allgemeinen Animationsbaukasten. Sich tief durchdringende Formen werden nicht korrekt dargestellt; paarweise Tiefenvergleiche skalieren quadratisch mit der Zahl der Teile. Ein separater Spin-Export nutzt SMIL für eine gleichmäßige Drehung, vergrößert die Datei und berücksichtigt prefers-reduced-motion nicht selbst. Dafür muss die einbettende Seite eine passende Alternative vorsehen. Eigene Sichtprüfung nur von Playground und Drehung, kein Export-, Installations-, Barrierefreiheits- oder Mehrbrowser-Test. Vergleichszahlen gegen Zdog stammen vom Autor und wurden hier nicht nachgemessen; die API kann sich vor 1.0 ändern.",
+      "url": "https://github.com/rxolve/zpup",
+      "cta": "Szenenformat, Grenzen und Playground ansehen",
+      "source": "rxolve/zpup, README und docs/decisions.md; offizieller Playground rxolve.github.io/zpup, am19.11.2026 geöffnet und Planetenszene tatsächlich gedreht; Show HN50556534, heute19.11.2026. Frühes Projekt, technische Grenzen laut Dokumentation; keine unabhängige Leistungsmessung und kein Exporttest. Projektbilder nicht übernommen."
+    }
+  ]
+}
