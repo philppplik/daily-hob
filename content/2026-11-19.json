@@ -1,13 +1,13 @@
 {
   "date": "2026-11-19",
   "title": "Daily Hob vom Donnerstag, 19.11.",
-  "headline": "Ruby schließt Speicherlücken. Zpup macht aus Raum flache Bilder.",
-  "teaser": "2 Donnerstags-Catches: wichtige Ruby-Sicherheitsupdates und Zpups kleine 3D-Szenen als SVG.",
-  "intro": "Zum Donnerstag ein Wartungsthema mit echtem Gewicht und ein kleines Grafikwerkzeug: Ruby behebt mehrere Speicherfehler, während Zpup aus einer beschriebenen Szene schlichte SVG-Illustrationen erzeugt. Zwei Funde, deren Grenzen genauso wichtig sind wie ihre Möglichkeiten.",
+  "headline": "Ruby repariert, Neon denkt abgestuft, FailTrace sucht den roten CI-Schritt.",
+  "teaser": "4 Donnerstags-Catches: Ruby-Updates, Zpup, Gemini 4 Neon und FailTrace für fehlgeschlagene GitHub-Actions-Läufe.",
+  "intro": "Vom sicheren Betrieb zum nächsten Versuch: Ruby schließt Speicherlücken, Zpup zeichnet kleine Szenen. Am Nachmittag kommen Googles neues Modell zwischen Tiefe und Tempo sowie ein Werkzeug hinzu, das einen konkreten CI-Fehler lokal nachvollziehbar machen will.",
   "hero": "hero.jpg",
   "heroAlt": "Ein facettierter Stein in einem offenen geometrischen Schutzrahmen ist über feine Projektionslinien mit einem Drahtkörper und drei flachen Körperansichten verbunden, auf hellem Papier mit gelbem und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
-  "notes": "Stand: 19. November 2026, 11:34 Uhr Berlin. Zwei recherchierte Catches. Ruby-Seiten tragen das Datum 18.11.; die Advisory-Historie nennt als ursprüngliche Veröffentlichung 19.11., 00:00 UTC. Zpup heute vorgestellt; kein eigener Installationstest. Playground tatsächlich gedreht und angesehen, aber keine Export-, Kompatibilitäts- oder Benchmarkprüfung. Keine Fremdmedien übernommen. Illustration: KI-generiert für Daily Hob.",
+  "notes": "Stand: 19. November 2026, 15:33 Uhr Berlin. Vier recherchierte Catches; erste zwei und Hero unverändert. Ruby-Seitendatum18.11. und Advisory-Historie19.11. getrennt; Neon-Ankündigung vom18.11., heute diskutiert. FailTrace0.2.0 heute19.11. Quellen gelesen, keine eigenen Modellbenchmarks, API-/Kontoprüfungen, Installationen oder CI-Reproduktionen. Zpup-Playground zuvor tatsächlich gedreht und angesehen. Keine Fremdmedien übernommen. Illustration: KI-generiert für Daily Hob.",
   "sections": [
     {
       "category": "Open Source · Sicherheit",
@@ -28,6 +28,26 @@
       "url": "https://github.com/rxolve/zpup",
       "cta": "Szenenformat, Grenzen und Playground ansehen",
       "source": "rxolve/zpup, README und docs/decisions.md; offizieller Playground rxolve.github.io/zpup, am19.11.2026 geöffnet und Planetenszene tatsächlich gedreht; Show HN50556534, heute19.11.2026. Frühes Projekt, technische Grenzen laut Dokumentation; keine unabhängige Leistungsmessung und kein Exporttest. Projektbilder nicht übernommen."
+    },
+    {
+      "category": "KI · Modelle",
+      "short": "Gemini 4 Neon",
+      "title": "Gemini 4 Neon setzt auf anspruchsvolle Alltagsarbeit, mit vier Denkstufen statt einer festen Gangart.",
+      "body": "Google hat am 18. November Gemini 4 Neon vorgestellt, heute wird das Modell breit diskutiert. Es ist von Carbon abgeleitet und soll zwischen langen, schwierigen Projekten mit Carbon und schneller Alltagsausführung mit Hydrogen liegen. Vier Denkstufen reichen von Low bis Extra High. Google nennt ein gemeinsames Kontextfenster von bis zu einer Million Tokens für Ein- und Ausgabe sowie API-Preise von 3 US-Dollar pro Million Eingabetokens, 0,15 für gecachte Eingabe und 15 für Ausgabe. Der Rollout umfasst unter anderem die bezahlte Gemini API; in der Gemini-App und Antigravity nennt Google AI Pro und Ultra als Zugänge. In Antigravity kann Orchestrator Neon fürs Planen mit Hydrogen für Routineteile verbinden.",
+      "takeaway": "Nicht alle Ranglistenwerte stammen aus derselben Einstellung oder Umgebung. Googles höchster Intelligence-Index-Wert nutzt Extra High, der genannte Kostenvorteil gegenüber Carbon dagegen das standardmäßige High. Besonders anschaulich ist SWE-sweep: Die Modellkarte nennt 12,8 Prozent mit Mini-SWE-Harness und 39,0 Prozent im Anbieter-Harness. Das ist kein isolierter Beweis allein für die Modellqualität. Die Model Card nennt weiter mögliche Halluzinationen; der vollständige Safety-&-Security-Bericht ist dort zum Lesezeitpunkt erst angekündigt. InfoWorld betont ergänzend Funktions-, End-to-End- und Regressionstests statt Produktionsvertrauen aus Benchmarks. Preise sind Googles veröffentlichte Tokenpreise, keine Gesamtkostenrechnung oder Zusage für ein konkretes Konto. Kein eigener Modell-, API-, Rollout- oder Sicherheitstest.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "cta": "Ankündigung mit Modellkarte und Einsatzgrenzen abgleichen",
+      "source": "Google, Introducing Gemini 4 Neon, 18.11.2026; Google DeepMind Model Card, 18.11.2026; Antigravity-Blog, 18.11.2026; Prasanth Aby Thomas, InfoWorld, 19.11.2026. Gelesen 19.11.2026. Vorabend-Ankündigung, heute relevant. Leistungs-, Preis- und Rolloutangaben laut Anbieter; InfoWorld ist Einordnung, kein eigener unabhängiger Modellvergleich."
+    },
+    {
+      "category": "Open Source · Dev-Tools",
+      "short": "FailTrace",
+      "title": "Nicht den ganzen Workflow erraten: FailTrace beginnt bei genau dem CI-Lauf, der rot wurde.",
+      "body": "FailTrace nimmt die URL eines fehlgeschlagenen GitHub-Actions-Laufs. inspect sucht Job, Schritt, Commit, Versuch und Fehlerbild; plan beschreibt die lokale Nachstellung, ohne sie auszuführen; repro setzt den Plan in Docker um. Das frühe MIT-Projekt kann dabei zwischen dem getesteten PR-Merge-Commit und dem bloßen Branch-Stand unterscheiden und Laufzeitversionen aus Logs ableiten. Die heutige Version 0.2.0 ergänzt --source zum Prüfen eines lokalen Arbeitsstands und getrennte Exitcodes nach Ergebnis. Ein reproduzierter Fehler liefert nun Exitcode 2 statt wie in 0.1.0 pauschal 0, ein wichtiger Unterschied für bestehende Shellketten.",
+      "takeaway": "Erst den Plan und seine Abweichungen lesen. Reproduzierbar sind derzeit vor allem Linux-Jobs, deren fehlerhafter Schritt ein run-Skript ist; ein fehlgeschlagener uses-Action-Schritt kann blockieren. Fehlende Artefakte anderer Jobs, abweichende Runner-Pakete, Root statt Runner-Nutzer sowie Architektur-Emulation begrenzen die Gleichheit mit CI. Das Programm braucht laut README auch für öffentliche Repositories einen GitHub-Token für die Log-API; für private Repositories passende Actions-Leserechte. repro führt Repository-Code aus, gegebenenfalls fremden PR-Code. Die beschriebene Containerbegrenzung ist keine hier geprüfte Sicherheitsgarantie; nur bewusst vertrauten Code ausführen und keine Secrets leichtfertig mitgeben. Der ergänzende Deniz-Beitrag nennt Ergebnisurteile noch Roadmap, aktuelles README und Release 0.2.0 dokumentieren sie bereits. Kein eigener Installations-, Docker-, Token- oder Reproduktionstest.",
+      "url": "https://github.com/Ri4dH/failtrace",
+      "cta": "Diagnose, Reproduktionsplan und bekannte Abweichungen lesen",
+      "source": "Ri4dH/failtrace, aktuelles README und GitHub-Releases 0.2.0/0.1.0, 19.11.2026; HN 50554941, 19.11.2026; Deniz Genc, 19.11.2026. Gelesen 19.11.2026. Frühes Projekt; aktuelle Primärquellen gehen beim Reproduktionsumfang über den ergänzenden Artikel hinaus. Beispiele und Umgebungsverhalten laut Autor, nicht selbst ausgeführt."
     }
   ]
 }
