@@ -1,13 +1,13 @@
 {
   "date": "2026-11-20",
   "title": "Daily Hob vom Freitag, 20.11.",
-  "headline": "Postgres räumt auf, FFmpeg rechnet Zwischenbilder, GIMP prüft echte Dialoge.",
-  "teaser": "4 Freitags-Catches: PostgreSQL 19, der SNES-Chatbot, FFmpeg 9.1 und GIMPs neue externe GUI-Tests.",
-  "intro": "Am Freitag geht es um Dinge, die im Alltag wirklich durchlaufen müssen: Datenbankumbauten, Medienverarbeitung und bedienbare Oberflächen. Zu PostgreSQL 19 und dem winzigen SNES-Sprachmodell kommen FFmpeg 9.1 mit neuen Audio-/GPU-Pfaden und ein genauerer Blick auf GIMPs Tests gegen die echte Anwendung.",
+  "headline": "Weniger Tabellen-Bloat, kleinere Quelldateien und Python-Zellen, die mitdenken.",
+  "teaser": "6 Freitags-Catches: PostgreSQL 19, SNES-Chatbot, FFmpeg 9.1, GIMP-GUI-Tests, Sprawl Guard und Reaktiv Workbook.",
+  "intro": "Der Freitag verbindet Serverpflege, Medien und Oberflächentests mit zwei frischen Werkzeugfunden am Abend. Sprawl Guard setzt messbare Grenzen gegen wuchernde Repositories. Reaktiv Workbook überträgt Signals und Abhängigkeitsgraphen in eine Python-Arbeitsmappe. Dazu bleiben PostgreSQL 19, der kleine SNES-Chatbot, FFmpeg 9.1 und GIMPs externe Tests im Blick.",
   "hero": "hero.jpg",
   "heroAlt": "Lose rechteckige Platten werden zu einem kompakten Datenbankzylinder geordnet; daneben ein unbeschriftetes Retro-Spielmodul mit kleinen Sprechblasen, feine schwarze Linien auf hellem Papier mit gelbem Kreis und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
-  "notes": "Stand: 20. November 2026, 15:34 Uhr Berlin. Vier recherchierte Catches; erste zwei und Hero unverändert. PostgreSQL 19 vom 19.11., SNES 0.7 vom 2.11., GIMP-Beitrag vom 16.11., jeweils heute diskutiert. FFmpeg 9.1 heute 20.11. veröffentlicht. Quellen, offizielle Dokumentation und Grenzen gegengeprüft; GIMP-Seitendatum aus sichtbarem Datum und Metadaten, nicht abweichendem Suchdatum. Keine eigene Datenbankmigration, Medienqualitäts-/GPU-Messung, GIMP-Testausführung oder Emulator-/Hardwareprüfung. Keine fremden Medien übernommen. Illustration: KI-generiert für Daily Hob.",
+  "notes": "Stand: 20. November 2026, 19:34 Uhr Berlin. Sechs recherchierte Catches; erste vier und Hero unverändert. PostgreSQL 19 vom 19.11., SNES 0.7 vom 2.11., GIMP-Beitrag vom 16.11., jeweils heute diskutiert. FFmpeg 9.1 heute 20.11. veröffentlicht. Sprawl Guard und Reaktiv Workbook heute auf Show HN vorgestellt; Projekte bzw. Pakete bestanden schon vorher. Primärquellen, Paketinformationen und Dokumentation gelesen, bei den zwei jungen Abendfunden keine unabhängige Praxisevaluation gefunden. Keine eigene Installation, Runtime-/Qualitätsmessung oder Sicherheitsprüfung der Werkzeuge. Keine fremden Medien übernommen. Illustration: KI-generiert für Daily Hob.",
   "sections": [
     {
       "category": "Open Source · Datenbanken",
@@ -48,6 +48,26 @@
       "url": "https://www.gimp.org/news/2026/11/16/gimp-ui-tests/",
       "cta": "Testaufbau und Grenzen im Entwicklerleitfaden ansehen",
       "source": "Harsh Verma, GIMP, Improved Graphical User Interface testing, Seitendatum 16.11.2026; offizielle GIMP-Entwickleranleitung UI Tests; Bobby Borisov, Linuxiac, 17.11.2026; HN-Tagesübersicht 20.11.2026. Gelesen 20.11.2026. Zahl 13 laut Projekt, keine eigene Zählung des Quellarrays oder Testausführung. Älterer Beitrag, heutiger Diskussionsfund. Keine Projektbilder übernommen."
+    },
+    {
+      "category": "Open Source · Codepflege",
+      "short": "Sprawl Guard",
+      "title": "Sprawl Guard begrenzt nicht nur Quelldateien, sondern auch überfüllte Verzeichnisse.",
+      "body": "Der heute auf Show HN vorgestellte Sprawl Guard zählt mit Tokei Quelltextzeilen und die direkt in einem Verzeichnis liegenden Quelldateien. Die konfigurierten Grenzen gelten über viele Programmiersprachen hinweg; Produktions- und Testcode können unterschiedliche Limits bekommen. Dazu kommen Byte-Grenzen für Dateien. Für bestehende Altlasten gibt es eine Ratchet-Datei: Ein schon zu großer Parser darf zunächst bleiben, seine erfasste Größe wird aber zur Obergrenze. Der Check kann als CLI auch JSON, SARIF oder GitHub-Actions-Anmerkungen ausgeben. Das Projekt ist nicht erst heute entstanden; die heutige Vorstellung macht den Ansatz interessant für Repositories, die unter vielen kleinen Änderungen langsam ausfransen.",
+      "takeaway": "Die nützliche Idee ist der schrittweise enger werdende Rahmen statt einer riesigen Aufräumaktion am ersten Tag. Ein wichtiger Dokumentationspunkt: Der Standard-Check meldet einen Ratchet-Eintrag auch dann als veraltet, wenn eine Datei kleiner wurde. Danach senkt tighten die gespeicherte Grenze; Vorschau und Schreiben sind getrennt. Es reicht also nicht, nur neues Wachstum abzufangen und die Baseline ewig stehen zu lassen. Gleichzeitig bleibt Zeilenzahl ein grober Ordnungsindikator, kein Beweis guter Architektur: Code blind in Sammelmodule umzuschichten erfüllt womöglich das Limit, nicht das Ziel. Ignorierte oder explizit nur warnend behandelte unlesbare Pfade können die Prüfung außerdem unvollständig lassen. Für reine JavaScript-/TypeScript-Zeilenlimits empfiehlt die Projektseite selbst ESLint oder Oxlint. Hier wurden Dokumentation und README geprüft, aber weder Installation noch Repository-Check ausgeführt.",
+      "url": "https://kpozin.github.io/sprawl-guard/",
+      "cta": "Grenzen und Ratchet-Verhalten nachlesen",
+      "source": "Konstantin Pozin, Sprawl-Guard-Projektseite, aktuelles README, Ratchet- und CLI-Dokumentation; HN 50577591, 20.11.2026. Gelesen 20.11.2026. Älteres Projekt, heutige Show-HN-Vorstellung. Verhalten laut Primärdokumentation, keine unabhängige Evaluation, keine eigene Ausführung oder Architekturverbesserung gemessen. Keine Projektbilder übernommen."
+    },
+    {
+      "category": "Informatik · Python",
+      "short": "Reaktiv Workbook",
+      "title": "Eine Python-Datei, drei Ansichten: Reaktiv Workbook macht Abhängigkeiten zur Arbeitsfläche.",
+      "body": "Reaktiv Workbook wurde heute auf Show HN vorgestellt. Das frühe MIT-Projekt verbindet Notizen, ein Zellraster und einen sichtbaren Abhängigkeitsgraphen in einer normalen .workbook.py-Datei. Unter der Oberfläche arbeitet die Signals-Bibliothek reaktiv: Was eine berechnete Zelle während ihrer Ausführung liest, bestimmt ihre Abhängigkeiten. Ändert sich ein Eingang, werden betroffene Werte bei Bedarf neu berechnet; unveränderte Ergebnisse stoppen laut Projekt weitere Aktualisierungen. Markdown kann dieselben Live-Werte wie Diagramme verwenden. Der lokale Editor benötigt Python ab 3.12, run bietet eine interaktive Präsentationsansicht, check wertet Zellen für Prüfungen aus. Auf der Projektseite gibt es außerdem Browserbeispiele mit Pyodide. Die Paketfassung 0.1.0 wurde schon am 17. November veröffentlicht, ist also kein heutiger Erst-Release.",
+      "takeaway": "Interessant für kleine Modelle und nachvollziehbare Analysen, deren Text sonst neben den Zahlen veraltet. Das ist trotzdem Python-Code, kein automatisch korrektes oder sicheres Spreadsheet. Das Projekt warnt ausdrücklich: Nur vertraute Workbooks öffnen, auch aktivierte Effects können schon beim Start laufen. Der Schalter sandbox richtet mit uv eine eigene Paketumgebung ein; daraus keine Sicherheitsisolation gegenüber Dateien oder Diensten ableiten. Auch run ist laut Paketbeschreibung nur ein eingeschränkter Präsentationsmodus, kein Quellcodeschutz und keine Sandbox, die Definitionen gehen an den Browser. Wer den optionalen MCP-Zugang aktiviert, erlaubt seinem Coding-Agenten Eingriffe in die geöffnete Arbeitsmappe. Lokale Verarbeitung und selektive Neuberechnung sind Projektangaben, hier nicht durch Netzwerk-, Paket-, Reaktivitäts- oder Leistungstests verifiziert. Für wichtige Dateien empfiehlt das junge Projekt selbst Versionskontrolle.",
+      "url": "https://workbook.bui.app/",
+      "cta": "Signals, Dateiformat und frühe Beispiele ansehen",
+      "source": "Reaktiv-Workbook-Projektseite und buiapp/reaktiv-workbook-README; PyPI reaktiv-workbook 0.1.0, hochgeladen 17.11.2026; HN 50572351 und Autorantwort, 20.11.2026. Gelesen 20.11.2026. Frühes Projekt, heute vorgestellt; keine unabhängige Praxisevaluation gefunden. Kein eigener Installations-, Pyodide-, MCP-, Datenfluss- oder Sicherheitstest. Keine Projektbilder übernommen."
     }
   ]
 }
