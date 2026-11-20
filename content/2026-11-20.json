@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-20",
+  "title": "Daily Hob vom Freitag, 20.11.",
+  "headline": "Postgres räumt Tabellen auf. Ein kleiner Chatbot zieht ins SNES-Modul.",
+  "teaser": "2 Freitags-Catches: PostgreSQL 19 bringt REPACK in den Kern, ChatGPT for SNES schrumpft das Sprachmodell aufs Retro-Modul.",
+  "intro": "Zwischen Serverpflege und Konsolenexperiment liegt heute ein ziemlich großer Maßstabssprung. PostgreSQL 19 macht den Tabellenumbau zur eingebauten Funktion. Auf der anderen Seite zeigt ein älteres, heute diskutiertes SNES-Projekt, wie wenig Hardware für ein sehr begrenztes Sprachmodell reichen kann.",
+  "hero": "hero.jpg",
+  "heroAlt": "Lose rechteckige Platten werden zu einem kompakten Datenbankzylinder geordnet; daneben ein unbeschriftetes Retro-Spielmodul mit kleinen Sprechblasen, feine schwarze Linien auf hellem Papier mit gelbem Kreis und mintfarbenem Akzent.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "notes": "Stand: 20. November 2026, 11:34 Uhr Berlin. Zwei recherchierte Catches. PostgreSQL 19 offiziell am 19.11. veröffentlicht, heute auf HN diskutiert; ergänzender Snowflake-Text vom 2.11. noch aus der RC-Phase. SNES-Version 0.7 vom 2.11., heute diskutiert, kein heutiger Launch. Offizielle Dokumentation, Projektseite sowie ergänzende Artikel und Community-Kontext gelesen. Keine eigene Datenbankmigration, Leistungs-, Emulator- oder Hardwareprüfung. Keine Projekt-, Presse- oder Agenturbilder übernommen. Illustration: KI-generiert für Daily Hob.",
+  "sections": [
+    {
+      "category": "Open Source · Datenbanken",
+      "short": "PostgreSQL 19",
+      "title": "PostgreSQL 19: Tabellen-Bloat abbauen, ohne den ganzen Umbau lang zu sperren.",
+      "body": "PostgreSQL 19 wurde am 19. November veröffentlicht und wird heute breit diskutiert. Der neue eingebaute SQL-Befehl REPACK schreibt eine Tabelle samt Indizes neu, gibt ungenutzten Platz ans Betriebssystem zurück und kann Daten nach einem Index anordnen. Mit CONCURRENTLY bleiben Lesen und Schreiben während des Großteils der Arbeit möglich; erst beim abschließenden Dateitausch braucht es eine exklusive Sperre. Hinzu kommen unter anderem pg_plan_advice für bewusst gesteuerte Ausführungspläne, WAIT FOR LSN für Read-your-writes auf Standbys und INSERT ... ON CONFLICT DO SELECT zum Zurückgeben einer bereits vorhandenen Zeile. Es geht damit um konkrete Verwaltungs- und Anwendungsmuster, nicht bloß eine höhere Versionsnummer.",
+      "takeaway": "CONCURRENTLY heißt nicht sperrfrei oder risikolos. Laut Handbuch benötigt REPACK freien Platz mindestens in Größe von Tabelle plus Indizes, gegebenenfalls mehr für Sortierung und aufgezeichnete Änderungen. Für alte, schon vor dem Umbau genommene Snapshots ist der Vorgang nicht MVCC-sicher: Die Tabelle kann nach dem Tausch leer erscheinen. Nicht jede Tabellenart wird unterstützt, DDL währenddessen kann den Lauf scheitern lassen. REPACK ersetzt außerdem nicht die laufende Autovacuum-Pflege oder den Schutz vor Transaktions-ID-Wraparound. Der ergänzende Snowflake-Beitrag vom 2. November zeigt einen kleinen, dort langsameren Concurrent-Umbau zugunsten der Erreichbarkeit; sein damaliger RC-Status ist durch die offizielle Veröffentlichung überholt. Eigene Upgrades und Messungen gab es hier nicht. Vor dem Major-Upgrade bleiben Migrationsleitfaden, Erweiterungskompatibilität und Wiederherstellungstest Pflichtstoff.",
+      "url": "https://www.postgresql.org/about/news/postgresql-19-released-3449/",
+      "cta": "Release und Grenzen von REPACK nachlesen",
+      "source": "PostgreSQL Global Development Group, Releaseankündigung und Release-19-Notizen, 19.11.2026; offizielles REPACK-Handbuch, gelesen 20.11.2026; Craig Kerstiens, Snowflake, 2.11.2026, ergänzender RC-Erfahrungsbericht; HN-Tagesübersicht 20.11.2026. Sperren und Snapshot-Grenzen laut Handbuch. Kein eigener Upgrade-, Bloat- oder Lasttest; fremde Beispielmessung nicht verallgemeinert."
+    },
+    {
+      "category": "Wildcard · Retro-KI",
+      "short": "SNES-Chatbot",
+      "title": "ChatGPT for SNES: Ein winziges Sprachmodell auf dem Super-FX-2-Chip, kein Cloud-ChatGPT.",
+      "body": "Benj Edwards zeigt mit ChatGPT for SNES ein inoffizielles Konsolenexperiment, das heute auf Hacker News diskutiert wird. Version 0.7 stammt schon vom 2. November. Laut Projekt läuft ein Sprachmodell mit rund 2,2 Millionen Parametern auf dem Super-FX-2-Zusatzchip im Modul und erzeugt Antworten Wort für Wort. Die Trainingsdialoge stammen von gpt-oss-120b; nicht dieses große Modell selbst läuft auf der Konsole. Ein zweiter Build ergänzt ein lokal gespeichertes Faktenbuch mit den Anfangssätzen von 150.000 Artikeln der Simple English Wikipedia. Im Browser stellt die Seite einen Snes9x-Emulator bereit. Auf echter Hardware braucht es ein Flash-Modul mit Super-FX-Unterstützung, beim Faktenbuch zusätzlich MSU-1.",
+      "takeaway": "Der Name ist Interface-Anspielung, keine offizielle OpenAI-Version und kein Nachweis heutiger ChatGPT-Fähigkeiten auf einer alten Standardkonsole. Der Autor nennt rund 8.000 bekannte Wörter und warnt ausdrücklich vor selbstsicher falschen Antworten. Das Faktenbuch ist ein lokaler Abrufspeicher, kein Live-Webzugriff und keine Richtigkeitsgarantie. Der interessante Unterschied ist Inferenz auf knapper Hardware gegenüber dem viel aufwendigeren Training und der Entwicklung; das eine beweist nicht, dass beides in den Neunzigern praktikabel gewesen wäre. Die Projektseite und die heutige Diskussion wurden gelesen, aber weder Browserdialog noch ROM- oder Hardwarelauf hier ausprobiert. Darum gibt es keine eigene Aussage zu Tempo, Stabilität oder Antwortqualität. Als anschauliches Bastelprojekt spannend, als Assistent ausdrücklich nicht empfohlen.",
+      "url": "https://www.bxfoundry.com/chatgpt_snes/",
+      "cta": "Projekt, Varianten und Hardwareanforderungen ansehen",
+      "source": "Benj Edwards/BX Foundry, ChatGPT for SNES, Version 0.7 vom 2.11.2026; Deniz Genc, 20.11.2026; HN 50568548 vom 20.11.2026. Gelesen 20.11.2026. Modell-/Hardware-/Datenangaben laut Projekt, keine eigene Emulator-, ROM-, Hardware- oder Leistungsprüfung. Älteres Projekt, heutiger Diskussionsfund. Projektbilder nicht übernommen."
+    }
+  ]
+}
