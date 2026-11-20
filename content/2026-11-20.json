@@ -1,13 +1,13 @@
 {
   "date": "2026-11-20",
   "title": "Daily Hob vom Freitag, 20.11.",
-  "headline": "Postgres räumt Tabellen auf. Ein kleiner Chatbot zieht ins SNES-Modul.",
-  "teaser": "2 Freitags-Catches: PostgreSQL 19 bringt REPACK in den Kern, ChatGPT for SNES schrumpft das Sprachmodell aufs Retro-Modul.",
-  "intro": "Zwischen Serverpflege und Konsolenexperiment liegt heute ein ziemlich großer Maßstabssprung. PostgreSQL 19 macht den Tabellenumbau zur eingebauten Funktion. Auf der anderen Seite zeigt ein älteres, heute diskutiertes SNES-Projekt, wie wenig Hardware für ein sehr begrenztes Sprachmodell reichen kann.",
+  "headline": "Postgres räumt auf, FFmpeg rechnet Zwischenbilder, GIMP prüft echte Dialoge.",
+  "teaser": "4 Freitags-Catches: PostgreSQL 19, der SNES-Chatbot, FFmpeg 9.1 und GIMPs neue externe GUI-Tests.",
+  "intro": "Am Freitag geht es um Dinge, die im Alltag wirklich durchlaufen müssen: Datenbankumbauten, Medienverarbeitung und bedienbare Oberflächen. Zu PostgreSQL 19 und dem winzigen SNES-Sprachmodell kommen FFmpeg 9.1 mit neuen Audio-/GPU-Pfaden und ein genauerer Blick auf GIMPs Tests gegen die echte Anwendung.",
   "hero": "hero.jpg",
   "heroAlt": "Lose rechteckige Platten werden zu einem kompakten Datenbankzylinder geordnet; daneben ein unbeschriftetes Retro-Spielmodul mit kleinen Sprechblasen, feine schwarze Linien auf hellem Papier mit gelbem Kreis und mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
-  "notes": "Stand: 20. November 2026, 11:34 Uhr Berlin. Zwei recherchierte Catches. PostgreSQL 19 offiziell am 19.11. veröffentlicht, heute auf HN diskutiert; ergänzender Snowflake-Text vom 2.11. noch aus der RC-Phase. SNES-Version 0.7 vom 2.11., heute diskutiert, kein heutiger Launch. Offizielle Dokumentation, Projektseite sowie ergänzende Artikel und Community-Kontext gelesen. Keine eigene Datenbankmigration, Leistungs-, Emulator- oder Hardwareprüfung. Keine Projekt-, Presse- oder Agenturbilder übernommen. Illustration: KI-generiert für Daily Hob.",
+  "notes": "Stand: 20. November 2026, 15:34 Uhr Berlin. Vier recherchierte Catches; erste zwei und Hero unverändert. PostgreSQL 19 vom 19.11., SNES 0.7 vom 2.11., GIMP-Beitrag vom 16.11., jeweils heute diskutiert. FFmpeg 9.1 heute 20.11. veröffentlicht. Quellen, offizielle Dokumentation und Grenzen gegengeprüft; GIMP-Seitendatum aus sichtbarem Datum und Metadaten, nicht abweichendem Suchdatum. Keine eigene Datenbankmigration, Medienqualitäts-/GPU-Messung, GIMP-Testausführung oder Emulator-/Hardwareprüfung. Keine fremden Medien übernommen. Illustration: KI-generiert für Daily Hob.",
   "sections": [
     {
       "category": "Open Source · Datenbanken",
@@ -28,6 +28,26 @@
       "url": "https://www.bxfoundry.com/chatgpt_snes/",
       "cta": "Projekt, Varianten und Hardwareanforderungen ansehen",
       "source": "Benj Edwards/BX Foundry, ChatGPT for SNES, Version 0.7 vom 2.11.2026; Deniz Genc, 20.11.2026; HN 50568548 vom 20.11.2026. Gelesen 20.11.2026. Modell-/Hardware-/Datenangaben laut Projekt, keine eigene Emulator-, ROM-, Hardware- oder Leistungsprüfung. Älteres Projekt, heutiger Diskussionsfund. Projektbilder nicht übernommen."
+    },
+    {
+      "category": "Open Source · Medien",
+      "short": "FFmpeg 9.1",
+      "title": "FFmpeg 9.1 Gauss: überarbeiteter AAC-Encoder, APV auf Vulkan und erzeugte Zwischenbilder.",
+      "body": "FFmpeg 9.1 ist laut offizieller Downloadseite heute erschienen. Der Changelog nennt einen deutlich überarbeiteten nativen AAC-Encoder und zusätzlich xHE-AAC-Encoding über die externe Bibliothek libfdk-xhe-aac. Bei Video kommen ein Vulkan-Encoder für den professionellen APV-Codec und fruc_vulkan hinzu: Der Filter nutzt Nvidias Optical-Flow-Erweiterung zur Bewegungsanalyse und erzeugt Zwischenbilder für eine höhere Bildrate. APV-Decodierung über Vulkan gab es schon in 9.0, Encoding ist der neue Teil. Weitere praktische Ergänzungen sind ASTC-Bildunterstützung über libastcenc sowie die Auswahl von AVFoundation-Aufnahmegeräten anhand eindeutiger IDs oder USB-Seriennummern, statt nur gleichlautender Gerätenamen.",
+      "takeaway": "Eine neue Versionsnummer macht nicht jede Option in jedem Paket verfügbar. xHE-AAC braucht die passende zusätzlich einkompilierte Bibliothek und ist nicht plötzlich Teil des nativen aac-Encoders. Für fruc_vulkan reicht auch keine beliebige Vulkan-Grafikkarte: Laut technischer Einordnung von heise muss die Nvidia-Erweiterung VK_NV_optical_flow unterstützt werden. Erzeugte Zwischenbilder sind berechnete Bewegung, keine nachträglich gemessenen Originalbilder; deshalb visuell auf Artefakte prüfen. Beim AAC-Update werden Änderungen an Bitverteilung, Rate Control und Psychoakustik beschrieben, aber hier weder Hörvergleich noch Qualitäts-/Geschwindigkeitsbenchmark gemacht. Vor dem Umstellen eines Medienjobs also konkrete Build-Optionen, Gerät und Beispielmaterial prüfen. Das hier ist eine Quellenprüfung, kein ausgeführter 9.1-Transkodier- oder GPU-Test.",
+      "url": "https://ffmpeg.org/download.html#release_9.1",
+      "cta": "Release und Build-Möglichkeiten prüfen",
+      "source": "FFmpeg-Downloadseite, Release 9.1 Gauss vom 20.11.2026; offizieller FFmpeg/FFmpeg-Changelog, Abschnitt 9.1; Michael Larabel, Phoronix, und Moritz Förster, heise, 20.11.2026; HN 50569998. Gelesen 20.11.2026. Codec-/Geräteangaben laut Projekt und Fachberichten, keine eigenen Qualitäts-, Hör-, GPU- oder Leistungsmessungen. Keine Pressebilder übernommen."
+    },
+    {
+      "category": "Informatik · Softwaretests",
+      "short": "GIMP GUI-Tests",
+      "title": "GIMP prüft Menüs und Dialoge von außen, nicht nur den Code dahinter.",
+      "body": "Ein GIMP-Beitrag vom 16. November wird heute diskutiert: Harsh Vermas neue GUI-Testplattform startet für jeden kleinen Test die echte Anwendung in einer privaten Desktop-Sitzung. Python und dogtail sprechen über den Accessibility-Baum mit Menüs, Dialogen und Schaltflächen, nicht über Bildvergleich. Der Projektbeitrag nennt 13 Tests für Grundfunktionen wie Start, Bildgröße, PNG-Export, Ebenen, Undo/Redo, Zoom und gespeicherte Einstellungen. Die Entwickleranleitung beschreibt einen eigenen D-Bus, einen eigenen Accessibility-Bus und einen bildschirmlosen Mutter-Compositor; in CI laufen die Tests im Job gimp-debian-nonreloc. Ein Teil der Infrastruktur wurde außerdem an dogtail zurückgegeben.",
+      "takeaway": "Das ist kein Beleg, dass GIMP vorher gar keine Oberflächentests hatte: Der Beitrag unterscheidet ältere Tests, die direkt in den Kern greifen oder Eingaben simulieren, von der neuen externen Bedienung. Die neue Suite ist ein Anfang und keine Vollabdeckung. Laut Entwickleranleitung funktionieren Ziehbewegungen auf der Leinwand noch nicht zuverlässig; ein einzelner Klick wie beim Fülleimer dagegen schon. Windows und macOS bleiben für diese dogtail-Suite außen vor, offiziell unterstützt ist Linux. Dass ein Widget im Accessibility-Baum auffindbar ist, hilft auch Screenreadern, ersetzt aber weder eine vollständige Barrierefreiheitsprüfung noch visuelle Layoutkontrolle. Ein Klick allein zählt ausdrücklich nicht: Der Test muss das Ergebnis prüfen, etwa die Ebenenzahl oder die erzeugte PNG-Datei. Hier wurde die Dokumentation gelesen, kein GIMP-Build oder Testlauf gestartet.",
+      "url": "https://www.gimp.org/news/2026/11/16/gimp-ui-tests/",
+      "cta": "Testaufbau und Grenzen im Entwicklerleitfaden ansehen",
+      "source": "Harsh Verma, GIMP, Improved Graphical User Interface testing, Seitendatum 16.11.2026; offizielle GIMP-Entwickleranleitung UI Tests; Bobby Borisov, Linuxiac, 17.11.2026; HN-Tagesübersicht 20.11.2026. Gelesen 20.11.2026. Zahl 13 laut Projekt, keine eigene Zählung des Quellarrays oder Testausführung. Älterer Beitrag, heutiger Diskussionsfund. Keine Projektbilder übernommen."
     }
   ]
 }
