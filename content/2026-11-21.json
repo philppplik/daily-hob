@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-21",
+  "title": "Daily Hob vom Samstag, 21.11.",
+  "headline": "Ein alter PC spricht mit Claude. Valkey sortiert seinen Speicher neu.",
+  "teaser": "2 Samstags-Catches: ClawDOS bringt die Agenten-Hülle auf den 8088, Valkey spart mit B+-Bäumen am Verwaltungsaufwand großer Sorted Sets.",
+  "intro": "Heute geht es um Grenzen, die man sauber auseinanderhalten muss: Ein DOS-PC kann einen modernen Cloud-Agenten bedienen, ohne das Modell selbst zu rechnen. Und ein effizienterer Suchbaum spart Verwaltungsdaten, nicht pauschal denselben Anteil des gesamten Datenbankspeichers.",
+  "hero": "hero.jpg",
+  "heroAlt": "Ein unbeschrifteter Retro-PC verbindet sich über Punkte mit einem geordneten Baum aus flachen Kästchen; feine schwarze Linien auf hellem Papier mit gelbem Kreis und kleinem mintfarbenem Akzent.",
+  "heroCaption": "Illustration: KI-generiert für Daily Hob",
+  "notes": "Stand: 21. November 2026, 11:34 Uhr Berlin. Zwei recherchierte Catches. ClawDOS heute auf Hacker News diskutiert, kein heutiger Erst-Release behauptet. Valkey-Technikbeitrag vom 16.11., Release 9.2 vom 19.11., heute erneut diskutiert; ältere RC-Aussagen sind überholt. Primärquellen, README, ergänzende Berichte und Community-Kontext gelesen. Zahlen und Demonstrationen sind Projektangaben, keine eigenen Hardware-, Last-, Sicherheits- oder Vergleichstests. Keine fremden Projekt-, Presse- oder Agenturbilder übernommen. Illustration: KI-generiert für Daily Hob.",
+  "sections": [
+    {
+      "category": "Wildcard · Retro-Computing",
+      "short": "ClawDOS",
+      "title": "ClawDOS: Die Agenten-Hülle läuft auf dem 8088, das Sprachmodell nicht.",
+      "body": "Das heute diskutierte ClawDOS verlegt die Bedien- und Werkzeugschicht eines Coding-Agenten auf einen IBM-PC-XT-kompatiblen Rechner: 8088 mit 4,77 MHz, 640 KiB RAM und CGA. Laut Projekt ist HARNESS.EXE ein rund 176-KB-DOS-Programm, das Anfragen an die Claude Messages API schreibt, gestreamte Antworten auswertet, Dateien liest und ändert sowie Programme kompiliert und startet. Für einen größeren Compilerlauf kann es sich aus dem Speicher entfernen und danach dieselbe Unterhaltung fortsetzen. Ein zweiter Rechner übernimmt die TLS-Verbindung. Screenshots entstehen durch Kopieren des CGA-Bildspeichers und werden als PNG an das entfernte Modell geschickt. Die veröffentlichte Screenshotsammlung stammt ausdrücklich aus 86Box; daneben zeigt die Seite ein Video einer Demo auf dem echten 5160.",
+      "takeaway": "Der interessante Teil ist der kleine native Client, nicht ein großes Sprachmodell im DOS-RAM. Die Inferenz bleibt bei einem entfernten API-Anbieter und setzt dessen Zugang und mögliche Nutzungskosten voraus. Projekt-Safe-Mode fragt vor Änderungen an Dateien, Speicher oder Ports nach; das ist keine nachgewiesene Sicherheitsisolation. Der alte Rechner spricht bis zum TLS-Tunnel unverschlüsselt, deshalb nur in einer passenden, kontrollierten Testumgebung einsetzen. Der Autor beschreibt das als Freizeitexperiment und schreibt den Quellcode weitgehend KI-Erzeugung zu, nicht einer unabhängigen Prüfung. GPLv3-or-later deckt das Projekt ab, aber eine Diskette mit fremdem Turbo C darf deshalb nicht beliebig weiterverteilt werden. Keine Installation, API-Anfrage, Emulator-, Hardware- oder Sicherheitsprüfung hier ausgeführt. Als anschaulicher Gegenpunkt zum gestrigen lokalen SNES-Sprachmodell spannend: Diesmal wandert die Hülle zurück in die Achtziger, nicht das Modell.",
+      "url": "https://ricapar.net/ClawDOS/",
+      "cta": "Aufbau und Grenzen des DOS-Projekts ansehen",
+      "source": "Ricapar, ClawDOS-Projektseite und Ricapar/ClawDOS-README; HN 50586292, 21.11.2026; Yash Thakker, explainx.ai, 21.11.2026, ergänzende Einordnung. Gelesen 21.11.2026. Screenshot-/Hardwareherkunft gemäß Projekt, keine eigene Ausführung oder unabhängige Sicherheitsbewertung; heutiger Diskussionsfund, kein heutiger Erst-Release behauptet."
+    },
+    {
+      "category": "Open Source · Datenstrukturen",
+      "short": "Valkey B+-Baum",
+      "title": "Valkey ersetzt die Skiplist großer Sorted Sets durch einen speichergerechteren B+-Baum.",
+      "body": "Ein Valkey-Technikbeitrag vom 16. November wird heute wieder diskutiert. Die bereits am 19. November veröffentlichte Version 9.2 verwendet für große Sorted Sets einen fbtree genannten B+-Baum statt der bisherigen Skiplist. Bis zu 61 Einträge teilen sich einen Knoten; zusammenliegende Daten und kleine Vergleichsmerkmale sollen abhängige Speicherzugriffe verringern. Der separate Hashtable bleibt für den direkten Zugriff nach Mitglied zuständig. Laut Projekt sank in einem Versuch mit fünf Millionen 20-Byte-Mitgliedern der Verwaltungsaufwand pro Mitglied von 50,3 auf 28,5 Byte bei sequenziellen und 32,0 Byte bei zufälligen Einfügungen. Das sind 43 beziehungsweise 36 Prozent weniger Overhead des geordneten Index, ausdrücklich nicht entsprechend weniger gesamter Server-RAM.",
+      "takeaway": "Die großen Prozentzahlen brauchen ihren Nenner. Kleine Sorted Sets bleiben beim kompakten Listpack und profitieren nicht von diesem Austausch; größere Nutzdaten verdünnen die relative Ersparnis. Die ergänzenden Durchsatzwerte wurden laut Technikbeitrag auf einem PR-Zweig gemessen und nicht für den zusammengeführten Commit wiederholt. Daraus keine Garantie für den eigenen Produktionsmix oder einen pauschalen Sieg über andere Redis-kompatible Systeme machen. Die grundlegenden Sorted-Set-Befehle bleiben, OBJECT ENCODING meldet bei großen Mengen jetzt aber btree statt skiplist; passende Monitoring- und Testannahmen prüfen. Die Releaseankündigung nennt zudem Randfalländerungen und Downgrade-Grenzen, etwa bei neuer RDB-Kompression. Der ältere Blog und ein heutiger Sekundärbericht sprechen noch vom Release Candidate, die offizielle Veröffentlichung vom 19. November ist aktueller. Keine eigene Migration, Benchmark-Reproduktion oder Redis-Gegenmessung durchgeführt.",
+      "url": "https://valkey.io/blog/from-skiplist-to-b+tree/",
+      "cta": "Speicherlayout und Benchmark-Grenzen nachlesen",
+      "source": "Rain Valentine/Dragos Andriciuc, Valkey-Technikbeitrag, 16.11.2026; Kyle Davis/Dragos Andriciuc, Valkey-9.2-Veröffentlichung, 19.11.2026; Valkey PR 4206; HN 50534387 mit heutigen Kommentaren; Glonce, 21.11.2026, ergänzender Bericht mit überholtem RC-Status. Gelesen 21.11.2026. Alle Zahlen aus Projektmessungen, keine eigene oder unabhängige Benchmark-Reproduktion."
+    }
+  ]
+}
