@@ -1,13 +1,13 @@
 {
   "date": "2026-11-21",
   "title": "Daily Hob vom Samstag, 21.11.",
-  "headline": "Ein alter PC spricht mit Claude. Valkey sortiert seinen Speicher neu.",
-  "teaser": "2 Samstags-Catches: ClawDOS bringt die Agenten-Hülle auf den 8088, Valkey spart mit B+-Bäumen am Verwaltungsaufwand großer Sorted Sets.",
-  "intro": "Heute geht es um Grenzen, die man sauber auseinanderhalten muss: Ein DOS-PC kann einen modernen Cloud-Agenten bedienen, ohne das Modell selbst zu rechnen. Und ein effizienterer Suchbaum spart Verwaltungsdaten, nicht pauschal denselben Anteil des gesamten Datenbankspeichers.",
+  "headline": "Android-Apps ohne Android. Und ein Monitor, der Downloads ausbremst.",
+  "teaser": "4 Samstags-Catches: ClawDOS, Valkeys B+-Baum, Winedroids frühe APK-Laufzeit und ein Ethernet-Engpass hinter dem Monitor.",
+  "intro": "Zum Retro-PC und dem effizienteren Datenindex kommen eine experimentelle Android-Kompatibilitätsschicht und ein schön hartnäckiger Debuggingfall. Die gemeinsame Frage bleibt: Was läuft wirklich wo, und an welcher Grenze kippt die einfache Erklärung?",
   "hero": "hero.jpg",
   "heroAlt": "Ein unbeschrifteter Retro-PC verbindet sich über Punkte mit einem geordneten Baum aus flachen Kästchen; feine schwarze Linien auf hellem Papier mit gelbem Kreis und kleinem mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
-  "notes": "Stand: 21. November 2026, 11:34 Uhr Berlin. Zwei recherchierte Catches. ClawDOS heute auf Hacker News diskutiert, kein heutiger Erst-Release behauptet. Valkey-Technikbeitrag vom 16.11., Release 9.2 vom 19.11., heute erneut diskutiert; ältere RC-Aussagen sind überholt. Primärquellen, README, ergänzende Berichte und Community-Kontext gelesen. Zahlen und Demonstrationen sind Projektangaben, keine eigenen Hardware-, Last-, Sicherheits- oder Vergleichstests. Keine fremden Projekt-, Presse- oder Agenturbilder übernommen. Illustration: KI-generiert für Daily Hob.",
+  "notes": "Stand: 21. November 2026, 15:34 Uhr Berlin. Vier recherchierte Catches; erste zwei und Hero unverändert. ClawDOS heute diskutiert. Valkey-Technikbeitrag vom 16.11., Release 9.2 vom 19.11., heute erneut diskutiert. Winedroid seit 20.11. vorgestellt und heute weiter diskutiert. Monitorbericht vom 15.11., Hackaday vom 19.11., heutiger HN-Fund. Messwerte, Hardware- und Kompatibilitätsangaben stammen aus den Quellen; keine eigene Installation, App-Ausführung, Last-, Netzwerk- oder Sicherheitsprüfung. Keine fremden Medien übernommen. Illustration: KI-generiert für Daily Hob.",
   "sections": [
     {
       "category": "Wildcard · Retro-Computing",
@@ -28,6 +28,26 @@
       "url": "https://valkey.io/blog/from-skiplist-to-b+tree/",
       "cta": "Speicherlayout und Benchmark-Grenzen nachlesen",
       "source": "Rain Valentine/Dragos Andriciuc, Valkey-Technikbeitrag, 16.11.2026; Kyle Davis/Dragos Andriciuc, Valkey-9.2-Veröffentlichung, 19.11.2026; Valkey PR 4206; HN 50534387 mit heutigen Kommentaren; Glonce, 21.11.2026, ergänzender Bericht mit überholtem RC-Status. Gelesen 21.11.2026. Alle Zahlen aus Projektmessungen, keine eigene oder unabhängige Benchmark-Reproduktion."
+    },
+    {
+      "category": "Open Source · Kompatibilität",
+      "short": "Winedroid",
+      "title": "Winedroid führt Android-Bytecode ohne komplettes Android aus, aber noch lange nicht jede App.",
+      "body": "Winedroid wurde gestern auf Hacker News vorgestellt und wird heute weiter diskutiert. Das junge Rust-Projekt will Android-APKs über eine eigene Userspace-Kompatibilitätsschicht statt einer vollständigen Android-Installation ausführen. Laut README verarbeitet es DEX-Bytecode, bildet Android-Frameworkverhalten nach und zeichnet Oberflächen mit Skia. Desktop-Builds besitzen einen Cranelift-JIT; die WebAssembly-Fassung verwendet den Interpreter. Die Browserdemo zeigt einige ausgewählte F-Droid-Apps, etwa Rechner und Wetteranzeige, und nennt derzeit rund 12 MB Laufzeitumfang. Das ist eine Projektangabe für diese Fassung, kein Download- oder Speicherversprechen für jede App. Der Quellcode steht laut eigener Lizenzdatei unter GPLv3-only.",
+      "takeaway": "Die wichtige Einschränkung steht im README: sehr frühe Entwicklung, fehlende APIs und kaputte Abläufe. Im Browser fehlen native Android-.so-Bibliotheken und der JIT, App-Daten gehen laut Anleitung beim Neuladen verloren. Fehlende Methoden werden im normalen Best-Effort-Modus teils durch Null, null oder void ersetzt; ein gezeichnetes Fenster beweist deshalb noch keine korrekte Ausführung. Für strenge Tests gibt es einen Strict-Modus. Auf die Frage nach Isolation erklärt der Autor im HN-Thread außerdem, Apps könnten derzeit auch Daten anderer Apps lesen. Daraus weder eine vollständige Android-Berechtigungsgrenze noch eine sichere Umgebung für fremde APKs ableiten. Die Browser-Sicherheitsgrenze ist nicht dasselbe wie Isolation zwischen Gast-Apps. Kein eigener APK-, Browser-, Desktop-, Datenfluss- oder Sicherheitstest; interessant als Laufzeitexperiment, nicht als Ersatz für ein verlässlich abgeschottetes Alltagssystem.",
+      "url": "https://winedroid.soham.sh/",
+      "cta": "Ansatz, Demo und Kompatibilitätsgrenzen ansehen",
+      "source": "Winedroid-Projektseite, Browserdemo, sohzm/winedroid-README und LICENSE; HN 50580536 vom 20.11.2026 mit heutigen Kommentaren und Autorantwort zur fehlenden App-Isolation. Gelesen 21.11.2026. Laufzeitgröße, Demoerfolge und Einschränkungen laut Projekt; keine unabhängige Kompatibilitäts- oder Sicherheitsprüfung, keine eigene App-Ausführung."
+    },
+    {
+      "category": "Informatik · Hardware-Debugging",
+      "short": "USB-Burstlimit",
+      "title": "600 statt 2.500 Mbit/s: Ein Ethernet-Adapter hinter dem Monitor verliert den Anschluss.",
+      "body": "Oscar Molnars Erfahrungsbericht vom 15. November taucht heute auf Hacker News auf. In seinem Aufbau mit MacBook, Studio Display XDR und einem RTL8156B-basierten 2,5-Gbit-Ethernet-Adapter kamen hinter dem Monitor nur etwa 600 Mbit/s im Download an, während der Upload schnell blieb. Direkt am Rechner erreichte derselbe Adapter deutlich mehr. Statt nur den Internetanbieter oder die nominelle Hub-Bandbreite zu verdächtigen, verglich Molnar Treiber, Ethernet-Flow-Control und einen kontrollierten UDP-Datenstrom. Laut seinen Adapterzählern flachte die Weitergabe hinter dem Display bei rund 168.000 Frames pro Sekunde ab. Seine Erklärung: kleine USB-Bursts und zusätzliche Wartezeit auf Bestätigungen durch den Hub leeren den Adapter langsamer, als neue Ethernet-Daten eintreffen. Der Puffer läuft über und Paketverluste bremsen den Transport weiter.",
+      "takeaway": "Das ist ein gut dokumentierter Einzelfall, kein Nachweis, dass jeder Monitor oder jeder RTL8156B denselben Fehler hat. Molnar vergleicht vier Pakete pro Burst beim alten mit acht beim neuen RTL8157-Adapter; zusätzlich ist dessen USB-Verbindung schneller. In seinem Ersatzaufbau meldeten die getesteten Raten keine verlorenen Frames mehr. Daraus keine pauschale Kaufempfehlung nur nach aufgedruckten Gbit/s machen. Die Stärke ist der Diagnoseweg: direkt gegen Hub vergleichen, lokale Übertragung statt nur Internetspeedtest, Geräte- statt allein Betriebssystemzähler ansehen. Ein anderer Treiber oder Flow-Control halfen dort nur teilweise. Hackadeys ergänzender Text vom 19.11. fasst das als Pufferproblem zusammen; der Originalbericht erklärt genauer das Zusammenspiel von Burstgröße und Bestätigungszeit. Keine eigene Messung, USB-Protokollanalyse oder unabhängige Bestätigung dieser konkreten Hardwarekombination.",
+      "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
+      "cta": "Messweg und USB-Burst-Erklärung nachlesen",
+      "source": "Oscar Molnar, The Tymscar Blog, 15.11.2026; Bryan Cockfield, Hackaday, 19.11.2026; HN 50587875, 21.11.2026. Gelesen 21.11.2026. Älterer Erfahrungsbericht, heutiger Diskussionsfund. Alle Geschwindigkeiten, Zähler und Ursachenanalyse vom Autor, keine eigene Reproduktion. Keine Presse- oder Blogbilder übernommen."
     }
   ]
 }
