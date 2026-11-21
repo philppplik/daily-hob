@@ -1,13 +1,13 @@
 {
   "date": "2026-11-21",
   "title": "Daily Hob vom Samstag, 21.11.",
-  "headline": "Android-Apps ohne Android. Und ein Monitor, der Downloads ausbremst.",
-  "teaser": "4 Samstags-Catches: ClawDOS, Valkeys B+-Baum, Winedroids frühe APK-Laufzeit und ein Ethernet-Engpass hinter dem Monitor.",
-  "intro": "Zum Retro-PC und dem effizienteren Datenindex kommen eine experimentelle Android-Kompatibilitätsschicht und ein schön hartnäckiger Debuggingfall. Die gemeinsame Frage bleibt: Was läuft wirklich wo, und an welcher Grenze kippt die einfache Erklärung?",
+  "headline": "Weniger Laufzeit, mehr Verantwortung. Fehler per Seed zurückholen.",
+  "teaser": "6 Samstags-Catches: ClawDOS, Valkey, Winedroid, USB-Burstlimit, Zero C# und deterministische Simulationstests.",
+  "intro": "Der Samstag endet bei zwei Werkzeugfragen: Was bleibt von C#, wenn die automatische Speicherpflege entfällt? Und wie baut man Tests, deren seltsamster Fehler morgen exakt wiederkommt? Dazu bleiben Retro-Agenten, Datenstrukturen, Android-Kompatibilität und der Monitor-Engpass im Blick.",
   "hero": "hero.jpg",
   "heroAlt": "Ein unbeschrifteter Retro-PC verbindet sich über Punkte mit einem geordneten Baum aus flachen Kästchen; feine schwarze Linien auf hellem Papier mit gelbem Kreis und kleinem mintfarbenem Akzent.",
   "heroCaption": "Illustration: KI-generiert für Daily Hob",
-  "notes": "Stand: 21. November 2026, 15:34 Uhr Berlin. Vier recherchierte Catches; erste zwei und Hero unverändert. ClawDOS heute diskutiert. Valkey-Technikbeitrag vom 16.11., Release 9.2 vom 19.11., heute erneut diskutiert. Winedroid seit 20.11. vorgestellt und heute weiter diskutiert. Monitorbericht vom 15.11., Hackaday vom 19.11., heutiger HN-Fund. Messwerte, Hardware- und Kompatibilitätsangaben stammen aus den Quellen; keine eigene Installation, App-Ausführung, Last-, Netzwerk- oder Sicherheitsprüfung. Keine fremden Medien übernommen. Illustration: KI-generiert für Daily Hob.",
+  "notes": "Stand: 21. November 2026, 19:34 Uhr Berlin. Sechs recherchierte Catches; erste vier und Hero unverändert. ClawDOS heute diskutiert; Valkey-Beitrag 16.11./Release 19.11.; Winedroid seit 20.11.; Monitorbericht 15.11. Zero C# heute vorgestellt, Repository und bflat-Ansatz älter. Outdata-Essay vom 20.11. heute diskutiert, ältere TigerBeetle-Einordnung vom 28.11.2025 ergänzend. Primärquellen, Dokumentation, ergänzende Berichte und Community gelesen. Keine eigenen Compiler-, Hardware-, APK-, Netzwerk-, Leistungs- oder Simulationstests. Keine Sicherheits- oder Fehlerfreiheitsgarantie. Keine fremden Medien übernommen. Illustration: KI-generiert für Daily Hob.",
   "sections": [
     {
       "category": "Wildcard · Retro-Computing",
@@ -48,6 +48,26 @@
       "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
       "cta": "Messweg und USB-Burst-Erklärung nachlesen",
       "source": "Oscar Molnar, The Tymscar Blog, 15.11.2026; Bryan Cockfield, Hackaday, 19.11.2026; HN 50587875, 21.11.2026. Gelesen 21.11.2026. Älterer Erfahrungsbericht, heutiger Diskussionsfund. Alle Geschwindigkeiten, Zähler und Ursachenanalyse vom Autor, keine eigene Reproduktion. Keine Presse- oder Blogbilder übernommen."
+    },
+    {
+      "category": "Open Source · Compiler",
+      "short": "Zero C#",
+      "title": "Zero C# tauscht den Garbage Collector gegen Arenen und bewusste Lebensdauern.",
+      "body": "Das heute auf Show HN vorgestellte Zero C# kombiniert einen bflat-Fork mit kleinen Bibliotheken und Beispielen für native Programme ohne mitgelieferte volle .NET-Laufzeit und ohne Garbage Collector. Der Ansatz und das Repository sind älter, kein heutiger Erst-Release wird behauptet. Syntax, Typprüfung und Generics bleiben; Speicher, Text und Collections folgen aber anderen Regeln. Laut Projekt können zusammengehörige Allokationen in Arenen liegen und gemeinsam freigegeben werden. Die Dokumentation zeigt Ausgaben für Linux, macOS auf Apple Silicon, Windows x64, WASI und DOS auf einem 386. Ein Hello World wird dort mit rund 11 KB auf Windows und 40 KB auf Linux gezeigt, nicht als allgemeine Größe beliebiger Programme. Kleine plattformspezifische Hilfen und C-Bibliotheksanbindung bleiben Teil des Aufbaus, laufzeitlos heißt nicht ohne jede Unterstützung.",
+      "takeaway": "Der Preis ist nicht nur eine andere Build-Zeile. Gewöhnliches new wird im Zero-Modus standardmäßig nicht freigegeben, Arena-Reset kann dagegen noch benutzte Referenzen ungültig machen. Die Safety-Regeln sind laut Detailseite Preview; unsafe markiert die Verantwortung, beweist aber keine korrekte Lebensdauer. Debug-Prüfungen finden manche Fehler, nicht bereits wiederverwendete Speicherbereiche. Exceptions können nicht normal abgefangen werden, Reflection und async fehlen in diesem Modell. Die DOS-Demo ist keine 8088-Demo: Das README verlangt mindestens einen 386 mit 387-Mathematikunterstützung, nennt Emulatorprüfungen und klare Plattformgrenzen. Windows-Beispiele wurden unter Wine geprüft, nicht als Messung auf echter Windows-Hardware. Kein eigener Compilerlauf, Größenvergleich oder Safety-Test. Spannend für kontrollierte native Experimente, kein Drop-in-Ersatz für bestehende .NET-Anwendungen.",
+      "url": "https://onurgumus.github.io/zero-csharp/index.html",
+      "cta": "Zero-Modus, Arenen und ihre Grenzen lesen",
+      "source": "Onur Gumus, Zero-C#-Projektseite, Speicher- und Safety-Dokumentation sowie OnurGumus/zero-csharp-README; HN 50590279, 21.11.2026; TechJuju, 21.11.2026, ergänzende Einordnung. Gelesen 21.11.2026. Größen, Zielplattformen und Teststatus laut Projekt, keine eigene Ausführung oder unabhängige Sicherheitsbewertung. Heute vorgestellt, älteres Projekt."
+    },
+    {
+      "category": "Informatik · Softwaretests",
+      "short": "Deterministische Simulation",
+      "title": "Deterministische Simulationstests: Den Zufall behalten, den Fehler wiederholen.",
+      "body": "Ein Outdata-Essay vom 20. November wird heute auf Hacker News diskutiert und plädiert dafür, deterministische Simulationstests nicht nur Datenbankteams zu überlassen. Die Idee: Fachlogik als deterministischen Zustandsautomaten bauen und Zeit, Zufall, Netzwerk, Dateien oder Benutzereingaben über eine kontrollierte Umgebung zuführen. Ein Seed bestimmt die erzeugten Szenarien. Eine Prüfung lässt dann ungewöhnliche Ereignisfolgen und Störungen ablaufen und kontrolliert dabei Invarianten. Findet sie einen Fehler, lassen sich dieselbe Programmfassung und derselbe Seed erneut ausführen. Simulierte Wartezeiten müssen nicht in Echtzeit verstreichen. Der Essay nennt ausdrücklich auch Webanwendungen und eingebettete Systeme als mögliche Einsatzfelder, nicht nur verteilte Datenbanken.",
+      "takeaway": "Das ist ein Architektur- und Testansatz, kein neuer Knopf, der ein beliebiges Programm deterministisch macht. Versteckte echte Uhrzeit, ungeplantes I/O oder nicht kontrolliertes Thread-Scheduling können die Wiederholung brechen. Ein identischer Seed genügt nur zusammen mit derselben deterministischen Implementierung und Testumgebung; die Commit-Fassung gehört zum Fehlerbericht. Die Simulation sieht außerdem nur die Fehler und Eigenschaften, die modelliert und geprüft werden. Ein älterer TigerBeetle-Bericht vom 28. November 2025 beschreibt deshalb gezielte Subsystem-Fuzzer neben der Gesamtsimulation: Einzelne tiefe Pfade und strenge Ergebnisprüfungen können im großen System untergehen. Der Outdata-Autor will andere Testarten ausdrücklich nicht ersetzen. Keine universelle Überlegenheit oder Fehlerfreiheit ableiten, keine eigene Simulation hier ausgeführt. Ein sinnvoller kleiner Einstieg wäre eine klar begrenzte Zustandslogik mit austauschbarer Uhr und reproduzierbarer Ereignisfolge, nicht sofort die ganze Anwendung nachzubauen.",
+      "url": "https://outdata.net/blog/261120",
+      "cta": "Essay und Grenzen reproduzierbarer Tests lesen",
+      "source": "Outdata, Deterministic Simulation Testing Is For Everyone, 20.11.2026; HN 50574264, heute diskutiert; matklad, TigerBeetle, A Tale Of Four Fuzzers, 28.11.2025, ergänzende Praxiseinordnung. Gelesen 21.11.2026. Älterer Essay bzw. Hintergrund, kein heutiger Produktlaunch; konzeptionelle Einordnung, keine eigenen Testläufe oder gemessene Fehlerquote."
     }
   ]
 }
